@@ -18,6 +18,7 @@
       "links": [
         { "url": "https://en.wikipedia.org/wiki/Mahatma_Gandhi", "label": "Wikipedia: Mahatma Gandhi", "type": "wikipedia" }
       ],
+      "colour": "#b03018",
       "track": [
         {
           "kind": "moment",
@@ -156,6 +157,7 @@
       "links": [
         { "url": "https://en.wikipedia.org/wiki/Jawaharlal_Nehru", "label": "Wikipedia: Jawaharlal Nehru", "type": "wikipedia" }
       ],
+      "colour": "#1a4870",
       "track": [
         {
           "kind": "moment",
@@ -250,6 +252,7 @@
       "links": [
         { "url": "https://en.wikipedia.org/wiki/Bhagat_Singh", "label": "Wikipedia: Bhagat Singh", "type": "wikipedia" }
       ],
+      "colour": "#c8281a",
       "track": [
         {
           "kind": "moment",
@@ -330,6 +333,7 @@
       "links": [
         { "url": "https://en.wikipedia.org/wiki/B._R._Ambedkar", "label": "Wikipedia: B. R. Ambedkar", "type": "wikipedia" }
       ],
+      "colour": "#1a3a90",
       "track": [
         {
           "kind": "moment",
@@ -446,6 +450,7 @@
       "links": [
         { "url": "https://en.wikipedia.org/wiki/Muhammad_Ali_Jinnah", "label": "Wikipedia: Muhammad Ali Jinnah", "type": "wikipedia" }
       ],
+      "colour": "#1f7a8a",
       "track": [
         {
           "kind": "moment",

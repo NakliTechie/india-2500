@@ -169,6 +169,7 @@ def parse_year(s):
 
 
 _DATE_RE = re.compile(r"^-?\d{1,4}(-\d{2}(-\d{2})?)?$")
+_HEX_RE = re.compile(r"^#[0-9a-fA-F]{6}$")
 def is_valid_date_string(s):
     return isinstance(s, str) and bool(_DATE_RE.match(s))
 
@@ -446,6 +447,11 @@ def validate_person(person, path, all_person_ids, event_corpus, boundaries):
                 warn(f"{loc}.track[{idx}]", f"step year {anchor} predates lifespan.born ({born_year})")
             if anchor is not None and died_year is not None and anchor > died_year:
                 warn(f"{loc}.track[{idx}]", f"step year {anchor} postdates lifespan.died ({died_year})")
+
+    # colour (optional) — must be a 6-digit hex string if present
+    if "colour" in person and person["colour"] is not None:
+        if not isinstance(person["colour"], str) or not _HEX_RE.match(person["colour"]):
+            err(loc, f"colour '{person['colour']}' must be a 6-digit hex string like '#b03018'")
 
     # verified
     if "verified" in person and not isinstance(person["verified"], bool):

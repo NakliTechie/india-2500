@@ -19,6 +19,7 @@
         { "url": "https://en.wikipedia.org/wiki/Babur", "label": "Wikipedia: Babur", "type": "wikipedia" },
         { "url": "https://en.wikipedia.org/wiki/Baburnama", "label": "Wikipedia: Baburnama (his memoir)", "type": "related" }
       ],
+      "colour": "#2a9a98",
       "track": [
         {
           "kind": "event-ref",

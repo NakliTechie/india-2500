@@ -328,6 +328,13 @@ export function validatePerson(person) {
     }
   });
 
+  // Optional colour override — must be a 6-digit hex string if present.
+  if (person.colour != null && person.colour !== "") {
+    if (!/^#[0-9a-fA-F]{6}$/.test(person.colour)) {
+      errors.push(`Colour "${person.colour}" must be a 6-digit hex string like '#b03018'.`);
+    }
+  }
+
   if (typeof person.verified !== "boolean") errors.push("Verified flag (true/false) is required.");
 
   return {ok: errors.length === 0, errors, warnings};

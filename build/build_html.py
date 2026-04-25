@@ -64,9 +64,12 @@ people = []
 for p in sorted((DATA / "people").glob("people_*.json")):
     people.extend(json.loads(p.read_text())["people"])
 
-# Assign per-person colour by load-order index; cycle the palette beyond 5.
+# Per-person accent: prefer explicit `colour` field on the person object;
+# fall back to cycling PEOPLE_PALETTE in load order. Authors should set
+# `colour` explicitly once the corpus passes 5 people to avoid collisions.
 for i, person in enumerate(people):
-    person["colour"] = PEOPLE_PALETTE[i % len(PEOPLE_PALETTE)]
+    if not person.get("colour"):
+        person["colour"] = PEOPLE_PALETTE[i % len(PEOPLE_PALETTE)]
 
 print(f"Splicing: {len(events)} events, {len(threads)} threads, {len(people)} people")
 

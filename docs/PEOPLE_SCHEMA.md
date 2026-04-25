@@ -55,12 +55,21 @@ Top-level shape mirrors `events_*.json`:
   "links": [
     { "url": "https://en.wikipedia.org/wiki/Mahatma_Gandhi", "label": "Wikipedia",  "type": "wikipedia" }
   ],
-  "track": [ /* see below */ ],
+  "colour":   "#b03018",                        // optional — explicit accent for tracks/pills/popovers
+  "track":    [ /* see below */ ],
   "verified": true
 }
 ```
 
 `birthplace` and `deathplace` anchor the start and end of the track automatically — the validator inserts implicit "born" and "died" pins so authors don't have to.
+
+### `colour` — accent for tracks, pills, popovers
+
+Optional 6-digit hex string (e.g. `"#b03018"`). The colour is used everywhere the person is referenced visually — pill swatch, track-pin fill, connecting line stroke, off-map row left border, popover accent, person reader heading.
+
+**If omitted**, `build_html.py` cycles through a default 5-colour Naklitechie/Rangrez palette in load order (KHADI, AAKASH, KUMKUM, NEEL, MOR — see `build/build_html.py` `PEOPLE_PALETTE`). Beyond 5 people the cycle wraps, so two people will collide. Set `colour` explicitly to avoid this.
+
+**Suggested sources:** the [Rangrez palette library](https://github.com/NakliTechie/rangrez) has 240 palettes organised by region/theme. Pick a colour that matches the person thematically — Babur's `colour` is `#2a9a98` (iran-09 FIROUZEH, the iconic Persian/Timurid mosque-tile turquoise). Once set, it carries to every surface that references the person.
 
 ---
 
