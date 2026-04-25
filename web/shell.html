@@ -1,0 +1,2483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6VMDCFM2GM"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-6VMDCFM2GM');</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://assets.chiragpatnaik.com/india-history.html">
+<meta property="og:url" content="https://assets.chiragpatnaik.com/india-history.html">
+<meta property="og:title" content="India — 2500 years to the Republic">
+<meta property="og:description" content="An interactive map and timeline of subcontinental history. Tap a pin, read the story, follow the chain of cause and effect.">
+<meta property="og:type" content="website">
+<meta name="author" content="Chirag Patnaik">
+<title>India — 2500 years to the Republic — Chirag Patnaik</title>
+<style>
+  :root {
+    --cream:             #F7F2E7;
+    --cream-card:        #FFFDF7;
+    --cream-border:      rgba(60, 45, 15, 0.35);
+    --cream-border-soft: rgba(60, 45, 15, 0.14);
+    --cream-text:        #2C2A24;
+    --cream-muted:       #6B665A;
+    --cream-faint:       #938D7E;
+    /* Naklitechie accent palette — used for category tags, links, popover CTA. */
+    --purple: #534AB7;
+    --amber:  #BA7517;
+    --rose:   #72243E;
+    --blue:   #185FA5;
+    --pink:   #D4537E;
+    --near-black: #2C2A24;
+
+    --accent-purple: #534AB7;
+    --accent-amber:  #BA7517;
+    --accent-rose:   #72243E;
+    --accent-blue:   #185FA5;
+    --accent-pink:   #D4537E;
+
+    --pin-default: #2C2A24;
+    --pin-active:  #534AB7;
+    --pin-faded:   rgba(44, 42, 36, 0.18);
+    --route-color: rgba(83, 74, 183, 0.55);
+
+    --slider-handle: #2C2A24;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--cream);
+    color: var(--cream-text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    font-size: 14px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .sr-only {
+    position: absolute; width: 1px; height: 1px;
+    padding: 0; margin: -1px; overflow: hidden;
+    clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+  }
+
+  /* ---------- Header ---------- */
+  .site-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 28px 24px 12px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    border-bottom: 1px solid var(--cream-border-soft);
+  }
+  .site-header .brand { font-size: 16px; font-weight: 500; color: var(--cream-text); text-decoration: none; }
+  .site-header nav { display: flex; gap: 20px; flex-wrap: wrap; }
+  .site-header nav a { font-size: 13px; color: var(--cream-muted); text-decoration: none; }
+  .site-header nav a:hover { color: var(--cream-text); text-decoration: underline; text-underline-offset: 3px; }
+
+  /* ---------- Layout ---------- */
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 24px 48px;
+  }
+
+  h1 { font-size: 22px; font-weight: 500; color: var(--cream-text); margin: 0 0 6px; }
+  .subtitle { font-size: 14px; font-style: italic; color: var(--cream-muted); margin: 0 0 4px; }
+  time.pubdate { font-size: 12px; color: var(--cream-faint); display: block; margin-bottom: 18px; }
+
+  /* ---------- Controls bar ---------- */
+  .controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+  .controls .label {
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px;
+    color: var(--cream-faint); margin-right: 4px;
+  }
+  #search {
+    flex: 1;
+    min-width: 240px;
+    font-size: 14px;
+    padding: 8px 12px;
+    border: 1px solid var(--cream-border);
+    border-radius: 8px;
+    background: var(--cream-card);
+    color: var(--cream-text);
+    font-family: inherit;
+    outline: none;
+  }
+  #search:focus { border-color: var(--cream-text); }
+  #search::placeholder { color: var(--cream-faint); }
+  #reset, .btn-ghost {
+    font-size: 12px;
+    background: transparent;
+    border: 1px solid var(--cream-border);
+    color: var(--cream-muted);
+    padding: 5px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  #reset:hover, .btn-ghost:hover { background: rgba(60,45,15,0.06); border-color: rgba(60,45,15,0.55); color: var(--cream-text); }
+
+  /* ---------- Threads + People bars ---------- */
+  .threads-bar, .people-bar {
+    display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
+    margin-bottom: 12px;
+  }
+  .pill {
+    font-size: 12px;
+    padding: 5px 12px;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--cream-muted);
+    border: 1px solid var(--cream-border);
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.12s ease;
+    display: inline-flex; align-items: center; gap: 6px;
+  }
+  .pill:hover { background: rgba(60,45,15,0.06); border-color: rgba(60,45,15,0.55); color: var(--cream-text); }
+  .pill.active { background: var(--cream-text); color: var(--cream); border-color: var(--cream-text); }
+  /* Person pills carry an --accent custom property; active state uses it. */
+  .pill.is-person .pill-swatch {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--accent, var(--cream-faint));
+    flex-shrink: 0;
+  }
+  .pill.is-person.active {
+    background: var(--accent, var(--cream-text));
+    color: white;
+    border-color: var(--accent, var(--cream-text));
+  }
+  .pill.is-person.active .pill-swatch { background: white; }
+
+  /* ---------- Map + panels ---------- */
+  .map-wrap {
+    position: relative;
+    background: var(--cream-card);
+    border: 1px solid var(--cream-border-soft);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  /* The SVG itself is the pan/zoom surface. Different cursors for hover vs.
+     active drag (set via JS class). */
+  #map { cursor: grab; }
+  #map.is-panning { cursor: grabbing; user-select: none; }
+  /* Zoom control pills, overlaid top-right inside the map-wrap. Cream tokens
+     match the rest of the asset; no shadows, no gradients. */
+  .zoom-controls {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: var(--cream-card);
+    border: 1px solid var(--cream-border);
+    border-radius: 6px;
+    padding: 3px;
+    z-index: 4;
+  }
+  .zoom-btn {
+    width: 28px;
+    height: 28px;
+    background: transparent;
+    border: 0;
+    border-radius: 4px;
+    color: var(--cream-text);
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+  .zoom-btn:hover { background: rgba(60, 45, 15, 0.07); }
+  .zoom-btn:disabled { color: var(--cream-faint); cursor: not-allowed; }
+  .zoom-btn:disabled:hover { background: transparent; }
+  .zoom-reset { font-size: 14px; }
+  #map {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: var(--cream);
+  }
+
+  #map .surrounds-fill   { fill: #EFE7D4; stroke: #C0B59C; stroke-width: 0.6; vector-effect: non-scaling-stroke; }
+  #map .india-fill       { fill: var(--cream-card); stroke: var(--cream-text); stroke-width: 0.9; vector-effect: non-scaling-stroke; stroke-linejoin: round; }
+
+  #map .pin {
+    cursor: pointer;
+    transition: transform 0.12s ease;
+  }
+  #map .pin circle.dot {
+    fill: var(--pin-default);
+    stroke: var(--cream-card);
+    stroke-width: 1.4;
+  }
+  #map .pin:hover circle.dot { fill: var(--pin-active); }
+  #map .pin.is-active circle.dot { fill: var(--pin-active); }
+
+  /* When in thread mode, non-thread pins fade. */
+  #map.in-thread .pin:not(.in-thread) circle.dot { fill: var(--pin-faded); stroke: transparent; }
+  #map.in-thread .pin:not(.in-thread) text { display: none; }
+
+  #map .pin .pin-cluster {
+    fill: var(--cream-text); stroke: var(--cream-card); stroke-width: 1.2;
+  }
+  #map .pin .pin-count {
+    fill: var(--cream); font-size: 9px; text-anchor: middle; dominant-baseline: central; pointer-events: none; font-family: inherit; font-weight: 500;
+  }
+
+  #map .route {
+    fill: none; stroke: var(--route-color); stroke-width: 1.6; stroke-dasharray: 4 3; stroke-linecap: round; vector-effect: non-scaling-stroke;
+  }
+
+  /* ---------- People tracks (numbered pins + connecting line) ---------- */
+  /* Each track group carries --accent inline (the person's colour) so that all
+     descendant strokes/fills can reference it without per-element style attrs. */
+  #map .track-line {
+    fill: none;
+    stroke: var(--accent, var(--cream-text));
+    stroke-width: 1.4;
+    stroke-dasharray: 3 3;
+    stroke-linecap: round;
+    opacity: 0.65;
+    vector-effect: non-scaling-stroke;
+    pointer-events: none;
+  }
+  #map .track-pin {
+    cursor: pointer;
+  }
+  #map .track-pin circle.dot {
+    fill: var(--accent, var(--cream-text));
+    stroke: var(--cream-card);
+    stroke-width: 1.4;
+  }
+  #map .track-pin text.num {
+    fill: white;
+    font-size: 6px;
+    font-weight: 500;
+    text-anchor: middle;
+    dominant-baseline: central;
+    pointer-events: none;
+    font-family: inherit;
+  }
+  #map .track-pin:hover circle.dot { stroke-width: 2; }
+  #map .track-pin.is-active circle.dot { stroke: var(--cream-text); stroke-width: 2; }
+
+  /* Off-map table — a single panel below the map listing every track step
+     whose projected position falls outside the visible viewport, grouped
+     by person. Replaces an earlier per-corner badge approach because two
+     steps in the same edge cell collided visually. */
+  .offmap-panel {
+    margin-top: 10px;
+    background: var(--cream-card);
+    border: 1px solid var(--cream-border-soft);
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 12px;
+  }
+  .offmap-panel:empty { display: none; }
+  .offmap-panel .offmap-head {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: var(--cream-faint);
+    margin-bottom: 6px;
+  }
+  .offmap-panel ul { list-style: none; margin: 0; padding: 0; }
+  .offmap-panel li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 0;
+    cursor: pointer;
+    border-bottom: 1px solid var(--cream-border-soft);
+  }
+  .offmap-panel li:last-child { border-bottom: none; }
+  .offmap-panel li:hover { background: rgba(60,45,15,0.04); }
+  .offmap-panel .num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    background: var(--accent, var(--cream-text));
+    color: white;
+    font-size: 10px;
+    font-weight: 500;
+    flex-shrink: 0;
+  }
+  .offmap-panel .person {
+    font-size: 11px;
+    color: var(--accent, var(--cream-muted));
+    font-weight: 500;
+  }
+  .offmap-panel .place {
+    color: var(--cream-text);
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .offmap-panel .country {
+    font-size: 10px;
+    color: var(--cream-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    flex-shrink: 0;
+  }
+
+  /* ---------- People reader (vertical timeline in panel) ---------- */
+  .people-reader { padding: 22px 22px 18px; }
+  .people-reader .person-block {
+    margin-bottom: 22px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--cream-border-soft);
+  }
+  .people-reader .person-block:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .people-reader .person-head {
+    display: flex; align-items: baseline; gap: 8px;
+    margin-bottom: 4px;
+  }
+  .people-reader .person-swatch {
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--accent, var(--cream-text));
+    flex-shrink: 0;
+    align-self: center;
+  }
+  .people-reader .person-name {
+    font-size: 16px; font-weight: 500; color: var(--cream-text);
+    margin: 0;
+  }
+  .people-reader .person-summary {
+    font-size: 13px; color: var(--cream-muted);
+    margin: 4px 0 12px;
+    line-height: 1.5;
+  }
+  .people-reader .track-step {
+    border-left: 2px solid var(--cream-border-soft);
+    padding: 4px 0 12px 14px;
+    position: relative;
+    cursor: pointer;
+  }
+  .people-reader .track-step::before {
+    content: attr(data-num);
+    position: absolute;
+    left: -10px; top: 4px;
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    background: var(--cream-card);
+    border: 2px solid var(--accent, var(--cream-text));
+    color: var(--accent, var(--cream-text));
+    font-size: 9px;
+    text-align: center;
+    line-height: 14px;
+    font-weight: 500;
+    box-sizing: border-box;
+  }
+  .people-reader .track-step.is-active::before {
+    background: var(--accent, var(--cream-text));
+    color: white;
+  }
+  .people-reader .track-step .step-title {
+    font-size: 13px; font-weight: 500; color: var(--cream-text);
+    line-height: 1.3;
+  }
+  .people-reader .track-step .step-title:hover { text-decoration: underline; text-underline-offset: 2px; }
+  .people-reader .track-step .step-when {
+    font-size: 11px; color: var(--cream-faint);
+    margin: 1px 0 4px;
+    font-variant-numeric: tabular-nums;
+  }
+  .people-reader .track-step .step-where {
+    font-size: 11px; color: var(--cream-muted);
+    margin-bottom: 5px;
+  }
+  .people-reader .track-step .step-where .offmap-tag {
+    display: inline-block;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    padding: 0 5px;
+    margin-left: 5px;
+    border-radius: 3px;
+    background: var(--accent, var(--cream-text));
+    color: white;
+    vertical-align: 1px;
+  }
+  .people-reader .track-step .step-note,
+  .people-reader .track-step .step-role {
+    font-size: 12px; color: var(--cream-muted);
+    margin: 0 0 2px;
+    line-height: 1.5;
+  }
+  .people-reader .track-step .step-role { color: var(--cream-text); }
+  .people-reader .track-step .step-kind {
+    font-size: 9px; text-transform: uppercase; letter-spacing: 0.4px;
+    color: var(--cream-faint);
+    margin-bottom: 4px;
+  }
+  /* When the popover is showing a moment, accent its border with the person's colour. */
+  .popover.is-moment {
+    border-left: 3px solid var(--accent, var(--cream-border));
+  }
+
+  /* ---------- Slider / timeline ---------- */
+  .map-column { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+  .timeline {
+    position: relative;
+    background: var(--cream-card);
+    border: 1px solid var(--cream-border-soft);
+    border-radius: 10px;
+    padding: 18px 20px 14px;
+  }
+  .timeline-head {
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin-bottom: 10px;
+  }
+  .timeline-head .label {
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px;
+    color: var(--cream-faint);
+  }
+  .timeline-head .years {
+    font-size: 13px; color: var(--cream-text); font-variant-numeric: tabular-nums;
+  }
+
+  .track-wrap {
+    position: relative;
+    height: 38px;
+  }
+
+  .era-bands {
+    position: absolute; top: 6px; left: 0; right: 0; height: 16px;
+    border-radius: 3px;
+    overflow: hidden;
+    display: flex;
+    pointer-events: none;
+  }
+  .era-band { height: 100%; position: relative; }
+  .era-band-label {
+    position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%);
+    font-size: 9px; color: var(--cream-faint); text-transform: uppercase; letter-spacing: 0.4px;
+    white-space: nowrap;
+    opacity: 0;
+  }
+  .era-band:hover .era-band-label { opacity: 1; }
+
+  .active-range {
+    position: absolute; top: 6px; height: 16px;
+    background: rgba(83, 74, 183, 0.18);
+    border-radius: 3px;
+    pointer-events: none;
+  }
+
+  /* Two overlapping native ranges, custom-styled */
+  .track-wrap input[type="range"] {
+    position: absolute; top: 0; left: 0; right: 0;
+    width: 100%;
+    height: 38px;
+    background: transparent;
+    -webkit-appearance: none;
+    appearance: none;
+    pointer-events: none;
+    margin: 0;
+  }
+  .track-wrap input[type="range"]::-webkit-slider-runnable-track { background: transparent; height: 38px; }
+  .track-wrap input[type="range"]::-moz-range-track { background: transparent; height: 38px; }
+  .track-wrap input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; appearance: none;
+    pointer-events: auto;
+    width: 14px; height: 28px; border-radius: 4px;
+    background: var(--slider-handle); border: 1px solid var(--cream-card);
+    cursor: ew-resize; margin-top: 0;
+  }
+  .track-wrap input[type="range"]::-moz-range-thumb {
+    pointer-events: auto;
+    width: 14px; height: 28px; border-radius: 4px;
+    background: var(--slider-handle); border: 1px solid var(--cream-card);
+    cursor: ew-resize;
+  }
+
+  .era-axis {
+    margin-top: 6px;
+    display: flex; gap: 16px; flex-wrap: wrap;
+    font-size: 10px; color: var(--cream-faint); text-transform: uppercase; letter-spacing: 0.4px;
+  }
+
+  /* ---------- Side panels (event + thread) ---------- */
+  .panel {
+    background: var(--cream-card);
+    border: 1px solid var(--cream-border-soft);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-bottom: 14px;
+  }
+  .panel.empty { color: var(--cream-faint); font-style: italic; }
+
+  .panel-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 6px; }
+  .panel-head h3 { margin: 0; font-size: 17px; font-weight: 500; line-height: 1.3; }
+  .panel-close {
+    border: none; background: transparent; cursor: pointer;
+    color: var(--cream-faint); font-size: 18px; padding: 0; line-height: 1;
+    font-family: inherit;
+  }
+  .panel-close:hover { color: var(--cream-text); }
+
+  .panel .meta {
+    font-size: 12px; color: var(--cream-muted); margin-bottom: 14px;
+    display: flex; flex-wrap: wrap; gap: 4px 10px;
+  }
+  .panel .meta .dot { color: var(--cream-faint); }
+
+  .panel .summary { font-size: 14px; color: var(--cream-text); margin: 0 0 10px; }
+  .panel .detail { font-size: 13px; color: var(--cream-muted); margin: 0 0 14px; line-height: 1.6; }
+
+  .panel .section-label {
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px;
+    color: var(--cream-faint); margin: 14px 0 6px;
+  }
+
+  .figures, .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag {
+    font-size: 11px; padding: 2px 8px; border-radius: 999px;
+    background: rgba(60,45,15,0.08); color: var(--cream-muted);
+  }
+  .tag.unverified { background: rgba(212, 83, 126, 0.12); color: var(--accent-pink); }
+  .tag.cat-political          { background: rgba(83, 74, 183, 0.12); color: var(--accent-purple); }
+  .tag.cat-military            { background: rgba(114, 36, 62, 0.12); color: var(--accent-rose); }
+  .tag.cat-religious           { background: rgba(186, 117, 23, 0.14); color: var(--accent-amber); }
+  .tag.cat-cultural            { background: rgba(24, 95, 165, 0.12); color: var(--accent-blue); }
+  .tag.cat-economic            { background: rgba(60, 45, 15, 0.10); color: var(--cream-text); }
+  .tag.cat-resistance          { background: rgba(83, 74, 183, 0.12); color: var(--accent-purple); }
+  .tag.cat-colonial-administration { background: rgba(114, 36, 62, 0.12); color: var(--accent-rose); }
+  .tag.cat-dynastic            { background: rgba(83, 74, 183, 0.12); color: var(--accent-purple); }
+  .tag.cat-reform              { background: rgba(186, 117, 23, 0.14); color: var(--accent-amber); }
+  .tag.cat-scientific          { background: rgba(24, 95, 165, 0.12); color: var(--accent-blue); }
+
+  .relation-card {
+    border: 1px solid var(--cream-border-soft);
+    border-radius: 8px;
+    padding: 8px 10px;
+    margin-bottom: 6px;
+    cursor: pointer;
+    transition: all 0.12s ease;
+  }
+  .relation-card:hover { background: rgba(60,45,15,0.04); border-color: var(--cream-border); }
+  .relation-card .title { font-size: 13px; color: var(--cream-text); font-weight: 500; line-height: 1.3; }
+  .relation-card .gloss { font-size: 12px; color: var(--cream-muted); margin-top: 3px; line-height: 1.45; }
+  .relation-card .when { font-size: 11px; color: var(--cream-faint); margin-top: 2px; font-variant-numeric: tabular-nums; }
+
+  .links { display: flex; flex-wrap: wrap; gap: 8px; margin: 6px 0 0; }
+  .links a {
+    font-size: 12px; color: var(--cream-text); text-decoration: none;
+    padding: 4px 10px;
+    border: 1px solid var(--cream-border);
+    border-radius: 999px;
+    background: transparent;
+  }
+  .links a:hover { background: rgba(60,45,15,0.06); }
+  .links a.is-wikipedia { font-weight: 500; }
+
+  .sources {
+    font-size: 11px; color: var(--cream-faint); margin-top: 12px; line-height: 1.5; font-style: italic;
+  }
+  .sources li { list-style: none; margin: 0 0 2px; }
+  .sources ul { padding: 0; margin: 4px 0 0; }
+
+  /* ---------- Thread reader ---------- */
+  .thread-reader { padding: 22px 22px 18px; }
+  .thread-reader .thread-subtitle { font-style: italic; color: var(--cream-muted); margin: 4px 0 12px; font-size: 14px; }
+  .thread-reader .thread-summary { color: var(--cream-text); margin: 0 0 16px; }
+  .thread-step {
+    border-left: 2px solid var(--cream-border-soft);
+    padding: 6px 0 16px 16px;
+    margin-bottom: 0;
+    position: relative;
+  }
+  .thread-step::before {
+    content: ""; position: absolute; left: -6px; top: 8px;
+    width: 10px; height: 10px; border-radius: 50%; background: var(--cream-card); border: 2px solid var(--cream-text);
+  }
+  .thread-step.is-active::before { background: var(--accent-purple); border-color: var(--accent-purple); }
+  .thread-step .step-title {
+    font-size: 14px; font-weight: 500; color: var(--cream-text); cursor: pointer; line-height: 1.35;
+  }
+  .thread-step .step-title:hover { text-decoration: underline; text-underline-offset: 3px; }
+  .thread-step .step-when { font-size: 11px; color: var(--cream-faint); margin: 1px 0 6px; font-variant-numeric: tabular-nums; }
+  .thread-step .step-note { font-size: 13px; color: var(--cream-muted); margin: 0 0 8px; line-height: 1.55; }
+  .thread-step .step-transition { font-size: 12px; color: var(--cream-faint); font-style: italic; margin: 0; }
+  .thread-coda {
+    margin-top: 8px;
+    padding: 16px 18px;
+    background: rgba(60,45,15,0.04);
+    border-radius: 8px;
+    font-size: 14px;
+    color: var(--cream-text);
+    line-height: 1.6;
+  }
+
+  /* ---------- Two-column layout for desktop ---------- */
+  .stage {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+  /* ---------- Popover (anchored card on desktop, bottom sheet on mobile) ---------- */
+  .popover {
+    position: fixed;
+    width: 300px;
+    max-width: calc(100vw - 32px);
+    background: var(--cream-card);
+    border: 1px solid var(--cream-border-soft);
+    border-radius: 8px;
+    padding: 14px 16px 12px;
+    z-index: 50;
+    display: none;
+    pointer-events: auto;
+    transform: translateX(-50%);
+    font-size: 13px;
+    color: var(--cream-text);
+  }
+  .popover.is-open { display: block; }
+  .popover.is-above { transform: translateX(-50%) translateY(-100%); }
+  .popover h4 {
+    margin: 0 24px 4px 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: var(--cream-text);
+  }
+  .popover-close {
+    position: absolute;
+    right: 8px;
+    top: 6px;
+    background: none;
+    border: 1px solid transparent;
+    font-size: 18px;
+    color: var(--cream-faint);
+    cursor: pointer;
+    padding: 2px 7px;
+    line-height: 1;
+    border-radius: 4px;
+    font-family: inherit;
+  }
+  .popover-close:hover { color: var(--cream-text); }
+  .popover-meta {
+    font-size: 11px;
+    color: var(--cream-muted);
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+  .popover-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 9px;
+  }
+  .popover-tags .tag {
+    font-size: 10px;
+    padding: 2px 6px;
+  }
+  .popover-summary {
+    font-size: 13px;
+    color: var(--cream-text);
+    margin: 0 0 11px;
+    line-height: 1.45;
+  }
+  .popover-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    gap: 10px;
+  }
+  .popover-actions a {
+    color: var(--purple);
+    text-decoration: none;
+  }
+  .popover-actions a:hover { text-decoration: underline; }
+  .btn-read-full {
+    background: var(--purple);
+    color: white;
+    border: 1px solid var(--purple);
+    padding: 5px 11px;
+    font-size: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: inherit;
+    white-space: nowrap;
+  }
+  .btn-read-full:hover { background: #423a99; border-color: #423a99; }
+  /* Mobile: popover becomes a bottom sheet */
+  @media (max-width: 919px) {
+    .popover {
+      left: 0 !important;
+      right: 0;
+      bottom: 0;
+      top: auto !important;
+      width: auto;
+      max-width: none;
+      border-radius: 12px 12px 0 0;
+      border-bottom: 0;
+      transform: none !important;
+      padding: 16px 18px 18px;
+    }
+    .popover.is-above { transform: none !important; }
+  }
+
+  @media (min-width: 920px) {
+    .stage {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 14px;
+      align-items: start;
+    }
+    .stage > .panel-stack { display: flex; flex-direction: column; gap: 14px; max-height: calc(100vh - 60px); overflow-y: auto; position: sticky; top: 12px; }
+    .stage > .panel-stack .panel { margin-bottom: 0; }
+  }
+
+  /* ---------- Footer ---------- */
+  footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 24px 12px;
+    border-top: 1px solid var(--cream-border-soft);
+    font-size: 12px;
+    color: var(--cream-faint);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  footer a { color: var(--cream-muted); text-decoration: none; }
+  footer a:hover { color: var(--cream-text); text-decoration: underline; text-underline-offset: 3px; }
+
+  mark { background: #FFE896; color: inherit; padding: 0 1px; border-radius: 2px; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="https://chiragpatnaik.com">Chirag Patnaik</a>
+  <nav>
+    <a href="https://chiragpatnaik.com">Website</a>
+    <a href="https://naklitechie.com">Manifesto</a>
+    <a href="https://naklitechie.substack.com">Substack</a>
+    <a href="https://naklitechie.github.io">Portfolio</a>
+    <a href="https://github.com/naklitechie">GitHub</a>
+  </nav>
+</header>
+
+<main>
+  <h1>India — 2500 years to the Republic</h1>
+  <p class="subtitle">A timeline and atlas of subcontinental history. Tap a pin, read the story, follow the chain of cause and effect.</p>
+  <time class="pubdate">Saturday, 260425</time>
+
+  <h2 class="sr-only">Interactive map and timeline of Indian historical events with editorial threads connecting them.</h2>
+
+  <div class="threads-bar" id="threads-bar"><span class="label">Threads</span></div>
+  <div class="people-bar" id="people-bar"><span class="label">People</span></div>
+
+  <div class="controls">
+    <span class="label">Search</span>
+    <input id="search" type="search" placeholder="Search events, places, people…" autocomplete="off">
+    <button id="reset" type="button">Reset</button>
+  </div>
+
+  <div class="stage">
+    <div class="map-column">
+      <div class="map-wrap">
+        <svg id="map" viewBox="0 0 1000 736" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+          <g id="surrounds"></g>
+          <path class="india-fill" d=""></path>
+          <g id="routes"></g>
+          <g id="tracks"></g>
+          <g id="pins"></g>
+        </svg>
+        <div class="zoom-controls" aria-label="Map zoom">
+          <button class="zoom-btn" id="zoom-in" aria-label="Zoom in" title="Zoom in">+</button>
+          <button class="zoom-btn" id="zoom-out" aria-label="Zoom out" title="Zoom out">−</button>
+          <button class="zoom-btn zoom-reset" id="zoom-reset" aria-label="Reset view" title="Reset view">⤾</button>
+        </div>
+      </div>
+
+      <div class="offmap-panel" id="offmap-panel" aria-live="polite"></div>
+
+      <div class="timeline" id="timeline">
+        <div class="timeline-head">
+          <span class="label">Time range</span>
+          <span class="years"><span id="y-start">500 BCE</span> &mdash; <span id="y-end">2025 CE</span></span>
+        </div>
+        <div class="track-wrap" id="track-wrap">
+          <div class="era-bands" id="era-bands"></div>
+          <div class="active-range" id="active-range"></div>
+          <input type="range" id="r-start" min="-500" max="2025" value="-500" step="1" aria-label="Start year">
+          <input type="range" id="r-end"   min="-500" max="2025" value="2025" step="1" aria-label="End year">
+        </div>
+      </div>
+    </div>
+
+    <div class="panel-stack">
+      <aside class="panel" id="event-panel">
+        <div class="panel-head">
+          <h3 id="ep-title">Welcome</h3>
+        </div>
+        <div class="meta" id="ep-meta">12 events. Drag the time slider, tap a pin, or pick a thread above.</div>
+        <p class="summary" id="ep-summary">Each pin marks an event with a date, a place, an editorial summary, and a link to Wikipedia for the rabbit hole. Many events are linked to the events that caused them — click a "Caused by" card to follow the chain.</p>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<!-- Popover: shown anchored to a pin on click. Position set dynamically via JS. -->
+<div class="popover" id="popover" role="dialog" aria-hidden="true"></div>
+
+<footer>
+  <div>&copy; Chirag Patnaik &middot; <a href="https://chiragpatnaik.com">chiragpatnaik.com</a> &middot; <a href="/">More</a></div>
+  <div>Boundaries: Datameet (India), Natural Earth (surrounds) &middot; events as of April 2026</div>
+</footer>
+
+<script>
+// `let` (not `const`) so the runtime-fetch shell.html can reassign these
+// after pulling JSON from the network. The single-file build_html.py output
+// inlines the actual data here at build time.
+// =====================================================================
+// DATA:BEGIN map_paths
+// =====================================================================
+let MAP = null;
+// =====================================================================
+// DATA:END map_paths
+// =====================================================================
+
+// =====================================================================
+// DATA:BEGIN events
+// =====================================================================
+let EVENTS = [];
+// =====================================================================
+// DATA:END events
+// =====================================================================
+
+// =====================================================================
+// DATA:BEGIN threads
+// =====================================================================
+let THREADS = [];
+// =====================================================================
+// DATA:END threads
+// =====================================================================
+
+// =====================================================================
+// DATA:BEGIN people
+// =====================================================================
+let PEOPLE = [];
+// =====================================================================
+// DATA:END people
+// =====================================================================
+
+
+/* =====================================================================
+   PROJECTION
+   Spherical Lambert Conformal Conic, lat_1=20, lat_2=40, lat_0=30, lon_0=78
+   Matches the Python pipeline exactly (verified to integer-meter precision).
+   =================================================================== */
+// `let` so shell.html can re-derive PROJ after the runtime fetch resolves.
+let PROJ = MAP && MAP.projection;
+
+function lcc(lat, lon) {
+  const R = 6371000;
+  const lat1 = 20 * Math.PI / 180;
+  const lat2 = 40 * Math.PI / 180;
+  const lat0 = 30 * Math.PI / 180;
+  const lon0 = 78 * Math.PI / 180;
+  const phi = lat * Math.PI / 180;
+  const lam = lon * Math.PI / 180;
+  const n = Math.log(Math.cos(lat1) / Math.cos(lat2)) /
+            Math.log(Math.tan(Math.PI/4 + lat2/2) / Math.tan(Math.PI/4 + lat1/2));
+  const F = Math.cos(lat1) * Math.pow(Math.tan(Math.PI/4 + lat1/2), n) / n;
+  const rho = R * F / Math.pow(Math.tan(Math.PI/4 + phi/2), n);
+  const rho0 = R * F / Math.pow(Math.tan(Math.PI/4 + lat0/2), n);
+  const x = rho * Math.sin(n * (lam - lon0));
+  const y = rho0 - rho * Math.cos(n * (lam - lon0));
+  return [x, y];
+}
+
+function toSvg(lat, lon) {
+  const [x, y] = lcc(lat, lon);
+  const sx = (x - PROJ.minx) * PROJ.scale;
+  const sy = (PROJ.maxy - y) * PROJ.scale;
+  return [sx, sy];
+}
+
+
+/* =====================================================================
+   DERIVE INDEX
+   - eventById: id -> event
+   - ledTo: id -> list of {id, gloss} (inverse of caused_by)
+   - peopleById, momentByKey: see PEOPLE_SCHEMA.md
+   The maps live at module scope so every render function can hit them as
+   globals; buildIndexes() (called from bootRenders) actually populates them
+   once the data globals are settled. shell.html runs buildIndexes after the
+   runtime fetch resolves; the single-file build runs it immediately.
+   =================================================================== */
+const eventById = new Map();
+const ledTo = new Map();
+const peopleById = new Map();
+const momentByKey = new Map();   // "personId::momentId" -> { person, moment, idx }
+
+function parseYear(s) {
+  if (typeof s === 'number') return s;
+  if (!s) return null;
+  const parts = String(s).split('-');
+  if (String(s).startsWith('-')) {
+    if (parts.length === 1) return parseInt(s, 10);
+    return -parseInt(parts[1], 10);
+  }
+  return parseInt(parts[0], 10);
+}
+
+function buildIndexes() {
+  PROJ = MAP && MAP.projection;
+  eventById.clear();
+  ledTo.clear();
+  peopleById.clear();
+  momentByKey.clear();
+
+  EVENTS.forEach(ev => eventById.set(ev.id, ev));
+  EVENTS.forEach(ev => {
+    (ev.caused_by || []).forEach(link => {
+      if (!ledTo.has(link.id)) ledTo.set(link.id, []);
+      ledTo.get(link.id).push({ id: ev.id, gloss: link.gloss });
+    });
+  });
+  EVENTS.forEach(ev => {
+    ev._yearStart = parseYear(ev.date.start);
+    ev._yearEnd   = parseYear(ev.date.end);
+  });
+
+  PEOPLE.forEach(person => {
+    peopleById.set(person.id, person);
+    (person.track || []).forEach((step, idx) => {
+      step._stepIdx = idx;
+      if (step.kind === 'moment') {
+        const key = `${person.id}::${step.id}`;
+        momentByKey.set(key, { person, moment: step, idx });
+        step._anchor = (step.location && step.location.points && step.location.points[0])
+          ? [step.location.points[0].lat, step.location.points[0].lon]
+          : null;
+        step._country = step.location && step.location.country || 'OFF';
+        step._cityName = step.location && step.location.name || '';
+      } else if (step.kind === 'event-ref') {
+        const ev = eventById.get(step.event_id);
+        step._anchor = (ev && ev.location && ev.location.points && ev.location.points[0])
+          ? [ev.location.points[0].lat, ev.location.points[0].lon]
+          : null;
+        step._country = ev && ev.location && ev.location.country || 'OFF';
+        step._cityName = ev && ev.location && ev.location.name || '';
+        step._eventTitle = ev && ev.title || step.event_id;
+        step._eventDateDisplay = ev && ev.date && ev.date.display || '';
+      }
+    });
+  });
+}
+
+/* =====================================================================
+   STATE
+   =================================================================== */
+const state = {
+  yearStart: -500,
+  yearEnd:   2025,
+  searchQuery: '',
+  activeEvent: null,    // event id (panel)
+  popoverEvent: null,   // event id (popover anchored to pin) — kind='event'
+  popoverMoment: null,  // "personId::momentId" — kind='moment'
+  activeThread: null,   // thread id
+  activeStep: 0,        // index within active thread
+  activePeople: new Set(),  // person ids — multi-select; mutually exclusive with activeThread
+};
+
+
+/* =====================================================================
+   DOM HOOKS
+   =================================================================== */
+const $ = (s, root=document) => root.querySelector(s);
+const $$ = (s, root=document) => Array.from(root.querySelectorAll(s));
+
+const elMap = $('#map');
+const elPins = $('#pins');
+const elRoutes = $('#routes');
+const elTracks = $('#tracks');
+const elSearch = $('#search');
+const elReset = $('#reset');
+const elThreadsBar = $('#threads-bar');
+const elPeopleBar = $('#people-bar');
+const elOffmapPanel = $('#offmap-panel');
+const elPanelStack = $('.panel-stack');
+const elEraBands = $('#era-bands');
+const elActiveRange = $('#active-range');
+const elRStart = $('#r-start');
+const elREnd = $('#r-end');
+const elYStart = $('#y-start');
+const elYEnd = $('#y-end');
+
+
+/* =====================================================================
+   ERA BANDS
+   =================================================================== */
+const ERAS = [
+  { id: "mahajanapada",   start: -500, end: -322 },
+  { id: "maurya",         start: -322, end: -185 },
+  { id: "post-maurya",    start: -185, end:  320 },
+  { id: "gupta",          start:  320, end:  550 },
+  { id: "early-medieval", start:  550, end: 1206 },
+  { id: "sultanate",      start: 1206, end: 1526 },
+  { id: "mughal",         start: 1526, end: 1707 },
+  { id: "maratha",        start: 1707, end: 1818 },
+  { id: "colonial",       start: 1818, end: 1857 },
+  { id: "independence",   start: 1857, end: 1947 },
+  { id: "republic",       start: 1947, end: 2025 },
+];
+
+function renderEraBands() {
+  const total = 2025 - (-500);
+  elEraBands.innerHTML = ERAS.map((era, i) => {
+    const widthPct = ((era.end - era.start) / total) * 100;
+    const tint = i % 2 === 0 ? '#F0E9D5' : '#FFFDF7';
+    return `<div class="era-band" style="width:${widthPct.toFixed(3)}%; background:${tint};"
+              title="${era.id}, ${formatYear(era.start)} – ${formatYear(era.end)}">
+              <span class="era-band-label">${era.id}</span>
+            </div>`;
+  }).join('');
+}
+
+
+/* =====================================================================
+   SLIDER
+   =================================================================== */
+function syncRange() {
+  let s = parseInt(elRStart.value, 10);
+  let e = parseInt(elREnd.value, 10);
+  if (s > e - 1) {
+    if (this === elRStart) s = e - 1;
+    else e = s + 1;
+    elRStart.value = s; elREnd.value = e;
+  }
+  state.yearStart = s;
+  state.yearEnd = e;
+  renderActiveRange();
+  elYStart.textContent = formatYear(s);
+  elYEnd.textContent = formatYear(e);
+  renderPins();
+}
+
+function renderActiveRange() {
+  const total = 2025 - (-500);
+  const startPct = (state.yearStart - (-500)) / total * 100;
+  const endPct = (state.yearEnd - (-500)) / total * 100;
+  elActiveRange.style.left = startPct + '%';
+  elActiveRange.style.width = (endPct - startPct) + '%';
+}
+
+function formatYear(y) {
+  if (y < 0) return Math.abs(y) + ' BCE';
+  if (y === 0) return '1 BCE / 1 CE';
+  return y + ' CE';
+}
+
+
+/* =====================================================================
+   PINS + ROUTES
+   =================================================================== */
+function eventVisibleInRange(ev) {
+  // Visible if the event overlaps the [state.yearStart, state.yearEnd] window
+  return !(ev._yearEnd < state.yearStart || ev._yearStart > state.yearEnd);
+}
+
+function eventMatchesSearch(ev, q) {
+  if (!q) return true;
+  const lower = q.toLowerCase();
+  const hay = [
+    ev.title, ev.summary, ev.detail || '',
+    (ev.figures || []).join(' '),
+    ev.location.name || '',
+    ev.location.region || '',
+    (ev.category || []).join(' ')
+  ].join(' ').toLowerCase();
+  return hay.includes(lower);
+}
+
+function dodgeOverlapping(positions) {
+  // Group pins by actual proximity (not grid buckets). Two pins are in the
+  // same group if they are within MERGE_DIST of any other pin in the group.
+  // Then dodge each group radially.
+  //
+  // CRITICAL: at our viewBox scale, ~1 viewBox unit ≈ 7.4 km of real
+  // geography. A generous dodge here will displace pins across borders.
+  // MERGE_DIST=3 (~22 km) clusters only true co-location (same city);
+  // DODGE_RADIUS=5 (~37 km) keeps displacement city-scale, not country-scale.
+  const MERGE_DIST = 3;
+  const DODGE_RADIUS = 5;
+
+  const n = positions.length;
+  const parent = positions.map((_, i) => i);
+  function find(i) { while (parent[i] !== i) { parent[i] = parent[parent[i]]; i = parent[i]; } return i; }
+  function union(a, b) { const ra = find(a), rb = find(b); if (ra !== rb) parent[ra] = rb; }
+  for (let i = 0; i < n; i++) {
+    for (let j = i + 1; j < n; j++) {
+      const dx = positions[i].sx - positions[j].sx;
+      const dy = positions[i].sy - positions[j].sy;
+      if (dx*dx + dy*dy < MERGE_DIST * MERGE_DIST) union(i, j);
+    }
+  }
+  const groups = new Map();
+  for (let i = 0; i < n; i++) {
+    const r = find(i);
+    if (!groups.has(r)) groups.set(r, []);
+    groups.get(r).push(i);
+  }
+  groups.forEach(idxs => {
+    if (idxs.length === 1) return;
+    // Centre of the group
+    let cx = 0, cy = 0;
+    idxs.forEach(i => { cx += positions[i].sx; cy += positions[i].sy; });
+    cx /= idxs.length; cy /= idxs.length;
+    idxs.forEach((i, k) => {
+      const angle = (Math.PI * 2 * k) / idxs.length - Math.PI / 2;
+      positions[i].sx = cx + DODGE_RADIUS * Math.cos(angle);
+      positions[i].sy = cy + DODGE_RADIUS * Math.sin(angle);
+    });
+  });
+}
+
+function renderPins() {
+  const q = state.searchQuery.trim();
+
+  let visible = EVENTS.filter(ev => eventVisibleInRange(ev) && eventMatchesSearch(ev, q));
+  // In thread mode, all thread events stay visible regardless of search/range; others continue to filter.
+  let threadEventIds = new Set();
+  if (state.activeThread) {
+    const thread = THREADS.find(t => t.id === state.activeThread);
+    if (thread) thread.steps.forEach(s => threadEventIds.add(s.event_id));
+    // Make sure thread events always show on the map even if outside slider range
+    threadEventIds.forEach(id => {
+      const ev = eventById.get(id);
+      if (ev && !visible.includes(ev)) visible.push(ev);
+    });
+  }
+
+  const positions = visible.map(ev => {
+    const p0 = ev.location.points[0];
+    const [sx, sy] = toSvg(p0.lat, p0.lon);
+    return { ev, sx, sy };
+  });
+  dodgeOverlapping(positions);
+
+  // Routes
+  const routePaths = [];
+  visible.forEach(ev => {
+    if (ev.location.type !== 'route' || !ev.location.points || ev.location.points.length < 2) return;
+    const pts = ev.location.points.map(p => toSvg(p.lat, p.lon));
+    let d = 'M' + pts[0][0].toFixed(1) + ',' + pts[0][1].toFixed(1);
+    for (let i = 1; i < pts.length; i++) d += 'L' + pts[i][0].toFixed(1) + ',' + pts[i][1].toFixed(1);
+    routePaths.push(`<path class="route" d="${d}"></path>`);
+  });
+  elRoutes.innerHTML = routePaths.join('');
+
+  // Pins
+  const inThread = !!state.activeThread;
+  if (inThread) elMap.classList.add('in-thread');
+  else elMap.classList.remove('in-thread');
+
+  elPins.innerHTML = positions.map(({ ev, sx, sy }) => {
+    const isActive = ev.id === state.activeEvent;
+    const isInThread = threadEventIds.has(ev.id);
+    const cls = ['pin'];
+    if (isActive) cls.push('is-active');
+    if (isInThread) cls.push('in-thread');
+    return `<g class="${cls.join(' ')}" data-id="${ev.id}" transform="translate(${sx.toFixed(1)},${sy.toFixed(1)})">
+              <circle class="dot" r="5"></circle>
+              <title>${escapeHtml(ev.title)} · ${escapeHtml(ev.date.display)}</title>
+            </g>`;
+  }).join('');
+
+  $$('#pins .pin').forEach(g => {
+    // Single click without modifier → popover (light scan)
+    // Shift-click → panel direct (skip popover)
+    // Double-click → panel direct (skip popover)
+    g.addEventListener('click', (e) => {
+      const id = g.getAttribute('data-id');
+      if (!id) return;
+      if (e.shiftKey) {
+        hidePopover();
+        selectEvent(id);
+      } else {
+        // Toggle: clicking the same pin's popover dismisses it
+        if (state.popoverEvent === id) {
+          hidePopover();
+        } else {
+          showPopover(id);
+        }
+      }
+    });
+    g.addEventListener('dblclick', (e) => {
+      const id = g.getAttribute('data-id');
+      if (!id) return;
+      e.preventDefault();
+      hidePopover();
+      selectEvent(id);
+    });
+  });
+
+  // Sync popover with the freshly-rendered pin set:
+  // — if the popover's event was filtered out, close the popover.
+  // — if the pin moved (different filter, dodge changed), re-position.
+  if (state.popoverEvent) {
+    const pin = document.querySelector(
+      `#pins .pin[data-id="${cssEscape(state.popoverEvent)}"]`
+    );
+    if (!pin) {
+      hidePopover();
+    } else if (window.innerWidth >= 920) {
+      positionPopover(state.popoverEvent);
+    }
+  }
+}
+
+
+/* =====================================================================
+   PANELS
+   =================================================================== */
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+function escapeRegex(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+function highlight(text, q) {
+  const safe = escapeHtml(text);
+  if (!q) return safe;
+  return safe.replace(new RegExp('(' + escapeRegex(q) + ')', 'gi'), '<mark>$1</mark>');
+}
+
+function eventCard(ev, gloss) {
+  const when = ev.date.display || '';
+  return `<div class="relation-card" data-id="${ev.id}">
+    <div class="title">${escapeHtml(ev.title)}</div>
+    ${gloss ? `<div class="gloss">${escapeHtml(gloss)}</div>` : ''}
+    <div class="when">${escapeHtml(when)}</div>
+  </div>`;
+}
+
+function selectEvent(id) {
+  state.activeEvent = id;
+  renderEventPanel();
+  renderPins();
+  // Scroll panel stack into view on mobile-ish widths.
+  if (window.innerWidth < 920) {
+    elPanelStack.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+function clearEvent() {
+  state.activeEvent = null;
+  renderEventPanel();
+  renderPins();
+}
+
+/* =====================================================================
+   POPOVER — anchored card on desktop, bottom sheet on mobile.
+   ---------------------------------------------------------------------
+   Click model:
+     • Single click pin     → showPopover(id)            (light scan)
+     • Shift / dbl-click pin→ selectEvent(id), no popover (skip to panel)
+     • "Read full" button   → selectEvent(id)            (popover stays as locator)
+     • Relation card click  → navigateToEvent(id)        (panel + popover for new ev)
+     • Thread step click    → navigateToEvent(id)        (same)
+     • Click outside / Esc  → hidePopover()
+   =================================================================== */
+function navigateToEvent(id) {
+  // Open the panel for this event AND surface its popover on the map.
+  // Used when the user navigates via relation cards or thread steps,
+  // so they keep a visual sense of where the event happened.
+  selectEvent(id);
+  showPopover(id);
+}
+
+function renderPopoverContent(ev) {
+  const cats = (ev.category || []).map(c =>
+    `<span class="tag cat-${c}">${escapeHtml(c.replace(/-/g,' '))}</span>`
+  ).join('');
+  const wiki = (ev.links || []).find(l => l.type === 'wikipedia');
+  const region = ev.location.region
+    ? ` <span class="dot">·</span> ${escapeHtml(ev.location.region)}`
+    : '';
+  return `<button class="popover-close" aria-label="Close popover">×</button>
+    <h4>${escapeHtml(ev.title)}</h4>
+    <div class="popover-meta">
+      ${escapeHtml(ev.date.display)} <span class="dot">·</span> ${escapeHtml(ev.location.name)}${region}
+    </div>
+    <div class="popover-tags">
+      <span class="tag">${escapeHtml(ev.era.replace(/-/g,' '))}</span>
+      ${cats}
+    </div>
+    <p class="popover-summary">${escapeHtml(ev.summary)}</p>
+    <div class="popover-actions">
+      ${wiki ? `<a href="${escapeHtml(wiki.url)}" target="_blank" rel="noopener">Wikipedia ↗</a>` : '<span></span>'}
+      <button class="btn-read-full" type="button">Read full entry →</button>
+    </div>`;
+}
+
+function showPopover(id) {
+  const ev = eventById.get(id);
+  if (!ev) return;
+  state.popoverEvent = id;
+
+  const popover = $('#popover');
+  popover.innerHTML = renderPopoverContent(ev);
+  popover.classList.add('is-open');
+  popover.setAttribute('aria-hidden', 'false');
+
+  // Wire popover-internal controls
+  $('.popover-close', popover).addEventListener('click', (e) => {
+    e.stopPropagation();
+    hidePopover();
+  });
+  $('.btn-read-full', popover).addEventListener('click', (e) => {
+    e.stopPropagation();
+    selectEvent(id);
+    // Popover stays open as the visual locator on the map.
+  });
+
+  positionPopover(id);
+}
+
+function positionPopover(id) {
+  // Mobile: CSS handles fixed bottom-sheet layout, no JS positioning needed.
+  if (window.innerWidth < 920) return;
+
+  const popover = $('#popover');
+  const pin = document.querySelector(`#pins .pin[data-id="${cssEscape(id)}"]`);
+  if (!pin) return;
+
+  // Pin's transform is `translate(sx,sy)` in viewBox units.
+  const xform = pin.getAttribute('transform') || '';
+  const m = xform.match(/translate\(\s*([-\d.]+)\s*,\s*([-\d.]+)\s*\)/);
+  if (!m) return;
+  const sx = parseFloat(m[1]);
+  const sy = parseFloat(m[2]);
+
+  // Convert viewBox coords to viewport pixels using the SVG's bounding box
+  // AND the current viewBox (which changes with zoom/pan).
+  const svgRect = elMap.getBoundingClientRect();
+  const vb = elMap.viewBox.baseVal;
+  const sxFrac = (sx - vb.x) / vb.width;
+  const syFrac = (sy - vb.y) / vb.height;
+  const pinPageX = svgRect.left + sxFrac * svgRect.width;
+  const pinPageY = svgRect.top  + syFrac * svgRect.height;
+
+  // If the pin is currently outside the visible map viewport (panned off
+  // screen), hide the popover instead of pinning it to a stale position.
+  if (sxFrac < 0 || sxFrac > 1 || syFrac < 0 || syFrac > 1) {
+    popover.classList.remove('is-open');
+    return;
+  }
+
+  // Decide above-or-below so the popover doesn't run off the bottom of the
+  // viewport. We don't know the popover's height until after render, but we
+  // can read it via offsetHeight after we set is-open.
+  const popH = popover.offsetHeight || 220;
+  const margin = 16;
+  const wantsAbove = pinPageY + popH + margin > window.innerHeight;
+
+  // Centre the popover horizontally on the pin, but keep it inside the viewport.
+  const popW = popover.offsetWidth || 300;
+  let left = pinPageX;
+  // After translateX(-50%), left edge = pinPageX - popW/2
+  // Clamp pinPageX so left edge >= margin and right edge <= viewport - margin
+  const halfW = popW / 2;
+  if (left - halfW < margin) left = halfW + margin;
+  if (left + halfW > window.innerWidth - margin) left = window.innerWidth - margin - halfW;
+  popover.style.left = `${left}px`;
+
+  if (wantsAbove) {
+    popover.style.top = `${pinPageY - 14}px`;
+    popover.classList.add('is-above');
+  } else {
+    popover.style.top = `${pinPageY + 14}px`;
+    popover.classList.remove('is-above');
+  }
+}
+
+function hidePopover() {
+  const wasMoment = state.popoverMoment !== null;
+  state.popoverEvent = null;
+  state.popoverMoment = null;
+  const popover = $('#popover');
+  popover.classList.remove('is-open', 'is-above', 'is-moment');
+  popover.setAttribute('aria-hidden', 'true');
+  // Clear inline positioning so the next open re-computes cleanly
+  popover.style.left = '';
+  popover.style.top = '';
+  popover.style.removeProperty('--accent');
+  // If a track step was the active anchor, repaint tracks so its pin loses
+  // the is-active state.
+  if (wasMoment || state.activePeople.size > 0) renderTracks();
+}
+
+// Safe selector quoting for event IDs (which are kebab-case but defensive)
+function cssEscape(s) {
+  return (window.CSS && CSS.escape) ? CSS.escape(s) : String(s).replace(/[^a-zA-Z0-9_-]/g, '\\$&');
+}
+
+function renderEventPanel() {
+  // The event panel always appears; if no event selected, show the welcome content.
+  const stack = elPanelStack;
+
+  // If a thread is active, render the thread reader as the primary panel,
+  // and the event panel below as a secondary detail.
+  let html = '';
+
+  if (state.activeThread) {
+    html += renderThreadReaderHtml();
+  } else if (state.activePeople.size > 0) {
+    html += renderPeopleReaderHtml();
+  }
+
+  if (state.activeEvent) {
+    const ev = eventById.get(state.activeEvent);
+    if (ev) html += renderEventPanelHtml(ev);
+  } else if (!state.activeThread && state.activePeople.size === 0) {
+    // Compute the corpus date span from the loaded events for display.
+    const yrs = EVENTS.map(e => e._yearStart).filter(y => y !== null).sort((a,b) => a - b);
+    const first = yrs[0], last = yrs[yrs.length - 1];
+    const span = (first !== undefined && last !== undefined)
+      ? ` spanning ${formatYear(first)} – ${formatYear(last)}`
+      : '';
+    html += `<aside class="panel" id="event-panel">
+      <div class="panel-head"><h3>Browse</h3></div>
+      <div class="meta">${EVENTS.length} events${span}.</div>
+      <p class="summary">Tap a pin on the map for the editorial summary, the date and place, the linked Wikipedia article, and what the event was caused by — and what it led to. Pick a thread or a person above to walk a curated sequence or follow a life.</p>
+    </aside>`;
+  }
+
+  stack.innerHTML = html;
+
+  // Wire close buttons
+  $$('.panel-close', stack).forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.getAttribute('data-close');
+      if (target === 'event') clearEvent();
+      if (target === 'thread') clearThread();
+      if (target === 'people') clearPeople();
+    });
+  });
+  // Wire relation-card clicks — clicking caused_by/led_to/part_of card
+  // both updates the panel AND surfaces the popover for that event's pin,
+  // so the user keeps a visual locator on the map while navigating chains.
+  $$('.relation-card', stack).forEach(card => {
+    card.addEventListener('click', () => {
+      const id = card.getAttribute('data-id');
+      if (id) navigateToEvent(id);
+    });
+  });
+  // Thread step clicks: same — keep the map in sync with the reader.
+  $$('.thread-step', stack).forEach((step) => {
+    step.addEventListener('click', () => {
+      const id = step.getAttribute('data-event-id');
+      if (id) navigateToEvent(id);
+    });
+  });
+  // People reader track-step clicks → open popover at the corresponding pin.
+  $$('.people-reader .track-step', stack).forEach((step) => {
+    step.addEventListener('click', () => {
+      const pid = step.getAttribute('data-person-id');
+      const idx = parseInt(step.getAttribute('data-step-idx'), 10);
+      navigateToStep(pid, idx);
+    });
+  });
+}
+
+function renderEventPanelHtml(ev) {
+  const q = state.searchQuery.trim();
+  const causedBy = (ev.caused_by || []).map(link => {
+    const target = eventById.get(link.id);
+    if (!target) return '';
+    return eventCard(target, link.gloss);
+  }).filter(Boolean).join('');
+
+  const ledToList = (ledTo.get(ev.id) || []).map(link => {
+    const target = eventById.get(link.id);
+    if (!target) return '';
+    return eventCard(target, link.gloss);
+  }).filter(Boolean).join('');
+
+  const partOf = (ev.part_of || []).map(link => {
+    const target = eventById.get(link.id);
+    if (!target) return '';
+    return eventCard(target, null);
+  }).filter(Boolean).join('');
+
+  const cats = (ev.category || []).map(c => `<span class="tag cat-${c}">${escapeHtml(c.replace(/-/g,' '))}</span>`).join('');
+  const figures = (ev.figures || []).map(f => `<span class="tag">${highlight(f, q)}</span>`).join('');
+
+  const linkChips = (ev.links || []).map(l => {
+    const cls = l.type === 'wikipedia' ? 'is-wikipedia' : '';
+    return `<a href="${escapeHtml(l.url)}" target="_blank" rel="noopener" class="${cls}">${escapeHtml(l.label)} ↗</a>`;
+  }).join('');
+
+  const sources = (ev.sources || []);
+  const sourcesHtml = sources.length
+    ? `<div class="sources"><div class="section-label" style="margin-top:8px;">Sources</div><ul>${sources.map(s => `<li>${escapeHtml(s.label)}</li>`).join('')}</ul></div>`
+    : '';
+
+  const verifiedTag = ev.verified === false
+    ? '<span class="tag unverified">unverified</span>' : '';
+
+  return `<aside class="panel" id="event-panel">
+    <div class="panel-head">
+      <h3>${highlight(ev.title, q)}</h3>
+      <button class="panel-close" data-close="event" aria-label="Close">×</button>
+    </div>
+    <div class="meta">
+      <span>${escapeHtml(ev.date.display)}</span>
+      <span class="dot">·</span>
+      <span>${escapeHtml(ev.location.name)}</span>
+      ${ev.location.region ? `<span class="dot">·</span><span>${escapeHtml(ev.location.region)}</span>` : ''}
+    </div>
+    <div class="tags" style="margin-bottom:12px;">
+      <span class="tag">${escapeHtml(ev.era.replace(/-/g,' '))}</span>
+      ${cats}
+      ${verifiedTag}
+    </div>
+    <p class="summary">${highlight(ev.summary, q)}</p>
+    ${ev.detail ? `<p class="detail">${highlight(ev.detail, q)}</p>` : ''}
+    ${figures ? `<div class="section-label">Figures</div><div class="figures">${figures}</div>` : ''}
+    ${causedBy ? `<div class="section-label">Caused by</div>${causedBy}` : ''}
+    ${ledToList ? `<div class="section-label">Led to</div>${ledToList}` : ''}
+    ${partOf ? `<div class="section-label">Part of</div>${partOf}` : ''}
+    ${linkChips ? `<div class="section-label">Links</div><div class="links">${linkChips}</div>` : ''}
+    ${sourcesHtml}
+  </aside>`;
+}
+
+
+/* =====================================================================
+   THREADS
+   =================================================================== */
+function renderThreadsBar() {
+  const pills = THREADS.map(t => {
+    const active = state.activeThread === t.id ? ' active' : '';
+    return `<button class="pill${active}" data-tid="${t.id}">${escapeHtml(t.title)}</button>`;
+  }).join('');
+  elThreadsBar.innerHTML =
+    `<span class="label">Threads</span>${pills}` +
+    (state.activeThread ? `<button class="pill" id="exit-thread">Exit thread</button>` : '');
+
+  $$('.pill[data-tid]', elThreadsBar).forEach(btn => {
+    btn.addEventListener('click', () => {
+      const tid = btn.getAttribute('data-tid');
+      if (state.activeThread === tid) clearThread();
+      else activateThread(tid);
+    });
+  });
+  const exit = $('#exit-thread');
+  if (exit) exit.addEventListener('click', clearThread);
+}
+
+function activateThread(tid) {
+  state.activeThread = tid;
+  state.activeStep = 0;
+  // People + Threads are mutually exclusive
+  if (state.activePeople.size > 0) {
+    state.activePeople.clear();
+    renderPeopleBar();
+    renderTracks();
+  }
+  // Auto-select the first step's event
+  const t = THREADS.find(x => x.id === tid);
+  if (t && t.steps[0]) state.activeEvent = t.steps[0].event_id;
+  renderThreadsBar();
+  renderEventPanel();
+  renderPins();
+}
+
+function clearThread() {
+  state.activeThread = null;
+  state.activeStep = 0;
+  renderThreadsBar();
+  renderEventPanel();
+  renderPins();
+}
+
+function renderThreadReaderHtml() {
+  const t = THREADS.find(x => x.id === state.activeThread);
+  if (!t) return '';
+  const stepsHtml = t.steps.map((step, i) => {
+    const ev = eventById.get(step.event_id);
+    if (!ev) return '';
+    const activeCls = ev.id === state.activeEvent ? ' is-active' : '';
+    const transition = step.transition
+      ? `<p class="step-transition">${escapeHtml(step.transition)}</p>`
+      : '';
+    return `<div class="thread-step${activeCls}" data-event-id="${ev.id}">
+      <div class="step-title">${escapeHtml(ev.title)}</div>
+      <div class="step-when">${escapeHtml(ev.date.display)}</div>
+      <p class="step-note">${escapeHtml(step.note)}</p>
+      ${transition}
+    </div>`;
+  }).join('');
+  const sources = (t.sources || []).map(s => `<li>${escapeHtml(s.label)}</li>`).join('');
+  return `<aside class="panel thread-reader">
+    <div class="panel-head">
+      <h3>${escapeHtml(t.title)}</h3>
+      <button class="panel-close" data-close="thread" aria-label="Close thread">×</button>
+    </div>
+    ${t.subtitle ? `<p class="thread-subtitle">${escapeHtml(t.subtitle)}</p>` : ''}
+    <p class="thread-summary">${escapeHtml(t.summary)}</p>
+    ${stepsHtml}
+    <div class="thread-coda">${escapeHtml(t.coda)}</div>
+    ${sources ? `<div class="sources"><div class="section-label" style="margin-top:8px;">Sources</div><ul>${sources}</ul></div>` : ''}
+  </aside>`;
+}
+
+
+/* =====================================================================
+   PEOPLE — multi-select tracks, vertical reader, off-map indicator.
+   ---------------------------------------------------------------------
+   • People + Threads are mutually exclusive (selecting either clears the
+     other). Within People, multi-select is allowed: multiple tracks can
+     overlay the map at once, each in its own colour.
+   • Tracks render as a dashed polyline through numbered pins (in person's
+     accent colour). Pins use the per-step anchor (event-ref → resolved
+     event's points[0]; moment → moment's points[0]).
+   • Steps whose projected point falls outside the visible viewBox are
+     listed in a single off-map table below the map (one row per step,
+     grouped by person). Click row → opens that step's popover anchored
+     to the row.
+   • Click track pin / off-map row → popover. Click step in reader →
+     same. Event-ref steps reuse the event popover; moment steps get a
+     dedicated moment popover.
+   =================================================================== */
+function renderPeopleBar() {
+  const pills = PEOPLE.map(p => {
+    const active = state.activePeople.has(p.id) ? ' active' : '';
+    const lastName = (p.name || p.id).split(' ').slice(-1)[0];
+    return `<button class="pill is-person${active}" data-pid="${p.id}" `
+         + `style="--accent:${p.colour};">`
+         + `<span class="pill-swatch"></span>${escapeHtml(lastName)}`
+         + `</button>`;
+  }).join('\n    ');
+  elPeopleBar.innerHTML =
+    `<span class="label">People</span>\n    ${pills}` +
+    (state.activePeople.size ? `<button class="pill" id="exit-people">Clear</button>` : '');
+
+  $$('.pill[data-pid]', elPeopleBar).forEach(btn => {
+    btn.addEventListener('click', () => {
+      const pid = btn.getAttribute('data-pid');
+      togglePerson(pid);
+    });
+  });
+  const exit = $('#exit-people');
+  if (exit) exit.addEventListener('click', clearPeople);
+}
+
+function togglePerson(pid) {
+  if (state.activePeople.has(pid)) {
+    state.activePeople.delete(pid);
+  } else {
+    state.activePeople.add(pid);
+    // People + Threads are mutually exclusive
+    if (state.activeThread) {
+      state.activeThread = null;
+      state.activeStep = 0;
+    }
+  }
+  renderPeopleBar();
+  renderThreadsBar();
+  renderTracks();
+  renderEventPanel();
+}
+
+function clearPeople() {
+  state.activePeople.clear();
+  renderPeopleBar();
+  renderTracks();
+  renderEventPanel();
+}
+
+/* renderTracks() — paints all active person tracks (polyline + pins) into
+   #tracks, and synchronises the off-map badge layer. Called whenever the
+   active person set changes; also called from applyZoom() because the
+   visible viewBox shifts which steps become off-map. */
+function renderTracks() {
+  // Always start clean — no incremental updates, the cost is negligible.
+  elTracks.innerHTML = '';
+  elOffmapPanel.innerHTML = '';
+
+  if (state.activePeople.size === 0) return;
+
+  // Each active person's track gets one <g> with --accent inline so all
+  // child shapes pick up the colour via currentColor / var fallthrough.
+  const offmapEntries = [];   // accumulate, paint after we know viewBox
+
+  PEOPLE.forEach(person => {
+    if (!state.activePeople.has(person.id)) return;
+    const colour = person.colour || '#2C2A24';
+    const positions = (person.track || []).map((step, idx) => {
+      if (!step._anchor) return null;
+      const [sx, sy] = toSvg(step._anchor[0], step._anchor[1]);
+      return { step, idx, sx, sy, person };
+    }).filter(Boolean);
+
+    if (positions.length === 0) return;
+
+    // Connecting line — straight segments through every step in track order.
+    const linePts = positions.map(p => `${p.sx.toFixed(1)},${p.sy.toFixed(1)}`).join(' ');
+    const groupParts = [];
+    groupParts.push(`<polyline class="track-line" points="${linePts}"></polyline>`);
+
+    // Numbered pin per step. Pin radius matches the event-pin baseline (4) —
+    // applyZoom() resizes to keep CSS pixels constant.
+    positions.forEach(({ step, idx, sx, sy }) => {
+      const isActive = isStepActiveInPopover(person.id, step);
+      const cls = ['track-pin'];
+      if (isActive) cls.push('is-active');
+      const anchor = step.kind === 'moment'
+        ? `data-anchor-kind="moment" data-anchor-key="${person.id}::${step.id}"`
+        : `data-anchor-kind="event-ref" data-event-id="${escapeHtml(step.event_id || '')}"`;
+      groupParts.push(
+        `<g class="${cls.join(' ')}" data-person-id="${person.id}" data-step-idx="${idx}" `
+        + `${anchor} transform="translate(${sx.toFixed(1)},${sy.toFixed(1)})">`
+        + `<circle class="dot" r="4"></circle>`
+        + `<text class="num" y="0.4">${idx + 1}</text>`
+        + `</g>`
+      );
+    });
+
+    elTracks.insertAdjacentHTML('beforeend',
+      `<g class="track" data-person-id="${person.id}" style="--accent:${colour};">${groupParts.join('')}</g>`
+    );
+
+    // Determine off-map steps and queue them for the HTML overlay.
+    const vb = elMap.viewBox.baseVal;
+    positions.forEach(({ step, idx, sx, sy }) => {
+      const inside = (sx >= vb.x && sx <= vb.x + vb.width
+                   && sy >= vb.y && sy <= vb.y + vb.height);
+      if (!inside) {
+        offmapEntries.push({ person, step, idx, sx, sy, colour });
+      }
+    });
+  });
+
+  // Wire pin click handlers (single + dblclick same as event pins, but routed
+  // through navigateToStep so the popover gets the right kind).
+  $$('#tracks .track-pin').forEach(g => {
+    g.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const pid = g.getAttribute('data-person-id');
+      const idx = parseInt(g.getAttribute('data-step-idx'), 10);
+      navigateToStep(pid, idx);
+    });
+  });
+
+  // Off-map steps render in a single panel below the map (one row per step),
+  // grouped under each person's heading. Avoids the corner-collision issue
+  // when two off-map steps share the same edge of the map.
+  if (offmapEntries.length) renderOffMapTable(offmapEntries);
+}
+
+function isStepActiveInPopover(personId, step) {
+  if (state.popoverMoment) {
+    return state.popoverMoment === `${personId}::${step.id || ''}`;
+  }
+  if (state.popoverEvent && step.kind === 'event-ref') {
+    return state.popoverEvent === step.event_id;
+  }
+  return false;
+}
+
+/* renderOffMapTable — group entries by person (preserving pill order) and
+   render one row per off-map step. Replaces an earlier per-corner badge
+   approach because two badges in the same edge cell collided visually. */
+function renderOffMapTable(entries) {
+  // Group by person id, preserve PEOPLE ordering (which matches pill order).
+  const byPerson = new Map();
+  entries.forEach(e => {
+    if (!byPerson.has(e.person.id)) byPerson.set(e.person.id, []);
+    byPerson.get(e.person.id).push(e);
+  });
+  const groups = PEOPLE
+    .filter(p => byPerson.has(p.id))
+    .map(p => ({ person: p, items: byPerson.get(p.id) }));
+
+  const total = entries.length;
+  const headHtml = `<div class="offmap-head">${total} step${total === 1 ? '' : 's'} off-map · click to view</div>`;
+  const listHtml = groups.map(({ person, items }) => {
+    return items.map(({ step, idx }) => {
+      const city = step._cityName || step.tooltip || '';
+      const cityShort = city.split(',').slice(0, 2).join(',').trim() || city;
+      const country = (step._country && step._country !== 'OFF') ? step._country : 'OFF';
+      const lastName = (person.name || person.id).split(' ').slice(-1)[0];
+      return `<li data-person-id="${person.id}" data-step-idx="${idx}" style="--accent:${person.colour};">`
+           + `<span class="num">${idx + 1}</span>`
+           + `<span class="person">${escapeHtml(lastName)}</span>`
+           + `<span class="place">${escapeHtml(cityShort)}</span>`
+           + `<span class="country">${escapeHtml(country)}</span>`
+           + `</li>`;
+    }).join('');
+  }).join('');
+
+  elOffmapPanel.innerHTML = `${headHtml}<ul>${listHtml}</ul>`;
+  $$('.offmap-panel li', elOffmapPanel).forEach(li => {
+    li.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const pid = li.getAttribute('data-person-id');
+      const idx = parseInt(li.getAttribute('data-step-idx'), 10);
+      navigateToStep(pid, idx);
+    });
+  });
+}
+
+/* navigateToStep — open the appropriate popover for a track step and route
+   it through the same selector machinery that pin clicks use. Event-ref
+   steps lean on the existing event popover (their pin lives in #tracks but
+   the popover content is identical to clicking the event's normal pin).
+   Moment steps get a dedicated moment popover. */
+function navigateToStep(personId, idx) {
+  const person = peopleById.get(personId);
+  if (!person) return;
+  const step = (person.track || [])[idx];
+  if (!step) return;
+  if (step.kind === 'event-ref') {
+    // Show event popover anchored to the track pin (not the event pin).
+    showPopoverForTrackStep(person, step, idx, 'event-ref');
+  } else if (step.kind === 'moment') {
+    showPopoverForTrackStep(person, step, idx, 'moment');
+  }
+}
+
+/* showPopoverForTrackStep — render popover for a track-step pin, position
+   it at the step's track pin (or off-map badge), and rewire the close /
+   read-full controls. Distinct from showPopover() because the pin lives in
+   #tracks and the content can be a moment, not an event. */
+function showPopoverForTrackStep(person, step, idx, kind) {
+  const popover = $('#popover');
+  popover.classList.toggle('is-moment', kind === 'moment');
+  popover.style.setProperty('--accent', person.colour);
+
+  if (kind === 'moment') {
+    state.popoverEvent = null;
+    state.popoverMoment = `${person.id}::${step.id || ''}`;
+    popover.innerHTML = renderMomentPopoverContent(person, step, idx);
+  } else {
+    // event-ref: reuse the event popover content but with the person's role
+    // line added so the user sees why this step belongs to the person's life.
+    const ev = eventById.get(step.event_id);
+    if (!ev) return;
+    state.popoverMoment = null;
+    state.popoverEvent = ev.id;
+    popover.innerHTML = renderEventRefPopoverContent(ev, person, step);
+  }
+  popover.classList.add('is-open');
+  popover.setAttribute('aria-hidden', 'false');
+
+  // Wire close + read-full
+  $('.popover-close', popover).addEventListener('click', (e) => {
+    e.stopPropagation();
+    hidePopover();
+  });
+  const readFull = $('.btn-read-full', popover);
+  if (readFull) {
+    readFull.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (kind === 'event-ref') {
+        selectEvent(step.event_id);
+      } else {
+        // For moments there is no event panel — the popover IS the entry.
+      }
+    });
+  }
+  positionPopoverForStep(person.id, idx);
+  // Highlight the step in any open reader
+  renderEventPanel();
+  // Refresh active state on track pins
+  renderTracks();
+}
+
+function renderEventRefPopoverContent(ev, person, step) {
+  const wiki = (ev.links || []).find(l => l.type === 'wikipedia');
+  const region = ev.location.region
+    ? ` <span class="dot">·</span> ${escapeHtml(ev.location.region)}`
+    : '';
+  return `<button class="popover-close" aria-label="Close popover">×</button>
+    <h4>${escapeHtml(ev.title)}</h4>
+    <div class="popover-meta">
+      ${escapeHtml(ev.date.display)} <span class="dot">·</span> ${escapeHtml(ev.location.name)}${region}
+    </div>
+    <div class="popover-tags">
+      <span class="tag" style="background:${person.colour};color:white;">${escapeHtml(person.name)}</span>
+      <span class="tag">step ${step._stepIdx + 1}</span>
+    </div>
+    ${step.role ? `<p class="popover-summary"><strong>Role:</strong> ${escapeHtml(step.role)}</p>` : ''}
+    <p class="popover-summary">${escapeHtml(ev.summary)}</p>
+    <div class="popover-actions">
+      ${wiki ? `<a href="${escapeHtml(wiki.url)}" target="_blank" rel="noopener">Wikipedia ↗</a>` : '<span></span>'}
+      <button class="btn-read-full" type="button">Read full event →</button>
+    </div>`;
+}
+
+function renderMomentPopoverContent(person, step, idx) {
+  const region = step.location && step.location.region
+    ? ` <span class="dot">·</span> ${escapeHtml(step.location.region)}`
+    : '';
+  const offmap = step._country === 'OFF' ? '<span class="tag">off-map</span>' : '';
+  return `<button class="popover-close" aria-label="Close popover">×</button>
+    <h4>${escapeHtml(step.tooltip || '')}</h4>
+    <div class="popover-meta">
+      ${escapeHtml(step.date && step.date.display || '')} <span class="dot">·</span>
+      ${escapeHtml(step.location && step.location.name || '')}${region}
+    </div>
+    <div class="popover-tags">
+      <span class="tag" style="background:${person.colour};color:white;">${escapeHtml(person.name)}</span>
+      <span class="tag">step ${idx + 1}</span>
+      ${offmap}
+    </div>
+    <p class="popover-summary">${escapeHtml(step.summary || '')}</p>
+    ${step.note ? `<p class="popover-summary" style="color:var(--cream-muted);font-style:italic;">${escapeHtml(step.note)}</p>` : ''}
+    <div class="popover-actions">
+      <span></span>
+      <button class="btn-read-full" type="button" disabled style="opacity:0.4;cursor:default;">No event entry</button>
+    </div>`;
+}
+
+/* positionPopoverForStep — same idea as positionPopover but the anchor pin
+   lives in #tracks and is keyed by (personId, idx). Falls back to the
+   off-map badge anchor when the step is off-map. */
+function positionPopoverForStep(personId, idx) {
+  if (window.innerWidth < 920) return;
+  const popover = $('#popover');
+  const pin = document.querySelector(
+    `#tracks .track-pin[data-person-id="${cssEscape(personId)}"][data-step-idx="${idx}"]`
+  );
+  let pageX, pageY;
+  if (pin) {
+    const xform = pin.getAttribute('transform') || '';
+    const m = xform.match(/translate\(\s*([-\d.]+)\s*,\s*([-\d.]+)\s*\)/);
+    if (!m) return;
+    const sx = parseFloat(m[1]);
+    const sy = parseFloat(m[2]);
+    const svgRect = elMap.getBoundingClientRect();
+    const vb = elMap.viewBox.baseVal;
+    const fx = (sx - vb.x) / vb.width;
+    const fy = (sy - vb.y) / vb.height;
+    if (fx < 0 || fx > 1 || fy < 0 || fy > 1) {
+      // The pin's true position is off-screen — anchor to the off-map row.
+      const row = document.querySelector(
+        `.offmap-panel li[data-person-id="${cssEscape(personId)}"][data-step-idx="${idx}"]`
+      );
+      if (!row) {
+        popover.classList.remove('is-open');
+        return;
+      }
+      const br = row.getBoundingClientRect();
+      pageX = br.left + br.width / 2;
+      pageY = br.top + br.height / 2;
+    } else {
+      pageX = svgRect.left + fx * svgRect.width;
+      pageY = svgRect.top  + fy * svgRect.height;
+    }
+  } else {
+    return;
+  }
+
+  const popH = popover.offsetHeight || 220;
+  const margin = 16;
+  const wantsAbove = pageY + popH + margin > window.innerHeight;
+  const popW = popover.offsetWidth || 300;
+  let left = pageX;
+  const halfW = popW / 2;
+  if (left - halfW < margin) left = halfW + margin;
+  if (left + halfW > window.innerWidth - margin) left = window.innerWidth - margin - halfW;
+  popover.style.left = `${left}px`;
+  if (wantsAbove) {
+    popover.style.top = `${pageY - 14}px`;
+    popover.classList.add('is-above');
+  } else {
+    popover.style.top = `${pageY + 14}px`;
+    popover.classList.remove('is-above');
+  }
+}
+
+/* renderPeopleReaderHtml — the right-panel reader for active people. One
+   block per active person (in pill order), each with their summary, then
+   a vertical numbered timeline of every track step. Click a step → opens
+   the corresponding popover and highlights the pin. */
+function renderPeopleReaderHtml() {
+  if (state.activePeople.size === 0) return '';
+  const blocks = PEOPLE
+    .filter(p => state.activePeople.has(p.id))
+    .map(person => {
+      const colour = person.colour;
+      const steps = (person.track || []).map((step, idx) => {
+        const active = isStepActiveInPopover(person.id, step);
+        const activeCls = active ? ' is-active' : '';
+        const isMoment = step.kind === 'moment';
+        const title = isMoment
+          ? (step.tooltip || step.summary || step.id)
+          : (step._eventTitle || step.event_id);
+        const when = isMoment
+          ? (step.date && step.date.display || '')
+          : (step._eventDateDisplay || '');
+        const where = step._cityName || '';
+        const offmapTag = step._country === 'OFF'
+          ? `<span class="offmap-tag">off-map</span>`
+          : '';
+        const body = isMoment
+          ? (step.note ? `<p class="step-note">${escapeHtml(step.note)}</p>` : '')
+          : (step.role ? `<p class="step-role">${escapeHtml(step.role)}</p>`
+                       : '') +
+            (step.note ? `<p class="step-note">${escapeHtml(step.note)}</p>` : '');
+        return `<div class="track-step${activeCls}" data-person-id="${person.id}" data-step-idx="${idx}" data-num="${idx + 1}">
+          <div class="step-kind">${isMoment ? 'moment' : 'event'}</div>
+          <div class="step-title">${escapeHtml(title)}</div>
+          <div class="step-when">${escapeHtml(when)}</div>
+          ${where ? `<div class="step-where">${escapeHtml(where)}${offmapTag}</div>` : ''}
+          ${body}
+        </div>`;
+      }).join('');
+      return `<div class="person-block" style="--accent:${colour};">
+        <div class="person-head">
+          <span class="person-swatch"></span>
+          <h3 class="person-name">${escapeHtml(person.name)}</h3>
+        </div>
+        <p class="person-summary">${escapeHtml(person.summary || '')}</p>
+        ${steps}
+      </div>`;
+    })
+    .join('');
+  return `<aside class="panel people-reader">
+    <div class="panel-head">
+      <h3>People</h3>
+      <button class="panel-close" data-close="people" aria-label="Close people">×</button>
+    </div>
+    ${blocks}
+  </aside>`;
+}
+
+
+/* =====================================================================
+   SEARCH
+   =================================================================== */
+function onSearch() {
+  state.searchQuery = elSearch.value;
+  renderPins();
+  if (state.activeEvent) renderEventPanel();
+}
+
+function onReset() {
+  elSearch.value = '';
+  state.searchQuery = '';
+  state.yearStart = -500; elRStart.value = -500;
+  state.yearEnd = 2025;   elREnd.value = 2025;
+  state.activeEvent = null;
+  state.activeThread = null;
+  state.activePeople.clear();
+  hidePopover();
+  syncRange();
+  renderThreadsBar();
+  renderPeopleBar();
+  renderTracks();
+  renderEventPanel();
+}
+
+
+/* =====================================================================
+   ZOOM + PAN
+   ---------------------------------------------------------------------
+   The map is an interactive viewBox-manipulation surface:
+     • wheel / pinch  → zoom around the cursor (or pinch centroid)
+     • drag           → pan
+     • +/− buttons    → zoom centred on the map middle
+     • reset          → restore initial viewBox
+   Pan uses mousedown→mousemove→mouseup (with a small drag threshold so
+   short clicks on pins still register as clicks). Touch uses one-finger
+   drag for pan and two-finger pinch for zoom. Pin radii and route stroke
+   widths are inversely scaled by zoom so they keep a constant CSS-pixel
+   size regardless of zoom level. Popover position is re-computed each
+   frame the viewBox changes.
+   =================================================================== */
+
+// Initial viewBox parsed from the template's 0 0 1000 736 token: "0 0 W H"
+const VIEWBOX_INIT = (() => {
+  const parts = elMap.getAttribute('viewBox').split(/\s+/).map(parseFloat);
+  return { x: parts[0], y: parts[1], w: parts[2], h: parts[3] };
+})();
+
+const zoom = {
+  scale: 1,
+  cx: VIEWBOX_INIT.x + VIEWBOX_INIT.w / 2,
+  cy: VIEWBOX_INIT.y + VIEWBOX_INIT.h / 2,
+  min: 1,
+  max: 8,
+};
+
+function applyZoom() {
+  const vbW = VIEWBOX_INIT.w / zoom.scale;
+  const vbH = VIEWBOX_INIT.h / zoom.scale;
+
+  // Clamp the centre so the viewport stays inside the original viewBox.
+  const halfW = vbW / 2;
+  const halfH = vbH / 2;
+  const minCx = VIEWBOX_INIT.x + halfW;
+  const maxCx = VIEWBOX_INIT.x + VIEWBOX_INIT.w - halfW;
+  const minCy = VIEWBOX_INIT.y + halfH;
+  const maxCy = VIEWBOX_INIT.y + VIEWBOX_INIT.h - halfH;
+  zoom.cx = Math.max(minCx, Math.min(maxCx, zoom.cx));
+  zoom.cy = Math.max(minCy, Math.min(maxCy, zoom.cy));
+
+  const vbX = zoom.cx - halfW;
+  const vbY = zoom.cy - halfH;
+  elMap.setAttribute('viewBox', `${vbX.toFixed(2)} ${vbY.toFixed(2)} ${vbW.toFixed(2)} ${vbH.toFixed(2)}`);
+
+  // Pin radii: inverse-scale so pin stays ~constant size in CSS pixels.
+  const r = (5 / zoom.scale).toFixed(3);
+  $$('#pins .pin .dot').forEach(c => c.setAttribute('r', r));
+  // Track pins: same treatment, slightly smaller baseline so the number fits.
+  const trackR = (4 / zoom.scale).toFixed(3);
+  const numFontSize = (6 / zoom.scale).toFixed(3);
+  $$('#tracks .track-pin .dot').forEach(c => c.setAttribute('r', trackR));
+  $$('#tracks .track-pin .num').forEach(t => t.setAttribute('style', `font-size:${numFontSize}px`));
+
+  // Disable +/− buttons at the limits
+  const inBtn  = $('#zoom-in');
+  const outBtn = $('#zoom-out');
+  if (inBtn)  inBtn.disabled  = zoom.scale >= zoom.max - 0.001;
+  if (outBtn) outBtn.disabled = zoom.scale <= zoom.min + 0.001;
+
+  // Keep popover anchored to its pin / step
+  if (state.popoverEvent && !state.popoverMoment && state.activePeople.size === 0) {
+    positionPopover(state.popoverEvent);
+  } else if (state.popoverEvent || state.popoverMoment) {
+    repositionStepPopover();
+  }
+
+  // Repaint off-map table since the visible viewBox just changed.
+  if (state.activePeople.size > 0) refreshOffMapTable();
+}
+
+/* refreshOffMapTable — used by zoom/pan to recompute which steps are
+   off-map and repaint the table without rebuilding the SVG track layer. */
+function refreshOffMapTable() {
+  const offmap = [];
+  PEOPLE.forEach(person => {
+    if (!state.activePeople.has(person.id)) return;
+    (person.track || []).forEach((step, idx) => {
+      if (!step._anchor) return;
+      const [sx, sy] = toSvg(step._anchor[0], step._anchor[1]);
+      const vb = elMap.viewBox.baseVal;
+      const inside = (sx >= vb.x && sx <= vb.x + vb.width
+                   && sy >= vb.y && sy <= vb.y + vb.height);
+      if (!inside) offmap.push({ person, step, idx, sx, sy, colour: person.colour });
+    });
+  });
+  if (offmap.length) renderOffMapTable(offmap);
+  else elOffmapPanel.innerHTML = '';
+}
+
+/* repositionStepPopover — find the (personId, idx) currently anchoring the
+   popover and refresh its screen position. */
+function repositionStepPopover() {
+  // Find which track step matches state.popoverEvent (event-ref) or
+  // state.popoverMoment.
+  for (const person of PEOPLE) {
+    if (!state.activePeople.has(person.id)) continue;
+    const track = person.track || [];
+    for (let idx = 0; idx < track.length; idx++) {
+      const step = track[idx];
+      if (state.popoverMoment && step.kind === 'moment'
+          && state.popoverMoment === `${person.id}::${step.id}`) {
+        positionPopoverForStep(person.id, idx);
+        return;
+      }
+      if (state.popoverEvent && step.kind === 'event-ref'
+          && step.event_id === state.popoverEvent) {
+        positionPopoverForStep(person.id, idx);
+        return;
+      }
+    }
+  }
+  // Fall through: the event popover lives in #pins, normal positioning.
+  if (state.popoverEvent) positionPopover(state.popoverEvent);
+}
+
+// Convert a viewport-pixel point (clientX, clientY) to viewBox coordinates,
+// taking the *current* viewBox into account.
+function clientToSvg(clientX, clientY) {
+  const rect = elMap.getBoundingClientRect();
+  const fx = (clientX - rect.left) / rect.width;
+  const fy = (clientY - rect.top) / rect.height;
+  const vb = elMap.viewBox.baseVal;
+  return [vb.x + fx * vb.width, vb.y + fy * vb.height];
+}
+
+function zoomAtPoint(svgX, svgY, factor) {
+  const newScale = Math.max(zoom.min, Math.min(zoom.max, zoom.scale * factor));
+  if (newScale === zoom.scale) return;
+  // Keep (svgX, svgY) under the same screen position before/after scaling.
+  // Old viewBox: w_old wide, x_old = cx_old - w_old/2.
+  // f = (svgX - x_old) / w_old.   Want same f after zoom.
+  const oldW = VIEWBOX_INIT.w / zoom.scale;
+  const newW = VIEWBOX_INIT.w / newScale;
+  const fx = (svgX - (zoom.cx - oldW / 2)) / oldW;
+  zoom.cx = (svgX - fx * newW) + newW / 2;
+  const oldH = VIEWBOX_INIT.h / zoom.scale;
+  const newH = VIEWBOX_INIT.h / newScale;
+  const fy = (svgY - (zoom.cy - oldH / 2)) / oldH;
+  zoom.cy = (svgY - fy * newH) + newH / 2;
+  zoom.scale = newScale;
+  applyZoom();
+}
+
+function resetZoom() {
+  zoom.scale = 1;
+  zoom.cx = VIEWBOX_INIT.x + VIEWBOX_INIT.w / 2;
+  zoom.cy = VIEWBOX_INIT.y + VIEWBOX_INIT.h / 2;
+  applyZoom();
+}
+
+// ---------- Wheel: zoom centred on cursor ----------
+elMap.addEventListener('wheel', (e) => {
+  e.preventDefault();
+  const [sx, sy] = clientToSvg(e.clientX, e.clientY);
+  // Trackpad pinches and fast wheels both come through deltaY; clamp the
+  // per-event factor so a flick doesn't blow past the limits in one frame.
+  const raw = -e.deltaY / 250;
+  const factor = Math.exp(Math.max(-0.4, Math.min(0.4, raw)));
+  zoomAtPoint(sx, sy, factor);
+}, { passive: false });
+
+// ---------- Mouse drag: pan ----------
+let panState = null;
+elMap.addEventListener('mousedown', (e) => {
+  if (e.button !== 0) return;
+  // Don't initiate pan if the press lands on a pin — that's a click target.
+  if (e.target.closest && e.target.closest('.pin')) return;
+  panState = {
+    startX: e.clientX, startY: e.clientY,
+    startCx: zoom.cx,  startCy: zoom.cy,
+    moved: false,
+  };
+});
+window.addEventListener('mousemove', (e) => {
+  if (!panState) return;
+  const dx = e.clientX - panState.startX;
+  const dy = e.clientY - panState.startY;
+  if (!panState.moved && (Math.abs(dx) + Math.abs(dy)) < 4) return;  // dead zone
+  panState.moved = true;
+  elMap.classList.add('is-panning');
+  const rect = elMap.getBoundingClientRect();
+  const vb = elMap.viewBox.baseVal;
+  zoom.cx = panState.startCx - (dx * vb.width  / rect.width);
+  zoom.cy = panState.startCy - (dy * vb.height / rect.height);
+  applyZoom();
+});
+window.addEventListener('mouseup', () => {
+  if (panState && panState.moved) {
+    // The mouseup that ends a drag will be followed by a click on whatever
+    // element the cursor is over. If that element is a pin, the pin's
+    // click handler would open the popover unintentionally. Set a flag the
+    // capture-phase listener below can read to swallow that one click.
+    _suppressNextMapClick = true;
+  }
+  if (panState) elMap.classList.remove('is-panning');
+  panState = null;
+});
+
+let _suppressNextMapClick = false;
+elMap.addEventListener('click', (e) => {
+  if (_suppressNextMapClick) {
+    _suppressNextMapClick = false;
+    e.stopPropagation();
+    e.preventDefault();
+  }
+}, { capture: true });
+
+// ---------- Touch: 1-finger pan, 2-finger pinch ----------
+let touchState = null;
+elMap.addEventListener('touchstart', (e) => {
+  if (e.touches.length === 1) {
+    const t = e.touches[0];
+    if (t.target.closest && t.target.closest('.pin')) return;  // let pin click work
+    touchState = { mode: 'pan', startX: t.clientX, startY: t.clientY,
+                   startCx: zoom.cx, startCy: zoom.cy };
+  } else if (e.touches.length === 2) {
+    const [a, b] = e.touches;
+    const dist = Math.hypot(a.clientX - b.clientX, a.clientY - b.clientY);
+    const cx = (a.clientX + b.clientX) / 2;
+    const cy = (a.clientY + b.clientY) / 2;
+    const [sx, sy] = clientToSvg(cx, cy);
+    touchState = { mode: 'pinch', startDist: dist, startScale: zoom.scale,
+                   anchorSvgX: sx, anchorSvgY: sy };
+  }
+}, { passive: true });
+elMap.addEventListener('touchmove', (e) => {
+  if (!touchState) return;
+  if (touchState.mode === 'pan' && e.touches.length === 1) {
+    e.preventDefault();
+    const t = e.touches[0];
+    const rect = elMap.getBoundingClientRect();
+    const vb = elMap.viewBox.baseVal;
+    zoom.cx = touchState.startCx - ((t.clientX - touchState.startX) * vb.width  / rect.width);
+    zoom.cy = touchState.startCy - ((t.clientY - touchState.startY) * vb.height / rect.height);
+    applyZoom();
+  } else if (touchState.mode === 'pinch' && e.touches.length === 2) {
+    e.preventDefault();
+    const [a, b] = e.touches;
+    const dist = Math.hypot(a.clientX - b.clientX, a.clientY - b.clientY);
+    const factor = dist / touchState.startDist;
+    const targetScale = Math.max(zoom.min, Math.min(zoom.max, touchState.startScale * factor));
+    if (targetScale !== zoom.scale) {
+      zoomAtPoint(touchState.anchorSvgX, touchState.anchorSvgY, targetScale / zoom.scale);
+    }
+  }
+}, { passive: false });
+elMap.addEventListener('touchend', () => { touchState = null; });
+elMap.addEventListener('touchcancel', () => { touchState = null; });
+
+// ---------- Buttons ----------
+$('#zoom-in') .addEventListener('click', () => {
+  const cx = VIEWBOX_INIT.x + VIEWBOX_INIT.w / 2;
+  const cy = VIEWBOX_INIT.y + VIEWBOX_INIT.h / 2;
+  // Zoom centred on the *current* view centre, not the original map centre,
+  // so successive button presses zoom into wherever the user has panned to.
+  zoomAtPoint(zoom.cx, zoom.cy, 1.4);
+});
+$('#zoom-out').addEventListener('click', () => {
+  zoomAtPoint(zoom.cx, zoom.cy, 1 / 1.4);
+});
+$('#zoom-reset').addEventListener('click', resetZoom);
+
+
+/* =====================================================================
+   WIRE UP
+   =================================================================== */
+elRStart.addEventListener('input', syncRange);
+elREnd.addEventListener('input', syncRange);
+elSearch.addEventListener('input', onSearch);
+elReset.addEventListener('click', onReset);
+
+// Popover: dismiss on click outside (but not on elements that programmatically
+// open or swap the popover — pin, relation-card, thread-step. Without these
+// exclusions the bubbled click would close the popover that just opened.)
+document.addEventListener('click', (e) => {
+  if (!state.popoverEvent && !state.popoverMoment) return;
+  const popover = $('#popover');
+  if (popover.contains(e.target)) return;          // inside popover — ignore
+  if (!e.target.closest) return;
+  if (e.target.closest('.pin')) return;
+  if (e.target.closest('.track-pin')) return;
+  if (e.target.closest('.offmap-panel li')) return;
+  if (e.target.closest('.relation-card')) return;
+  if (e.target.closest('.thread-step')) return;
+  if (e.target.closest('.people-reader .track-step')) return;
+  hidePopover();
+});
+
+// Popover: dismiss on Esc
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && state.popoverEvent) {
+    hidePopover();
+  }
+});
+
+// Popover: re-position on window resize / scroll (desktop only)
+let _popoverRepositionTimer = null;
+function _repositionPopoverIfOpen() {
+  if (!state.popoverEvent) return;
+  if (window.innerWidth < 920) return;  // mobile is fixed-position
+  if (_popoverRepositionTimer) cancelAnimationFrame(_popoverRepositionTimer);
+  _popoverRepositionTimer = requestAnimationFrame(() => {
+    positionPopover(state.popoverEvent);
+  });
+}
+window.addEventListener('resize', _repositionPopoverIfOpen);
+window.addEventListener('scroll', _repositionPopoverIfOpen, { passive: true });
+
+// All renders that depend on the data globals (MAP/EVENTS/THREADS/PEOPLE).
+// shell.html defers this call until after fetch; the single-file build calls
+// it immediately.
+function bootRenders() {
+  buildIndexes();
+  renderEraBands();
+  renderActiveRange();
+  renderThreadsBar();
+  renderPeopleBar();
+  renderPins();
+  renderTracks();
+  renderEventPanel();
+}
+window.bootRenders = bootRenders;  // exposed so shell.html can invoke after fetch
+
+// Boot — replaced by build_html.py with either an immediate
+// bootRenders() (single-file build) or an async fetch+boot block (shell).
+(async function() {
+  // Hosted runtime fetch — data lives at /data/* and /build/* relative to
+  // wherever shell.html is served from. Adjust BASE if you mount this asset
+  // under a sub-path other than the default.
+  const BASE = (function() {
+    const here = new URL(window.location.href);
+    return here.pathname.replace(/[^/]*$/, '').replace(/\/web\/?$/, '/');
+  })();
+  const PALETTE = ["#b03018", "#1a4870", "#c8281a", "#1a3a90", "#1f7a8a"];
+
+  async function fetchJson(path) {
+    const r = await fetch(BASE + path, {cache: 'force-cache'});
+    if (!r.ok) throw new Error(`fetch ${path} → ${r.status}`);
+    return r.json();
+  }
+
+  try {
+    const [mapDoc, eventsDocs, threadsDocs, peopleDocs] = await Promise.all([
+      fetchJson('build/map_paths.json'),
+      Promise.all(["events_independence.json", "events_mughal.json", "events_sur.json"].map(f => fetchJson('data/events/' + f))),
+      Promise.all(["threads_independence.json"].map(f => fetchJson('data/threads/' + f))),
+      Promise.all(["people_freedom-fighters.json"].map(f => fetchJson('data/people/' + f))),
+    ]);
+
+    // Populate the data globals declared by the template.
+    MAP     = { projection: mapDoc.projection, viewport: mapDoc.viewport };
+    EVENTS  = eventsDocs.flatMap(d => d.events || []);
+    THREADS = threadsDocs.flatMap(d => d.threads || []);
+    PEOPLE  = peopleDocs.flatMap(d => d.people || []);
+    PEOPLE.forEach((p, i) => { p.colour = PALETTE[i % PALETTE.length]; });
+
+    // Render the static SVG basemap from the fetched paths.
+    const svg = document.getElementById('map');
+    svg.setAttribute('viewBox', `0 0 ${mapDoc.viewport.width} ${mapDoc.viewport.height}`);
+    document.getElementById('surrounds').innerHTML = (mapDoc.surrounds || [])
+      .map(s => `<path class="surrounds-fill" d="${s.path}" data-name="${s.name}"/>`)
+      .join('');
+    document.querySelector('.india-fill').setAttribute('d', mapDoc.india_path);
+
+    // Now hand off to the same boot path the single-file build uses.
+    bootRenders();
+  } catch (err) {
+    console.error('shell.html boot failed:', err);
+    document.getElementById('event-panel').innerHTML =
+      '<div class="panel-head"><h3>Failed to load data</h3></div>'
+      + '<p class="summary">' + (err.message || err) + '</p>';
+  }
+})();
+</script>
+
+</body>
+</html>

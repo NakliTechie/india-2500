@@ -1,0 +1,25 @@
+# External dependencies — fetched separately, not committed
+datameet/
+package/
+
+# Test artifacts (screenshots, dumps)
+tests/artifacts/
+
+# OS / editor noise
+.DS_Store
+*.swp
+*.swo
+__pycache__/
+*.pyc
+.venv/
+
+# Local Claude Code config (already at user level)
+.claude/
+
+# Build outputs that some workflows want to ignore. By default we DO commit
+# build/map_paths.json + build/validator_boundaries.json + web/india-history.html
+# so a fresh clone can be opened without running build_map.py (which needs
+# the 200+ MB Datameet clone). Uncomment below to switch to CI-only builds.
+# build/map_paths.json
+# build/validator_boundaries.json
+# web/india-history.html

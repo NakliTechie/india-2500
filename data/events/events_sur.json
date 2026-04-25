@@ -1,0 +1,79 @@
+{
+  "campaign": "sur",
+  "scope": "Sur dynasty interregnum, 1539–1556. The brief Afghan-led empire between Humayun's exile and Akbar's restoration of Mughal rule. Authored as a discrete file because the Suris were a separate dynasty, not a Mughal continuity.",
+  "updated": "2026-04-25",
+  "events": [
+    {
+      "id": "battle-of-chausa-1539",
+      "title": "Battle of Chausa",
+      "tooltip": "Sher Shah Suri defeats Humayun, Chausa, 1539",
+      "summary": "Sher Khan's Afghan forces routed Humayun on the bank of the Karmanasa, ending Mughal rule in north India for fifteen years.",
+      "detail": "Humayun had pursued the rising Afghan chief Sher Khan into Bihar, expecting a quick suppression. Sher Khan instead drew the Mughals into the rains, struck their camp on the night of 26 June 1539, and broke the army at the Karmanasa river. Humayun escaped only because a water-carrier named Nizam floated him across on an inflated buffalo-skin — a debt the emperor honoured years later by seating Nizam on the throne for a day. Sher Khan now styled himself Sher Shah, took Delhi the next year, and ruled an empire stretching from Bengal to the Indus until his death by gunpowder accident at Kalinjar in 1545.",
+      "date": {
+        "start": "1539-06-26",
+        "end":   "1539-06-26",
+        "precision": "day",
+        "approximate": false,
+        "display": "26 June 1539"
+      },
+      "location": {
+        "type": "point",
+        "name": "Chausa, near the Karmanasa river",
+        "region": "Bihar (modern Buxar district)",
+        "country": "IN",
+        "points": [{ "lat": 25.5125, "lon": 83.9450, "name": "Chausa" }]
+      },
+      "era": "mughal",
+      "category": ["military", "dynastic"],
+      "figures": ["Sher Shah Suri", "Humayun"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Battle_of_Chausa", "label": "Wikipedia: Battle of Chausa", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Satish Chandra, Medieval India: From Sultanat to the Mughals — Part Two (1999)", "type": "scholarly" },
+        { "label": "Abbas Khan Sarwani, Tarikh-i-Sher Shahi (c. 1580)", "type": "primary" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "sher-shah-reforms-1540",
+      "title": "Sher Shah's administrative reforms",
+      "tooltip": "Rupee, Grand Trunk Road, land revenue (Sur), 1540–1545",
+      "summary": "Sher Shah's five-year reign rebuilt the post road, standardised silver coinage as the rupiya, and codified a land-revenue system Akbar would later inherit.",
+      "detail": "Sher Shah took an empire he had won by force and ran it as an administrator. The silver rupiya he minted at 178 grains became the unit of account that survived through the Mughal, Maratha, EIC, British, and Republic regimes — the modern rupee descends directly from it. He repaved and extended the Sadak-e-Azam from Sonargaon in Bengal to Kabul, with caravan-sarais at every stage and shaded trees along the verge. His revenue system, based on direct measurement of cultivated land and fixed cash rates, gave the cultivator a written entitlement and the state a predictable yield. Akbar's vizier Todar Mal would build the entire Mughal zabt system on this scaffolding.",
+      "date": {
+        "start": "1540-05-17",
+        "end":   "1545-05-22",
+        "precision": "year",
+        "approximate": false,
+        "display": "1540 — 1545 (Sher Shah's reign)"
+      },
+      "location": {
+        "type": "region",
+        "name": "Sur empire (capital at Delhi; tomb at Sasaram)",
+        "region": "North India",
+        "country": "IN",
+        "points": [
+          { "lat": 28.6139, "lon": 77.2090, "name": "Delhi" },
+          { "lat": 24.9491, "lon": 84.0288, "name": "Sasaram (tomb)" }
+        ]
+      },
+      "era": "mughal",
+      "category": ["economic", "reform", "political"],
+      "figures": ["Sher Shah Suri", "Todar Mal"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Sher_Shah_Suri", "label": "Wikipedia: Sher Shah Suri", "type": "wikipedia" },
+        { "url": "https://en.wikipedia.org/wiki/Grand_Trunk_Road", "label": "Wikipedia: Grand Trunk Road", "type": "related" }
+      ],
+      "sources": [
+        { "label": "Satish Chandra, Medieval India: From Sultanat to the Mughals — Part Two (1999)", "type": "scholarly" },
+        { "label": "Irfan Habib, The Agrarian System of Mughal India 1556–1707 (1963; rev. 1999)", "type": "scholarly" }
+      ],
+      "caused_by": [
+        { "id": "battle-of-chausa-1539", "gloss": "Chausa won Sher Shah the empire; the reforms were how he held it." }
+      ],
+      "verified": true
+    }
+  ]
+}

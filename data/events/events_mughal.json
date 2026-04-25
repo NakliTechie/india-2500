@@ -1,0 +1,795 @@
+{
+  "campaign": "mughal",
+  "scope": "Mughal empire, 1526–1707 — from Babur's victory at Panipat to Aurangzeb's death at Ahmednagar. 23 events spanning founding, consolidation under Akbar, the Jahangir–Shah Jahan high baroque, and Aurangzeb's southward turn. Companion file events_sur.json carries the 1539–1556 Suri interregnum.",
+  "updated": "2026-04-25",
+  "events": [
+    {
+      "id": "first-battle-of-panipat-1526",
+      "title": "First Battle of Panipat",
+      "tooltip": "Babur defeats Ibrahim Lodi at Panipat, 1526",
+      "summary": "Babur's 12,000 horsemen routed the 100,000-strong Lodi army by combining wagon-fortified gunpowder artillery with mounted archery and cavalry envelopment.",
+      "detail": "Ibrahim Lodi marched north from Delhi to crush the Timurid raider his nobles had invited in. He met the Mughals at Panipat on the morning of 21 April 1526 with a numerical advantage of about eight to one. Babur had spent days fortifying his front with 700 carts roped together and trenches on the flanks. When the Lodi advance stalled against the wagon-laager, his Turkish gunner Ustad Ali Quli's matchlocks opened fire, and the wings rolled inward in the classic tulghuma envelopment. Ibrahim Lodi died on the field. Babur entered Delhi three days later. The Mughal claim to Hindustan starts here.",
+      "date": {
+        "start": "1526-04-21",
+        "end":   "1526-04-21",
+        "precision": "day",
+        "approximate": false,
+        "display": "21 April 1526"
+      },
+      "location": {
+        "type": "point",
+        "name": "Panipat",
+        "region": "Sirhind sarkar (modern Haryana)",
+        "country": "IN",
+        "points": [{ "lat": 29.3909, "lon": 76.9635, "name": "Panipat" }]
+      },
+      "era": "mughal",
+      "category": ["military", "dynastic"],
+      "figures": ["Babur", "Ibrahim Lodi", "Ustad Ali Quli"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/First_Battle_of_Panipat", "label": "Wikipedia: First Battle of Panipat", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Babur, Baburnama (trans. W. Thackston, 1996)", "type": "primary" },
+        { "label": "Stephen F. Dale, The Garden of the Eight Paradises (2004)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "battle-of-khanwa-1527",
+      "title": "Battle of Khanwa",
+      "tooltip": "Babur defeats Rana Sanga at Khanwa, 1527",
+      "summary": "Babur's gunpowder line broke a Rajput confederacy under Rana Sanga of Mewar at Khanwa, locking in Mughal control of the north Indian plain.",
+      "detail": "Defeating the Lodi army at Panipat had won Babur Delhi but not the north. Rana Sanga of Mewar had assembled the largest Rajput coalition in living memory — perhaps 100,000 horse with the rajas of Marwar, Amber, and Gwalior — to expel the Mughals. The two sides met at Khanwa, 60 km west of Agra, on 16 March 1527. Babur's matchlock-and-wagon front held; his cavalry wings turned the flanks; Rana Sanga was wounded and carried from the field. The Rajput defeat was decisive enough that Babur could declare a ghaza, take the title Ghazi, and leave the Doab for his next campaign. Mewar would not threaten the Mughal centre again until the 1570s.",
+      "date": {
+        "start": "1527-03-16",
+        "end":   "1527-03-16",
+        "precision": "day",
+        "approximate": false,
+        "display": "16 March 1527"
+      },
+      "location": {
+        "type": "point",
+        "name": "Khanwa, near Bharatpur",
+        "region": "Rajputana (modern Rajasthan)",
+        "country": "IN",
+        "points": [{ "lat": 27.0167, "lon": 77.3500, "name": "Khanwa" }]
+      },
+      "era": "mughal",
+      "category": ["military"],
+      "figures": ["Babur", "Rana Sanga"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Battle_of_Khanwa", "label": "Wikipedia: Battle of Khanwa", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Babur, Baburnama (trans. W. Thackston, 1996)", "type": "primary" },
+        { "label": "Satish Chandra, Medieval India — Part Two (1999)", "type": "scholarly" }
+      ],
+      "caused_by": [
+        { "id": "first-battle-of-panipat-1526", "gloss": "Panipat made Babur a Delhi-bound power; Khanwa was the Rajput attempt to expel him before he consolidated." }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "battle-of-ghaghra-1529",
+      "title": "Battle of Ghaghra",
+      "tooltip": "Babur defeats Afghan-Bengal alliance at Ghaghra, 1529",
+      "summary": "Babur's third great battle broke an alliance of Afghan nobles and Bengal at the Ghaghra–Ganges confluence, securing his eastern frontier.",
+      "detail": "The defeated Lodi nobility had retreated east into Bihar and the eastern Doab; by 1528 they were rebuilding under Mahmud Lodi with material backing from Nusrat Shah of Bengal. Babur marched downriver and met them where the Ghaghra meets the Ganges in May 1529. The fighting was as much riverine as land — Babur committed his small flotilla to break the Bengali boats — and the Afghan line broke after his nephew Askari turned the right flank. The terms imposed on Bengal recognised Mughal supremacy; the Afghan coalition that would later carry Sher Shah was scattered, not destroyed. Babur returned to Agra and died eighteen months later.",
+      "date": {
+        "start": "1529-05-06",
+        "end":   "1529-05-06",
+        "precision": "day",
+        "approximate": false,
+        "display": "6 May 1529"
+      },
+      "location": {
+        "type": "point",
+        "name": "Confluence of Ghaghra and Ganges",
+        "region": "Bihar",
+        "country": "IN",
+        "points": [{ "lat": 25.7445, "lon": 84.6722, "name": "Ghaghra-Ganges confluence" }]
+      },
+      "era": "mughal",
+      "category": ["military"],
+      "figures": ["Babur", "Mahmud Lodi", "Nusrat Shah of Bengal"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Battle_of_Ghaghra", "label": "Wikipedia: Battle of Ghaghra", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Babur, Baburnama (trans. W. Thackston, 1996)", "type": "primary" }
+      ],
+      "caused_by": [
+        { "id": "battle-of-khanwa-1527", "gloss": "Khanwa removed the Rajput threat; Babur could now turn east against the Afghan rump." }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "babur-death-humayun-accession-1530",
+      "title": "Death of Babur, accession of Humayun",
+      "tooltip": "Babur dies at Agra, Humayun crowned, 1530",
+      "summary": "Babur died at Agra on 26 December 1530; his eldest son Humayun took the throne three days later, inheriting a victory record but no administration.",
+      "detail": "Babur had ruled Hindustan for less than five years. His Baburnama is the candid record of a man who saw himself as a restless Timurid prince, not the founder of an empire. He fell ill in late 1530, reputedly after vowing to take on his son Humayun's fever in his own body. Humayun acceded on 29 December but inherited a kingdom held together only by his father's reputation: a treasury already strained, half-brothers with their own armies, and a Doab still raw from three years of war. Within nine years he would be exiled to Persia. The interregnum that followed belonged to the Sur dynasty.",
+      "date": {
+        "start": "1530-12-26",
+        "end":   "1530-12-29",
+        "precision": "day",
+        "approximate": false,
+        "display": "Babur died 26 December 1530; Humayun crowned 29 December"
+      },
+      "location": {
+        "type": "city",
+        "name": "Agra",
+        "region": "Doab",
+        "country": "IN",
+        "points": [{ "lat": 27.1767, "lon": 78.0081, "name": "Agra" }]
+      },
+      "era": "mughal",
+      "category": ["dynastic", "political"],
+      "figures": ["Babur", "Humayun"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Humayun", "label": "Wikipedia: Humayun", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Stephen F. Dale, The Garden of the Eight Paradises (2004)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "second-battle-of-panipat-1556",
+      "title": "Second Battle of Panipat",
+      "tooltip": "Bairam Khan defeats Hemu at Panipat, 1556",
+      "summary": "Bairam Khan's Mughal army defeated Hemu, the Hindu general who styled himself Vikramaditya, securing the boy-emperor Akbar's throne.",
+      "detail": "Humayun had reclaimed Delhi in 1555 only to die six months later, falling down the stairs of his library. His thirteen-year-old son Akbar was crowned in February 1556 in a garden at Kalanaur. Within months the late Sur regime's general Hemu — a salt-trader's son who had risen to wazir — captured Agra and Delhi and proclaimed himself Hemchandra Vikramaditya. The Mughal regent Bairam Khan marched north and met him on the same ground Babur had fought thirty years earlier. An arrow struck Hemu in the eye; his elephant turned; his army broke. Akbar, brought to the field, beheaded the wounded Hemu — an act later sources soften but contemporaries record. The Mughal restoration was complete.",
+      "date": {
+        "start": "1556-11-05",
+        "end":   "1556-11-05",
+        "precision": "day",
+        "approximate": false,
+        "display": "5 November 1556"
+      },
+      "location": {
+        "type": "point",
+        "name": "Panipat",
+        "region": "Sirhind sarkar (modern Haryana)",
+        "country": "IN",
+        "points": [{ "lat": 29.3909, "lon": 76.9635, "name": "Panipat" }]
+      },
+      "era": "mughal",
+      "category": ["military", "dynastic"],
+      "figures": ["Bairam Khan", "Akbar", "Hemu"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Second_Battle_of_Panipat", "label": "Wikipedia: Second Battle of Panipat", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Abu'l-Fazl, Akbarnama (trans. H. Beveridge, 1907)", "type": "primary" },
+        { "label": "Satish Chandra, Medieval India — Part Two (1999)", "type": "scholarly" }
+      ],
+      "caused_by": [
+        { "id": "sher-shah-reforms-1540", "gloss": "Sher Shah's reformed Sur empire fragmented after his death; its general Hemu's bid for power was the regime's last act." }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "akbar-coronation-1556",
+      "title": "Akbar crowned at Kalanaur",
+      "tooltip": "Akbar crowned at Kalanaur, aged 13, 1556",
+      "summary": "Akbar succeeded Humayun in a hastily-built brick enclosure in Punjab, with Bairam Khan as regent for the next four years.",
+      "detail": "Humayun's death on 24 January 1556 — falling down the steps of his library at Purana Qila with his arms full of books — left a thirteen-year-old prince at Kalanaur in Punjab as the next Mughal emperor. Bairam Khan staged the coronation on a brick platform on 14 February so the throne would not pass to a Sur claimant in the interim. The boy-emperor would not rule in his own name until 1560, when he removed Bairam Khan from the regency. Akbar's reign of forty-nine years would refit the empire administratively, militarily, and ideologically; almost everything later generations call 'Mughal' was assembled in those decades.",
+      "date": {
+        "start": "1556-02-14",
+        "end":   "1556-02-14",
+        "precision": "day",
+        "approximate": false,
+        "display": "14 February 1556"
+      },
+      "location": {
+        "type": "point",
+        "name": "Kalanaur (Akbar's coronation platform)",
+        "region": "Punjab",
+        "country": "IN",
+        "points": [{ "lat": 32.0303, "lon": 75.1592, "name": "Kalanaur" }]
+      },
+      "era": "mughal",
+      "category": ["dynastic", "political"],
+      "figures": ["Akbar", "Bairam Khan"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Akbar", "label": "Wikipedia: Akbar", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Abu'l-Fazl, Akbarnama (trans. H. Beveridge, 1907)", "type": "primary" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "fatehpur-sikri-founded-1571",
+      "title": "Foundation of Fatehpur Sikri",
+      "tooltip": "Akbar founds Fatehpur Sikri, 1571",
+      "summary": "Akbar built a new capital on a sandstone ridge near the Sufi shaikh Salim Chishti's hermitage; it was occupied for fourteen years before water failed it.",
+      "detail": "The childless Akbar visited the hermit Salim Chishti at Sikri in 1568; his first surviving son was born within the year and named Salim. The ridge above the village became the site of an entirely new capital — Diwan-i-Khas, Buland Darwaza, the Jama Masjid, the Panch Mahal, the tomb of Chishti himself — built in red sandstone in a hybrid Indo-Timurid idiom. The court moved there in 1571. The Ibadat Khana debates of religious scholars from every tradition were staged in those halls in the late 1570s. By 1585 the city was abandoned, conventionally for want of water, more plausibly because Akbar had moved his court to the Punjab to handle Uzbek and Afghan campaigns. The buildings survive almost intact.",
+      "date": {
+        "start": "1571-01-01",
+        "end":   "1585-12-31",
+        "precision": "year",
+        "approximate": false,
+        "display": "1571 — abandoned 1585"
+      },
+      "location": {
+        "type": "city",
+        "name": "Fatehpur Sikri",
+        "region": "Doab (Agra Subah)",
+        "country": "IN",
+        "points": [{ "lat": 27.0937, "lon": 77.6611, "name": "Fatehpur Sikri" }]
+      },
+      "era": "mughal",
+      "category": ["cultural", "religious", "political"],
+      "figures": ["Akbar", "Salim Chishti", "Abu'l-Fazl"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Fatehpur_Sikri", "label": "Wikipedia: Fatehpur Sikri", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Catherine Asher, Architecture of Mughal India (1992)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "battle-of-haldighati-1576",
+      "title": "Battle of Haldighati",
+      "tooltip": "Akbar's army vs Maharana Pratap, Haldighati, 1576",
+      "summary": "Maharana Pratap fought Akbar's army to a tactical draw and never accepted Mughal vassalage — the Sisodias of Mewar were the only major Rajput house that didn't.",
+      "detail": "Akbar had brought most Rajput houses into the imperial service through marriage alliances and mansabs by the 1570s. The Sisodias of Mewar refused. On 18 June 1576 Akbar's army under Man Singh of Amber and Asaf Khan met Maharana Pratap's smaller force in the narrow defile of Haldighati between Khamnor and Gogunda. The fighting was inconclusive; Pratap escaped on his horse Chetak after the animal carried him across a ravine and died of its wounds. The Mughals occupied the abandoned Mewar capital of Chittor but never broke the resistance. Pratap regained much of the territory before his death in 1597. Mewar accepted Mughal suzerainty only in 1615, under his grandson Karan Singh.",
+      "date": {
+        "start": "1576-06-18",
+        "end":   "1576-06-18",
+        "precision": "day",
+        "approximate": false,
+        "display": "18 June 1576"
+      },
+      "location": {
+        "type": "point",
+        "name": "Haldighati pass, near Gogunda",
+        "region": "Mewar (modern Rajasthan)",
+        "country": "IN",
+        "points": [{ "lat": 24.9419, "lon": 73.6936, "name": "Haldighati" }]
+      },
+      "era": "mughal",
+      "category": ["military", "resistance"],
+      "figures": ["Maharana Pratap", "Man Singh of Amber", "Akbar"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Battle_of_Haldighati", "label": "Wikipedia: Battle of Haldighati", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Satish Chandra, Medieval India — Part Two (1999)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "mansabdari-codified-1577",
+      "title": "Mansabdari system codified",
+      "tooltip": "Akbar formalises mansab ranks, 1577",
+      "summary": "Akbar formalised a single hierarchy of military-administrative ranks (mansabs), each obliging cavalry strength and rated for cash pay.",
+      "detail": "The mansabdari system gave the empire a single ledger for army and bureaucracy at once. A mansab was a numerical rank — zat for personal status, sawar for the cavalry the holder owed — running from 10 to 7,000 (and higher for princes). Pay was in cash from the central treasury or in the form of an assignment (jagir) on a specified land revenue. The system absorbed Rajput chiefs, Persian émigrés, Central Asian Turks, and Indian Muslims into a single career structure with no hereditary tenure. It also tied military readiness to revenue collection in a way no earlier Indian polity had. Todar Mal's parallel zabt revenue reforms — the direct measurement of land and fixed cash assessments — gave the cash side of mansabdari the predictability it needed.",
+      "date": {
+        "start": "1577-01-01",
+        "end":   "1580-12-31",
+        "precision": "year",
+        "approximate": true,
+        "display": "c. 1577 (codified during Akbar's reforms)"
+      },
+      "location": {
+        "type": "region",
+        "name": "Mughal empire (capital then at Fatehpur Sikri)",
+        "region": "North India",
+        "country": "IN",
+        "points": [{ "lat": 27.0937, "lon": 77.6611, "name": "Fatehpur Sikri" }]
+      },
+      "era": "mughal",
+      "category": ["reform", "political", "economic"],
+      "figures": ["Akbar", "Todar Mal", "Abu'l-Fazl"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Mansabdar", "label": "Wikipedia: Mansabdar", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Athar Ali, The Apparatus of Empire: Awards of Ranks, Offices and Titles to the Mughal Nobility 1574–1658 (1985)", "type": "scholarly" },
+        { "label": "Irfan Habib, The Agrarian System of Mughal India (rev. 1999)", "type": "scholarly" }
+      ],
+      "caused_by": [
+        { "id": "sher-shah-reforms-1540", "gloss": "Todar Mal's zabt revenue scaffolding for mansabdari was built on Sher Shah's earlier framework." }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "din-i-ilahi-1582",
+      "title": "Din-i Ilahi proclaimed",
+      "tooltip": "Akbar's syncretic court religion, 1582",
+      "summary": "Akbar promulgated a small ethical-mystical court order drawing on Sufi, Hindu, Jain, Zoroastrian and Christian elements — perhaps 19 followers in his lifetime.",
+      "detail": "After years of inter-religious debate at the Ibadat Khana at Fatehpur Sikri — staged with Sunni and Shia ulema, Hindu pandits, Jain monks, Zoroastrians, and Portuguese Jesuits — Akbar promulgated a personal allegiance order in 1582 known to its members as the Tawhid-i-Ilahi (Divine Monotheism) and to later historians as the Din-i Ilahi. It was less a religion than a court loyalty cult: members swore allegiance to the sovereign, abstained from meat where possible, gave alms on a graduated scale, and adopted a sun-greeting at dawn. The total membership through Akbar's reign was small — Abu'l-Fazl listed nineteen names. Aurangzeb later cited it as evidence of his great-grandfather's apostasy. Most modern historians read it as a sovereignty-claim more than a theology — the emperor positioning himself above sectarian categories rather than within any of them.",
+      "date": {
+        "start": "1582-01-01",
+        "end":   "1582-12-31",
+        "precision": "year",
+        "approximate": true,
+        "display": "1582"
+      },
+      "location": {
+        "type": "city",
+        "name": "Fatehpur Sikri",
+        "region": "Doab",
+        "country": "IN",
+        "points": [{ "lat": 27.0937, "lon": 77.6611, "name": "Fatehpur Sikri" }]
+      },
+      "era": "mughal",
+      "category": ["religious", "political", "cultural"],
+      "figures": ["Akbar", "Abu'l-Fazl", "Birbal"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Din-i_Ilahi", "label": "Wikipedia: Din-i Ilahi", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Audrey Truschke, Culture of Encounters: Sanskrit at the Mughal Court (2016)", "type": "scholarly" }
+      ],
+      "caused_by": [
+        { "id": "fatehpur-sikri-founded-1571", "gloss": "The Ibadat Khana religious debates Akbar held at Fatehpur Sikri in the late 1570s shaped the synthesis." }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "akbar-death-1605",
+      "title": "Death of Akbar",
+      "tooltip": "Akbar dies at Agra, succession to Jahangir, 1605",
+      "summary": "Akbar died at Agra after 49 years on the throne, leaving an empire of 100 million people from Kabul to Bengal under his son Jahangir.",
+      "detail": "Akbar's last decade was overshadowed by his son Salim's open rebellion from Allahabad — a revolt the emperor managed to neither punish nor reconcile decisively. He died at Agra on the night of 27 October 1605, probably of dysentery. Salim succeeded as Jahangir without serious challenge from any of his half-brothers; the only disputing claim was from his own son Khusrau, who would rebel within a year. Akbar's empire by 1605 stretched from Kabul to the Bay of Bengal, with revenue around 100 million rupees and a standing nobility ranked in the mansab system. He was buried at Sikandra outside Agra in a tomb whose unfinished plan Jahangir later modified.",
+      "date": {
+        "start": "1605-10-27",
+        "end":   "1605-10-27",
+        "precision": "day",
+        "approximate": false,
+        "display": "27 October 1605"
+      },
+      "location": {
+        "type": "city",
+        "name": "Agra (buried at Sikandra)",
+        "region": "Doab",
+        "country": "IN",
+        "points": [{ "lat": 27.1767, "lon": 78.0081, "name": "Agra" }]
+      },
+      "era": "mughal",
+      "category": ["dynastic"],
+      "figures": ["Akbar", "Jahangir"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Akbar", "label": "Wikipedia: Akbar", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Satish Chandra, Medieval India — Part Two (1999)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "guru-arjan-execution-1606",
+      "title": "Execution of Guru Arjan Dev",
+      "tooltip": "Guru Arjan Dev executed at Lahore, 1606",
+      "summary": "The fifth Sikh guru, who had compiled the Adi Granth, was executed at Lahore on Jahangir's orders after refusing to alter its verses or accept conversion.",
+      "detail": "Guru Arjan Dev had compiled the Adi Granth in 1604 and was the first Sikh guru to die at Mughal hands. The proximate cause was political: he had received the rebel prince Khusrau, Jahangir's son, and reportedly given him a tilak. The emperor's own memoir, the Tuzuk-i-Jahangiri, describes ordering Arjan's death, his property's confiscation, and a fine of two lakh rupees that the Guru refused to pay. The execution at Lahore, by torture according to Sikh tradition, marked a shift in Mughal–Sikh relations from suspicion to confrontation. Arjan's son Guru Hargobind would receive the gurgaddi wearing two swords — miri and piri, temporal and spiritual authority — and begin the militarisation that would unfold across the next century.",
+      "date": {
+        "start": "1606-05-30",
+        "end":   "1606-05-30",
+        "precision": "day",
+        "approximate": false,
+        "display": "30 May 1606"
+      },
+      "location": {
+        "type": "city",
+        "name": "Lahore",
+        "region": "Punjab",
+        "country": "PK",
+        "points": [{ "lat": 31.5204, "lon": 74.3587, "name": "Lahore" }]
+      },
+      "era": "mughal",
+      "category": ["religious", "political"],
+      "figures": ["Guru Arjan Dev", "Jahangir", "Khusrau Mirza"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Guru_Arjan", "label": "Wikipedia: Guru Arjan", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Jahangir, Tuzuk-i-Jahangiri (trans. A. Rogers / H. Beveridge, 1909)", "type": "primary" },
+        { "label": "Louis E. Fenech and W. H. McLeod, Historical Dictionary of Sikhism (3rd ed. 2014)", "type": "scholarly" }
+      ],
+      "caused_by": [
+        { "id": "akbar-death-1605", "gloss": "Jahangir's accession brought a tighter line on the Sikh sangat his father had largely tolerated; the immediate trigger was the rebellion of Jahangir's son Khusrau." }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "eic-farman-1613",
+      "title": "East India Company first farman",
+      "tooltip": "Jahangir grants EIC a farman at Surat, 1613",
+      "summary": "Jahangir granted the East India Company a farman to trade at Surat, beginning the Company's century-long shift from supplicant merchant to revenue power.",
+      "detail": "The Company's first attempt to open trade in Mughal India had failed at Surat in 1608 when the Portuguese drove William Hawkins out. Captain Best returned in 1612, defeated a Portuguese squadron off Swally, and impressed the Mughal port officials enough that Jahangir issued a farman in 1613 permitting the Company to maintain a factory at Surat. Sir Thomas Roe arrived in 1615 as ambassador from James I and spent three years at Jahangir's court negotiating terms — without securing any treaty more binding than the original farman. The Mughals saw the English as one merchant community among many; the Company saw the farman as the first foothold. Both readings were correct in their time; the asymmetry would only emerge after Aurangzeb.",
+      "date": {
+        "start": "1613-01-11",
+        "end":   "1613-01-11",
+        "precision": "day",
+        "approximate": false,
+        "display": "11 January 1613"
+      },
+      "location": {
+        "type": "city",
+        "name": "Surat",
+        "region": "Gujarat",
+        "country": "IN",
+        "points": [{ "lat": 21.1702, "lon": 72.8311, "name": "Surat" }]
+      },
+      "era": "mughal",
+      "category": ["economic", "political"],
+      "figures": ["Jahangir", "Thomas Roe", "Thomas Best"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/East_India_Company", "label": "Wikipedia: East India Company", "type": "wikipedia" },
+        { "url": "https://en.wikipedia.org/wiki/Thomas_Roe", "label": "Wikipedia: Thomas Roe", "type": "related" }
+      ],
+      "sources": [
+        { "label": "William Dalrymple, The Anarchy: The Relentless Rise of the East India Company (2019)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "kandahar-fall-1622",
+      "title": "Persia takes Kandahar",
+      "tooltip": "Shah Abbas captures Kandahar from Mughals, 1622",
+      "summary": "Shah Abbas of Persia took Kandahar in a six-week siege; the Mughals would not hold the fortress city again, despite three campaigns under Shah Jahan.",
+      "detail": "Kandahar sat at the western edge of the Mughal world — the strategic gateway to Khorasan and the trade routes north of the Hindu Kush. Babur had taken it in 1522; it had passed back and forth between Persia, the Mughals, and local rulers ever since. Shah Abbas of Persia laid siege in March 1622 and took the city in May; the Mughal governor Khan Daulat Beg surrendered after Jahangir, distracted by Prince Khurram's looming rebellion, sent no relief. Shah Jahan recovered Kandahar in 1638 by negotiation but lost it again in 1649 to Shah Abbas II. The three subsequent reconquest attempts — by Aurangzeb himself in 1649 and 1652 and by Dara Shikoh in 1653 — all failed at heavy cost. The city marked the durable western limit of effective Mughal power.",
+      "date": {
+        "start": "1622-05-01",
+        "end":   "1622-05-01",
+        "precision": "month",
+        "approximate": true,
+        "display": "May 1622"
+      },
+      "location": {
+        "type": "city",
+        "name": "Kandahar",
+        "region": "Khorasan frontier",
+        "country": "AF",
+        "points": [{ "lat": 31.6280, "lon": 65.7372, "name": "Kandahar" }]
+      },
+      "era": "mughal",
+      "category": ["military", "political"],
+      "figures": ["Shah Abbas I of Persia", "Jahangir", "Khan Daulat Beg"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Capture_of_Kandahar_(1622)", "label": "Wikipedia: Capture of Kandahar (1622)", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Jos Gommans, Mughal Warfare (2002)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "taj-mahal-begun-1632",
+      "title": "Construction of the Taj Mahal begins",
+      "tooltip": "Shah Jahan begins the Taj Mahal at Agra, 1632",
+      "summary": "Shah Jahan began the Taj Mahal as a mausoleum for Mumtaz Mahal; over twenty years of work it consumed an estimated 32 million rupees and 20,000 craftsmen.",
+      "detail": "Mumtaz Mahal died in childbirth at Burhanpur in June 1631, after fourteen pregnancies. Shah Jahan brought her body to Agra and broke ground on the mausoleum on a bend of the Yamuna in 1632. The architect of record was Ustad Ahmad Lahori, with calligraphy by Amanat Khan and a workforce that contemporary sources put at twenty thousand. The dome was completed by 1648; the gardens, gateway, and ancillary buildings extended to 1653. Total cost is variously estimated between 32 and 50 million rupees — 5–8 percent of annual imperial revenue, sustained for two decades. The treasury strain coincided with the Deccan campaigns and the Persian wars; by Shah Jahan's later years the empire's surplus had visibly thinned. The Taj is also a monument to that fiscal turn.",
+      "date": {
+        "start": "1632-01-01",
+        "end":   "1653-12-31",
+        "precision": "year",
+        "approximate": false,
+        "display": "1632 — completed 1653"
+      },
+      "location": {
+        "type": "point",
+        "name": "Taj Mahal, Agra",
+        "region": "Doab",
+        "country": "IN",
+        "points": [{ "lat": 27.1751, "lon": 78.0421, "name": "Taj Mahal" }]
+      },
+      "era": "mughal",
+      "category": ["cultural", "economic"],
+      "figures": ["Shah Jahan", "Mumtaz Mahal", "Ustad Ahmad Lahori"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Taj_Mahal", "label": "Wikipedia: Taj Mahal", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Ebba Koch, The Complete Taj Mahal (2006)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "war-of-succession-1657",
+      "title": "Mughal War of Succession",
+      "tooltip": "Aurangzeb defeats Dara Shikoh, 1657–1659",
+      "summary": "Shah Jahan's illness set off a fratricidal war between his four sons; Aurangzeb defeated Dara Shikoh at Samugarh in 1658 and executed him a year later.",
+      "detail": "Shah Jahan fell gravely ill at Delhi in September 1657. The four princes — Dara Shikoh in Delhi, Shah Shuja in Bengal, Aurangzeb in the Deccan, and Murad Bakhsh in Gujarat — moved at once. Aurangzeb allied with Murad against the heir-presumptive Dara, defeated him at Dharmat in April 1658 and decisively at Samugarh near Agra on 29 May. Shah Jahan recovered but found himself confined to the Agra Fort by his victorious son. Dara was hunted across Sindh, betrayed at Dadar, brought to Delhi, paraded through the streets on a filthy elephant, tried for apostasy, and beheaded on the night of 30 August 1659. Shuja was eventually killed in Arakan; Murad was executed at Gwalior in 1661. The political settlement set the orthodox tone of Aurangzeb's half-century reign.",
+      "date": {
+        "start": "1657-09-06",
+        "end":   "1659-08-30",
+        "precision": "day",
+        "approximate": false,
+        "display": "September 1657 — August 1659"
+      },
+      "location": {
+        "type": "region",
+        "name": "Mughal heartland (key battle: Samugarh near Agra)",
+        "region": "Doab",
+        "country": "IN",
+        "points": [{ "lat": 27.1167, "lon": 78.1667, "name": "Samugarh" }]
+      },
+      "era": "mughal",
+      "category": ["military", "dynastic", "political"],
+      "figures": ["Aurangzeb", "Dara Shikoh", "Shah Jahan", "Shah Shuja", "Murad Bakhsh"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Battle_of_Samugarh", "label": "Wikipedia: Battle of Samugarh", "type": "wikipedia" },
+        { "url": "https://en.wikipedia.org/wiki/Dara_Shikoh", "label": "Wikipedia: Dara Shikoh", "type": "related" }
+      ],
+      "sources": [
+        { "label": "Audrey Truschke, Aurangzeb: The Man and the Myth (2017)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "aurangzeb-coronation-1658",
+      "title": "Aurangzeb crowned at Delhi",
+      "tooltip": "Aurangzeb crowned at Delhi as Alamgir, 1658",
+      "summary": "Aurangzeb crowned himself emperor at Shalimar Bagh, Delhi, while his father Shah Jahan still lived under house arrest at the Agra Fort.",
+      "detail": "Aurangzeb held a first, hurried coronation at Shalimar Bagh in Delhi on 31 July 1658, in the middle of the war of succession, before Dara Shikoh's elimination. A second formal accession followed in May 1659 after Dara's defeat at Deorai. The titles he assumed — Alamgir, 'Seizer of the Universe' — and the ban on court music, miniature painting (officially), and chronicling of his own reign signalled the orthodox turn. Shah Jahan would live another eight years in confinement at the Agra Fort, attended by his daughter Jahanara, watching the Taj from a window. He died in 1666. Aurangzeb would rule for forty-nine years — almost exactly Akbar's span — and over an empire at its largest territorial extent.",
+      "date": {
+        "start": "1658-07-31",
+        "end":   "1658-07-31",
+        "precision": "day",
+        "approximate": false,
+        "display": "31 July 1658 (formal accession May 1659)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Shalimar Bagh, Delhi",
+        "region": "Mughal Capital",
+        "country": "IN",
+        "points": [{ "lat": 28.7100, "lon": 77.1700, "name": "Shalimar Bagh, Delhi" }]
+      },
+      "era": "mughal",
+      "category": ["dynastic", "political"],
+      "figures": ["Aurangzeb", "Shah Jahan"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Aurangzeb", "label": "Wikipedia: Aurangzeb", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Audrey Truschke, Aurangzeb: The Man and the Myth (2017)", "type": "scholarly" }
+      ],
+      "caused_by": [
+        { "id": "war-of-succession-1657", "gloss": "Aurangzeb's victory in the war of succession was the precondition for the coronation; Shah Jahan's confinement followed." }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "guru-tegh-bahadur-execution-1675",
+      "title": "Execution of Guru Tegh Bahadur",
+      "tooltip": "Guru Tegh Bahadur executed at Delhi, 1675",
+      "summary": "The ninth Sikh guru was beheaded at Chandni Chowk after refusing to convert; the trigger was the Kashmiri Pandits' appeal to him for protection.",
+      "detail": "Aurangzeb's policies in Kashmir after 1671 — under the governor Iftikhar Khan — included pressure on the Hindu Kashmiri Brahmin community to accept Islam. A delegation led by Pandit Kirpa Ram travelled to the Guru at Anandpur Sahib in 1675 asking for protection. Tegh Bahadur reportedly told them to inform the emperor that if the Guru himself converted they would also; the result was his arrest. He was brought to Delhi, held for over three months, and executed at Chandni Chowk on 11 November 1675. Sikh tradition holds that two of his disciples were tortured to death alongside him. His son Gobind Rai was nine years old at his accession; he would respond, twenty-four years later, with the founding of the Khalsa.",
+      "date": {
+        "start": "1675-11-11",
+        "end":   "1675-11-11",
+        "precision": "day",
+        "approximate": false,
+        "display": "11 November 1675"
+      },
+      "location": {
+        "type": "point",
+        "name": "Chandni Chowk, Delhi (Gurudwara Sis Ganj Sahib)",
+        "region": "Mughal Capital",
+        "country": "IN",
+        "points": [{ "lat": 28.6562, "lon": 77.2304, "name": "Chandni Chowk" }]
+      },
+      "era": "mughal",
+      "category": ["religious", "political"],
+      "figures": ["Guru Tegh Bahadur", "Aurangzeb", "Guru Gobind Singh (then Gobind Rai)"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Guru_Tegh_Bahadur", "label": "Wikipedia: Guru Tegh Bahadur", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Louis E. Fenech and W. H. McLeod, Historical Dictionary of Sikhism (3rd ed. 2014)", "type": "scholarly" }
+      ],
+      "caused_by": [
+        { "id": "aurangzeb-coronation-1658", "gloss": "The orthodox turn under Aurangzeb's regime — including the Kashmir conversion campaign of the 1670s — set the political conditions for the execution." }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "jizya-reimposed-1679",
+      "title": "Aurangzeb re-imposes the jizya",
+      "tooltip": "Jizya re-imposed on non-Muslims, 1679",
+      "summary": "Aurangzeb restored the jizya on non-Muslim subjects, 115 years after Akbar had abolished it; Muslim subjects continued to pay the parallel zakat tithe.",
+      "detail": "Akbar had abolished the jizya in 1564 — the per-capita tax on non-Muslim subjects of an Islamic state — as part of a broader effort to widen the empire's social base. Aurangzeb restored it in April 1679, three rates by income class, exemptions for women, children, the destitute, and the very old. Muslims continued to be liable for the parallel zakat at 2.5 percent of accumulated wealth, so the jizya was not the only Mughal head-tax in the period; what was new was the explicit confessional asymmetry. Hindu protests at the Red Fort were dispersed by elephants. The jizya was a policy decision with revenue, ideological, and signalling components; it has long stood in popular history as a synecdoche for Aurangzeb's reign as a whole. It was abolished by his successor Bahadur Shah I in 1712.",
+      "date": {
+        "start": "1679-04-02",
+        "end":   "1679-04-02",
+        "precision": "day",
+        "approximate": false,
+        "display": "2 April 1679"
+      },
+      "location": {
+        "type": "city",
+        "name": "Delhi",
+        "region": "Mughal Capital",
+        "country": "IN",
+        "points": [{ "lat": 28.6139, "lon": 77.2090, "name": "Delhi" }]
+      },
+      "era": "mughal",
+      "category": ["political", "economic", "religious"],
+      "figures": ["Aurangzeb"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Jizya", "label": "Wikipedia: Jizya", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Audrey Truschke, Aurangzeb: The Man and the Myth (2017)", "type": "scholarly" },
+        { "label": "Satish Chandra, Medieval India — Part Two (1999)", "type": "scholarly" }
+      ],
+      "caused_by": [
+        { "id": "aurangzeb-coronation-1658", "gloss": "The jizya reversal followed two decades of Aurangzeb's broader orthodox-policy turn." }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "deccan-annexations-1686",
+      "title": "Annexation of Bijapur and Golconda",
+      "tooltip": "Aurangzeb annexes Bijapur (1686) and Golconda (1687)",
+      "summary": "Aurangzeb extinguished the two surviving Deccan sultanates — Bijapur in 1686 and Golconda in 1687 — bringing the empire to its largest territorial extent.",
+      "detail": "Aurangzeb moved his court to the Deccan in 1681 and stayed for the rest of his life — twenty-six years on campaign. The Adil Shahi sultanate of Bijapur fell after a long siege in September 1686; the Qutb Shahi sultanate of Golconda followed in October 1687, the famous diamond-trading port-city taken by treachery rather than assault after eight months. Both sultans were imprisoned at Daulatabad. The annexations gave the empire its widest territorial reach but also exposed it to the Maratha guerrilla networks that the southern sultans had previously absorbed. Aurangzeb spent the remaining two decades of his reign in fruitless campaigns against Maratha forts in the Western Ghats; he never returned north. Treasury, manpower, and political attention all flowed south and did not flow back.",
+      "date": {
+        "start": "1686-09-12",
+        "end":   "1687-10-01",
+        "precision": "month",
+        "approximate": false,
+        "display": "Bijapur fell September 1686; Golconda October 1687"
+      },
+      "location": {
+        "type": "region",
+        "name": "Bijapur and Golconda (modern Karnataka and Telangana)",
+        "region": "Deccan",
+        "country": "IN",
+        "points": [
+          { "lat": 16.8302, "lon": 75.7100, "name": "Bijapur" },
+          { "lat": 17.3833, "lon": 78.4011, "name": "Golconda (Hyderabad)" }
+        ]
+      },
+      "era": "mughal",
+      "category": ["military", "political"],
+      "figures": ["Aurangzeb", "Sikandar Adil Shah", "Abul Hasan Qutb Shah"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Siege_of_Bijapur", "label": "Wikipedia: Siege of Bijapur", "type": "wikipedia" },
+        { "url": "https://en.wikipedia.org/wiki/Siege_of_Golconda", "label": "Wikipedia: Siege of Golconda", "type": "related" }
+      ],
+      "sources": [
+        { "label": "John F. Richards, The Mughal Empire (1993)", "type": "scholarly" }
+      ],
+      "caused_by": [
+        { "id": "aurangzeb-coronation-1658", "gloss": "The Deccan turn was Aurangzeb's career project from the 1650s; the annexations were its culmination." }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "sambhaji-execution-1689",
+      "title": "Execution of Sambhaji",
+      "tooltip": "Aurangzeb executes Sambhaji at Tulapur, 1689",
+      "summary": "Sambhaji, son of Shivaji and the second Maratha Chhatrapati, was captured at Sangameshwar, tortured for two weeks, and executed at Tulapur near Pune.",
+      "detail": "Sambhaji had succeeded his father Shivaji as the Maratha sovereign in 1681 and had spent eight years harassing Mughal supply lines while Aurangzeb consolidated the southern sultanates. He was captured by the Mughal commander Muqarrab Khan at Sangameshwar on 1 February 1689, after a betrayal by the local Shirke chief. Brought before Aurangzeb at his Deccan camp, he was offered conversion as a route to clemency and refused; the chronicler Khafi Khan records the public mutilation that followed. He was executed at Tulapur on 11 March 1689. The Marathas' response was the opposite of what Aurangzeb had calculated. Sambhaji's brother Rajaram retreated to Jinji and the war continued for another eighteen years, by which time it had drained the Mughal treasury and exhausted the imperial army.",
+      "date": {
+        "start": "1689-03-11",
+        "end":   "1689-03-11",
+        "precision": "day",
+        "approximate": false,
+        "display": "11 March 1689"
+      },
+      "location": {
+        "type": "point",
+        "name": "Tulapur (confluence of Bhima and Indrayani)",
+        "region": "Maharashtra",
+        "country": "IN",
+        "points": [{ "lat": 18.6722, "lon": 73.9694, "name": "Tulapur" }]
+      },
+      "era": "mughal",
+      "category": ["military", "religious", "political"],
+      "figures": ["Sambhaji", "Aurangzeb", "Muqarrab Khan"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Sambhaji", "label": "Wikipedia: Sambhaji", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Khafi Khan, Muntakhab al-Lubab (early 18th c.)", "type": "primary" },
+        { "label": "Stewart Gordon, The Marathas 1600–1818 (New Cambridge History of India, 1993)", "type": "scholarly" }
+      ],
+      "caused_by": [
+        { "id": "deccan-annexations-1686", "gloss": "The Maratha resistance Sambhaji led was the principal obstacle to Aurangzeb's Deccan project; his execution was an attempt — failed — to break it." }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "khalsa-founded-1699",
+      "title": "Guru Gobind Singh founds the Khalsa",
+      "tooltip": "Khalsa founded at Anandpur Sahib, Baisakhi 1699",
+      "summary": "At Anandpur Sahib on Baisakhi 1699, Guru Gobind Singh initiated the Panj Pyare into the Khalsa, the militarised Sikh order of saint-soldiers.",
+      "detail": "Twenty-four years after his father's execution, Guru Gobind Singh summoned the Sikh sangat to Anandpur Sahib for Baisakhi on 30 March 1699. The gathering of perhaps eighty thousand witnessed an act of theatre that founded the Khalsa: the Guru asked five times for a head, and five Sikhs in turn rose. Each was led behind a curtain; each emerged in saffron robes, initiated as the Panj Pyare — the Five Beloved. The Khalsa took five articles of faith (the Five Ks: kesh, kanga, kara, kachera, kirpan), the surnames Singh and Kaur, and a militarised political identity. The institutional consequences were immediate (Anandpur came under Mughal–hill-Raja siege within months) and long: the Khalsa would become the political vehicle through which Sikh sovereignty was eventually claimed under Ranjit Singh a century later.",
+      "date": {
+        "start": "1699-03-30",
+        "end":   "1699-03-30",
+        "precision": "day",
+        "approximate": false,
+        "display": "30 March 1699 (Baisakhi)"
+      },
+      "location": {
+        "type": "point",
+        "name": "Anandpur Sahib",
+        "region": "Punjab (Sivalik foothills)",
+        "country": "IN",
+        "points": [{ "lat": 31.2390, "lon": 76.5021, "name": "Anandpur Sahib" }]
+      },
+      "era": "mughal",
+      "category": ["religious", "political", "resistance"],
+      "figures": ["Guru Gobind Singh", "Panj Pyare"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Khalsa", "label": "Wikipedia: Khalsa", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Louis E. Fenech and W. H. McLeod, Historical Dictionary of Sikhism (3rd ed. 2014)", "type": "scholarly" }
+      ],
+      "caused_by": [
+        { "id": "guru-tegh-bahadur-execution-1675", "gloss": "The Khalsa was Gobind Singh's structural answer to his father's execution: militarising the community so the question of forced conversion could not be put to the next Guru." }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "aurangzeb-death-1707",
+      "title": "Death of Aurangzeb",
+      "tooltip": "Aurangzeb dies at Ahmednagar, 1707",
+      "summary": "Aurangzeb died at his camp near Ahmednagar after twenty-six years on Deccan campaign; the empire he left at maximum extent began to fragment within a decade.",
+      "detail": "Aurangzeb was eighty-eight when he died at the Mughal camp near Ahmednagar on 3 March 1707, after a final illness of about a week. He had been on Deccan campaign for twenty-six years and had not seen Delhi since 1681. His will divided the empire between his three surviving sons; the war of succession began before his body was buried at Khuldabad, in a deliberately austere grave next to a Sufi shrine that was paid for from his own quranic transcription earnings. The empire he passed on was at its largest territorial extent and at its most fragile: the Marathas had not been broken, the treasury was empty, the Rajputs alienated, the Sikhs militarised, and the European trading factories on the coasts had grown into fortified settlements with their own armies. Within a decade the centre would lose the will to enforce its writ on the periphery; within fifty years the Mughal emperor would be a pensioner of others.",
+      "date": {
+        "start": "1707-03-03",
+        "end":   "1707-03-03",
+        "precision": "day",
+        "approximate": false,
+        "display": "3 March 1707"
+      },
+      "location": {
+        "type": "point",
+        "name": "Mughal camp near Ahmednagar (buried at Khuldabad)",
+        "region": "Deccan",
+        "country": "IN",
+        "points": [{ "lat": 19.0951, "lon": 74.7480, "name": "Ahmednagar" }]
+      },
+      "era": "mughal",
+      "category": ["dynastic"],
+      "figures": ["Aurangzeb", "Bahadur Shah I"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Aurangzeb", "label": "Wikipedia: Aurangzeb", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Audrey Truschke, Aurangzeb: The Man and the Myth (2017)", "type": "scholarly" },
+        { "label": "John F. Richards, The Mughal Empire (1993)", "type": "scholarly" }
+      ],
+      "caused_by": [
+        { "id": "deccan-annexations-1686", "gloss": "The Deccan campaigns that began with Bijapur and Golconda kept Aurangzeb in the south for the rest of his life." }
+      ],
+      "verified": true
+    }
+  ]
+}

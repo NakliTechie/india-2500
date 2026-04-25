@@ -1,0 +1,422 @@
+{
+  "campaign": "independence",
+  "scope": "Indian independence movement, 1885–1947 — seed batch (v1).",
+  "updated": "2026-04-25",
+  "events": [
+    {
+      "id": "inc-founded-1885",
+      "title": "Indian National Congress founded",
+      "tooltip": "Indian National Congress founded, 1885",
+      "summary": "72 delegates met at Bombay to launch the Indian National Congress, an early forum for educated Indian opinion within the imperial framework.",
+      "detail": "The first session was convened by Allan Octavian Hume, a retired British civil servant, with W.C. Bonnerjee as president. Membership was overwhelmingly upper-caste, English-educated, and professional. The early Congress was avowedly loyalist — its demands were for greater Indian representation in the civil service and legislative councils, not independence. The radicalisation came later, accelerated by Curzon's partition of Bengal (1905) and the failure of moderate constitutionalism. By the 1920s the body that began as a debating society had become the political vehicle of a mass movement.",
+      "date": {
+        "start": "1885-12-28",
+        "end":   "1885-12-31",
+        "precision": "day",
+        "approximate": false,
+        "display": "28–31 December 1885"
+      },
+      "location": {
+        "type": "city",
+        "name": "Gokuldas Tejpal Sanskrit College, Bombay",
+        "region": "Bombay Presidency",
+        "country": "IN",
+        "points": [{ "lat": 18.9388, "lon": 72.8344, "name": "Bombay" }]
+      },
+      "era": "colonial",
+      "category": ["political"],
+      "figures": ["Allan Octavian Hume", "W.C. Bonnerjee", "Dadabhai Naoroji"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Indian_National_Congress", "label": "Wikipedia: Indian National Congress", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Bipan Chandra et al., India's Struggle for Independence (1989)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "partition-of-bengal-1905",
+      "title": "Partition of Bengal",
+      "tooltip": "Curzon partitions Bengal, 1905",
+      "summary": "Curzon's split of Bengal into Hindu-majority west and Muslim-majority east galvanised the first mass agitation in colonial India.",
+      "detail": "Lord Curzon argued the partition was an administrative measure for a province too large to govern. Indian opinion read it as a deliberate communal wedge. The Swadeshi movement that followed — boycott of British goods, promotion of Indian-made cloth, mass meetings in Calcutta — was the first agitation that successfully linked elite politics to street mobilisation. The partition was annulled in 1911 under King George V's Delhi Durbar, but the political memory remained. Bengal would be partitioned again in 1947, on lines roughly tracing Curzon's.",
+      "date": {
+        "start": "1905-10-16",
+        "end":   "1911-12-12",
+        "precision": "day",
+        "approximate": false,
+        "display": "16 October 1905 — annulled 12 December 1911"
+      },
+      "location": {
+        "type": "region",
+        "name": "Calcutta (capital of Bengal Presidency)",
+        "region": "Bengal",
+        "country": "IN",
+        "points": [{ "lat": 22.5726, "lon": 88.3639, "name": "Calcutta" }]
+      },
+      "era": "colonial",
+      "category": ["colonial-administration", "political", "resistance"],
+      "figures": ["Lord Curzon", "Surendranath Banerjee"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Partition_of_Bengal_(1905)", "label": "Wikipedia: Partition of Bengal (1905)", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Sumit Sarkar, Modern India 1885–1947 (1983)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "jallianwala-bagh-1919",
+      "title": "Jallianwala Bagh massacre",
+      "tooltip": "Jallianwala Bagh massacre, Amritsar, 1919",
+      "summary": "British troops under Brigadier-General Dyer fired without warning into a crowd of 15–20,000 gathered at an enclosed garden in Amritsar on Baisakhi.",
+      "detail": "The Defence of India Act gave Punjab's Lt. Governor O'Dwyer wide powers, including bans on public assembly. Brigadier-General Reginald Dyer reached Amritsar on 11 April 1919. Two days later, on the festival of Baisakhi, a crowd had gathered in Jallianwala Bagh — an enclosed garden with a single narrow exit. Dyer marched in 50 riflemen, blocked the exit, and ordered fire without warning. Shooting continued for about ten minutes until ammunition was exhausted. Official British figures recorded 379 dead; the Congress inquiry put the toll above 1,000. The Hunter Commission later condemned Dyer's conduct, but Parliament voted him a public pension. The massacre converted constitutional moderates into nationalists nearly overnight.",
+      "date": {
+        "start": "1919-04-13",
+        "end":   "1919-04-13",
+        "precision": "day",
+        "approximate": false,
+        "display": "13 April 1919"
+      },
+      "location": {
+        "type": "point",
+        "name": "Jallianwala Bagh, Amritsar",
+        "region": "Punjab",
+        "country": "IN",
+        "points": [{ "lat": 31.6203, "lon": 74.8800, "name": "Jallianwala Bagh" }]
+      },
+      "era": "colonial",
+      "category": ["military", "colonial-administration"],
+      "figures": ["Reginald Dyer", "Michael O'Dwyer"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Jallianwala_Bagh_massacre", "label": "Wikipedia: Jallianwala Bagh massacre", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Kim A. Wagner, Jallianwala Bagh: An Empire of Fear and the Making of the Amritsar Massacre (2019)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "non-cooperation-movement-1920",
+      "title": "Non-Cooperation Movement",
+      "tooltip": "Non-Cooperation Movement, 1920–22",
+      "summary": "Gandhi's first nationwide campaign — a boycott of British titles, courts, schools, and goods, joined to the Khilafat movement.",
+      "detail": "Launched at the Calcutta Special Session of Congress in September 1920 and ratified at Nagpur in December, the Non-Cooperation Movement called for the surrender of British honours, withdrawal from government schools and courts, and a boycott of foreign cloth. By late 1921 it had reached scales no earlier campaign had: tens of thousands of students out of school, a near-total boycott of legislative elections, the Khilafat alliance giving it Hindu–Muslim breadth. Then, in February 1922, news arrived from Chauri Chaura. Gandhi suspended the movement within five days, against the wishes of nearly every senior Congress leader. He was arrested in March and sentenced to six years.",
+      "date": {
+        "start": "1920-09-04",
+        "end":   "1922-02-12",
+        "precision": "day",
+        "approximate": false,
+        "display": "September 1920 – February 1922"
+      },
+      "location": {
+        "type": "region",
+        "name": "Pan-India (ratified at Nagpur Congress)",
+        "region": "British India",
+        "country": "IN",
+        "points": [{ "lat": 21.1458, "lon": 79.0882, "name": "Nagpur" }]
+      },
+      "era": "colonial",
+      "category": ["resistance", "political"],
+      "figures": ["Mohandas Gandhi", "Maulana Mohammad Ali", "Maulana Shaukat Ali", "Motilal Nehru"],
+      "caused_by": [
+        { "id": "jallianwala-bagh-1919", "gloss": "The massacre and the Hunter Commission whitewash converted Gandhi from a constitutional cooperator into the architect of mass non-cooperation. He returned his Kaiser-i-Hind medal in protest." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Non-cooperation_movement", "label": "Wikipedia: Non-cooperation movement", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Judith M. Brown, Gandhi's Rise to Power: Indian Politics 1915–1922 (1972)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "chauri-chaura-1922",
+      "title": "Chauri Chaura incident",
+      "tooltip": "Chauri Chaura incident, 1922",
+      "summary": "A procession in eastern UP killed 22 police and burned their station. Gandhi suspended the entire Non-Cooperation Movement within five days.",
+      "detail": "On 4 February 1922, in a small market town in eastern United Provinces, a Khilafat–Non-Cooperation procession passed the Chauri Chaura police station. Police taunted the marchers, then opened fire when they refused to disperse, killing three. The crowd surged back, set fire to the station, and killed 22 policemen — most cut down as they fled the burning building. Gandhi received the news at Bardoli, where he was about to launch a no-tax campaign. Within five days he had unilaterally suspended the Non-Cooperation Movement, citing the violation of non-violence. Most Congress leaders disagreed publicly. Subhas Bose later called the suspension a 'national calamity.' Gandhi spent the next six years out of mass politics.",
+      "date": {
+        "start": "1922-02-04",
+        "end":   "1922-02-04",
+        "precision": "day",
+        "approximate": false,
+        "display": "4 February 1922"
+      },
+      "location": {
+        "type": "point",
+        "name": "Chauri Chaura, Gorakhpur district",
+        "region": "United Provinces",
+        "country": "IN",
+        "points": [{ "lat": 26.7589, "lon": 83.7375, "name": "Chauri Chaura" }]
+      },
+      "era": "colonial",
+      "category": ["resistance", "political"],
+      "figures": ["Mohandas Gandhi"],
+      "part_of": [
+        { "id": "non-cooperation-movement-1920" }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Chauri_Chaura_incident", "label": "Wikipedia: Chauri Chaura incident", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Shahid Amin, Event, Metaphor, Memory: Chauri Chaura 1922–1992 (1995)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "simon-commission-protest-1928",
+      "title": "Simon Commission protest, Lahore",
+      "tooltip": "Simon Commission protest at Lahore, 1928",
+      "summary": "An all-white commission on Indian constitutional reform was met with 'Simon Go Back' protests; Lala Lajpat Rai died of injuries from the Lahore demonstration.",
+      "detail": "The Simon Commission, appointed in November 1927, contained no Indian members. Congress and the Muslim League both boycotted it. When the Commission reached Lahore on 30 October 1928, Lala Lajpat Rai led a demonstration that was charged by police; Rai was severely beaten and died on 17 November of injuries his physicians attributed to the assault. His death radicalised the next generation, including Bhagat Singh, who avenged him by shooting the British police officer J.P. Saunders in December 1928. The Commission's report, when finally published in 1930, was overtaken by events.",
+      "date": {
+        "start": "1928-10-30",
+        "end":   "1928-11-17",
+        "precision": "day",
+        "approximate": false,
+        "display": "30 October – 17 November 1928"
+      },
+      "location": {
+        "type": "city",
+        "name": "Lahore",
+        "region": "Punjab (now Pakistan)",
+        "country": "PK",
+        "points": [{ "lat": 31.5497, "lon": 74.3436, "name": "Lahore" }]
+      },
+      "era": "colonial",
+      "category": ["resistance", "political"],
+      "figures": ["Lala Lajpat Rai", "John Simon", "Bhagat Singh"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Simon_Commission", "label": "Wikipedia: Simon Commission", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Bipan Chandra et al., India's Struggle for Independence (1989), ch. 21", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "lahore-session-1929",
+      "title": "Lahore Session — Purna Swaraj declaration",
+      "tooltip": "Lahore Session: Purna Swaraj, 1929",
+      "summary": "The Lahore Congress declared 'complete independence' (Purna Swaraj) as its goal and authorised civil disobedience.",
+      "detail": "Until 1929 Congress's official aim was Dominion status within the British Empire. The Lahore Session, with Jawaharlal Nehru as president, broke with that. The Purna Swaraj resolution committed Congress to complete independence and authorised the working committee to launch civil disobedience. At the stroke of midnight on 31 December 1929, on the banks of the Ravi, the tricolour was unfurled. 26 January 1930 was declared the first Independence Day; the date was kept as Republic Day after 1950. The session also gave Gandhi the authority that he would exercise three months later at Dandi.",
+      "date": {
+        "start": "1929-12-19",
+        "end":   "1929-12-31",
+        "precision": "day",
+        "approximate": false,
+        "display": "19–31 December 1929"
+      },
+      "location": {
+        "type": "city",
+        "name": "Lahore (Ravi riverbank)",
+        "region": "Punjab (now Pakistan)",
+        "country": "PK",
+        "points": [{ "lat": 31.5670, "lon": 74.3220, "name": "Lahore" }]
+      },
+      "era": "colonial",
+      "category": ["political", "resistance"],
+      "figures": ["Jawaharlal Nehru", "Mohandas Gandhi", "Subhas Chandra Bose"],
+      "caused_by": [
+        { "id": "simon-commission-protest-1928", "gloss": "The Simon boycott and Lajpat Rai's death persuaded Congress that the constitutional path was closed; Nehru and Bose pushed the dominion-status majority into the Purna Swaraj position." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Purna_Swaraj", "label": "Wikipedia: Purna Swaraj", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Sumit Sarkar, Modern India 1885–1947 (1983), ch. 6", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "salt-march-1930",
+      "title": "Salt March (Dandi March)",
+      "tooltip": "Salt March to Dandi, 1930",
+      "summary": "Gandhi's 24-day march from Sabarmati Ashram to Dandi to break the British salt monopoly — the opening act of the Civil Disobedience Movement.",
+      "detail": "On 12 March 1930 Gandhi and 78 hand-picked satyagrahis left Sabarmati Ashram for the coastal village of Dandi, 240 miles south. The march was deliberately slow — about 12 miles a day — to maximise press coverage and to recruit walkers from villages along the route. By the time they reached Dandi on 5 April, Gandhi led several thousand. On the morning of 6 April he stooped and picked up a lump of natural salt, breaking a tax law punishable by jail. The act triggered nationwide salt-making, mass arrests of perhaps 60,000 people, and the wider Civil Disobedience Movement. The discipline and theatre of the march — meticulous, slow, photographed daily — were Gandhi's answer to the chaos of Chauri Chaura eight years earlier.",
+      "date": {
+        "start": "1930-03-12",
+        "end":   "1930-04-06",
+        "precision": "day",
+        "approximate": false,
+        "display": "12 March – 6 April 1930"
+      },
+      "location": {
+        "type": "route",
+        "name": "Sabarmati Ashram → Dandi",
+        "region": "Gujarat",
+        "country": "IN",
+        "points": [
+          { "lat": 23.0593, "lon": 72.5806, "name": "Sabarmati Ashram" },
+          { "lat": 22.7196, "lon": 72.5908, "name": "Aslali" },
+          { "lat": 22.3072, "lon": 73.1812, "name": "Vadodara region" },
+          { "lat": 21.7645, "lon": 72.1519, "name": "Bharuch region" },
+          { "lat": 21.1702, "lon": 72.8311, "name": "Surat" },
+          { "lat": 20.8467, "lon": 72.7150, "name": "Dandi" }
+        ]
+      },
+      "era": "colonial",
+      "category": ["resistance", "political"],
+      "figures": ["Mohandas Gandhi", "Sarojini Naidu", "Abbas Tyabji"],
+      "caused_by": [
+        { "id": "lahore-session-1929", "gloss": "The Purna Swaraj resolution authorised civil disobedience and handed Gandhi the timing of its launch. He spent the next ten weeks selecting the salt tax as the symbolic target." }
+      ],
+      "part_of": [
+        { "id": "civil-disobedience-movement-1930" }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Salt_March", "label": "Wikipedia: Salt March", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Thomas Weber, On the Salt March: The Historiography of Gandhi's March to Dandi (1997)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "civil-disobedience-movement-1930",
+      "title": "Civil Disobedience Movement",
+      "tooltip": "Civil Disobedience Movement, 1930–34",
+      "summary": "Mass picketing of liquor and foreign-cloth shops, no-tax campaigns, and salt rush. Paused by the Gandhi–Irwin Pact, exhausted by 1934.",
+      "detail": "The Salt March opened a wave of disobedience that took different shapes in different regions: mass picketing of liquor shops in Bombay and Madras, no-tax campaigns in Gujarat (Bardoli, Kheda) and the United Provinces, the Pathan Khudai Khidmatgars in the North-West Frontier, the salt rush on the Bengal and Madras coasts. The Gandhi–Irwin Pact of 5 March 1931 paused the movement; the Second Round Table Conference in London failed; the movement was revived in January 1932 and then ground down by mass arrests. Its political achievement was forcing Britain to legislate provincial autonomy in the Government of India Act 1935 — which fell well short of dominion status, but committed Whitehall to constitutional incrementalism it could not retreat from.",
+      "date": {
+        "start": "1930-03-12",
+        "end":   "1934-04-07",
+        "precision": "day",
+        "approximate": false,
+        "display": "March 1930 – April 1934"
+      },
+      "location": {
+        "type": "region",
+        "name": "Pan-India",
+        "region": "British India",
+        "country": "IN",
+        "points": [{ "lat": 22.0, "lon": 78.5, "name": "Pan-India (notional)" }]
+      },
+      "era": "colonial",
+      "category": ["resistance", "political"],
+      "figures": ["Mohandas Gandhi", "Vallabhbhai Patel", "Khan Abdul Ghaffar Khan"],
+      "caused_by": [
+        { "id": "salt-march-1930", "gloss": "The Salt March was both the opening act of the movement and its template — one symbolic, photographed act of law-breaking, replicated by millions." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Salt_Satyagraha", "label": "Wikipedia: Salt Satyagraha", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Bipan Chandra et al., India's Struggle for Independence (1989), ch. 23–24", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "quit-india-1942",
+      "title": "Quit India Movement",
+      "tooltip": "Quit India launched at Bombay, 1942",
+      "summary": "Gandhi's 'Do or die' demand for immediate British withdrawal. With its leadership arrested, the movement spiralled into the largest uprising of the struggle.",
+      "detail": "On 8 August 1942, the All-India Congress Committee meeting at Bombay's Gowalia Tank Maidan passed the Quit India resolution. Gandhi gave the speech containing the line 'Do or die' and was arrested before dawn on 9 August along with the entire Congress working committee. With its leadership in jail, the movement spiralled out of central control. Crowds attacked railway stations, post offices, and police outposts across Bihar, the United Provinces, and Bengal. British retaliation included machine-gun fire from low-flying aircraft. By the year's end, over 60,000 had been arrested and roughly 1,000 killed. Quit India is often called the last mass movement of the freedom struggle — by the time the Congress leaders were released in 1945, the political question was no longer whether Britain would leave, only when and on what terms.",
+      "date": {
+        "start": "1942-08-08",
+        "end":   "1944-12-31",
+        "precision": "day",
+        "approximate": true,
+        "display": "8 August 1942 (launch) — through 1944"
+      },
+      "location": {
+        "type": "city",
+        "name": "Gowalia Tank Maidan, Bombay (launched)",
+        "region": "British India",
+        "country": "IN",
+        "points": [{ "lat": 18.9667, "lon": 72.8167, "name": "Gowalia Tank Maidan" }]
+      },
+      "era": "colonial",
+      "category": ["resistance", "political"],
+      "figures": ["Mohandas Gandhi", "Jawaharlal Nehru", "Aruna Asaf Ali", "Jayaprakash Narayan"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Quit_India_Movement", "label": "Wikipedia: Quit India Movement", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Sumit Sarkar, Modern India 1885–1947 (1983), ch. 7", "type": "scholarly" },
+        { "label": "Bipan Chandra et al., India's Struggle for Independence (1989), ch. 32", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "direct-action-day-1946",
+      "title": "Direct Action Day, Calcutta",
+      "tooltip": "Direct Action Day, Calcutta, 1946",
+      "summary": "The Muslim League's call for 'direct action' triggered four days of communal killings in Calcutta. Roughly 4,000 dead. The case for a united India was broken.",
+      "detail": "After the failure of the Cabinet Mission Plan to keep India united, the Muslim League called for Direct Action Day on 16 August 1946. In Calcutta, the only major city with a League-led provincial government, the demonstration tipped into four days of communal violence — initiated by League cadres, met and exceeded by Hindu and Sikh crowds. Estimates put the dead between 4,000 and 10,000, with some 100,000 wounded or homeless. The 'Great Calcutta Killings' destroyed whatever residual belief existed in the political class that an undivided India could be governed; from there, partition was a question of when and how, not whether. The violence spread to Bihar (October), Noakhali (October–November), and the Punjab (March 1947) before culminating in the partition migrations.",
+      "date": {
+        "start": "1946-08-16",
+        "end":   "1946-08-19",
+        "precision": "day",
+        "approximate": false,
+        "display": "16–19 August 1946"
+      },
+      "location": {
+        "type": "city",
+        "name": "Calcutta",
+        "region": "Bengal",
+        "country": "IN",
+        "points": [{ "lat": 22.5726, "lon": 88.3639, "name": "Calcutta" }]
+      },
+      "era": "colonial",
+      "category": ["military", "political", "religious"],
+      "figures": ["Muhammad Ali Jinnah", "Huseyn Shaheed Suhrawardy"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Direct_action_day", "label": "Wikipedia: Direct Action Day", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Yasmin Khan, The Great Partition: The Making of India and Pakistan (2007)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "independence-and-partition-1947",
+      "title": "Independence and Partition",
+      "tooltip": "Independence and Partition, 1947",
+      "summary": "India and Pakistan became independent on 14–15 August 1947. The migrations and killings that followed were the largest population transfer in human history.",
+      "detail": "India became independent at midnight on 14–15 August 1947; Pakistan a day earlier. The line dividing them — drawn by Cyril Radcliffe, who had never visited India — was published only on 17 August. The intervening uncertainty cost lives. An estimated 14 million people crossed in the largest migration in human history; between 200,000 and two million were killed in the violence that accompanied it, mostly in Punjab and Bengal. The structures of the new states were inherited largely intact — civil service, army, currency, parliamentary form — but the cost of the transfer of power was paid in the millions of lives uprooted along an arbitrary line. Nehru's 'tryst with destiny' speech to the Constituent Assembly, delivered hours before midnight, did not mention partition.",
+      "date": {
+        "start": "1947-08-14",
+        "end":   "1947-08-17",
+        "precision": "day",
+        "approximate": false,
+        "display": "14–17 August 1947"
+      },
+      "location": {
+        "type": "city",
+        "name": "Constituent Assembly, New Delhi",
+        "region": "British India",
+        "country": "IN",
+        "points": [{ "lat": 28.6172, "lon": 77.2082, "name": "Constituent Assembly, New Delhi" }]
+      },
+      "era": "colonial",
+      "category": ["political", "colonial-administration"],
+      "figures": ["Jawaharlal Nehru", "Muhammad Ali Jinnah", "Lord Mountbatten", "Cyril Radcliffe"],
+      "caused_by": [
+        { "id": "quit-india-1942", "gloss": "Quit India settled the question of whether Britain would leave; what remained was when and on what terms." },
+        { "id": "direct-action-day-1946", "gloss": "The Calcutta killings destroyed the political consensus around a united India and made partition the path of least resistance for a departing power." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Partition_of_India", "label": "Wikipedia: Partition of India", "type": "wikipedia" },
+        { "url": "https://en.wikipedia.org/wiki/Independence_Day_(India)", "label": "Wikipedia: Independence Day (India)", "type": "related" }
+      ],
+      "sources": [
+        { "label": "Yasmin Khan, The Great Partition (2007)", "type": "scholarly" },
+        { "label": "Ramachandra Guha, India After Gandhi (2007), ch. 1–2", "type": "scholarly" }
+      ],
+      "verified": true
+    }
+  ]
+}

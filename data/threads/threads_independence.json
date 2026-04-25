@@ -1,0 +1,50 @@
+{
+  "campaign": "independence",
+  "scope": "Editorial threads through the Indian independence movement.",
+  "updated": "2026-04-25",
+  "threads": [
+    {
+      "id": "chauri-chaura-and-the-cost-of-non-violence",
+      "title": "Chauri Chaura and the cost of non-violence",
+      "subtitle": "Why Gandhi suspended a movement at its peak, and what the pause cost the freedom struggle.",
+      "summary": "In February 1922, with the Non-Cooperation Movement at its high tide, a single afternoon at a small police station in eastern UP made Gandhi call the whole thing off. Most of his Congress colleagues disagreed. It would be eight years before he led another mass campaign — and when he did, the staging was meticulous.",
+
+      "kind": "causal-chain",
+      "era_span": ["colonial"],
+      "date_span": { "start": "1919", "end": "1930" },
+      "tags": ["resistance", "gandhi"],
+
+      "steps": [
+        {
+          "event_id": "jallianwala-bagh-1919",
+          "note": "The wound that radicalised a generation of moderates. Until Jallianwala, Gandhi was a constitutional cooperator who had recruited Indians for the British Army. After it — and after the Hunter Commission whitewash — he returned his Kaiser-i-Hind medal and started planning what came next.",
+          "transition": "Within a year, he had a programme: not constitutional, not violent, mass and organised."
+        },
+        {
+          "event_id": "non-cooperation-movement-1920",
+          "note": "Gandhi's response to Jallianwala — a coordinated boycott of British titles, schools, courts, and goods, joined to the Khilafat agitation for pan-religious reach. By late 1921 it was the largest mass movement India had ever seen, and Gandhi had become its undisputed authority.",
+          "transition": "Then a single afternoon at a market town in eastern UP changed his calculation."
+        },
+        {
+          "event_id": "chauri-chaura-1922",
+          "note": "A demonstration turned on the police; 22 policemen were killed and the station burned. Gandhi suspended the entire movement within five days, against the wishes of nearly every other senior Congress leader. He was arrested in March and given six years.",
+          "transition": "The pause stretched. It would be eight years before he led another mass campaign."
+        },
+        {
+          "event_id": "salt-march-1930",
+          "note": "When Gandhi returned to mass action, the staging was meticulous — 24 days, 240 miles, 78 hand-picked walkers, daily press, no improvisation. The lesson he took from Chauri Chaura was that the optics of discipline mattered more than the speed of escalation. The Salt March was choreography that Chauri Chaura was not.",
+          "transition": null
+        }
+      ],
+
+      "coda": "It took eight years for Gandhi to lead another mass movement after Chauri Chaura. The pause was the price of insisting non-violence wasn't a tactic but a precondition — and that the moral weight of the campaign mattered more than its momentum. Generations have argued whether the price was worth paying. Subhas Bose called the suspension a 'national calamity.' Gandhi himself never apologised for it.",
+
+      "sources": [
+        { "label": "Shahid Amin, Event, Metaphor, Memory: Chauri Chaura 1922–1992 (1995)", "type": "scholarly" },
+        { "label": "Judith M. Brown, Gandhi's Rise to Power (1972)", "type": "scholarly" },
+        { "label": "Ramachandra Guha, Gandhi: The Years That Changed the World (2018)", "type": "scholarly" }
+      ],
+      "verified": true
+    }
+  ]
+}
