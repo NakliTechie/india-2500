@@ -90,10 +90,15 @@ DODGE_RADIUS_VBU = 5  # max expected displacement
 
 
 def get_pin_position(page, ev_id):
-    """Return (sx, sy) in viewBox units for the pin's transform."""
+    """Return (sx, sy) in viewBox units. Looks for a standalone pin first;
+    if the event has been folded into a .pin-cluster-group, returns the
+    cluster centroid instead."""
     return page.evaluate(
         """(id) => {
-          const pin = document.querySelector(`#pins .pin[data-id="${id}"]`);
+          let pin = document.querySelector(`#pins .pin[data-id="${id}"]`);
+          if (!pin) {
+            pin = document.querySelector(`#pins .pin-cluster-group[data-cluster-ids*="${id}"]`);
+          }
           if (!pin) return null;
           const t = pin.getAttribute('transform') || '';
           const m = t.match(/translate\\(([^,]+),([^)]+)\\)/);
@@ -101,6 +106,12 @@ def get_pin_position(page, ev_id):
           return [parseFloat(m[1]), parseFloat(m[2])];
         }""",
         ev_id,
+    )
+
+
+def is_in_cluster(page, ev_id):
+    return page.evaluate(
+        f'!!document.querySelector(\'#pins .pin-cluster-group[data-cluster-ids*="{ev_id}"]\')'
     )
 
 
@@ -122,7 +133,12 @@ def main():
             failures.append(f"Expected at least {len(EXPECTED)} pins, got {n_pins}")
 
         # ---- 2. Pin placement vs true projected position ----
+        # Skip cluster members — their pin position is the cluster centroid,
+        # which is by definition not the event's true projection. Cluster
+        # behaviour is covered by check 8 below.
         for ev_id, (lat, lon, country) in EXPECTED.items():
+            if is_in_cluster(page, ev_id):
+                continue
             pos = get_pin_position(page, ev_id)
             if pos is None:
                 failures.append(f"{ev_id}: pin not found in DOM")
@@ -217,7 +233,41 @@ def main():
                     f"Popover after relation click does not show Lahore — got: {popover_text[:120]}"
                 )
 
-        # ---- 9. Screenshot for visual review ----
+        # ---- 9. Cluster badge: click opens chooser; click row swaps to event ----
+        page.evaluate("document.querySelector('#popover .popover-close')?.click()")
+        page.wait_for_timeout(40)
+        # Pick the Delhi cluster (multiple Mughal-era events at same coords)
+        cluster_open = page.evaluate("""() => {
+          const c = document.querySelector('#pins .pin-cluster-group[data-cluster-ids*="aurangzeb-coronation-1658"]');
+          if (!c) return false;
+          c.dispatchEvent(new MouseEvent('click', {bubbles: true, cancelable: true}));
+          return true;
+        }""")
+        if not cluster_open:
+            failures.append("Could not find Delhi cluster badge")
+        else:
+            page.wait_for_timeout(80)
+            is_cluster = page.evaluate("document.querySelector('#popover').classList.contains('is-cluster')")
+            row_count = page.evaluate("document.querySelectorAll('#popover .cluster-row').length")
+            if not is_cluster:
+                failures.append("Cluster click did not open chooser popover")
+            if row_count < 3:
+                failures.append(f"Cluster chooser had {row_count} rows; expected ≥3")
+
+            # Click a row → should swap to the event popover
+            page.evaluate("""() => {
+              const row = document.querySelector('#popover .cluster-row[data-id="aurangzeb-coronation-1658"]');
+              row.click();
+            }""")
+            page.wait_for_timeout(80)
+            still_cluster = page.evaluate("document.querySelector('#popover').classList.contains('is-cluster')")
+            popover_text = page.evaluate("document.querySelector('#popover').innerText")
+            if still_cluster:
+                failures.append("Row click should clear is-cluster class on popover")
+            if "Aurangzeb crowned" not in popover_text:
+                failures.append(f"After row click, popover should show event title — got: {popover_text[:120]}")
+
+        # ---- 10. Screenshot for visual review ----
         page.evaluate("document.querySelector('#popover .popover-close')?.click()")  # tidy
         page.wait_for_timeout(40)
         # Re-open Jallianwala for the final screenshot
@@ -242,7 +292,7 @@ def main():
         for f in failures:
             print(f"  ✗ {f}")
         return 1
-    print("PASS — all 8 popover/panel/pin checks succeeded.")
+    print("PASS — all 9 popover/panel/pin/cluster checks succeeded.")
     return 0
 
 

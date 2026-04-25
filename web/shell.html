@@ -232,10 +232,15 @@
   #map.in-thread .pin:not(.in-thread) circle.dot { fill: var(--pin-faded); stroke: transparent; }
   #map.in-thread .pin:not(.in-thread) text { display: none; }
 
-  #map .pin .pin-cluster {
-    fill: var(--cream-text); stroke: var(--cream-card); stroke-width: 1.2;
+  #map .pin-cluster-group { cursor: pointer; }
+  #map .pin .pin-cluster,
+  #map .pin-cluster-group circle.pin-cluster {
+    fill: var(--cream-text); stroke: var(--cream-card); stroke-width: 1.4;
+    transition: r 0.12s ease;
   }
-  #map .pin .pin-count {
+  #map .pin-cluster-group:hover circle.pin-cluster { stroke: var(--purple); stroke-width: 2; }
+  #map .pin .pin-count,
+  #map .pin-cluster-group text.pin-count {
     fill: var(--cream); font-size: 9px; text-anchor: middle; dominant-baseline: central; pointer-events: none; font-family: inherit; font-weight: 500;
   }
 
@@ -445,6 +450,26 @@
   .popover.is-moment {
     border-left: 3px solid var(--accent, var(--cream-border));
   }
+
+  /* Cluster chooser popover — used when the user clicks a multi-event badge. */
+  .popover.is-cluster .cluster-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 280px;
+    overflow-y: auto;
+  }
+  .popover.is-cluster .cluster-row {
+    padding: 6px 8px;
+    margin: 2px 0;
+    border-bottom: 1px solid var(--cream-border-soft);
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  .popover.is-cluster .cluster-row:last-child { border-bottom: none; }
+  .popover.is-cluster .cluster-row:hover { background: rgba(60,45,15,0.05); }
+  .popover.is-cluster .cluster-row-title { font-size: 13px; font-weight: 500; color: var(--cream-text); line-height: 1.3; }
+  .popover.is-cluster .cluster-row-meta  { font-size: 11px; color: var(--cream-faint); margin-top: 1px; font-variant-numeric: tabular-nums; }
 
   /* ---------- Slider / timeline ---------- */
   .map-column { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
@@ -1014,6 +1039,7 @@ const state = {
   activeEvent: null,    // event id (panel)
   popoverEvent: null,   // event id (popover anchored to pin) — kind='event'
   popoverMoment: null,  // "personId::momentId" — kind='moment'
+  popoverCluster: null, // [eventIds] — kind='cluster' (chooser popover)
   activeThread: null,   // thread id
   activeStep: 0,        // index within active thread
   activePeople: new Set(),  // person ids — multi-select; mutually exclusive with activeThread
@@ -1132,7 +1158,9 @@ function eventMatchesSearch(ev, q) {
 function dodgeOverlapping(positions) {
   // Group pins by actual proximity (not grid buckets). Two pins are in the
   // same group if they are within MERGE_DIST of any other pin in the group.
-  // Then dodge each group radially.
+  // 2-pin groups get the radial dodge; 3+ pin groups collapse to a single
+  // cluster badge anchored at the centroid (members are accessible via a
+  // chooser popover on click).
   //
   // CRITICAL: at our viewBox scale, ~1 viewBox unit ≈ 7.4 km of real
   // geography. A generous dodge here will displace pins across borders.
@@ -1140,6 +1168,7 @@ function dodgeOverlapping(positions) {
   // DODGE_RADIUS=5 (~37 km) keeps displacement city-scale, not country-scale.
   const MERGE_DIST = 3;
   const DODGE_RADIUS = 5;
+  const CLUSTER_THRESHOLD = 3;  // 3+ co-located → badge instead of fanning
 
   const n = positions.length;
   const parent = positions.map((_, i) => i);
@@ -1164,11 +1193,25 @@ function dodgeOverlapping(positions) {
     let cx = 0, cy = 0;
     idxs.forEach(i => { cx += positions[i].sx; cy += positions[i].sy; });
     cx /= idxs.length; cy /= idxs.length;
-    idxs.forEach((i, k) => {
-      const angle = (Math.PI * 2 * k) / idxs.length - Math.PI / 2;
-      positions[i].sx = cx + DODGE_RADIUS * Math.cos(angle);
-      positions[i].sy = cy + DODGE_RADIUS * Math.sin(angle);
-    });
+
+    if (idxs.length >= CLUSTER_THRESHOLD) {
+      // Cluster: collapse to centroid, mark all members with a shared cluster
+      // ref so renderPins() can de-duplicate and emit one badge.
+      const memberIds = idxs.map(i => positions[i].ev.id);
+      const cluster = { sx: cx, sy: cy, memberIds, count: idxs.length };
+      idxs.forEach(i => {
+        positions[i].sx = cx;
+        positions[i].sy = cy;
+        positions[i].cluster = cluster;
+      });
+    } else {
+      // 2-pin group: keep the radial dodge so they're individually clickable.
+      idxs.forEach((i, k) => {
+        const angle = (Math.PI * 2 * k) / idxs.length - Math.PI / 2;
+        positions[i].sx = cx + DODGE_RADIUS * Math.cos(angle);
+        positions[i].sy = cy + DODGE_RADIUS * Math.sin(angle);
+      });
+    }
   });
 }
 
@@ -1211,19 +1254,42 @@ function renderPins() {
   if (inThread) elMap.classList.add('in-thread');
   else elMap.classList.remove('in-thread');
 
-  elPins.innerHTML = positions.map(({ ev, sx, sy }) => {
-    const isActive = ev.id === state.activeEvent;
-    const isInThread = threadEventIds.has(ev.id);
-    const cls = ['pin'];
-    if (isActive) cls.push('is-active');
-    if (isInThread) cls.push('in-thread');
-    return `<g class="${cls.join(' ')}" data-id="${ev.id}" transform="translate(${sx.toFixed(1)},${sy.toFixed(1)})">
-              <circle class="dot" r="5"></circle>
-              <title>${escapeHtml(ev.title)} · ${escapeHtml(ev.date.display)}</title>
-            </g>`;
-  }).join('');
+  // Deduplicate clusters — when multiple positions share a cluster ref, only
+  // one cluster badge is rendered. Single events render as today.
+  const seenClusters = new Set();
+  const pinHtml = [];
+  positions.forEach(({ ev, sx, sy, cluster }) => {
+    if (cluster) {
+      if (seenClusters.has(cluster)) return;
+      seenClusters.add(cluster);
+      const ids = cluster.memberIds.join('|');
+      const locationName = ev.location && ev.location.name || '';
+      pinHtml.push(
+        `<g class="pin pin-cluster-group" data-cluster-ids="${ids}" `
+        + `transform="translate(${sx.toFixed(1)},${sy.toFixed(1)})">`
+        + `<circle class="pin-cluster" r="8"></circle>`
+        + `<text class="pin-count" y="0.4">${cluster.count}</text>`
+        + `<title>${cluster.count} events at ${escapeHtml(locationName)}</title>`
+        + `</g>`
+      );
+    } else {
+      const isActive = ev.id === state.activeEvent;
+      const isInThread = threadEventIds.has(ev.id);
+      const cls = ['pin'];
+      if (isActive) cls.push('is-active');
+      if (isInThread) cls.push('in-thread');
+      pinHtml.push(
+        `<g class="${cls.join(' ')}" data-id="${ev.id}" `
+        + `transform="translate(${sx.toFixed(1)},${sy.toFixed(1)})">`
+        + `<circle class="dot" r="5"></circle>`
+        + `<title>${escapeHtml(ev.title)} · ${escapeHtml(ev.date.display)}</title>`
+        + `</g>`
+      );
+    }
+  });
+  elPins.innerHTML = pinHtml.join('');
 
-  $$('#pins .pin').forEach(g => {
+  $$('#pins .pin:not(.pin-cluster-group)').forEach(g => {
     // Single click without modifier → popover (light scan)
     // Shift-click → panel direct (skip popover)
     // Double-click → panel direct (skip popover)
@@ -1248,6 +1314,14 @@ function renderPins() {
       e.preventDefault();
       hidePopover();
       selectEvent(id);
+    });
+  });
+
+  $$('#pins .pin-cluster-group').forEach(g => {
+    g.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const ids = g.getAttribute('data-cluster-ids').split('|');
+      showClusterPopover(ids, g);
     });
   });
 
@@ -1433,8 +1507,9 @@ function hidePopover() {
   const wasMoment = state.popoverMoment !== null;
   state.popoverEvent = null;
   state.popoverMoment = null;
+  state.popoverCluster = null;
   const popover = $('#popover');
-  popover.classList.remove('is-open', 'is-above', 'is-moment');
+  popover.classList.remove('is-open', 'is-above', 'is-moment', 'is-cluster');
   popover.setAttribute('aria-hidden', 'true');
   // Clear inline positioning so the next open re-computes cleanly
   popover.style.left = '';
@@ -1443,6 +1518,97 @@ function hidePopover() {
   // If a track step was the active anchor, repaint tracks so its pin loses
   // the is-active state.
   if (wasMoment || state.activePeople.size > 0) renderTracks();
+}
+
+/* showClusterPopover — chooser popover for a cluster badge. Lists every
+   member's title + date as a clickable row; clicking a row swaps to the
+   regular event popover for that pin. */
+function showClusterPopover(memberIds, anchorEl) {
+  const popover = $('#popover');
+  state.popoverEvent = null;
+  state.popoverMoment = null;
+  state.popoverCluster = memberIds;
+
+  const items = memberIds.map(id => eventById.get(id)).filter(Boolean);
+  // Sort chronologically so the chooser reads in time order
+  items.sort((a, b) => (a._yearStart || 0) - (b._yearStart || 0));
+  const locName = items[0] ? (items[0].location && items[0].location.name || '') : '';
+
+  popover.innerHTML =
+    `<button class="popover-close" aria-label="Close popover">×</button>`
+    + `<h4>${items.length} events at this location</h4>`
+    + (locName ? `<div class="popover-meta">${escapeHtml(locName)}</div>` : '')
+    + `<ul class="cluster-list">`
+    + items.map(ev =>
+        `<li class="cluster-row" data-id="${ev.id}">`
+        + `<div class="cluster-row-title">${escapeHtml(ev.title)}</div>`
+        + `<div class="cluster-row-meta">${escapeHtml(ev.date.display)}</div>`
+        + `</li>`
+      ).join('')
+    + `</ul>`;
+  popover.classList.add('is-open', 'is-cluster');
+  popover.setAttribute('aria-hidden', 'false');
+
+  $('.popover-close', popover).addEventListener('click', (e) => {
+    e.stopPropagation();
+    hidePopover();
+  });
+  $$('.cluster-row', popover).forEach(li => {
+    li.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const id = li.getAttribute('data-id');
+      // Swap to a regular event popover for the chosen pin. The cluster
+      // badge stays on the map; the popover content swaps to the chosen
+      // event with its full details + Read-full button.
+      state.popoverCluster = null;
+      popover.classList.remove('is-cluster');
+      showPopover(id);
+    });
+  });
+
+  // Position popover at the cluster pin's centre
+  positionAtElement(anchorEl);
+}
+
+/* positionAtElement — place the popover anchored to an arbitrary SVG
+   element (used for cluster pins which don't have a stable data-id selector
+   like normal pins do). */
+function positionAtElement(svgEl) {
+  if (window.innerWidth < 920) return;
+  const popover = $('#popover');
+  const xform = svgEl.getAttribute('transform') || '';
+  const m = xform.match(/translate\(\s*([-\d.]+)\s*,\s*([-\d.]+)\s*\)/);
+  if (!m) return;
+  const sx = parseFloat(m[1]);
+  const sy = parseFloat(m[2]);
+
+  const svgRect = elMap.getBoundingClientRect();
+  const vb = elMap.viewBox.baseVal;
+  const sxFrac = (sx - vb.x) / vb.width;
+  const syFrac = (sy - vb.y) / vb.height;
+  if (sxFrac < 0 || sxFrac > 1 || syFrac < 0 || syFrac > 1) {
+    popover.classList.remove('is-open');
+    return;
+  }
+  const pinPageX = svgRect.left + sxFrac * svgRect.width;
+  const pinPageY = svgRect.top  + syFrac * svgRect.height;
+
+  const popH = popover.offsetHeight || 220;
+  const margin = 16;
+  const wantsAbove = pinPageY + popH + margin > window.innerHeight;
+  const popW = popover.offsetWidth || 300;
+  let left = pinPageX;
+  const halfW = popW / 2;
+  if (left - halfW < margin) left = halfW + margin;
+  if (left + halfW > window.innerWidth - margin) left = window.innerWidth - margin - halfW;
+  popover.style.left = `${left}px`;
+  if (wantsAbove) {
+    popover.style.top = `${pinPageY - 14}px`;
+    popover.classList.add('is-above');
+  } else {
+    popover.style.top = `${pinPageY + 14}px`;
+    popover.classList.remove('is-above');
+  }
 }
 
 // Safe selector quoting for event IDs (which are kebab-case but defensive)
@@ -2175,8 +2341,14 @@ function applyZoom() {
   if (inBtn)  inBtn.disabled  = zoom.scale >= zoom.max - 0.001;
   if (outBtn) outBtn.disabled = zoom.scale <= zoom.min + 0.001;
 
-  // Keep popover anchored to its pin / step
-  if (state.popoverEvent && !state.popoverMoment && state.activePeople.size === 0) {
+  // Keep popover anchored to its pin / step / cluster
+  if (state.popoverCluster) {
+    const clusterEl = document.querySelector('#pins .pin-cluster-group');
+    // First cluster in current render is the anchor; if filters changed and it
+    // no longer exists, drop the popover.
+    if (clusterEl) positionAtElement(clusterEl);
+    else hidePopover();
+  } else if (state.popoverEvent && !state.popoverMoment && state.activePeople.size === 0) {
     positionPopover(state.popoverEvent);
   } else if (state.popoverEvent || state.popoverMoment) {
     repositionStepPopover();
@@ -2391,11 +2563,11 @@ elReset.addEventListener('click', onReset);
 // open or swap the popover — pin, relation-card, thread-step. Without these
 // exclusions the bubbled click would close the popover that just opened.)
 document.addEventListener('click', (e) => {
-  if (!state.popoverEvent && !state.popoverMoment) return;
+  if (!state.popoverEvent && !state.popoverMoment && !state.popoverCluster) return;
   const popover = $('#popover');
   if (popover.contains(e.target)) return;          // inside popover — ignore
   if (!e.target.closest) return;
-  if (e.target.closest('.pin')) return;
+  if (e.target.closest('.pin')) return;            // includes .pin-cluster-group
   if (e.target.closest('.track-pin')) return;
   if (e.target.closest('.offmap-panel li')) return;
   if (e.target.closest('.relation-card')) return;

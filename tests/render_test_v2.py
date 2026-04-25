@@ -1,5 +1,9 @@
-"""Verify the pin dodge fix — click the three pins that previously collided
-in the Lahore/Amritsar cluster and confirm the right event panel opens."""
+"""Verify pin click → panel update for representative events. Handles three
+cases:
+  1. Standalone pin (data-id selector hits a single .pin element)
+  2. Dodged-pair pin (still uses data-id; dodge fans them apart visually)
+  3. Cluster member (the pin is folded into a .pin-cluster-group; we open
+     the cluster chooser, then click the row for the target event)"""
 from playwright.sync_api import sync_playwright
 from pathlib import Path
 
@@ -28,11 +32,31 @@ with sync_playwright() as p:
         ("inc-founded-1885",            "Indian National Congress founded"),
         ("quit-india-1942",             "Quit India Movement"),
     ]
+    def open_event(pin_id):
+        """Open the event for pin_id. If it's a standalone pin, shift-click
+        to open the panel direct. If it's inside a cluster, click the cluster
+        to open the chooser, then shift-click the row to open the panel."""
+        in_cluster = page.evaluate(
+            f'!!document.querySelector(\'#pins .pin-cluster-group[data-cluster-ids*="{pin_id}"]\')'
+        )
+        if in_cluster:
+            cluster_sel = f'#pins .pin-cluster-group[data-cluster-ids*="{pin_id}"]'
+            page.dispatch_event(cluster_sel, 'click')
+            page.wait_for_timeout(120)
+            # The chooser row exists on the popover — shift-click it so panel opens
+            page.evaluate(f"""() => {{
+              const row = document.querySelector('#popover .cluster-row[data-id="{pin_id}"]');
+              row.click();
+              // After swap to event popover, click 'Read full entry' to open panel
+              setTimeout(() => document.querySelector('#popover .btn-read-full')?.click(), 50);
+            }}""")
+            page.wait_for_timeout(200)
+        else:
+            page.dispatch_event(f'g.pin[data-id="{pin_id}"]', 'click', {"shiftKey": True})
+            page.wait_for_timeout(150)
+
     for pin_id, expected_title in cases:
-        # Dispatch the event directly to the targeted element — works even
-        # when dodge has put another pin on top at the same pixel position.
-        page.dispatch_event(f'g.pin[data-id="{pin_id}"]', 'click', {"shiftKey": True})
-        page.wait_for_timeout(150)
+        open_event(pin_id)
         title = page.locator("#event-panel h3").first.inner_text()
         ok = expected_title in title
         print(f"  {'✓' if ok else '✗'} click {pin_id} → panel title: {title!r}")
@@ -41,9 +65,9 @@ with sync_playwright() as p:
 
     # Test relation-card navigation: click Salt March, then click its "Caused by"
     # card → panel should switch to Lahore Session.
-    page.dispatch_event('g.pin[data-id="salt-march-1930"]', 'click', {"shiftKey": True})
-    page.wait_for_timeout(150)
-    # Find the "Caused by" card
+    open_event('salt-march-1930')
+    # Find the "Caused by" card (lahore-session-1929 is in a cluster, but the
+    # relation card in the panel is its own DOM element with its own data-id)
     page.dispatch_event('.relation-card[data-id="lahore-session-1929"]', 'click')
     page.wait_for_timeout(150)
     title = page.locator("#event-panel h3").first.inner_text()
