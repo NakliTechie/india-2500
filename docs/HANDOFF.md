@@ -142,10 +142,49 @@ The shared `template.html` uses `let` (not `const`) for the four data globals an
 
 In rough priority order:
 
-1. **Tags + collections hybrid (infra).** Add `tags[]` to events for cheap thematic filtering; add a `collections_*.json` slice for curated, framed groupings ("Women in the independence movement", "Rebellions including pre-1857", "INC conventions"). A collection's `members` field can be either a list of event_ids OR a tag selector like `"tag:women-leaders"`. New schema doc + validator + UI surface (probably a "Collections" pill row alongside Threads). Sized: one full session.
+1. **Tags + collections hybrid (infra).** Add `tags[]` to events for cheap thematic filtering; add a `collections_*.json` slice for curated, framed groupings. A collection's `members` field can be either a list of event_ids OR a tag selector like `"tag:women-leaders"`. New schema doc + validator + UI surface (probably a "Collections" pill row alongside Threads). Sized: one full session.
+
 2. **Sultanate events** — Ghurids through Lodis, ~20 events.
 3. **Maurya / post-Maurya events** — stress-tests the BCE end of the year slider.
-4. **GitHub publishing** — push to `naklitechie/india-2500`, enable Pages, optional CNAME for `assets.chiragpatnaik.com`. Tooling is ready; needs decision + execution.
+4. **More Mughal biographical tracks** — Akbar, Shah Jahan, Aurangzeb (the schema now supports unlimited people with explicit `colour` so no more palette collisions).
+5. **GitHub publishing** — push to `naklitechie/india-2500`, enable Pages, optional CNAME for `assets.chiragpatnaik.com`. Tooling is ready; needs decision + execution.
+
+### Content slices to explore (candidates for collections + dedicated event/people files)
+
+These surfaced from the Babur work and earlier discussions. Each is either a **collection** (cross-cutting, would benefit from the tags+collections hybrid in #1), an **event campaign file** (chronological, like the existing events_mughal.json), or a **people group** (like people_freedom-fighters.json).
+
+**Cross-cutting collections (best served by collections slice once #1 lands):**
+- **Women in the independence movement** — Sarojini Naidu, Aruna Asaf Ali, Bhikaji Cama, Rani Lakshmibai, Begum Hazrat Mahal. Tag: `women-leaders`.
+- **Rebellions, pre-1857 included** — Sannyasi-Fakir 1770s, Vellore 1806, Paika 1817, Indigo 1859, Santhal 1855, 1857 itself, Birsa Munda 1899, Moplah 1921, Chittagong 1930. Tag: `rebellion`. Important corrective to the "1857 was the first" textbook framing.
+- **INC conventions** — annual sessions 1885 onwards. Probably too granular for individual events; better as a single "INC sessions catalogue" entry with a list, OR as a collection with each major session (Lahore 1929, Tripuri 1939, Karachi 1931) as separate events.
+- **First-person memoirs** — primary-source autobiographical works. Baburnama, Akbarnama, Tuzuk-i-Jahangiri, Ambedkar's *Annihilation of Caste*, Nehru's *Discovery of India*, Gandhi's *Story of My Experiments with Truth*. Tag: `memoir`.
+- **Indian history beyond the subcontinent** — Babur (Hindu Kush), Gandhi (South Africa), Ambedkar (NYC, London), Bose (Berlin, Tokyo, Singapore), Krishna Menon at the UN. Tag: `diaspora` or `off-map-significant`.
+- **Founding moments of major institutions** — INC 1885, Khalsa 1699, Sabarmati 1917, Aligarh 1875, Banaras Hindu University 1916, Visva-Bharati 1921, IIT Kharagpur 1951. Tag: `institution-founding`.
+- **Place-as-biographical-locus** — Bagh-e-Babur, Fatehpur Sikri, Sabarmati Ashram, Sevagram, Wardha. Buildings/cities that bound a person's arc.
+
+**Dedicated event campaign files (chronological additions):**
+- **`events_maratha.json`** — Shivaji 1674 → Panipat III 1761 → Maratha confederacy through 1818. Stress-tests Deccan density.
+- **`events_sikh.json`** — Banda Singh Bahadur, Ranjit Singh, Anglo-Sikh wars 1845–49. Punjab campaign.
+- **`events_bengal.json`** — Plassey 1757, Buxar 1764, Permanent Settlement 1793, Bengal Renaissance, partition aftermath. Long arc.
+- **`events_south_india.json`** — Vijayanagara, Tipu Sultan, Anglo-Mysore wars, Travancore, Madras Presidency.
+- **`events_northeast.json`** — Ahom kingdom, British annexations, Naga rebellion, AFSPA. Historically under-represented.
+- **`events_post_independence.json`** — 1947 onwards: states' reorganisation 1956, 1962/1965/1971 wars, emergency 1975–77, Mandal 1990, liberalisation 1991, etc.
+- **`events_economic.json`** — currency reforms (Sher Shah → modern rupee), zamindari, Permanent Settlement, Swadeshi, planning era, 1991. Maybe better as tag than file — most economic events overlap with political ones.
+
+**Dedicated people files:**
+- **`people_mughal-emperors.json`** (started, has Babur) — Akbar, Shah Jahan, Aurangzeb queued.
+- **`people_marathas.json`** — Shivaji, Sambhaji, Bajirao I, Nana Saheb, Mahadji Scindia.
+- **`people_sikh-gurus-and-rulers.json`** — Guru Nanak through Gobind Singh, then Banda Bahadur and Ranjit Singh.
+- **`people_political-leaders-post-1947.json`** — Patel, Maulana Azad, Indira, Vajpayee, Manmohan Singh.
+- **`people_thinkers-and-reformers.json`** — Rammohan Roy, Vidyasagar, Phule, Periyar, Tagore, Iqbal, Sri Aurobindo.
+- **`people_scientists.json`** — CV Raman, Ramanujan, Bose (J.C.), Saha, Homi Bhabha, Vikram Sarabhai.
+- **`people_artists-and-writers.json`** — Tagore (overlaps with thinkers), Premchand, Manto, MF Husain, Ravi Shankar, Bismillah Khan.
+
+**Latent thread ideas:**
+- Akbar's religious experiment (Ibadat Khana → Din-i-Ilahi → Aurangzeb's reversal)
+- The arc of the Sikh community (Arjan execution → Hargobind militarises → Tegh Bahadur execution → Khalsa → Banda Bahadur → Ranjit Singh's empire)
+- The economic logic of partition (Bengal 1905 → Direct Action Day → 1947 — already partly covered by Chauri Chaura thread)
+- Three battles of Panipat as a political compass (1526 founds Mughals, 1556 restores Mughals, 1761 ends Maratha hegemony)
 
 ---
 
