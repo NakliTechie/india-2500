@@ -1,130 +1,148 @@
-# India history explorer — runbook
+# India — 2500 years to the Republic — runbook
 
-The asset at `india-history.html` is built from data files plus a template plus a
-build script. This document covers how to extend it without breaking anything.
+How to extend the asset without breaking anything. Read this alongside `HANDOFF.md` (project state) and the three schema docs (`SCHEMA.md`, `THREADS_SCHEMA.md`, `PEOPLE_SCHEMA.md`).
 
 ## Before you start
 
-Read `SCHEMA.md` and `THREADS_SCHEMA.md` first. The validators enforce them.
+The validators are the contract. If a change breaks them, CI blocks the PR. Run them locally before any build:
 
-The boundary rule for any India map: **Datameet, never Natural Earth for the
-India outline.** Natural Earth and world-atlas show PoK, Aksai Chin, and parts
-of Arunachal Pradesh as outside India. Datameet's `india-soi.geojson` shows
-them inside, which is the official representation. The map pipeline already
-handles this: surrounding states use world-atlas, India uses Datameet, India is
-drawn last so it sits on top.
+```bash
+python3 validators/validate_events.py
+python3 validators/validate_threads.py
+python3 validators/validate_people.py
+```
+
+The boundary rule for any India map: **Datameet, never Natural Earth or world-atlas for the India outline.** NE/world-atlas show PoK, Aksai Chin, and parts of Arunachal as outside India. Datameet's `india-soi.geojson` shows them inside, which is the official representation. The build pipeline already enforces this — surrounding states use world-atlas, India uses Datameet, India is drawn last so it sits on top.
 
 ## File map
 
 ```
-india-history/
-├── SCHEMA.md                       events schema (the contract)
-├── THREADS_SCHEMA.md               threads schema (the contract)
-├── PEOPLE_SCHEMA.md                people schema (drafted, no UI yet)
+2500/
+├── README.md                     project overview, quick start
+├── .gitignore                    datameet/, package/, .claude/, tests/artifacts/
 │
-├── events_independence.json        seed corpus (12 events, 1885–1947)
-├── threads_independence.json       seed thread (Chauri Chaura chain)
+├── data/
+│   ├── events/events_*.json      37 events (independence, mughal, sur)
+│   ├── threads/threads_*.json    1 thread (Chauri Chaura)
+│   └── people/people_*.json      5 people, 45 track steps
 │
-├── validate_events.py              schema + cross-reference + PIP validator
-├── validate_threads.py             schema + corpus-resolution validator
+├── validators/
+│   ├── validate_events.py        schema + cross-reference + PIP
+│   ├── validate_threads.py       schema + corpus event_id resolution
+│   └── validate_people.py        schema + two-kind step + PIP
 │
-├── build_map.py                    Datameet + world-atlas → SVG paths + validator boundaries
-├── build_html.py                   template + data → india-history.html
-├── template.html                   HTML + CSS + JS, with __PLACEHOLDER__s
+├── build/
+│   ├── build_map.py              Datameet + world-atlas → SVG basemap (slow, rare)
+│   ├── build_html.py             template + data → web/india-history.html AND shell.html
+│   ├── map_paths.json            cached basemap (committed)
+│   └── validator_boundaries.json cached PIP polygons (committed)
 │
-├── render_test_v2.py               clicks pins, panel opens
-├── render_test_popover.py          popover system + relation-card-shows-popover
-├── render_test_zoom.py             zoom + pan, cursor anchor, button limits
+├── web/
+│   ├── template.html             source HTML/CSS/JS with __PLACEHOLDER__ tokens
+│   ├── india-history.html        BUILT single-file asset (deployable as-is)
+│   └── shell.html                BUILT runtime-fetch version (loads /data and /build)
 │
-├── map_paths.json                  output of build_map.py (basemap, cached)
-├── validator_boundaries.json       output of build_map.py (PIP polygons, ~672 KB)
-├── india-history.html              output of build_html.py (the asset)
+├── tests/
+│   ├── render_test_v2.py         click pins → panel content
+│   ├── render_test_popover.py    popover system (8 checks)
+│   ├── render_test_zoom.py       zoom + pan (8 checks)
+│   ├── render_test_people.py     people UI (10 checks)
+│   └── artifacts/                (gitignored — screenshots from test runs)
 │
-└── datameet/                       cloned from github.com/datameet/maps
-    └── Country/india-soi.geojson   the authoritative India boundary
+├── contribute/                   GUIDED FORMS for non-technical contributors
+│   ├── index.html                landing + editorial guidance
+│   ├── event.html                event form with Leaflet map picker
+│   ├── thread.html               thread builder
+│   ├── person.html               person form
+│   └── lib/                      validators.js, submit.js, styles.css
+│
+├── docs/
+│   ├── HANDOFF.md                project state for new contributors
+│   ├── CLAUDE.md                 you are here
+│   ├── CONTRIBUTING.md           for human contributors
+│   ├── SCHEMA.md                 events schema (the contract)
+│   ├── THREADS_SCHEMA.md
+│   └── PEOPLE_SCHEMA.md
+│
+├── .github/
+│   ├── workflows/validate.yml    CI: validators + render tests
+│   ├── ISSUE_TEMPLATE/
+│   └── PULL_REQUEST_TEMPLATE.md
+│
+├── datameet/                     EXTERNAL — `git clone github.com/datameet/maps`
+└── package/                      EXTERNAL — fetch world-atlas separately
 ```
 
 ## Adding new events
 
-1. **Create or extend a campaign file.** Each era / campaign goes in its own
-   `events_<campaign>.json`. The validator merges all of them at load time.
-   Examples planned: `events_mughal.json`, `events_maurya.json`,
-   `events_central_asia.json` (for Babur's pre-1526 events outside the
-   subcontinent).
+1. **Pick a campaign file** under `data/events/`, or create a new one. Each era / campaign goes in its own `events_<campaign>.json`. The validator merges all of them at load time.
 
-2. **Required fields per event.** Beyond the obvious (id, title, date, era,
-   category, links, verified) every event needs:
+2. **Required fields per event** (full list in `SCHEMA.md`):
+   - `id` — kebab-case, globally unique across the entire events corpus.
+   - `tooltip` — ≤80 chars, validator-enforced. Includes a date or place anchor.
+   - `summary` — ≤160 chars hard, ≤140 soft. One sentence.
+   - `detail` — 80–150 words.
+   - `location.country` — ISO alpha-2 from the controlled vocab (or `"OFF"` for events outside the asset's bounding box). PIP-checked against `validator_boundaries.json` to catch lat/lon typos.
+   - `links` — must include one with `type: "wikipedia"`.
+   - `verified` — `true` only if cross-checked against ≥2 sources.
 
-   - `tooltip` (string, ≤80 chars hard cap, validator-enforced) — the line
-     shown on native pin hover. Should read like a museum-label caption,
-     e.g. `"Jallianwala Bagh massacre, Amritsar, 1919"`.
-   - `summary` (string, ≤160 chars hard cap) — one sentence shown in the
-     popover card body and in popover-internal relation cards.
-   - `detail` (string, 80–150 words) — full prose for the right panel.
-   - `location.country` (ISO alpha-2 from the controlled vocab; or `"OFF"`
-     for events outside the asset's bounding box like London Round Tables).
-     The validator does a point-in-polygon check confirming `points[0]`
-     actually falls inside the polygon for the declared country. This
-     catches typos (lat/lon swap, decimal off) before they ship.
+3. **Wire causal links.** `caused_by` requires a `gloss` (the editorial sentence about *what* about the prior event led to this one). `part_of` for hierarchical containment without gloss. `led_to` is derived as inverse of `caused_by` at runtime — never authored. Cross-file references work; an event in `events_independence.json` can be `caused_by` something in `events_mughal.json`.
 
-   The full controlled vocab for `location.country` is in `SCHEMA.md`. Don't
-   invent codes — if you need one that isn't there, add it both there and
-   to the `COUNTRIES` set in `validate_events.py`.
+4. **Validate.**
+   ```bash
+   python3 validators/validate_events.py
+   ```
 
-3. **Wire causal links.** Use `caused_by` for direct causal/responsive edges,
-   `part_of` for hierarchical containment. `caused_by` requires a `gloss` —
-   the editorial sentence that says *what* about the prior event led to this
-   one. A bare ID without a gloss is a validator error. Multiple parents
-   and multiple children are both supported natively (the schema is a DAG,
-   not a tree); `led_to` is derived as the inverse of `caused_by` at runtime
-   and never authored by hand.
+5. **Rebuild.**
+   ```bash
+   python3 build/build_html.py
+   ```
+   This emits both `web/india-history.html` (single-file) and `web/shell.html` (runtime-fetch).
 
-4. **Validate.** `python3 validate_events.py .` — must PASS before rebuilding.
-   The PIP check requires `validator_boundaries.json` to exist; if you
-   regenerate the basemap, that file gets regenerated alongside.
+6. **Render-test.**
+   ```bash
+   for t in tests/render_test_*.py; do python3 "$t"; done
+   ```
 
-5. **Rebuild.** `python3 build_html.py` re-splices everything into the HTML.
-
-6. **Render-test.** `python3 render_test_popover.py` exercises the popover
-   system, the dodge math, and the relation-card-shows-popover behavior;
-   `python3 render_test_v2.py` covers the older click-opens-panel path.
+**Faster path for non-technical contributors:** the `contribute/event.html` form has the same workflow with inline validation and a Leaflet map picker. It generates the JSON; reviewer drops it into `data/events/`.
 
 ## Adding new threads
 
-Same workflow with `threads_<campaign>.json` and `validate_threads.py`. The
-threads validator runs after the events validator so it can resolve
-`event_id` references across the entire corpus. A thread in
-`threads_independence.json` can reference an event from
-`events_mughal.json` — they don't need to be co-located.
+Same workflow with `data/threads/threads_<campaign>.json` and `validators/validate_threads.py`. Each step references an event by id; cross-corpus references work. Every step needs a `note`; non-final steps need a `transition`. Coda required (≤150 words; the closing argument).
 
-## Editorial discipline (not enforced by validator)
+`contribute/thread.html` form has a search-as-you-type event picker that loads the live corpus.
 
-- **Verified figures only.** Cross-check dates, locations, and key claims
-  against at least two independent sources before setting `verified: true`.
-  When in doubt, set `verified: false` — the UI surfaces it as a small tag,
-  better than dropping interesting events with contested details.
-- **Wikipedia is the rabbit-hole link, not the source.** The summary should
-  read like the start of the editorial, not an extract of the Wikipedia
-  lead.
-- **A thread must have a thesis.** If you can't write the `coda` in one
-  paragraph, the thread isn't ready.
+## Adding new people
+
+Same workflow with `data/people/people_<group>.json` and `validators/validate_people.py`. Each track step is `kind: "event-ref"` (with `role`) or `kind: "moment"` (own date, location, summary, optional note). Track must be in chronological order.
+
+The first 5 people in load order get distinct accents from the Rangrez India · NORTH palette (KHADI, AAKASH, KUMKUM, NEEL, MOR). Beyond 5, colours cycle.
+
+`contribute/person.html` form has a track-step builder that toggles between event-ref (autocomplete from corpus) and moment (full sub-form with map picker).
+
+## Editorial discipline (not validator-enforced)
+
+- **Verified figures only.** Cross-check dates, locations, and key claims against ≥2 independent sources before `verified: true`. When in doubt, `false`.
+- **Wikipedia is the rabbit-hole link, not the source.** Summary should read like the start of an editorial, not an extract of the lead.
+- **A thread must have a thesis.** If you can't write the coda in one paragraph, the thread isn't ready.
+- **Numbers and named entities over adjectives.** "32 million rupees, 5–8% of annual revenue" beats "vast wealth".
+- **Granular dynasties.** Don't fold smaller / shorter dynasties into bigger neighbours. Sur (1540–1556) gets its own file; same logic for Asaf Jah and other regional polities. The era vocab is a coarse time bucket, not a dynastic taxonomy — multiple files can share an era token (`era: "mughal"` for both Mughal and Suri events).
+
+## The build pipeline (single-source two outputs)
+
+`build/build_html.py` reads the same `web/template.html` and emits two files:
+
+- **`web/india-history.html`** — all data inlined. Single-file portable. Works from `file://`, `assets.chiragpatnaik.com`, iOS Quick Look. The deployable asset.
+- **`web/shell.html`** — data placeholders stubbed with empty literals; a boot script fetches `/data/*` and `/build/*` over HTTP, then calls `bootRenders()`. For hosted use where data updates daily.
+
+The shared template uses `let` (not `const`) for the four data globals (`MAP`, `EVENTS`, `THREADS`, `PEOPLE`) so the shell can reassign them after fetch. Indexes (`eventById`, `ledTo`, `peopleById`, `momentByKey`) are populated by `buildIndexes()` which `bootRenders()` calls first. A single `__BOOT_INVOCATION__` placeholder in the template controls how the boot fires per build target.
 
 ## Click model (popover vs panel)
 
-The asset has two surfaces for showing event content. Future edits must
-preserve the split — they're meaningfully different affordances.
+Two surfaces for showing event content. Future edits must preserve the split — they're meaningfully different affordances.
 
-- **Popover** = scan. Anchored card next to a pin on desktop, bottom sheet
-  on mobile. Shows tooltip-headline + date + location + tags + summary +
-  Wikipedia link + a "Read full entry →" button. Dismissed via X, Esc, or
-  click-outside (with `.pin`, `.relation-card`, `.thread-step` excluded
-  from the click-outside check — clicks on those are deliberate
-  navigations).
-- **Panel** = read. The right column. Shows full detail, figures, sources,
-  caused-by / led-to / part-of relation cards. Stays open until explicitly
-  closed.
-
-Click handlers (in `template.html`):
+- **Popover** = scan. Anchored card next to a pin on desktop, bottom sheet on mobile. Shows tooltip / date / location / tags / summary / Wikipedia link / "Read full entry →" button. Dismissed via X, Esc, or click-outside (with `.pin`, `.track-pin`, `.relation-card`, `.thread-step`, `.people-reader .track-step`, and `.offmap-panel li` excluded — clicks on those are deliberate navigations).
+- **Panel** = read. The right column. Full detail, figures, sources, caused-by / led-to / part-of relation cards, OR the thread reader, OR the people reader.
 
 | Action | Popover | Panel |
 |---|---|---|
@@ -134,130 +152,83 @@ Click handlers (in `template.html`):
 | "Read full entry →" in popover | stays (locator) | open with same event |
 | Relation card click in panel | open for new event | switch to new event |
 | Thread step click | open for step's event | switch to step's event |
+| People pill click | (no popover change) | toggle person in active set; render people reader |
+| Track-pin click (event-ref) | open event popover with role | unchanged |
+| Track-pin click (moment) | open moment popover | unchanged |
+| Off-map row click | open popover anchored to the row | unchanged |
 
-The relation-card and thread-step cases call `navigateToEvent(id)` which
-does both `selectEvent(id)` and `showPopover(id)`. The user requested
-this so the map keeps a visual locator while they walk through chains
-in the panel.
+Relation-card and thread-step cases call `navigateToEvent(id)` which does both `selectEvent(id)` and `showPopover(id)`. The user wants the map to keep a visual locator while they walk through chains in the panel.
 
-When pins re-render (filter / year-range change), `renderPins()` checks
-whether the popover's event is still in the rendered set. If not, the
-popover auto-closes. If yes, the popover repositions to the new pin
-location.
+When pins re-render (filter / year-range change), `renderPins()` checks whether the popover's event is still in the rendered set. If not, the popover auto-closes. If yes, it repositions to the new pin location.
 
 ## Zoom + pan
 
-The map is a viewBox-manipulation surface, not a CSS-transform surface — so paths stay sharp at any zoom level. Single source of truth is the `zoom` object: `{ scale, cx, cy, min: 1, max: 8 }`.
+The map is a viewBox-manipulation surface, not a CSS-transform surface — paths stay sharp at any zoom level. Single source of truth: `zoom = { scale, cx, cy, min: 1, max: 8 }`.
 
-- **Wheel** zooms around the cursor, anchored so the SVG point under the cursor stays under the cursor through the zoom. `wheel` is `{ passive: false }` because we `preventDefault()` to stop the page from scrolling when the cursor is over the map.
-- **Drag** pans (left mouse button only). Pan is initiated only when the mousedown does NOT land on a pin — pin clicks would otherwise be eaten. A 4-pixel dead zone before pan engages so a click that wobbles still registers as a click.
-- **After a real drag**, the next click event is suppressed via `_suppressNextMapClick`. Without this, a pan that ends over a pin opens the popover unintentionally.
-- **Touch**: one finger = pan, two fingers = pinch zoom anchored to the pinch centroid. Pin click on touch still works because `touchstart` checks `target.closest('.pin')` before initiating pan.
-- **Buttons**: `+ / − / ↺` at top-right of the map. `+` and `−` zoom centred on the *current* viewBox centre, not the original map centre — so successive presses zoom into wherever the user has panned to. Auto-disabled at the limits.
-- **Reset** restores the initial viewBox and resets `scale=1`.
+- **Wheel** zooms around the cursor, anchored so the SVG point under the cursor stays under the cursor through the zoom. `wheel` is `{ passive: false }` because we `preventDefault()` to stop page scroll.
+- **Drag** pans (left mouse button only). Pan only initiates if mousedown does NOT land on a pin. 4-pixel dead zone before pan engages.
+- **After a real drag**, the next click is suppressed via `_suppressNextMapClick` so a pan ending over a pin doesn't open the popover unintentionally.
+- **Touch:** one finger = pan, two fingers = pinch zoom anchored to centroid.
+- **Buttons:** `+ / − / ↺` zoom centred on the *current* viewBox centre.
 
 ### Pin and stroke scaling
 
-Pin radii are inverse-scaled with zoom (`r = 5 / zoom.scale`) so they keep a constant CSS-pixel size at any zoom level. This is recomputed in `applyZoom()`. Routes (e.g., Salt March's polyline) rely on `vector-effect="non-scaling-stroke"` for the same reason. **Don't** use `transform: scale()` on the SVG — use viewBox manipulation, otherwise paths blur.
+Pin radii are inverse-scaled with zoom (`r = 5 / zoom.scale` for event pins, `4 / zoom.scale` for track pins) so they keep constant CSS-pixel size at any zoom. Recomputed in `applyZoom()`. Routes (Salt March polyline) and track lines rely on `vector-effect="non-scaling-stroke"`. **Don't** use `transform: scale()` on the SVG.
 
 ### Popover positioning under zoom
 
-`positionPopover` reads `elMap.viewBox.baseVal` at call time (not the initial viewBox) so popovers stay anchored to their pin through any zoom or pan. If the pin's viewBox coords fall outside the *current* visible viewBox (panned off screen), the popover hides itself rather than pinning to a stale screen position. `applyZoom()` calls `positionPopover` on every frame the viewBox changes, so popover follows the pin in real time during a pan or zoom.
+`positionPopover` reads `elMap.viewBox.baseVal` at call time (not the initial viewBox), so popovers stay anchored to their pin through any zoom or pan. If the pin's viewBox coords fall outside the *current* visible viewBox (panned off screen), the popover hides itself. `applyZoom()` calls `positionPopover` on every frame the viewBox changes.
+
+For track-step popovers, `positionPopoverForStep` falls back to anchoring at the off-map table row when the underlying pin is outside the viewport.
 
 ### Don't raise zoom.max past 8 lightly
 
-At scale=8 the visible viewBox is 125 vbu wide, ~925 km — about the width of Punjab. Pin radius becomes 0.625 vbu (still ~3.5 CSS pixels at typical display widths). Going past 8 means pin radii fall below the click-target minimum, and the dodge starts looking like noise.
-
+At scale=8 the visible viewBox is 125 vbu wide (~925 km — about Punjab width). Pin radius is 0.625 vbu (~3.5 CSS pixels). Going past 8 means pin radii fall below click-target minimum.
 
 ## Constraints
 
-- **Single-file portability.** No external fetches, no CDNs at runtime, no
-  build step on the user's end. The HTML must work from `file://`,
-  `assets.chiragpatnaik.com`, and iOS Quick Look.
-- **iOS Quick Look strips JavaScript.** The build script pre-renders a
-  static fallback for the threads bar and the map pins inside the SVG, so
-  the asset previews correctly without JS. JS replaces them on page load.
-- **DATA:BEGIN / DATA:END markers** in the script block are the splice
-  points for Claude Code or manual paste. Don't move them. Don't put
-  human-edited content between them — they get overwritten on rebuild.
-- **Naklitechie design system.** See `STYLE-GUIDE.md` in the project root.
-  Cream surfaces, two type weights, no shadows, no gradients, country
-  palette is canonical.
+- **Single-file portability of `india-history.html`.** No external fetches at runtime. Works from `file://`, `assets.chiragpatnaik.com`, iOS Quick Look. (Constraint does NOT apply to `shell.html` or `contribute/*.html` — those are hosted-only and may use CDNs.)
+- **iOS Quick Look strips JavaScript.** The build pre-renders static fallbacks for the threads bar, the people bar, and the map pins inside the SVG.
+- **DATA:BEGIN / DATA:END markers** in `template.html` are the splice points for data injection. Don't move them.
+- **`__BOOT_INVOCATION__` placeholder** in `template.html` controls boot — the single-file build replaces it with `bootRenders();`, the shell build replaces it with an async fetch + boot block.
+- **Naklitechie design system.** Cream surfaces, two type weights, no shadows, no gradients. Country palette canonical. Accents per design tokens.
 
 ## Known issues / open work
 
-- **Pin overlap dodge** is tuned in geographic terms, not screen terms. At
-  our viewBox scale, 1 vbu ≈ 7.4 km on the ground. Constants in
-  `template.html`:
-  - `MERGE_DIST = 3` (~22 km — only true co-location clusters)
+- **Pin overlap dodge** is tuned in geographic terms, not screen terms. At our viewBox scale, 1 vbu ≈ 7.4 km. Constants in `template.html`:
+  - `MERGE_DIST = 3` (~22 km — only true co-location)
   - `DODGE_RADIUS = 5` (~37 km — caps displacement at city scale)
+  Earlier values of 14 and 12 produced ~88 km of displacement, enough to push pins across the Wagah border. Don't raise without re-checking the Punjab cluster.
 
-  These were 14 and 12 in an earlier version; that produced ~88 km of
-  geographic displacement, which was enough to push pins across borders
-  near Wagah (Lahore appearing in India, Amritsar in Pakistan). Don't
-  raise them without checking what happens to the Punjab cluster.
+- **Pin density at scale.** With 30+ events in one region the radial dodge starts looking weird. Mughal-era Delhi already approaches this. The fix is the cluster badge (count + expand-on-click) — see `HANDOFF.md` "What's NOT built yet" #1.
 
-- **Pin density at scale.** With 30+ events in one region the radial dodge
-  starts to look weird — pins fan out in directions that don't match
-  geography. When that happens, replace the radial dodge with a cluster
-  badge (count + expand-on-click).
+- **PNG companion** for the explorer is not yet built. When done, follow the `make_<slug>.py` matplotlib pattern from STYLE-GUIDE.md §9 — 16:9, 200 DPI, cream background.
 
-- **Active-range tint on the slider** is `rgba(83, 74, 183, 0.18)` — visible
-  but subtle when the user has narrowed the range. If feedback comes in
-  that it's too faint, bump alpha to 0.28 and add a 1px border on the
-  active range div.
-
-- **Off-map events** are now handled: set `location.country = "OFF"` to
-  opt out of the point-in-polygon check. Pin still renders at its
-  projected position, which may fall outside the visible viewBox — when
-  we have actual off-map events (London Round Tables, Babur in Samarkand)
-  we'll need to either widen the projection bounds or add an
-  "elsewhere" indicator at the map edge.
-
-- **PNG companion** for the explorer is not yet built. When done, follow the
-  `make_<slug>.py` matplotlib pattern from STYLE-GUIDE.md §9 — 16:9, 200
-  DPI, cream background, country palette canonical.
-
-## Next planned work
-
-1. **People slice (`people_freedom-fighters.json` + UI).** Schema is
-   drafted in `PEOPLE_SCHEMA.md`. Build order: validator first, then
-   author Gandhi + Nehru + Bhagat Singh + Ambedkar + Jinnah as a seed
-   corpus, then add the People selector pill alongside Threads in the
-   top bar, then track rendering on the map (numbered pins + connecting
-   line, like the Salt March route) and the vertical timeline reader.
-2. **`events_mughal.json`** — Mughal campaign, Babur (1526) through
-   Aurangzeb (1707). Roughly 25 events.
-3. **`events_central_asia.json`** — pre-Mughal Timurid events from
-   Ferghana to Kabul, so the Babur thread can be wired without
-   geographic gaps.
-4. **Babur thread** — `narrative` kind, ~6 steps from inheritance of
-   Ferghana to Panipat. Stress-tests trans-regional map handling.
-5. **Cluster badge for high-density regions.** When ≥3 pins fall within
-   MERGE_DIST after the dodge pass, replace the dodged pins with one
-   numbered "+N" badge. Click → chooser popover listing each pin's
-   tooltip → click a row → regular popover for that event. Touch-
-   friendly, replaces the need for hover-zoom UX. Defer until a region
-   actually breaks visually (probably Mughal-era Delhi).
-6. **Sultanate events** — Ghurids through Lodis, ~20 events.
-7. **Maurya / post-Maurya events** — Buddha's lifetime, Mahajanapadas,
-   Chandragupta to Ashoka, ~15 events. This is also when the time slider
-   gets stress-tested at the BCE end.
-8. **Off-map handling** for events outside the asset's bounding box
-   (London Round Tables, etc.) — the schema already supports
-   `country: "OFF"`; UI needs an indicator when the user is on an
-   active thread/track step that points off-map.
-9. **PNG companion** for social sharing.
+- **Off-map table positioning.** Currently sits below the timeline in the map column. Could come visually closer to the map for clearer spatial association.
 
 ## Updating the map
 
-If the map projection or extent needs to change, edit `build_map.py` and
-re-run it. The output `map_paths.json` is then re-spliced via
-`build_html.py`. Pin coordinates in events files don't change — they're
-stored as lat/lon and projected at runtime by the matching JS LCC.
+If the projection or extent needs to change, edit `build/build_map.py` and re-run it. Outputs `build/map_paths.json` and `build/validator_boundaries.json` (both committed). Pin coordinates in event/people files don't change — they're stored as lat/lon and projected at runtime by the matching JS LCC.
 
-The Python and JS LCC formulae are spherical (R=6371000) and have been
-verified to agree to integer-meter precision. If you change the projection
-parameters, change them in **both** places: `build_map.py` (the proj4
-string and the LCC math in `build_html.py`'s `lcc()`) **and** the
-`lcc()` function in `template.html`.
+The Python and JS LCC formulae are spherical (R=6371000) and have been verified to agree to integer-meter precision. If you change the projection parameters, change them in **all three places**:
+- `build/build_map.py` (the proj4 string)
+- `build/build_html.py` (the Python `lcc()` used for static pin pre-render)
+- `web/template.html` (the JS `lcc()`)
+
+## Updating the auto-memory
+
+Project-specific principles that should outlive any single conversation (like the granular-dynasties rule) should go in the auto-memory feedback files at `~/.claude/projects/-Users-chiragpatnaik-Code-Sites/memory/`. They get loaded into every session via `MEMORY.md`.
+
+## Test suite map
+
+| Test | Checks |
+|---|---|
+| `validate_events.py` | schema + cross-reference + PIP for events |
+| `validate_threads.py` | schema + event_id resolution for threads |
+| `validate_people.py` | schema + event_id resolution + PIP for people |
+| `render_test_v2.py` | shift-click pins → right panel content |
+| `render_test_popover.py` | popover system, dodge math, relation cards (8 checks) |
+| `render_test_zoom.py` | viewBox manipulation, cursor anchor, button limits (8 checks) |
+| `render_test_people.py` | full People UI: pills, tracks, off-map table, popovers, mutual exclusion (10 checks) |
+
+Total: 3 validators + 4 render tests = 7. CI runs all of them on every PR.

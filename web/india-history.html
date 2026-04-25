@@ -276,19 +276,31 @@
   #map .track-pin:hover circle.dot { stroke-width: 2; }
   #map .track-pin.is-active circle.dot { stroke: var(--cream-text); stroke-width: 2; }
 
-  /* Off-map table — a single panel below the map listing every track step
-     whose projected position falls outside the visible viewport, grouped
-     by person. Replaces an earlier per-corner badge approach because two
-     steps in the same edge cell collided visually. */
+  /* Off-map table — a single panel that hangs from the bottom of the map
+     when populated, listing every track step whose projected position falls
+     outside the visible viewport, grouped by person. Replaces an earlier
+     per-corner badge approach because two steps in the same edge cell
+     collided visually. */
   .offmap-panel {
-    margin-top: 10px;
+    margin-top: 0;
     background: var(--cream-card);
     border: 1px solid var(--cream-border-soft);
-    border-radius: 8px;
-    padding: 10px 14px;
+    border-top: 1px dashed var(--cream-border);
+    border-radius: 0 0 8px 8px;
+    padding: 8px 14px 10px;
     font-size: 12px;
   }
   .offmap-panel:empty { display: none; }
+  /* When the off-map panel has content, square off the map-wrap's bottom
+     corners so the two read as one stacked block. Uses :has() so we don't
+     need a JS class toggle. */
+  .map-column:has(.offmap-panel:not(:empty)) .map-wrap {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    /* Cancel the flex `gap` between map-wrap and the offmap-panel below it
+       so the table reads as part of the map block, not a separate card. */
+    margin-bottom: -14px;
+  }
   .offmap-panel .offmap-head {
     font-size: 10px;
     text-transform: uppercase;
