@@ -2638,9 +2638,9 @@ window.bootRenders = bootRenders;  // exposed so shell.html can invoke after fet
   try {
     const [mapDoc, eventsDocs, threadsDocs, peopleDocs] = await Promise.all([
       fetchJson('build/map_paths.json'),
-      Promise.all(["events_independence.json", "events_mughal.json", "events_sur.json"].map(f => fetchJson('data/events/' + f))),
-      Promise.all(["threads_independence.json"].map(f => fetchJson('data/threads/' + f))),
-      Promise.all(["people_freedom-fighters.json"].map(f => fetchJson('data/people/' + f))),
+      Promise.all(["events_central_asia.json", "events_independence.json", "events_mughal.json", "events_sur.json"].map(f => fetchJson('data/events/' + f))),
+      Promise.all(["threads_independence.json", "threads_mughal.json"].map(f => fetchJson('data/threads/' + f))),
+      Promise.all(["people_freedom-fighters.json", "people_mughal-emperors.json"].map(f => fetchJson('data/people/' + f))),
     ]);
 
     // Populate the data globals declared by the template.

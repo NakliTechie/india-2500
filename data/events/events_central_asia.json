@@ -1,0 +1,218 @@
+{
+  "campaign": "central-asia",
+  "scope": "Pre-Mughal Timurid events tracing Babur's life from Ferghana inheritance (1494) through Lahore (1524) — the Central Asian and Afghan groundwork that made the Hindustan invasion of 1526 possible. Companion file events_mughal.json carries the post-Panipat narrative.",
+  "updated": "2026-04-26",
+  "events": [
+    {
+      "id": "babur-inherits-ferghana-1494",
+      "title": "Babur inherits Ferghana",
+      "tooltip": "Babur inherits Ferghana at twelve, Andijan, 1494",
+      "summary": "Babur's father Umar Sheikh Mirza died in a pigeon-coop fall at Akhsi; the eleven-year-old Timurid prince inherited the small Ferghana valley.",
+      "detail": "Umar Sheikh Mirza was a minor Timurid prince ruling the Ferghana valley from Andijan. On 8 June 1494 the dovecote in which he kept his prized pigeons collapsed beneath him at Akhsi, taking him over the cliff edge to his death. His eleven-year-old son Zahir-ud-din Muhammad — who would be known as Babur, 'the lion' — inherited Ferghana. Within months his uncle Sultan Ahmed Mirza of Samarkand and his maternal grandmother Qutlugh Nigar Khanum were both manoeuvring to take Andijan. The Baburnama, the candid memoir Babur began writing soon after, opens with the father's death — and frames everything that follows as the long consequence of that one crumbling tower.",
+      "date": {
+        "start": "1494-06-08",
+        "end":   "1494-06-08",
+        "precision": "day",
+        "approximate": false,
+        "display": "8 June 1494"
+      },
+      "location": {
+        "type": "city",
+        "name": "Andijan, Ferghana valley",
+        "region": "Ferghana",
+        "country": "UZ",
+        "points": [{ "lat": 40.7821, "lon": 72.3442, "name": "Andijan" }]
+      },
+      "era": "mughal",
+      "category": ["dynastic", "political"],
+      "figures": ["Babur", "Umar Sheikh Mirza"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Babur", "label": "Wikipedia: Babur", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Babur, Baburnama (trans. W. Thackston, 1996)", "type": "primary" },
+        { "label": "Stephen F. Dale, The Garden of the Eight Paradises (2004)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "babur-loses-samarkand-1501",
+      "title": "Babur loses Samarkand to the Uzbeks",
+      "tooltip": "Babur defeated by Shaybani Khan at Sar-e-Pul, 1501",
+      "summary": "Defeated by the Uzbek Muhammad Shaybani Khan at Sar-e-Pul, Babur lost Samarkand for the second and final time at age eighteen.",
+      "detail": "Babur first took Samarkand in 1497 and held it for a hundred days before losing it. He took it again in 1500 and lost it again — this time decisively — at the battle of Sar-e-Pul outside the city in April or May 1501. His army was outmatched by the rising Uzbek Muhammad Shaybani Khan, who would consolidate Transoxiana within a decade. For Babur the loss was the formative defeat of his life — Samarkand was the Timurid imperial capital, the city of his great-great-great-grandfather Timur, and to lose it was to lose the inheritance that justified everything else. His memoirs return to it for the next thirty years. The next ten years he would spend roaming the Hindu Kush as a stateless prince.",
+      "date": {
+        "start": "1501-04-28",
+        "end":   "1501-05-15",
+        "precision": "month",
+        "approximate": true,
+        "display": "April–May 1501"
+      },
+      "location": {
+        "type": "city",
+        "name": "Samarkand (Sar-e-Pul battle nearby)",
+        "region": "Transoxiana",
+        "country": "UZ",
+        "points": [{ "lat": 39.6542, "lon": 66.9597, "name": "Samarkand" }]
+      },
+      "era": "mughal",
+      "category": ["military", "dynastic"],
+      "figures": ["Babur", "Muhammad Shaybani Khan"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Battle_of_Sar-e_Pul", "label": "Wikipedia: Battle of Sar-e Pul", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Babur, Baburnama (trans. W. Thackston, 1996)", "type": "primary" },
+        { "label": "Stephen F. Dale, The Garden of the Eight Paradises (2004)", "type": "scholarly" }
+      ],
+      "caused_by": [
+        { "id": "babur-inherits-ferghana-1494", "gloss": "Ferghana was too small a base to hold Samarkand against a rising Uzbek confederation; the structural weakness of Babur's inheritance played out in seven years." }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "babur-takes-kabul-1504",
+      "title": "Babur takes Kabul",
+      "tooltip": "Babur captures Kabul, founds his second base, 1504",
+      "summary": "After three years of wandering with a small retinue, Babur crossed the Hindu Kush and took Kabul from the Arghun governor Muqim Beg in October 1504.",
+      "detail": "Stateless in the Hindu Kush, Babur led a small force of three hundred horsemen south through the passes in the autumn of 1504. The Arghun ruler of Kabul, Muqim Beg, surrendered the city without major resistance. Babur was twenty-one. Kabul would be his political base for the next twenty-two years — the city he loved most, the one in which he wrote much of the Baburnama, and the city to which his body would be returned after his death at Agra in 1530. From Kabul he could survey three worlds: Transoxiana to the north (the lost inheritance), Persia to the west (the Safavid alternative), and the Indus plains to the east (the eventual answer). He chose east.",
+      "date": {
+        "start": "1504-10-01",
+        "end":   "1504-10-31",
+        "precision": "month",
+        "approximate": true,
+        "display": "October 1504"
+      },
+      "location": {
+        "type": "city",
+        "name": "Kabul",
+        "region": "Hindu Kush",
+        "country": "AF",
+        "points": [{ "lat": 34.5553, "lon": 69.2075, "name": "Kabul" }]
+      },
+      "era": "mughal",
+      "category": ["military", "dynastic", "political"],
+      "figures": ["Babur", "Muqim Beg Arghun"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Babur", "label": "Wikipedia: Babur", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Babur, Baburnama (trans. W. Thackston, 1996)", "type": "primary" },
+        { "label": "Stephen F. Dale, The Garden of the Eight Paradises (2004)", "type": "scholarly" }
+      ],
+      "caused_by": [
+        { "id": "babur-loses-samarkand-1501", "gloss": "The dispossession at Samarkand drove Babur south; Kabul was the second-best base he could find." }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "babur-final-samarkand-attempt-1511",
+      "title": "Babur's final attempt on Samarkand",
+      "tooltip": "Babur retakes Samarkand briefly with Safavid help, 1511",
+      "summary": "With Safavid backing under Shah Ismail, Babur retook Samarkand in October 1511; it fell again the next year after the Persians were defeated at Ghazdivan.",
+      "detail": "Shah Ismail Safavi defeated the Uzbek Muhammad Shaybani Khan at Merv in 1510. Babur, given a Persian army under the condition that he profess Shia Islam at court, marched on Samarkand and entered it in October 1511. The Sunni population of the city was hostile to the Shia coercion that came with him. In November 1512 the Persian general Najm-i-Sani was defeated at Ghazdivan by an Uzbek revival; Babur's Samarkand evaporated within months. He returned to Kabul, never to look north again. The third Samarkand failure was the ending of his Central Asian ambitions — and the precondition for everything he would do in Hindustan.",
+      "date": {
+        "start": "1511-10-01",
+        "end":   "1512-11-12",
+        "precision": "month",
+        "approximate": true,
+        "display": "October 1511 — defeated at Ghazdivan November 1512"
+      },
+      "location": {
+        "type": "city",
+        "name": "Samarkand (final loss at Ghazdivan)",
+        "region": "Transoxiana",
+        "country": "UZ",
+        "points": [{ "lat": 39.6542, "lon": 66.9597, "name": "Samarkand" }]
+      },
+      "era": "mughal",
+      "category": ["military", "dynastic"],
+      "figures": ["Babur", "Shah Ismail Safavi", "Najm-i-Sani"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Battle_of_Ghazdewan", "label": "Wikipedia: Battle of Ghazdewan", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Babur, Baburnama (trans. W. Thackston, 1996)", "type": "primary" },
+        { "label": "Stephen F. Dale, The Garden of the Eight Paradises (2004)", "type": "scholarly" }
+      ],
+      "caused_by": [
+        { "id": "babur-takes-kabul-1504", "gloss": "Kabul gave Babur the resources to make one more attempt north; its failure ended the dream." }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "babur-first-hindustan-raid-1519",
+      "title": "Babur's first Hindustan raid",
+      "tooltip": "Babur's first raid into Bhera, Punjab, 1519",
+      "summary": "Babur led his first raid east of the Indus into Bhera in January 1519 — a reconnaissance of the Lodi north Indian frontier rather than a conquest.",
+      "detail": "After the Samarkand failures, Babur turned his attention east. In January 1519 he crossed the Indus and raided Bhera in the salt-range Punjab — the first of four such expeditions over the next six years. The Bhera raid was less about territory than intelligence: Babur was learning the routes, the river crossings, the disposition of the Yusufzai Afghans of the frontier, and the political weakness of the late Lodi sultanate at Delhi. He returned to Kabul. Three more raids followed in 1520, 1524, and 1525 — each one a step deeper into the subcontinent than the last.",
+      "date": {
+        "start": "1519-01-01",
+        "end":   "1519-03-31",
+        "precision": "month",
+        "approximate": true,
+        "display": "January–March 1519"
+      },
+      "location": {
+        "type": "city",
+        "name": "Bhera, Punjab",
+        "region": "Salt Range Punjab",
+        "country": "PK",
+        "points": [{ "lat": 32.4900, "lon": 72.9100, "name": "Bhera" }]
+      },
+      "era": "mughal",
+      "category": ["military"],
+      "figures": ["Babur"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Babur", "label": "Wikipedia: Babur", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Babur, Baburnama (trans. W. Thackston, 1996)", "type": "primary" }
+      ],
+      "caused_by": [
+        { "id": "babur-final-samarkand-attempt-1511", "gloss": "With Central Asia closed to him, Babur turned east toward the older Timurid claim on Hindustan dating from Timur's 1398 sack of Delhi." }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "babur-takes-lahore-1524",
+      "title": "Babur takes Lahore",
+      "tooltip": "Babur captures Lahore at Daulat Khan Lodi's invitation, 1524",
+      "summary": "Daulat Khan Lodi, governor of Punjab and rival of the Delhi sultan Ibrahim Lodi, invited Babur to march east; Babur took Lahore in September 1524.",
+      "detail": "By 1524 the Lodi sultanate was fracturing. Daulat Khan Lodi, the powerful governor of Punjab, sent his son Dilawar Khan to Kabul inviting Babur to intervene against Sultan Ibrahim Lodi at Delhi. Babur marched east, defeated the local governor, and took Lahore in September 1524. Daulat Khan promptly turned against him — having calculated, correctly, that Babur was no mere mercenary but a claimant for the throne. Babur returned briefly to Kabul, then came back the following year. By April 1526 he would be at Panipat. The Lahore campaign of 1524 is the dress rehearsal for the founding battle of the Mughal empire.",
+      "date": {
+        "start": "1524-09-01",
+        "end":   "1524-09-30",
+        "precision": "month",
+        "approximate": true,
+        "display": "September 1524"
+      },
+      "location": {
+        "type": "city",
+        "name": "Lahore",
+        "region": "Punjab",
+        "country": "PK",
+        "points": [{ "lat": 31.5497, "lon": 74.3437, "name": "Lahore" }]
+      },
+      "era": "mughal",
+      "category": ["military", "political"],
+      "figures": ["Babur", "Daulat Khan Lodi", "Dilawar Khan"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Babur", "label": "Wikipedia: Babur", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Babur, Baburnama (trans. W. Thackston, 1996)", "type": "primary" },
+        { "label": "Stephen F. Dale, The Garden of the Eight Paradises (2004)", "type": "scholarly" }
+      ],
+      "caused_by": [
+        { "id": "babur-first-hindustan-raid-1519", "gloss": "Five years of raids established Babur as a credible interventionist; Daulat Khan's invitation in 1524 was the political opening." }
+      ],
+      "verified": true
+    }
+  ]
+}

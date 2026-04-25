@@ -1,0 +1,54 @@
+{
+  "campaign": "mughal",
+  "scope": "Threads through Mughal-era events. Seed: Babur's thirty-two-year arc from Ferghana inheritance to the founding of the empire at Panipat.",
+  "updated": "2026-04-26",
+  "threads": [
+    {
+      "id": "from-ferghana-to-panipat-baburs-thirty-two-years",
+      "title": "From Ferghana to Panipat — Babur's thirty-two years",
+      "subtitle": "How a small Timurid inheritance, two losses of Samarkand, and a Kabul base became the Mughal empire",
+      "summary": "Babur's autobiography is one of the most candid memoirs ever written by a king. Read it forwards and the founding of the Mughal empire looks inevitable; read it as it happened and almost nothing was. This thread walks six points across thirty-two years.",
+      "kind": "narrative",
+      "era_span": ["mughal"],
+      "date_span": { "start": "1494", "end": "1526" },
+      "steps": [
+        {
+          "event_id": "babur-inherits-ferghana-1494",
+          "note": "Eleven years old, in a small mountain valley, with a treasury that wouldn't have funded a serious campaign. The Baburnama opens here — Babur is acutely aware of how little he has been given.",
+          "transition": "He doesn't accept it as enough. Within three years he marches on the imperial Timurid capital his ancestors had ruled."
+        },
+        {
+          "event_id": "babur-loses-samarkand-1501",
+          "note": "Two captures, two losses; the second decisive. Muhammad Shaybani Khan's rising Uzbek confederation is the unstoppable force in Transoxiana for the next decade. Babur is eighteen and stateless.",
+          "transition": "For three years he wanders the Hindu Kush with a few hundred horsemen, watching for an opening. Kabul provides one in 1504."
+        },
+        {
+          "event_id": "babur-takes-kabul-1504",
+          "note": "A second-best base, but a base. From Kabul he can survey three worlds — Transoxiana to the north (the lost inheritance), Persia to the west (the Safavid alternative), and the Indus plains to the east (the eventual answer). For fifteen years he keeps trying north.",
+          "transition": "The 1511 attempt with Safavid backing fails at Ghazdivan; Babur returns to Kabul and never looks north again. The eastward turn begins in 1519."
+        },
+        {
+          "event_id": "babur-first-hindustan-raid-1519",
+          "note": "A reconnaissance raid into Bhera. Three more raids follow over the next five years. Babur is learning the river crossings, the Yusufzai Afghan dispositions, and the political weakness of the late Lodi sultanate at Delhi.",
+          "transition": "The political opening comes in 1524 when Daulat Khan Lodi, governor of Punjab, invites Babur east against his cousin the Sultan."
+        },
+        {
+          "event_id": "babur-takes-lahore-1524",
+          "note": "The dress rehearsal. Daulat Khan turns against Babur within months — having calculated, correctly, that this is no mercenary. Babur returns briefly to Kabul, then comes back the following year for the final invasion.",
+          "transition": "By April 1526 he is on the plain of Panipat with twelve thousand horse, facing a Lodi army eight times larger."
+        },
+        {
+          "event_id": "first-battle-of-panipat-1526",
+          "note": "Wagon-fortified gunpowder artillery, mounted archery, tulghuma envelopment. Ibrahim Lodi dies on the field. Babur enters Delhi three days later. The Mughal claim to Hindustan starts here — but he has only four and a half years left to live.",
+          "transition": null
+        }
+      ],
+      "coda": "Read backwards from 1526, Babur looks like a state-builder. Read as he lived it, he is a man who lost the inheritance that mattered to him most, kept failing to recover it, and made the empire he eventually founded out of what was left. The Mughal empire is, in this sense, the consolation prize for losing Samarkand.",
+      "sources": [
+        { "label": "Babur, Baburnama (trans. W. Thackston, 1996)", "type": "primary" },
+        { "label": "Stephen F. Dale, The Garden of the Eight Paradises (2004)", "type": "scholarly" }
+      ],
+      "verified": true
+    }
+  ]
+}

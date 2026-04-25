@@ -142,12 +142,10 @@ The shared `template.html` uses `let` (not `const`) for the four data globals an
 
 In rough priority order:
 
-1. **`events_central_asia.json`** — Pre-Mughal Timurid events for Babur's biographical track to be wired without geographic gaps.
-2. **Babur biographical track** in `people_*.json` — once Central Asia is in.
-3. **Babur thread** — `narrative` kind, ~6 steps from Ferghana to Panipat. Depends on #1.
-4. **Sultanate events** — Ghurids through Lodis, ~20 events.
-5. **Maurya / post-Maurya events** — stress-tests the BCE end of the year slider.
-6. **GitHub publishing** — push to `naklitechie/india-2500`, enable Pages, optional CNAME for `assets.chiragpatnaik.com`. Tooling is ready; needs decision + execution.
+1. **Tags + collections hybrid (infra).** Add `tags[]` to events for cheap thematic filtering; add a `collections_*.json` slice for curated, framed groupings ("Women in the independence movement", "Rebellions including pre-1857", "INC conventions"). A collection's `members` field can be either a list of event_ids OR a tag selector like `"tag:women-leaders"`. New schema doc + validator + UI surface (probably a "Collections" pill row alongside Threads). Sized: one full session.
+2. **Sultanate events** — Ghurids through Lodis, ~20 events.
+3. **Maurya / post-Maurya events** — stress-tests the BCE end of the year slider.
+4. **GitHub publishing** — push to `naklitechie/india-2500`, enable Pages, optional CNAME for `assets.chiragpatnaik.com`. Tooling is ready; needs decision + execution.
 
 ---
 

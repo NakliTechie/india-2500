@@ -33,6 +33,9 @@
         { "label": "Babur, Baburnama (trans. W. Thackston, 1996)", "type": "primary" },
         { "label": "Stephen F. Dale, The Garden of the Eight Paradises (2004)", "type": "scholarly" }
       ],
+      "caused_by": [
+        { "id": "babur-takes-lahore-1524", "gloss": "Lahore in 1524 was the staging point; Daulat Khan Lodi's subsequent betrayal made the march on Delhi inevitable." }
+      ],
       "verified": true
     },
 

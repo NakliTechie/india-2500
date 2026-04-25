@@ -1,0 +1,127 @@
+{
+  "campaign": "mughal-emperors",
+  "scope": "Major Mughal emperors as biographical tracks. Seed: Babur (1483–1530). Future entries planned for Akbar, Shah Jahan, Aurangzeb. Authored as a discrete file because the dynastic biography slice is logically separate from the freedom-fighter slice.",
+  "updated": "2026-04-26",
+  "people": [
+    {
+      "id": "babur",
+      "name": "Zahir-ud-din Muhammad Babur",
+      "tooltip": "Babur (1483–1530), founder of the Mughal empire",
+      "summary": "Timurid prince of Ferghana who, after losing Samarkand twice, founded the Mughal empire from a Kabul base in 1526.",
+      "era": "mughal",
+      "lifespan": {
+        "born": "1483-02-14",
+        "died": "1530-12-26",
+        "birthplace": { "name": "Andijan, Ferghana valley", "country": "UZ", "lat": 40.7821, "lon": 72.3442 },
+        "deathplace": { "name": "Agra (later reburied at Kabul)", "country": "IN", "lat": 27.1767, "lon": 78.0081 }
+      },
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Babur", "label": "Wikipedia: Babur", "type": "wikipedia" },
+        { "url": "https://en.wikipedia.org/wiki/Baburnama", "label": "Wikipedia: Baburnama (his memoir)", "type": "related" }
+      ],
+      "track": [
+        {
+          "kind": "event-ref",
+          "event_id": "babur-inherits-ferghana-1494",
+          "role": "Inherits Ferghana at eleven, on his father Umar Sheikh Mirza's death in a pigeon-coop fall at Akhsi.",
+          "note": "The Baburnama opens with this moment. Everything in the next thirty-six years is shaped by the smallness of what he started with."
+        },
+        {
+          "kind": "moment",
+          "id": "babur-first-samarkand-1497",
+          "tooltip": "Babur first takes Samarkand at fourteen, 1497",
+          "summary": "First of three Samarkand captures. Held the city for a hundred days before losing it to a Ferghana rebellion that forced him to choose.",
+          "date": {
+            "start": "1497-11-01",
+            "end":   "1498-02-14",
+            "precision": "month",
+            "approximate": true,
+            "display": "November 1497 – February 1498"
+          },
+          "location": {
+            "name": "Samarkand",
+            "region": "Transoxiana",
+            "country": "UZ",
+            "points": [{ "lat": 39.6542, "lon": 66.9597 }]
+          },
+          "note": "His first taste of the imperial Timurid capital — the city of his great-great-great-grandfather Timur. Lost not in battle but because rebellion at home meant he couldn't hold both Andijan and Samarkand at once."
+        },
+        {
+          "kind": "event-ref",
+          "event_id": "babur-loses-samarkand-1501",
+          "role": "Defeated by Muhammad Shaybani Khan at Sar-e-Pul; loses Samarkand for the second and final time at eighteen.",
+          "note": "The formative defeat of his life. Spent the next ten years roaming the Hindu Kush as a stateless Timurid prince before taking Kabul."
+        },
+        {
+          "kind": "event-ref",
+          "event_id": "babur-takes-kabul-1504",
+          "role": "Crosses the Hindu Kush with three hundred horsemen, takes Kabul from the Arghun governor Muqim Beg without major resistance.",
+          "note": "Twenty-two years in Kabul follow — the city he loved most, the one in which he wrote much of the Baburnama, and the city to which his body would eventually be returned."
+        },
+        {
+          "kind": "event-ref",
+          "event_id": "babur-final-samarkand-attempt-1511",
+          "role": "Retakes Samarkand with Safavid Persian backing under Shah Ismail; loses it the next year after the Persians are defeated at Ghazdivan.",
+          "note": "Third and final Samarkand failure. Ends his Central Asian ambitions; turns south to Hindustan."
+        },
+        {
+          "kind": "event-ref",
+          "event_id": "babur-first-hindustan-raid-1519",
+          "role": "Leads his first raid east of the Indus into Bhera in Punjab — reconnaissance of the Lodi frontier rather than conquest.",
+          "note": "Three more raids follow in 1520, 1524, 1525, each one a step deeper than the last."
+        },
+        {
+          "kind": "event-ref",
+          "event_id": "babur-takes-lahore-1524",
+          "role": "Takes Lahore at Daulat Khan Lodi's invitation; Daulat Khan turns against him within months.",
+          "note": "The dress rehearsal for Panipat. Returns briefly to Kabul, then comes back the next year for the final invasion."
+        },
+        {
+          "kind": "event-ref",
+          "event_id": "first-battle-of-panipat-1526",
+          "role": "Defeats Ibrahim Lodi with twelve thousand horsemen against ~one hundred thousand, using gunpowder artillery and tulghuma cavalry envelopment.",
+          "note": "The founding battle. Enters Delhi three days later; his reign in Hindustan begins. He has four and a half years left to live."
+        },
+        {
+          "kind": "event-ref",
+          "event_id": "battle-of-khanwa-1527",
+          "role": "Defeats Rana Sanga of Mewar's Rajput coalition with the same gunpowder line; takes the title Ghazi.",
+          "note": "Without Khanwa, Panipat would have been a raid, not a founding. The Rajput defeat lets him hold Delhi."
+        },
+        {
+          "kind": "event-ref",
+          "event_id": "battle-of-ghaghra-1529",
+          "role": "Defeats the Afghan-Bengal alliance at the Ghaghra–Ganges confluence; secures the eastern frontier.",
+          "note": "Third great battle in three years. Returns to Agra and dies eighteen months later."
+        },
+        {
+          "kind": "event-ref",
+          "event_id": "babur-death-humayun-accession-1530",
+          "role": "Dies at Agra after a short illness; passes the empire to his eldest son Humayun.",
+          "note": "Reputedly vowed to take on his ailing son Humayun's fever in his own body. The empire he leaves is held together by his reputation alone — Humayun loses it within nine years."
+        },
+        {
+          "kind": "moment",
+          "id": "babur-reburied-at-kabul-1539",
+          "tooltip": "Babur reburied at Bagh-e-Babur, Kabul, c. 1539",
+          "summary": "Per Babur's own wish recorded in the Baburnama, his body was moved from Agra to the garden he had built at Kabul about nine years after his death.",
+          "date": {
+            "start": "1539-01-01",
+            "end":   "1544-12-31",
+            "precision": "year",
+            "approximate": true,
+            "display": "c. 1539–1544"
+          },
+          "location": {
+            "name": "Bagh-e-Babur, Kabul",
+            "region": "Hindu Kush",
+            "country": "AF",
+            "points": [{ "lat": 34.5050, "lon": 69.1665 }]
+          },
+          "note": "He lived twenty-two years in Kabul before founding the Mughal empire in Hindustan. By his explicit instruction his body was returned to it. The garden survives, restored after the Afghan civil wars; the cenotaph is open to the sky as he asked."
+        }
+      ],
+      "verified": true
+    }
+  ]
+}
