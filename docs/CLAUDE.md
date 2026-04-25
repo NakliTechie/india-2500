@@ -34,6 +34,7 @@ The boundary rule for any India map: **Datameet, never Natural Earth or world-at
 ├── build/
 │   ├── build_map.py              Datameet + world-atlas → SVG basemap (slow, rare)
 │   ├── build_html.py             template + data → web/india-history.html AND shell.html
+│   ├── build_png.py              matplotlib → web/india-history.png + .square.png
 │   ├── map_paths.json            cached basemap (committed)
 │   └── validator_boundaries.json cached PIP polygons (committed)
 │
@@ -202,9 +203,7 @@ At scale=8 the visible viewBox is 125 vbu wide (~925 km — about Punjab width).
 
 - **Pin density at scale.** With 30+ events in one region the radial dodge starts looking weird. Mughal-era Delhi already approaches this. The fix is the cluster badge (count + expand-on-click) — see `HANDOFF.md` "What's NOT built yet" #1.
 
-- **PNG companion** for the explorer is not yet built. When done, follow the `make_<slug>.py` matplotlib pattern from STYLE-GUIDE.md §9 — 16:9, 200 DPI, cream background.
-
-- **Off-map table positioning.** Currently sits below the timeline in the map column. Could come visually closer to the map for clearer spatial association.
+- **PNG companion** is built. `python3 build/build_png.py` writes `web/india-history.png` (1200×675, OG/Twitter card) and `web/india-history-square.png` (1080×1080). Re-run after content changes if you want the social preview to reflect the latest event count.
 
 ## Updating the map
 

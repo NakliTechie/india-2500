@@ -142,15 +142,12 @@ The shared `template.html` uses `let` (not `const`) for the four data globals an
 
 In rough priority order:
 
-1. **Cluster badge for high-density regions.** Replace dodge with a numbered "+N" badge when ≥3 pins fall within MERGE_DIST. Click → chooser popover listing each pin's tooltip → click → regular popover. Touch-friendly. Mughal-era Delhi has the density to need this now.
-2. **PNG companion** for social sharing per `STYLE-GUIDE.md` §9 — 16:9, 200 DPI, cream background. matplotlib pattern.
-3. **Off-map table polish** — table currently sits below the timeline; could come visually closer to the map for spatial association.
-4. **`events_central_asia.json`** — Pre-Mughal Timurid events for Babur's biographical track to be wired without geographic gaps.
-5. **Babur biographical track** in `people_*.json` — once Central Asia is in.
-6. **Babur thread** — `narrative` kind, ~6 steps from Ferghana to Panipat. Depends on #4.
-7. **Sultanate events** — Ghurids through Lodis, ~20 events.
-8. **Maurya / post-Maurya events** — stress-tests the BCE end of the year slider.
-9. **GitHub publishing** — push to `naklitechie/india-2500`, enable Pages, optional CNAME for `assets.chiragpatnaik.com`. Tooling is ready; needs decision + execution.
+1. **`events_central_asia.json`** — Pre-Mughal Timurid events for Babur's biographical track to be wired without geographic gaps.
+2. **Babur biographical track** in `people_*.json` — once Central Asia is in.
+3. **Babur thread** — `narrative` kind, ~6 steps from Ferghana to Panipat. Depends on #1.
+4. **Sultanate events** — Ghurids through Lodis, ~20 events.
+5. **Maurya / post-Maurya events** — stress-tests the BCE end of the year slider.
+6. **GitHub publishing** — push to `naklitechie/india-2500`, enable Pages, optional CNAME for `assets.chiragpatnaik.com`. Tooling is ready; needs decision + execution.
 
 ---
 
