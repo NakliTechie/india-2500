@@ -69,7 +69,7 @@ Optional 6-digit hex string (e.g. `"#b03018"`). The colour is used everywhere th
 
 **If omitted**, `build_html.py` cycles through a default 5-colour Naklitechie/Rangrez palette in load order (KHADI, AAKASH, KUMKUM, NEEL, MOR — see `build/build_html.py` `PEOPLE_PALETTE`). Beyond 5 people the cycle wraps, so two people will collide. Set `colour` explicitly to avoid this.
 
-**Suggested sources:** the [Rangrez palette library](https://github.com/NakliTechie/rangrez) has 240 palettes organised by region/theme. Pick a colour that matches the person thematically — Babur's `colour` is `#2a9a98` (iran-09 FIROUZEH, the iconic Persian/Timurid mosque-tile turquoise). Once set, it carries to every surface that references the person.
+**Suggested sources:** browse [rangrez.naklitechie.com](https://rangrez.naklitechie.com) for the full palette library — 240+ regional and thematic palettes — and pick a colour that matches the person thematically. Babur's `colour` is `#2a9a98` (iran-09 FIROUZEH, the iconic Persian/Timurid mosque-tile turquoise). Once set, the colour carries to every surface that references the person.
 
 ---
 

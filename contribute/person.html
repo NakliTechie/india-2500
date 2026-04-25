@@ -210,17 +210,13 @@
   <!-- Section 3.5: Accent colour -->
   <div class="card">
     <h2 style="margin-top:0; padding-top:0; border-top:none;">4. Accent colour</h2>
-    <p class="help">Optional. Pick a colour that carries everywhere this person is referenced — pill swatch, track-pin fill, connecting line, popover accent. Pick something thematically resonant (Babur uses Persian turquoise from Samarkand mosque tiles; Gandhi uses khadi terracotta). If left blank, a default cycles through 5 fallback colours and may collide with another person's.</p>
+    <p class="help">Optional. Pick a colour that carries everywhere this person is referenced — pill swatch, track-pin fill, connecting line, popover accent. Pick something thematically resonant for the figure (e.g. Babur uses Persian turquoise from Samarkand mosque tiles; Gandhi uses khadi terracotta). If left blank, a default cycles through five fallback colours and will eventually collide with another person.</p>
+    <p class="help">Browse <a href="https://rangrez.naklitechie.com" target="_blank">rangrez.naklitechie.com</a> for the full palette library — 240+ regional and thematic palettes — and paste the hex value here.</p>
     <div class="field">
       <label for="colour">Hex colour <span class="opt">e.g. #b03018</span></label>
-      <div class="hint">Pick from the suggestions below or paste any hex value. Source: the <a href="https://github.com/NakliTechie/rangrez/blob/main/palettes.json" target="_blank">Rangrez palette library</a> (240 palettes by region/theme).</div>
       <input type="text" id="colour" placeholder="#2a9a98" autocomplete="off">
       <div id="colour-preview" style="margin-top:8px; height:34px; border-radius:6px; border:1px solid var(--cream-border-soft); background:transparent; display:flex; align-items:center; justify-content:center; font-size:11px; color:var(--cream-faint);">no colour set — fallback palette will be used</div>
       <ul class="msg-list" id="colour-msg"></ul>
-    </div>
-    <div class="field">
-      <label>Suggested colours <span class="opt">click to use</span></label>
-      <div id="colour-swatches" style="display:flex; flex-wrap:wrap; gap:6px;"></div>
     </div>
   </div>
 
@@ -322,41 +318,7 @@ $("#id").addEventListener("input", () => {
   $("#id-msg").innerHTML = checkId($("#id").value).map(m => `<li class="${m.level}">${m.msg}</li>`).join("");
 });
 
-/* ---------- Colour picker ---------- */
-// A curated subset of Rangrez tokens that work well as person accents.
-// Authors can also paste any 6-digit hex.
-const SUGGESTED_COLOURS = [
-  // 5 fallback-palette colours (the cycle that runs when no colour is set)
-  { hex: "#b03018", label: "KHADI · हाथ-कता कपास", note: "handspun terracotta — Gandhi" },
-  { hex: "#1a4870", label: "AAKASH · आकाश",       note: "sky / Ashoka chakra blue — Nehru" },
-  { hex: "#c8281a", label: "KUMKUM · कुमकुम",     note: "vermillion — Bhagat Singh" },
-  { hex: "#1a3a90", label: "NEEL · नील",           note: "indigo — Ambedkar" },
-  { hex: "#1f7a8a", label: "MOR · मोर",            note: "peacock teal — Jinnah" },
-  // Wider Rangrez set for mughal / pre-modern figures
-  { hex: "#2a9a98", label: "FIROUZEH · فیروزه",   note: "Persian turquoise — Babur" },
-  { hex: "#0a2a80", label: "LAJVARD · لاجورد",    note: "lapis blue (Persian/Mughal manuscripts)" },
-  { hex: "#e8a830", label: "ZAAFARAN · زعفران",   note: "saffron yellow" },
-  { hex: "#8b3a1f", label: "BENGARA",              note: "Japanese iron-rust red" },
-  { hex: "#5a6a1f", label: "MATCHA / olive green", note: "matcha green" },
-  { hex: "#4a4a48", label: "KAJAL · काजल",         note: "kohl grey" },
-  { hex: "#72243E", label: "ROSE",                 note: "naklitechie deep rose" },
-  { hex: "#534AB7", label: "PURPLE",               note: "naklitechie purple" },
-  { hex: "#BA7517", label: "AMBER",                note: "naklitechie amber" },
-];
-
-const swatchHost = $("#colour-swatches");
-SUGGESTED_COLOURS.forEach(({hex, label, note}) => {
-  const btn = document.createElement("button");
-  btn.type = "button";
-  btn.title = `${label} — ${note}\n${hex}`;
-  btn.style.cssText = `width:28px; height:28px; border-radius:6px; border:1px solid var(--cream-border-soft); background:${hex}; cursor:pointer; padding:0;`;
-  btn.addEventListener("click", () => {
-    $("#colour").value = hex;
-    $("#colour").dispatchEvent(new Event("input", {bubbles: true}));
-  });
-  swatchHost.appendChild(btn);
-});
-
+/* ---------- Colour input ---------- */
 $("#colour").addEventListener("input", () => {
   const v = $("#colour").value.trim();
   const preview = $("#colour-preview");
