@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Add a person · Contribute</title>
+<link rel="stylesheet" href="lib/styles.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+<script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<style>
+  .step-card {
+    border: 1px solid var(--cream-border-soft);
+    border-radius: 8px;
+    padding: 14px 16px 8px;
+    margin-bottom: 10px;
+    background: rgba(60, 45, 15, 0.02);
+  }
+  .step-card .step-head {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 10px;
+  }
+  .step-card .step-num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 22px; height: 22px; border-radius: 50%;
+    background: var(--purple); color: white; font-size: 11px; font-weight: 500;
+  }
+  .step-card .step-kind-label {
+    font-size: 10px; text-transform: uppercase; letter-spacing: 0.4px;
+    color: var(--cream-faint);
+    margin-left: 8px;
+  }
+  .step-toggle {
+    display: flex; gap: 0;
+    border: 1px solid var(--cream-border);
+    border-radius: 6px;
+    overflow: hidden;
+    width: fit-content;
+    margin-bottom: 14px;
+  }
+  .step-toggle button {
+    background: transparent;
+    border: none;
+    padding: 6px 14px;
+    font-size: 12px;
+    cursor: pointer;
+    color: var(--cream-muted);
+    font-family: inherit;
+  }
+  .step-toggle button.active {
+    background: var(--cream-text);
+    color: var(--cream);
+  }
+  .corpus-status { font-size: 12px; color: var(--cream-muted); margin-top: 6px; }
+  .moment-map {
+    height: 220px;
+    border-radius: 6px;
+    border: 1px solid var(--cream-border-soft);
+    margin-top: 6px;
+  }
+</style>
+</head>
+<body>
+
+<header class="contribute-header">
+  <a class="brand" href="../web/india-history.html">India — 2500 years to the Republic</a>
+  <nav class="nav">
+    <a href="index.html">All forms</a>
+    <a href="event.html">Event</a>
+    <a href="thread.html">Thread</a>
+    <a href="https://github.com/naklitechie/india-2500/blob/main/docs/PEOPLE_SCHEMA.md" target="_blank">Schema</a>
+  </nav>
+</header>
+
+<main>
+
+<h1>Add a person</h1>
+<p class="subtitle">A biographical track — a sequence of locations across someone's life. Each step is either an existing event (event-ref) or a private moment (a location not in the events corpus).</p>
+
+<div class="card">
+  <h2 style="margin-top:0; padding-top:0; border-top:none;">Two kinds of step</h2>
+  <ul>
+    <li><strong>Event-ref</strong> — the person was at an existing first-class event in the corpus. You give their <em>role</em> (their specific part in it). The pin uses the event's location automatically.</li>
+    <li><strong>Moment</strong> — a private location not in the events corpus. The train at Pietermaritzburg, the lecture hall at Columbia, the cell at Yerwada. Has its own date, location, and summary, intentionally lighter than a full event.</li>
+  </ul>
+  <p>If a moment outgrows that and accrues consequences, promote it to a full event in <a href="event.html">the event form</a> and convert the track step to an event-ref.</p>
+</div>
+
+<form id="person-form">
+
+  <!-- Section 1: Identity -->
+  <div class="card">
+    <h2 style="margin-top:0; padding-top:0; border-top:none;">1. Identity</h2>
+
+    <div class="field">
+      <label for="name">Full name <span class="req">*</span></label>
+      <div class="hint">Their full historical name. <em>e.g. "Mohandas Karamchand Gandhi"</em></div>
+      <input type="text" id="name" required>
+    </div>
+
+    <div class="field">
+      <label for="id">ID <span class="req">*</span> <span class="opt">kebab-case, auto-suggested</span></label>
+      <div class="hint">A short slug. Globally unique. <em>e.g. "gandhi"</em>, <em>"bhagat-singh"</em></div>
+      <input type="text" id="id" required>
+      <ul class="msg-list" id="id-msg"></ul>
+    </div>
+
+    <div class="field">
+      <label for="tooltip">Tooltip <span class="req">*</span> <span class="opt">≤ 80 chars</span></label>
+      <div class="hint">Shown on track-pin hover. <em>e.g. "Mohandas Gandhi (1869–1948)"</em></div>
+      <input type="text" id="tooltip" required>
+    </div>
+
+    <div class="field">
+      <label for="summary">Summary <span class="req">*</span> <span class="opt">≤ 160 chars</span></label>
+      <div class="hint">One sentence about who they were and why they're here.</div>
+      <textarea id="summary" rows="2" required></textarea>
+    </div>
+
+    <div class="field">
+      <label for="era">Era <span class="req">*</span></label>
+      <div class="hint">Coarse time bucket, used for filtering.</div>
+      <select id="era" required></select>
+    </div>
+  </div>
+
+  <!-- Section 2: Lifespan -->
+  <div class="card">
+    <h2 style="margin-top:0; padding-top:0; border-top:none;">2. Lifespan</h2>
+    <p class="help">Birth and death dates and places. The renderer adds an implicit "born" and "died" pin to the track.</p>
+
+    <div class="field-row">
+      <div class="field">
+        <label for="born">Born <span class="req">*</span></label>
+        <div class="hint">YYYY-MM-DD or YYYY.</div>
+        <input type="text" id="born" placeholder="1869-10-02" required>
+      </div>
+      <div class="field">
+        <label for="died">Died <span class="opt">leave empty if living</span></label>
+        <input type="text" id="died" placeholder="1948-01-30">
+      </div>
+    </div>
+
+    <h2 style="font-size:14px; margin-top:18px; padding-top:0; border-top:none;">Birthplace <span class="req">*</span></h2>
+    <div class="field-row">
+      <div class="field">
+        <label for="bp-name">Place name</label>
+        <input type="text" id="bp-name" placeholder="Porbandar, Kathiawar">
+      </div>
+      <div class="field">
+        <label for="bp-country">Country</label>
+        <select id="bp-country"></select>
+      </div>
+    </div>
+    <div class="field">
+      <label>Pick the birthplace on the map</label>
+      <div class="moment-map" id="bp-map"></div>
+    </div>
+    <div class="field-row">
+      <div class="field">
+        <label for="bp-lat">Latitude</label>
+        <input type="number" id="bp-lat" step="0.0001">
+      </div>
+      <div class="field">
+        <label for="bp-lon">Longitude</label>
+        <input type="number" id="bp-lon" step="0.0001">
+      </div>
+    </div>
+
+    <h2 style="font-size:14px; margin-top:18px; padding-top:0; border-top:none;">Deathplace <span class="opt">required only if died is filled in</span></h2>
+    <div class="field-row">
+      <div class="field">
+        <label for="dp-name">Place name</label>
+        <input type="text" id="dp-name" placeholder="Birla House, New Delhi">
+      </div>
+      <div class="field">
+        <label for="dp-country">Country</label>
+        <select id="dp-country"></select>
+      </div>
+    </div>
+    <div class="field">
+      <label>Pick the deathplace on the map</label>
+      <div class="moment-map" id="dp-map"></div>
+    </div>
+    <div class="field-row">
+      <div class="field">
+        <label for="dp-lat">Latitude</label>
+        <input type="number" id="dp-lat" step="0.0001">
+      </div>
+      <div class="field">
+        <label for="dp-lon">Longitude</label>
+        <input type="number" id="dp-lon" step="0.0001">
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 3: Wikipedia link -->
+  <div class="card">
+    <h2 style="margin-top:0; padding-top:0; border-top:none;">3. Wikipedia link</h2>
+    <p class="help">A Wikipedia link is required. The asset uses it as the rabbit-hole link.</p>
+    <div class="field">
+      <label for="wiki-url">Wikipedia URL <span class="req">*</span></label>
+      <input type="url" id="wiki-url" placeholder="https://en.wikipedia.org/wiki/...">
+    </div>
+    <div class="field">
+      <label for="wiki-label">Label</label>
+      <input type="text" id="wiki-label" placeholder="Wikipedia: Mahatma Gandhi">
+    </div>
+  </div>
+
+  <!-- Section 4: Track -->
+  <div class="card">
+    <h2 style="margin-top:0; padding-top:0; border-top:none;">4. Track</h2>
+    <p class="help">Add steps in chronological order. Use <em>event-ref</em> for steps that match an existing event in the corpus, <em>moment</em> for private locations.</p>
+
+    <div class="step-toggle">
+      <button type="button" class="active" id="add-event-ref">+ Add event-ref step</button>
+      <button type="button" id="add-moment">+ Add moment step</button>
+    </div>
+
+    <div class="corpus-status" id="corpus-status">Loading the events corpus…</div>
+
+    <div id="steps-list" style="margin-top:16px;"></div>
+  </div>
+
+  <!-- Section 5: Verification -->
+  <div class="card">
+    <h2 style="margin-top:0; padding-top:0; border-top:none;">5. Verification</h2>
+    <div class="field">
+      <label for="verified">Have you cross-checked dates and key facts against ≥2 sources? <span class="req">*</span></label>
+      <select id="verified" required>
+        <option value="false">No — mark unverified</option>
+        <option value="true">Yes — verified</option>
+      </select>
+    </div>
+  </div>
+
+</form>
+
+<div class="card" id="validation-card">
+  <h2 style="margin-top:0; padding-top:0; border-top:none;">Validation</h2>
+  <div id="validation-output">Fill in the form above; errors will appear here as you type.</div>
+</div>
+
+<div class="card">
+  <h2 style="margin-top:0; padding-top:0; border-top:none;">Preview</h2>
+  <div class="json-preview" id="json-preview">// fill in the form to see the preview</div>
+</div>
+
+<div class="submit-section">
+  <h2 style="margin-top:0; padding-top:0; border-top:none;">Submit your contribution</h2>
+  <p class="submit-help"><strong>Download</strong> saves the JSON to your computer. <strong>Pull request</strong> opens GitHub's web editor with the file pre-populated. <strong>Issue</strong> opens a GitHub issue with the JSON in the body.</p>
+  <div class="submit-buttons">
+    <button type="button" class="btn primary" id="btn-download">Download JSON</button>
+    <button type="button" class="btn" id="btn-pr">Open as Pull Request</button>
+    <button type="button" class="btn" id="btn-issue">Open as Issue</button>
+  </div>
+  <p class="submit-help" id="submit-warning" style="color:var(--red-error); display:none;">Fix the validation errors above before submitting.</p>
+</div>
+
+</main>
+
+<footer>
+  <div>Add a person · India — 2500 years to the Republic</div>
+  <div><a href="https://github.com/naklitechie/people-2500">repo</a></div>
+</footer>
+
+<script type="module">
+import {
+  ERAS, COUNTRIES, COUNTRY_NAMES, PRECISIONS,
+  validatePerson, checkId
+} from "./lib/validators.js";
+import { downloadJson, openPullRequest, openIssue, suggestFilenameFor } from "./lib/submit.js";
+
+const $ = (s) => document.querySelector(s);
+const $$ = (s) => Array.from(document.querySelectorAll(s));
+
+/* ---------- Populate selects ---------- */
+ERAS.forEach(e => $("#era").insertAdjacentHTML("beforeend", `<option value="${e}">${e.replace(/-/g, " ")}</option>`));
+const sortedCountries = Object.entries(COUNTRY_NAMES).sort((a,b) => a[1].localeCompare(b[1]));
+function populateCountries(selectEl) {
+  selectEl.insertAdjacentHTML("beforeend", `<option value="IN">India (IN)</option>`);
+  sortedCountries.forEach(([code, name]) => {
+    if (code === "IN") return;
+    selectEl.insertAdjacentHTML("beforeend", `<option value="${code}">${name} (${code})</option>`);
+  });
+}
+populateCountries($("#bp-country"));
+populateCountries($("#dp-country"));
+
+/* ---------- ID auto-suggest ---------- */
+function slugify(s) {
+  return s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "")
+    .replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+let idTouched = false;
+$("#id").addEventListener("input", () => idTouched = true);
+$("#name").addEventListener("input", (e) => {
+  if (!idTouched) {
+    // Use last word of name as the slug (Gandhi → "gandhi", "Bhagat Singh" → "singh"-ish, but keep last 2 words for compounds)
+    const parts = slugify(e.target.value).split("-").filter(Boolean);
+    $("#id").value = parts.length === 1 ? parts[0] : parts.slice(-2).join("-");
+  }
+});
+$("#id").addEventListener("input", () => {
+  $("#id-msg").innerHTML = checkId($("#id").value).map(m => `<li class="${m.level}">${m.msg}</li>`).join("");
+});
+
+/* ---------- Birthplace + deathplace map pickers ---------- */
+let bpMap, bpMarker, dpMap, dpMarker;
+window.addEventListener("load", () => {
+  bpMap = L.map("bp-map").setView([22, 82], 4);
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {maxZoom: 19, attribution: "&copy; OSM"}).addTo(bpMap);
+  bpMap.on("click", (e) => setLifespanMarker("bp", e.latlng.lat, e.latlng.lng, "click"));
+
+  dpMap = L.map("dp-map").setView([22, 82], 4);
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {maxZoom: 19, attribution: "&copy; OSM"}).addTo(dpMap);
+  dpMap.on("click", (e) => setLifespanMarker("dp", e.latlng.lat, e.latlng.lng, "click"));
+
+  ["bp-lat", "bp-lon", "dp-lat", "dp-lon"].forEach(id => {
+    $("#" + id).addEventListener("input", () => syncLifespanFromInputs());
+  });
+});
+function setLifespanMarker(prefix, lat, lon, source = "input") {
+  const map = prefix === "bp" ? bpMap : dpMap;
+  let marker = prefix === "bp" ? bpMarker : dpMarker;
+  if (!marker) {
+    marker = L.marker([lat, lon], {draggable: true}).addTo(map);
+    marker.on("dragend", (e) => setLifespanMarker(prefix, e.target.getLatLng().lat, e.target.getLatLng().lng, "drag"));
+    if (prefix === "bp") bpMarker = marker; else dpMarker = marker;
+  } else {
+    marker.setLatLng([lat, lon]);
+  }
+  if (source !== "input") {
+    $(`#${prefix}-lat`).value = lat.toFixed(4);
+    $(`#${prefix}-lon`).value = lon.toFixed(4);
+  }
+  refresh();
+}
+function syncLifespanFromInputs() {
+  ["bp", "dp"].forEach(prefix => {
+    const lat = parseFloat($(`#${prefix}-lat`).value), lon = parseFloat($(`#${prefix}-lon`).value);
+    if (!isNaN(lat) && !isNaN(lon)) setLifespanMarker(prefix, lat, lon, "input");
+  });
+  refresh();
+}
+
+/* ---------- Load events corpus for event-ref step picker ---------- */
+const CORPUS_FILES = ["events_independence.json", "events_mughal.json", "events_sur.json"];
+let corpus = [];
+let corpusById = new Map();
+async function loadCorpus() {
+  try {
+    const docs = await Promise.all(
+      CORPUS_FILES.map(f =>
+        fetch(`../data/events/${f}`).then(r => r.ok ? r.json() : null).catch(() => null)
+      )
+    );
+    corpus = docs.filter(Boolean).flatMap(d => d.events || []);
+    corpus.forEach(ev => corpusById.set(ev.id, ev));
+    $("#corpus-status").textContent = `Loaded ${corpus.length} events from the corpus.`;
+  } catch (err) {
+    $("#corpus-status").innerHTML = `<span style="color:var(--red-error);">Couldn't load the events corpus (${err.message}). You can still type event ids manually in event-ref steps.</span>`;
+  }
+}
+loadCorpus();
+
+/* ---------- Track-step builder ---------- */
+let stepCount = 0;
+
+function addEventRefStep() {
+  stepCount++;
+  const stepId = `step-${stepCount}`;
+  // Use a datalist for in-place event id autocomplete
+  const datalistOptions = corpus.map(ev =>
+    `<option value="${ev.id}">${ev.title} · ${ev.date.display}</option>`
+  ).join("");
+
+  $("#steps-list").insertAdjacentHTML("beforeend", `
+    <div class="step-card" data-step-id="${stepId}" data-kind="event-ref">
+      <div class="step-head">
+        <div>
+          <span class="step-num"></span>
+          <span class="step-kind-label">Event-ref</span>
+          <span class="step-event" data-field="resolved-title">(pick an event)</span>
+        </div>
+        <div style="display:flex; gap:6px;">
+          <button type="button" class="btn small" data-action="up">↑</button>
+          <button type="button" class="btn small" data-action="down">↓</button>
+          <button type="button" class="btn small danger" data-action="remove">×</button>
+        </div>
+      </div>
+      <div class="field">
+        <label>Event id <span class="req">*</span></label>
+        <div class="hint">Type to search the corpus, or paste an id directly.</div>
+        <input type="text" data-field="event_id" list="events-datalist-${stepId}" placeholder="e.g. salt-march-1930">
+        <datalist id="events-datalist-${stepId}">${datalistOptions}</datalist>
+      </div>
+      <div class="field">
+        <label>Role <span class="req">*</span></label>
+        <div class="hint">The person's specific part in this event. <em>e.g. "Led the march from Sabarmati to Dandi at sixty-one — 78 satyagrahis, 24 days, 240 miles."</em></div>
+        <textarea data-field="role" rows="2"></textarea>
+      </div>
+      <div class="field">
+        <label>Note <span class="opt">optional</span></label>
+        <div class="hint">Biographical context, written from the person's life arc.</div>
+        <textarea data-field="note" rows="2"></textarea>
+      </div>
+    </div>
+  `);
+  // Resolve the title once an event id is entered
+  const card = $(`[data-step-id="${stepId}"]`);
+  card.querySelector('[data-field="event_id"]').addEventListener("input", (e) => {
+    const ev = corpusById.get(e.target.value.trim());
+    card.querySelector('[data-field="resolved-title"]').textContent = ev ? ev.title : `(unknown id "${e.target.value}")`;
+  });
+  renumberSteps();
+  refresh();
+}
+
+function addMomentStep() {
+  stepCount++;
+  const stepId = `step-${stepCount}`;
+  const countryOptions =
+    `<option value="IN">India (IN)</option>` +
+    sortedCountries
+      .filter(([c]) => c !== "IN")
+      .map(([code, name]) => `<option value="${code}">${name} (${code})</option>`)
+      .join("");
+  const precisionOptions = PRECISIONS.map(p => `<option value="${p}">${p}</option>`).join("");
+
+  $("#steps-list").insertAdjacentHTML("beforeend", `
+    <div class="step-card" data-step-id="${stepId}" data-kind="moment">
+      <div class="step-head">
+        <div>
+          <span class="step-num"></span>
+          <span class="step-kind-label">Moment</span>
+          <span class="step-event" data-field="resolved-title">(give it a tooltip)</span>
+        </div>
+        <div style="display:flex; gap:6px;">
+          <button type="button" class="btn small" data-action="up">↑</button>
+          <button type="button" class="btn small" data-action="down">↓</button>
+          <button type="button" class="btn small danger" data-action="remove">×</button>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Moment id <span class="req">*</span></label>
+        <div class="hint">Unique within this person's track. Kebab-case. <em>e.g. "gandhi-pietermaritzburg-1893"</em></div>
+        <input type="text" data-field="id" placeholder="person-place-year">
+      </div>
+
+      <div class="field">
+        <label>Tooltip <span class="req">*</span> <span class="opt">≤ 80 chars</span></label>
+        <input type="text" data-field="tooltip" placeholder="Thrown off the train at Pietermaritzburg, 1893">
+      </div>
+
+      <div class="field">
+        <label>Summary <span class="req">*</span> <span class="opt">≤ 160 chars</span></label>
+        <textarea data-field="summary" rows="2"></textarea>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label>Date — start <span class="req">*</span></label>
+          <input type="text" data-field="date-start" placeholder="1893-06-07">
+        </div>
+        <div class="field">
+          <label>Date — end <span class="req">*</span></label>
+          <input type="text" data-field="date-end" placeholder="1893-06-07">
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label>Precision</label>
+          <select data-field="date-precision">${precisionOptions}</select>
+        </div>
+        <div class="field">
+          <label>Approximate?</label>
+          <select data-field="date-approximate">
+            <option value="false">No</option>
+            <option value="true">Yes</option>
+          </select>
+        </div>
+      </div>
+      <div class="field">
+        <label>Date display <span class="req">*</span></label>
+        <input type="text" data-field="date-display" placeholder="7 June 1893">
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label>Location name <span class="req">*</span></label>
+          <input type="text" data-field="loc-name" placeholder="Pietermaritzburg railway station">
+        </div>
+        <div class="field">
+          <label>Region <span class="opt">optional</span></label>
+          <input type="text" data-field="loc-region" placeholder="Natal Colony">
+        </div>
+      </div>
+      <div class="field">
+        <label>Country <span class="req">*</span></label>
+        <div class="hint">Use OFF for places outside the asset's bounding box (London, NYC, Pretoria, etc.).</div>
+        <select data-field="loc-country">${countryOptions}</select>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label>Latitude <span class="req">*</span></label>
+          <input type="number" data-field="lat" step="0.0001">
+        </div>
+        <div class="field">
+          <label>Longitude <span class="req">*</span></label>
+          <input type="number" data-field="lon" step="0.0001">
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Note <span class="opt">optional</span></label>
+        <div class="hint">Biographical context, written from the person's life arc — different from a thread's <em>note</em>.</div>
+        <textarea data-field="note" rows="2"></textarea>
+      </div>
+    </div>
+  `);
+  const card = $(`[data-step-id="${stepId}"]`);
+  card.querySelector('[data-field="tooltip"]').addEventListener("input", (e) => {
+    card.querySelector('[data-field="resolved-title"]').textContent = e.target.value || "(give it a tooltip)";
+  });
+  renumberSteps();
+  refresh();
+}
+
+$("#add-event-ref").addEventListener("click", () => {
+  $$(".step-toggle button").forEach(b => b.classList.remove("active"));
+  $("#add-event-ref").classList.add("active");
+  addEventRefStep();
+});
+$("#add-moment").addEventListener("click", () => {
+  $$(".step-toggle button").forEach(b => b.classList.remove("active"));
+  $("#add-moment").classList.add("active");
+  addMomentStep();
+});
+
+function renumberSteps() {
+  $$("#steps-list .step-card").forEach((card, i) => {
+    card.querySelector(".step-num").textContent = i + 1;
+  });
+}
+
+document.addEventListener("click", (e) => {
+  const card = e.target.closest(".step-card");
+  if (!card) return;
+  if (e.target.matches('[data-action="remove"]')) { card.remove(); renumberSteps(); refresh(); }
+  if (e.target.matches('[data-action="up"]'))     { const prev = card.previousElementSibling; if (prev) card.parentElement.insertBefore(card, prev); renumberSteps(); refresh(); }
+  if (e.target.matches('[data-action="down"]'))   { const next = card.nextElementSibling; if (next) card.parentElement.insertBefore(next, card); renumberSteps(); refresh(); }
+});
+
+/* ---------- Build JSON ---------- */
+function build() {
+  const person = {
+    id: $("#id").value.trim(),
+    name: $("#name").value.trim(),
+    tooltip: $("#tooltip").value.trim(),
+    summary: $("#summary").value.trim(),
+    era: $("#era").value,
+    lifespan: {
+      born: $("#born").value.trim(),
+      died: $("#died").value.trim() || null,
+      birthplace: {
+        name: $("#bp-name").value.trim(),
+        country: $("#bp-country").value,
+        lat: parseFloat($("#bp-lat").value),
+        lon: parseFloat($("#bp-lon").value),
+      },
+    },
+    links: [],
+    track: [],
+    verified: $("#verified").value === "true",
+  };
+  if (person.lifespan.died) {
+    person.lifespan.deathplace = {
+      name: $("#dp-name").value.trim(),
+      country: $("#dp-country").value,
+      lat: parseFloat($("#dp-lat").value),
+      lon: parseFloat($("#dp-lon").value),
+    };
+  }
+  if ($("#wiki-url").value.trim()) {
+    person.links.push({
+      url: $("#wiki-url").value.trim(),
+      label: $("#wiki-label").value.trim() || "Wikipedia",
+      type: "wikipedia",
+    });
+  }
+  $$("#steps-list .step-card").forEach(card => {
+    const kind = card.dataset.kind;
+    if (kind === "event-ref") {
+      const step = {
+        kind: "event-ref",
+        event_id: card.querySelector('[data-field="event_id"]').value.trim(),
+        role:     card.querySelector('[data-field="role"]').value.trim(),
+      };
+      const note = card.querySelector('[data-field="note"]').value.trim();
+      if (note) step.note = note;
+      person.track.push(step);
+    } else {
+      const lat = parseFloat(card.querySelector('[data-field="lat"]').value);
+      const lon = parseFloat(card.querySelector('[data-field="lon"]').value);
+      const step = {
+        kind: "moment",
+        id: card.querySelector('[data-field="id"]').value.trim(),
+        tooltip: card.querySelector('[data-field="tooltip"]').value.trim(),
+        summary: card.querySelector('[data-field="summary"]').value.trim(),
+        date: {
+          start: card.querySelector('[data-field="date-start"]').value.trim(),
+          end:   card.querySelector('[data-field="date-end"]').value.trim(),
+          precision: card.querySelector('[data-field="date-precision"]').value,
+          approximate: card.querySelector('[data-field="date-approximate"]').value === "true",
+          display: card.querySelector('[data-field="date-display"]').value.trim(),
+        },
+        location: {
+          name: card.querySelector('[data-field="loc-name"]').value.trim(),
+          country: card.querySelector('[data-field="loc-country"]').value,
+          points: !isNaN(lat) && !isNaN(lon) ? [{lat, lon}] : [],
+        },
+      };
+      const region = card.querySelector('[data-field="loc-region"]').value.trim();
+      if (region) step.location.region = region;
+      const note = card.querySelector('[data-field="note"]').value.trim();
+      if (note) step.note = note;
+      person.track.push(step);
+    }
+  });
+  return person;
+}
+
+/* ---------- Validate + preview ---------- */
+function refresh() {
+  const person = build();
+  const result = validatePerson(person);
+
+  // Cross-reference event-ref ids against loaded corpus
+  if (corpus.length > 0) {
+    person.track.forEach((step, i) => {
+      if (step.kind === "event-ref" && step.event_id && !corpusById.has(step.event_id)) {
+        result.warnings.push(`Step ${i + 1}: event_id "${step.event_id}" not found in the loaded corpus.`);
+      }
+    });
+  }
+
+  const out = $("#validation-output");
+  if (result.errors.length === 0 && result.warnings.length === 0) {
+    out.innerHTML = `<div class="msg-list"><li class="ok">Looks good — no errors. You're ready to submit.</li></div>`;
+    $("#validation-card").className = "card ok";
+  } else {
+    let html = "<ul class='msg-list'>";
+    for (const e of result.errors) html += `<li class="error">${e}</li>`;
+    for (const w of result.warnings) html += `<li class="warn">${w}</li>`;
+    html += "</ul>";
+    out.innerHTML = html;
+    $("#validation-card").className = `card ${result.errors.length ? 'error' : 'warn'}`;
+  }
+
+  const ready = result.errors.length === 0;
+  $("#btn-download").disabled = !ready;
+  $("#btn-pr").disabled = !ready;
+  $("#btn-issue").disabled = !ready;
+  $("#submit-warning").style.display = ready ? "none" : "block";
+
+  const file = {
+    campaign: person.id ? slugify(person.id) : "new",
+    scope: "Single-person contribution from the form. Reviewer should fold into the appropriate people file.",
+    updated: new Date().toISOString().slice(0, 10),
+    people: [person],
+  };
+  $("#json-preview").textContent = JSON.stringify(file, null, 2);
+  return file;
+}
+document.addEventListener("input", refresh);
+document.addEventListener("change", refresh);
+
+/* ---------- Submit ---------- */
+function currentJsonText() { return JSON.stringify(refresh(), null, 2); }
+function currentSlug()     { return $("#id").value || "new"; }
+
+$("#btn-download").addEventListener("click", () => downloadJson(currentJsonText(), suggestFilenameFor("person", currentSlug())));
+$("#btn-pr").addEventListener("click",       () => openPullRequest(currentJsonText(), "person", currentSlug()));
+$("#btn-issue").addEventListener("click",    () => openIssue(currentJsonText(), "person", currentSlug()));
+
+refresh();
+</script>
+
+</body>
+</html>

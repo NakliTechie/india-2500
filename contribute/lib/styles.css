@@ -1,0 +1,299 @@
+/* Shared shell for contribute/* pages — Naklitechie tokens, no shadows,
+   no gradients, two type weights, cream surfaces. Mirrors web/template.html
+   so the contribute UX feels like a sibling of the asset, not a separate
+   tool. */
+
+:root {
+  --cream:             #F7F2E7;
+  --cream-card:        #FFFDF7;
+  --cream-border:      rgba(60, 45, 15, 0.35);
+  --cream-border-soft: rgba(60, 45, 15, 0.14);
+  --cream-text:        #2C2A24;
+  --cream-muted:       #6B665A;
+  --cream-faint:       #938D7E;
+
+  --purple: #534AB7;
+  --amber:  #BA7517;
+  --rose:   #72243E;
+  --blue:   #185FA5;
+  --pink:   #D4537E;
+  --green-ok:    #5a7a2a;
+  --red-error:   #b03018;
+  --orange-warn: #BA7517;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--cream);
+  color: var(--cream-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--purple); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+main {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 28px 24px 48px;
+}
+
+.contribute-header {
+  border-bottom: 1px solid var(--cream-border-soft);
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+  display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
+}
+.contribute-header .brand {
+  font-size: 14px; color: var(--cream-text); text-decoration: none;
+  font-weight: 500;
+}
+.contribute-header .nav { display: flex; gap: 16px; flex-wrap: wrap; font-size: 13px; }
+.contribute-header .nav a { color: var(--cream-muted); }
+.contribute-header .nav a:hover { color: var(--cream-text); }
+
+h1 { font-size: 22px; font-weight: 500; margin: 0 0 6px; }
+h2 { font-size: 16px; font-weight: 500; margin: 24px 0 8px; padding-top: 12px; border-top: 1px solid var(--cream-border-soft); }
+h2:first-of-type { padding-top: 0; border-top: none; }
+.subtitle { color: var(--cream-muted); font-style: italic; margin: 0 0 24px; }
+
+/* ---------- Cards ---------- */
+.card {
+  background: var(--cream-card);
+  border: 1px solid var(--cream-border-soft);
+  border-radius: 10px;
+  padding: 20px 22px;
+  margin-bottom: 14px;
+}
+.card.error { border-left: 3px solid var(--red-error); }
+.card.warn  { border-left: 3px solid var(--orange-warn); }
+.card.ok    { border-left: 3px solid var(--green-ok); }
+
+.card .help {
+  font-size: 12px;
+  color: var(--cream-muted);
+  margin: 4px 0 12px;
+  line-height: 1.5;
+}
+
+/* ---------- Big landing buttons ---------- */
+.choices {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+  margin: 24px 0;
+}
+.choice {
+  display: block;
+  padding: 22px 22px 20px;
+  background: var(--cream-card);
+  border: 1px solid var(--cream-border-soft);
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--cream-text);
+  transition: border-color 0.12s ease;
+}
+.choice:hover { border-color: var(--cream-border); text-decoration: none; }
+.choice .choice-title { font-size: 16px; font-weight: 500; margin-bottom: 4px; }
+.choice .choice-desc  { font-size: 13px; color: var(--cream-muted); line-height: 1.5; }
+
+/* ---------- Form fields ---------- */
+.field { margin-bottom: 14px; }
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 600px) { .field-row { grid-template-columns: 1fr; } }
+
+.field label {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--cream-text);
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+.field label .req { color: var(--red-error); margin-left: 3px; }
+.field label .opt { color: var(--cream-faint); font-weight: 400; text-transform: none; letter-spacing: 0; margin-left: 4px; }
+
+.field .hint {
+  font-size: 12px;
+  color: var(--cream-muted);
+  margin-top: -2px;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+input[type="text"], input[type="number"], input[type="url"], input[type="date"],
+textarea, select {
+  width: 100%;
+  font-family: inherit;
+  font-size: 13px;
+  padding: 8px 10px;
+  background: var(--cream);
+  border: 1px solid var(--cream-border);
+  border-radius: 6px;
+  color: var(--cream-text);
+}
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--purple);
+}
+textarea { resize: vertical; min-height: 70px; line-height: 1.5; }
+
+.charcount { font-size: 11px; color: var(--cream-faint); margin-top: 2px; text-align: right; font-variant-numeric: tabular-nums; }
+.charcount.over { color: var(--red-error); }
+.charcount.warn { color: var(--orange-warn); }
+
+/* ---------- Inline validation messages ---------- */
+.msg-list { margin: 10px 0 0; padding: 0; list-style: none; }
+.msg-list li { padding: 4px 8px; margin-bottom: 3px; border-radius: 4px; font-size: 12px; line-height: 1.5; }
+.msg-list li.error { background: rgba(176, 48, 24, 0.10); color: #7a2010; }
+.msg-list li.warn  { background: rgba(186, 117, 23, 0.10); color: #6a4310; }
+.msg-list li.ok    { background: rgba(90, 122, 42, 0.10); color: #3a5018; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  font-family: inherit;
+  font-size: 13px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 1px solid var(--cream-border);
+  background: transparent;
+  color: var(--cream-text);
+  cursor: pointer;
+  transition: background 0.12s ease, border-color 0.12s ease;
+}
+.btn:hover:not(:disabled) { background: rgba(60, 45, 15, 0.06); border-color: rgba(60, 45, 15, 0.55); }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.btn.primary {
+  background: var(--cream-text);
+  color: var(--cream);
+  border-color: var(--cream-text);
+}
+.btn.primary:hover:not(:disabled) { background: #1a1815; border-color: #1a1815; }
+.btn.danger { color: var(--red-error); border-color: rgba(176, 48, 24, 0.3); }
+.btn.small { font-size: 12px; padding: 5px 11px; }
+
+.btn-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+
+/* ---------- Repeating field groups (links, sources, points, track steps) ---------- */
+.group {
+  border: 1px solid var(--cream-border-soft);
+  border-radius: 8px;
+  padding: 14px 16px 8px;
+  margin-bottom: 10px;
+  background: rgba(60, 45, 15, 0.02);
+  position: relative;
+}
+.group .group-head {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 8px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: var(--cream-faint);
+}
+.group .group-num { font-weight: 500; color: var(--cream-muted); }
+
+/* ---------- Map picker ---------- */
+.map-picker {
+  height: 320px;
+  border-radius: 8px;
+  border: 1px solid var(--cream-border-soft);
+  margin-top: 8px;
+  overflow: hidden;
+}
+.coords-display {
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  color: var(--cream-muted);
+  margin-top: 6px;
+}
+
+/* ---------- Output / preview block ---------- */
+.json-preview {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Cascadia Code", monospace;
+  font-size: 11.5px;
+  line-height: 1.5;
+  background: #FAF6E8;
+  border: 1px solid var(--cream-border-soft);
+  border-radius: 6px;
+  padding: 12px 14px;
+  overflow-x: auto;
+  white-space: pre;
+  color: var(--cream-text);
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+/* ---------- Multi-select pill list (categories, etc.) ---------- */
+.pill-select {
+  display: flex; flex-wrap: wrap; gap: 6px;
+}
+.pill-select label {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 12px; padding: 5px 11px;
+  border: 1px solid var(--cream-border);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--cream-muted);
+  cursor: pointer;
+  text-transform: none; letter-spacing: 0; font-weight: 400;
+  margin: 0;
+}
+.pill-select input { display: none; }
+.pill-select label:has(input:checked) {
+  background: var(--cream-text);
+  color: var(--cream);
+  border-color: var(--cream-text);
+}
+
+/* ---------- Stepper / breadcrumb above forms ---------- */
+.steps {
+  display: flex; gap: 6px; flex-wrap: wrap;
+  margin-bottom: 18px;
+  font-size: 11px;
+  color: var(--cream-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+.steps .step {
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: rgba(60, 45, 15, 0.06);
+}
+.steps .step.active {
+  background: var(--cream-text);
+  color: var(--cream);
+}
+
+/* ---------- Footer / submission section ---------- */
+.submit-section {
+  background: var(--cream-card);
+  border: 1px solid var(--cream-border-soft);
+  border-radius: 10px;
+  padding: 22px;
+  margin-top: 24px;
+}
+.submit-section .submit-help {
+  font-size: 12px; color: var(--cream-muted); margin: 0 0 12px; line-height: 1.5;
+}
+.submit-section .submit-help strong { color: var(--cream-text); }
+
+.submit-buttons {
+  display: flex; gap: 10px; flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+footer {
+  border-top: 1px solid var(--cream-border-soft);
+  margin-top: 28px;
+  padding: 20px 0;
+  font-size: 12px;
+  color: var(--cream-faint);
+  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+}
+footer a { color: var(--cream-muted); }

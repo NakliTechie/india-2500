@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Add a thread · Contribute</title>
+<link rel="stylesheet" href="lib/styles.css">
+<style>
+  /* Step builder UI for threads */
+  .event-search { position: relative; }
+  .event-results {
+    position: absolute; left: 0; right: 0; top: calc(100% + 4px);
+    background: var(--cream-card);
+    border: 1px solid var(--cream-border);
+    border-radius: 6px;
+    max-height: 280px;
+    overflow-y: auto;
+    z-index: 10;
+    display: none;
+  }
+  .event-results.open { display: block; }
+  .event-results .row {
+    padding: 8px 12px;
+    cursor: pointer;
+    border-bottom: 1px solid var(--cream-border-soft);
+  }
+  .event-results .row:last-child { border-bottom: none; }
+  .event-results .row:hover { background: rgba(60,45,15,0.06); }
+  .event-results .row .row-title { font-size: 13px; color: var(--cream-text); font-weight: 500; }
+  .event-results .row .row-meta  { font-size: 11px; color: var(--cream-faint); margin-top: 1px; }
+  .event-results .empty { padding: 12px; font-size: 12px; color: var(--cream-faint); font-style: italic; }
+
+  .step-card {
+    border: 1px solid var(--cream-border-soft);
+    border-radius: 8px;
+    padding: 14px 16px 8px;
+    margin-bottom: 10px;
+    background: rgba(60, 45, 15, 0.02);
+  }
+  .step-card .step-head {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 10px;
+  }
+  .step-card .step-num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 22px; height: 22px; border-radius: 50%;
+    background: var(--purple); color: white; font-size: 11px; font-weight: 500;
+  }
+  .step-card .step-event {
+    font-size: 13px; font-weight: 500; color: var(--cream-text);
+    margin-left: 8px;
+  }
+  .step-card .step-event-meta { font-size: 11px; color: var(--cream-faint); margin-top: 2px; }
+  .step-card .step-actions { display: flex; gap: 6px; }
+  .step-card .step-fields { margin-top: 4px; }
+  .corpus-status { font-size: 12px; color: var(--cream-muted); margin-top: 6px; }
+</style>
+</head>
+<body>
+
+<header class="contribute-header">
+  <a class="brand" href="../web/india-history.html">India — 2500 years to the Republic</a>
+  <nav class="nav">
+    <a href="index.html">All forms</a>
+    <a href="event.html">Event</a>
+    <a href="person.html">Person</a>
+    <a href="https://github.com/naklitechie/india-2500/blob/main/docs/THREADS_SCHEMA.md" target="_blank">Schema</a>
+  </nav>
+</header>
+
+<main>
+
+<h1>Add a thread</h1>
+<p class="subtitle">A curated walk through events that already exist in the corpus. Make an argument, trace a chain, propose a counterfactual.</p>
+
+<div class="card">
+  <h2 style="margin-top:0; padding-top:0; border-top:none;">What makes a good thread</h2>
+  <ul>
+    <li><strong>A thesis.</strong> If you can't write the coda in one paragraph, the thread isn't ready. The coda is the closing argument — the reason for the walk.</li>
+    <li><strong>Three to ten steps.</strong> Fewer than three isn't a chain; more than ten is too heavy to read.</li>
+    <li><strong>Per-step prose.</strong> Each step needs your <em>note</em> (why this step matters to the argument) and a <em>transition</em> (the bridge to the next step). The last step has no transition.</li>
+    <li><strong>References existing events.</strong> If an event you want isn't in the corpus yet, add it first via <a href="event.html">the event form</a> — then come back here.</li>
+  </ul>
+</div>
+
+<form id="thread-form">
+
+  <!-- Section 1: Thread metadata -->
+  <div class="card">
+    <h2 style="margin-top:0; padding-top:0; border-top:none;">1. Thread metadata</h2>
+
+    <div class="field">
+      <label for="title">Title <span class="req">*</span></label>
+      <div class="hint">The argument in a phrase. <em>e.g. "Chauri Chaura and the cost of non-violence"</em></div>
+      <input type="text" id="title" required>
+    </div>
+
+    <div class="field">
+      <label for="id">ID <span class="req">*</span> <span class="opt">kebab-case, auto-suggested</span></label>
+      <input type="text" id="id" required>
+      <ul class="msg-list" id="id-msg"></ul>
+    </div>
+
+    <div class="field">
+      <label for="subtitle">Subtitle <span class="opt">italic line under the title</span></label>
+      <input type="text" id="subtitle" placeholder="A short framing line">
+    </div>
+
+    <div class="field">
+      <label for="summary">Summary <span class="req">*</span></label>
+      <div class="hint">One paragraph at the top of the reader. The setup for the walk.</div>
+      <textarea id="summary" rows="3" required></textarea>
+    </div>
+
+    <div class="field-row">
+      <div class="field">
+        <label for="kind">Kind <span class="req">*</span></label>
+        <select id="kind" required>
+          <option value="narrative">Narrative — a story across time</option>
+          <option value="causal-chain">Causal chain — A led to B led to C</option>
+          <option value="thematic">Thematic — events sharing a theme</option>
+          <option value="counterfactual">Counterfactual — what if</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="verified">Verified? <span class="req">*</span></label>
+        <select id="verified" required>
+          <option value="false">No — mark unverified (UI tags it)</option>
+          <option value="true">Yes — verified</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field">
+      <label>Era span <span class="req">*</span> <span class="opt">tick at least one</span></label>
+      <div class="hint">Which eras does this thread span? Used by the timeline.</div>
+      <div class="pill-select" id="eras"></div>
+    </div>
+
+    <div class="field-row">
+      <div class="field">
+        <label for="ds-start">Date span — start <span class="req">*</span></label>
+        <input type="text" id="ds-start" placeholder="1885 or -322">
+      </div>
+      <div class="field">
+        <label for="ds-end">Date span — end <span class="req">*</span></label>
+        <input type="text" id="ds-end" placeholder="1947">
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 2: Pick events + author per-step prose -->
+  <div class="card">
+    <h2 style="margin-top:0; padding-top:0; border-top:none;">2. Build the walk</h2>
+    <p class="help">Search the events corpus and add steps in chronological order. Each step gets a <em>note</em> and (except the last) a <em>transition</em>.</p>
+
+    <div class="field event-search">
+      <label for="event-q">Add a step — search for an event</label>
+      <input type="text" id="event-q" placeholder="Type to search by title, place, or year…" autocomplete="off">
+      <div class="event-results" id="event-results"></div>
+      <div class="corpus-status" id="corpus-status">Loading the events corpus…</div>
+    </div>
+
+    <div id="steps-list" style="margin-top:18px;"></div>
+  </div>
+
+  <!-- Section 3: Coda -->
+  <div class="card">
+    <h2 style="margin-top:0; padding-top:0; border-top:none;">3. Coda</h2>
+    <div class="field">
+      <label for="coda">Closing argument <span class="req">*</span> <span class="opt">20–150 words</span></label>
+      <div class="hint">The thread's thesis, distilled. Shown at the bottom of the reader. If you can't write this in one paragraph, the thread isn't ready.</div>
+      <textarea id="coda" rows="5" required></textarea>
+      <div class="charcount" id="coda-count">0 words</div>
+    </div>
+  </div>
+
+</form>
+
+<div class="card" id="validation-card">
+  <h2 style="margin-top:0; padding-top:0; border-top:none;">Validation</h2>
+  <div id="validation-output">Fill in the form above; errors will appear here as you build the thread.</div>
+</div>
+
+<div class="card">
+  <h2 style="margin-top:0; padding-top:0; border-top:none;">Preview</h2>
+  <div class="json-preview" id="json-preview">// fill in the form to see the preview</div>
+</div>
+
+<div class="submit-section">
+  <h2 style="margin-top:0; padding-top:0; border-top:none;">Submit your contribution</h2>
+  <p class="submit-help"><strong>Download</strong> saves the JSON to your computer. <strong>Pull request</strong> opens GitHub's web editor with the file pre-populated. <strong>Issue</strong> opens a GitHub issue with the JSON in the body.</p>
+  <div class="submit-buttons">
+    <button type="button" class="btn primary" id="btn-download">Download JSON</button>
+    <button type="button" class="btn" id="btn-pr">Open as Pull Request</button>
+    <button type="button" class="btn" id="btn-issue">Open as Issue</button>
+  </div>
+  <p class="submit-help" id="submit-warning" style="color:var(--red-error); display:none;">Fix the validation errors above before submitting.</p>
+</div>
+
+</main>
+
+<footer>
+  <div>Add a thread · India — 2500 years to the Republic</div>
+  <div><a href="https://github.com/naklitechie/india-2500">repo</a></div>
+</footer>
+
+<script type="module">
+import { ERAS, validateThread, checkId } from "./lib/validators.js";
+import { downloadJson, openPullRequest, openIssue, suggestFilenameFor } from "./lib/submit.js";
+
+const $ = (s) => document.querySelector(s);
+const $$ = (s) => Array.from(document.querySelectorAll(s));
+
+/* ---------- Era pills ---------- */
+ERAS.forEach(e => $("#eras").insertAdjacentHTML("beforeend",
+  `<label><input type="checkbox" value="${e}">${e.replace(/-/g, " ")}</label>`));
+
+/* ---------- ID auto-suggest ---------- */
+function slugify(s) {
+  return s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "")
+    .replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+let idTouched = false;
+$("#id").addEventListener("input", () => idTouched = true);
+$("#title").addEventListener("input", (e) => {
+  if (!idTouched) $("#id").value = slugify(e.target.value);
+});
+$("#id").addEventListener("input", () => renderMsgs("#id-msg", checkId($("#id").value)));
+function renderMsgs(elSel, msgs) {
+  const el = $(elSel);
+  el.innerHTML = msgs.map(m => `<li class="${m.level}">${m.msg}</li>`).join("");
+}
+
+/* ---------- Coda word counter ---------- */
+$("#coda").addEventListener("input", () => {
+  const w = $("#coda").value.trim() ? $("#coda").value.trim().split(/\s+/).length : 0;
+  const out = $("#coda-count");
+  out.textContent = `${w} word${w === 1 ? "" : "s"}`;
+  out.className = "charcount";
+  if (w < 20 || w > 150) out.classList.add("warn");
+});
+
+/* ---------- Load events corpus from the live data/ files ---------- */
+const CORPUS_FILES = ["events_independence.json", "events_mughal.json", "events_sur.json"];
+let corpus = [];
+let corpusById = new Map();
+
+async function loadCorpus() {
+  try {
+    const docs = await Promise.all(
+      CORPUS_FILES.map(f =>
+        fetch(`../data/events/${f}`).then(r => r.ok ? r.json() : null).catch(() => null)
+      )
+    );
+    corpus = docs.filter(Boolean).flatMap(d => d.events || []);
+    corpus.forEach(ev => corpusById.set(ev.id, ev));
+    $("#corpus-status").textContent = `Loaded ${corpus.length} events from the corpus.`;
+  } catch (err) {
+    $("#corpus-status").innerHTML = `<span style="color:var(--red-error);">Couldn't load the events corpus (${err.message}). You can still type event ids manually below.</span>`;
+  }
+}
+loadCorpus();
+
+/* ---------- Search-as-you-type ---------- */
+$("#event-q").addEventListener("input", () => {
+  const q = $("#event-q").value.trim().toLowerCase();
+  const results = $("#event-results");
+  if (!q) { results.classList.remove("open"); return; }
+
+  // Don't show events already added as steps
+  const usedIds = new Set($$("#steps-list .step-card").map(g => g.dataset.eventId));
+  const hits = corpus.filter(ev => {
+    if (usedIds.has(ev.id)) return false;
+    const hay = [ev.id, ev.title, ev.tooltip, ev.summary, ev.location?.name].join(" ").toLowerCase();
+    return hay.includes(q);
+  }).slice(0, 12);
+
+  if (hits.length === 0) {
+    results.innerHTML = `<div class="empty">No matches in the corpus. You can also type an event id manually as a step (the validator will resolve it on the server).</div>`;
+  } else {
+    results.innerHTML = hits.map(ev => `
+      <div class="row" data-event-id="${ev.id}">
+        <div class="row-title">${ev.title}</div>
+        <div class="row-meta">${ev.date.display} · ${ev.location.name} · <code>${ev.id}</code></div>
+      </div>
+    `).join("");
+  }
+  results.classList.add("open");
+});
+
+document.addEventListener("click", (e) => {
+  // Hide search results when clicking outside
+  if (!e.target.closest(".event-search")) {
+    $("#event-results").classList.remove("open");
+  }
+});
+
+$("#event-results").addEventListener("click", (e) => {
+  const row = e.target.closest(".row[data-event-id]");
+  if (!row) return;
+  addStep(row.dataset.eventId);
+  $("#event-q").value = "";
+  $("#event-results").classList.remove("open");
+});
+
+/* ---------- Step list management ---------- */
+let stepCount = 0;
+function addStep(eventId) {
+  stepCount++;
+  const ev = corpusById.get(eventId);
+  const evTitle = ev ? ev.title : `(unknown — id "${eventId}")`;
+  const evMeta = ev ? `${ev.date.display} · ${ev.location.name}` : "Event id — will be resolved by the validator";
+  $("#steps-list").insertAdjacentHTML("beforeend", `
+    <div class="step-card" data-step-id="step-${stepCount}" data-event-id="${eventId}">
+      <div class="step-head">
+        <div>
+          <span class="step-num"></span>
+          <span class="step-event">${evTitle}</span>
+          <div class="step-event-meta">${evMeta}</div>
+        </div>
+        <div class="step-actions">
+          <button type="button" class="btn small" data-action="up" title="Move up">↑</button>
+          <button type="button" class="btn small" data-action="down" title="Move down">↓</button>
+          <button type="button" class="btn small danger" data-action="remove" title="Remove">×</button>
+        </div>
+      </div>
+      <div class="step-fields">
+        <div class="field">
+          <label>Note <span class="req">*</span></label>
+          <div class="hint">Why does this step matter to the argument?</div>
+          <textarea data-field="note" rows="2"></textarea>
+        </div>
+        <div class="field">
+          <label>Transition <span class="opt">leave empty for the last step</span></label>
+          <div class="hint">The bridge to the next step. Italic, light. Drives the reader forward.</div>
+          <textarea data-field="transition" rows="2"></textarea>
+        </div>
+      </div>
+    </div>
+  `);
+  renumberSteps();
+  refresh();
+}
+
+function renumberSteps() {
+  $$("#steps-list .step-card").forEach((card, i) => {
+    card.querySelector(".step-num").textContent = i + 1;
+  });
+}
+
+document.addEventListener("click", (e) => {
+  const card = e.target.closest(".step-card");
+  if (!card) return;
+  if (e.target.matches('[data-action="remove"]')) { card.remove(); renumberSteps(); refresh(); }
+  if (e.target.matches('[data-action="up"]'))     { const prev = card.previousElementSibling; if (prev) card.parentElement.insertBefore(card, prev); renumberSteps(); refresh(); }
+  if (e.target.matches('[data-action="down"]'))   { const next = card.nextElementSibling; if (next) card.parentElement.insertBefore(next, card); renumberSteps(); refresh(); }
+});
+
+/* ---------- Build the JSON object from the form ---------- */
+function build() {
+  const t = {
+    id: $("#id").value.trim(),
+    title: $("#title").value.trim(),
+    summary: $("#summary").value.trim(),
+    kind: $("#kind").value,
+    era_span: $$("#eras input:checked").map(i => i.value),
+    date_span: { start: $("#ds-start").value.trim(), end: $("#ds-end").value.trim() },
+    steps: [],
+    coda: $("#coda").value.trim(),
+    verified: $("#verified").value === "true",
+  };
+  if ($("#subtitle").value.trim()) t.subtitle = $("#subtitle").value.trim();
+  $$("#steps-list .step-card").forEach((card, i) => {
+    const ev_id = card.dataset.eventId;
+    const note  = card.querySelector('[data-field="note"]').value.trim();
+    const trans = card.querySelector('[data-field="transition"]').value.trim();
+    const isLast = i === $$("#steps-list .step-card").length - 1;
+    const step = { event_id: ev_id, note };
+    step.transition = isLast ? null : trans;
+    t.steps.push(step);
+  });
+  return t;
+}
+
+/* ---------- Validate + preview ---------- */
+function refresh() {
+  const t = build();
+  const result = validateThread(t);
+
+  // Cross-reference each step's event_id against the loaded corpus (warning only — Python validator is authoritative)
+  if (corpus.length > 0) {
+    t.steps.forEach((s, i) => {
+      if (s.event_id && !corpusById.has(s.event_id)) {
+        result.warnings.push(`Step ${i + 1}: event_id "${s.event_id}" not found in the loaded corpus. (The Python validator on the PR will confirm.)`);
+      }
+    });
+  }
+
+  const out = $("#validation-output");
+  if (result.errors.length === 0 && result.warnings.length === 0) {
+    out.innerHTML = `<div class="msg-list"><li class="ok">Looks good — no errors. You're ready to submit.</li></div>`;
+    $("#validation-card").className = "card ok";
+  } else {
+    let html = "<ul class='msg-list'>";
+    for (const e of result.errors) html += `<li class="error">${e}</li>`;
+    for (const w of result.warnings) html += `<li class="warn">${w}</li>`;
+    html += "</ul>";
+    out.innerHTML = html;
+    $("#validation-card").className = `card ${result.errors.length ? 'error' : 'warn'}`;
+  }
+
+  const ready = result.errors.length === 0;
+  $("#btn-download").disabled = !ready;
+  $("#btn-pr").disabled = !ready;
+  $("#btn-issue").disabled = !ready;
+  $("#submit-warning").style.display = ready ? "none" : "block";
+
+  const file = {
+    campaign: t.id ? slugify(t.id) : "new",
+    scope: "Single-thread contribution from the form. Reviewer should fold into the appropriate threads file.",
+    updated: new Date().toISOString().slice(0, 10),
+    threads: [t],
+  };
+  $("#json-preview").textContent = JSON.stringify(file, null, 2);
+  return file;
+}
+document.addEventListener("input", refresh);
+document.addEventListener("change", refresh);
+
+/* ---------- Submit ---------- */
+function currentJsonText() { return JSON.stringify(refresh(), null, 2); }
+function currentSlug()     { return $("#id").value || "new"; }
+
+$("#btn-download").addEventListener("click", () => downloadJson(currentJsonText(), suggestFilenameFor("thread", currentSlug())));
+$("#btn-pr").addEventListener("click",       () => openPullRequest(currentJsonText(), "thread", currentSlug()));
+$("#btn-issue").addEventListener("click",    () => openIssue(currentJsonText(), "thread", currentSlug()));
+
+refresh();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Add an event · Contribute</title>
+<link rel="stylesheet" href="lib/styles.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+<script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+</head>
+<body>
+
+<header class="contribute-header">
+  <a class="brand" href="../web/india-history.html">India — 2500 years to the Republic</a>
+  <nav class="nav">
+    <a href="index.html">All forms</a>
+    <a href="thread.html">Thread</a>
+    <a href="person.html">Person</a>
+    <a href="https://github.com/naklitechie/india-2500/blob/main/docs/SCHEMA.md" target="_blank">Schema</a>
+  </nav>
+</header>
+
+<main>
+
+<h1>Add an event</h1>
+<p class="subtitle">A single historical event — a battle, a treaty, a coronation, a published work. The form generates a JSON file you can submit three ways.</p>
+
+<div class="card">
+  <h2 style="margin-top:0; padding-top:0; border-top:none;">What makes a good event entry</h2>
+  <ul>
+    <li><strong>Specific.</strong> "Battle of Panipat (1526)" not "Mughal conquest of north India".</li>
+    <li><strong>Verifiable.</strong> A date, a place, named participants. If you can't pin all three, it's probably not an event — it's a process.</li>
+    <li><strong>Sourced twice.</strong> Cross-check against at least two independent sources before marking verified.</li>
+    <li><strong>Well-pinned.</strong> The pin should be at a real place: the actual battlefield, the building where the treaty was signed, the city where the conference was held.</li>
+  </ul>
+</div>
+
+<form id="event-form">
+
+  <!-- Section 1: Identity -->
+  <div class="card">
+    <h2 style="margin-top:0; padding-top:0; border-top:none;">1. Identity</h2>
+    <p class="help">Title, ID, and the short captions that appear when someone hovers over the pin or opens the popover.</p>
+
+    <div class="field">
+      <label for="title">Title <span class="req">*</span> <span class="opt">≤ 60 chars</span></label>
+      <div class="hint">Display name. Sentence case. No date — that goes in the tooltip.</div>
+      <input type="text" id="title" maxlength="80" autocomplete="off" required>
+      <div class="charcount" id="title-count">0 / 60</div>
+      <ul class="msg-list" id="title-msg"></ul>
+    </div>
+
+    <div class="field">
+      <label for="id">ID <span class="req">*</span></label>
+      <div class="hint">Globally unique, kebab-case (lowercase, digits, hyphens). Auto-suggested from your title — feel free to edit. Once published, never changed.</div>
+      <input type="text" id="id" autocomplete="off" required>
+      <ul class="msg-list" id="id-msg"></ul>
+    </div>
+
+    <div class="field">
+      <label for="tooltip">Tooltip <span class="req">*</span> <span class="opt">≤ 80 chars hard cap</span></label>
+      <div class="hint">One-line caption shown on pin hover. Should include a date or place anchor — read like a museum label. <em>e.g. "Jallianwala Bagh massacre, Amritsar, 1919"</em></div>
+      <input type="text" id="tooltip" required>
+      <div class="charcount" id="tooltip-count">0 / 80</div>
+      <ul class="msg-list" id="tooltip-msg"></ul>
+    </div>
+
+    <div class="field">
+      <label for="summary">Summary <span class="req">*</span> <span class="opt">≤ 160 chars hard, ≤ 140 soft</span></label>
+      <div class="hint">One sentence. Shown in the popover and in cross-reference cards. The reader's first taste — must stand alone.</div>
+      <textarea id="summary" rows="2" required></textarea>
+      <div class="charcount" id="summary-count">0 / 160</div>
+      <ul class="msg-list" id="summary-msg"></ul>
+    </div>
+
+    <div class="field">
+      <label for="detail">Detail <span class="req">*</span> <span class="opt">80–150 words</span></label>
+      <div class="hint">Editorial paragraph for the right panel. Direct, calibrated, named entities and numbers over adjectives.</div>
+      <textarea id="detail" rows="6" required></textarea>
+      <div class="charcount" id="detail-count">0 words</div>
+      <ul class="msg-list" id="detail-msg"></ul>
+    </div>
+  </div>
+
+  <!-- Section 2: When -->
+  <div class="card">
+    <h2 style="margin-top:0; padding-top:0; border-top:none;">2. When</h2>
+    <p class="help">Use <code>YYYY</code>, <code>YYYY-MM</code>, or <code>YYYY-MM-DD</code>. For BCE dates, prefix with a hyphen — e.g. <code>-322</code> for 322 BCE. For multi-day events, set start and end to different dates.</p>
+
+    <div class="field-row">
+      <div class="field">
+        <label for="date-start">Start date <span class="req">*</span></label>
+        <input type="text" id="date-start" placeholder="1526-04-21" required>
+      </div>
+      <div class="field">
+        <label for="date-end">End date <span class="req">*</span></label>
+        <input type="text" id="date-end" placeholder="1526-04-21" required>
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div class="field">
+        <label for="date-precision">Precision <span class="req">*</span></label>
+        <select id="date-precision" required>
+          <option value="day">Day</option>
+          <option value="month">Month (e.g. June 1539)</option>
+          <option value="year">Year (e.g. 1526)</option>
+          <option value="decade">Decade (e.g. 1830s)</option>
+          <option value="century">Century</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="date-approximate">Approximate?</label>
+        <select id="date-approximate">
+          <option value="false">No — verified</option>
+          <option value="true">Yes — best estimate</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="date-display">Display string <span class="req">*</span></label>
+      <div class="hint">How the date should read in the UI. <em>e.g. "21 April 1526" or "April 1917 – May 1918"</em></div>
+      <input type="text" id="date-display" required>
+    </div>
+
+    <ul class="msg-list" id="date-msg"></ul>
+  </div>
+
+  <!-- Section 3: Where -->
+  <div class="card">
+    <h2 style="margin-top:0; padding-top:0; border-top:none;">3. Where</h2>
+    <p class="help">Click the map to drop a pin. Drag it to refine. Or paste lat/lon manually below. For a route (a journey across multiple points), choose "route" type and add additional points.</p>
+
+    <div class="field-row">
+      <div class="field">
+        <label for="loc-name">Location name <span class="req">*</span></label>
+        <div class="hint">Specific place. <em>e.g. "Jallianwala Bagh, Amritsar"</em></div>
+        <input type="text" id="loc-name" required>
+      </div>
+      <div class="field">
+        <label for="loc-region">Region <span class="opt">optional</span></label>
+        <div class="hint">Larger area for context. <em>e.g. "Punjab", "Bombay Presidency"</em></div>
+        <input type="text" id="loc-region">
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div class="field">
+        <label for="loc-type">Location type <span class="req">*</span></label>
+        <select id="loc-type">
+          <option value="point">Point — a specific spot</option>
+          <option value="city">City</option>
+          <option value="region">Region</option>
+          <option value="route">Route — a journey across multiple points</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="loc-country">Country <span class="req">*</span></label>
+        <div class="hint">ISO code. Use OFF for events outside the asset's bounding box (London, NYC, etc.).</div>
+        <select id="loc-country" required></select>
+      </div>
+    </div>
+
+    <div class="field">
+      <label>Pick the location on the map</label>
+      <div class="map-picker" id="map-picker"></div>
+      <div class="coords-display" id="coords-display">Click on the map to drop a pin.</div>
+    </div>
+
+    <div class="field-row">
+      <div class="field">
+        <label for="lat0">Latitude <span class="req">*</span></label>
+        <input type="number" id="lat0" step="0.0001" placeholder="29.3909">
+      </div>
+      <div class="field">
+        <label for="lon0">Longitude <span class="req">*</span></label>
+        <input type="number" id="lon0" step="0.0001" placeholder="76.9635">
+      </div>
+    </div>
+    <ul class="msg-list" id="loc-msg"></ul>
+
+    <!-- Extra points for route locations -->
+    <div id="extra-points" style="display:none; margin-top:14px;">
+      <label class="opt" style="display:block; font-weight:500; font-size:12px; text-transform:uppercase; letter-spacing:0.4px; margin-bottom:6px;">Additional points for the route</label>
+      <div class="hint" style="margin-bottom:8px;">Routes need at least 2 points (the first one above, plus these). Click the map to add the next point.</div>
+      <div id="route-points-list"></div>
+      <button type="button" class="btn small" id="add-route-point">+ Add another point</button>
+    </div>
+  </div>
+
+  <!-- Section 4: Era + categories -->
+  <div class="card">
+    <h2 style="margin-top:0; padding-top:0; border-top:none;">4. Era and categories</h2>
+    <p class="help">Era is a coarse time bucket (used for the timeline bands). Categories tag the kind of event (used for the colored pills).</p>
+
+    <div class="field-row">
+      <div class="field">
+        <label for="era">Era <span class="req">*</span></label>
+        <select id="era" required></select>
+      </div>
+    </div>
+
+    <div class="field">
+      <label>Categories <span class="req">*</span> <span class="opt">tick at least one</span></label>
+      <div class="pill-select" id="cats"></div>
+    </div>
+
+    <div class="field">
+      <label for="figures">Figures <span class="opt">comma-separated names</span></label>
+      <div class="hint">Major named participants. <em>e.g. "Babur, Ibrahim Lodi, Ustad Ali Quli"</em></div>
+      <input type="text" id="figures" placeholder="Babur, Ibrahim Lodi">
+    </div>
+  </div>
+
+  <!-- Section 5: Links and sources -->
+  <div class="card">
+    <h2 style="margin-top:0; padding-top:0; border-top:none;">5. Links and sources</h2>
+    <p class="help">A Wikipedia link is required. Sources are optional but strongly encouraged — they're how reviewers verify your claims.</p>
+
+    <div class="field">
+      <label>Links <span class="req">*</span></label>
+      <div id="links-list"></div>
+      <button type="button" class="btn small" id="add-link">+ Add another link</button>
+    </div>
+
+    <div class="field" style="margin-top:18px;">
+      <label>Sources <span class="opt">scholarly preferred</span></label>
+      <div id="sources-list"></div>
+      <button type="button" class="btn small" id="add-source">+ Add a source</button>
+    </div>
+  </div>
+
+  <!-- Section 6: Causal links -->
+  <div class="card">
+    <h2 style="margin-top:0; padding-top:0; border-top:none;">6. Causal links <span class="opt" style="font-weight:400; font-size:12px;">optional</span></h2>
+    <p class="help">If your event was directly caused by an earlier event already in the corpus, link it here. Each link needs a <em>gloss</em> — the editorial sentence explaining the connection.</p>
+    <div class="field">
+      <label>Caused by</label>
+      <div class="hint">Use the event's id (e.g. <code>first-battle-of-panipat-1526</code>). You can find ids in the existing data files at <a href="https://github.com/naklitechie/india-2500/tree/main/data/events" target="_blank">data/events/</a>.</div>
+      <div id="caused-by-list"></div>
+      <button type="button" class="btn small" id="add-caused-by">+ Add a caused-by link</button>
+    </div>
+  </div>
+
+  <!-- Section 7: Verification -->
+  <div class="card">
+    <h2 style="margin-top:0; padding-top:0; border-top:none;">7. Verification</h2>
+    <div class="field">
+      <label for="verified">Have you cross-checked against ≥2 independent sources? <span class="req">*</span></label>
+      <select id="verified" required>
+        <option value="false">No — mark unverified (UI will tag it)</option>
+        <option value="true">Yes — verified</option>
+      </select>
+    </div>
+  </div>
+
+</form>
+
+<!-- Validation status + JSON preview + submit -->
+<div class="card" id="validation-card">
+  <h2 style="margin-top:0; padding-top:0; border-top:none;">Validation</h2>
+  <div id="validation-output">Fill in the form above; errors will appear here as you type.</div>
+</div>
+
+<div class="card">
+  <h2 style="margin-top:0; padding-top:0; border-top:none;">Preview</h2>
+  <p class="help">This is the JSON your contribution will become. Review before submitting.</p>
+  <div class="json-preview" id="json-preview">// fill in the form to see the preview</div>
+</div>
+
+<div class="submit-section">
+  <h2 style="margin-top:0; padding-top:0; border-top:none;">Submit your contribution</h2>
+  <p class="submit-help"><strong>Download</strong> saves the JSON to your computer (no GitHub account needed). <strong>Pull request</strong> opens GitHub's web editor with the file pre-populated; you click "Propose new file" and a PR opens. <strong>Issue</strong> opens a GitHub issue with the JSON in the body — use it if your contribution needs editorial discussion first.</p>
+  <div class="submit-buttons">
+    <button type="button" class="btn primary" id="btn-download">Download JSON</button>
+    <button type="button" class="btn" id="btn-pr">Open as Pull Request</button>
+    <button type="button" class="btn" id="btn-issue">Open as Issue</button>
+  </div>
+  <p class="submit-help" id="submit-warning" style="color:var(--red-error); display:none;">Fix the validation errors above before submitting.</p>
+</div>
+
+</main>
+
+<footer>
+  <div>Add an event · India — 2500 years to the Republic</div>
+  <div><a href="https://github.com/naklitechie/india-2500">repo</a></div>
+</footer>
+
+<script type="module">
+import {
+  ERAS, CATEGORIES, COUNTRIES, COUNTRY_NAMES, LINK_TYPES, SOURCE_TYPES,
+  validateEvent, checkTitle, checkTooltip, checkSummary, checkDetail, checkId
+} from "./lib/validators.js";
+import { downloadJson, openPullRequest, openIssue, suggestFilenameFor } from "./lib/submit.js";
+
+const $ = (s) => document.querySelector(s);
+const $$ = (s) => Array.from(document.querySelectorAll(s));
+
+/* ---------- Populate selects + pill list ---------- */
+ERAS.forEach(e => $("#era").insertAdjacentHTML("beforeend", `<option value="${e}">${e.replace(/-/g, " ")}</option>`));
+const sortedCountries = Object.entries(COUNTRY_NAMES).sort((a,b) => a[1].localeCompare(b[1]));
+const inOption = `<option value="IN">India (IN)</option>`;
+$("#loc-country").insertAdjacentHTML("beforeend", inOption);
+sortedCountries.forEach(([code, name]) => {
+  if (code === "IN") return;
+  $("#loc-country").insertAdjacentHTML("beforeend", `<option value="${code}">${name} (${code})</option>`);
+});
+CATEGORIES.forEach(c => $("#cats").insertAdjacentHTML("beforeend",
+  `<label><input type="checkbox" value="${c}">${c.replace(/-/g, " ")}</label>`));
+
+/* ---------- ID auto-suggestion from title ---------- */
+function slugify(s) {
+  return s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "")
+    .replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+let idTouched = false;
+$("#id").addEventListener("input", () => idTouched = true);
+$("#title").addEventListener("input", (e) => {
+  if (!idTouched) {
+    // Append the year automatically if a 4-digit year appears in the date
+    const yearMatch = ($("#date-start").value || "").match(/(\d{4})/);
+    const slug = slugify(e.target.value);
+    $("#id").value = yearMatch ? `${slug}-${yearMatch[1]}` : slug;
+  }
+});
+$("#date-start").addEventListener("input", () => {
+  if (!idTouched && $("#title").value) {
+    const yearMatch = ($("#date-start").value || "").match(/(\d{4})/);
+    const slug = slugify($("#title").value);
+    $("#id").value = yearMatch ? `${slug}-${yearMatch[1]}` : slug;
+  }
+});
+
+/* ---------- Char/word counters + per-field hints ---------- */
+function setupCounter(inputSel, countSel, kind) {
+  const inp = $(inputSel), out = $(countSel);
+  inp.addEventListener("input", () => {
+    if (kind === "words") {
+      const w = inp.value.trim() ? inp.value.trim().split(/\s+/).length : 0;
+      out.textContent = `${w} word${w === 1 ? "" : "s"}`;
+      out.className = "charcount";
+      if (w > 200) out.classList.add("over");
+      else if (w < 80 || w > 150) out.classList.add("warn");
+    } else {
+      const len = inp.value.length;
+      out.textContent = `${len} / ${kind}`;
+      out.className = "charcount";
+      if (len > kind) out.classList.add("over");
+      else if (kind === 80 && len > 60) out.classList.add("warn");
+      else if (kind === 160 && len > 140) out.classList.add("warn");
+      else if (kind === 60 && len > 50)  out.classList.add("warn");
+    }
+  });
+}
+setupCounter("#title", "#title-count", 60);
+setupCounter("#tooltip", "#tooltip-count", 80);
+setupCounter("#summary", "#summary-count", 160);
+setupCounter("#detail", "#detail-count", "words");
+
+/* ---------- Inline messages helpers ---------- */
+function renderMsgs(elSel, msgs) {
+  const el = $(elSel);
+  el.innerHTML = msgs.map(m => `<li class="${m.level}">${m.msg}</li>`).join("");
+}
+$("#title").addEventListener("input", () => renderMsgs("#title-msg", checkTitle($("#title").value)));
+$("#id").addEventListener("input", () => renderMsgs("#id-msg", checkId($("#id").value)));
+$("#tooltip").addEventListener("input", () => renderMsgs("#tooltip-msg", checkTooltip($("#tooltip").value)));
+$("#summary").addEventListener("input", () => renderMsgs("#summary-msg", checkSummary($("#summary").value)));
+$("#detail").addEventListener("input", () => renderMsgs("#detail-msg", checkDetail($("#detail").value)));
+
+/* ---------- Repeating groups: links, sources, caused-by, route points ---------- */
+let linkCount = 0;
+function addLink(prefill = {}) {
+  linkCount++;
+  const id = `link-${linkCount}`;
+  $("#links-list").insertAdjacentHTML("beforeend", `
+    <div class="group" data-link-id="${id}">
+      <div class="group-head">
+        <span class="group-num">Link ${linkCount}</span>
+        <button type="button" class="btn small danger" data-action="remove">Remove</button>
+      </div>
+      <div class="field">
+        <label>URL</label>
+        <input type="url" data-field="url" value="${prefill.url || ''}" placeholder="https://en.wikipedia.org/wiki/...">
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label>Label</label>
+          <input type="text" data-field="label" value="${prefill.label || ''}" placeholder="Wikipedia: Battle of Panipat">
+        </div>
+        <div class="field">
+          <label>Type</label>
+          <select data-field="type">
+            ${LINK_TYPES.map(t => `<option value="${t}" ${t === (prefill.type || 'wikipedia') ? 'selected' : ''}>${t}</option>`).join("")}
+          </select>
+        </div>
+      </div>
+    </div>
+  `);
+}
+addLink({type: "wikipedia"});
+$("#add-link").addEventListener("click", () => addLink());
+
+let sourceCount = 0;
+function addSource(prefill = {}) {
+  sourceCount++;
+  $("#sources-list").insertAdjacentHTML("beforeend", `
+    <div class="group" data-source-id="src-${sourceCount}">
+      <div class="group-head">
+        <span class="group-num">Source ${sourceCount}</span>
+        <button type="button" class="btn small danger" data-action="remove">Remove</button>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label>Label</label>
+          <input type="text" data-field="label" value="${prefill.label || ''}" placeholder="Author, Title (Year)">
+        </div>
+        <div class="field">
+          <label>Type</label>
+          <select data-field="type">
+            ${SOURCE_TYPES.map(t => `<option value="${t}" ${t === (prefill.type || 'scholarly') ? 'selected' : ''}>${t}</option>`).join("")}
+          </select>
+        </div>
+      </div>
+    </div>
+  `);
+}
+$("#add-source").addEventListener("click", () => addSource());
+
+let cbCount = 0;
+function addCausedBy() {
+  cbCount++;
+  $("#caused-by-list").insertAdjacentHTML("beforeend", `
+    <div class="group" data-cb-id="cb-${cbCount}">
+      <div class="group-head">
+        <span class="group-num">Cause ${cbCount}</span>
+        <button type="button" class="btn small danger" data-action="remove">Remove</button>
+      </div>
+      <div class="field">
+        <label>Earlier event id</label>
+        <input type="text" data-field="id" placeholder="first-battle-of-panipat-1526">
+      </div>
+      <div class="field">
+        <label>Gloss</label>
+        <div class="hint">The editorial sentence about <em>what</em> about the prior event led to this one. Written from this event's perspective.</div>
+        <textarea data-field="gloss" rows="2"></textarea>
+      </div>
+    </div>
+  `);
+}
+$("#add-caused-by").addEventListener("click", () => addCausedBy());
+
+// Generic remove handler (event delegation)
+document.addEventListener("click", (e) => {
+  if (e.target.matches("[data-action='remove']")) {
+    e.target.closest(".group").remove();
+    refresh();
+  }
+});
+
+/* ---------- Route extra points ---------- */
+let routePointCount = 0;
+function addRoutePoint() {
+  routePointCount++;
+  $("#route-points-list").insertAdjacentHTML("beforeend", `
+    <div class="group" data-rp-id="rp-${routePointCount}">
+      <div class="group-head">
+        <span class="group-num">Point ${routePointCount + 1}</span>
+        <button type="button" class="btn small danger" data-action="remove">Remove</button>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label>Latitude</label>
+          <input type="number" step="0.0001" data-field="lat">
+        </div>
+        <div class="field">
+          <label>Longitude</label>
+          <input type="number" step="0.0001" data-field="lon">
+        </div>
+      </div>
+      <div class="field">
+        <label>Point name <span class="opt">optional</span></label>
+        <input type="text" data-field="name" placeholder="e.g. Dandi (end of Salt March)">
+      </div>
+    </div>
+  `);
+}
+$("#add-route-point").addEventListener("click", addRoutePoint);
+
+$("#loc-type").addEventListener("change", () => {
+  $("#extra-points").style.display = $("#loc-type").value === "route" ? "block" : "none";
+});
+
+/* ---------- Leaflet map picker ---------- */
+let map, marker;
+window.addEventListener("load", () => {
+  map = L.map("map-picker").setView([22, 82], 4);
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 19,
+    attribution: '&copy; OpenStreetMap',
+  }).addTo(map);
+  map.on("click", (e) => setMarker(e.latlng.lat, e.latlng.lng, "click"));
+  $("#lat0").addEventListener("input", () => syncFromInputs());
+  $("#lon0").addEventListener("input", () => syncFromInputs());
+});
+function setMarker(lat, lon, source = "input") {
+  if (!marker) marker = L.marker([lat, lon], {draggable: true}).addTo(map);
+  else marker.setLatLng([lat, lon]);
+  marker.on("dragend", (e) => setMarker(e.target.getLatLng().lat, e.target.getLatLng().lng, "drag"));
+  if (source !== "input") {
+    $("#lat0").value = lat.toFixed(4);
+    $("#lon0").value = lon.toFixed(4);
+  }
+  $("#coords-display").textContent = `lat ${(+lat).toFixed(4)}, lon ${(+lon).toFixed(4)}`;
+  refresh();
+}
+function syncFromInputs() {
+  const lat = parseFloat($("#lat0").value), lon = parseFloat($("#lon0").value);
+  if (!isNaN(lat) && !isNaN(lon)) setMarker(lat, lon, "input");
+  refresh();
+}
+
+/* ---------- Build the JSON object from the form ---------- */
+function build() {
+  const ev = {
+    id: $("#id").value.trim(),
+    title: $("#title").value.trim(),
+    tooltip: $("#tooltip").value.trim(),
+    summary: $("#summary").value.trim(),
+    detail: $("#detail").value.trim(),
+    date: {
+      start: $("#date-start").value.trim(),
+      end:   $("#date-end").value.trim(),
+      precision: $("#date-precision").value,
+      approximate: $("#date-approximate").value === "true",
+      display: $("#date-display").value.trim(),
+    },
+    location: {
+      type: $("#loc-type").value,
+      name: $("#loc-name").value.trim(),
+      country: $("#loc-country").value,
+      points: [],
+    },
+    era: $("#era").value,
+    category: $$("#cats input:checked").map(i => i.value),
+    figures: [],
+    links: [],
+    sources: [],
+    verified: $("#verified").value === "true",
+  };
+  if ($("#loc-region").value.trim()) ev.location.region = $("#loc-region").value.trim();
+
+  const lat = parseFloat($("#lat0").value), lon = parseFloat($("#lon0").value);
+  if (!isNaN(lat) && !isNaN(lon)) ev.location.points.push({lat, lon, name: ev.location.name});
+
+  $$("#route-points-list .group").forEach(g => {
+    const lat = parseFloat(g.querySelector('[data-field="lat"]').value);
+    const lon = parseFloat(g.querySelector('[data-field="lon"]').value);
+    const name = g.querySelector('[data-field="name"]').value.trim();
+    if (!isNaN(lat) && !isNaN(lon)) {
+      const pt = {lat, lon};
+      if (name) pt.name = name;
+      ev.location.points.push(pt);
+    }
+  });
+
+  const figs = $("#figures").value.split(",").map(s => s.trim()).filter(Boolean);
+  if (figs.length) ev.figures = figs;
+
+  $$("#links-list .group").forEach(g => {
+    const url = g.querySelector('[data-field="url"]').value.trim();
+    const label = g.querySelector('[data-field="label"]').value.trim();
+    const type = g.querySelector('[data-field="type"]').value;
+    if (url) ev.links.push({url, label, type});
+  });
+  $$("#sources-list .group").forEach(g => {
+    const label = g.querySelector('[data-field="label"]').value.trim();
+    const type = g.querySelector('[data-field="type"]').value;
+    if (label) ev.sources.push({label, type});
+  });
+  if (ev.sources.length === 0) delete ev.sources;
+
+  const cb = [];
+  $$("#caused-by-list .group").forEach(g => {
+    const id = g.querySelector('[data-field="id"]').value.trim();
+    const gloss = g.querySelector('[data-field="gloss"]').value.trim();
+    if (id) cb.push({id, gloss});
+  });
+  if (cb.length) ev.caused_by = cb;
+
+  return ev;
+}
+
+/* ---------- Validation + preview refresh ---------- */
+function refresh() {
+  const ev = build();
+  const result = validateEvent(ev);
+
+  // Validation card
+  const out = $("#validation-output");
+  if (result.errors.length === 0 && result.warnings.length === 0) {
+    out.innerHTML = `<div class="msg-list"><li class="ok">Looks good — no errors. You're ready to submit.</li></div>`;
+    $("#validation-card").className = "card ok";
+  } else {
+    let html = "<ul class='msg-list'>";
+    for (const e of result.errors) html += `<li class="error">${e}</li>`;
+    for (const w of result.warnings) html += `<li class="warn">${w}</li>`;
+    html += "</ul>";
+    out.innerHTML = html;
+    $("#validation-card").className = `card ${result.errors.length ? 'error' : 'warn'}`;
+  }
+
+  // Submit gating
+  const ready = result.errors.length === 0;
+  $("#btn-download").disabled = !ready;
+  $("#btn-pr").disabled = !ready;
+  $("#btn-issue").disabled = !ready;
+  $("#submit-warning").style.display = ready ? "none" : "block";
+
+  // Preview
+  const file = {
+    campaign: ev.id ? slugify(ev.id) : "new",
+    scope: "Single-event contribution from the form. Reviewer should fold into the appropriate campaign file.",
+    updated: new Date().toISOString().slice(0, 10),
+    events: [ev],
+  };
+  $("#json-preview").textContent = JSON.stringify(file, null, 2);
+
+  return {result, file};
+}
+
+// Wire up refresh on every change
+document.addEventListener("input", refresh);
+document.addEventListener("change", refresh);
+
+/* ---------- Submit buttons ---------- */
+function currentJsonText() {
+  const file = {
+    campaign: $("#id").value || "new",
+    scope: "Single-event contribution from the form. Reviewer should fold into the appropriate campaign file.",
+    updated: new Date().toISOString().slice(0, 10),
+    events: [build()],
+  };
+  return JSON.stringify(file, null, 2);
+}
+function currentSlug() { return $("#id").value || "new"; }
+
+$("#btn-download").addEventListener("click", () => {
+  const json = currentJsonText();
+  const filename = suggestFilenameFor("event", currentSlug());
+  downloadJson(json, filename);
+});
+$("#btn-pr").addEventListener("click", () => {
+  const json = currentJsonText();
+  openPullRequest(json, "event", currentSlug());
+});
+$("#btn-issue").addEventListener("click", () => {
+  const json = currentJsonText();
+  openIssue(json, "event", currentSlug());
+});
+
+// Initial render
+refresh();
+</script>
+
+</body>
+</html>
