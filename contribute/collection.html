@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Add a collection · Contribute</title>
+<link rel="stylesheet" href="lib/styles.css">
+<style>
+  /* Member builder UI for collections */
+  .event-search { position: relative; }
+  .event-results {
+    position: absolute; left: 0; right: 0; top: calc(100% + 4px);
+    background: var(--cream-card);
+    border: 1px solid var(--cream-border);
+    border-radius: 6px;
+    max-height: 280px;
+    overflow-y: auto;
+    z-index: 10;
+    display: none;
+  }
+  .event-results.open { display: block; }
+  .event-results .row {
+    padding: 8px 12px;
+    cursor: pointer;
+    border-bottom: 1px solid var(--cream-border-soft);
+  }
+  .event-results .row:last-child { border-bottom: none; }
+  .event-results .row:hover { background: rgba(60,45,15,0.06); }
+  .event-results .row .row-title { font-size: 13px; color: var(--cream-text); font-weight: 500; }
+  .event-results .row .row-meta  { font-size: 11px; color: var(--cream-faint); margin-top: 1px; }
+  .event-results .empty { padding: 12px; font-size: 12px; color: var(--cream-faint); font-style: italic; }
+
+  .member-card {
+    border: 1px solid var(--cream-border-soft);
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin-bottom: 8px;
+    background: rgba(60, 45, 15, 0.02);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+  .member-card .member-info { flex: 1; min-width: 0; }
+  .member-card .member-kind {
+    display: inline-block;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--cream-faint);
+    margin-right: 8px;
+  }
+  .member-card .member-label {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--cream-text);
+  }
+  .member-card .member-meta {
+    font-size: 11px;
+    color: var(--cream-faint);
+    margin-top: 2px;
+  }
+  .corpus-status { font-size: 12px; color: var(--cream-muted); margin-top: 6px; }
+
+  .tag-suggest {
+    display: flex; flex-wrap: wrap; gap: 4px;
+    margin-top: 6px;
+  }
+  .tag-suggest button {
+    font-size: 11px;
+    padding: 3px 9px;
+    border-radius: 999px;
+    border: 1px solid var(--cream-border);
+    background: transparent;
+    color: var(--cream-muted);
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .tag-suggest button:hover { background: rgba(60,45,15,0.06); color: var(--cream-text); }
+
+  .add-modes {
+    display: flex; gap: 0;
+    border: 1px solid var(--cream-border);
+    border-radius: 6px;
+    overflow: hidden;
+    width: fit-content;
+    margin-bottom: 12px;
+  }
+  .add-modes button {
+    background: transparent;
+    border: 0;
+    padding: 6px 14px;
+    font-size: 12px;
+    color: var(--cream-muted);
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .add-modes button.active {
+    background: var(--cream-text);
+    color: var(--cream);
+  }
+</style>
+</head>
+<body>
+
+<header class="contribute-header">
+  <a class="brand" href="../web/india-history.html">India — 2500 years to the Republic</a>
+  <nav class="nav">
+    <a href="index.html">All forms</a>
+    <a href="event.html">Event</a>
+    <a href="thread.html">Thread</a>
+    <a href="person.html">Person</a>
+    <a href="https://github.com/naklitechie/india-2500/blob/main/docs/COLLECTIONS_SCHEMA.md" target="_blank">Schema</a>
+  </nav>
+</header>
+
+<main>
+
+<h1>Add a collection</h1>
+<p class="subtitle">A set of events that share a property — women in independence, founding moments, rebellions. Cheap to author; the events do the work.</p>
+
+<div class="card">
+  <h2 style="margin-top:0; padding-top:0; border-top:none;">Collection vs. thread</h2>
+  <ul>
+    <li><strong>Collections are sets.</strong> No per-member notes, no transitions. Members appear in chronological order automatically. Use this when the gathering is the point.</li>
+    <li><strong>Threads are sequences.</strong> Every step gets a note and a transition. Use a thread when you want to make an argument, not just surface a kinship.</li>
+    <li><strong>Two ways to add members.</strong> Pick events explicitly (good for small, deliberate sets) or use a tag selector (good for sets the corpus already knows about — every event with that tag joins automatically).</li>
+    <li><strong>Tags are free-form.</strong> If your collection wants a tag that doesn't exist yet, invent it and add it to the relevant events via the event form first.</li>
+  </ul>
+</div>
+
+<form id="collection-form">
+
+  <!-- Section 1: Metadata -->
+  <div class="card">
+    <h2 style="margin-top:0; padding-top:0; border-top:none;">1. Collection metadata</h2>
+
+    <div class="field">
+      <label for="title">Title <span class="req">*</span></label>
+      <div class="hint">The kinship in a phrase. <em>e.g. "Women in the independence movement"</em></div>
+      <input type="text" id="title" required>
+    </div>
+
+    <div class="field">
+      <label for="id">ID <span class="req">*</span> <span class="opt">kebab-case, auto-suggested</span></label>
+      <input type="text" id="id" required>
+      <ul class="msg-list" id="id-msg"></ul>
+    </div>
+
+    <div class="field">
+      <label for="subtitle">Subtitle <span class="opt">italic line under the title</span></label>
+      <input type="text" id="subtitle" placeholder="A short framing line">
+    </div>
+
+    <div class="field">
+      <label for="summary">Summary <span class="req">*</span> <span class="opt">30–80 words</span></label>
+      <div class="hint">The elevator pitch. Shown in the picker before the reader opens.</div>
+      <textarea id="summary" rows="3" required></textarea>
+      <div class="charcount" id="summary-count">0 words</div>
+    </div>
+
+    <div class="field">
+      <label for="framing">Framing <span class="opt">optional, ≤200 words</span></label>
+      <div class="hint">An editorial paragraph above the member list. Use this when the framing matters more than the gathering itself — to argue why the collection deserves surfacing.</div>
+      <textarea id="framing" rows="5"></textarea>
+      <div class="charcount" id="framing-count">0 words</div>
+    </div>
+
+    <div class="field">
+      <label for="verified">Verified? <span class="req">*</span></label>
+      <select id="verified" required>
+        <option value="false">No — mark unverified (UI tags it)</option>
+        <option value="true">Yes — verified</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Section 2: Members -->
+  <div class="card">
+    <h2 style="margin-top:0; padding-top:0; border-top:none;">2. Build the membership</h2>
+    <p class="help">Add members two ways: pick an event explicitly, or write a tag selector that grabs every event with that tag.</p>
+
+    <div class="add-modes" role="tablist">
+      <button type="button" id="mode-event" class="active" role="tab" aria-selected="true">Add an event</button>
+      <button type="button" id="mode-tag" role="tab" aria-selected="false">Add a tag selector</button>
+    </div>
+
+    <div id="event-pane">
+      <div class="field event-search">
+        <label for="event-q">Search the events corpus</label>
+        <input type="text" id="event-q" placeholder="Type to search by title, place, or year…" autocomplete="off">
+        <div class="event-results" id="event-results"></div>
+        <div class="corpus-status" id="corpus-status">Loading the events corpus…</div>
+      </div>
+    </div>
+
+    <div id="tag-pane" style="display:none;">
+      <div class="field">
+        <label for="tag-input">Tag selector <span class="opt">kebab-case</span></label>
+        <div class="hint">Free-form. Every event whose <code>tags[]</code> contains this string becomes a member. <em>e.g. "women-leaders"</em>, <em>"rebellion"</em>, <em>"institution-founding"</em>.</div>
+        <div style="display:flex; gap:8px;">
+          <input type="text" id="tag-input" placeholder="women-leaders" style="flex:1;">
+          <button type="button" class="btn small" id="add-tag">Add tag selector</button>
+        </div>
+        <div class="tag-suggest" id="tag-suggest"></div>
+      </div>
+    </div>
+
+    <h3 style="font-size:13px; text-transform:uppercase; letter-spacing:0.06em; color:var(--cream-faint); margin-top:18px;">Members</h3>
+    <div id="members-list"></div>
+    <div class="corpus-status" id="effective-count"></div>
+  </div>
+
+  <!-- Section 3: Sources -->
+  <div class="card">
+    <h2 style="margin-top:0; padding-top:0; border-top:none;">3. Sources <span class="opt" style="font-weight:400; font-size:12px;">optional</span></h2>
+    <p class="help">Where the editorial framing comes from. Strongly recommended when the collection makes a non-obvious argument.</p>
+    <div id="sources-list"></div>
+    <button type="button" class="btn small" id="add-source">+ Add a source</button>
+  </div>
+
+</form>
+
+<div class="card" id="validation-card">
+  <h2 style="margin-top:0; padding-top:0; border-top:none;">Validation</h2>
+  <div id="validation-output">Fill in the form above; errors will appear here as you build the collection.</div>
+</div>
+
+<div class="card">
+  <h2 style="margin-top:0; padding-top:0; border-top:none;">Preview</h2>
+  <div class="json-preview" id="json-preview">// fill in the form to see the preview</div>
+</div>
+
+<div class="submit-section">
+  <h2 style="margin-top:0; padding-top:0; border-top:none;">Submit your contribution</h2>
+  <p class="submit-help"><strong>Download</strong> saves the JSON to your computer. <strong>Pull request</strong> opens GitHub's web editor with the file pre-populated. <strong>Issue</strong> opens a GitHub issue with the JSON in the body.</p>
+  <div class="submit-buttons">
+    <button type="button" class="btn primary" id="btn-download">Download JSON</button>
+    <button type="button" class="btn" id="btn-pr">Open as Pull Request</button>
+    <button type="button" class="btn" id="btn-issue">Open as Issue</button>
+  </div>
+  <p class="submit-help" id="submit-warning" style="color:var(--red-error); display:none;">Fix the validation errors above before submitting.</p>
+</div>
+
+</main>
+
+<footer>
+  <div>Add a collection · India — 2500 years to the Republic</div>
+  <div><a href="https://github.com/naklitechie/india-2500">repo</a></div>
+</footer>
+
+<script type="module">
+import { validateCollection, checkId, ID_RE } from "./lib/validators.js";
+import { downloadJson, openPullRequest, openIssue, suggestFilenameFor } from "./lib/submit.js";
+
+const $ = (s) => document.querySelector(s);
+const $$ = (s) => Array.from(document.querySelectorAll(s));
+
+/* ---------- ID auto-suggest ---------- */
+function slugify(s) {
+  return s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "")
+    .replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+let idTouched = false;
+$("#id").addEventListener("input", () => idTouched = true);
+$("#title").addEventListener("input", (e) => {
+  if (!idTouched) $("#id").value = slugify(e.target.value);
+});
+$("#id").addEventListener("input", () => renderMsgs("#id-msg", checkId($("#id").value)));
+function renderMsgs(elSel, msgs) {
+  const el = $(elSel);
+  el.innerHTML = msgs.map(m => `<li class="${m.level}">${m.msg}</li>`).join("");
+}
+
+/* ---------- Word counters ---------- */
+function wireWordCount(srcSel, outSel, low, high) {
+  const src = $(srcSel), out = $(outSel);
+  src.addEventListener("input", () => {
+    const w = src.value.trim() ? src.value.trim().split(/\s+/).length : 0;
+    out.textContent = `${w} word${w === 1 ? "" : "s"}`;
+    out.className = "charcount";
+    if (low != null && (w < low || w > high)) out.classList.add("warn");
+  });
+}
+wireWordCount("#summary", "#summary-count", 30, 80);
+wireWordCount("#framing", "#framing-count", 0, 200);
+
+/* ---------- Load events corpus from the live data/ files ---------- */
+const CORPUS_FILES = ["events_central_asia.json", "events_independence.json", "events_mughal.json", "events_sur.json"];
+let corpus = [];
+let eventsById = new Map();
+let tagToEvents = new Map();
+
+async function loadCorpus() {
+  try {
+    const docs = await Promise.all(
+      CORPUS_FILES.map(f =>
+        fetch(`../data/events/${f}`).then(r => r.ok ? r.json() : null).catch(() => null)
+      )
+    );
+    corpus = docs.filter(Boolean).flatMap(d => d.events || []);
+    corpus.forEach(ev => {
+      eventsById.set(ev.id, ev);
+      (ev.tags || []).forEach(tag => {
+        if (!tagToEvents.has(tag)) tagToEvents.set(tag, []);
+        tagToEvents.get(tag).push(ev.id);
+      });
+    });
+    $("#corpus-status").textContent = `Loaded ${corpus.length} events (${tagToEvents.size} distinct tags) from the corpus.`;
+    renderTagSuggestions();
+    refresh();
+  } catch (err) {
+    $("#corpus-status").innerHTML = `<span style="color:var(--red-error);">Couldn't load the events corpus (${err.message}). You can still type ids and tags manually.</span>`;
+  }
+}
+loadCorpus();
+
+function renderTagSuggestions() {
+  const tags = Array.from(tagToEvents.keys()).sort();
+  $("#tag-suggest").innerHTML = tags.length
+    ? `<span class="opt" style="font-size:11px;">Existing tags: </span>` + tags.map(t =>
+        `<button type="button" data-tag="${t}">${t} (${tagToEvents.get(t).length})</button>`
+      ).join("")
+    : "";
+}
+
+$("#tag-suggest").addEventListener("click", (e) => {
+  const btn = e.target.closest("button[data-tag]");
+  if (!btn) return;
+  $("#tag-input").value = btn.dataset.tag;
+});
+
+/* ---------- Mode toggle (event-search vs tag-selector) ---------- */
+function setMode(mode) {
+  const isEvent = mode === "event";
+  $("#mode-event").classList.toggle("active", isEvent);
+  $("#mode-tag").classList.toggle("active", !isEvent);
+  $("#mode-event").setAttribute("aria-selected", isEvent);
+  $("#mode-tag").setAttribute("aria-selected", !isEvent);
+  $("#event-pane").style.display = isEvent ? "" : "none";
+  $("#tag-pane").style.display = isEvent ? "none" : "";
+}
+$("#mode-event").addEventListener("click", () => setMode("event"));
+$("#mode-tag").addEventListener("click", () => setMode("tag"));
+
+/* ---------- Event search ---------- */
+$("#event-q").addEventListener("input", () => {
+  const q = $("#event-q").value.trim().toLowerCase();
+  const results = $("#event-results");
+  if (!q) { results.classList.remove("open"); return; }
+
+  const usedIds = new Set($$("#members-list .member-card[data-kind='event']").map(c => c.dataset.eventId));
+  const hits = corpus.filter(ev => {
+    if (usedIds.has(ev.id)) return false;
+    const hay = [ev.id, ev.title, ev.tooltip, ev.summary, ev.location?.name].join(" ").toLowerCase();
+    return hay.includes(q);
+  }).slice(0, 12);
+
+  if (hits.length === 0) {
+    results.innerHTML = `<div class="empty">No matches in the corpus. You can still type an event id manually as a member (the validator will resolve it on the server).</div>`;
+  } else {
+    results.innerHTML = hits.map(ev => `
+      <div class="row" data-event-id="${ev.id}">
+        <div class="row-title">${ev.title}</div>
+        <div class="row-meta">${ev.date.display} · ${ev.location.name} · <code>${ev.id}</code></div>
+      </div>
+    `).join("");
+  }
+  results.classList.add("open");
+});
+
+document.addEventListener("click", (e) => {
+  if (!e.target.closest(".event-search")) {
+    $("#event-results").classList.remove("open");
+  }
+});
+
+$("#event-results").addEventListener("click", (e) => {
+  const row = e.target.closest(".row[data-event-id]");
+  if (!row) return;
+  addEventMember(row.dataset.eventId);
+  $("#event-q").value = "";
+  $("#event-results").classList.remove("open");
+});
+
+/* ---------- Add tag selector ---------- */
+$("#add-tag").addEventListener("click", () => {
+  const tag = $("#tag-input").value.trim();
+  if (!tag) return;
+  if (!ID_RE.test(tag)) {
+    alert("Tag must be kebab-case (lowercase letters, digits, hyphens).");
+    return;
+  }
+  if ($$("#members-list .member-card[data-kind='tag']").some(c => c.dataset.tag === tag)) {
+    alert(`Tag "${tag}" is already a member selector.`);
+    return;
+  }
+  addTagMember(tag);
+  $("#tag-input").value = "";
+});
+
+/* ---------- Member list management ---------- */
+function addEventMember(eventId) {
+  const ev = eventsById.get(eventId);
+  const label = ev ? ev.title : `(unknown — id "${eventId}")`;
+  const meta = ev ? `${ev.date.display} · ${ev.location.name} · <code>${ev.id}</code>` : `Event id — will be resolved by the validator`;
+  $("#members-list").insertAdjacentHTML("beforeend", `
+    <div class="member-card" data-kind="event" data-event-id="${eventId}">
+      <div class="member-info">
+        <span class="member-kind">Event</span>
+        <span class="member-label">${label}</span>
+        <div class="member-meta">${meta}</div>
+      </div>
+      <button type="button" class="btn small danger" data-action="remove" title="Remove">×</button>
+    </div>
+  `);
+  refresh();
+}
+
+function addTagMember(tag) {
+  const matches = tagToEvents.get(tag) || [];
+  const label = `tag: ${tag}`;
+  const meta = matches.length > 0
+    ? `Matches ${matches.length} event${matches.length === 1 ? "" : "s"} in the corpus.`
+    : `<span style="color:var(--red-error);">No events in the corpus have this tag yet — the validator will reject this selector.</span>`;
+  $("#members-list").insertAdjacentHTML("beforeend", `
+    <div class="member-card" data-kind="tag" data-tag="${tag}">
+      <div class="member-info">
+        <span class="member-kind">Tag</span>
+        <span class="member-label">${label}</span>
+        <div class="member-meta">${meta}</div>
+      </div>
+      <button type="button" class="btn small danger" data-action="remove" title="Remove">×</button>
+    </div>
+  `);
+  refresh();
+}
+
+document.addEventListener("click", (e) => {
+  const card = e.target.closest(".member-card");
+  if (!card) return;
+  if (e.target.matches('[data-action="remove"]')) { card.remove(); refresh(); }
+});
+
+/* ---------- Sources ---------- */
+function addSourceRow() {
+  $("#sources-list").insertAdjacentHTML("beforeend", `
+    <div class="group" style="display:flex; gap:8px; margin-bottom:8px;">
+      <input type="text" data-field="label" placeholder="Author, Title (Year)" style="flex:3;">
+      <select data-field="type" style="flex:1;">
+        <option value="scholarly">scholarly</option>
+        <option value="primary">primary</option>
+        <option value="secondary">secondary</option>
+        <option value="reference">reference</option>
+      </select>
+      <button type="button" class="btn small danger" data-action="remove-source">×</button>
+    </div>
+  `);
+}
+$("#add-source").addEventListener("click", addSourceRow);
+$("#sources-list").addEventListener("click", (e) => {
+  if (e.target.matches('[data-action="remove-source"]')) {
+    e.target.closest(".group").remove();
+    refresh();
+  }
+});
+
+/* ---------- Build the JSON object ---------- */
+function build() {
+  const c = {
+    id: $("#id").value.trim(),
+    title: $("#title").value.trim(),
+    summary: $("#summary").value.trim(),
+    members: [],
+    verified: $("#verified").value === "true",
+  };
+  if ($("#subtitle").value.trim()) c.subtitle = $("#subtitle").value.trim();
+  if ($("#framing").value.trim()) c.framing = $("#framing").value.trim();
+  $$("#members-list .member-card").forEach(card => {
+    if (card.dataset.kind === "event") {
+      c.members.push({ kind: "event", id: card.dataset.eventId });
+    } else if (card.dataset.kind === "tag") {
+      c.members.push({ kind: "tag", tag: card.dataset.tag });
+    }
+  });
+  const sources = [];
+  $$("#sources-list .group").forEach(g => {
+    const label = g.querySelector('[data-field="label"]').value.trim();
+    const type = g.querySelector('[data-field="type"]').value;
+    if (label) sources.push({ label, type });
+  });
+  if (sources.length) c.sources = sources;
+  return c;
+}
+
+/* ---------- Validate + preview ---------- */
+function refresh() {
+  const c = build();
+  const result = validateCollection(c, { eventsById, tagToEvents });
+
+  // Effective member count
+  const resolved = new Set();
+  c.members.forEach(m => {
+    if (m.kind === "event" && eventsById.has(m.id)) resolved.add(m.id);
+    if (m.kind === "tag" && tagToEvents.has(m.tag)) tagToEvents.get(m.tag).forEach(id => resolved.add(id));
+  });
+  $("#effective-count").textContent = c.members.length > 0
+    ? `Effective member count after expansion + dedup: ${resolved.size} event${resolved.size === 1 ? "" : "s"}.`
+    : "";
+
+  const out = $("#validation-output");
+  if (result.errors.length === 0 && result.warnings.length === 0) {
+    out.innerHTML = `<div class="msg-list"><li class="ok">Looks good — no errors. You're ready to submit.</li></div>`;
+    $("#validation-card").className = "card ok";
+  } else {
+    let html = "<ul class='msg-list'>";
+    for (const e of result.errors) html += `<li class="error">${e}</li>`;
+    for (const w of result.warnings) html += `<li class="warn">${w}</li>`;
+    html += "</ul>";
+    out.innerHTML = html;
+    $("#validation-card").className = `card ${result.errors.length ? 'error' : 'warn'}`;
+  }
+
+  const ready = result.errors.length === 0;
+  $("#btn-download").disabled = !ready;
+  $("#btn-pr").disabled = !ready;
+  $("#btn-issue").disabled = !ready;
+  $("#submit-warning").style.display = ready ? "none" : "block";
+
+  const file = {
+    campaign: c.id ? slugify(c.id) : "new",
+    scope: "Single-collection contribution from the form. Reviewer should fold into the appropriate collections file.",
+    updated: new Date().toISOString().slice(0, 10),
+    collections: [c],
+  };
+  $("#json-preview").textContent = JSON.stringify(file, null, 2);
+  return file;
+}
+document.addEventListener("input", refresh);
+document.addEventListener("change", refresh);
+
+/* ---------- Submit ---------- */
+function currentJsonText() { return JSON.stringify(refresh(), null, 2); }
+function currentSlug()     { return $("#id").value || "new"; }
+
+$("#btn-download").addEventListener("click", () => downloadJson(currentJsonText(), suggestFilenameFor("collection", currentSlug())));
+$("#btn-pr").addEventListener("click",       () => openPullRequest(currentJsonText(), "collection", currentSlug()));
+$("#btn-issue").addEventListener("click",    () => openIssue(currentJsonText(), "collection", currentSlug()));
+
+refresh();
+</script>
+
+</body>
+</html>

@@ -12,19 +12,21 @@ const OWNER = "naklitechie";
 const REPO  = "india-2500";
 const BRANCH = "main";
 
-// kind = 'event' | 'thread' | 'person'
+// kind = 'event' | 'thread' | 'person' | 'collection'
 function dataPath(kind) {
-  if (kind === "event")  return "data/events";
-  if (kind === "thread") return "data/threads";
-  if (kind === "person") return "data/people";
+  if (kind === "event")      return "data/events";
+  if (kind === "thread")     return "data/threads";
+  if (kind === "person")     return "data/people";
+  if (kind === "collection") return "data/collections";
   throw new Error(`Unknown kind: ${kind}`);
 }
 
 function suggestFilename(kind, slug) {
   const safe = (slug || "new").replace(/[^a-z0-9-]/g, "-").replace(/-+/g, "-").replace(/^-|-$/g, "") || "new";
-  if (kind === "event")  return `events_${safe}.json`;
-  if (kind === "thread") return `threads_${safe}.json`;
-  if (kind === "person") return `people_${safe}.json`;
+  if (kind === "event")      return `events_${safe}.json`;
+  if (kind === "thread")     return `threads_${safe}.json`;
+  if (kind === "person")     return `people_${safe}.json`;
+  if (kind === "collection") return `collections_${safe}.json`;
 }
 
 export function downloadJson(jsonText, filename) {

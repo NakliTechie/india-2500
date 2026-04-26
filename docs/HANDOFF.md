@@ -27,18 +27,21 @@ A validator-enforced, browser-renderable atlas of subcontinental history. Three 
 ├── .gitignore                     datameet/, package/, .claude/, tests/artifacts/
 │
 ├── data/                          editorial content — what contributors PR
-│   ├── events/events_*.json       37 events: independence, mughal, sur
-│   ├── threads/threads_*.json     1 thread: Chauri Chaura
-│   └── people/people_*.json       5 people, 45 track steps
+│   ├── events/events_*.json       43 events: independence, mughal, sur, central-asia
+│   ├── threads/threads_*.json     2 threads: Chauri Chaura, Babur road-to-Panipat
+│   ├── people/people_*.json       6 people (5 freedom fighters + Babur)
+│   └── collections/collections_*.json   2 collections: Babur's road, Founding moments
 │
 ├── validators/                    schema enforcement, run on every PR via CI
-│   ├── validate_events.py         schema + cross-reference + PIP
+│   ├── validate_events.py         schema + cross-reference + PIP + tag format
 │   ├── validate_threads.py        schema + corpus event_id resolution
-│   └── validate_people.py         schema + two-kind step + PIP
+│   ├── validate_people.py         schema + two-kind step + PIP
+│   └── validate_collections.py    schema + member resolution (event id OR tag selector)
 │
 ├── build/                         pipeline + cached basemap
 │   ├── build_map.py               Datameet + world-atlas → SVG basemap (slow, rare)
 │   ├── build_html.py              template + data → web/india-history.html AND web/shell.html
+│   ├── build_png.py               matplotlib → web/india-history.png + .square.png
 │   ├── map_paths.json             cached basemap (committed)
 │   └── validator_boundaries.json  cached PIP polygons (committed, ~700 KB)
 │
@@ -49,16 +52,18 @@ A validator-enforced, browser-renderable atlas of subcontinental history. Three 
 │
 ├── tests/                         Playwright regression tests
 │   ├── render_test_v2.py          click pins → panel content
-│   ├── render_test_popover.py     popover system (8 checks)
+│   ├── render_test_popover.py     popover system (9 checks)
 │   ├── render_test_zoom.py        zoom + pan (8 checks)
 │   ├── render_test_people.py      people UI (10 checks)
+│   ├── render_test_collections.py collections UI (13 checks)
 │   └── artifacts/                 (gitignored — screenshots from test runs)
 │
 ├── contribute/                    GUIDED FORMS for non-technical contributors
 │   ├── index.html                 landing + editorial guidance
-│   ├── event.html                 event form with Leaflet map picker
+│   ├── event.html                 event form with Leaflet map picker (now incl. tags)
 │   ├── thread.html                thread builder with searchable event picker
 │   ├── person.html                person form with track-step builder
+│   ├── collection.html            collection builder (event search + tag selector)
 │   └── lib/
 │       ├── validators.js          JS port of validators (UX layer; Python is authoritative)
 │       ├── submit.js              Download / open-PR / open-issue helpers (no OAuth)
@@ -68,9 +73,10 @@ A validator-enforced, browser-renderable atlas of subcontinental history. Three 
 │   ├── HANDOFF.md                 you are here
 │   ├── CLAUDE.md                  AI-assisted development runbook
 │   ├── CONTRIBUTING.md            for human contributors
-│   ├── SCHEMA.md                  events schema (the contract)
+│   ├── SCHEMA.md                  events schema (the contract; now includes tags)
 │   ├── THREADS_SCHEMA.md          threads schema
-│   └── PEOPLE_SCHEMA.md           people schema
+│   ├── PEOPLE_SCHEMA.md           people schema
+│   └── COLLECTIONS_SCHEMA.md      collections schema
 │
 ├── .github/
 │   ├── workflows/validate.yml     CI: validators + render tests on every PR
@@ -88,8 +94,10 @@ A validator-enforced, browser-renderable atlas of subcontinental history. Three 
 ### Events
 - **Schema:** `docs/SCHEMA.md`. Hard caps enforced by validator: tooltip ≤80, summary ≤160, detail 80–150 words.
 - **Causal layer:** `caused_by` + `gloss` per edge. `led_to` derived as inverse at runtime, never authored. `part_of` for hierarchical containment without gloss. Multi-parent / multi-child both supported. Cross-file references work — `events_mughal.json` can have a `caused_by` referencing `events_independence.json`.
-- **Validator:** `validators/validate_events.py`. Schema enforcement + cross-reference + point-in-polygon (PIP) check confirming each pin's lat/lon falls inside its declared country.
-- **Corpus today:** 37 events spanning 1526–1947 CE.
+- **Tags:** optional `tags[]` field, free-form kebab-case. Drives filtering and **collection membership** (see Collections below). Distinct from `category` — categories are controlled vocab + pin colour; tags are open-ended thematic markers.
+- **Validator:** `validators/validate_events.py`. Schema enforcement + cross-reference + point-in-polygon (PIP) check confirming each pin's lat/lon falls inside its declared country + tag format check + corpus-level warning on single-use tags.
+- **Corpus today:** 43 events spanning 1494–1947 CE.
+  - `events_central_asia.json` — 6 events, 1494–1524 (Babur's Timurid arc, all tagged `babur-arc`)
   - `events_independence.json` — 12 events, 1885–1947
   - `events_mughal.json` — 23 events, 1526–1707 (Babur → Aurangzeb)
   - `events_sur.json` — 2 events, 1539–1556 (Suri interregnum, separate file per the granular-dynasties principle)
@@ -97,7 +105,17 @@ A validator-enforced, browser-renderable atlas of subcontinental history. Three 
 ### Threads
 - **Schema:** `docs/THREADS_SCHEMA.md`. Each step references an event by id, carries a `note` (per-step framing) and a `transition` (prose bridge to next step; `null` on last). Coda required (the closing argument; ≤150 words).
 - **Validator:** `validators/validate_threads.py`. Resolves event_ids across the entire events corpus.
-- **Corpus today:** `threads_independence.json`, one thread on Chauri Chaura.
+- **Corpus today:** 2 threads — Chauri Chaura (independence) and Babur's road (Central Asia).
+
+### Collections (NEW — set-shaped groupings)
+- **Schema:** `docs/COLLECTIONS_SCHEMA.md`. A collection has `id`, `title`, `summary`, optional `subtitle` + `framing` (≤200 words), and `members[]`.
+- **Members are heterogeneous:** each entry is either `{kind: "event", id}` (explicit) or `{kind: "tag", tag}` (selector — pulls every event whose `tags[]` contains the named tag). Mixing kinds in one `members[]` is fine; the renderer dedups and sorts chronologically.
+- **Sets vs sequences:** collections are sets (no per-member notes, no transitions). Threads are sequences (notes + transitions per step). The cheap-to-author bit is deliberate — collections are how we cover cross-cutting catalogues without paying a thread's editorial overhead.
+- **Validator:** `validators/validate_collections.py`. Hard rules include: every event id resolves; every tag selector matches ≥1 event in the corpus (no empty selectors); soft warning when the effective member count after expansion + dedup is <3.
+- **UI:** Third pill row beneath People (`Collections — [pill] [pill] Exit collection`). Click a pill → reader panel renders title, subtitle, summary, optional framing block, member count + cards (tooltip + date for each), sources. Member pins on the map highlight in `--accent-blue` via the `.in-collection` mode class on `#map`. Cluster pins inherit the highlight if any member sits inside them. Mutually exclusive with Threads + People.
+- **Corpus today:** 2 collections —
+  - `collections_central_asia.json#baburs-road-from-andijan-to-lahore` — single tag selector `babur-arc` → 6 members.
+  - `collections_subcontinent.json#founding-moments-of-modern-india` — explicit list of 6 events spanning 1540–1885.
 
 ### People (UI shipped)
 - **Schema:** `docs/PEOPLE_SCHEMA.md`. Person has lifespan + a `track[]`. Each track step is `kind: "event-ref"` (with `role`) or `kind: "moment"` (own date, location, summary, note). Moments are intentionally lighter than events.
@@ -127,14 +145,16 @@ The shared `template.html` uses `let` (not `const`) for the four data globals an
 - Three submit paths: Download JSON (primary, no GitHub account needed), Open as Pull Request (uses GitHub create-file URL — auto-forks if needed), Open as Issue.
 - Forms fetch the live events corpus over HTTP for cross-reference (thread step picker, event-ref autocomplete).
 
-### Tests passing today (7/7)
-- `validators/validate_events.py` — PASS (20 soft warnings on summaries 140–160 chars)
+### Tests passing today (9/9)
+- `validators/validate_events.py` — PASS (20 soft warnings on summaries 140–160 chars; 1 single-use-tag warning)
 - `validators/validate_threads.py` — PASS
 - `validators/validate_people.py` — PASS (5 soft warnings)
+- `validators/validate_collections.py` — PASS
 - `tests/render_test_v2.py` — PASS
-- `tests/render_test_popover.py` — PASS (8 checks)
+- `tests/render_test_popover.py` — PASS (9 checks)
 - `tests/render_test_zoom.py` — PASS (8 checks)
 - `tests/render_test_people.py` — PASS (10 checks)
+- `tests/render_test_collections.py` — PASS (13 checks)
 
 ---
 
@@ -142,12 +162,15 @@ The shared `template.html` uses `let` (not `const`) for the four data globals an
 
 In rough priority order:
 
-1. **Tags + collections hybrid (infra).** Add `tags[]` to events for cheap thematic filtering; add a `collections_*.json` slice for curated, framed groupings. A collection's `members` field can be either a list of event_ids OR a tag selector like `"tag:women-leaders"`. New schema doc + validator + UI surface (probably a "Collections" pill row alongside Threads). Sized: one full session.
-
-2. **Sultanate events** — Ghurids through Lodis, ~20 events.
-3. **Maurya / post-Maurya events** — stress-tests the BCE end of the year slider.
-4. **More Mughal biographical tracks** — Akbar, Shah Jahan, Aurangzeb (the schema now supports unlimited people with explicit `colour` so no more palette collisions).
+1. **Sultanate events** — Ghurids through Lodis, ~20 events. Now the most-requested content batch — pre-1526 hole in the corpus.
+2. **Maurya / post-Maurya events** — stress-tests the BCE end of the year slider.
+3. **More Mughal biographical tracks** — Akbar, Shah Jahan, Aurangzeb (the schema now supports unlimited people with explicit `colour` so no more palette collisions).
+4. **More collections** — the infra is shipped; the cross-cutting catalogues from the menu below are now cheap to author. Highest-leverage next ones: women in independence, rebellions (pre-1857 reframe), memoirs.
 5. **GitHub publishing** — push to `naklitechie/india-2500`, enable Pages, optional CNAME for `assets.chiragpatnaik.com`. Tooling is ready; needs decision + execution.
+
+### Known follow-ups (small, parked)
+- `contribute/thread.html` and `contribute/collection.html` hardcode the events corpus file list. When new `events_*.json` files land, they need updating in both forms (search the literal `CORPUS_FILES`). A build-emitted manifest would fix this once.
+- `data/people/people_mughal-emperors.json#babur.track[11]` has a step year (1539) that postdates Babur's death (1530). Validator surfaces this as a warning. Pre-existing; needs editorial review of the moment's date.
 
 ### Content slices to explore (candidates for collections + dedicated event/people files)
 

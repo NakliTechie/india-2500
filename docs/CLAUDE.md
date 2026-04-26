@@ -10,6 +10,7 @@ The validators are the contract. If a change breaks them, CI blocks the PR. Run 
 python3 validators/validate_events.py
 python3 validators/validate_threads.py
 python3 validators/validate_people.py
+python3 validators/validate_collections.py
 ```
 
 The boundary rule for any India map: **Datameet, never Natural Earth or world-atlas for the India outline.** NE/world-atlas show PoK, Aksai Chin, and parts of Arunachal as outside India. Datameet's `india-soi.geojson` shows them inside, which is the official representation. The build pipeline already enforces this — surrounding states use world-atlas, India uses Datameet, India is drawn last so it sits on top.
@@ -22,14 +23,16 @@ The boundary rule for any India map: **Datameet, never Natural Earth or world-at
 ├── .gitignore                    datameet/, package/, .claude/, tests/artifacts/
 │
 ├── data/
-│   ├── events/events_*.json      37 events (independence, mughal, sur)
-│   ├── threads/threads_*.json    1 thread (Chauri Chaura)
-│   └── people/people_*.json      5 people, 45 track steps
+│   ├── events/events_*.json           43 events (independence, mughal, sur, central-asia)
+│   ├── threads/threads_*.json         2 threads
+│   ├── people/people_*.json           6 people
+│   └── collections/collections_*.json 2 collections
 │
 ├── validators/
-│   ├── validate_events.py        schema + cross-reference + PIP
+│   ├── validate_events.py        schema + cross-reference + PIP + tag format
 │   ├── validate_threads.py       schema + corpus event_id resolution
-│   └── validate_people.py        schema + two-kind step + PIP
+│   ├── validate_people.py        schema + two-kind step + PIP
+│   └── validate_collections.py   schema + member resolution (event id OR tag selector)
 │
 ├── build/
 │   ├── build_map.py              Datameet + world-atlas → SVG basemap (slow, rare)
@@ -44,11 +47,12 @@ The boundary rule for any India map: **Datameet, never Natural Earth or world-at
 │   └── shell.html                BUILT runtime-fetch version (loads /data and /build)
 │
 ├── tests/
-│   ├── render_test_v2.py         click pins → panel content
-│   ├── render_test_popover.py    popover system (8 checks)
-│   ├── render_test_zoom.py       zoom + pan (8 checks)
-│   ├── render_test_people.py     people UI (10 checks)
-│   └── artifacts/                (gitignored — screenshots from test runs)
+│   ├── render_test_v2.py            click pins → panel content
+│   ├── render_test_popover.py       popover system (9 checks)
+│   ├── render_test_zoom.py          zoom + pan (8 checks)
+│   ├── render_test_people.py        people UI (10 checks)
+│   ├── render_test_collections.py   collections UI (13 checks)
+│   └── artifacts/                   (gitignored — screenshots from test runs)
 │
 ├── contribute/                   GUIDED FORMS for non-technical contributors
 │   ├── index.html                landing + editorial guidance
@@ -120,6 +124,26 @@ Same workflow with `data/people/people_<group>.json` and `validators/validate_pe
 The first 5 people in load order get distinct accents from the Rangrez India · NORTH palette (KHADI, AAKASH, KUMKUM, NEEL, MOR). Beyond 5, colours cycle.
 
 `contribute/person.html` form has a track-step builder that toggles between event-ref (autocomplete from corpus) and moment (full sub-form with map picker).
+
+## Adding new collections
+
+Collections gather events into a *set* — unlike threads, no per-member notes or transitions. Use them for cross-cutting catalogues (women in independence, rebellions, founding moments, memoirs).
+
+Workflow: file at `data/collections/collections_<campaign>.json`, validator `validators/validate_collections.py`. Required fields: `id`, `title`, `summary` (30–80 words), `members[]`, `verified`. Optional: `subtitle`, `framing` (≤200 words editorial paragraph), `sources`.
+
+Members are heterogeneous — each entry is either:
+- `{"kind": "event", "id": "salt-march-1930"}` — explicit, validator fails if id doesn't resolve.
+- `{"kind": "tag", "tag": "women-leaders"}` — selector, validator fails if no event in the corpus has the tag (no empty selectors).
+
+Mixing kinds in one `members[]` is fine. Renderer dedupes and sorts chronologically by `date.start`.
+
+If your collection wants a tag that doesn't exist yet, **invent the tag, apply it to every event that fits via `tags[]`, then use the tag selector**. Tags are open-ended and free-form (kebab-case only); coordinate informally before introducing one.
+
+`contribute/collection.html` form has both an event search-picker and a tag selector with autocomplete from existing tags.
+
+## Adding tags to existing events
+
+Tags are an optional `tags[]` field on event records — free-form, kebab-case, no controlled vocab. Validator only checks format. Single-use tags surface as a soft warning (typo signal). Keep `category` (controlled vocab, drives pin colour) separate from `tags` (open-ended, drives filtering / collection membership).
 
 ## Editorial discipline (not validator-enforced)
 

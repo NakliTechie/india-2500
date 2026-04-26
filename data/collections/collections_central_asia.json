@@ -1,0 +1,22 @@
+{
+  "campaign": "central-asia",
+  "scope": "Cross-cutting collections that gather Central Asian / Timurid events into themed sets.",
+  "updated": "2026-04-26",
+  "collections": [
+    {
+      "id": "baburs-road-from-andijan-to-lahore",
+      "title": "Babur's road from Andijan to Lahore",
+      "subtitle": "Thirty years of failed Samarkand campaigns, Hindu Kush exile, and Afghan consolidation — the Central Asian backstory that made 1526 possible.",
+      "summary": "Before Panipat, Babur spent three decades losing Samarkand twice, taking Kabul, raiding the Punjab, and finally annexing Lahore. The textbook telling jumps from Timurid lineage to Mughal founding in a sentence; the actual road was a long, geographically wide failure to reclaim the Timurid inheritance — until Hindustan, the consolation prize, became the larger empire.",
+      "framing": "Read this gathering chronologically and a different Babur emerges than the one who founds the Mughal Empire at Panipat. The young prince of 1494 inherits a small valley; by 1501 he has lost his ancestral capital for good and will spend the next decade as a stateless mercenary. Kabul in 1504 is a base of operations, not a destination. The Hindustan raids of 1519 onwards are reconnaissance, then opportunism — only by 1524, after taking Lahore, does India start to look like the inheritance Samarkand never gave him. The Mughal Empire is the consolation prize for thirty years of Central Asian failure.",
+      "members": [
+        { "kind": "tag", "tag": "babur-arc" }
+      ],
+      "sources": [
+        { "label": "Babur, Baburnama (trans. W. Thackston, 1996)", "type": "primary" },
+        { "label": "Stephen F. Dale, The Garden of the Eight Paradises: Bābur and the Culture of Empire (2004)", "type": "scholarly" }
+      ],
+      "verified": true
+    }
+  ]
+}

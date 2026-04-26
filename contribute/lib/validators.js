@@ -45,6 +45,7 @@ export const LINK_TYPES = ["wikipedia", "primary", "archive", "related", "second
 export const SOURCE_TYPES = ["scholarly", "primary", "secondary", "reference"];
 export const THREAD_KINDS = ["narrative", "causal-chain", "thematic", "counterfactual"];
 export const STEP_KINDS = ["event-ref", "moment"];
+export const COLLECTION_MEMBER_KINDS = ["event", "tag"];
 
 export const ID_RE = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 
@@ -142,6 +143,23 @@ export function checkVocab(value, allowed, label) {
    {ok, errors, warnings} report.
    ---------------------------------------------------------------------- */
 
+export function checkTags(tags) {
+  const out = [];
+  if (tags == null) return out;
+  if (!Array.isArray(tags)) {
+    out.push({level: "error", msg: "Tags must be a list of kebab-case strings."});
+    return out;
+  }
+  tags.forEach((tag, i) => {
+    if (typeof tag !== "string") {
+      out.push({level: "error", msg: `tags[${i}] must be a string.`});
+    } else if (!ID_RE.test(tag)) {
+      out.push({level: "error", msg: `tags[${i}] "${tag}" must be kebab-case (lowercase, digits, hyphens).`});
+    }
+  });
+  return out;
+}
+
 export function validateEvent(ev) {
   const errors = [];
   const warnings = [];
@@ -154,6 +172,7 @@ export function validateEvent(ev) {
   collect(checkTooltip(ev.tooltip));
   collect(checkSummary(ev.summary));
   collect(checkDetail(ev.detail));
+  collect(checkTags(ev.tags));
 
   if (!ev.date) errors.push("Date object is required.");
   else {
@@ -250,6 +269,74 @@ export function validateThread(t) {
   }
 
   if (typeof t.verified !== "boolean") errors.push("Verified flag (true/false) is required.");
+
+  return {ok: errors.length === 0, errors, warnings};
+}
+
+/* validateCollection — accepts the collection record AND the corpus
+   (events list + tag index) so member entries can be resolved. The corpus
+   is fetched on form load by the contribute page; if absent, resolution
+   checks are skipped (form-level UX still shows shape errors). */
+export function validateCollection(c, corpus = null) {
+  const errors = [];
+  const warnings = [];
+  const collect = (results) => {
+    for (const r of results) (r.level === "error" ? errors : warnings).push(r.msg);
+  };
+
+  collect(checkId(c.id));
+  if (!c.title) errors.push("Title is required.");
+  if (!c.summary) errors.push("Summary is required.");
+  else {
+    const w = c.summary.trim().split(/\s+/).length;
+    if (w < 30) warnings.push(`Summary is ${w} words (<30 — feels truncated).`);
+    if (w > 80) warnings.push(`Summary is ${w} words (>80 — consider trimming).`);
+  }
+  if (c.framing) {
+    const w = c.framing.trim().split(/\s+/).length;
+    if (w > 200) warnings.push(`Framing is ${w} words (>200 — consider tightening).`);
+  }
+
+  const members = c.members || [];
+  if (!Array.isArray(members) || members.length === 0) {
+    errors.push("At least one member entry is required.");
+  } else {
+    const resolved = new Set();
+    members.forEach((m, i) => {
+      if (typeof m !== "object" || m == null) {
+        errors.push(`Member ${i + 1} must be an object with kind + id|tag.`);
+        return;
+      }
+      if (!COLLECTION_MEMBER_KINDS.includes(m.kind)) {
+        errors.push(`Member ${i + 1}: kind "${m.kind}" must be one of ${COLLECTION_MEMBER_KINDS.join(", ")}.`);
+        return;
+      }
+      if (m.kind === "event") {
+        if (!m.id) errors.push(`Member ${i + 1}: kind=event requires an id.`);
+        else if (corpus && corpus.eventsById && !corpus.eventsById.has(m.id)) {
+          errors.push(`Member ${i + 1}: event id "${m.id}" does not resolve to any event in the corpus.`);
+        } else if (corpus && corpus.eventsById) {
+          resolved.add(m.id);
+        }
+      } else if (m.kind === "tag") {
+        if (!m.tag) errors.push(`Member ${i + 1}: kind=tag requires a tag.`);
+        else if (!ID_RE.test(m.tag)) errors.push(`Member ${i + 1}: tag "${m.tag}" must be kebab-case.`);
+        else if (corpus && corpus.tagToEvents) {
+          const hits = corpus.tagToEvents.get(m.tag);
+          if (!hits || hits.length === 0) {
+            errors.push(`Member ${i + 1}: tag "${m.tag}" matches no events in the corpus (empty selector).`);
+          } else {
+            hits.forEach(id => resolved.add(id));
+          }
+        }
+      }
+    });
+    if (corpus && corpus.eventsById && resolved.size > 0 && resolved.size < 3) {
+      warnings.push(`Effective member count is ${resolved.size} (<3 — consider whether this earns its own collection).`);
+    }
+  }
+
+  if (typeof c.verified !== "boolean") errors.push("Verified flag (true/false) is required.");
 
   return {ok: errors.length === 0, errors, warnings};
 }

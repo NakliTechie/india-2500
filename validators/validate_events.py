@@ -378,6 +378,18 @@ def validate_event(ev, path, all_ids, boundaries):
             elif pid not in all_ids:
                 err(loc, f"part_of[{i}].id '{pid}' does not resolve to any event")
 
+    # tags — optional, free-form kebab-case (single-use → warning, see corpus pass)
+    tags = ev.get("tags") or []
+    if not isinstance(tags, list):
+        err(loc, "tags must be a list of kebab-case strings")
+    else:
+        for i, tag in enumerate(tags):
+            if not isinstance(tag, str):
+                err(loc, f"tags[{i}] must be a string, got {type(tag).__name__}")
+                continue
+            if not ID_RE.match(tag):
+                err(loc, f"tags[{i}] '{tag}' must be kebab-case (lowercase, digits, hyphens)")
+
     # verified
     if "verified" in ev and not isinstance(ev["verified"], bool):
         err(loc, "verified must be true or false")
@@ -431,7 +443,21 @@ def main():
     for p, ev in corpus:
         validate_event(ev, p, all_ids, boundaries)
 
+    # Corpus-level tag pass: warn on single-use tags (likely typos / candidates
+    # for a collection that hasn't been authored yet).
+    tag_uses = defaultdict(list)
+    for p, ev in corpus:
+        for tag in ev.get("tags") or []:
+            if isinstance(tag, str) and ID_RE.match(tag):
+                tag_uses[tag].append(f"{p.name}#{ev.get('id', '?')}")
+    for tag, uses in sorted(tag_uses.items()):
+        if len(uses) == 1:
+            warn(uses[0], f"tag '{tag}' is used only once across the corpus (typo? or seed for a future collection?)")
+
     print(f"Found {len(corpus)} events across {len(files)} file(s).\n")
+    if tag_uses:
+        print(f"Tag usage: {len(tag_uses)} distinct tag(s) across {sum(len(u) for u in tag_uses.values())} application(s).")
+        print()
     if warnings:
         print(f"{len(warnings)} warning(s):")
         for w in warnings:

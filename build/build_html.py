@@ -7,21 +7,24 @@ Reads:
   - events_*.json
   - threads_*.json
   - people_*.json
+  - collections_*.json
 
 Writes:
   - india-history.html
 
 The template uses these placeholders:
-  __VIEWBOX__               viewBox attribute for the SVG
-  __INDIA_PATH__            single SVG path for the India outline (Datameet)
-  __SURROUNDS_PATHS__       SVG <path> elements for surrounding countries
-  __MAP_DATA__              JS object literal (projection params + paths)
-  __EVENTS_DATA__           JS array literal of event records
-  __THREADS_DATA__          JS array literal of thread records
-  __PEOPLE_DATA__           JS array literal of person records (with colour assigned)
-  __STATIC_PINS__           pre-rendered SVG pins (iOS Quick Look fallback)
-  __STATIC_THREADS_BAR__    pre-rendered threads bar HTML (fallback)
-  __STATIC_PEOPLE_BAR__     pre-rendered people bar HTML (fallback)
+  __VIEWBOX__                   viewBox attribute for the SVG
+  __INDIA_PATH__                single SVG path for the India outline (Datameet)
+  __SURROUNDS_PATHS__           SVG <path> elements for surrounding countries
+  __MAP_DATA__                  JS object literal (projection params + paths)
+  __EVENTS_DATA__               JS array literal of event records
+  __THREADS_DATA__              JS array literal of thread records
+  __PEOPLE_DATA__               JS array literal of person records (with colour assigned)
+  __COLLECTIONS_DATA__          JS array literal of collection records
+  __STATIC_PINS__               pre-rendered SVG pins (iOS Quick Look fallback)
+  __STATIC_THREADS_BAR__        pre-rendered threads bar HTML (fallback)
+  __STATIC_PEOPLE_BAR__         pre-rendered people bar HTML (fallback)
+  __STATIC_COLLECTIONS_BAR__    pre-rendered collections bar HTML (fallback)
 
 The DATA:BEGIN / DATA:END markers in the template are preserved so that
 later updates can be spliced in mechanically (Claude Code, manual paste).
@@ -63,6 +66,11 @@ for p in sorted((DATA / "threads").glob("threads_*.json")):
 people = []
 for p in sorted((DATA / "people").glob("people_*.json")):
     people.extend(json.loads(p.read_text())["people"])
+collections = []
+collections_dir = DATA / "collections"
+if collections_dir.is_dir():
+    for p in sorted(collections_dir.glob("collections_*.json")):
+        collections.extend(json.loads(p.read_text())["collections"])
 
 # Per-person accent: prefer explicit `colour` field on the person object;
 # fall back to cycling PEOPLE_PALETTE in load order. Authors should set
@@ -71,7 +79,7 @@ for i, person in enumerate(people):
     if not person.get("colour"):
         person["colour"] = PEOPLE_PALETTE[i % len(PEOPLE_PALETTE)]
 
-print(f"Splicing: {len(events)} events, {len(threads)} threads, {len(people)} people")
+print(f"Splicing: {len(events)} events, {len(threads)} threads, {len(people)} people, {len(collections)} collections")
 
 
 # --- Spherical LCC (matches the JS formula in the template) ---
@@ -129,6 +137,13 @@ people_pills = "\n    ".join(
 )
 static_people_bar = f'<span class="label">People</span>\n    {people_pills}'
 
+# --- Static collections bar pre-render ---
+collection_pills = "\n    ".join(
+    f'<button class="pill" data-cid="{h(c["id"])}">{h(c["title"])}</button>'
+    for c in collections
+)
+static_collections_bar = f'<span class="label">Collections</span>\n    {collection_pills}'
+
 
 # --- Map + viewport ---
 vb = map_data["viewport"]
@@ -144,9 +159,10 @@ map_js = json.dumps({
     "viewport": vb,
 }, separators=(",", ":"))
 
-events_js = json.dumps(events, ensure_ascii=False, separators=(",", ":"))
-threads_js = json.dumps(threads, ensure_ascii=False, separators=(",", ":"))
-people_js  = json.dumps(people,  ensure_ascii=False, separators=(",", ":"))
+events_js      = json.dumps(events,      ensure_ascii=False, separators=(",", ":"))
+threads_js     = json.dumps(threads,     ensure_ascii=False, separators=(",", ":"))
+people_js      = json.dumps(people,      ensure_ascii=False, separators=(",", ":"))
+collections_js = json.dumps(collections, ensure_ascii=False, separators=(",", ":"))
 
 template = (WEB / "template.html").read_text()
 
@@ -162,9 +178,11 @@ single = (template
        .replace("__EVENTS_DATA__", events_js)
        .replace("__THREADS_DATA__", threads_js)
        .replace("__PEOPLE_DATA__", people_js)
+       .replace("__COLLECTIONS_DATA__", collections_js)
        .replace("__STATIC_PINS__", static_pins_html)
        .replace("__STATIC_THREADS_BAR__", static_threads_bar)
        .replace("__STATIC_PEOPLE_BAR__", static_people_bar)
+       .replace("__STATIC_COLLECTIONS_BAR__", static_collections_bar)
        .replace("__BOOT_INVOCATION__", "bootRenders();"))
 
 (WEB / "india-history.html").write_text(single)
@@ -175,9 +193,13 @@ print(f"  Wrote india-history.html: {len(single)/1024:.1f} KB (single-file, depl
 # Data placeholders stubbed with empty literals; real data fetched at boot.
 # Also enumerates the actual data files so new ones added later don't need
 # a shell.html change — just re-run build_html.py to regenerate the manifest.
-events_files  = sorted(p.name for p in (DATA / "events").glob("events_*.json"))
-threads_files = sorted(p.name for p in (DATA / "threads").glob("threads_*.json"))
-people_files  = sorted(p.name for p in (DATA / "people").glob("people_*.json"))
+events_files      = sorted(p.name for p in (DATA / "events").glob("events_*.json"))
+threads_files     = sorted(p.name for p in (DATA / "threads").glob("threads_*.json"))
+people_files      = sorted(p.name for p in (DATA / "people").glob("people_*.json"))
+collections_files = (
+    sorted(p.name for p in (DATA / "collections").glob("collections_*.json"))
+    if (DATA / "collections").is_dir() else []
+)
 
 # Inline the same colour palette used at build time so shell.html assigns
 # accents identically to the single-file build.
@@ -200,18 +222,20 @@ shell_boot = f"""(async function() {{
   }}
 
   try {{
-    const [mapDoc, eventsDocs, threadsDocs, peopleDocs] = await Promise.all([
+    const [mapDoc, eventsDocs, threadsDocs, peopleDocs, collectionsDocs] = await Promise.all([
       fetchJson('build/map_paths.json'),
       Promise.all({json.dumps(events_files)}.map(f => fetchJson('data/events/' + f))),
       Promise.all({json.dumps(threads_files)}.map(f => fetchJson('data/threads/' + f))),
       Promise.all({json.dumps(people_files)}.map(f => fetchJson('data/people/' + f))),
+      Promise.all({json.dumps(collections_files)}.map(f => fetchJson('data/collections/' + f))),
     ]);
 
     // Populate the data globals declared by the template.
-    MAP     = {{ projection: mapDoc.projection, viewport: mapDoc.viewport }};
-    EVENTS  = eventsDocs.flatMap(d => d.events || []);
-    THREADS = threadsDocs.flatMap(d => d.threads || []);
-    PEOPLE  = peopleDocs.flatMap(d => d.people || []);
+    MAP         = {{ projection: mapDoc.projection, viewport: mapDoc.viewport }};
+    EVENTS      = eventsDocs.flatMap(d => d.events || []);
+    THREADS     = threadsDocs.flatMap(d => d.threads || []);
+    PEOPLE      = peopleDocs.flatMap(d => d.people || []);
+    COLLECTIONS = collectionsDocs.flatMap(d => d.collections || []);
     PEOPLE.forEach((p, i) => {{ p.colour = PALETTE[i % PALETTE.length]; }});
 
     // Render the static SVG basemap from the fetched paths.
@@ -240,9 +264,11 @@ shell = (template
        .replace("__EVENTS_DATA__", "[]")
        .replace("__THREADS_DATA__", "[]")
        .replace("__PEOPLE_DATA__", "[]")
+       .replace("__COLLECTIONS_DATA__", "[]")
        .replace("__STATIC_PINS__", "")
        .replace("__STATIC_THREADS_BAR__", '<span class="label">Threads</span>')
        .replace("__STATIC_PEOPLE_BAR__", '<span class="label">People</span>')
+       .replace("__STATIC_COLLECTIONS_BAR__", '<span class="label">Collections</span>')
        .replace("__BOOT_INVOCATION__", shell_boot))
 
 (WEB / "shell.html").write_text(shell)

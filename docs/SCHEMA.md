@@ -165,6 +165,14 @@ Used for pin colour and category filters. Pick the dominant one or two; resist t
 
 Named individuals primarily associated with the event. Plain strings, not linked entities. Searchable.
 
+### `tags` — optional, list of strings
+
+Free-form, kebab-case lowercase. Unlike `category` (controlled vocab, drives pin colour), tags are open-ended thematic markers that drive *filtering* and *collection membership* — see `COLLECTIONS_SCHEMA.md`. Examples: `women-leaders`, `rebellion`, `memoir`, `institution-founding`, `babur-arc`.
+
+Use sparingly. A tag earns its place when at least two events share it — single-use tags are a soft warning (likely typos). The intended pattern is: a tag is invented when a collection is being authored, and applied to all events that the collection wants to gather.
+
+Tags are not a controlled vocab. The validator only checks format (kebab-case) and surfaces the single-use warning. Coordinate with other authors before introducing a new tag — there's no central registry, just the corpus.
+
 ### `caused_by` — optional, list of `{id, gloss}`
 
 Direct causal or responsive links. Each entry must include a `gloss`: a one-sentence editorial statement of *what* about the prior event led to this one. Bare ID without gloss is a validator error — the gloss is the editorial layer that makes the chain readable.

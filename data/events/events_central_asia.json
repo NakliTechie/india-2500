@@ -26,6 +26,7 @@
       "era": "mughal",
       "category": ["dynastic", "political"],
       "figures": ["Babur", "Umar Sheikh Mirza"],
+      "tags": ["babur-arc"],
       "links": [
         { "url": "https://en.wikipedia.org/wiki/Babur", "label": "Wikipedia: Babur", "type": "wikipedia" }
       ],
@@ -59,6 +60,7 @@
       "era": "mughal",
       "category": ["military", "dynastic"],
       "figures": ["Babur", "Muhammad Shaybani Khan"],
+      "tags": ["babur-arc"],
       "links": [
         { "url": "https://en.wikipedia.org/wiki/Battle_of_Sar-e_Pul", "label": "Wikipedia: Battle of Sar-e Pul", "type": "wikipedia" }
       ],
@@ -95,6 +97,7 @@
       "era": "mughal",
       "category": ["military", "dynastic", "political"],
       "figures": ["Babur", "Muqim Beg Arghun"],
+      "tags": ["babur-arc"],
       "links": [
         { "url": "https://en.wikipedia.org/wiki/Babur", "label": "Wikipedia: Babur", "type": "wikipedia" }
       ],
@@ -131,6 +134,7 @@
       "era": "mughal",
       "category": ["military", "dynastic"],
       "figures": ["Babur", "Shah Ismail Safavi", "Najm-i-Sani"],
+      "tags": ["babur-arc"],
       "links": [
         { "url": "https://en.wikipedia.org/wiki/Battle_of_Ghazdewan", "label": "Wikipedia: Battle of Ghazdewan", "type": "wikipedia" }
       ],
@@ -167,6 +171,7 @@
       "era": "mughal",
       "category": ["military"],
       "figures": ["Babur"],
+      "tags": ["babur-arc"],
       "links": [
         { "url": "https://en.wikipedia.org/wiki/Babur", "label": "Wikipedia: Babur", "type": "wikipedia" }
       ],
@@ -202,6 +207,7 @@
       "era": "mughal",
       "category": ["military", "political"],
       "figures": ["Babur", "Daulat Khan Lodi", "Dilawar Khan"],
+      "tags": ["babur-arc"],
       "links": [
         { "url": "https://en.wikipedia.org/wiki/Babur", "label": "Wikipedia: Babur", "type": "wikipedia" }
       ],

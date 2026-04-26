@@ -6,27 +6,30 @@ Hosted at **[assets.chiragpatnaik.com/india-history.html](https://assets.chiragp
 
 ## What's here
 
-A growing, validator-enforced corpus of historical events, threads (curated walks through events), and people (biographical tracks across the map). Editorial stance: neutral, data-grounded, named entities and numbers over adjectives.
+A growing, validator-enforced corpus of historical events, threads (curated walks through events), people (biographical tracks across the map), and collections (set-shaped thematic groupings). Editorial stance: neutral, data-grounded, named entities and numbers over adjectives.
 
 Current corpus:
-- **37 events** spanning 1526–1947 CE (Mughal + Sur dynasty + Independence movement)
-- **1 thread** (Chauri Chaura and the cost of non-violence)
-- **5 people** with 45 track steps total (Gandhi, Nehru, Bhagat Singh, Ambedkar, Jinnah)
+- **43 events** spanning 1494–1947 CE (Babur's Central Asia + Sur + Mughal + Independence)
+- **2 threads** (Chauri Chaura and the cost of non-violence; Babur's road to Panipat)
+- **6 people** (Gandhi, Nehru, Bhagat Singh, Ambedkar, Jinnah, Babur)
+- **2 collections** (Babur's road from Andijan to Lahore; Founding moments of modern India)
 
-Upcoming: Sultanate, Maurya / post-Maurya, Babur's Central Asian track, more threads, more people.
+Upcoming: Sultanate, Maurya / post-Maurya, more Mughal biographical tracks, more collections (women in independence, rebellions reframe, memoirs).
 
 ## Repository layout
 
 ```
-data/                  Editorial content. Add new events, threads, people here.
+data/                  Editorial content. Add new events, threads, people, collections here.
   events/events_*.json
   threads/threads_*.json
   people/people_*.json
+  collections/collections_*.json
 
 validators/            Schema enforcement. Run on every PR via CI.
   validate_events.py
   validate_threads.py
   validate_people.py
+  validate_collections.py
 
 build/                 Pipeline that turns data + template into the asset.
   build_map.py         Datameet + world-atlas → SVG basemap (slow, rare)
@@ -44,14 +47,16 @@ tests/                 Browser regression tests (Playwright).
   render_test_popover.py
   render_test_zoom.py
   render_test_people.py
+  render_test_collections.py
 
 docs/                  Editorial + technical docs.
-  SCHEMA.md            Events schema (the contract)
+  SCHEMA.md                Events schema (the contract; includes optional tags[])
   THREADS_SCHEMA.md
   PEOPLE_SCHEMA.md
-  CLAUDE.md            Runbook for AI-assisted development
-  HANDOFF.md           Full project context for new contributors
-  CONTRIBUTING.md      How to add events, threads, people
+  COLLECTIONS_SCHEMA.md
+  CLAUDE.md                Runbook for AI-assisted development
+  HANDOFF.md               Full project context for new contributors
+  CONTRIBUTING.md          How to add events, threads, people, collections
 
 datameet/              External — clone separately (gitignored, ~200 MB)
 package/               External — fetch world-atlas separately (gitignored)
@@ -72,8 +77,9 @@ $EDITOR data/events/events_<your-campaign>.json
 
 # 2. Validate
 python3 validators/validate_events.py
-python3 validators/validate_threads.py   # cross-reference check
-python3 validators/validate_people.py    # cross-reference check
+python3 validators/validate_threads.py        # cross-reference check
+python3 validators/validate_people.py         # cross-reference check
+python3 validators/validate_collections.py    # cross-reference check
 
 # 3. Rebuild the asset
 python3 build/build_html.py

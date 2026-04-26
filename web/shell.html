@@ -133,8 +133,8 @@
   }
   #reset:hover, .btn-ghost:hover { background: rgba(60,45,15,0.06); border-color: rgba(60,45,15,0.55); color: var(--cream-text); }
 
-  /* ---------- Threads + People bars ---------- */
-  .threads-bar, .people-bar {
+  /* ---------- Threads + People + Collections bars ---------- */
+  .threads-bar, .people-bar, .collections-bar {
     display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
     margin-bottom: 12px;
   }
@@ -237,6 +237,14 @@
   /* When in thread mode, non-thread pins fade. */
   #map.in-thread .pin:not(.in-thread) circle.dot { fill: var(--pin-faded); stroke: transparent; }
   #map.in-thread .pin:not(.in-thread) text { display: none; }
+
+  /* When in collection mode, non-member pins fade. Member pins keep their
+     normal colour — the contrast carries the highlighting. */
+  #map.in-collection .pin:not(.in-collection) circle.dot { fill: var(--pin-faded); stroke: transparent; }
+  #map.in-collection .pin:not(.in-collection) text { display: none; }
+  #map.in-collection .pin:not(.in-collection) circle.pin-cluster { fill: var(--pin-faded); stroke: transparent; }
+  #map.in-collection .pin.in-collection circle.dot { fill: var(--accent-blue); }
+  #map.in-collection .pin.in-collection circle.pin-cluster { fill: var(--accent-blue); }
 
   #map .pin-cluster-group { cursor: pointer; }
   #map .pin .pin-cluster,
@@ -671,6 +679,45 @@
     line-height: 1.6;
   }
 
+  /* ---------- Collection reader ---------- */
+  .collection-reader { padding: 22px 22px 18px; }
+  .collection-reader .collection-subtitle { font-style: italic; color: var(--cream-muted); margin: 4px 0 12px; font-size: 14px; }
+  .collection-reader .collection-summary { color: var(--cream-text); margin: 0 0 14px; }
+  .collection-reader .collection-framing {
+    margin: 0 0 18px;
+    padding: 14px 16px;
+    background: rgba(60,45,15,0.04);
+    border-radius: 8px;
+    font-size: 13.5px;
+    color: var(--cream-text);
+    line-height: 1.6;
+  }
+  .collection-reader .member-count {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--cream-faint);
+    margin: 8px 0 8px;
+  }
+  .collection-member {
+    border-left: 2px solid var(--cream-border-soft);
+    padding: 4px 0 12px 14px;
+    margin-bottom: 0;
+    cursor: pointer;
+  }
+  .collection-member:hover { border-left-color: var(--accent-blue); }
+  .collection-member.is-active { border-left-color: var(--accent-blue); }
+  .collection-member .member-title {
+    font-size: 14px; font-weight: 500; color: var(--cream-text); line-height: 1.35;
+  }
+  .collection-member:hover .member-title { text-decoration: underline; text-underline-offset: 3px; }
+  .collection-member .member-when {
+    font-size: 11px; color: var(--cream-faint); margin: 1px 0 4px; font-variant-numeric: tabular-nums;
+  }
+  .collection-member .member-tooltip {
+    font-size: 13px; color: var(--cream-muted); margin: 0; line-height: 1.5;
+  }
+
   /* ---------- Two-column layout for desktop ---------- */
   .stage {
     display: flex;
@@ -833,6 +880,7 @@
 
   <div class="threads-bar" id="threads-bar"><span class="label">Threads</span></div>
   <div class="people-bar" id="people-bar"><span class="label">People</span></div>
+  <div class="collections-bar" id="collections-bar"><span class="label">Collections</span></div>
 
   <div class="controls">
     <span class="label">Search</span>
@@ -929,6 +977,14 @@ let PEOPLE = [];
 // DATA:END people
 // =====================================================================
 
+// =====================================================================
+// DATA:BEGIN collections
+// =====================================================================
+let COLLECTIONS = [];
+// =====================================================================
+// DATA:END collections
+// =====================================================================
+
 
 /* =====================================================================
    PROJECTION
@@ -978,6 +1034,8 @@ const eventById = new Map();
 const ledTo = new Map();
 const peopleById = new Map();
 const momentByKey = new Map();   // "personId::momentId" -> { person, moment, idx }
+const collectionsById = new Map();
+const tagToEvents = new Map();   // tag -> [event ids] in chronological order
 
 function parseYear(s) {
   if (typeof s === 'number') return s;
@@ -996,6 +1054,8 @@ function buildIndexes() {
   ledTo.clear();
   peopleById.clear();
   momentByKey.clear();
+  collectionsById.clear();
+  tagToEvents.clear();
 
   EVENTS.forEach(ev => eventById.set(ev.id, ev));
   EVENTS.forEach(ev => {
@@ -1008,6 +1068,21 @@ function buildIndexes() {
     ev._yearStart = parseYear(ev.date.start);
     ev._yearEnd   = parseYear(ev.date.end);
   });
+
+  // Tag → event ids index (for collection tag selectors). Order is
+  // chronological — collections render members sorted by date regardless
+  // of authoring order.
+  EVENTS.forEach(ev => {
+    (ev.tags || []).forEach(tag => {
+      if (!tagToEvents.has(tag)) tagToEvents.set(tag, []);
+      tagToEvents.get(tag).push(ev.id);
+    });
+  });
+  tagToEvents.forEach((ids, tag) => {
+    ids.sort((a, b) => (eventById.get(a)._yearStart ?? 0) - (eventById.get(b)._yearStart ?? 0));
+  });
+
+  COLLECTIONS.forEach(c => collectionsById.set(c.id, c));
 
   PEOPLE.forEach(person => {
     peopleById.set(person.id, person);
@@ -1049,6 +1124,7 @@ const state = {
   activeThread: null,   // thread id
   activeStep: 0,        // index within active thread
   activePeople: new Set(),  // person ids — multi-select; mutually exclusive with activeThread
+  activeCollection: null,   // collection id — mutually exclusive with activeThread + activePeople
 };
 
 
@@ -1066,6 +1142,7 @@ const elSearch = $('#search');
 const elReset = $('#reset');
 const elThreadsBar = $('#threads-bar');
 const elPeopleBar = $('#people-bar');
+const elCollectionsBar = $('#collections-bar');
 const elOffmapPanel = $('#offmap-panel');
 const elPanelStack = $('.panel-stack');
 const elEraBands = $('#era-bands');
@@ -1237,6 +1314,17 @@ function renderPins() {
     });
   }
 
+  // Collection mode mirrors thread mode: members always visible, others fade.
+  let collectionEventIds = new Set();
+  if (state.activeCollection) {
+    const c = collectionsById.get(state.activeCollection);
+    resolveCollectionMembers(c).forEach(id => collectionEventIds.add(id));
+    collectionEventIds.forEach(id => {
+      const ev = eventById.get(id);
+      if (ev && !visible.includes(ev)) visible.push(ev);
+    });
+  }
+
   const positions = visible.map(ev => {
     const p0 = ev.location.points[0];
     const [sx, sy] = toSvg(p0.lat, p0.lon);
@@ -1260,6 +1348,10 @@ function renderPins() {
   if (inThread) elMap.classList.add('in-thread');
   else elMap.classList.remove('in-thread');
 
+  const inCollection = !!state.activeCollection;
+  if (inCollection) elMap.classList.add('in-collection');
+  else elMap.classList.remove('in-collection');
+
   // Deduplicate clusters — when multiple positions share a cluster ref, only
   // one cluster badge is rendered. Single events render as today.
   const seenClusters = new Set();
@@ -1270,8 +1362,17 @@ function renderPins() {
       seenClusters.add(cluster);
       const ids = cluster.memberIds.join('|');
       const locationName = ev.location && ev.location.name || '';
+      // A cluster inherits the highlight if ANY of its members is in the
+      // active thread or collection. Otherwise the user loses sight of
+      // members that share a location with non-members (e.g. Lahore 1524
+      // sharing a pin with Lahore 1929).
+      const clusterHasThreadMember = inThread && cluster.memberIds.some(id => threadEventIds.has(id));
+      const clusterHasCollectionMember = inCollection && cluster.memberIds.some(id => collectionEventIds.has(id));
+      const clusterCls = ['pin', 'pin-cluster-group'];
+      if (clusterHasThreadMember) clusterCls.push('in-thread');
+      if (clusterHasCollectionMember) clusterCls.push('in-collection');
       pinHtml.push(
-        `<g class="pin pin-cluster-group" data-cluster-ids="${ids}" `
+        `<g class="${clusterCls.join(' ')}" data-cluster-ids="${ids}" `
         + `transform="translate(${sx.toFixed(1)},${sy.toFixed(1)})">`
         + `<circle class="pin-cluster" r="8"></circle>`
         + `<text class="pin-count" y="0.4">${cluster.count}</text>`
@@ -1281,9 +1382,11 @@ function renderPins() {
     } else {
       const isActive = ev.id === state.activeEvent;
       const isInThread = threadEventIds.has(ev.id);
+      const isInCollection = collectionEventIds.has(ev.id);
       const cls = ['pin'];
       if (isActive) cls.push('is-active');
       if (isInThread) cls.push('in-thread');
+      if (isInCollection) cls.push('in-collection');
       pinHtml.push(
         `<g class="${cls.join(' ')}" data-id="${ev.id}" `
         + `transform="translate(${sx.toFixed(1)},${sy.toFixed(1)})">`
@@ -1634,12 +1737,14 @@ function renderEventPanel() {
     html += renderThreadReaderHtml();
   } else if (state.activePeople.size > 0) {
     html += renderPeopleReaderHtml();
+  } else if (state.activeCollection) {
+    html += renderCollectionReaderHtml();
   }
 
   if (state.activeEvent) {
     const ev = eventById.get(state.activeEvent);
     if (ev) html += renderEventPanelHtml(ev);
-  } else if (!state.activeThread && state.activePeople.size === 0) {
+  } else if (!state.activeThread && state.activePeople.size === 0 && !state.activeCollection) {
     // Compute the corpus date span from the loaded events for display.
     const yrs = EVENTS.map(e => e._yearStart).filter(y => y !== null).sort((a,b) => a - b);
     const first = yrs[0], last = yrs[yrs.length - 1];
@@ -1662,6 +1767,15 @@ function renderEventPanel() {
       if (target === 'event') clearEvent();
       if (target === 'thread') clearThread();
       if (target === 'people') clearPeople();
+      if (target === 'collection') clearCollection();
+    });
+  });
+  // Collection member clicks: same affordance as thread step clicks — open
+  // the event in the panel AND surface its popover.
+  $$('.collection-member', stack).forEach((row) => {
+    row.addEventListener('click', () => {
+      const id = row.getAttribute('data-event-id');
+      if (id) navigateToEvent(id);
     });
   });
   // Wire relation-card clicks — clicking caused_by/led_to/part_of card
@@ -1786,6 +1900,11 @@ function activateThread(tid) {
     renderPeopleBar();
     renderTracks();
   }
+  // Collections are also mutually exclusive with Threads
+  if (state.activeCollection) {
+    state.activeCollection = null;
+    renderCollectionsBar();
+  }
   // Auto-select the first step's event
   const t = THREADS.find(x => x.id === tid);
   if (t && t.steps[0]) state.activeEvent = t.steps[0].event_id;
@@ -1884,10 +2003,16 @@ function togglePerson(pid) {
       state.activeThread = null;
       state.activeStep = 0;
     }
+    // Collections also clear when People activate
+    if (state.activeCollection) {
+      state.activeCollection = null;
+    }
   }
   renderPeopleBar();
   renderThreadsBar();
+  renderCollectionsBar();
   renderTracks();
+  renderPins();
   renderEventPanel();
 }
 
@@ -1897,6 +2022,125 @@ function clearPeople() {
   renderTracks();
   renderEventPanel();
 }
+
+
+/* =====================================================================
+   COLLECTIONS — set-shaped groupings (no per-member notes, no transitions).
+   ---------------------------------------------------------------------
+   • Mutually exclusive with Threads and People (selecting a collection
+     clears the other two; selecting either clears the collection).
+   • Members are heterogeneous: {kind:"event", id} or {kind:"tag", tag}.
+     resolveCollectionMembers() expands tag selectors into event ids,
+     deduplicates, and returns the result sorted chronologically.
+   • Map: when a collection is active, member pins highlight via the
+     .in-collection class on #map (member pins get .in-collection); the
+     CSS rule defined above fades non-members.
+   =================================================================== */
+function resolveCollectionMembers(c) {
+  if (!c) return [];
+  const seen = new Set();
+  const ordered = [];
+  (c.members || []).forEach(m => {
+    if (m.kind === 'event') {
+      if (m.id && eventById.has(m.id) && !seen.has(m.id)) {
+        seen.add(m.id);
+        ordered.push(m.id);
+      }
+    } else if (m.kind === 'tag') {
+      const ids = tagToEvents.get(m.tag) || [];
+      ids.forEach(id => {
+        if (!seen.has(id)) {
+          seen.add(id);
+          ordered.push(id);
+        }
+      });
+    }
+  });
+  // Re-sort the merged set chronologically — explicit-event entries may
+  // arrive in any order relative to tag-expanded entries.
+  ordered.sort((a, b) => (eventById.get(a)._yearStart ?? 0) - (eventById.get(b)._yearStart ?? 0));
+  return ordered;
+}
+
+function renderCollectionsBar() {
+  const pills = COLLECTIONS.map(c => {
+    const active = state.activeCollection === c.id ? ' active' : '';
+    return `<button class="pill${active}" data-cid="${c.id}">${escapeHtml(c.title)}</button>`;
+  }).join('');
+  elCollectionsBar.innerHTML =
+    `<span class="label">Collections</span>${pills}` +
+    (state.activeCollection ? `<button class="pill" id="exit-collection">Exit collection</button>` : '');
+
+  $$('.pill[data-cid]', elCollectionsBar).forEach(btn => {
+    btn.addEventListener('click', () => {
+      const cid = btn.getAttribute('data-cid');
+      if (state.activeCollection === cid) clearCollection();
+      else activateCollection(cid);
+    });
+  });
+  const exit = $('#exit-collection');
+  if (exit) exit.addEventListener('click', clearCollection);
+}
+
+function activateCollection(cid) {
+  state.activeCollection = cid;
+  // Mutual exclusion with Threads + People
+  if (state.activeThread) {
+    state.activeThread = null;
+    state.activeStep = 0;
+  }
+  if (state.activePeople.size > 0) {
+    state.activePeople.clear();
+    renderTracks();
+  }
+  // Auto-select the first member event so the panel shows something useful
+  const c = collectionsById.get(cid);
+  const memberIds = resolveCollectionMembers(c);
+  if (memberIds.length > 0) state.activeEvent = memberIds[0];
+  renderCollectionsBar();
+  renderThreadsBar();
+  renderPeopleBar();
+  renderEventPanel();
+  renderPins();
+}
+
+function clearCollection() {
+  state.activeCollection = null;
+  renderCollectionsBar();
+  renderEventPanel();
+  renderPins();
+}
+
+function renderCollectionReaderHtml() {
+  const c = collectionsById.get(state.activeCollection);
+  if (!c) return '';
+  const memberIds = resolveCollectionMembers(c);
+  const membersHtml = memberIds.map(id => {
+    const ev = eventById.get(id);
+    if (!ev) return '';
+    const activeCls = ev.id === state.activeEvent ? ' is-active' : '';
+    return `<div class="collection-member${activeCls}" data-event-id="${ev.id}">
+      <div class="member-title">${escapeHtml(ev.title)}</div>
+      <div class="member-when">${escapeHtml(ev.date.display)}</div>
+      <p class="member-tooltip">${escapeHtml(ev.tooltip || ev.summary || '')}</p>
+    </div>`;
+  }).join('');
+  const sources = (c.sources || []).map(s => `<li>${escapeHtml(s.label)}</li>`).join('');
+  const framing = c.framing ? `<div class="collection-framing">${escapeHtml(c.framing)}</div>` : '';
+  return `<aside class="panel collection-reader">
+    <div class="panel-head">
+      <h3>${escapeHtml(c.title)}</h3>
+      <button class="panel-close" data-close="collection" aria-label="Close collection">×</button>
+    </div>
+    ${c.subtitle ? `<p class="collection-subtitle">${escapeHtml(c.subtitle)}</p>` : ''}
+    <p class="collection-summary">${escapeHtml(c.summary)}</p>
+    ${framing}
+    <div class="member-count">${memberIds.length} member${memberIds.length === 1 ? '' : 's'}</div>
+    ${membersHtml}
+    ${sources ? `<div class="sources"><div class="section-label" style="margin-top:8px;">Sources</div><ul>${sources}</ul></div>` : ''}
+  </aside>`;
+}
+
 
 /* renderTracks() — paints all active person tracks (polyline + pins) into
    #tracks, and synchronises the off-map badge layer. Called whenever the
@@ -2275,10 +2519,12 @@ function onReset() {
   state.activeEvent = null;
   state.activeThread = null;
   state.activePeople.clear();
+  state.activeCollection = null;
   hidePopover();
   syncRange();
   renderThreadsBar();
   renderPeopleBar();
+  renderCollectionsBar();
   renderTracks();
   renderEventPanel();
 }
@@ -2611,6 +2857,7 @@ function bootRenders() {
   renderActiveRange();
   renderThreadsBar();
   renderPeopleBar();
+  renderCollectionsBar();
   renderPins();
   renderTracks();
   renderEventPanel();
@@ -2636,18 +2883,20 @@ window.bootRenders = bootRenders;  // exposed so shell.html can invoke after fet
   }
 
   try {
-    const [mapDoc, eventsDocs, threadsDocs, peopleDocs] = await Promise.all([
+    const [mapDoc, eventsDocs, threadsDocs, peopleDocs, collectionsDocs] = await Promise.all([
       fetchJson('build/map_paths.json'),
       Promise.all(["events_central_asia.json", "events_independence.json", "events_mughal.json", "events_sur.json"].map(f => fetchJson('data/events/' + f))),
       Promise.all(["threads_independence.json", "threads_mughal.json"].map(f => fetchJson('data/threads/' + f))),
       Promise.all(["people_freedom-fighters.json", "people_mughal-emperors.json"].map(f => fetchJson('data/people/' + f))),
+      Promise.all(["collections_central_asia.json", "collections_subcontinent.json"].map(f => fetchJson('data/collections/' + f))),
     ]);
 
     // Populate the data globals declared by the template.
-    MAP     = { projection: mapDoc.projection, viewport: mapDoc.viewport };
-    EVENTS  = eventsDocs.flatMap(d => d.events || []);
-    THREADS = threadsDocs.flatMap(d => d.threads || []);
-    PEOPLE  = peopleDocs.flatMap(d => d.people || []);
+    MAP         = { projection: mapDoc.projection, viewport: mapDoc.viewport };
+    EVENTS      = eventsDocs.flatMap(d => d.events || []);
+    THREADS     = threadsDocs.flatMap(d => d.threads || []);
+    PEOPLE      = peopleDocs.flatMap(d => d.people || []);
+    COLLECTIONS = collectionsDocs.flatMap(d => d.collections || []);
     PEOPLE.forEach((p, i) => { p.colour = PALETTE[i % PALETTE.length]; });
 
     // Render the static SVG basemap from the fetched paths.

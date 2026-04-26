@@ -4,7 +4,7 @@ This is an editorial corpus first, code project second. The validators ensure sh
 
 ## Three things to know before you start
 
-1. **Validators are the contract.** Schema in `docs/SCHEMA.md`, `docs/THREADS_SCHEMA.md`, `docs/PEOPLE_SCHEMA.md`. If your PR doesn't pass `validators/validate_*.py`, CI will block it.
+1. **Validators are the contract.** Schema in `docs/SCHEMA.md`, `docs/THREADS_SCHEMA.md`, `docs/PEOPLE_SCHEMA.md`, `docs/COLLECTIONS_SCHEMA.md`. If your PR doesn't pass `validators/validate_*.py`, CI will block it.
 2. **Verified figures only.** Cross-check dates, locations, and key claims against at least two independent sources before setting `verified: true`. When in doubt, set `false` and let the UI tag it.
 3. **Wikipedia is the rabbit-hole link, not the source.** The summary should read like the start of an editorial, not an extract of the Wikipedia lead.
 
@@ -19,8 +19,9 @@ This is an editorial corpus first, code project second. The validators ensure sh
 4. **Validate locally.**
    ```bash
    python3 validators/validate_events.py
-   python3 validators/validate_threads.py   # checks any threads referencing your event
-   python3 validators/validate_people.py    # checks any people event-refs
+   python3 validators/validate_threads.py        # checks any threads referencing your event
+   python3 validators/validate_people.py         # checks any people event-refs
+   python3 validators/validate_collections.py    # checks any collection members
    ```
    The point-in-polygon (PIP) check confirms each pin's lat/lon falls inside its declared `country` polygon. If you set `country: "OFF"`, the check is skipped.
 
@@ -47,6 +48,14 @@ This is an editorial corpus first, code project second. The validators ensure sh
 3. Track steps must be in chronological order.
 4. The first 5 people in load order get distinct accent colours from the Rangrez India · NORTH palette. Beyond 5, colours cycle.
 5. Validate: `python3 validators/validate_people.py`.
+
+## Adding a collection
+
+1. Create or extend `data/collections/collections_<campaign>.json`.
+2. Each collection has `id`, `title`, `summary` (30–80 words), `members[]`, `verified`. Optional `subtitle`, `framing` (≤200 words), `sources`.
+3. Members are heterogeneous: `{kind: "event", id}` or `{kind: "tag", tag}`. Mixing kinds in one `members[]` is fine. Renderer dedupes and sorts chronologically.
+4. **Tag selectors require existing tags.** If your collection wants a tag that doesn't exist yet, add it to relevant events via `tags[]` first (or invent it inside the contribute form). The validator rejects tag selectors that match zero events.
+5. Validate: `python3 validators/validate_collections.py`.
 
 ## Editorial discipline
 

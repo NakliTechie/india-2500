@@ -1,0 +1,22 @@
+{
+  "campaign": "subcontinent",
+  "scope": "Thematic collections that span dynasties and centuries — the cross-cutting groupings that don't fit any single events_*.json file.",
+  "updated": "2026-04-26",
+  "collections": [
+    {
+      "id": "founding-moments-of-modern-india",
+      "title": "Founding moments of modern India",
+      "subtitle": "Institutions, orders, and administrative systems whose creation still shapes the subcontinent.",
+      "summary": "Five-century span of foundings — Sher Shah's revenue and road systems in 1540, Akbar's mansabdari in 1577, the Khalsa in 1699, the Indian National Congress in 1885 — each an act of deliberate institution-building that outlasted its founder.",
+      "members": [
+        { "kind": "event", "id": "sher-shah-reforms-1540" },
+        { "kind": "event", "id": "fatehpur-sikri-founded-1571" },
+        { "kind": "event", "id": "mansabdari-codified-1577" },
+        { "kind": "event", "id": "din-i-ilahi-1582" },
+        { "kind": "event", "id": "khalsa-founded-1699" },
+        { "kind": "event", "id": "inc-founded-1885" }
+      ],
+      "verified": true
+    }
+  ]
+}

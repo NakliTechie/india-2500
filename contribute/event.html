@@ -211,6 +211,12 @@
       <div class="hint">Major named participants. <em>e.g. "Babur, Ibrahim Lodi, Ustad Ali Quli"</em></div>
       <input type="text" id="figures" placeholder="Babur, Ibrahim Lodi">
     </div>
+
+    <div class="field">
+      <label for="tags">Tags <span class="opt">comma-separated, kebab-case</span></label>
+      <div class="hint">Free-form thematic markers. Drives filtering and collection membership. <em>e.g. "rebellion, women-leaders, institution-founding"</em>. Different from <strong>Categories</strong> above (which is a controlled vocab driving pin colour).</div>
+      <input type="text" id="tags" placeholder="rebellion, women-leaders">
+    </div>
   </div>
 
   <!-- Section 5: Links and sources -->
@@ -567,6 +573,9 @@ function build() {
 
   const figs = $("#figures").value.split(",").map(s => s.trim()).filter(Boolean);
   if (figs.length) ev.figures = figs;
+
+  const tags = $("#tags").value.split(",").map(s => s.trim()).filter(Boolean);
+  if (tags.length) ev.tags = tags;
 
   $$("#links-list .group").forEach(g => {
     const url = g.querySelector('[data-field="url"]').value.trim();
