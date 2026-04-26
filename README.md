@@ -128,13 +128,15 @@ python3 build/build_map.py
 
 ## Contributing
 
-See [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md). Short version:
+The easiest path for everyone — including non-technical contributors — is the **[contribute form](https://naklitechie.github.io/india-2500/contribute/)**. It guides you through adding a new event, thread, person, or collection, validates as you type, and gives you a downloadable JSON or a one-click PR.
 
-- New event / thread / person → open a PR with a JSON edit. CI runs all three validators and the render tests.
-- Found an error in an existing entry → open an issue with the [correction template](.github/ISSUE_TEMPLATE/correction.md).
-- Want to discuss editorial framing → open an issue, tag `editorial`.
+Other paths:
 
-The validators are the contract. If your PR passes them and the editorial review, it can merge.
+- **Direct PR (if you prefer)** — edit a JSON file under `data/` and open a PR. CI runs all six validators and the render tests.
+- **Found an error in an existing entry?** Open an [issue using the correction template](https://github.com/naklitechie/india-2500/issues/new?template=correction.md).
+- **Want to discuss editorial framing?** Open an [editorial issue](https://github.com/naklitechie/india-2500/issues/new?template=editorial.md).
+
+Full guide: [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md). The validators are the contract — if your PR passes them and the editorial review, it can merge.
 
 ## Editorial stance
 
