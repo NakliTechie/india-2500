@@ -117,6 +117,8 @@ The validator resolves `event_id` against the entire events corpus. If the event
 
 A moment carries the same fields as a slim event (`tooltip`, `summary`, `date`, `location`) plus the biographical `note`. It's intentionally lighter than a full event — no `figures`, no causal links, no `detail`. If a moment outgrows that and accrues consequences, promote it to a real event in `events_*.json` and convert the track step to `event-ref`.
 
+**Posthumous moments.** Some moments legitimately fall after the person's death — tomb relocations, posthumous publications, reinterment, the formal naming of a memorial. Set `"posthumous": true` on the moment to opt in; the validator will then suppress the postdates-died warning for that step. Unmarked moments dated after `lifespan.died` still warn (so genuine typos still surface). Babur's reburial at Bagh-e-Babur c. 1539 (nine years after his death, per his own wish) is the canonical example.
+
 ---
 
 ## Track ordering

@@ -275,6 +275,9 @@ def validate_step(loc, step, idx, person_track_moment_ids, event_corpus, boundar
     elif len(summ) > 140:
         warn(sloc, f"summary is {len(summ)} chars (>140 — consider trimming)")
 
+    if "posthumous" in step and not isinstance(step["posthumous"], bool):
+        err(sloc, "posthumous must be true or false if present")
+
     # date
     date = step.get("date") or {}
     anchor_year = None
@@ -446,7 +449,16 @@ def validate_person(person, path, all_person_ids, event_corpus, boundaries):
             if anchor is not None and born_year is not None and anchor < born_year:
                 warn(f"{loc}.track[{idx}]", f"step year {anchor} predates lifespan.born ({born_year})")
             if anchor is not None and died_year is not None and anchor > died_year:
-                warn(f"{loc}.track[{idx}]", f"step year {anchor} postdates lifespan.died ({died_year})")
+                # moment steps may legitimately fall after death (tomb relocation, posthumous
+                # publication, etc.) when the author opts in with posthumous: true. Unmarked
+                # post-death steps stay flagged so genuine typos still surface.
+                is_posthumous = (
+                    isinstance(step, dict)
+                    and step.get("kind") == "moment"
+                    and step.get("posthumous") is True
+                )
+                if not is_posthumous:
+                    warn(f"{loc}.track[{idx}]", f"step year {anchor} postdates lifespan.died ({died_year}) — set posthumous: true on the moment if intentional")
 
     # colour (optional) — must be a 6-digit hex string if present
     if "colour" in person and person["colour"] is not None:

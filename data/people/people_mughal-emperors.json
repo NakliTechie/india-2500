@@ -104,6 +104,7 @@
         {
           "kind": "moment",
           "id": "babur-reburied-at-kabul-1539",
+          "posthumous": true,
           "tooltip": "Babur reburied at Bagh-e-Babur, Kabul, c. 1539",
           "summary": "Per Babur's own wish recorded in the Baburnama, his body was moved from Agra to the garden he had built at Kabul about nine years after his death.",
           "date": {

@@ -4,7 +4,7 @@ This is an editorial corpus first, code project second. The validators ensure sh
 
 ## Three things to know before you start
 
-1. **Validators are the contract.** Schema in `docs/SCHEMA.md`, `docs/THREADS_SCHEMA.md`, `docs/PEOPLE_SCHEMA.md`, `docs/COLLECTIONS_SCHEMA.md`. If your PR doesn't pass `validators/validate_*.py`, CI will block it.
+1. **Validators are the contract.** Schema in `docs/SCHEMA.md`, `docs/THREADS_SCHEMA.md`, `docs/PEOPLE_SCHEMA.md`, `docs/COLLECTIONS_SCHEMA.md`, `docs/PLACES_SCHEMA.md`, `docs/POLITIES_SCHEMA.md`. If your PR doesn't pass `validators/validate_*.py`, CI will block it.
 2. **Verified figures only.** Cross-check dates, locations, and key claims against at least two independent sources before setting `verified: true`. When in doubt, set `false` and let the UI tag it.
 3. **Wikipedia is the rabbit-hole link, not the source.** The summary should read like the start of an editorial, not an extract of the Wikipedia lead.
 
@@ -22,6 +22,8 @@ This is an editorial corpus first, code project second. The validators ensure sh
    python3 validators/validate_threads.py        # checks any threads referencing your event
    python3 validators/validate_people.py         # checks any people event-refs
    python3 validators/validate_collections.py    # checks any collection members
+   python3 validators/validate_places.py         # checks place anchors + auto-derived gathers
+   python3 validators/validate_polities.py       # checks polity events[] + capitals
    ```
    The point-in-polygon (PIP) check confirms each pin's lat/lon falls inside its declared `country` polygon. If you set `country: "OFF"`, the check is skipped.
 
@@ -56,6 +58,26 @@ This is an editorial corpus first, code project second. The validators ensure sh
 3. Members are heterogeneous: `{kind: "event", id}` or `{kind: "tag", tag}`. Mixing kinds in one `members[]` is fine. Renderer dedupes and sorts chronologically.
 4. **Tag selectors require existing tags.** If your collection wants a tag that doesn't exist yet, add it to relevant events via `tags[]` first (or invent it inside the contribute form). The validator rejects tag selectors that match zero events.
 5. Validate: `python3 validators/validate_collections.py`.
+
+## Adding a place
+
+Places are coordinate-anchored gathers — a single record (Delhi, Sabarmati Ashram, Hampi) groups all events whose `location.points[0]` falls within `radius_km` of the place's anchor. Membership is auto-derived at boot — no event-side change needed.
+
+1. Create or extend `data/places/places_<campaign>.json`.
+2. Required: `id`, `name`, `tooltip` (≤80c), `summary` (≤160c), `location` (`country`, `lat`, `lon`, optional `radius_km` default 5, optional `alt_names[]`), `era_span`, `category` (controlled vocab — see PLACES_SCHEMA), `links` (Wikipedia required), `verified`. Optional: `framing` (≤250 words), `sources`.
+3. Radius tuning: 3–5 km for tightly-bounded sites (Sabarmati Ashram, Vellore Fort); 5–10 km for standard cities; 10–15 km for spread-out historical territories (Delhi 12 km).
+4. A place earns its own record when at least 3 events from at least 2 eras anchor at it, OR when it serves as a polity capital and needs to back the cross-navigation link. The validator soft-warns at <3 auto-gathered members; this is acceptable for deliberate seeds.
+5. Validate: `python3 validators/validate_places.py`.
+
+## Adding a polity
+
+Polities are regime-shaped institutional spines — Delhi Sultanate, Mughal Empire, EIC, British Raj, the Republic. Each polity has structured metadata (date span, capitals, rulers) plus an explicit `events[]` list of constitutive event ids — no auto-derivation, no event-side backfill.
+
+1. Create or extend `data/polities/polities_<campaign>.json`.
+2. Required: `id`, `name`, `tooltip` (≤80c), `summary` (≤160c), `date_span` (`start`, `end`, `display`), `era_span`, `category` (controlled vocab — see POLITIES_SCHEMA), `capitals[]` (each `{place, from_year, to_year}` — `place` references a place id), `rulers[]` (freeform strings), `events[]` (explicit event ids; non-empty), `links` (Wikipedia required), `verified`. Optional: `framing` (≤300 words), `sources`.
+3. **Cross-listing is normal.** The same event can belong to multiple polities (Telangana Rebellion is in both `hyderabad-state` and `republic-of-india`). Author the polity's events list independently of other polities' lists.
+4. **Capitals reference place ids.** Author the corresponding place record first (see "Adding a place" above) — if the place doesn't exist, the capital renders as plain text and the cross-navigation link is dead.
+5. Validate: `python3 validators/validate_polities.py`.
 
 ## Editorial discipline
 
