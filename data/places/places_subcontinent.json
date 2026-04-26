@@ -568,6 +568,121 @@
     },
 
     {
+      "id": "charaideo",
+      "name": "Charaideo",
+      "tooltip": "Charaideo — Sukapha's first Ahom capital, 1228",
+      "summary": "Upper-Assam capital founded by Sukapha in 1228 — the first Ahom seat; today the site of the Maidam royal burial mounds.",
+      "framing": "Sukapha founded Charaideo as the first Ahom capital in 1228 after his crossing of the Patkai from Mong Mao. Across six centuries (1228–1826) the Ahom capital shifted across upper Assam — to Charagua, Garhgaon (1540), Rangpur, Jorhat — but Charaideo retained ritual primacy as the sacred founding-site and as the location of the Maidam royal burial mounds where Ahom swargadeos and senior nobles were interred. The 90+ surviving Maidams of Charaideo were inscribed as a UNESCO World Heritage Site in 2024 — the first cultural heritage site from Northeast India on the list. The site is in modern Sivasagar district of Assam, about 28 km east of Sivasagar town.",
+      "location": {
+        "country": "IN",
+        "lat": 26.9000,
+        "lon": 94.8500,
+        "radius_km": 8
+      },
+      "era_span": ["early-medieval", "sultanate", "mughal", "maratha", "colonial"],
+      "category": ["capital", "sacred-site", "city"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Charaideo", "label": "Wikipedia: Charaideo", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Edward Gait, A History of Assam (1906; rev. 1933)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "imphal",
+      "name": "Imphal",
+      "tooltip": "Imphal — Manipur capital across regimes; site of 1891 hangings, 1944 WWII battle",
+      "summary": "Manipur capital across Meitei kingdom, princely state, and modern republic — site of 1891 Bir Tikendrajit's hanging and the 1944 Battle of Imphal.",
+      "framing": "Imphal was the Manipur capital under the Meitei (Ningthouja) line of kings from at least the 7th century, surviving the Burmese 1819–1826 Devastation, the 1891 Anglo-Manipur War (after which Bir Tikendrajit and Thangal General were publicly hanged in the city's Polo Ground), and the WWII Battle of Imphal (March–July 1944) — the latter the high water of Japanese-INA penetration into India and a key turning point in the Burma campaign. Manipur acceded to India 21 September 1949; Imphal became state capital with statehood in 1972. Modern Imphal anchors the Northeast's longest-running ethnic-political contest between Meitei (valley), Naga (northern hills), and Kuki-Zo (southern hills) populations.",
+      "location": {
+        "country": "IN",
+        "lat": 24.8170,
+        "lon": 93.9368,
+        "radius_km": 8
+      },
+      "era_span": ["sultanate", "mughal", "maratha", "colonial", "independence", "republic"],
+      "category": ["capital", "princely-state-capital", "city"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Imphal", "label": "Wikipedia: Imphal", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Lal Dena, History of Modern Manipur 1826–1949 (1991)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "yuksom",
+      "name": "Yuksom",
+      "tooltip": "Yuksom — Sikkim's first Chogyal consecrated 1642 at the Norbugang throne",
+      "summary": "Western Sikkim site of the 1642 consecration of Phuntsog Namgyal as the first Chogyal — Sikkim's sacred founding-site.",
+      "framing": "Yuksom in west Sikkim was the consecration site where three Tibetan Nyingma lamas — Lhatsun Chenpo, Kathok Kuntu Zangpo, and Ngadak Sempa Chenpo — anointed Phuntsog Namgyal as the first Chogyal of Sikkim in 1642. The Norbugang Coronation Throne, a four-trunked pine under which the ceremony was held, remains the sacred founding-site of the Sikkimese state. Yuksom served as the first Sikkimese capital briefly before the Chogyals shifted to Rabdentse, then Tumlong, then Gangtok (from 1894). The Dubdi Monastery, founded by Lhatsun Chenpo c. 1701, and the surrounding Khangchendzonga National Park constitute a Buddhist cultural landscape that supports modern Sikkimese identity-politics.",
+      "location": {
+        "country": "IN",
+        "lat": 27.3700,
+        "lon": 88.2200,
+        "radius_km": 5
+      },
+      "era_span": ["mughal"],
+      "category": ["capital", "sacred-site"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Yuksom", "label": "Wikipedia: Yuksom", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Saul Mullard, Opening the Hidden Land: State Formation and the Construction of Sikkimese History (2011)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "gangtok",
+      "name": "Gangtok",
+      "tooltip": "Gangtok — Sikkim Chogyal capital from 1894, then Indian state capital from 1975",
+      "summary": "Sikkim's capital from 1894 (Chogyal Thutob Namgyal's shift from Tumlong) to the present — 1975 merger into India and modern state capital.",
+      "framing": "Gangtok became the Sikkim capital in 1894 when Chogyal Thutob Namgyal shifted the seat from Tumlong, partly under British pressure to accommodate the new political-officer presence at Sikkim's interface with British India and Tibet. Across the next eighty years the city was the seat of the Namgyal dynasty's last four Chogyals, the British political-agent residency (1889 onwards), the post-1947 Indian protectorate (1950 Treaty of Peace), and finally the merger that made Sikkim India's 22nd state in 1975. Gangtok has remained state capital since. The Royal Palace, Enchey Monastery (1909), and the Tsuk-La-Khang (royal chapel) constitute the principal architectural legacy of the Chogyal period.",
+      "location": {
+        "country": "IN",
+        "lat": 27.3389,
+        "lon": 88.6065,
+        "radius_km": 5
+      },
+      "era_span": ["colonial", "independence", "republic"],
+      "category": ["capital", "princely-state-capital", "city"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Gangtok", "label": "Wikipedia: Gangtok", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Sunanda K. Datta-Ray, Smash and Grab: Annexation of Sikkim (1984)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "agartala",
+      "name": "Agartala",
+      "tooltip": "Agartala — Tripura Manikya capital 1850s onwards, then state capital",
+      "summary": "Tripura's capital under the late Manikya dynasty (from 1850s); merged into India 1949; modern Tripura state capital from 1972.",
+      "framing": "Agartala became the principal Manikya capital in the mid-19th century, succeeding Old Agartala (Khayerpur, the earlier Manikya seat near the Burma-now-Bangladesh frontier). Maharaja Bir Chandra Manikya (r. 1862–1896) extensively rebuilt Agartala — the Ujjayanta Palace (1901, completed under his successor), the Jagannath temple, the modern street grid. Tripura acceded to India on 15 October 1949 under the regency of Kanchan Prabha Devi (the Manikya queen-regent for the minor heir). Agartala became a Union Territory capital, then full state capital with Tripura statehood in 1972. The city sits less than 2 kilometres from the Bangladesh border and was the largest Indian relief base for refugees during the 1971 Bangladesh Liberation War.",
+      "location": {
+        "country": "IN",
+        "lat": 23.8315,
+        "lon": 91.2868,
+        "radius_km": 8
+      },
+      "era_span": ["colonial", "independence", "republic"],
+      "category": ["capital", "princely-state-capital", "city"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Agartala", "label": "Wikipedia: Agartala", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Jagadis Gan-Chaudhuri, A Constitutional History of Tripura (1980)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
       "id": "puri",
       "name": "Puri",
       "tooltip": "Puri — Jagannath temple seat, c. 12th c. onward; chronicled in the Madala Panji",

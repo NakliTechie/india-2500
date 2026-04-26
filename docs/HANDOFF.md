@@ -31,8 +31,8 @@ A validator-enforced, browser-renderable atlas of subcontinental history. Three 
 │   ├── threads/threads_*.json     2 threads: Chauri Chaura, Babur road-to-Panipat
 │   ├── people/people_*.json       6 people (5 freedom fighters + Babur)
 │   ├── collections/collections_*.json   5 collections (Babur's road, Founding moments, First-person works, Women shapers, Rebellions)
-│   ├── places/places_*.json       21 places (incl. polity-capital records: Daulatabad, Gulbarga, Bidar, Fatehpur Sikri, Madras, Bhopal, Anandpur Sahib, Raigad, Thiruvananthapuram)
-│   └── polities/polities_*.json   13 polities (incl. Khalsa/Sikh Confederacy, Maratha Confederacy, Bhopal State, Travancore)
+│   ├── places/places_*.json       30 places across 4 regions
+│   └── polities/polities_*.json   22 polities spanning Sultanate to Republic
 │
 ├── validators/                    schema enforcement, run on every PR via CI
 │   ├── validate_events.py         schema + cross-reference + PIP + tag format
@@ -104,7 +104,7 @@ A validator-enforced, browser-renderable atlas of subcontinental history. Three 
 - **Causal layer:** `caused_by` + `gloss` per edge. `led_to` derived as inverse at runtime, never authored. `part_of` for hierarchical containment without gloss. Multi-parent / multi-child both supported. Cross-file references work — `events_mughal.json` can have a `caused_by` referencing `events_independence.json`.
 - **Tags:** optional `tags[]` field, free-form kebab-case. Drives filtering and **collection membership** (see Collections below). Distinct from `category` — categories are controlled vocab + pin colour; tags are open-ended thematic markers.
 - **Validator:** `validators/validate_events.py`. Schema enforcement + cross-reference + point-in-polygon (PIP) check confirming each pin's lat/lon falls inside its declared country + tag format check + corpus-level warning on single-use tags.
-- **Corpus today:** 99 events spanning 1192–1958 CE.
+- **Corpus today:** 121 events spanning 1192–1958 CE.
   - `events_sultanate.json` — 20 events, 1192–1517 (Tarain through Ibrahim Lodi; 5 dynasties + Barani memoir)
   - `events_central_asia.json` — 6 events, 1494–1524 (Babur's Timurid arc, all tagged `babur-arc`)
   - `events_mughal.json` — 26 events, 1526–1707 (Babur → Aurangzeb; + Mughal court chronicle memoirs)
@@ -113,7 +113,8 @@ A validator-enforced, browser-renderable atlas of subcontinental history. Three 
   - `events_chotanagpur.json` — 3 events (Kol, Santhal Hool, Birsa Munda Ulgulan)
   - `events_northeast.json` — 2 events (Khasi Rebellion, Heraka/Gaidinliu; Ahom / Naga nationalism to come)
   - `events_odisha.json` — 3 events (Madala Panji + Paika + Khond)
-  - `events_south_india.json` — 5 events (Tipu Khwabnama + Vellore + Moplah + Rampa + Vaikom)
+  - `events_south_india.json` — 17 events (Vijayanagara through Anglo-Mysore: Madurai Sultanate, Vijayanagara founded, Bijapur, Krishna Deva Raya, Golconda, Talikota, Colachel, Trippadidanam, Pollilur, Mangalore, Seringapatam, Wodeyar restoration; plus Tipu Khwabnama + Vellore + Moplah + Rampa + Vaikom)
+  - `events_northeast.json` — 12 events (Ahom: Sukapha founding 1228, Saraighat 1671, Yandabo 1826; Sikkim: Yuksom 1642; Manipur: Burmese Devastation 1819, Anglo-Manipur War 1891; Khasi 1829, Lushai 1871, Khonoma 1879, Tripura paramountcy 1761, Naga independence declaration 1947, Heraka/Gaidinliu 1929)
   - `events_reform.json` — 6 events (Rammohan Roy, Phule, Pandita Ramabai, Vivekananda, Tagore, Mahad)
   - `events_1857.json` — 1 event (Lakshmibai; major 1857 events still to author)
   - `events_princely_states.json` — 2 events (Sultan Jahan Begum + Telangana Rebellion)
@@ -142,7 +143,7 @@ A validator-enforced, browser-renderable atlas of subcontinental history. Three 
 - **Auto-derived membership:** every event whose `location.points[0]` falls within `radius_km` of the place's anchor is automatically a member — no event-side change needed. Default radius 5 km; tightly-bounded sites (Sabarmati, Vellore Fort) use 3–5; wide-spread historical territories raise it (Delhi 12 km).
 - **Validator:** `validators/validate_places.py`. Schema + PIP on the anchor + soft warning when fewer than 3 events fall within the gather radius (signals deliberate seed places that need their corpus to grow).
 - **UI:** Fourth pill row beneath Collections. Click a pill → place reader (title, tooltip subtitle, summary, optional framing block, era+category+radius+alt-names meta lines, member count, chronologically-sorted event cards). Map enters `.in-place` mode highlighting member pins / clusters in `--amber` (distinct from collection blue and thread purple). Mutually exclusive with Threads + People + Collections.
-- **Corpus today:** 21 places — Delhi (18 events, 12 km), Agra (7), Lahore (5), Calcutta (5), Fatehpur Sikri (3), Bombay (3), Pune (2), Murshidabad (2), Sabarmati Ashram (2), Hyderabad (1), Srirangapatna (1), Vellore (1), Puri (1), Daulatabad (1), Gulbarga (1), Bhopal (1). Plus four 0-event records (Bidar, Madras, Anandpur Sahib, Raigad, Thiruvananthapuram) authored to back polity-capital cross-navigation — their readers render framing + meta with empty member lists; corpus presence will grow as more events are authored.
+- **Corpus today:** 30 places across the subcontinent (north / south / east / northeast). Heaviest gathers: Delhi (18 events), Agra (7), Lahore (5), Calcutta (5), Fatehpur Sikri (3), Bombay (3), Imphal (2), Hampi (2). Lighter gathers and capital-stub records (Charaideo, Yuksom, Gangtok, Agartala, Mysore, Bijapur, Golconda, Bhopal, etc.) anchor polity capitals so cross-navigation works.
 
 ### Polities (NEW — regime-shaped institutional spines)
 - **Schema:** `docs/POLITIES_SCHEMA.md`. A polity has `id`, `name`, `tooltip`, `summary`, optional `framing` (≤300 words), `date_span` (start / end / display), `era_span`, `category` (controlled vocab: empire / sultanate / dynasty / princely-state / confederacy / colonial-state / republic / trading-company), `capitals[]` (chronological list of `{place, from_year, to_year}` — `place` references a place id; soft-warns when unresolved, renders as plain text), `rulers[]` (freeform strings), `events[]` (explicit list of constitutive event ids), `links`, `sources`, `verified`.
@@ -150,7 +151,7 @@ A validator-enforced, browser-renderable atlas of subcontinental history. Three 
 - **Validator:** `validators/validate_polities.py`. Schema + every event id resolves + capitals' `place` ids cross-checked against the places corpus (soft warning on unresolved).
 - **UI:** Fifth pill row beneath Places. Click a pill → polity reader (title, tooltip subtitle, summary, optional framing, date_span / eras / category meta, capitals list with clickable place-links to the place reader, rulers list, member count, chronologically-sorted event cards). Map enters `.in-polity` mode highlighting member pins / clusters in `--rose` (distinct from the four other modes' colours). Mutually exclusive with Threads + People + Collections + Places.
 - **Cross-navigation:** capital place-links jump to the place's reader (regime → geography). Future: place reader could surface "polities that ruled here" as a back-link, but that's deferred.
-- **Corpus today:** 13 polities — Delhi Sultanate (19 events), Bahmani Sultanate (1), Sur Empire (2), Mughal Empire (26), Maratha Confederacy (1), Khalsa / Sikh Confederacy (3), Mysore Sultanate (1), East India Company (11), British Raj (31), Hyderabad State (1), Bhopal State (1), Travancore (1), Republic of India (3). All 27 capital-references across all 13 polities resolve to place records — every cross-navigation link is clickable.
+- **Corpus today:** 22 polities spanning Sultanate-era to Republic. Includes the original 13 (Delhi Sultanate, Bahmani, Sur, Mughal, Maratha, Khalsa/Sikh, Mysore Sultanate, EIC, British Raj, Hyderabad State, Bhopal State, Travancore, Republic of India) plus 5 South Indian (Vijayanagara Empire, Madurai Sultanate, Bijapur Sultanate, Golconda Sultanate, Mysore Kingdom) and 4 Northeast (Ahom Kingdom, Manipur Kingdom, Sikkim Kingdom, Tripura Kingdom). All capital references across all 22 polities resolve to place records — every cross-navigation link is clickable.
 
 ### People (UI shipped)
 - **Schema:** `docs/PEOPLE_SCHEMA.md`. Person has lifespan + a `track[]`. Each track step is `kind: "event-ref"` (with `role`) or `kind: "moment"` (own date, location, summary, note). Moments are intentionally lighter than events.

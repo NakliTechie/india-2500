@@ -648,6 +648,142 @@
     },
 
     {
+      "id": "ahom-kingdom",
+      "name": "Ahom Kingdom",
+      "tooltip": "Ahom Kingdom — 1228–1826, six centuries in upper Assam",
+      "summary": "Tai-Shan dynasty founded by Sukapha at Charaideo in 1228; ruled upper Assam for 598 years; ended by Burmese invasions and Treaty of Yandabo.",
+      "framing": "The Ahom kingdom is among the longest continuous regional dynasties in subcontinental history — 598 years from Sukapha's 1228 founding to the 1826 EIC takeover under the Treaty of Yandabo. The Ahoms originated as a small Tai-Shan migration from Mong Mao (modern Yunnan/Myanmar border), assimilated linguistically into Assamese over the 16th–17th centuries, and developed a distinct administrative system: the paik corvée labour structure, the khel occupational guilds, and the buranji historical chronicle tradition (initially in Tai then Assamese). Crucially, the Ahoms repelled seventeen Mughal invasion attempts across the 17th century — the Battle of Saraighat (1671), in which Lachit Borphukan defeated Mirza Raja Ram Singh's Mughal fleet on the Brahmaputra, ended the Mughal effort permanently. The kingdom was destabilised by the Moamoria rebellion (1769–1805) and broken by the Burmese invasions (1817–1826); the EIC takeover ended the dynasty.",
+      "date_span": { "start": "1228", "end": "1826", "display": "1228 (Sukapha) – 1826 (Yandabo / EIC takeover)" },
+      "era_span": ["early-medieval", "sultanate", "mughal", "maratha", "colonial"],
+      "category": "dynasty",
+      "capitals": [
+        { "place": "charaideo", "from_year": 1228, "to_year": 1540 }
+      ],
+      "rulers": [
+        "Sukapha (1228–1268, founder)",
+        "Suhungmung / Dihingia Raja (1497–1539; expansion era)",
+        "Pratap Singha (1603–1641)",
+        "Chakradhwaj Singha (1663–1670; backed Lachit at Saraighat)",
+        "Rudra Singha (1696–1714; cultural peak)",
+        "Purandar Singha (1818–1819, 1833–1838; last functional ruler)"
+      ],
+      "events": [
+        "ahom-kingdom-founded-1228",
+        "battle-of-saraighat-1671",
+        "treaty-of-yandabo-1826"
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Ahom_kingdom", "label": "Wikipedia: Ahom kingdom", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Edward Gait, A History of Assam (1906; rev. 1933)", "type": "scholarly" },
+        { "label": "Yasmin Saikia, Fragmented Memories: Struggling to be Tai-Ahom in India (2004)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "manipur-kingdom",
+      "name": "Manipur Kingdom",
+      "tooltip": "Manipur Kingdom — Meitei (Ningthouja) dynasty c. 33 CE through 1949 accession",
+      "summary": "Meitei (Ningthouja) dynasty by tradition from 33 CE; survived the 1819–26 Burmese Devastation; princely state under EIC paramountcy; acceded to India 1949.",
+      "framing": "Manipur's Meitei (Ningthouja) ruling lineage is conventionally traced to Pakhangba (33 CE) — among the longest claimed continuous Indian royal lineages. The Manipuri state ran from the Imphal valley with cultural-political reach into the surrounding hills. Vaishnav Hinduism became the court religion under Pamheiba (Garib Niwaz, r. 1709–1748); the Meitei script (Meitei Mayek) and the Sanamahi religion both have ongoing 20th–21st century revival movements. The kingdom was devastated by the Burmese invasion of 1819–1826 (Chahi Taret Khuntakpa); restored by EIC support under Gambhir Singh; survived as a princely state under British paramountcy after the Anglo-Manipur War of 1891 left a child Maharaja under indirect rule. Acceded to India 21 September 1949 under controversial circumstances; statehood 1972; modern Manipur is among the most ethnically contested states in the Indian Union.",
+      "date_span": { "start": "33", "end": "1949", "display": "Traditional date 33 CE — accession to India 21 September 1949" },
+      "era_span": ["vedic", "mahajanapada", "maurya", "post-maurya", "gupta", "early-medieval", "sultanate", "mughal", "maratha", "colonial", "independence"],
+      "category": "dynasty",
+      "capitals": [
+        { "place": "imphal", "from_year": 1110, "to_year": 1949 }
+      ],
+      "rulers": [
+        "Pakhangba (legendary founder, 33 CE)",
+        "Pamheiba / Garib Niwaz (1709–1748)",
+        "Bhagyachandra (1759–1762, 1763–1798)",
+        "Gambhir Singh (1825–1834; restoration after Burmese)",
+        "Bir Tikendrajit Singh (senapati 1890–1891; hanged 13 August 1891)",
+        "Bodhachandra Singh (1941–1955; signed accession 1949)"
+      ],
+      "events": [
+        "burmese-devastation-of-manipur-1819",
+        "treaty-of-yandabo-1826",
+        "anglo-manipur-war-1891"
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Manipur_(princely_state)", "label": "Wikipedia: Manipur (princely state)", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Lal Dena, History of Modern Manipur 1826–1949 (1991)", "type": "scholarly" },
+        { "label": "Gangmumei Kabui, History of Manipur, vol. I: Pre-Colonial Period (1991)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "sikkim-kingdom",
+      "name": "Kingdom of Sikkim",
+      "tooltip": "Kingdom of Sikkim — Namgyal dynasty 1642–1975",
+      "summary": "Namgyal dynasty consecrated at Yuksom 1642; survived Tibet/Bhutan/Nepal pressure, EIC protectorate (1861), Indian protectorate (1950); merged into India 1975.",
+      "framing": "The Namgyal dynasty ruled Sikkim for 333 years (1642–1975) — twelve Chogyals from Phuntsog Namgyal to Palden Thondup Namgyal. The kingdom navigated continuous external pressure: Tibetan and Bhutanese raids in the 17th–18th centuries, Nepali (Gorkha) annexation of western Sikkim in 1788, EIC intervention via the 1817 Treaty of Titalia, full British protectorate from 1861, the post-1947 Indian protectorate under the 1950 Treaty. The 1975 referendum (organised by India under controversial circumstances; Indian troops in Gangtok during the vote) abolished the monarchy and merged Sikkim into India as the 22nd state. Sikkim is the only one of the three Himalayan Buddhist kingdoms (Tibet, Bhutan, Sikkim) to lose its sovereignty in the 20th century. The royal dynasty's surviving members live abroad; the institutional record is preserved partly at the Sikkim State Archives, partly in the Namgyal Institute of Tibetology at Gangtok.",
+      "date_span": { "start": "1642", "end": "1975", "display": "1642 (Yuksom consecration) – 16 May 1975 (merger into India)" },
+      "era_span": ["mughal", "maratha", "colonial", "independence", "republic"],
+      "category": "princely-state",
+      "capitals": [
+        { "place": "yuksom",  "from_year": 1642, "to_year": 1670 },
+        { "place": "gangtok", "from_year": 1894, "to_year": 1975 }
+      ],
+      "rulers": [
+        "Phuntsog Namgyal (1642–1670, 1st Chogyal)",
+        "Tensung Namgyal (1670–1700)",
+        "Tsugphud Namgyal (1793–1863; longest-reigning)",
+        "Thutob Namgyal (1874–1914; capital shift to Gangtok)",
+        "Tashi Namgyal (1914–1963)",
+        "Palden Thondup Namgyal (1963–1975, 12th and last Chogyal)"
+      ],
+      "events": [
+        "sikkim-namgyal-founded-1642"
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Kingdom_of_Sikkim", "label": "Wikipedia: Kingdom of Sikkim", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Saul Mullard, Opening the Hidden Land (2011)", "type": "scholarly" },
+        { "label": "Sunanda K. Datta-Ray, Smash and Grab: Annexation of Sikkim (1984)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "tripura-kingdom",
+      "name": "Tripura Kingdom (Manikya)",
+      "tooltip": "Tripura Manikya dynasty — 14th c. through 1949 accession",
+      "summary": "Manikya dynasty from the 14th century; chronicled in the Sanskrit-Bengali Rajmala; tributary then EIC paramountcy; merged into India 15 October 1949.",
+      "framing": "The Manikya (literally 'jewel') dynasty consolidated rule over Tripura by the 14th century, claiming descent from the lunar dynasty of Mahabharata fame and producing the Rajmala court chronicle commissioned by Maharaja Dharma Manikya in the 1450s — among the few Northeast royal-chronicle traditions in Sanskrit-Bengali rather than indigenous languages. Across regimes the kingdom shifted from Mughal-Bengal nawabi tribute (17th–18th c.), to EIC paramountcy after Plassey (1761), to British Raj paramountcy until 1947. Bir Bikram Kishore Manikya (r. 1923–1947) modernised administration, founded Tripura University, and resisted accession until his death in May 1947. The regency under Kanchan Prabha Devi acceded to India on 15 October 1949. Tripura became a Union Territory then a state (1972). The city of Agartala has been the principal capital since the mid-19th century.",
+      "date_span": { "start": "1400", "end": "1949", "display": "c. 1400 (consolidation) – 15 October 1949 (accession)" },
+      "era_span": ["sultanate", "mughal", "maratha", "colonial", "independence"],
+      "category": "princely-state",
+      "capitals": [
+        { "place": "agartala", "from_year": 1400, "to_year": 1949 }
+      ],
+      "rulers": [
+        "Dharma Manikya I (r. 1431–1462; Rajmala commissioned)",
+        "Krishna Manikya (1761–1783; EIC paramountcy)",
+        "Bir Chandra Manikya (1862–1896; Agartala rebuilt)",
+        "Birendra Kishore Manikya (1909–1923)",
+        "Bir Bikram Kishore Manikya (1923–1947)",
+        "Kanchan Prabha Devi (regent 1947–1949; signed accession)"
+      ],
+      "events": [
+        "tripura-manikya-paramountcy-1761"
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Tripura_(princely_state)", "label": "Wikipedia: Tripura (princely state)", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Jagadis Gan-Chaudhuri, A Constitutional History of Tripura (1980)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
       "id": "republic-of-india",
       "name": "Republic of India",
       "tooltip": "Republic of India — independent 15 August 1947, republic 26 January 1950",

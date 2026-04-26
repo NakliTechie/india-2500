@@ -1,8 +1,350 @@
 {
   "campaign": "northeast",
-  "scope": "Northeast events — Khasi, Naga, Mizo, Manipur resistance and integration; Ahom kingdom and British annexation; AFSPA-era and post-1947 movements. Seeded with Khasi Rebellion and Heraka / Rani Gaidinliu.",
+  "scope": "Northeast events — Ahom kingdom and Mughal contests, Khasi / Naga / Mizo / Manipur resistance, princely-state succession, EIC and Crown annexations, post-1947 nationalism.",
   "updated": "2026-04-26",
   "events": [
+    {
+      "id": "ahom-kingdom-founded-1228",
+      "title": "Sukapha founds the Ahom kingdom",
+      "tooltip": "Sukapha founds the Ahom kingdom in upper Assam, 1228",
+      "summary": "Tai-Shan prince Sukapha crossed the Patkai from Mong Mao and founded the Ahom kingdom — six centuries of rule in upper Assam, never conquered by Delhi.",
+      "detail": "Sukapha, a Tai-Shan prince from Mong Mao (modern Yunnan-Myanmar border region), crossed the Patkai range with a small retinue in 1228 and established the Ahom kingdom in the upper Brahmaputra valley with his first capital at Charaideo (modern Sivasagar district). The Ahom state ruled upper Assam for nearly six hundred years (1228–1826) — among the longest continuous regional dynasties in subcontinental history, never conquered by the Delhi Sultanate or the Mughals despite seventeen Mughal invasions across the 17th century. The Ahom institutional system — paik (corvée labour), khel (occupational guild), buranji (chronicle tradition in Tai then Assamese) — produced a distinct administrative and cultural tradition that survives in modern Assam. The Ahom dynasty ended after the Burmese invasions (1817–1826) and the EIC's Treaty of Yandabo (1826).",
+      "date": {
+        "start": "1228",
+        "end":   "1228",
+        "precision": "year",
+        "approximate": false,
+        "display": "1228 (Sukapha founds at Charaideo)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Charaideo, upper Assam",
+        "region": "Brahmaputra valley",
+        "country": "IN",
+        "points": [{ "lat": 26.9000, "lon": 94.8500, "name": "Charaideo" }]
+      },
+      "era": "early-medieval",
+      "category": ["political", "dynastic"],
+      "figures": ["Sukapha"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Ahom_kingdom", "label": "Wikipedia: Ahom kingdom", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Edward Gait, A History of Assam (1906; rev. 1933)", "type": "scholarly" },
+        { "label": "Yasmin Saikia, Fragmented Memories: Struggling to be Tai-Ahom in India (2004)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "sikkim-namgyal-founded-1642",
+      "title": "Sikkim — Namgyal dynasty consecrated at Yuksom",
+      "tooltip": "Phuntsog Namgyal consecrated as first Chogyal of Sikkim at Yuksom, 1642",
+      "summary": "Three Tibetan Nyingma lamas consecrated Phuntsog Namgyal as the first Chogyal of Sikkim at Yuksom — the founding of the 333-year Namgyal dynasty.",
+      "detail": "Phuntsog Namgyal, a descendant of the Minyak ruling family of Tibet, was consecrated as the first Chogyal (Dharma-king) of Sikkim at Yuksom in 1642 by three Tibetan Nyingma Buddhist lamas: Lhatsun Chenpo, Kathok Kuntu Zangpo, and Ngadak Sempa Chenpo. The site of the consecration — the Norbugang Coronation Throne under a four-trunked pine — remains the sacred founding-site of the Sikkimese state. The Namgyal dynasty ruled for 333 years (1642–1975), navigating the pressures of Tibet, Bhutan, Nepal (which annexed western Sikkim in the 1770s), the EIC (which made Sikkim a protectorate in 1861), the British Raj, and finally independent India. The 12th and last Chogyal, Palden Thondup Namgyal, was deposed in 1975 when Sikkim merged into India as the 22nd state — the only one of the three Himalayan Buddhist kingdoms (Tibet, Bhutan, Sikkim) to lose its sovereignty in the 20th century.",
+      "date": {
+        "start": "1642",
+        "end":   "1642",
+        "precision": "year",
+        "approximate": false,
+        "display": "1642 (Yuksom consecration)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Yuksom, western Sikkim",
+        "region": "Sikkim",
+        "country": "IN",
+        "points": [{ "lat": 27.3700, "lon": 88.2200, "name": "Yuksom" }]
+      },
+      "era": "mughal",
+      "category": ["political", "religious", "dynastic"],
+      "figures": ["Phuntsog Namgyal", "Lhatsun Chenpo"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Kingdom_of_Sikkim", "label": "Wikipedia: Kingdom of Sikkim", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Saul Mullard, Opening the Hidden Land: State Formation and the Construction of Sikkimese History (2011)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "battle-of-saraighat-1671",
+      "title": "Battle of Saraighat — Lachit Borphukan defeats the Mughals",
+      "tooltip": "Lachit Borphukan defeats Aurangzeb's force at Saraighat on the Brahmaputra, 1671",
+      "summary": "Ahom commander Lachit Borphukan's naval defeat of Mughal admiral Ram Singh at Saraighat ended the seventeen-year Mughal effort to annex Assam.",
+      "detail": "Aurangzeb's seventeen-year (1662–1681) Mughal campaign to annex Assam culminated in the naval engagement at Saraighat on the Brahmaputra near Guwahati in March 1671. Lachit Borphukan, the Ahom commander, used a fleet of small Brahmaputra-built boats to defeat the larger Mughal fleet under Mirza Raja Ram Singh of Amber (the same Rajput general who had earlier captured Shivaji at Agra). The decisive moment, in Ahom tradition, came when Lachit — gravely ill, observing his troops withdrawing in the face of Mughal advance — had his sick-bed boat rowed into the front line, telling his soldiers that he could not let cowardice survive. The Mughal force broke; Ram Singh withdrew permanently from Assam. Lachit died of his illness within a year. The 1681 final Mughal withdrawal confirmed Ahom sovereignty for another century and a half. Saraighat is the founding battle of modern Assamese cultural memory; Lachit Borphukan's birth-anniversary is observed annually as Lachit Divas.",
+      "date": {
+        "start": "1671-03",
+        "end":   "1671-03",
+        "precision": "month",
+        "approximate": false,
+        "display": "March 1671"
+      },
+      "location": {
+        "type": "city",
+        "name": "Saraighat (Brahmaputra near Guwahati)",
+        "region": "Assam",
+        "country": "IN",
+        "points": [{ "lat": 26.1700, "lon": 91.6700, "name": "Saraighat" }]
+      },
+      "era": "mughal",
+      "category": ["military", "political"],
+      "figures": ["Lachit Borphukan", "Mirza Raja Ram Singh I", "Aurangzeb", "Swargadeo Chakradhwaj Singha"],
+      "caused_by": [
+        { "id": "ahom-kingdom-founded-1228", "gloss": "The 443-year Ahom institutional consolidation gave Lachit's force the cohesion to resist Mughal numerical superiority; Saraighat is the moment Ahom statecraft proved decisive against the subcontinent's dominant power." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Battle_of_Saraighat", "label": "Wikipedia: Battle of Saraighat", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Edward Gait, A History of Assam (1906; rev. 1933)", "type": "scholarly" },
+        { "label": "S.K. Bhuyan (ed.), Lachit Barphukan and His Times (1947)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "burmese-devastation-of-manipur-1819",
+      "title": "Burmese Devastation of Manipur (Chahi Taret Khuntakpa)",
+      "tooltip": "Burmese occupation of Manipur, 1819–1826 (Seven Years Devastation)",
+      "summary": "Seven-year Burmese occupation of Manipur — population reduced by an estimated two-thirds; ended only by EIC intervention and the Treaty of Yandabo.",
+      "detail": "Burma's Konbaung dynasty under King Bagyidaw invaded Manipur in 1819 after a Manipuri succession dispute. The seven-year occupation (1819–1826) — known in Manipuri tradition as Chahi Taret Khuntakpa, 'the Seven Years Devastation' — was the most severe demographic catastrophe in Manipur's recorded history. Population estimates suggest a reduction by two-thirds: tens of thousands killed, similar numbers enslaved and marched to Burma, the rest fleeing into the Cachar hills and the Brahmaputra valley. Manipuri prince Gambhir Singh raised an EIC-backed force from Cachar in 1825; the resulting First Anglo-Burmese War (1824–1826) ended with the Treaty of Yandabo (24 February 1826), which restored Manipuri independence under EIC paramountcy. The trauma reshaped Manipuri political memory: the Sanamahi religion's modern revival, the Meitei script (Meitei Mayek) revival movement, and contemporary Naga-Meitei-Kuki tensions all trace genealogies back to the Devastation period.",
+      "date": {
+        "start": "1819",
+        "end":   "1826-02-24",
+        "precision": "month",
+        "approximate": false,
+        "display": "1819–1826 (ended by Treaty of Yandabo)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Imphal, Manipur",
+        "region": "Manipur",
+        "country": "IN",
+        "points": [{ "lat": 24.8170, "lon": 93.9368, "name": "Imphal" }]
+      },
+      "era": "colonial",
+      "category": ["military", "political", "resistance"],
+      "figures": ["King Bagyidaw of Burma", "Gambhir Singh", "Chinglen Nongdrenkhomba"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Seven_Years_Devastation", "label": "Wikipedia: Seven Years Devastation", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Gangmumei Kabui, History of Manipur, vol. I: Pre-Colonial Period (1991)", "type": "scholarly" },
+        { "label": "Lal Dena, History of Modern Manipur 1826–1949 (1991)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "treaty-of-yandabo-1826",
+      "title": "Treaty of Yandabo — end of First Anglo-Burmese War",
+      "tooltip": "EIC and Burma sign Treaty of Yandabo, 24 February 1826",
+      "summary": "EIC and Burma signed the Treaty of Yandabo, ending the First Anglo-Burmese War; Burma ceded Assam, Manipur, Arakan, and Tenasserim to the EIC.",
+      "detail": "The Treaty of Yandabo, signed on 24 February 1826 at the Burmese village of Yandabo on the Irrawaddy, ended the First Anglo-Burmese War (March 1824 – February 1826). The terms were severe: Burma ceded Assam, Manipur (as a Yandabo-recognised independent state), Arakan, and Tenasserim to the EIC; paid an indemnity of 1 crore rupees (£1 million); accepted a British Resident at Ava; and renounced claims on Cachar and Jaintia. The treaty is the inflection point at which the Northeast became colonial territory — the Ahom kingdom, suspended during the Burmese occupation, did not recover (the EIC governed upper Assam directly through the Commissioner of Assam after 1826), Manipur survived as a princely state under paramountcy, and Arakan and Tenasserim became part of British Burma. The war was the most expensive the EIC had fought to that date — £13 million sterling and roughly 15,000 EIC casualties (mostly to disease) — and contributed to Bentinck's 1828 retrenchment programme.",
+      "date": {
+        "start": "1826-02-24",
+        "end":   "1826-02-24",
+        "precision": "day",
+        "approximate": false,
+        "display": "24 February 1826"
+      },
+      "location": {
+        "type": "city",
+        "name": "Yandabo, Irrawaddy valley (Burma)",
+        "region": "Burma / Northeast frontier",
+        "country": "MM",
+        "points": [{ "lat": 21.6500, "lon": 95.4000, "name": "Yandabo" }]
+      },
+      "era": "colonial",
+      "category": ["political", "military", "colonial-administration"],
+      "figures": ["Bagyidaw of Burma", "Sir Archibald Campbell", "Henry Burney"],
+      "caused_by": [
+        { "id": "burmese-devastation-of-manipur-1819", "gloss": "The Burmese occupation of Manipur and the parallel pressure on Cachar and Jaintia drew the EIC into direct war with Burma; Yandabo is the political settlement of the war that the Manipur invasion precipitated." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Treaty_of_Yandabo", "label": "Wikipedia: Treaty of Yandabo", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Maung Htin Aung, A History of Burma (1967)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "lushai-expedition-1871-1872",
+      "title": "Lushai Expedition — EIC enters the Mizo hills",
+      "tooltip": "British Lushai Expedition into the Mizo hills, 1871–1872",
+      "summary": "Two-pronged colonial expedition into the Lushai (Mizo) hills after raids on Cachar tea estates — the start of British administration in what became Mizoram.",
+      "detail": "Repeated Lushai (Mizo) raids on Cachar district tea estates through the 1860s — culminating in the January 1871 Alexandrapore raid in which planter James Winchester was killed and his daughter Mary Winchester captured — provoked the British Lushai Expedition of 1871–72. Two columns marched into the hills: one from Cachar under Brigadier-General George Bourchier, one from Chittagong under Brigadier-General Charles Brownlow. They burned Mizo villages, secured Mary Winchester's release, and extracted submission from the major chiefs (Suakpuilala, Lalbura, others). Direct British administration did not yet follow — the Lushai hills were left under loose chief-rule until the second expedition of 1888–90, after which the Lushai Hills District was constituted (1898). The Welsh Calvinistic Methodist Mission entered the hills from 1894; mass Mizo conversion to Christianity followed across the next half-century. The Mizo National Front insurgency of the 1960s–80s, ending in the Mizo Accord of 1986 and Mizoram statehood (1987), traces its political origins to the colonial-frontier framework Lushai 1871 inaugurated.",
+      "date": {
+        "start": "1871-12",
+        "end":   "1872-04",
+        "precision": "month",
+        "approximate": false,
+        "display": "December 1871 – April 1872"
+      },
+      "location": {
+        "type": "city",
+        "name": "Aizawl, Mizo Hills",
+        "region": "Lushai Hills",
+        "country": "IN",
+        "points": [{ "lat": 23.7271, "lon": 92.7176, "name": "Aizawl" }]
+      },
+      "era": "colonial",
+      "category": ["military", "colonial-administration", "political"],
+      "figures": ["George Bourchier", "Charles Brownlow", "Suakpuilala", "Mary Winchester"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Lushai_Expedition", "label": "Wikipedia: Lushai Expedition", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Lalrimawia, Mizoram: History and Cultural Identity 1890–1947 (1995)", "type": "scholarly" },
+        { "label": "Sajal Nag, Contesting Marginality: Ethnicity, Insurgency and Subnationalism in North-East India (2002)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "khonoma-naga-rising-1879",
+      "title": "Khonoma Naga rising",
+      "tooltip": "Angami Naga rising at Khonoma, October 1879",
+      "summary": "Angami Nagas of Khonoma killed Political Officer G.H. Damant and 35 of his force in October 1879 — the rising that produced the colonial Naga Hills district.",
+      "detail": "The Angami Nagas of Khonoma village, southwest of Kohima, had resisted EIC and British attempts to subordinate the village since the 1840s. After the British political agent G.H. Damant attempted to occupy Khonoma in October 1879 and ordered the Angamis to surrender their arms, the village rose: Damant and 35 of his sepoy force were killed at the village outskirts on 14 October. The rising spread to Kohima (where the British garrison was besieged for thirteen days before relief from Manipur), Mezoma, and Jotsoma. The British retook Khonoma after a six-month campaign culminating in March 1880 — the village was burned and its terraced rice fields destroyed. The political consequence was the formal constitution of the Naga Hills District (1881) under direct British administration, the line that became the basis for the post-1947 Naga claim to self-determination under A.Z. Phizo and the Naga National Council. Khonoma is regarded as the founding political event of modern Naga nationalism.",
+      "date": {
+        "start": "1879-10-14",
+        "end":   "1880-03",
+        "precision": "month",
+        "approximate": false,
+        "display": "14 October 1879 – March 1880"
+      },
+      "location": {
+        "type": "city",
+        "name": "Khonoma, Naga Hills",
+        "region": "Naga Hills",
+        "country": "IN",
+        "points": [{ "lat": 25.6500, "lon": 94.0167, "name": "Khonoma" }]
+      },
+      "era": "colonial",
+      "category": ["resistance", "military", "political"],
+      "figures": ["G.H. Damant", "Angami chiefs of Khonoma"],
+      "tags": ["rebellion", "tribal"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Khonoma", "label": "Wikipedia: Khonoma", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Verrier Elwin, Nagaland (1961)", "type": "scholarly" },
+        { "label": "Sajal Nag, Contesting Marginality (2002)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "anglo-manipur-war-1891",
+      "title": "Anglo-Manipur War — Battle of Khongjom",
+      "tooltip": "Anglo-Manipur War + execution of Bir Tikendrajit and Thangal General, 1891",
+      "summary": "Manipur's resistance to British annexation ended at Khongjom, 23 April 1891; Bir Tikendrajit and Thangal General were publicly hanged at Imphal.",
+      "detail": "A Manipuri palace coup in September 1890 deposed Maharaja Surchandra in favour of his half-brother Kulachandra; the British declined to recognise Kulachandra and demanded the surrender of the senapati Tikendrajit Singh, the coup's principal organiser. Chief Commissioner of Assam J.W. Quinton arrived at Imphal in March 1891 to enforce the demand; Tikendrajit's forces attacked the British residency on the night of 24 March, killing Quinton and four other British officers. The British retaliation — three columns under Colonel R.H.F. Rennick converging on Imphal — defeated the Manipuri force at the Battle of Khongjom on 23 April 1891 (Major Paona Brajabashi and other Manipuri commanders fell). British forces took Imphal on 27 April. Bir Tikendrajit Singh and Thangal General were tried by a special tribunal and publicly hanged at Imphal on 13 August 1891. Manipur was forced to accept a child Maharaja under direct British paramountcy; full annexation was avoided, leaving Manipur a princely state until 1947. Khongjom Day (23 April) is observed annually in modern Manipur.",
+      "date": {
+        "start": "1891-03-24",
+        "end":   "1891-08-13",
+        "precision": "day",
+        "approximate": false,
+        "display": "24 March – 13 August 1891"
+      },
+      "location": {
+        "type": "city",
+        "name": "Khongjom + Imphal, Manipur",
+        "region": "Manipur",
+        "country": "IN",
+        "points": [{ "lat": 24.8170, "lon": 93.9368, "name": "Imphal" }]
+      },
+      "era": "colonial",
+      "category": ["resistance", "military", "political"],
+      "figures": ["Bir Tikendrajit Singh", "Thangal General", "Paona Brajabashi", "J.W. Quinton"],
+      "tags": ["rebellion"],
+      "caused_by": [
+        { "id": "treaty-of-yandabo-1826", "gloss": "Yandabo restored Manipur as an EIC-paramountcy princely state but left the succession-recognition question unresolved; the 1890 palace coup was the kind of internal dispute paramountcy was designed to police, and the British insistence on Tikendrajit's surrender was the assertion of that paramountcy that produced the war." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Anglo-Manipur_War", "label": "Wikipedia: Anglo-Manipur War", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Lal Dena, History of Modern Manipur 1826–1949 (1991)", "type": "scholarly" },
+        { "label": "Caroline Keen, An Imperial Crisis in British India: The Manipur Uprising of 1891 (2015)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "tripura-manikya-paramountcy-1761",
+      "title": "Tripura Manikya dynasty under EIC paramountcy",
+      "tooltip": "Tripura Manikya dynasty under successive paramountcies, 1761–1949",
+      "summary": "Manikya dynasty (founded 14th c.) shifted from Mughal-Bengal nawabi tributary to EIC paramountcy after Plassey (1761) — princely state until 1949 accession.",
+      "detail": "The Manikya dynasty had ruled Tripura (Tripuri Twipra) from the 14th century; its institutional record is preserved in the Sanskrit-Bengali Rajmala royal chronicle commissioned by Maharaja Dharma Manikya in the 1450s. Tripura's relationship with northern Indian power shifted across regimes: Mughal-Bengal nawabi tributary from the early 17th century, then EIC paramountcy after Plassey (Maharaja Krishna Manikya 1761), then British Raj paramountcy until 1947. The kingdom was distinctive among Northeast princely states for its ancient Hindu-Brahmanical court tradition (the Tripuri Maharajas adopted vrishchika gotra Brahmin status from the 16th century) coexisting with substantial tribal-Buddhist populations in the hills. Maharaja Bir Bikram Kishore Manikya (1923–1947) modernised the administration, founded Tripura University, and resisted accession; his death in 1947 left the regency under the rani Kanchan Prabha Devi, who acceded to India on 15 October 1949. Tripura became a Union Territory then a state (1972).",
+      "date": {
+        "start": "1761",
+        "end":   "1949-10-15",
+        "precision": "year",
+        "approximate": true,
+        "display": "1761 (EIC paramountcy) – 15 October 1949 (accession)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Agartala, Tripura",
+        "region": "Tripura",
+        "country": "IN",
+        "points": [{ "lat": 23.8315, "lon": 91.2868, "name": "Agartala" }]
+      },
+      "era": "colonial",
+      "category": ["political", "dynastic"],
+      "figures": ["Krishna Manikya", "Bir Bikram Kishore Manikya", "Kanchan Prabha Devi"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Tripura_(princely_state)", "label": "Wikipedia: Tripura (princely state)", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Jagadis Gan-Chaudhuri, A Constitutional History of Tripura (1980)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "naga-independence-declared-1947",
+      "title": "Naga independence declared by Phizo's NNC",
+      "tooltip": "NNC declares Naga independence at Kohima, 14 August 1947",
+      "summary": "The Naga National Council declared independence on 14 August 1947 — one day before India — opening the longest-running insurgency in modern Indian history.",
+      "detail": "The Naga National Council, founded 1946 by Imkongliba Ao with A.Z. Phizo as its driving figure from 1947, declared Naga independence on 14 August 1947 — deliberately one day before India's own independence. The NNC's claim rested on the colonial-era separation of the Naga Hills District (1881, after Khonoma 1879) from regular British India administration, which the Council read as recognition of Naga political distinctness. Nehru's government rejected the claim. Phizo's 1951 plebiscite (claiming 99% Naga support for independence) and the 1956 founding of the Federal Government of Nagaland inaugurated the armed insurgency that has run, with multiple ceasefires and splits (NSCN-IM, NSCN-K, NSCN-Reformation), to the present — the longest-running insurgency in modern Indian history. Statehood within the Indian Union (Nagaland, 1963) and the 1997 ceasefire-and-talks framework with the NSCN-IM did not end the underlying sovereignty dispute.",
+      "date": {
+        "start": "1947-08-14",
+        "end":   "1947-08-14",
+        "precision": "day",
+        "approximate": false,
+        "display": "14 August 1947 (one day before Indian independence)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Kohima, Naga Hills",
+        "region": "Nagaland",
+        "country": "IN",
+        "points": [{ "lat": 25.6747, "lon": 94.1086, "name": "Kohima" }]
+      },
+      "era": "independence",
+      "category": ["political", "resistance"],
+      "figures": ["A.Z. Phizo", "Imkongliba Ao", "Jawaharlal Nehru"],
+      "tags": ["rebellion"],
+      "caused_by": [
+        { "id": "khonoma-naga-rising-1879", "gloss": "The 1881 Naga Hills District created the administrative-political distinctness the NNC's 1947 claim invoked; the genealogy from Khonoma's resistance to Phizo's declaration is the Naga nationalist self-account." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Insurgency_in_Northeast_India", "label": "Wikipedia: Insurgency in Northeast India", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Sanjib Baruah, Durable Disorder: Understanding the Politics of Northeast India (2005)", "type": "scholarly" },
+        { "label": "Charles Chasie, The Naga Imbroglio (2nd ed., 2005)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
     {
       "id": "khasi-rebellion-1829-1833",
       "title": "Khasi Rebellion under Tirot Sing",

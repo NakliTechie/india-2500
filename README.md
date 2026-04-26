@@ -13,10 +13,10 @@ Current corpus:
 - **2 threads** (Chauri Chaura and the cost of non-violence; Babur's road to Panipat)
 - **6 people** (Gandhi, Nehru, Bhagat Singh, Ambedkar, Jinnah, Babur)
 - **5 collections** — Babur's road; Founding moments of modern India; First-person works of the subcontinent (20 memoirs); Women shapers of the freedom struggle; Rebellions before and beyond 1857 (18 members)
-- **21 places** — Delhi (18 events), Agra (7), Lahore (5), Calcutta (5), Fatehpur Sikri (3), Bombay, Pune, Murshidabad, Sabarmati Ashram, Hyderabad, Srirangapatna, Vellore, Puri, Daulatabad, Gulbarga, Bidar, Madras, Bhopal, Anandpur Sahib, Raigad, Thiruvananthapuram (auto-gathered by haversine proximity)
-- **13 polities** — Delhi Sultanate (19 events), Bahmani Sultanate, Sur Empire, Mughal Empire (26), Maratha Confederacy, Khalsa / Sikh Confederacy (3), Mysore Sultanate, East India Company (11), British Raj (31), Hyderabad State, Bhopal State, Travancore, Republic of India
+- **30 places** across the subcontinent — Delhi, Agra, Lahore, Calcutta, Bombay, Pune, Hyderabad, Murshidabad, Sabarmati Ashram, Hampi, Bijapur, Golconda, Mysore, Srirangapatna, Vellore, Madras, Madurai (event-anchor), Imphal, Charaideo, Yuksom, Gangtok, Agartala, plus polity-capital stubs (Daulatabad, Gulbarga, Bidar, Fatehpur Sikri, Bhopal, Anandpur Sahib, Raigad, Thiruvananthapuram, Puri)
+- **22 polities** spanning Sultanate-era to Republic — Delhi Sultanate, Bahmani, Sur, Mughal, Maratha Confederacy, Khalsa/Sikh, Mysore Sultanate (Hyder/Tipu), Mysore Kingdom (Wodeyars), Vijayanagara Empire, Madurai Sultanate, Bijapur Sultanate, Golconda Sultanate, Ahom Kingdom, Manipur Kingdom, Sikkim Kingdom, Tripura Kingdom, EIC, British Raj, Hyderabad State, Bhopal State, Travancore, Republic of India
 
-All six first-class content types — events, threads, people, collections, places, polities — now ship. Every polity-capital cross-navigation link clicks through to a real place record. Upcoming: political show trials + other incident collections; Vijayanagara + Anglo-Mysore content; more 1857 events; more biographical tracks.
+All six first-class content types — events, threads, people, collections, places, polities — now ship. Every polity-capital cross-navigation link clicks through to a real place record. Upcoming: political show trials + other incident collections; more 1857 events; Maurya / post-Maurya batch.
 
 ## Repository layout
 
