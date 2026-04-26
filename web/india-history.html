@@ -1019,6 +1019,35 @@
   footer a:hover { color: var(--cream-text); text-decoration: underline; text-underline-offset: 3px; }
 
   mark { background: #FFE896; color: inherit; padding: 0 1px; border-radius: 2px; }
+
+  /* Mobile gate — interactive map + 5-bar rail are not workable on small screens.
+     Below 920px, hide .stage and show a brief "open on a larger screen" message. */
+  .mobile-gate { display: none; }
+  @media (max-width: 919px) {
+    .stage, .controls { display: none !important; }
+    .mobile-gate {
+      display: block;
+      margin: 24px 0;
+      padding: 22px 20px;
+      background: var(--cream-card);
+      border: 1px solid var(--cream-border-soft);
+      border-radius: 10px;
+      font-size: 14px;
+      line-height: 1.55;
+      color: var(--cream-text);
+    }
+    .mobile-gate h2 {
+      font-size: 15px;
+      font-weight: 500;
+      margin: 0 0 10px;
+      color: var(--cream-text);
+    }
+    .mobile-gate p { margin: 0 0 10px; }
+    .mobile-gate p:last-child { margin-bottom: 0; }
+    .mobile-gate a { color: var(--purple); }
+    .mobile-gate ul { padding-left: 20px; margin: 0 0 10px; }
+    .mobile-gate li { margin-bottom: 4px; }
+  }
 </style>
 </head>
 <body>
@@ -1040,6 +1069,17 @@
   <time class="pubdate">Saturday, 260425</time>
 
   <h2 class="sr-only">Interactive map and timeline of Indian historical events with editorial threads connecting them.</h2>
+
+  <aside class="mobile-gate" aria-label="Mobile notice">
+    <h2>This atlas is built for a larger screen.</h2>
+    <p>The map, the five-bar browse rail, and the side-by-side reader need a desktop or tablet (≥920px wide) to work. On a phone, please come back from a larger screen.</p>
+    <p>If you have a tablet, rotate it to landscape and reload.</p>
+    <p>From the same browser session you can still:</p>
+    <ul>
+      <li><a href="https://github.com/naklitechie/india-2500/issues/new?template=correction.md" rel="noopener">Open a correction</a> if you've spotted an error</li>
+      <li><a href="https://github.com/naklitechie/india-2500" rel="noopener">Browse the source corpus on GitHub</a></li>
+    </ul>
+  </aside>
 
   <div class="stage">
     <aside class="left-rail" aria-label="Browse threads, people, collections, places, and polities">
