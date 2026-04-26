@@ -801,6 +801,100 @@
     },
 
     {
+      "id": "nalanda",
+      "name": "Nalanda",
+      "tooltip": "Nalanda Mahavihara — Buddhist university 5th–12th c.; Bakhtiyar Khilji 1193",
+      "summary": "Buddhist university in Magadha founded c. 5th c. CE under Gupta patronage; Xuanzang's residency 635–640; destroyed by Bakhtiyar Khilji c. 1193.",
+      "framing": "Nalanda Mahavihara was the largest Buddhist monastic university of the early-medieval Indian world — founded under Gupta patronage in the 5th century CE, expanded continuously under successive Pala emperors (Dharmapala, Devapala) from the 8th–11th centuries, and destroyed in Bakhtiyar Khilji's c. 1193 raid. Xuanzang's mid-7th-century account records 10,000 monks, 1,500 teachers, 108 monasteries, and three libraries (Ratnasagara, Ratnodadhi, Ratnaranjaka) holding millions of palm-leaf manuscripts. Faxian had visited the predecessor site two centuries earlier; the Tibetan pilgrim Dharmasvamin's 1235 account confirms the institution survived in reduced form through the 13th century. The site lay buried until Cunningham's 1861 excavations; the brick stupa-vihara complex visible today is among India's most extensive archaeological remains. UNESCO World Heritage Site (2016). The modern Nalanda University (founded 2014) is a partial revival initiative.",
+      "location": {
+        "country": "IN",
+        "lat": 25.1361,
+        "lon": 85.4438,
+        "radius_km": 4
+      },
+      "era_span": ["gupta", "early-medieval", "republic"],
+      "category": ["university", "sacred-site"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Nalanda_mahavihara", "label": "Wikipedia: Nalanda Mahavihara", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Hartmut Scharfe, Education in Ancient India (2002), ch. on monastic universities", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "kanauj",
+      "name": "Kanauj",
+      "tooltip": "Kanauj — Harsha's capital 606–647; prize of the Tripartite Struggle",
+      "summary": "Harsha of Kanauj's capital from 606 to 647; the symbolic-imperial centre that the Pratiharas, Palas, and Rashtrakutas contested for 150 years.",
+      "framing": "Kanauj (Sanskrit Kanyakubja) was Harsha's imperial capital from c. 611 to 647 CE — the political successor to Pataliputra in the post-Gupta period. After Harsha's death without heir, Kanauj became the symbolic prize of the Tripartite Struggle (c. 783–950 CE) between the Pratiharas (north), Palas (east), and Rashtrakutas (Deccan). The Pratiharas eventually consolidated control under Bhoja I (r. 836–885) and held it until Mahmud of Ghazni's 1018 sack accelerated the dynasty's collapse. The Gahadavalas of Kanauj (c. 1090–1194) were the last major Hindu dynasty there before the Ghurid conquest. Modern Kanauj is a town in Uttar Pradesh known for its perfume (ittar) industry — a survival of the Mughal-era distillation trade.",
+      "location": {
+        "country": "IN",
+        "lat": 27.0700,
+        "lon": 79.9100,
+        "radius_km": 8,
+        "alt_names": ["Kanyakubja"]
+      },
+      "era_span": ["gupta", "early-medieval", "sultanate", "mughal", "colonial", "republic"],
+      "category": ["capital", "city"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Kannauj", "label": "Wikipedia: Kannauj", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Brajadulal Chattopadhyaya, The Making of Early Medieval India (1994; rev. 2012)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "tanjore",
+      "name": "Tanjore",
+      "tooltip": "Tanjore (Thanjavur) — Imperial Chola capital, 985–1279; Brihadishvara temple",
+      "summary": "Imperial Chola capital under Rajaraja and Rajendra; site of the 1010 Brihadishvara temple — among the longest South Indian capital cities.",
+      "framing": "Tanjore was the Imperial Chola capital from Vijayalaya's 9th-century consolidation through Rajaraja I (985–1014) and Rajendra I (1014–1044) — the high water of South Indian imperial-period building. The Brihadishvara temple (1010) is the architectural monument; the surrounding city housed the Chola court, the Saraswati Mahal Library (later Maratha foundation but on Chola foundations), and the goldsmith and bronze-casting workshops that produced the Chola bronze tradition. Rajendra I shifted the capital to Gangaikonda Cholapuram c. 1025 after the northern campaigns; later Chola rulers (Kulottunga I onwards) returned the seat to Tanjore. After the Chola decline (c. 1279) the city served as a Pandya, Vijayanagara-Nayaka, and finally Maratha (Bhonsle) capital from 1674 — Sarfoji II Bhonsle (r. 1798–1832) collected the great Saraswati Mahal manuscript library before British annexation in 1855. Modern Thanjavur preserves the Chola monumental and bronze-tradition centre.",
+      "location": {
+        "country": "IN",
+        "lat": 10.7828,
+        "lon": 79.1314,
+        "radius_km": 8,
+        "alt_names": ["Thanjavur"]
+      },
+      "era_span": ["early-medieval", "sultanate", "mughal", "maratha", "colonial", "independence", "republic"],
+      "category": ["capital", "city", "sacred-site"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Thanjavur", "label": "Wikipedia: Thanjavur", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "K.A. Nilakanta Sastri, The Cōḷas (1935; rev. 1955)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "somnath",
+      "name": "Somnath",
+      "tooltip": "Somnath — Saurashtra Shiva temple; sacked by Mahmud of Ghazni 1026",
+      "summary": "Coastal Saurashtra Shiva temple; one of the twelve Jyotirlingas; sacked by Mahmud of Ghazni 1026; rebuilt repeatedly, most recently 1947–1951.",
+      "framing": "Somnath, on the Saurashtra coast facing the Arabian Sea, is one of the twelve Jyotirlingas of Shiva — the most sacred set of Shaivite pilgrimage sites in the Hindu tradition. The wealthiest Hindu temple of the early-medieval period (under Solanki patronage), it became Mahmud of Ghazni's most consequential target — his January 1026 raid sacked the temple and carried off treasure traditionally valued at 20 million dinars. The destruction-rebuilding-destruction cycle ran across the next eight centuries: rebuilt under Bhima I Solanki (mid-11th c.), sacked by Alauddin Khalji's general (1299), rebuilt under Mahipala I, sacked by Muzaffar Shah of Gujarat (1395) and again by Aurangzeb (1665). The current temple is the 1947–1951 reconstruction promoted by Sardar Patel (against Nehru's expressed reservations) and inaugurated by President Rajendra Prasad in 1951 — a politically charged act in the early years of the Republic. Romila Thapar's Somanatha (2004) is the standard modern critical history of the temple's contested narrative.",
+      "location": {
+        "country": "IN",
+        "lat": 20.9000,
+        "lon": 70.4100,
+        "radius_km": 5
+      },
+      "era_span": ["early-medieval", "sultanate", "mughal", "maratha", "colonial", "independence", "republic"],
+      "category": ["sacred-site", "city"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Somnath_temple", "label": "Wikipedia: Somnath temple", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Romila Thapar, Somanatha: The Many Voices of a History (2004)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
       "id": "puri",
       "name": "Puri",
       "tooltip": "Puri — Jagannath temple seat, c. 12th c. onward; chronicled in the Madala Panji",

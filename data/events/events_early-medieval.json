@@ -1,0 +1,420 @@
+{
+  "campaign": "early-medieval",
+  "scope": "Early-medieval period (550–1206 CE) — Harsha and Pulakeshin, the Pallavas, Cholas, Palas, Pratiharas, the Tripartite Struggle, Adi Shankara, Mahmud of Ghazni, the Ghurid invasions to Tarain.",
+  "updated": "2026-04-26",
+  "events": [
+    {
+      "id": "harsha-of-kanauj-606",
+      "title": "Harsha of Kanauj's accession",
+      "tooltip": "Harsha of Kanauj accedes c. 606 CE; consolidates north India for 41 years",
+      "summary": "Harsha consolidated Kanauj as the political centre of north India for 41 years — the last major attempt at pan-north-Indian rule before the Sultanate.",
+      "detail": "Harsha (r. 606–647 CE) succeeded his murdered brother Rajyavardhana of the Pushyabhuti dynasty at Thanesar in 606 CE; within five years he had shifted the capital to Kanauj and consolidated the Doab and the eastern Gangetic plain under a single political authority. His forty-one-year reign produced the Harshacharita (court biography by Bana, the earliest surviving Indian biographical text in Sanskrit) and three plays attributed to him personally (Nagananda, Ratnavali, Priyadarshika). The Chinese Buddhist pilgrim Xuanzang spent eight years (630–644) at Harsha's court and Nalanda, recording an admiring account of the empire — court hospitality to Buddhist, Jain, and Brahmanical scholars, the quinquennial dharma-distribution festivals at Prayaga where Harsha gave away the imperial treasury. Harsha's defeat by Pulakeshin II Chalukya at the Narmada (618) capped his southern expansion. After his death without an heir in 647 the empire fragmented; Kanauj would be the prize of the Tripartite Struggle two centuries later.",
+      "date": {
+        "start": "606",
+        "end":   "647",
+        "precision": "year",
+        "approximate": false,
+        "display": "606–647 CE (Harsha's reign)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Kanauj",
+        "region": "Doab",
+        "country": "IN",
+        "points": [{ "lat": 27.0700, "lon": 79.9100, "name": "Kanauj" }]
+      },
+      "era": "early-medieval",
+      "category": ["political", "dynastic", "cultural"],
+      "figures": ["Harsha", "Bana", "Xuanzang", "Rajyavardhana"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Harsha", "label": "Wikipedia: Harsha", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Bana, Harshacharita (7th c. CE; E.B. Cowell & F.W. Thomas trans., 1897)", "type": "primary" },
+        { "label": "Xuanzang, Da Tang Xiyu Ji / Records of the Western Regions (646 CE; Samuel Beal trans., 1884)", "type": "primary" },
+        { "label": "D. Devahuti, Harsha: A Political Study (3rd ed., 1998)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "pulakeshin-defeats-harsha-618",
+      "title": "Pulakeshin II Chalukya defeats Harsha at the Narmada",
+      "tooltip": "Pulakeshin II checks Harsha's southern expansion at the Narmada, c. 618 CE",
+      "summary": "Pulakeshin II of the Chalukyas of Vatapi defeated Harsha at the Narmada — the only major military defeat Harsha suffered, and the Deccan-north divide.",
+      "detail": "Pulakeshin II (r. 610–642 CE) of the Chalukyas of Vatapi (modern Badami, Karnataka) extended Chalukya power across most of the Deccan and into the eastern coast — defeating the Pallavas and the Kadambas, and establishing his brother Vishnuvardhana as Eastern Chalukya viceroy at Vengi. His c. 618 CE encounter with Harsha at the Narmada — the conventional north-south boundary in Indian historiography — checked Harsha's southern expansion permanently. The Aihole inscription (634 CE) by his court poet Ravikirti documents the victory, and Xuanzang's Records (646 CE) describes Pulakeshin as 'lord of all the country south of the Narmada.' The Persian envoy Khusrau II reportedly received Pulakeshin's reciprocal embassy at his court c. 625, with Pulakeshin depicted in the Ajanta cave paintings (Cave 1) receiving Khusrau's representatives. Pulakeshin was killed in 642 by the Pallava Narasimhavarman I, whose forces sacked Vatapi in revenge for earlier Chalukya raids on Kanchi.",
+      "date": {
+        "start": "618",
+        "end":   "618",
+        "precision": "year",
+        "approximate": true,
+        "display": "c. 618 CE"
+      },
+      "location": {
+        "type": "city",
+        "name": "Narmada (frontier of north and south)",
+        "region": "central India",
+        "country": "IN",
+        "points": [{ "lat": 22.0667, "lon": 75.0000, "name": "Narmada (representative point)" }]
+      },
+      "era": "early-medieval",
+      "category": ["military", "political"],
+      "figures": ["Pulakeshin II", "Harsha", "Ravikirti", "Narasimhavarman I Pallava"],
+      "caused_by": [
+        { "id": "harsha-of-kanauj-606", "gloss": "Harsha's consolidation of north India set the southern campaign that Pulakeshin's Deccan power was uniquely positioned to repulse — the Narmada line emerged from this single encounter as the conventional north-south political divide." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Pulakeshin_II", "label": "Wikipedia: Pulakeshin II", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Ravikirti, Aihole inscription (634 CE; D.C. Sircar, Select Inscriptions, 1965)", "type": "primary" },
+        { "label": "K.A. Nilakanta Sastri, A History of South India (1955), ch. on the Chalukyas", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "xuanzang-at-nalanda-637",
+      "title": "Xuanzang studies at Nalanda",
+      "tooltip": "Chinese pilgrim Xuanzang studies at Nalanda c. 637 CE under Shilabhadra",
+      "summary": "Chinese Buddhist pilgrim Xuanzang spent five years at Nalanda — the most detailed surviving account of Indian Buddhism's classical-period institutional life.",
+      "detail": "Xuanzang (c. 602–664 CE), the Chinese Buddhist monk later fictionalised as the Tang Sanzang of Journey to the West, travelled overland from Chang'an in 629 CE, reaching India via the Hindu Kush in 633. His five years (c. 635–640) at Nalanda Mahavihara under the elderly Yogachara master Shilabhadra produced the Da Tang Xiyu Ji ('Records of the Western Regions', completed 646), the most detailed surviving description of 7th-century India: 110 kingdoms with administrative, religious, and economic accounts; the Buddhist sangha's institutional state; the Hindu temple economy; the caste system; even climate notes. Nalanda in his account housed 10,000 monks and 1,500 teachers across 108 monasteries, with libraries (the Ratnasagara, Ratnodadhi, Ratnaranjaka) holding millions of manuscripts. He returned to China with 657 Sanskrit manuscripts, founded the Yogachara school of Chinese Buddhism, and translated 1,330 fascicles of Buddhist texts before his death.",
+      "date": {
+        "start": "635",
+        "end":   "640",
+        "precision": "year",
+        "approximate": true,
+        "display": "c. 635–640 CE (Nalanda residency)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Nalanda Mahavihara",
+        "region": "Magadha",
+        "country": "IN",
+        "points": [{ "lat": 25.1361, "lon": 85.4438, "name": "Nalanda" }]
+      },
+      "era": "early-medieval",
+      "category": ["religious", "cultural"],
+      "figures": ["Xuanzang", "Shilabhadra", "Harsha"],
+      "caused_by": [
+        { "id": "harsha-of-kanauj-606", "gloss": "Harsha's protection and patronage gave Xuanzang the safety to travel the empire and the access to Nalanda's institutional life — the Records explicitly credit Harsha as the political condition for the residency." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Xuanzang", "label": "Wikipedia: Xuanzang", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Xuanzang, Da Tang Xiyu Ji (646 CE; Samuel Beal trans., 1884; Li Rongxi trans., 1996)", "type": "primary" },
+        { "label": "Hwui Li, Life of Hiuen-Tsiang (664 CE; Samuel Beal trans., 1911)", "type": "primary" },
+        { "label": "Sally Hovey Wriggins, The Silk Road Journey with Xuanzang (rev. 2004)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "pala-dynasty-founded-750",
+      "title": "Pala dynasty founded by Gopala",
+      "tooltip": "Gopala elected first Pala king at Gauda c. 750 CE; ends Bengal's matsya-nyaya",
+      "summary": "Gopala was elected by Bengal's nobles c. 750 CE to end the matsya-nyaya ('big-fish-eats-small-fish') chaos — founding the Pala dynasty's four-century rule.",
+      "detail": "After the death of Shashanka (r. c. 600–637, the first major Bengal king) and the post-Harsha collapse, Bengal entered a century of political chaos that contemporary Buddhist sources describe as matsya-nyaya — 'the law of the fish', where larger predators consume smaller. Around 750 CE the Bengali nobility elected Gopala (a non-royal Buddhist) as king to restore order — a foundational legitimacy story unique among Indian dynasties for being explicitly elective rather than dynastic. Gopala's son Dharmapala (r. c. 770–810) and grandson Devapala (r. c. 810–850) extended Pala power across Bengal-Bihar and into the Tripartite Struggle for Kanauj. The Palas were the last major Indian patrons of Mahayana and Vajrayana Buddhism — the universities of Vikramashila (founded by Dharmapala c. 800), Somapura (founded by Dharmapala), Odantapuri, and Jagaddala — and their Tantric scholarship shaped Tibetan Buddhism (Atisha Dipankara left Vikramashila for Tibet in 1042). The dynasty ruled until c. 1161, when the Senas displaced them; Bakhtiyar Khilji's 1193 sack of Nalanda + Vikramashila ended the Buddhist scholarly tradition the Palas had patronised.",
+      "date": {
+        "start": "750",
+        "end":   "750",
+        "precision": "year",
+        "approximate": true,
+        "display": "c. 750 CE (Gopala's election)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Gauda (Bengal)",
+        "region": "Bengal",
+        "country": "IN",
+        "points": [{ "lat": 24.8800, "lon": 88.1400, "name": "Gauda" }]
+      },
+      "era": "early-medieval",
+      "category": ["political", "dynastic", "religious"],
+      "figures": ["Gopala", "Dharmapala", "Devapala"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Pala_Empire", "label": "Wikipedia: Pala Empire", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "R.C. Majumdar (ed.), The History of Bengal, vol. I: Hindu Period (Dacca University, 1943)", "type": "scholarly" },
+        { "label": "Susan L. Huntington, The 'Pala-Sena' Schools of Sculpture (1984)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "mahabalipuram-shore-temple-700",
+      "title": "Pallava Mahabalipuram shore temple complex",
+      "tooltip": "Pallavas build the Mahabalipuram shore temple complex, c. 700 CE",
+      "summary": "Narasimhavarman II Rajasimha completed the Mahabalipuram shore temple — the Pallava architectural canon's most celebrated site, on the Coromandel coast.",
+      "detail": "The Pallavas of Kanchipuram (c. 275–897 CE), the dominant Tamil dynasty of the early-medieval period, built their port-and-pilgrimage complex at Mamallapuram (modern Mahabalipuram) on the Coromandel coast across the 7th and 8th centuries. The earliest works — the monolithic Pancha Rathas (five chariot-shrines carved from single granite outcrops) and the Arjuna's Penance / Descent of the Ganga bas-relief (the largest open-air rock relief in the ancient world) — date to Narasimhavarman I (r. 630–668 CE), the king who avenged Pulakeshin's earlier sacks by destroying Vatapi. The Shore Temple complex itself, with its twin Shiva and Vishnu shrines, was completed under Narasimhavarman II Rajasimha (r. 700–728 CE) c. 700–728. Mahabalipuram's architectural canon — the dravida temple form, the gopuram tower type, the bas-relief narrative tradition — set the template for South Indian temple architecture for the next millennium. UNESCO World Heritage Site (1984).",
+      "date": {
+        "start": "700",
+        "end":   "728",
+        "precision": "year",
+        "approximate": true,
+        "display": "c. 700–728 CE (Shore Temple under Narasimhavarman II)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Mahabalipuram (Mamallapuram)",
+        "region": "Coromandel coast",
+        "country": "IN",
+        "points": [{ "lat": 12.6269, "lon": 80.1928, "name": "Mahabalipuram" }]
+      },
+      "era": "early-medieval",
+      "category": ["cultural", "religious"],
+      "figures": ["Narasimhavarman I", "Narasimhavarman II Rajasimha"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Mahabalipuram", "label": "Wikipedia: Mahabalipuram", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "K.R. Srinivasan, The Pallava Architecture of South India (1955)", "type": "scholarly" },
+        { "label": "Vidya Dehejia, Indian Art (1997), ch. on Pallava architecture", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "adi-shankara-c-800",
+      "title": "Adi Shankara establishes Advaita Vedanta",
+      "tooltip": "Adi Shankara's life and teachings, c. 788–820 CE",
+      "summary": "Adi Shankara walked the subcontinent, debated rival schools, founded the four cardinal mathas — codified Advaita Vedanta as dominant Hindu philosophy.",
+      "detail": "Adi Shankara (traditional dates c. 788–820 CE; some scholarship places earlier, c. 700 CE) was a Kerala-born Brahmin philosopher who in a 32-year life travelled the subcontinent, composed the foundational commentaries on the Brahma Sutras, the principal Upanishads, and the Bhagavad Gita, debated representatives of every major contemporary school (Mimamsa, Yoga, Buddhism, Jainism, Charvaka), and founded four monastic centres (mathas) at the four cardinal points: Sringeri (south), Dwarka (west), Puri (east), Jyotirmath (north). His Advaita Vedanta — the doctrine that Brahman is the only ultimate reality and the apparent multiplicity of the world is maya — became the dominant philosophical articulation of Hindu thought from the 9th century onwards, shaping Bhakti theology, the Sannyasa tradition, and modern Hindu reform from Vivekananda forwards. The biographical Shankara-vijaya tradition (multiple competing texts, 14th–17th centuries) is hagiographic; the historical core derives from his philosophical works themselves. The four-matha system survives intact and the Shankaracharyas remain among the most authoritative voices in Hindu institutional life.",
+      "date": {
+        "start": "788",
+        "end":   "820",
+        "precision": "year",
+        "approximate": true,
+        "display": "c. 788–820 CE (traditional)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Sringeri Sharada Peetham (founding matha)",
+        "region": "Karnataka",
+        "country": "IN",
+        "points": [{ "lat": 13.4179, "lon": 75.2562, "name": "Sringeri" }]
+      },
+      "era": "early-medieval",
+      "category": ["religious", "cultural"],
+      "figures": ["Adi Shankara", "Mandana Mishra"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Adi_Shankara", "label": "Wikipedia: Adi Shankara", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Adi Shankara, Brahmasutra Bhashya (c. 800 CE; Swami Gambhirananda trans., 1965)", "type": "primary" },
+        { "label": "Karl Potter (ed.), Encyclopedia of Indian Philosophies, vol. III: Advaita Vedanta up to Samkara (1981)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "tripartite-struggle-c-800",
+      "title": "Tripartite Struggle for Kanauj",
+      "tooltip": "Pratiharas, Palas, Rashtrakutas contest Kanauj across the 8th–9th c.",
+      "summary": "Kanauj — Harsha's old capital — became the prize of a century-long struggle between the Pratiharas (north), Palas (east), and Rashtrakutas (Deccan).",
+      "detail": "The Tripartite Struggle (c. 783–950 CE) was the long competition between the three great early-medieval north Indian regional powers for control of Kanauj, the symbolic capital of post-Harsha north India. The Pratiharas of the Gurjara branch (capital first at Bhinmal then Kanauj from c. 836), the Palas of Bengal (Dharmapala installed his nominee Chakrayudha at Kanauj c. 800; Devapala continued the contest), and the Rashtrakutas of the Deccan (Dhruva c. 783, then Govinda III c. 800, then Indra III in 916 — all sacking Kanauj from the south) cycled through dominance across 150 years. The Pratiharas eventually consolidated control under Bhoja I (r. 836–885) and Mahendrapala I (885–910), holding Kanauj as a recognised imperial centre until the early 11th century when Mahmud of Ghazni's 1018 sack accelerated the dynasty's collapse. The Tripartite Struggle is the structural pattern of early-medieval Indian politics — strong regional polities contesting a symbolic-imperial centre rather than building a single transregional empire.",
+      "date": {
+        "start": "783",
+        "end":   "950",
+        "precision": "year",
+        "approximate": true,
+        "display": "c. 783–950 CE"
+      },
+      "location": {
+        "type": "city",
+        "name": "Kanauj",
+        "region": "Doab",
+        "country": "IN",
+        "points": [{ "lat": 27.0700, "lon": 79.9100, "name": "Kanauj" }]
+      },
+      "era": "early-medieval",
+      "category": ["political", "military"],
+      "figures": ["Bhoja I Pratihara", "Dharmapala", "Devapala", "Dhruva Rashtrakuta", "Govinda III"],
+      "caused_by": [
+        { "id": "harsha-of-kanauj-606", "gloss": "Harsha's death without heir in 647 vacated Kanauj's imperial position; the Tripartite Struggle is the long contest among the regional successor powers for the political centre Harsha had occupied." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Tripartite_Struggle", "label": "Wikipedia: Tripartite Struggle", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Brajadulal Chattopadhyaya, The Making of Early Medieval India (1994; rev. 2012)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "rajaraja-brihadishvara-1010",
+      "title": "Rajaraja Chola consecrates the Brihadishvara temple",
+      "tooltip": "Rajaraja Chola consecrates the Brihadishvara at Tanjore, 1010 CE",
+      "summary": "Rajaraja I consecrated the Brihadishvara at Tanjore — the largest and tallest Indian temple of its time, the Chola imperial monument.",
+      "detail": "Rajaraja Chola I (r. 985–1014 CE) consecrated the Brihadishvara temple (also Rajarajeshvaram, Peruvudaiyar Kovil) at Tanjore in 1010 CE — the 25th year of his reign. The temple is the architectural monument of the Imperial Chola period (c. 985–1279), the dominant South Indian and northern-Indian-Ocean political-economic regime of the early-medieval period. Built entirely of granite (the nearest source 60 km away — the construction logistics involved an estimated 130,000 tonnes of stone), the Brihadishvara's vimana (tower) is 66 metres tall and the largest of its time anywhere in India; the bas-reliefs depict Rajaraja's reign, the Chola military campaigns, and the dance traditions of the early-medieval south. The temple's surviving inscriptions (over 60 long Tamil ones at the base of the vimana) document the temple economy, the village land grants supporting it, and the Chola administrative apparatus in unmatched detail. UNESCO World Heritage Site (1987, expanded 2004 to include Gangaikonda Cholapuram + Airavatesvara). Rajaraja's son Rajendra I would extend Chola power further, including a famous 1025 naval expedition to Srivijaya (Sumatra).",
+      "date": {
+        "start": "1010",
+        "end":   "1010",
+        "precision": "year",
+        "approximate": false,
+        "display": "1010 CE"
+      },
+      "location": {
+        "type": "city",
+        "name": "Tanjore (Thanjavur)",
+        "region": "Chola territory / Tamil country",
+        "country": "IN",
+        "points": [{ "lat": 10.7828, "lon": 79.1314, "name": "Tanjore" }]
+      },
+      "era": "early-medieval",
+      "category": ["cultural", "religious", "political"],
+      "figures": ["Rajaraja Chola I", "Karuvur Devar"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Brihadeeswarar_Temple,_Thanjavur", "label": "Wikipedia: Brihadeeswarar Temple, Thanjavur", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "K.A. Nilakanta Sastri, The Cōḷas (1935; rev. 1955)", "type": "scholarly" },
+        { "label": "Vidya Dehejia (ed.), The Sensuous and the Sacred: Chola Bronzes from South India (2002)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "rajendra-chola-naval-1025",
+      "title": "Rajendra Chola's naval expedition to Srivijaya",
+      "tooltip": "Rajendra Chola I's naval campaign against Srivijaya (Sumatra), 1025 CE",
+      "summary": "Rajendra Chola's naval expedition crossed the Bay of Bengal and defeated Srivijaya at Kadaram — the only major pre-modern Indian overseas campaign.",
+      "detail": "Rajendra Chola I (r. 1014–1044 CE) inherited the empire at its peak from his father Rajaraja and extended it further across the Deccan, into Bengal (the Gangaikonda Chola campaign of c. 1019, commemorated by the new capital Gangaikonda Cholapuram), and across the Bay of Bengal. The 1025 naval expedition against the Srivijaya empire (centred on Palembang in Sumatra) — recorded in the Tanjore inscriptions — captured Kadaram (Kedah, in modern Malaysia), Srivijaya, and several other ports, taking the Srivijayan king Sangrama Vijayottunggavarman prisoner. The campaign is the only major pre-modern Indian overseas military action; its motives appear to have been the Chola contest with Srivijaya for control of the Strait of Malacca textile-and-spice trade. Chola merchant guilds (the Ainnurruvar / 'Five Hundred of the Thousand Directions') established trading colonies at Quanzhou (China) and Sumatra in the same period. The expedition did not produce permanent territorial gain — Srivijaya recovered within decades — but the Chola Bay-of-Bengal commercial network it consolidated lasted until the 14th century.",
+      "date": {
+        "start": "1025",
+        "end":   "1025",
+        "precision": "year",
+        "approximate": true,
+        "display": "c. 1025 CE"
+      },
+      "location": {
+        "type": "city",
+        "name": "Gangaikonda Cholapuram (Chola capital from c. 1025)",
+        "region": "Chola territory",
+        "country": "IN",
+        "points": [{ "lat": 11.2128, "lon": 79.4467, "name": "Gangaikonda Cholapuram" }]
+      },
+      "era": "early-medieval",
+      "category": ["military", "economic", "political"],
+      "figures": ["Rajendra Chola I", "Sangrama Vijayottunggavarman"],
+      "caused_by": [
+        { "id": "rajaraja-brihadishvara-1010", "gloss": "Rajaraja's imperial consolidation built the fiscal and military base for Rajendra's overseas projection — the naval expedition is the institutional Chola state's culminating reach." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Chola_invasion_of_Srivijaya", "label": "Wikipedia: Chola invasion of Srivijaya", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Tanjore Big Temple Tamil inscriptions of Rajendra I (E. Hultzsch, South Indian Inscriptions vols. II–III)", "type": "primary" },
+        { "label": "Tansen Sen, Buddhism, Diplomacy, and Trade: The Realignment of Sino-Indian Relations 600–1400 (2003)", "type": "scholarly" },
+        { "label": "Hermann Kulke, K. Kesavapany & Vijay Sakhuja (eds.), Nagapattinam to Suvarnadwipa: Reflections on the Chola Naval Expeditions to Southeast Asia (2009)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "mahmud-ghazni-somnath-1026",
+      "title": "Mahmud of Ghazni sacks Somnath",
+      "tooltip": "Mahmud of Ghazni sacks the Somnath temple in Saurashtra, January 1026",
+      "summary": "Mahmud of Ghazni's 16th raid sacked the Shiva temple at Somnath in January 1026 — the most consequential and most contested of his Indian campaigns.",
+      "detail": "Mahmud of Ghazni (r. 998–1030 CE), Turkic ruler of the Samanid-successor Ghaznavid empire centred on Ghazni in modern Afghanistan, conducted seventeen raids into north India between 1001 and 1027 — principally against Hindu temple-treasuries, secondarily for political tribute. The 16th raid (October 1025 – January 1026) reached the Somnath Shiva temple on the Saurashtra coast — the wealthiest Hindu pilgrimage site of the period — across the Thar desert from Multan. Mahmud's force of an estimated 30,000 cavalry sacked the temple in January 1026, destroying the lingam and carrying off treasure traditionally valued at 20 million dinars. The raid was the most consequential of his Indian campaigns: it ended the Pratihara political position (the dynasty had been declining; Somnath was the symbolic blow), accelerated the decline of the Solanki dynasty of Gujarat, and entered both Persian-Islamic and Hindu-nationalist historiography in radically different framings. The temple was rebuilt repeatedly — most recently 1947–1951 under Sardar Patel's direction. Mahmud's Indian raids did not produce territorial occupation; the institutional Sultanate at Delhi would not emerge for another 180 years, after the Ghurid invasions.",
+      "date": {
+        "start": "1026-01",
+        "end":   "1026-01",
+        "precision": "month",
+        "approximate": false,
+        "display": "January 1026"
+      },
+      "location": {
+        "type": "city",
+        "name": "Somnath, Saurashtra",
+        "region": "Gujarat",
+        "country": "IN",
+        "points": [{ "lat": 20.9000, "lon": 70.4100, "name": "Somnath" }]
+      },
+      "era": "early-medieval",
+      "category": ["military", "religious", "economic"],
+      "figures": ["Mahmud of Ghazni", "Bhima I Solanki", "Al-Biruni"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Mahmud_of_Ghazni%27s_raid_on_Somnath", "label": "Wikipedia: Mahmud of Ghazni's raid on Somnath", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Al-Biruni, Tahqiq mā li'l-Hind (c. 1030 CE; Edward Sachau trans., Alberuni's India, 1888)", "type": "primary" },
+        { "label": "Romila Thapar, Somanatha: The Many Voices of a History (2004)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "first-battle-of-tarain-1191",
+      "title": "First Battle of Tarain",
+      "tooltip": "Prithviraj Chauhan defeats Muhammad of Ghor at Tarain, 1191",
+      "summary": "Prithviraj Chauhan III defeated Muhammad of Ghor at the First Battle of Tarain in 1191 — Ghor returned and reversed the verdict the next year.",
+      "detail": "Muhammad of Ghor's first major attempt to extend his Afghan-Iranian empire into the Gangetic plain was defeated by Prithviraj Chauhan III, ruler of the Chauhan kingdom centred at Ajmer-Delhi, at the First Battle of Tarain in 1191. Muhammad's force was routed by the Rajput cavalry; he was personally wounded and barely escaped. The defeat was the most significant Indian repulse of a major northwestern invasion since the Hindu Shahi resistance to Mahmud of Ghazni 165 years earlier. Prithviraj — anchored in the Chauhan court tradition that the Prithviraj-raso epic later mythologised — failed to capitalise on the victory: he did not pursue Muhammad into the Hindu Kush, did not consolidate political alliance with the Gahadavalas of Kanauj or the Solankis of Gujarat (his eastward Kanauj campaign of 1190 had alienated both), and devoted the next year to courtly affairs rather than military preparation. Muhammad of Ghor returned in 1192 with a larger and reorganised cavalry-heavy force; the Second Battle of Tarain reversed Prithviraj's victory permanently and opened the Sultanate-era institutional history of north India.",
+      "date": {
+        "start": "1191",
+        "end":   "1191",
+        "precision": "year",
+        "approximate": false,
+        "display": "1191"
+      },
+      "location": {
+        "type": "city",
+        "name": "Tarain (modern Taraori, Haryana)",
+        "region": "Haryana",
+        "country": "IN",
+        "points": [{ "lat": 29.9298, "lon": 76.9405, "name": "Tarain (Taraori)" }]
+      },
+      "era": "early-medieval",
+      "category": ["military", "political"],
+      "figures": ["Prithviraj Chauhan III", "Muhammad of Ghor"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/First_Battle_of_Tarain", "label": "Wikipedia: First Battle of Tarain", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Minhaj-i-Siraj, Tabaqat-i-Nasiri (c. 1260; trans. H.G. Raverty, 1881)", "type": "primary" },
+        { "label": "Peter Jackson, The Delhi Sultanate (1999), ch. 1", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "bakhtiyar-khilji-nalanda-1193",
+      "title": "Bakhtiyar Khilji sacks Nalanda",
+      "tooltip": "Bakhtiyar Khilji sacks Nalanda + Vikramashila + Odantapuri, c. 1193",
+      "summary": "Muhammad bin Bakhtiyar Khilji's cavalry raid destroyed Nalanda, Vikramashila, and Odantapuri — ending eastern India's Buddhist scholarly tradition.",
+      "detail": "Muhammad bin Bakhtiyar Khilji, an Afghan adventurer in Ghurid service, conducted a raid across Bihar in c. 1193 with a small force (the Persian sources record 200 cavalry) that captured the principal Buddhist monastic universities — Odantapuri (the regional administrative seat under the Senas), Nalanda, and shortly afterwards Vikramashila. The Tabaqat-i-Nasiri (Minhaj-i-Siraj's mid-13th-century history) records the destruction of the universities, the burning of the libraries (estimated millions of palm-leaf manuscripts), and the killing of the resident Buddhist scholars. Modern scholarship has revised the older narrative — recent excavations and the Tibetan biographies of Dharmasvamin (who visited Nalanda in 1235) suggest the destruction was less total than the Persian sources claimed and the institutions limped on for decades — but the raid was nonetheless the inflection point at which institutional Buddhism in eastern India collapsed. Tibetan Buddhism's preservation of the Sanskrit Buddhist literature (translated under Atisha and his successors c. 1042 onwards) is the surviving inheritance. Bakhtiyar Khilji proceeded to conquer Bengal from the Senas (1204), establishing the institutional basis for the Bengal Sultanate.",
+      "date": {
+        "start": "1193",
+        "end":   "1193",
+        "precision": "year",
+        "approximate": true,
+        "display": "c. 1193"
+      },
+      "location": {
+        "type": "city",
+        "name": "Nalanda (representative; Odantapuri + Vikramashila destroyed in same campaign)",
+        "region": "Magadha / Bihar",
+        "country": "IN",
+        "points": [{ "lat": 25.1361, "lon": 85.4438, "name": "Nalanda" }]
+      },
+      "era": "early-medieval",
+      "category": ["military", "religious"],
+      "figures": ["Muhammad bin Bakhtiyar Khilji", "Lakshmana Sena"],
+      "caused_by": [
+        { "id": "second-battle-of-tarain-1192", "gloss": "Tarain II opened the Gangetic plain to Ghurid expansion; Bakhtiyar Khilji's eastern campaign extending Ghurid control into Bihar and Bengal is the immediate consequence — Nalanda fell because the political shield protecting it had collapsed at Tarain." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Muhammad_bin_Bakhtiyar_Khalji", "label": "Wikipedia: Muhammad bin Bakhtiyar Khalji", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Minhaj-i-Siraj, Tabaqat-i-Nasiri (c. 1260; trans. H.G. Raverty, 1881)", "type": "primary" },
+        { "label": "D.R. Patil, The Antiquarian Remains in Bihar (1963), ch. on Nalanda", "type": "scholarly" },
+        { "label": "Arthur McKeown, Guardian of a Dying Flame: Sariputra (c. 1335–1426) and the End of Late Indian Buddhism (2019)", "type": "scholarly" }
+      ],
+      "verified": true
+    }
+  ]
+}

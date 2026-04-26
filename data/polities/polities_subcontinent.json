@@ -76,6 +76,103 @@
     },
 
     {
+      "id": "harsha-empire",
+      "name": "Harsha's Empire",
+      "tooltip": "Harsha's Empire — 606–647 CE, Pushyabhuti dynasty from Kanauj",
+      "summary": "Harsha's 41-year empire from Kanauj — the last unified north Indian regime before the post-Gupta fragmentation hardened into the Tripartite Struggle.",
+      "framing": "Harsha's Pushyabhuti-dynasty empire (606–647 CE) is the most successful single attempt at re-unifying north India between the Gupta collapse (c. 550) and the Delhi Sultanate (1206) — six and a half centuries during which no other regime achieved comparable territorial scope. The 41-year reign produced extensive court documentation (Bana's Harshacharita, Xuanzang's Records, Harsha's own three plays) that makes this among the best-documented early-medieval Indian regimes. The empire reached from Punjab to Bengal and extended south to the Narmada (where Pulakeshin II checked it). Its institutional fragility — entirely held together by Harsha's personal authority — produced the immediate post-647 fragmentation and the Tripartite Struggle for Kanauj that defined the next two centuries.",
+      "date_span": { "start": "606", "end": "647", "display": "606–647 CE (Harsha's reign; empire fragmented after his death)" },
+      "era_span": ["early-medieval"],
+      "category": "empire",
+      "capitals": [
+        { "place": "kanauj", "from_year": 606, "to_year": 647 }
+      ],
+      "rulers": [
+        "Rajyavardhana (605–606, briefly; murdered)",
+        "Harsha (606–647, last great north Indian emperor before Sultanate)"
+      ],
+      "events": [
+        "harsha-of-kanauj-606",
+        "pulakeshin-defeats-harsha-618",
+        "xuanzang-at-nalanda-637"
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Harsha", "label": "Wikipedia: Harsha", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "D. Devahuti, Harsha: A Political Study (3rd ed., 1998)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "pala-empire",
+      "name": "Pala Empire",
+      "tooltip": "Pala Empire — c. 750–1161 CE, Buddhist patron dynasty of Bengal-Bihar",
+      "summary": "Bengal-Bihar dynasty founded by elective Gopala c. 750; last major Indian patron of Mahayana and Vajrayana Buddhism; ended by the Senas c. 1161.",
+      "framing": "The Pala Empire ruled Bengal-Bihar for over four centuries (c. 750–1161 CE) — among the longest continuous regional dynasties of early-medieval India. Its founder Gopala was elected by the Bengali nobility to end the post-Gupta matsya-nyaya chaos, an unusual non-dynastic founding legitimacy. The Palas were the last major Indian patrons of institutional Mahayana and Vajrayana Buddhism — Vikramashila, Somapura, Odantapuri, Jagaddala universities all flourished under successive Pala emperors. The dynasty contested Kanauj in the Tripartite Struggle (Dharmapala, Devapala) but consolidated its power in the eastern Gangetic plain rather than pursuing the symbolic-imperial centre. Atisha Dipankara left Vikramashila for Tibet in 1042 — taking the Pala-patronised Sanskrit Buddhist scholarship that became the foundation of Tibetan Buddhism. The Senas (Lakshmana Sena's dynasty) displaced the Palas c. 1161; Bakhtiyar Khilji's 1193 sack of the universities and his 1204 conquest of the Senas ended the eastern Indian Buddhist tradition the Palas had patronised.",
+      "date_span": { "start": "750", "end": "1161", "display": "c. 750 (Gopala) – c. 1161 (Sena displacement)" },
+      "era_span": ["early-medieval"],
+      "category": "empire",
+      "capitals": [
+        { "place": "pataliputra", "from_year": 750, "to_year": 1161 }
+      ],
+      "rulers": [
+        "Gopala (c. 750–770; elected founder)",
+        "Dharmapala (c. 770–810)",
+        "Devapala (c. 810–850; empire's territorial peak)",
+        "Mahipala I (c. 988–1038; revival under late dynasty)",
+        "Ramapala (c. 1082–1124; last great Pala)",
+        "Madanapala (c. 1144–1162; last)"
+      ],
+      "events": [
+        "pala-dynasty-founded-750",
+        "tripartite-struggle-c-800",
+        "bakhtiyar-khilji-nalanda-1193"
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Pala_Empire", "label": "Wikipedia: Pala Empire", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "R.C. Majumdar (ed.), The History of Bengal, vol. I (1943)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "chola-empire",
+      "name": "Imperial Chola Empire",
+      "tooltip": "Imperial Cholas — 985–1279 CE, dominant South Indian regime",
+      "summary": "Vijayalaya's 9th-c. revival to Rajaraja-Rajendra peak to Pandya defeat 1279 — South India's longest imperial regime and its only major naval projection.",
+      "framing": "The Imperial Chola period (985–1279 CE) — counted from Rajaraja I's accession — is South India's longest unified imperial regime. Vijayalaya Chola (r. c. 848) had revived the older Sangam-age Chola line in the 9th century; under Rajaraja I and Rajendra I the empire absorbed most of South India, the Sri Lankan north, and (briefly) Srivijaya in Sumatra. The Brihadishvara temple at Tanjore (1010) and the Gangaikonda Cholapuram complex (after 1025) are the architectural monuments. The Chola institutional inheritance includes the most extensively documented administrative system of any pre-Mughal Indian dynasty (the Tamil land-grant inscriptions number in the thousands), the Chola bronze sculpture tradition, and the merchant-guild networks (Ainnurruvar, Manigramam) that sustained the Bay of Bengal trading economy through the 13th century. The dynasty declined under Pandya and Hoysala pressure across the 13th century; the last Chola, Rajendra III, fell to the Pandyas c. 1279.",
+      "date_span": { "start": "985", "end": "1279", "display": "985 (Rajaraja's accession) – c. 1279 (last Chola Rajendra III)" },
+      "era_span": ["early-medieval", "sultanate"],
+      "category": "empire",
+      "capitals": [
+        { "place": "tanjore", "from_year": 985, "to_year": 1279 }
+      ],
+      "rulers": [
+        "Vijayalaya Chola (c. 848–871; revived dynasty)",
+        "Rajaraja I (985–1014; Brihadishvara consecrated)",
+        "Rajendra I (1014–1044; Srivijaya expedition)",
+        "Kulottunga I (1070–1122)",
+        "Rajendra III (last, c. 1246–1279)"
+      ],
+      "events": [
+        "rajaraja-brihadishvara-1010",
+        "rajendra-chola-naval-1025"
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Chola_dynasty", "label": "Wikipedia: Chola dynasty", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "K.A. Nilakanta Sastri, The Cōḷas (1935; rev. 1955)", "type": "scholarly" },
+        { "label": "Y. Subbarayalu, South India under the Cholas (2012)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
       "id": "delhi-sultanate",
       "name": "Delhi Sultanate",
       "tooltip": "Delhi Sultanate — 1206–1526, five Turkic-Afghan dynasties",
