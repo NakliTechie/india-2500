@@ -242,14 +242,20 @@ $("#coda").addEventListener("input", () => {
 });
 
 /* ---------- Load events corpus from the live data/ files ---------- */
-const CORPUS_FILES = ["events_independence.json", "events_mughal.json", "events_sur.json"];
+/* Slice filenames come from data/manifest.json (emitted by build_html.py) so
+   new events_*.json files are picked up automatically. */
 let corpus = [];
 let corpusById = new Map();
 
 async function loadCorpus() {
   try {
+    const manifest = await fetch("../data/manifest.json", {cache: "no-store"}).then(r => {
+      if (!r.ok) throw new Error(`manifest fetch → ${r.status}`);
+      return r.json();
+    });
+    const files = manifest.events_files || [];
     const docs = await Promise.all(
-      CORPUS_FILES.map(f =>
+      files.map(f =>
         fetch(`../data/events/${f}`).then(r => r.ok ? r.json() : null).catch(() => null)
       )
     );

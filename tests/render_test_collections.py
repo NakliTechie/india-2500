@@ -144,6 +144,53 @@ with sync_playwright() as p:
           after_clear["ac"] is None and after_clear["in"] is False,
           f"state={after_clear}")
 
+    # 10. Per-collection smoke tests — every named collection in the corpus
+    #     opens, has ≥3 effective members (collections below threshold are
+    #     deliberate stubs and exempt), every member id resolves to a real
+    #     event, and the reader's title matches the collection's title field.
+    #     This is the regression net for content authors: the moment a new
+    #     collection is added, this loop will exercise it.
+    smoke = page.evaluate("""() => {
+      const out = [];
+      for (const c of COLLECTIONS) {
+        activateCollection(c.id);
+        const memberIds = resolveCollectionMembers(c);
+        const titleEl = document.querySelector('.collection-reader h3');
+        out.push({
+          id: c.id,
+          title: c.title,
+          renderedTitle: titleEl ? titleEl.textContent : null,
+          memberCount: memberIds.length,
+          allResolve: memberIds.every(id => eventById.has(id)),
+        });
+      }
+      clearCollection();
+      return out;
+    }""")
+    for c in smoke:
+        check(f"Collection '{c['id']}' renders + members resolve",
+              c["renderedTitle"] == c["title"] and c["allResolve"] and c["memberCount"] >= 1,
+              f"renderedTitle={c['renderedTitle']!r} title={c['title']!r} members={c['memberCount']} allResolve={c['allResolve']}")
+
+    # 11. The two highest-stakes content collections are non-trivial in size —
+    #     the rebellions collection is the corpus's argument that "1857 was
+    #     not the first"; the memoirs collection is the long-form first-person
+    #     anchor. Asserting member-count floors guards against regression
+    #     where a tag rename or filter change silently empties them.
+    sizes = page.evaluate("""() => {
+      const out = {};
+      for (const c of COLLECTIONS) {
+        out[c.id] = resolveCollectionMembers(c).length;
+      }
+      return out;
+    }""")
+    check("Rebellions collection has ≥10 members",
+          sizes.get("rebellions-before-and-beyond-1857", 0) >= 10,
+          f"got {sizes.get('rebellions-before-and-beyond-1857', 0)}")
+    check("Memoirs collection has ≥10 members",
+          sizes.get("first-person-works-of-the-subcontinent", 0) >= 10,
+          f"got {sizes.get('first-person-works-of-the-subcontinent', 0)}")
+
     page.screenshot(path=str(ARTIFACTS / "render_test_collections.png"), full_page=True)
     browser.close()
 
