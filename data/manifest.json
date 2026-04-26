@@ -4,9 +4,14 @@
     "events_bengal.json",
     "events_central_asia.json",
     "events_chotanagpur.json",
+    "events_constitutional.json",
     "events_early-medieval.json",
+    "events_eic-ascent.json",
+    "events_european-arrival.json",
+    "events_famines-colonial.json",
     "events_gupta.json",
     "events_independence.json",
+    "events_land-settlements.json",
     "events_mahajanapada.json",
     "events_maurya.json",
     "events_mughal.json",
@@ -18,13 +23,15 @@
     "events_republic.json",
     "events_south_india.json",
     "events_sultanate.json",
-    "events_sur.json"
+    "events_sur.json",
+    "events_wars-of-empire.json"
   ],
   "threads_files": [
     "threads_independence.json",
     "threads_mughal.json"
   ],
   "people_files": [
+    "people_bengal-renaissance.json",
     "people_freedom-fighters.json",
     "people_mughal-emperors.json",
     "people_reformers-and-thinkers.json",

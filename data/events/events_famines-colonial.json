@@ -1,0 +1,145 @@
+{
+  "campaign": "famines-colonial",
+  "scope": "Famines under EIC and Crown rule — the Great Bengal Famine of 1770, the Madras-Deccan famine of 1876–78, the Indian famine of 1899–1900, the Bengal famine of 1943. Subcontinental famines were endemic before 1700; this slice covers the colonial-era set whose mortality and policy framing remain politically live.",
+  "updated": "2026-04-26",
+  "events": [
+    {
+      "id": "great-bengal-famine-1770",
+      "title": "Great Bengal Famine",
+      "tooltip": "Great Bengal Famine, 1769–1770 — ~10 million dead, a third of Bengal",
+      "summary": "Drought-triggered famine across Bengal, Bihar, Orissa killed an estimated 10 million — a third of Bengal's population. EIC continued revenue collection in full.",
+      "detail": "The 1769–70 Bengal famine followed the 1768 monsoon failure and the catastrophically poor 1769 harvest. The mortality estimate of ~10 million (about one-third of the population of the affected area) is a contemporary EIC estimate that modern demographers (P.J. Marshall, others) treat as broadly credible — it would be one of the largest mortality events in subcontinental history. The famine fell five years after the Treaty of Allahabad (1765) had given the EIC the diwani of Bengal, Bihar, and Orissa. Warren Hastings (Governor of Bengal from 1772) noted the EIC continued land-revenue collection at full rates through the famine, and that revenue collection actually rose 5–10 percent in 1771 — partly because surviving cultivators absorbed the dues of the dead. The famine and its administrative response triggered the first British political controversy about EIC governance — the parliamentary debate culminating in the Regulating Act 1773, which created the Governor-General office and the Calcutta Supreme Court. Edmund Burke's 1788–95 impeachment of Hastings drew on the Bengal famine evidence. The famine is the canonical case in the long historiographical argument about colonial responsibility for famine mortality.",
+      "date": {
+        "start": "1769-01-01",
+        "end":   "1770-12-31",
+        "precision": "year",
+        "approximate": true,
+        "display": "1769–1770"
+      },
+      "location": {
+        "type": "city",
+        "name": "Bengal, Bihar, Orissa (epicentre Murshidabad)",
+        "region": "Bengal Presidency, EIC",
+        "country": "IN",
+        "points": [{ "lat": 24.1820, "lon": 88.2680, "name": "Murshidabad (epicentre)" }]
+      },
+      "era": "colonial",
+      "category": ["economic", "colonial-administration"],
+      "figures": ["Warren Hastings", "Robert Clive", "Edmund Burke"],
+      "caused_by": [
+        { "id": "battle-of-buxar-1764", "gloss": "Buxar 1764 and the Treaty of Allahabad 1765 made the EIC the revenue-collecting authority over Bengal; the 1770 famine was the first crisis of that fiscal-political settlement, and the EIC's response — full revenue collection through mass mortality — defined the early Company state's relationship to peasant survival." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Great_Bengal_famine_of_1770", "label": "Wikipedia: Great Bengal famine of 1770", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "P.J. Marshall, Bengal: The British Bridgehead (1987)", "type": "scholarly" },
+        { "label": "Warren Hastings, Letters to Court of Directors (1772, in Bengal Public Consultations)", "type": "primary" },
+        { "label": "Cornelius Walford, The Famines of the World (1879)", "type": "primary" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "great-madras-famine-1876-1878",
+      "title": "Great Madras (Deccan) Famine",
+      "tooltip": "Great Madras Famine, 1876–78 — ~5.5 million dead under Lord Lytton",
+      "summary": "Two-year drought across Madras, Bombay, Hyderabad, Mysore — ~5.5 million dead. Lytton continued grain exports to Britain; the Famine Code 1880 followed.",
+      "detail": "The 1876–78 famine across the Madras Presidency, the Deccan, Mysore, and parts of Bombay was the deadliest single subcontinental famine of the colonial period. Two consecutive monsoon failures produced regional drought; mortality estimates range from 5.5 million (most-cited) to 8 million. Lord Lytton (Viceroy 1876–80) implemented a Free Trade-orthodox policy: grain exports to Britain continued (record wheat exports of 6.4 million quarters in 1877–78); famine relief through the Anti-Charitable Contributions Act suppressed private relief efforts; the test-work principle (relief only to those performing hard labour at survival-floor wages) excluded the elderly and dependents. The Madras Government's relief commissioner Richard Temple set the Madras-Lyttonian ration at 16 ounces of grain per day (~1,600 kcal) for a labouring man. The famine triggered the Indian Famine Commission (1878–80) under Sir Richard Strachey, whose Report (1880) produced the Indian Famine Codes — provincial relief manuals that, however imperfectly, institutionalised the principle of state responsibility for famine relief. Mike Davis's Late Victorian Holocausts (2000) frames the 1876–78 famine as a colonial-policy choice rather than a natural disaster; the framing is the standard scholarly position.",
+      "date": {
+        "start": "1876-08-01",
+        "end":   "1878-12-31",
+        "precision": "month",
+        "approximate": true,
+        "display": "August 1876 – December 1878"
+      },
+      "location": {
+        "type": "city",
+        "name": "Madras, Deccan, Mysore (epicentre Bellary)",
+        "region": "Madras Presidency / Hyderabad / Mysore",
+        "country": "IN",
+        "points": [{ "lat": 15.1394, "lon": 76.9214, "name": "Bellary (epicentre)" }]
+      },
+      "era": "colonial",
+      "category": ["economic", "colonial-administration"],
+      "figures": ["Lord Lytton", "Richard Temple", "Richard Strachey", "William Wedderburn"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Great_Famine_of_1876%E2%80%931878", "label": "Wikipedia: Great Famine of 1876–78", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Mike Davis, Late Victorian Holocausts: El Niño Famines and the Making of the Third World (2001)", "type": "scholarly" },
+        { "label": "Indian Famine Commission Report (1880; Richard Strachey)", "type": "primary" },
+        { "label": "William Digby, The Famine Campaign in Southern India 1876–78 (1878)", "type": "primary" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "indian-famine-1899-1900",
+      "title": "Indian Famine of 1899–1900",
+      "tooltip": "Indian Famine 1899–1900 — ~1 million dead under Lord Curzon",
+      "summary": "Drought across Central Provinces, Berar, Bombay, Hyderabad. Curzon applied the Famine Codes — mortality lower than 1876–78 but still ~1 million.",
+      "detail": "The 1899–1900 famine followed the 1899 monsoon failure across an arc from the Punjab through Rajputana, the Central Provinces, Berar, and Bombay (the most affected). The areas covered overlapped substantially with the 1896–97 famine, leaving cultivator and pastoralist populations doubly hit. Mortality estimates: 1 million (cautious) to 4.5 million (Mike Davis, including the 1896–97 episode). Lord Curzon (Viceroy 1899–1905) ordered relief operations under the post-1880 Famine Codes — at peak ~6.5 million on relief works in summer 1900 — but the relief ration remained at the Lyttonian standard and exclusionary. Plague was the second-order killer: the bubonic plague pandemic that had reached Bombay 1896 spread through the famine-weakened population; the plague-and-famine combined mortality in Berar alone reached an estimated half-million. The famine prompted the second Famine Commission (1901, Sir Anthony MacDonnell) — the codes were tightened, but the underlying question of grain exports during famine remained unaddressed. The 1899–1900 famine was the last of the catastrophic late-Victorian famines; the next episode, Bengal 1943, would have a different proximate cause.",
+      "date": {
+        "start": "1899-08-01",
+        "end":   "1900-12-31",
+        "precision": "month",
+        "approximate": true,
+        "display": "August 1899 – December 1900"
+      },
+      "location": {
+        "type": "city",
+        "name": "Central Provinces, Berar, Bombay (epicentre Nagpur)",
+        "region": "Central Provinces / Berar / Bombay Presidency",
+        "country": "IN",
+        "points": [{ "lat": 21.1458, "lon": 79.0882, "name": "Nagpur (CP epicentre)" }]
+      },
+      "era": "colonial",
+      "category": ["economic", "colonial-administration"],
+      "figures": ["Lord Curzon", "Anthony MacDonnell", "Romesh Chunder Dutt"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Indian_famine_of_1899%E2%80%931900", "label": "Wikipedia: Indian famine of 1899–1900", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Indian Famine Commission Report (1901; Anthony MacDonnell)", "type": "primary" },
+        { "label": "Romesh Chunder Dutt, Open Letters to Lord Curzon (1900)", "type": "primary" },
+        { "label": "Mike Davis, Late Victorian Holocausts (2001)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "bengal-famine-1943",
+      "title": "Bengal Famine 1943",
+      "tooltip": "Bengal Famine 1943 — ~3 million dead; wartime rice diversion under Linlithgow",
+      "summary": "Wartime rice diversion, denial policy, cyclone-damaged crop, Churchill's refusal of Australian wheat shipments. ~3 million dead in eastern Bengal.",
+      "detail": "The Bengal famine of 1943 — third of the post-1857 catastrophic famines — killed an estimated 2.1–3 million in rural eastern Bengal. The proximate causes were three: (i) the October 1942 Midnapore cyclone destroyed the winter rice crop; (ii) the Burma fall (March 1942) cut off rice imports from Burma which had supplied 15% of Bengal's normal consumption; (iii) the Denial Policy — the British wartime removal of boats and stockpiled rice from coastal Bengal to prevent their use by an anticipated Japanese invasion — eliminated transport and reserves. The famine deepened through summer 1943; mortality peaked September–October 1943 in Midnapore, Tipperah, Noakhali, Bakharganj. Churchill's War Cabinet refused multiple shipping requests for Australian and North American wheat (correspondence: 'starvation of anyhow underfed Bengalis is less serious than that of sturdy Greeks'); famine mortality continued into 1944. Wavell (Viceroy from October 1943) unilaterally diverted Army troop-rations to relief and broke the back of the mortality. Amartya Sen's Poverty and Famines (1981) — drawing principally on the 1943 Bengal famine — argued famines under colonialism were policy-of-distribution failures, not absolute-shortage failures; the entitlements framework that resulted reshaped famine economics. The Famine Inquiry Commission Report (1945; Sir John Woodhead) acknowledged administrative failure but stopped short of attributing the famine to British policy.",
+      "date": {
+        "start": "1943-01-01",
+        "end":   "1944-06-30",
+        "precision": "month",
+        "approximate": true,
+        "display": "January 1943 – mid-1944"
+      },
+      "location": {
+        "type": "city",
+        "name": "Eastern Bengal (epicentre Midnapore-Tipperah-Noakhali)",
+        "region": "Bengal Presidency, British India",
+        "country": "IN",
+        "points": [{ "lat": 22.4283, "lon": 87.3199, "name": "Midnapore (epicentre)" }]
+      },
+      "era": "colonial",
+      "category": ["economic", "colonial-administration", "military"],
+      "figures": ["Lord Linlithgow", "Lord Wavell", "Winston Churchill", "Leopold Amery", "John Herbert Bengal Governor", "Amartya Sen"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Bengal_famine_of_1943", "label": "Wikipedia: Bengal famine of 1943", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Madhusree Mukerjee, Churchill's Secret War: The British Empire and the Ravaging of India during World War II (2010)", "type": "scholarly" },
+        { "label": "Amartya Sen, Poverty and Famines: An Essay on Entitlement and Deprivation (1981)", "type": "scholarly" },
+        { "label": "Famine Inquiry Commission Report on Bengal (1945; Sir John Woodhead)", "type": "primary" }
+      ],
+      "verified": true
+    }
+  ]
+}

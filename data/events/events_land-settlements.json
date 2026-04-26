@@ -1,0 +1,72 @@
+{
+  "campaign": "land-settlements",
+  "scope": "The three colonial land-revenue systems — Permanent Settlement Bengal 1793 (covered in events_eic-ascent), Ryotwari Madras 1820 under Munro, Mahalwari North-Western Provinces 1822 under Holt Mackenzie — each defining a distinct rural class structure for a third of British India.",
+  "updated": "2026-04-26",
+  "events": [
+    {
+      "id": "ryotwari-madras-1820",
+      "title": "Ryotwari Settlement of Madras",
+      "tooltip": "Ryotwari Settlement of Madras Presidency under Thomas Munro, 1820",
+      "summary": "Munro fixed Madras revenue directly with the cultivator (ryot) — no zamindari intermediary; periodic resettlement; rates at half to two-thirds of net produce.",
+      "detail": "Sir Thomas Munro, Governor of Madras 1820–27, built on his Baramahal experiments of the 1790s and the Ceded Districts settlement of 1801–07 to systematise the Ryotwari principle across the Madras Presidency from 1820. Three distinguishing features: (i) The settlement was made directly with each ryot (peasant cultivator), recognising him as the proprietor of his holding — no zamindari intermediary. (ii) Revenue was assessed per field on a thirty-year cycle (later twenty), based on a survey of soil quality and net produce; the assessment was nominally one-half of net produce but ran to two-thirds in many districts. (iii) Defaulting cultivators forfeited the land to the state rather than to a zamindar. The system covered Madras Presidency (later, after 1835, Bombay Presidency under R.K. Pringle and Goldsmid) — about a third of British India. Distinct from Bengal Permanent Settlement: revenue was not fixed in perpetuity; the cultivator bore the assessment risk directly; small-holding rural society was preserved. Distinct from Mahalwari: the unit of assessment was the individual field, not the village. Munro's commitment to peasant proprietorship was ideological (the Scottish Enlightenment-influenced Madras school) as well as practical; the Ryotwari areas had higher per-acre revenue extraction than Permanent Settlement Bengal but more responsive crisis-relief at the cultivator level.",
+      "date": {
+        "start": "1820-06-01",
+        "end":   "1827-12-31",
+        "precision": "month",
+        "approximate": true,
+        "display": "Munro's Madras governorship 1820–27"
+      },
+      "location": {
+        "type": "city",
+        "name": "Madras (Fort St George)",
+        "region": "Madras Presidency",
+        "country": "IN",
+        "points": [{ "lat": 13.0827, "lon": 80.2707, "name": "Madras" }]
+      },
+      "era": "colonial",
+      "category": ["economic", "colonial-administration", "reform"],
+      "figures": ["Thomas Munro", "Alexander Read", "John Sullivan"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Ryotwari", "label": "Wikipedia: Ryotwari", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Burton Stein, Thomas Munro: The Origins of the Colonial State and his Vision of Empire (1989)", "type": "scholarly" },
+        { "label": "Nilmani Mukherjee, The Ryotwari System in Madras 1792–1827 (1962)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "mahalwari-nwp-1822",
+      "title": "Mahalwari Settlement of the North-Western Provinces",
+      "tooltip": "Mahalwari Settlement under Holt Mackenzie's Regulation VII, 1822",
+      "summary": "Holt Mackenzie's Regulation VII fixed revenue at the village (mahal) under joint co-sharer responsibility — third colonial land system, Doab to Punjab.",
+      "detail": "Regulation VII of 1822, drafted by Holt Mackenzie as Secretary to the Board of Revenue, established the Mahalwari settlement principle for the North-Western Provinces (the Doab and adjacent Awadh-frontier districts ceded to the EIC by Awadh in 1801–02 and the Maratha cessions of 1803). The settlement was made with the entire village (mahal) as the co-responsible unit — the village proprietary body (the bhaichara or the recognised lambardars) signed a joint settlement, with internal allocation and recovery left to village internal arrangement. The principle drew on the Mughal-era jamabandi village settlements that had survived in the Doab. Mahalwari was extended by the 1833 Regulation IX (with a thirty-year resettlement cycle) and applied to the Punjab after 1849, parts of the Central Provinces, and Awadh after 1859. The system's distinguishing claim was that it preserved customary village structures — the village panchayat-and-co-sharer body — that Permanent Settlement had bypassed and Ryotwari had atomised. In practice the settlement assessments were demanding (60% of rental in early settlements, eased to 50% by 1855), village joint responsibility produced cascading defaults during downturns, and the customary structures eroded. The Mahalwari areas became the agrarian heart of the 1857 rebellion and, later, of the Khilafat–Non-Cooperation peasant mobilisations of 1920–22.",
+      "date": {
+        "start": "1822-09-01",
+        "end":   "1822-09-30",
+        "precision": "month",
+        "approximate": true,
+        "display": "September 1822 (Regulation VII)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Allahabad / Doab",
+        "region": "North-Western Provinces (Ceded and Conquered Provinces)",
+        "country": "IN",
+        "points": [{ "lat": 25.4358, "lon": 81.8463, "name": "Allahabad" }]
+      },
+      "era": "colonial",
+      "category": ["economic", "colonial-administration", "reform"],
+      "figures": ["Holt Mackenzie", "James Thomason", "Robert Merttins Bird"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Mahalwari", "label": "Wikipedia: Mahalwari", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Eric Stokes, The Peasant and the Raj (1978)", "type": "scholarly" },
+        { "label": "Asiya Siddiqi, Agrarian Change in a Northern Indian State 1819–1833 (1973)", "type": "scholarly" }
+      ],
+      "verified": true
+    }
+  ]
+}

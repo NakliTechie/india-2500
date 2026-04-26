@@ -1,0 +1,226 @@
+{
+  "campaign": "constitutional",
+  "scope": "The constitutional path from Crown takeover 1858 to the Republic — Government of India Acts of 1858, 1919, 1935; the Indian Councils, Morley-Minto, Montagu-Chelmsford reform sequence; Cabinet Mission 1946.",
+  "updated": "2026-04-26",
+  "events": [
+    {
+      "id": "crown-takeover-1858",
+      "title": "Crown takeover — Government of India Act 1858 and Queen's Proclamation",
+      "tooltip": "Government of India Act 1858; Queen's Proclamation, 1 November 1858",
+      "summary": "EIC abolished after 1857; the Crown assumed direct rule. Queen Victoria's Proclamation promised religious non-interference and respect for princely treaties.",
+      "detail": "The 1857 Indian Rebellion had exposed the Company's loss of control; the British Parliament's response was the Government of India Act 1858, passed 2 August 1858. The Act abolished the East India Company, transferred all its territory and treaties to the Crown, established the post of Secretary of State for India in the Cabinet, advised by a 15-member Council of India, and renamed the Governor-General as Viceroy reporting to the Secretary of State. Queen Victoria's Proclamation of 1 November 1858, read at Allahabad by Lord Canning, set out the founding principles of the Raj: religious non-interference ('we disclaim alike the right and the desire to impose Our convictions on any of Our subjects'); the abandonment of the Doctrine of Lapse (princely treaties to be 'scrupulously maintained'); equal access to government employment regardless of race, religion, or birth; and an amnesty to all rebels not directly involved in murdering British civilians. The promises were honoured selectively: the Indian Civil Service remained almost entirely European until the 1900s; princely paramountcy was reasserted on Crown terms; the Lapse retraction was real and the princely states stabilised. The constitutional architecture (Secretary of State, Viceroy-in-Council, the central legislative council added 1861) framed Indian governance until 1947.",
+      "date": {
+        "start": "1858-08-02",
+        "end":   "1858-11-01",
+        "precision": "day",
+        "approximate": false,
+        "display": "Act 2 Aug 1858; Proclamation 1 Nov 1858"
+      },
+      "location": {
+        "type": "city",
+        "name": "London (Act); Allahabad (Proclamation)",
+        "region": "EIC India → British India",
+        "country": "IN",
+        "points": [{ "lat": 25.4358, "lon": 81.8463, "name": "Allahabad (Proclamation)" }]
+      },
+      "era": "colonial",
+      "category": ["political", "colonial-administration", "reform"],
+      "figures": ["Queen Victoria", "Lord Canning", "Lord Stanley", "Benjamin Disraeli", "Lord Palmerston"],
+      "caused_by": [
+        { "id": "indian-rebellion-1857", "gloss": "1857 was the proximate cause: Parliament concluded the EIC's commercial-cum-sovereign hybrid model could not be trusted with imperial governance after the rebellion's near-collapse of EIC authority across north India. The Act was the constitutional consequence." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Government_of_India_Act_1858", "label": "Wikipedia: Government of India Act 1858", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Thomas R. Metcalf, The Aftermath of Revolt: India 1857–1870 (1964)", "type": "scholarly" },
+        { "label": "Government of India Act 1858 (21 & 22 Vict. c.106)", "type": "primary" },
+        { "label": "Queen's Proclamation 1858 (in C.H. Philips ed., Select Documents)", "type": "primary" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "indian-councils-act-1861",
+      "title": "Indian Councils Act 1861",
+      "tooltip": "Indian Councils Act 1861 — restored Indian opinion to Viceroy's Council",
+      "summary": "Restored Indian non-official members to the Viceroy's Legislative Council and decentralised legislation to the provinces — first reopening for Indian voice.",
+      "detail": "The Indian Councils Act 1861, drafted by Sir Charles Wood (Secretary of State) and Bartle Frere (Governor of Bombay), restructured the post-1858 administrative framework. Three measures had lasting consequence: (i) The Viceroy's Executive Council was expanded with additional non-official members for legislative business — including, for the first time since the 1830s, Indian appointees (Maharaja of Patiala, Raja of Banaras, Sir Dinkar Rao). (ii) Legislative authority was decentralised: provincial legislative councils were authorised for Bombay, Madras (1861), Bengal (1862), North-Western Provinces (1886) and beyond — the institutional ground on which provincial autonomy would later be built. (iii) The Viceroy received the power of issuing ordinances having the force of law in emergencies. The Indian membership was nominated and consultative — no electoral element until 1892. But the principle of Indian participation in colonial legislation, suspended since the 1830s charter renewals, returned with the Act and provided the constitutional platform on which Congress would, from 1885, demand expanded representation. The Indian Councils Act of 1892, then 1909 (Morley-Minto), then 1919 (Montagu-Chelmsford) progressively extended the principle.",
+      "date": {
+        "start": "1861-08-01",
+        "end":   "1861-08-01",
+        "precision": "month",
+        "approximate": true,
+        "display": "1 August 1861"
+      },
+      "location": {
+        "type": "city",
+        "name": "London (Westminster); Calcutta (implementation)",
+        "region": "British India",
+        "country": "IN",
+        "points": [{ "lat": 22.5726, "lon": 88.3639, "name": "Calcutta" }]
+      },
+      "era": "colonial",
+      "category": ["political", "colonial-administration", "reform"],
+      "figures": ["Sir Charles Wood", "Bartle Frere", "Lord Canning"],
+      "caused_by": [
+        { "id": "crown-takeover-1858", "gloss": "Crown takeover 1858 created the Viceroy-in-Council architecture; the Indian Councils Act 1861 added Indian and provincial layers to it — the first concession that the post-1857 governance settlement needed Indian voice, however circumscribed." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Indian_Councils_Act_1861", "label": "Wikipedia: Indian Councils Act 1861", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "S.R. Mehrotra, The Emergence of the Indian National Congress (1971)", "type": "scholarly" },
+        { "label": "Indian Councils Act 1861 (24 & 25 Vict. c.67)", "type": "primary" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "morley-minto-reforms-1909",
+      "title": "Morley-Minto Reforms — Indian Councils Act 1909",
+      "tooltip": "Morley-Minto Reforms, 25 May 1909 — separate electorates for Muslims",
+      "summary": "Indian Councils Act 1909 — indirect elections to the Imperial Legislative Council and separate electorates for Muslims; first constitutional communal vote.",
+      "detail": "Lord Morley (Liberal Secretary of State) and Lord Minto (Viceroy) negotiated the Indian Councils Act 1909 in response to Bengal partition agitation, swadeshi protest, and Tilak-wing nationalist pressure. The Act expanded the Imperial Legislative Council to 60 members and the provincial councils proportionally; introduced indirect elections by territorial constituencies and special-interest groups (landholders, universities, chambers of commerce); and crucially, in response to the Simla Deputation of 1 October 1906 led by the Aga Khan, established separate electorates for Muslims at the central and provincial levels. The All India Muslim League (founded December 1906 at Dacca) had pressed for separate electorates as protection against permanent Hindu majority; Morley accepted the principle on the calculation that it would dampen Hindu-Muslim joint mobilisation. The communal-electorate principle, once introduced, proved permanent — extended to Sikhs (1919), Christians, Anglo-Indians, and Europeans (1935), and ultimately the structural basis on which the Two-Nation Theory would be argued. Congress reluctantly accepted the 1909 settlement under Gokhale's leadership; Lala Lajpat Rai and Tilak opposed. The reforms gave Indians a consultative voice without yielding executive power — the Viceroy and his Executive Council remained accountable only to London.",
+      "date": {
+        "start": "1909-05-25",
+        "end":   "1909-05-25",
+        "precision": "day",
+        "approximate": false,
+        "display": "25 May 1909"
+      },
+      "location": {
+        "type": "city",
+        "name": "London (Act); Calcutta then Delhi (implementation)",
+        "region": "British India",
+        "country": "IN",
+        "points": [{ "lat": 28.6139, "lon": 77.2090, "name": "Imperial Legislative Council, Delhi" }]
+      },
+      "era": "colonial",
+      "category": ["political", "reform", "colonial-administration"],
+      "figures": ["John Morley", "Lord Minto", "Aga Khan III", "Gopal Krishna Gokhale", "Bal Gangadhar Tilak"],
+      "caused_by": [
+        { "id": "indian-councils-act-1861", "gloss": "The 1861 Act had introduced nominated Indian members to the Viceroy's Council; the Morley-Minto reforms added the electoral and communal layers. The progressive constitutional concession — with the consistent withholding of executive responsibility — was the pattern that ran from 1861 through 1919 and 1935 to its breakdown at the Cabinet Mission." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Indian_Councils_Act_1909", "label": "Wikipedia: Indian Councils Act 1909", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Stanley Wolpert, Morley and India 1906–1910 (1967)", "type": "scholarly" },
+        { "label": "Indian Councils Act 1909 (9 Edw.7 c.4)", "type": "primary" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "goi-act-1919-dyarchy",
+      "title": "Government of India Act 1919 — dyarchy",
+      "tooltip": "Government of India Act 1919; dyarchy in the provinces, 23 December 1919",
+      "summary": "Montagu-Chelmsford reforms introduced dyarchy in the provinces — 'transferred' subjects to Indian ministers, 'reserved' subjects to the Governor.",
+      "detail": "Edwin Montagu (Liberal Secretary of State) and Lord Chelmsford (Viceroy) had announced in August 1917 the new policy of 'progressive realisation of responsible government in India as an integral part of the British Empire'. Their joint Report (April 1918) and the resulting Government of India Act 1919 created a dual executive at the provincial level — the dyarchy formula. Provincial subjects were divided into 'transferred' (education, health, agriculture, local self-government — administered by Indian ministers responsible to elected provincial legislatures) and 'reserved' (police, finance, justice, revenue — administered by the Governor and his executive councillors, responsible to the Governor-General). At the centre, the Imperial Legislative Council became a bicameral Indian Legislature (Council of State, Legislative Assembly) with expanded electorates — but the Viceroy retained an absolute veto and certifying powers. The franchise was extended to ~5 million property-and-tax-qualified voters (under 3% of the population). The Act was framed by Congress as inadequate; Tilak and Annie Besant rejected it; Gandhi initially supported then rejected after the Rowlatt Acts and Jallianwala Bagh. The dyarchy worked imperfectly through the 1920s and was replaced by the more substantive provincial autonomy of the GOI Act 1935.",
+      "date": {
+        "start": "1919-12-23",
+        "end":   "1919-12-23",
+        "precision": "day",
+        "approximate": false,
+        "display": "23 December 1919"
+      },
+      "location": {
+        "type": "city",
+        "name": "London (Act); Delhi (implementation)",
+        "region": "British India",
+        "country": "IN",
+        "points": [{ "lat": 28.6139, "lon": 77.2090, "name": "Council of State, Delhi" }]
+      },
+      "era": "colonial",
+      "category": ["political", "reform", "colonial-administration"],
+      "figures": ["Edwin Montagu", "Lord Chelmsford", "Lionel Curtis", "Surendranath Banerjee"],
+      "caused_by": [
+        { "id": "morley-minto-reforms-1909", "gloss": "Morley-Minto had introduced the electoral and communal principles; Montagu-Chelmsford added responsible-government-at-the-provincial-level under the dyarchy formula. The 1917 Montagu Declaration's wartime promise of 'progressive realisation of responsible government' was the policy frame the Act partially delivered." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Government_of_India_Act_1919", "label": "Wikipedia: Government of India Act 1919", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Montagu-Chelmsford Report on Indian Constitutional Reforms (Cd 9109, 1918)", "type": "primary" },
+        { "label": "Government of India Act 1919 (9 & 10 Geo.5 c.101)", "type": "primary" },
+        { "label": "S.R. Mehrotra, India and the Commonwealth 1885–1929 (1965)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "goi-act-1935-federation",
+      "title": "Government of India Act 1935",
+      "tooltip": "Government of India Act 1935 — provincial autonomy, federation that never came",
+      "summary": "Most consequential pre-Independence constitutional Act — provincial autonomy from 1937; All-India Federation stillborn. Drafted much of the 1950 Constitution.",
+      "detail": "The Government of India Act 1935 — drafted on the recommendations of the Simon Commission (1927), the Round Table Conferences (1930–32), and the Joint Parliamentary Committee Report (1934) — was the longest single Act ever passed by the Westminster Parliament (321 sections, 10 schedules). Its three principal innovations: (i) Provincial autonomy: the dyarchy was abolished; provincial governments became fully responsible to elected provincial legislatures over all subjects (governors retained reserve powers but used them sparingly). The 1937 provincial elections under the Act gave Congress majorities in 7 of 11 provinces; Congress ministries took office April 1937 and resigned October 1939 over Linlithgow's unilateral war declaration. (ii) An All-India Federation: the Act provided for a federation including British India provinces and acceding princely states. The federation never came into being — princely accession remained below the threshold by September 1939 when the war suspended further consideration. (iii) Burma was separated from India as a distinct colony (1937). Critically, the Act's federal scheme, the division of legislative subjects (Federal, Provincial, Concurrent Lists), and much of its constitutional architecture were preserved by the Constituent Assembly and integrated into the Constitution of India 1950 — the GOI Act 1935 is the single largest source of the Indian Constitution's provisions.",
+      "date": {
+        "start": "1935-08-02",
+        "end":   "1937-04-01",
+        "precision": "day",
+        "approximate": false,
+        "display": "Act 2 Aug 1935; provincial autonomy from 1 April 1937"
+      },
+      "location": {
+        "type": "city",
+        "name": "London (Act); New Delhi (implementation)",
+        "region": "British India",
+        "country": "IN",
+        "points": [{ "lat": 28.6139, "lon": 77.2090, "name": "New Delhi" }]
+      },
+      "era": "colonial",
+      "category": ["political", "reform", "colonial-administration"],
+      "figures": ["Samuel Hoare", "Stanley Baldwin", "Lord Linlithgow", "Tej Bahadur Sapru", "Muhammad Ali Jinnah"],
+      "caused_by": [
+        { "id": "round-table-conferences-1930-1932", "gloss": "The three Round Table Conferences worked through the federal scheme that the Joint Parliamentary Committee then drafted; the Act 1935 was the legislative output of that long four-year constitutional negotiation. The federal compromise the Conferences could not finalise — princely accession terms — became the Act's main built-in failure." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Government_of_India_Act_1935", "label": "Wikipedia: Government of India Act 1935", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "R.J. Moore, The Crisis of Indian Unity 1917–1940 (1974)", "type": "scholarly" },
+        { "label": "Government of India Act 1935 (25 & 26 Geo.5 c.42)", "type": "primary" },
+        { "label": "Joint Parliamentary Committee Report on Indian Constitutional Reform (1934)", "type": "primary" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "cabinet-mission-1946",
+      "title": "Cabinet Mission Plan",
+      "tooltip": "Cabinet Mission Plan, 16 May 1946 — last alternative to partition",
+      "summary": "Three-tier confederal scheme accepted by Congress and League with conflicting reservations — the last avoided-partition framework, collapsed by July 1946.",
+      "detail": "The Attlee Labour government's Cabinet Mission to India (Pethick-Lawrence as Secretary of State, Stafford Cripps, A.V. Alexander) arrived 23 March 1946 to negotiate a transfer of power short of partition. The Mission Plan of 16 May 1946 proposed: (i) a Union of India dealing with three subjects (defence, foreign affairs, communications); (ii) provinces grouped into three sections — Section A (Hindu-majority provinces), Section B (Muslim-majority north-west), Section C (Muslim-majority north-east plus Assam); each Section to draft its own group constitution; (iii) provinces free after ten years to opt out of their groups. The Plan was the last constitutional alternative to partition. Congress accepted with the interpretation that grouping was optional for provinces; the League accepted with the opposite interpretation that grouping was compulsory. Nehru's 10 July 1946 press conference at Bombay — repudiating the binding character of grouping and asserting the Constituent Assembly's full sovereignty — was the moment the League read as Congress walking away from the Plan. Jinnah withdrew League acceptance on 29 July; called Direct Action Day for 16 August. The Great Calcutta Killings (16–19 August 1946, ~4,000 dead) and the spiral that followed made partition the operational option. The Cabinet Mission Plan's failure is the standard counterfactual benchmark of the partition question.",
+      "date": {
+        "start": "1946-03-23",
+        "end":   "1946-07-29",
+        "precision": "day",
+        "approximate": false,
+        "display": "Plan 16 May 1946; League withdrawal 29 July 1946"
+      },
+      "location": {
+        "type": "city",
+        "name": "New Delhi (Cabinet Mission); Bombay (Nehru press conf.)",
+        "region": "British India",
+        "country": "IN",
+        "points": [{ "lat": 28.6139, "lon": 77.2090, "name": "New Delhi" }]
+      },
+      "era": "colonial",
+      "category": ["political", "colonial-administration"],
+      "figures": ["Pethick-Lawrence", "Stafford Cripps", "A.V. Alexander", "Jawaharlal Nehru", "Muhammad Ali Jinnah", "Maulana Azad", "Sardar Patel"],
+      "caused_by": [
+        { "id": "goi-act-1935-federation", "gloss": "The 1935 Act's never-realised All-India Federation left the centre-states constitutional question unresolved; the Cabinet Mission Plan's three-tier confederation was the late attempt to revive a federal frame on terms both Congress and League could live with. The same federal compromise that failed in 1939 failed again in 1946." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/1946_Cabinet_Mission_to_India", "label": "Wikipedia: Cabinet Mission to India", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Maulana Abul Kalam Azad, India Wins Freedom (1959), chs. on the Cabinet Mission", "type": "primary" },
+        { "label": "Ayesha Jalal, The Sole Spokesman: Jinnah, the Muslim League and the Demand for Pakistan (1985)", "type": "scholarly" },
+        { "label": "R.J. Moore, Escape from Empire: The Attlee Government and the Indian Problem (1983)", "type": "scholarly" }
+      ],
+      "verified": true
+    }
+  ]
+}

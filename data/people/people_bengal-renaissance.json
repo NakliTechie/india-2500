@@ -1,0 +1,314 @@
+{
+  "campaign": "bengal-renaissance",
+  "scope": "The intellectual reformers of the long nineteenth-century Bengal Renaissance — Rammohan Roy (1772–1833), Ishwar Chandra Vidyasagar (1820–1891), Swami Vivekananda (1863–1902). The cultural-political-religious renewal current that ran from Calcutta and Calcutta-adjacent rural Bengal across the colonial century.",
+  "updated": "2026-04-26",
+  "people": [
+
+    {
+      "id": "rammohan-roy",
+      "name": "Raja Rammohan Roy",
+      "short_name": "Rammohan Roy",
+      "tooltip": "Rammohan Roy (1772–1833), founder of Brahmo Sabha; campaigner against sati",
+      "summary": "Bengali polyglot reformer; founded the Brahmo Sabha 1828; campaigned for the abolition of sati (1829); died at Bristol on a mission for the Mughal emperor.",
+      "era": "colonial",
+      "lifespan": {
+        "born": "1772-05-22",
+        "died": "1833-09-27",
+        "birthplace": { "name": "Radhanagar, Hooghly district", "country": "IN", "lat": 22.7667, "lon": 87.7833 },
+        "deathplace": { "name": "Stapleton Grove, Bristol", "country": "OFF", "lat": 51.4720, "lon": -2.5625 }
+      },
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Ram_Mohan_Roy", "label": "Wikipedia: Rammohan Roy", "type": "wikipedia" }
+      ],
+      "colour": "#3a5a8a",
+      "track": [
+        {
+          "kind": "moment",
+          "id": "rammohan-tuhfat-1803",
+          "tooltip": "Tuhfat al-Muwahhidin ('Gift to Monotheists') in Persian and Arabic, c. 1803",
+          "summary": "First treatise — Persian-Arabic monotheist tract attacking image-worship, polytheism, and supernatural claim across all religious traditions.",
+          "date": { "start": "1803-01-01", "end": "1804-12-31", "precision": "year", "approximate": true, "display": "c. 1803–04" },
+          "location": { "name": "Murshidabad", "region": "Bengal Presidency", "country": "IN",
+                        "points": [{ "lat": 24.1820, "lon": 88.2680 }] },
+          "note": "Anonymous publication. Drew on Mu'tazila rationalist Islam, the Vedantic monism he had absorbed from his father's Vaishnava household, and Sufi pluralism. Already at thirty he had a comparative-religion vocabulary unusual in early-nineteenth-century India."
+        },
+        {
+          "kind": "moment",
+          "id": "rammohan-eic-service-1805-1814",
+          "tooltip": "Service in the EIC revenue establishment, 1805–1814",
+          "summary": "Worked in the EIC's Bhagalpur and Rangpur revenue offices under John Digby — learning English, Company administration, Christian-rationalist literature.",
+          "date": { "start": "1805-01-01", "end": "1814-12-31", "precision": "year", "approximate": true, "display": "1805–1814" },
+          "location": { "name": "Rangpur, Bengal Presidency", "region": "Bengal Presidency", "country": "BD",
+                        "points": [{ "lat": 25.7466, "lon": 89.2517 }] },
+          "note": "Digby was his patron and a key influence — gave him a Western-philosophy reading list including the Unitarians. Roy retired with a private fortune in 1814; from 1815 ran his reform programme from Calcutta until his 1830 departure for England."
+        },
+        {
+          "kind": "moment",
+          "id": "rammohan-vedanta-1816-1820",
+          "tooltip": "Vedanta translations and the Atmiya Sabha, 1815–1820",
+          "summary": "Translated the Upanishads (Kena, Isha, Katha) into Bengali and English; founded the Atmiya Sabha 1815 — first Calcutta Hindu-monotheist reform society.",
+          "date": { "start": "1815-01-01", "end": "1820-12-31", "precision": "year", "approximate": true, "display": "1815–1820" },
+          "location": { "name": "Calcutta (Maniktala house)", "region": "Bengal Presidency", "country": "IN",
+                        "points": [{ "lat": 22.5726, "lon": 88.3639 }] },
+          "note": "His Bengali Upanishad translations are the first vernacular Bengali Vedanta — argued the Upanishads taught a single formless God consistent with rational monotheism, and that image-worship was a later corruption. The argument prefigured Dayananda Saraswati's Arya Samaj a half-century later."
+        },
+        {
+          "kind": "moment",
+          "id": "rammohan-anti-sati-1818-1829",
+          "tooltip": "Anti-sati campaign — petitions, tracts, Bentinck's 1829 ban",
+          "summary": "Twelve-year campaign through tracts, petitions, testimony. Bentinck's Regulation XVII of 4 December 1829 banned the practice; Roy's framing was the vehicle.",
+          "date": { "start": "1818-01-01", "end": "1829-12-04", "precision": "day", "approximate": false, "display": "1818–1829 (Bentinck's Regulation XVII, 4 Dec 1829)" },
+          "location": { "name": "Calcutta", "region": "Bengal Presidency", "country": "IN",
+                        "points": [{ "lat": 22.5726, "lon": 88.3639 }] },
+          "note": "His sister-in-law had been forced onto her husband's pyre in 1812 — the personal experience he cited as the campaign's origin. Petitioned Lord Hastings, then Lord Bentinck. The orthodox Hindu Dharma Sabha petitioned the Privy Council against the ban; Roy travelled to England in 1830 partly to defend the ban there."
+        },
+        {
+          "kind": "moment",
+          "id": "rammohan-precepts-of-jesus-1820",
+          "tooltip": "Publishes The Precepts of Jesus, 1820",
+          "summary": "Published The Precepts of Jesus — gospel moral teachings stripped of supernatural claim. Triggered Trinitarian–Unitarian controversy with Serampore Baptists.",
+          "date": { "start": "1820-01-01", "end": "1820-12-31", "precision": "year", "approximate": true, "display": "1820" },
+          "location": { "name": "Calcutta", "region": "Bengal Presidency", "country": "IN",
+                        "points": [{ "lat": 22.5726, "lon": 88.3639 }] },
+          "note": "Joshua Marshman of Serampore attacked the work as Socinianism. Roy's three Appeal to the Christian Public defenses are sustained Sanskrit-and-Greek scriptural exegesis from a non-Christian author. The English Unitarian Mission (Adam, Yates) and the Bengali reform movement converged through the 1820s."
+        },
+        {
+          "kind": "moment",
+          "id": "rammohan-english-education-1823",
+          "tooltip": "Memorial to Lord Amherst on English-language education, 11 December 1823",
+          "summary": "Petitioned Amherst against the proposed Sanskrit College — argued for English-and-modern-sciences education over classical schooling. Macaulay 1835 echoed.",
+          "date": { "start": "1823-12-11", "end": "1823-12-11", "precision": "day", "approximate": false, "display": "11 December 1823" },
+          "location": { "name": "Calcutta", "region": "Bengal Presidency", "country": "IN",
+                        "points": [{ "lat": 22.5726, "lon": 88.3639 }] },
+          "note": "His position — that Sanskrit revival would 'load the minds of youth with grammatical niceties and metaphysical distinctions of little or no practical use' — became the Indian-modernist position in the Anglicist-Orientalist controversy. Macaulay's 1835 Minute on Indian Education and the Bentinck Resolution 1835 implemented it. The Hindu College (1817) and the Sanskrit College (1824) became the two-pole institutional outcome."
+        },
+        {
+          "kind": "moment",
+          "id": "rammohan-brahmo-sabha-1828",
+          "tooltip": "Founds the Brahmo Sabha at Chitpur, Calcutta, 20 August 1828",
+          "summary": "Founded the Brahmo Sabha (later Brahmo Samaj) for monotheist Hindu worship — no images, no priestly mediation, scriptural Vedanta in Sanskrit and Bengali.",
+          "date": { "start": "1828-08-20", "end": "1828-08-20", "precision": "day", "approximate": false, "display": "20 August 1828" },
+          "location": { "name": "Chitpur, Calcutta", "region": "Bengal Presidency", "country": "IN",
+                        "points": [{ "lat": 22.5895, "lon": 88.3640 }] },
+          "note": "Liturgy: Vedantic recitation, devotional song, prayer to a formless God. Membership initially small, drawn from Calcutta bhadralok families (Tagores, Mukherjees). Debendranath Tagore (Rabindranath's father) reorganised the Sabha as Brahmo Samaj 1843 and gave it the institutional form that ran through Keshub Chunder Sen's reforms to its modern survival."
+        },
+        {
+          "kind": "moment",
+          "id": "rammohan-mughal-mission-1830",
+          "tooltip": "Sent to England as envoy of Mughal emperor Akbar II, November 1830",
+          "summary": "Akbar II conferred the title 'Raja' and sent him to England to petition for restoration of Mughal pension — first Indian Hindu envoy to Europe.",
+          "date": { "start": "1830-11-19", "end": "1831-04-08", "precision": "day", "approximate": false, "display": "Departed Nov 1830; arrived London Apr 1831" },
+          "location": { "name": "London", "region": "England", "country": "OFF",
+                        "points": [{ "lat": 51.5074, "lon": -0.1278 }] },
+          "note": "Met Bentham, Macaulay, the Unitarian intellectuals; testified before the parliamentary Select Committee on the EIC charter renewal in 1832. Died at Stapleton Grove, Bristol, on 27 September 1833 of meningitis. Buried at Arnos Vale Cemetery, Bristol — the first Indian Hindu reformer buried in England, the chhatri (canopy memorial) at Arnos Vale erected by Dwarakanath Tagore in 1843."
+        },
+        {
+          "kind": "moment",
+          "id": "rammohan-death-bristol-1833",
+          "tooltip": "Death at Stapleton Grove, Bristol, 27 September 1833",
+          "summary": "Died at Bristol of meningitis at sixty-one. Buried at Arnos Vale Cemetery — the chhatri memorial erected by Dwarakanath Tagore 1843 still stands.",
+          "date": { "start": "1833-09-27", "end": "1833-09-27", "precision": "day", "approximate": false, "display": "27 September 1833" },
+          "location": { "name": "Stapleton Grove, Bristol", "region": "England", "country": "OFF",
+                        "points": [{ "lat": 51.4720, "lon": -2.5625 }] },
+          "note": "Brahmo Samaj continued under Debendranath, then Keshub Chunder Sen, then the post-1880 schism into the Sadharan Brahmo Samaj. The intellectual lineage runs through Dayananda's Arya Samaj, Vivekananda's Vedanta, Tagore's Visva-Bharati, and indirectly into the Indian liberal-modernist tradition that Nehru would lead."
+        }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "vidyasagar",
+      "name": "Ishwar Chandra Vidyasagar",
+      "short_name": "Vidyasagar",
+      "tooltip": "Ishwar Chandra Vidyasagar (1820–1891), Bengali reformer and Sanskritist",
+      "summary": "Sanskrit College Principal; campaigned for the Hindu Widows' Remarriage Act 1856; rebuilt Bengali prose; founded ~35 girls' schools across rural Bengal.",
+      "era": "colonial",
+      "lifespan": {
+        "born": "1820-09-26",
+        "died": "1891-07-29",
+        "birthplace": { "name": "Birsingha, Midnapore district", "country": "IN", "lat": 22.4500, "lon": 87.5500 },
+        "deathplace": { "name": "Calcutta", "country": "IN", "lat": 22.5726, "lon": 88.3639 }
+      },
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Ishwar_Chandra_Vidyasagar", "label": "Wikipedia: Vidyasagar", "type": "wikipedia" }
+      ],
+      "colour": "#7a4a8a",
+      "track": [
+        {
+          "kind": "moment",
+          "id": "vidyasagar-sanskrit-college-1841",
+          "tooltip": "Vidyasagar title from Sanskrit College, 1839; teaching post 1841",
+          "summary": "Conferred 'Vidyasagar' by Sanskrit College examination 1839 at nineteen. Joined Fort William College as head pandit 1841; Sanskrit College 1846.",
+          "date": { "start": "1839-01-01", "end": "1846-12-31", "precision": "year", "approximate": true, "display": "Title 1839; teaching from 1841" },
+          "location": { "name": "Sanskrit College, Calcutta", "region": "Bengal Presidency", "country": "IN",
+                        "points": [{ "lat": 22.5726, "lon": 88.3639 }] },
+          "note": "Master of every Sanskrit literary and philosophical genre. Bengali Romantic prose owes its modern register to his Bodhoday (1851), Betal Panchabingsati (1847), Sitar Banobash (1860), and Akhyan Manjari (1862) — primers and adapted-classical retellings that became standard Bengali school texts for a century."
+        },
+        {
+          "kind": "moment",
+          "id": "vidyasagar-college-principal-1851",
+          "tooltip": "Sanskrit College Principal — opens admission to lower castes, 1851",
+          "summary": "Made Principal at thirty; opened Sanskrit College admission to non-Brahmin castes (1851) — radical departure. Resigned 1858 over EIC interference.",
+          "date": { "start": "1851-01-22", "end": "1858-12-31", "precision": "day", "approximate": false, "display": "Principal 22 Jan 1851; resigned 1858" },
+          "location": { "name": "Sanskrit College, Calcutta", "region": "Bengal Presidency", "country": "IN",
+                        "points": [{ "lat": 22.5726, "lon": 88.3639 }] },
+          "note": "Reformed the curriculum: introduced English, Western philosophy, mathematics. The lower-caste admission decision broke with two thousand years of Brahmin monopoly on Sanskrit learning at premier institutions. The 1858 resignation followed his refusal to accept the EIC director's interference; he never returned to government service."
+        },
+        {
+          "kind": "moment",
+          "id": "vidyasagar-widow-remarriage-1856",
+          "tooltip": "Hindu Widows' Remarriage Act XV of 1856, 26 July 1856",
+          "summary": "Drafted and saw through the Hindu Widows' Remarriage Act XV of 1856 — legalised remarriage of Hindu widows. Sanskrit-textual defences ran 1854–56.",
+          "date": { "start": "1854-01-01", "end": "1856-07-26", "precision": "day", "approximate": false, "display": "Campaign 1854–56; Act 26 July 1856" },
+          "location": { "name": "Calcutta", "region": "Bengal Presidency", "country": "IN",
+                        "points": [{ "lat": 22.5726, "lon": 88.3639 }] },
+          "note": "Two Bengali tracts (1855, 1856) — Hindu Vidhava Vivah Hayoa Uchit Kina ('Should Hindu Widow Remarriage Be Legal?') — built the case from Parashara-smriti citations against orthodox Sanskrit-textual opposition. He personally underwrote and funded ~25 widow remarriages over the next two decades, including his only son Narayan Chandra's 1870 marriage to a Brahmin widow."
+        },
+        {
+          "kind": "moment",
+          "id": "vidyasagar-girls-schools-1857-1858",
+          "tooltip": "Founds 35 girls' schools across rural Bengal, 1857–58",
+          "summary": "Founded 35 model girls' schools across Hooghly, Burdwan, Midnapore, Nadia in 1857–58 — district-level institutional density unprecedented for girls.",
+          "date": { "start": "1857-01-01", "end": "1858-12-31", "precision": "year", "approximate": true, "display": "1857–1858" },
+          "location": { "name": "Hooghly / Burdwan / Midnapore / Nadia", "region": "Bengal Presidency", "country": "IN",
+                        "points": [{ "lat": 22.9000, "lon": 88.4000 }] },
+          "note": "The schools were funded substantially out of his own pocket and from the Bethune School Fund. The provincial education department later assumed the schools — but underfunded them. Most closed by the 1870s. Vidyasagar's correspondence with Bethune (founder of the parallel Bethune College for women in Calcutta 1849) documents the institutional precariousness of mid-Victorian Bengali women's education."
+        },
+        {
+          "kind": "moment",
+          "id": "vidyasagar-polygamy-campaign-1871",
+          "tooltip": "Anti-Kulin polygamy tracts, 1871–1873",
+          "summary": "Campaigned against Kulin Brahmin polygamy through two Bengali tracts (1871, 1873). Petitioned the Bengal government for an Act; the orthodox lobby blocked it.",
+          "date": { "start": "1871-01-01", "end": "1873-12-31", "precision": "year", "approximate": true, "display": "1871–1873" },
+          "location": { "name": "Calcutta", "region": "Bengal Presidency", "country": "IN",
+                        "points": [{ "lat": 22.5726, "lon": 88.3639 }] },
+          "note": "Kulin Brahmin polygamy — where a single Kulin man might be ritually married to dozens of women across his lifetime, with the women returning to natal households as effective grass-widows — was the second great Bengali women's-rights campaign after widow remarriage. The campaign failed legislatively but documented the practice for the first time. The 1955 Hindu Marriage Act made monogamy the legal default seventy years after Vidyasagar's case."
+        },
+        {
+          "kind": "moment",
+          "id": "vidyasagar-karmatar-retreat-1880-1891",
+          "tooltip": "Retreat to Karmatar (Jharkhand), 1880–1891",
+          "summary": "Withdrew from Calcutta to Karmatar in the Santhal hills 1880; spent the last decade among Santhal villagers, ran a dispensary, taught village children.",
+          "date": { "start": "1880-01-01", "end": "1891-07-29", "precision": "year", "approximate": true, "display": "1880–1891" },
+          "location": { "name": "Karmatar, Santhal Parganas", "region": "Bengal Presidency / Jharkhand", "country": "IN",
+                        "points": [{ "lat": 24.1640, "lon": 86.5667 }] },
+          "note": "The withdrawal was framed by his disillusionment with bhadralok Calcutta orthodoxy — the same orthodoxy that had blocked widow-remarriage reform on the ground despite the 1856 Act. The Santhal years are documented in his nephew's biography and in Rabindranath's elegiac 1891 Bengali essay 'Vidyasagar Charit'. He died at Karmatar of cancer 29 July 1891."
+        }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "vivekananda",
+      "name": "Swami Vivekananda",
+      "short_name": "Vivekananda",
+      "tooltip": "Swami Vivekananda (1863–1902), founder of Ramakrishna Mission",
+      "summary": "Bengali Brahmo-turned-Vedantin; principal disciple of Ramakrishna Paramahamsa; Chicago Parliament of Religions 1893; founded the Ramakrishna Mission 1897.",
+      "era": "colonial",
+      "lifespan": {
+        "born": "1863-01-12",
+        "died": "1902-07-04",
+        "birthplace": { "name": "3 Gourmohan Mukherjee Street, Calcutta", "country": "IN", "lat": 22.5853, "lon": 88.3651 },
+        "deathplace": { "name": "Belur Math, Howrah", "country": "IN", "lat": 22.6320, "lon": 88.3580 }
+      },
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Swami_Vivekananda", "label": "Wikipedia: Swami Vivekananda", "type": "wikipedia" }
+      ],
+      "colour": "#c25a1a",
+      "track": [
+        {
+          "kind": "moment",
+          "id": "vivek-ramakrishna-meeting-1881",
+          "tooltip": "First meets Ramakrishna at Dakshineswar, November 1881",
+          "summary": "Eighteen-year-old Brahmo college student met Ramakrishna at Dakshineswar Kali temple. Five years of intermittent visits ended with Ramakrishna's 1886 death.",
+          "date": { "start": "1881-11-01", "end": "1881-11-30", "precision": "month", "approximate": true, "display": "November 1881" },
+          "location": { "name": "Dakshineswar Kali temple", "region": "Bengal Presidency", "country": "IN",
+                        "points": [{ "lat": 22.6555, "lon": 88.3578 }] },
+          "note": "Born Narendranath Dutta in a Calcutta Kayastha household — father Vishwanath Dutta a Calcutta High Court attorney. Brahmo Samaj education; rationalist, sceptical, drawn to Western philosophy. The Ramakrishna encounter was the formative confrontation — the rationalist who could not dismiss the saint."
+        },
+        {
+          "kind": "moment",
+          "id": "vivek-sannyas-baranagar-1886",
+          "tooltip": "Sannyas at Baranagar after Ramakrishna's death, 1886",
+          "summary": "Took sannyas with Ramakrishna's inner circle after the master's death (16 August 1886). Established the Baranagar Math as the brotherhood's first house.",
+          "date": { "start": "1886-12-24", "end": "1886-12-24", "precision": "day", "approximate": false, "display": "Christmas Eve 1886 (vows at Antpur)" },
+          "location": { "name": "Antpur, Hooghly", "region": "Bengal Presidency", "country": "IN",
+                        "points": [{ "lat": 22.7800, "lon": 87.8800 }] },
+          "note": "Twelve disciples took the vows on Christmas Eve 1886 around a fire at Antpur. The Baranagar Math (December 1886 onward) was funded by Surendranath Mitra; the brotherhood lived in extreme poverty for the next four years before Vivekananda's wandering-monk years began."
+        },
+        {
+          "kind": "moment",
+          "id": "vivek-parivrajaka-1888-1892",
+          "tooltip": "Parivrajaka — wandering-monk years across India, 1888–1892",
+          "summary": "Four years walking the subcontinent as a parivrajaka — Banaras, Brindavan, the Himalayas, Rajputana, Khetri, Madras, finally Kanyakumari.",
+          "date": { "start": "1888-01-01", "end": "1892-12-25", "precision": "year", "approximate": true, "display": "1888–1892" },
+          "location": { "name": "Kanyakumari (final stop)", "region": "Travancore", "country": "IN",
+                        "points": [{ "lat": 8.0883, "lon": 77.5385 }] },
+          "note": "Met Maharaja Ajit Singh of Khetri 1891 (lifelong patron) who suggested the title 'Vivekananda'. The three-day meditation on a rock off Kanyakumari (24–26 December 1892) crystallised the resolve to address the Parliament of Religions. Funds for the journey were raised by Madras admirers (Subramania Iyer, Manmatha Bhattacharya) and Khetri."
+        },
+        {
+          "kind": "moment",
+          "id": "vivek-chicago-parliament-1893",
+          "tooltip": "Chicago Parliament of Religions, 11 September 1893",
+          "summary": "Chicago Parliament of Religions, 11 September 1893: 'Sisters and Brothers of America' — five-minute standing ovation. Three-year US/UK lecture tour followed.",
+          "date": { "start": "1893-09-11", "end": "1893-09-27", "precision": "day", "approximate": false, "display": "11–27 September 1893" },
+          "location": { "name": "Art Institute of Chicago", "region": "Illinois, USA", "country": "OFF",
+                        "points": [{ "lat": 41.8796, "lon": -87.6237 }] },
+          "note": "Sailed from Bombay 31 May 1893; reached Chicago via Yokohama, Vancouver, then by rail. The Parliament address put Hindu Vedanta into the global comparative-religion conversation as a coherent philosophical position rather than as exotic curiosity. The US tour 1893–96 produced the Vedanta Societies of New York (1894), Boston, San Francisco — institutional vehicles that survive."
+        },
+        {
+          "kind": "moment",
+          "id": "vivek-london-tour-1895-1896",
+          "tooltip": "London lectures and the Vedanta movement in Britain, 1895–96",
+          "summary": "London lectures at Princes' Hall and the Brewery 1895–96. Margaret Noble (Sister Nivedita) became a disciple and accompanied him to India 1898.",
+          "date": { "start": "1895-08-01", "end": "1896-12-30", "precision": "month", "approximate": true, "display": "August 1895 – December 1896" },
+          "location": { "name": "London", "region": "England", "country": "OFF",
+                        "points": [{ "lat": 51.5074, "lon": -0.1278 }] },
+          "note": "Met Max Müller at Oxford (1896), Paul Deussen at Kiel — major nineteenth-century European Indologists. Margaret Noble — Belfast-born Anglo-Irish teacher — became Sister Nivedita in 1898 at Belur Math, ran the Bagbazar girls' school in Calcutta, was politically active in the swadeshi years. She died at Darjeeling 1911."
+        },
+        {
+          "kind": "moment",
+          "id": "vivek-return-india-1897",
+          "tooltip": "Return to India and Colombo–Madras–Calcutta address tour, January 1897",
+          "summary": "Returned to Colombo 15 January 1897; the Madras-and-Bengal addresses that spring — the Lectures from Colombo to Almora — established his all-India presence.",
+          "date": { "start": "1897-01-15", "end": "1897-09-30", "precision": "day", "approximate": false, "display": "January – September 1897" },
+          "location": { "name": "Colombo (landing) → Calcutta", "region": "Ceylon / Bengal Presidency", "country": "LK",
+                        "points": [{ "lat": 6.9271, "lon": 79.8612 }] },
+          "note": "The Madras–Hyderabad–Calcutta–Almora circuit produced the Lectures from Colombo to Almora — the canonical statement of Vivekananda's Practical Vedanta and his programme of national religious-and-civic regeneration. The addresses framed Hinduism as civilisationally coherent, doctrinally rational, and capable of national-political mobilisation — the discursive ground on which both Aurobindo and the later cultural nationalist movements would build."
+        },
+        {
+          "kind": "moment",
+          "id": "vivek-ramakrishna-mission-1897",
+          "tooltip": "Founds the Ramakrishna Mission at Belur, 1 May 1897",
+          "summary": "Founded the Ramakrishna Mission at Calcutta, 1 May 1897. Belur Math 1898 as monastic headquarters. Welfare-and-service-as-worship the operative principle.",
+          "date": { "start": "1897-05-01", "end": "1898-12-09", "precision": "day", "approximate": false, "display": "Mission 1 May 1897; Belur Math 9 Dec 1898" },
+          "location": { "name": "Belur Math, Howrah", "region": "Bengal Presidency", "country": "IN",
+                        "points": [{ "lat": 22.6320, "lon": 88.3580 }] },
+          "note": "The Mission's combination of monastic order and civic-welfare arm — schools, hospitals, famine and plague relief — was institutionally novel for Hindu monasticism. The 1899 Calcutta plague relief operation under Sister Nivedita and Brahmananda made the Mission's public reputation. The Mission today operates ~200 centres globally."
+        },
+        {
+          "kind": "moment",
+          "id": "vivek-second-western-tour-1899-1900",
+          "tooltip": "Second Western tour and California Vedanta work, 1899–1900",
+          "summary": "Second Western tour June 1899 – December 1900: California, New York, Paris Exposition, Vienna, Constantinople, Cairo, Athens. Tubercular health failing.",
+          "date": { "start": "1899-06-20", "end": "1900-12-09", "precision": "month", "approximate": true, "display": "June 1899 – December 1900" },
+          "location": { "name": "San Francisco / New York / Paris", "region": "USA / Europe", "country": "OFF",
+                        "points": [{ "lat": 37.7749, "lon": -122.4194 }] },
+          "note": "Founded the Shanti Ashrama in California (1900) — the first Vedanta retreat centre in the US. Health was visibly failing through 1900; diabetes and asthma compounded by the inherited tubercular constitution. Returned to Belur Math December 1900; never travelled abroad again."
+        },
+        {
+          "kind": "moment",
+          "id": "vivek-belur-math-death-1902",
+          "tooltip": "Death at Belur Math, 4 July 1902, age 39",
+          "summary": "Died at Belur Math 4 July 1902 at thirty-nine, probably of cerebral aneurysm — he had predicted he would not live past forty. Funeral pyre on the Hooghly bank.",
+          "date": { "start": "1902-07-04", "end": "1902-07-04", "precision": "day", "approximate": false, "display": "4 July 1902" },
+          "location": { "name": "Belur Math, Howrah", "region": "Bengal Presidency", "country": "IN",
+                        "points": [{ "lat": 22.6320, "lon": 88.3580 }] },
+          "note": "His Complete Works (8 volumes, edited by Mayavati Math 1907 onward) became one of the most-printed Indian-author bodies of work of the twentieth century. The intellectual influence runs through Aurobindo's nationalist mysticism, Gandhi (who said he was first introduced to the political possibility of religion by Vivekananda), Subhas Bose, and the post-Independence Hindu cultural nationalist tradition."
+        }
+      ],
+      "verified": true
+    }
+
+  ]
+}

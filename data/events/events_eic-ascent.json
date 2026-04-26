@@ -1,0 +1,214 @@
+{
+  "campaign": "eic-ascent",
+  "scope": "The arc by which the English East India Company became a sovereign — Bombay-as-dowry 1661, Plassey 1757, Buxar 1764, Permanent Settlement 1793, the Anglo-Mysore and Anglo-Maratha closures, and the Doctrine of Lapse annexations that triggered 1857.",
+  "updated": "2026-04-26",
+  "events": [
+    {
+      "id": "bombay-as-dowry-1661",
+      "title": "Bombay ceded to England as Catherine of Braganza's dowry",
+      "tooltip": "Bombay ceded to England as Catherine of Braganza's dowry, 23 June 1661",
+      "summary": "Treaty of London ceded Bombay to Charles II as Catherine's dowry. Crown leased to the EIC 1668 for £10/year — the western anchor of Company India.",
+      "detail": "The Anglo-Portuguese Treaty of London (23 June 1661) sealed the marriage of Charles II of England to Catherine of Braganza. The dowry transferred Tangier, Bombay (the seven islands of Bombay), Portuguese commercial privileges in Brazil and the East Indies, and £300,000 cash. Bombay was a Portuguese holding since 1534; the islands were of marginal commercial value and the cession was a gift to seal the alliance against Spain. The Crown found Bombay administratively expensive and leased it to the East India Company on 27 March 1668 for an annual rent of ten pounds in gold — the formal transfer document signed by Charles II. Gerald Aungier became EIC governor (1672–77) and built up Bombay as a fortified port and judicial centre — the western counterpart to Madras (founded 1639) and the future strategic centre after Surat declined. Bombay's population grew from ~10,000 in 1661 to ~60,000 by 1675; the institutional template — Company-administered town under Crown sovereignty — was the model the EIC would later extend across the subcontinent.",
+      "date": {
+        "start": "1661-06-23",
+        "end":   "1668-03-27",
+        "precision": "day",
+        "approximate": false,
+        "display": "Treaty of London 1661; leased to EIC 1668"
+      },
+      "location": {
+        "type": "city",
+        "name": "Bombay (the seven islands)",
+        "region": "Portuguese Estado da Índia → English Crown → EIC",
+        "country": "IN",
+        "points": [{ "lat": 18.9388, "lon": 72.8354, "name": "Bombay Castle" }]
+      },
+      "era": "mughal",
+      "category": ["economic", "colonial-administration", "political"],
+      "figures": ["Charles II of England", "Catherine of Braganza", "Gerald Aungier", "Afonso VI of Portugal"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Anglo-Portuguese_Treaty_(1661)", "label": "Wikipedia: Anglo-Portuguese Treaty 1661", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Philip Davies, Splendours of the Raj: British Architecture in India 1660–1947 (1985)", "type": "scholarly" },
+        { "label": "Gyan Prakash, Mumbai Fables (2010), ch. on the colonial city's foundation", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "battle-of-plassey-1757",
+      "title": "Battle of Plassey",
+      "tooltip": "Battle of Plassey, 23 June 1757 — Clive defeats Siraj-ud-Daulah",
+      "summary": "Clive defeated Nawab Siraj-ud-Daulah at Plassey on the Bhagirathi — the moment the EIC stopped trading and started ruling. Mir Jafar's defection decided it.",
+      "detail": "Siraj-ud-Daulah, the young Bengal Nawab, had taken Calcutta from the EIC in June 1756 and held the surviving British in the Black Hole episode (whose casualty figures remain contested). Clive recovered Calcutta in January 1757 and engineered a conspiracy with Mir Jafar (Siraj's commander), Jagat Seth (the Bengal banking house), and Omichund (Sikh merchant). The Battle of Plassey on 23 June 1757 was less a battle than a staged outcome: Mir Jafar's troops did not engage; only Mir Madan and Mohan Lal's contingents fought. Clive's 3,000 (mostly Indian sepoys) defeated Siraj's 50,000 with 22 EIC dead. Siraj-ud-Daulah was killed within days; Mir Jafar installed as Nawab. The treaty terms gave the EIC Calcutta zamindari, the right to coin money, exemption from customs, and an indemnity of 22 million rupees (Clive personally took £234,000). Bengal's diwani — the right to collect land revenue — followed at the Treaty of Allahabad (1765) after Buxar. Plassey is conventionally dated as the start of British India.",
+      "date": {
+        "start": "1757-06-23",
+        "end":   "1757-06-23",
+        "precision": "day",
+        "approximate": false,
+        "display": "23 June 1757"
+      },
+      "location": {
+        "type": "city",
+        "name": "Plassey (Palashi), Bhagirathi river",
+        "region": "Bengal Subah, Mughal Empire",
+        "country": "IN",
+        "points": [{ "lat": 23.8000, "lon": 88.2500, "name": "Plassey" }]
+      },
+      "era": "colonial",
+      "category": ["military", "political", "economic"],
+      "figures": ["Robert Clive", "Siraj-ud-Daulah", "Mir Jafar", "Jagat Seth", "Mir Madan"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Battle_of_Plassey", "label": "Wikipedia: Battle of Plassey", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Sushil Chaudhury, The Prelude to Empire: Plassey Revolution of 1757 (2000)", "type": "scholarly" },
+        { "label": "P.J. Marshall, Bengal: The British Bridgehead (1987)", "type": "scholarly" },
+        { "label": "Robert Clive, Letters and Despatches (1764)", "type": "primary" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "battle-of-buxar-1764",
+      "title": "Battle of Buxar",
+      "tooltip": "Battle of Buxar, 22 October 1764 — EIC defeats Mughal-Awadh-Bengal coalition",
+      "summary": "Hector Munro defeated the combined Mughal–Awadh–Bengal coalition at Buxar — Treaty of Allahabad 1765 granted the EIC Bengal's diwani.",
+      "detail": "After Plassey, the EIC's puppet Bengal Nawab Mir Jafar was replaced by Mir Qasim, who attempted to assert independence — abolishing the EIC's customs exemption, raising a European-officered army at Monghyr, and joining forces with Awadh's Nawab Shuja-ud-Daulah and the displaced Mughal emperor Shah Alam II. Major Hector Munro's 7,000-strong EIC force met the combined 40,000-strong coalition at Buxar (Bihar) on 22 October 1764. The EIC's superior fire discipline and Mir Qasim's premature withdrawal of his European-officered units gave Munro a decisive victory — ~2,000 EIC casualties to ~6,000 coalition. The Treaty of Allahabad (12 August 1765) was the political settlement: Shah Alam II conferred on the EIC the diwani (right to collect land revenue) of Bengal, Bihar, and Orissa in exchange for an annual tribute of 26 lakh rupees. Bengal's revenue (~£3 million annually) became the financial base on which the EIC built its eighteenth-century military expansion. Buxar, not Plassey, is the moment the EIC formally became a sovereign tax-collecting authority on the subcontinent.",
+      "date": {
+        "start": "1764-10-22",
+        "end":   "1765-08-12",
+        "precision": "day",
+        "approximate": false,
+        "display": "Battle 22 Oct 1764; Treaty of Allahabad 12 Aug 1765"
+      },
+      "location": {
+        "type": "city",
+        "name": "Buxar (Baksar), Bihar",
+        "region": "Bengal–Bihar–Awadh frontier",
+        "country": "IN",
+        "points": [{ "lat": 25.5650, "lon": 83.9780, "name": "Buxar" }]
+      },
+      "era": "colonial",
+      "category": ["military", "political", "economic"],
+      "figures": ["Hector Munro", "Mir Qasim", "Shuja-ud-Daulah", "Shah Alam II", "Robert Clive"],
+      "caused_by": [
+        { "id": "battle-of-plassey-1757", "gloss": "Plassey installed Mir Jafar as EIC client; Mir Qasim's attempt to assert independence drew in Awadh and the Mughal emperor — the coalition Buxar broke. Buxar converted post-Plassey patronage power into formal Mughal-conferred sovereignty over Bengal revenue." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Battle_of_Buxar", "label": "Wikipedia: Battle of Buxar", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "P.J. Marshall, The New Cambridge History of India II.2: Bengal: The British Bridgehead (1987)", "type": "scholarly" },
+        { "label": "Treaty of Allahabad (1765), in Aitchison's Treaties vol. II", "type": "primary" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "permanent-settlement-1793",
+      "title": "Permanent Settlement of Bengal",
+      "tooltip": "Cornwallis's Permanent Settlement of Bengal land revenue, 22 March 1793",
+      "summary": "Cornwallis fixed Bengal's land revenue in perpetuity with zamindars as proprietors — the longest-running colonial revenue system, shaping rural inequality.",
+      "detail": "Lord Cornwallis (Governor-General 1786–93) and his revenue officer John Shore worked through the 1780s on a permanent revenue settlement to replace the chaotic short-term farming-out arrangements that had followed the 1770 Bengal famine and the EIC's diwani assumption. The Permanent Settlement Regulation (22 March 1793) declared the zamindars the proprietors of the soil, fixed their revenue obligations to the EIC in perpetuity at then-current rates, and made them subject to summary auction-sale of their estates for default. Two consequences shaped Bengal for two centuries: (i) zamindars became a landed gentry with fixed revenue and rising rent extraction from cultivators; ryots had no statutory protection until the Bengal Tenancy Act 1885. (ii) The fixed revenue eroded against inflation — by 1900 the EIC successor government collected only a quarter of agricultural surplus where Madras Ryotwari collected three-quarters. The Permanent Settlement was extended to Bihar, Orissa, parts of the Madras Northern Circars, and Banaras; the alternative Ryotwari system (Madras 1820, Bombay 1835) and Mahalwari (North-Western Provinces 1822) covered the rest. The 1947 zamindari abolition acts of West Bengal, Bihar, and East Pakistan dismantled the system but its rural class structure persists.",
+      "date": {
+        "start": "1793-03-22",
+        "end":   "1793-03-22",
+        "precision": "day",
+        "approximate": false,
+        "display": "22 March 1793"
+      },
+      "location": {
+        "type": "city",
+        "name": "Calcutta (Fort William)",
+        "region": "Bengal Presidency, EIC India",
+        "country": "IN",
+        "points": [{ "lat": 22.5726, "lon": 88.3639, "name": "Fort William, Calcutta" }]
+      },
+      "era": "colonial",
+      "category": ["economic", "colonial-administration", "reform"],
+      "figures": ["Charles Cornwallis", "John Shore", "Charles Grant"],
+      "caused_by": [
+        { "id": "battle-of-buxar-1764", "gloss": "Buxar's Treaty of Allahabad gave the EIC Bengal's diwani; the next 25 years of revenue chaos (Bengal famine 1770, the dual government of Nawab plus EIC) made permanent settlement the institutional answer Cornwallis was sent to deliver." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Permanent_Settlement", "label": "Wikipedia: Permanent Settlement", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Ranajit Guha, A Rule of Property for Bengal: An Essay on the Idea of Permanent Settlement (1963)", "type": "scholarly" },
+        { "label": "Permanent Settlement Regulation 1, 1793 (Bengal Code)", "type": "primary" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "doctrine-of-lapse-satara-1848",
+      "title": "Doctrine of Lapse — Satara annexation",
+      "tooltip": "Dalhousie applies Doctrine of Lapse to annex Satara, April 1848",
+      "summary": "Dalhousie's first Doctrine of Lapse — Satara annexed on Shahuji II's death without heir; adopted heirs ruled illegitimate. Eight states in seven years.",
+      "detail": "Lord Dalhousie (Governor-General 1848–56) systematised an annexation policy whose principle had been intermittent EIC practice since the 1830s: where a princely state ruler died without natural male heir, the state would 'lapse' to the EIC paramountcy rather than pass to an adopted heir. Dalhousie's first application was Satara (the Maratha junior Chhatrapati line). On Shahuji II's death in April 1848 without a natural son, Dalhousie refused recognition to the adopted heir and absorbed Satara into the Bombay Presidency. The principle was applied next to Jaitpur and Sambalpur (1849), Baghat (1850), Udaipur-of-Chhattisgarh (1852), Jhansi (1853 — annexation 1854 on Gangadhar Rao's death; the future Rani Lakshmibai's adopted son Damodar Rao was refused succession), Nagpur (1854 — the largest Lapse annexation, Bhonsle Maratha state), and finally Awadh (1856 — annexed under a different pretext, maladministration, but in the same expansionist register). Eight states absorbed in seven years. The Doctrine of Lapse plus Awadh annexation 1856 plus the General Service Enlistment Act 1856 (sepoys liable for overseas service) plus the new Enfield rifle's greased cartridge constituted the structural grievances that triggered 1857.",
+      "date": {
+        "start": "1848-04-04",
+        "end":   "1854-12-31",
+        "precision": "day",
+        "approximate": false,
+        "display": "Satara April 1848; Jhansi, Nagpur, others through 1854"
+      },
+      "location": {
+        "type": "city",
+        "name": "Satara (first application)",
+        "region": "Maratha junior Chhatrapati seat",
+        "country": "IN",
+        "points": [{ "lat": 17.6805, "lon": 74.0183, "name": "Satara" }]
+      },
+      "era": "colonial",
+      "category": ["political", "colonial-administration"],
+      "figures": ["Lord Dalhousie", "Shahuji II of Satara", "Gangadhar Rao of Jhansi", "Lakshmibai of Jhansi", "Raghoji III of Nagpur"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Doctrine_of_lapse", "label": "Wikipedia: Doctrine of Lapse", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Edward Thompson, The Making of the Indian Princes (1943)", "type": "scholarly" },
+        { "label": "M.S. Jain, The Aftermath of Revolt: India 1857–1870 (1988)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "awadh-annexation-1856",
+      "title": "Annexation of Awadh",
+      "tooltip": "Annexation of Awadh on grounds of misgovernment, 7 February 1856",
+      "summary": "Dalhousie annexed Awadh on the misgovernment pretext, deposing Wajid Ali Shah — the political grievance behind the 1857 sepoy mutinies in Awadh.",
+      "detail": "Awadh, a successor of the Mughal Awadh Subah, had been a faithful EIC subsidiary ally since the Treaty of Faizabad 1775 — its Nawabs paying for the EIC's Bengal Army troop subsidies and ceding Banaras, Allahabad, Rohilkhand, and the Doab over successive treaties. Wajid Ali Shah (r. 1847–56), a poet and patron of the Lucknow cultural renaissance, was politically passive. Dalhousie ordered the annexation of the kingdom on 7 February 1856 on the pretext of misgovernment (the Sleeman and Outram reports of 1849 and 1855 documenting administrative decay), deposed Wajid Ali Shah, and exiled him to Calcutta on a £150,000 annual pension. The annexation hit the EIC's own Bengal Army hard: a third of its sepoys were Awadhi peasants whose families lost the talukdari land protections of the Awadh administration. The grievance was active by spring 1857. When the Meerut sepoys rebelled on 10 May 1857, the Awadh sepoy regiments rose with them; the Awadh phase of the rebellion (June 1857 – March 1858) was the longest and most coordinated of the regional risings.",
+      "date": {
+        "start": "1856-02-07",
+        "end":   "1856-02-07",
+        "precision": "day",
+        "approximate": false,
+        "display": "7 February 1856"
+      },
+      "location": {
+        "type": "city",
+        "name": "Lucknow (Awadh capital)",
+        "region": "Awadh Kingdom / EIC India",
+        "country": "IN",
+        "points": [{ "lat": 26.8467, "lon": 80.9462, "name": "Lucknow" }]
+      },
+      "era": "colonial",
+      "category": ["political", "colonial-administration"],
+      "figures": ["Lord Dalhousie", "Wajid Ali Shah", "James Outram", "William Sleeman"],
+      "caused_by": [
+        { "id": "doctrine-of-lapse-satara-1848", "gloss": "Awadh was annexed under the misgovernment pretext rather than the strict Doctrine of Lapse, but stood in the same expansionist register Dalhousie had built since 1848 — the eighth and largest of the post-1848 annexations." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Annexation_of_Awadh", "label": "Wikipedia: Annexation of Awadh", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Rudrangshu Mukherjee, Awadh in Revolt 1857–58: A Study of Popular Resistance (1984)", "type": "scholarly" },
+        { "label": "Outram and Sleeman Reports on the Administration of Oudh (1849, 1855)", "type": "primary" }
+      ],
+      "verified": true
+    }
+  ]
+}

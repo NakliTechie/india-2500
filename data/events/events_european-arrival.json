@@ -1,0 +1,173 @@
+{
+  "campaign": "european-arrival",
+  "scope": "Arrival of the European maritime powers on the subcontinent — Portuguese, Dutch, English, French, Danish — from Vasco da Gama's 1498 Calicut landing through the establishment of the trading-post network across the western, eastern, and Coromandel coasts.",
+  "updated": "2026-04-26",
+  "events": [
+    {
+      "id": "vasco-da-gama-calicut-1498",
+      "title": "Vasco da Gama lands at Calicut",
+      "tooltip": "Vasco da Gama lands at Calicut, 20 May 1498 — opens the European sea route",
+      "summary": "Portuguese expedition rounded the Cape and landed at Calicut — first European maritime contact with India; start of European Indian Ocean trade.",
+      "detail": "Vasco da Gama's four ships (São Gabriel, São Rafael, Berrio, plus a supply vessel) sailed from Lisbon in July 1497 with instructions from Manuel I to find the sea route to the Indian spice trade. After a ten-month voyage round the Cape of Good Hope and across the Indian Ocean — guided across the Arabian Sea by an Indian or Arab navigator (Ibn Majid, per Portuguese chroniclers, though the attribution is contested) — the expedition made landfall at Kappad near Calicut on 20 May 1498. The Zamorin of Calicut received da Gama warily; the Portuguese trade goods (cloth, oil, honey) were inadequate to the Calicut spice market and the diplomatic mission failed. Da Gama returned to Lisbon September 1499 with two of four ships and one-third of the original 170 crew, but with a cargo of pepper that paid for the voyage sixty times over. The economic case made the project state policy. The Portuguese followed up with the Cabral expedition (1500), the second da Gama voyage (1502 — punitive bombardment of Calicut), and the Almeida and Albuquerque viceroyalties (1505–15) — the foundation of the Estado da Índia.",
+      "date": {
+        "start": "1498-05-20",
+        "end":   "1498-05-20",
+        "precision": "day",
+        "approximate": false,
+        "display": "20 May 1498"
+      },
+      "location": {
+        "type": "city",
+        "name": "Kappad / Calicut (Kozhikode)",
+        "region": "Zamorin's Calicut",
+        "country": "IN",
+        "points": [{ "lat": 11.4297, "lon": 75.7160, "name": "Kappad / Calicut" }]
+      },
+      "era": "sultanate",
+      "category": ["military", "economic", "political"],
+      "figures": ["Vasco da Gama", "Manuel I of Portugal", "Zamorin of Calicut"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Vasco_da_Gama", "label": "Wikipedia: Vasco da Gama", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Sanjay Subrahmanyam, The Career and Legend of Vasco da Gama (1997)", "type": "scholarly" },
+        { "label": "K.M. Panikkar, Asia and Western Dominance (1953)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "portuguese-goa-conquest-1510",
+      "title": "Albuquerque takes Goa from Bijapur",
+      "tooltip": "Afonso de Albuquerque captures Goa from the Adil Shahis, 25 November 1510",
+      "summary": "Albuquerque seized Goa from the Bijapur Adil Shahis on his second attempt — first permanent European holding on the subcontinent; capital of Estado da Índia.",
+      "detail": "Afonso de Albuquerque, second Portuguese viceroy of India, took Goa from the Bijapur Adil Shahi governor Yusuf Adil Shah on 25 November 1510 (St Catherine's day). His first attempt that February had succeeded in capture but failed in occupation; the second campaign with 23 ships and 1,200 Portuguese soldiers plus Hindu mercenary support from the Vijayanagara-aligned Timoja held the city. Albuquerque massacred the Muslim garrison and population (~6,000 dead per his own dispatch) and encouraged Portuguese-Indian intermarriage as a permanent settlement strategy. Goa became the capital of the Estado da Índia — the umbrella for Portuguese forts and factories from Mozambique to Macau — and remained Portuguese until Operation Vijay in 1961, a 451-year imperial span. Albuquerque went on to take Malacca (1511) and Hormuz (1515), securing the strategic Indian Ocean nodes that gave Portugal seventy years of monopoly on the Cape route before the Dutch and English broke it.",
+      "date": {
+        "start": "1510-11-25",
+        "end":   "1510-11-25",
+        "precision": "day",
+        "approximate": false,
+        "display": "25 November 1510"
+      },
+      "location": {
+        "type": "city",
+        "name": "Velha Goa (Old Goa)",
+        "region": "Bijapur Sultanate",
+        "country": "IN",
+        "points": [{ "lat": 15.5009, "lon": 73.9116, "name": "Velha Goa" }]
+      },
+      "era": "sultanate",
+      "category": ["military", "colonial-administration", "political"],
+      "figures": ["Afonso de Albuquerque", "Yusuf Adil Shah", "Timoja", "Manuel I of Portugal"],
+      "caused_by": [
+        { "id": "vasco-da-gama-calicut-1498", "gloss": "Vasco da Gama's route opened the Cape sea-lane that made Estado da Índia possible; Albuquerque's territorial conquest converted maritime presence into a permanent imperial node — the same pattern (factory → fort → territory) the EIC would follow at Surat-Bombay and Madras over the next century." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Portuguese_conquest_of_Goa", "label": "Wikipedia: Portuguese conquest of Goa", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Sanjay Subrahmanyam, The Portuguese Empire in Asia 1500–1700 (1993)", "type": "scholarly" },
+        { "label": "Afonso de Albuquerque, Cartas (1884–1935 ed.)", "type": "primary" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "dutch-pulicat-coromandel-1610",
+      "title": "Dutch establish Pulicat factory on the Coromandel coast",
+      "tooltip": "Dutch East India Company (VOC) establishes Pulicat factory, 1610",
+      "summary": "VOC established its first Coromandel factory at Pulicat under Vijayanagara protection — the textile-export network that funded Dutch Asia for a century.",
+      "detail": "The Vereenigde Oostindische Compagnie (VOC, founded 1602) had pushed past Portuguese Indian Ocean monopoly through the 1600s — taking Amboyna (1605), Bantam (1610), and Batavia (1619) in the Indonesian archipelago. The Coromandel coast textile manufactories were the missing ingredient: Indian cotton textiles paid for the spices, not silver. Pulicat (Pazhaverkadu, north of Madras) was established as the first Coromandel factory in 1610 under Vijayanagara protection (Venkatappa Nayaka), with Fort Geldria built 1613. By the 1620s Dutch trading posts ran from Pulicat south through Sadras, Nagapattinam, Cochin, and on the western coast — a network that handled half the Coromandel cloth export by 1670. Pulicat was lost to the British in 1781, retaken in 1785, and finally ceded under the Treaty of London 1814. Dutch-Indian trade concentrated thereafter on the Surinam slave-and-indenture route and the Cape Colony food trade.",
+      "date": {
+        "start": "1610-01-01",
+        "end":   "1613-12-31",
+        "precision": "year",
+        "approximate": true,
+        "display": "1610 (factory); 1613 (Fort Geldria)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Pulicat (Pazhaverkadu)",
+        "region": "Vijayanagara successors / Coromandel coast",
+        "country": "IN",
+        "points": [{ "lat": 13.4200, "lon": 80.2000, "name": "Pulicat (Pazhaverkadu)" }]
+      },
+      "era": "mughal",
+      "category": ["economic", "colonial-administration"],
+      "figures": ["Pieter Both", "Wemmer van Berchem", "Venkatappa Nayaka"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Dutch_Coromandel", "label": "Wikipedia: Dutch Coromandel", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Tapan Raychaudhuri, Jan Company in Coromandel 1605–1690 (1962)", "type": "scholarly" },
+        { "label": "Om Prakash, The Dutch East India Company and the Economy of Bengal 1630–1720 (1985)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "danish-tranquebar-1620",
+      "title": "Danish East India Company establishes Tranquebar",
+      "tooltip": "Danish East India Company founds Tranquebar (Tharangambadi), 1620",
+      "summary": "Danish-Norwegian East India Company under Ove Gjedde signed the Tranquebar grant with the Tanjore Nayaks — smallest European holding, 225 years until 1845.",
+      "detail": "The Dansk Ostindisk Kompagni (founded 1616) sent the Christian IV-backed expedition under Admiral Ove Gjedde to the Coromandel coast. Gjedde negotiated a perpetual grant of Tharangambadi (Tranquebar) and the surrounding villages from Raghunatha Nayak of Tanjore on 19 November 1620, in exchange for an annual tribute. Fort Dansborg was built 1620–22. The Danish trading network expanded to Serampore (Frederiksnagore, 1755) on the Hooghly upriver from Calcutta. The Danish missions to South India — Bartholomäus Ziegenbalg's Pietist Lutheran mission at Tranquebar from 1706 — produced the first Tamil printing press, the first Tamil Bible (1714), and the first Indian-language Lutheran liturgy. Commercially marginal beside the Dutch and English, Denmark sold Tranquebar and Serampore to the British in 1845 (£20,000) and 1839 respectively, ending the smallest European Indian holding after 225 years.",
+      "date": {
+        "start": "1620-11-19",
+        "end":   "1620-11-19",
+        "precision": "day",
+        "approximate": false,
+        "display": "19 November 1620"
+      },
+      "location": {
+        "type": "city",
+        "name": "Tharangambadi (Tranquebar)",
+        "region": "Tanjore Nayak country / Coromandel",
+        "country": "IN",
+        "points": [{ "lat": 11.0260, "lon": 79.8500, "name": "Tranquebar" }]
+      },
+      "era": "mughal",
+      "category": ["economic", "colonial-administration", "religious"],
+      "figures": ["Ove Gjedde", "Christian IV of Denmark-Norway", "Raghunatha Nayak", "Bartholomäus Ziegenbalg"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Danish_India", "label": "Wikipedia: Danish India", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Ole Feldbæk, India Trade under the Danish Flag 1772–1808 (1969)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "french-pondicherry-1674",
+      "title": "French Compagnie des Indes establishes Pondicherry",
+      "tooltip": "Compagnie française des Indes orientales founds Pondicherry, 1674",
+      "summary": "François Martin acquired Pondicherry from the Bijapur deputy Sher Khan Lodi — headquarters of French India until Dupleix's 1754 recall and the Carnatic Wars.",
+      "detail": "The Compagnie française des Indes orientales (founded 1664 by Colbert under Louis XIV) had failed at first colonisation attempts in Madagascar and at Surat (1668). François Martin acquired the village of Pondicherry (Puducherry) from Sher Khan Lodi, deputy to the Bijapur Sultan, in 1674; established the trading factory under the protection of the Bijapur successors and (after 1690) the Mughal Deccan administration. Pondicherry briefly fell to the Dutch in 1693 (returned 1699 under the Treaty of Ryswick) and grew through the early 1700s under successive governors. Joseph François Dupleix (governor 1742–54) made Pondicherry the operational headquarters of a French Indian empire ambition — siding with rival claimants in the Carnatic and Hyderabad succession wars and using Indian sepoy infantry as his strategic invention (the model the EIC would systematically replicate). His recall to Paris in 1754 and the British victory at Wandiwash 1760 ended the French Indian empire project; Pondicherry survived as a four-enclave French territory (Pondicherry, Karikal, Mahé, Yanaon, Chandernagore) until 1954.",
+      "date": {
+        "start": "1674-01-01",
+        "end":   "1674-12-31",
+        "precision": "year",
+        "approximate": true,
+        "display": "1674"
+      },
+      "location": {
+        "type": "city",
+        "name": "Pondicherry (Puducherry)",
+        "region": "Bijapur Sultanate / Carnatic coast",
+        "country": "IN",
+        "points": [{ "lat": 11.9416, "lon": 79.8083, "name": "Pondicherry" }]
+      },
+      "era": "mughal",
+      "category": ["economic", "colonial-administration", "political"],
+      "figures": ["François Martin", "Jean-Baptiste Colbert", "Sher Khan Lodi", "Joseph François Dupleix"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Pondicherry_(union_territory)", "label": "Wikipedia: French India / Pondicherry", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Philippe Haudrère, La Compagnie française des Indes au XVIIIe siècle (1989)", "type": "scholarly" },
+        { "label": "S.P. Sen, The French in India 1763–1816 (1958)", "type": "scholarly" }
+      ],
+      "verified": true
+    }
+  ]
+}

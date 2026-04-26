@@ -1,0 +1,171 @@
+{
+  "campaign": "wars-of-empire",
+  "scope": "Set-piece battles by which the EIC and Crown extended sovereignty across the subcontinent — Wandiwash 1760 (Anglo-French closure), Mahidpur 1817 (Anglo-Maratha closure), First Anglo-Afghan 1842, Battle of Gujrat 1849 (Anglo-Sikh closure), Third Anglo-Burmese 1885.",
+  "updated": "2026-04-26",
+  "events": [
+    {
+      "id": "battle-of-wandiwash-1760",
+      "title": "Battle of Wandiwash",
+      "tooltip": "Battle of Wandiwash, 22 January 1760 — Coote defeats Lally; ends French India",
+      "summary": "Eyre Coote's EIC force routed Lally-Tollendal at Wandiwash — end of French ambitions on the subcontinent; British monopoly of European expansion.",
+      "detail": "The Third Carnatic War (1756–63), the Indian theatre of the Seven Years' War, pitted Joseph François Dupleix's successor Thomas-Arthur de Lally-Tollendal against the EIC under Eyre Coote. Lally had taken Fort St David from the British in 1758 and besieged Madras 1758–59 unsuccessfully. Coote, with 1,900 European and 2,100 sepoy troops, met Lally's 2,250 European and 1,300 sepoy force outside Wandiwash (Vandavasi) on 22 January 1760. The French line broke after Lally's cavalry withdrew without engaging; ~600 French casualties to Coote's 200. The Wandiwash defeat was followed by the British siege of Pondicherry (May 1760 – January 1761) which capitulated to Coote on 16 January 1761. The Treaty of Paris (1763) returned Pondicherry to France but stripped it of fortifications and limited it to commercial functions only — a permanent demilitarisation that ended any French ambition to a sub-continental territorial presence. Pondicherry survived as a four-enclave commercial holding until 1954. After Wandiwash the EIC had no European rival on Indian soil; the field was open for the post-1761 expansion through Bengal, the Carnatic, and the Anglo-Mysore wars.",
+      "date": {
+        "start": "1760-01-22",
+        "end":   "1761-01-16",
+        "precision": "day",
+        "approximate": false,
+        "display": "Wandiwash 22 Jan 1760; Pondicherry surrendered 16 Jan 1761"
+      },
+      "location": {
+        "type": "city",
+        "name": "Wandiwash (Vandavasi), Carnatic",
+        "region": "Carnatic / EIC Madras",
+        "country": "IN",
+        "points": [{ "lat": 12.5060, "lon": 79.6050, "name": "Wandiwash" }]
+      },
+      "era": "colonial",
+      "category": ["military", "political"],
+      "figures": ["Eyre Coote", "Thomas-Arthur de Lally-Tollendal", "Joseph François Dupleix"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Battle_of_Wandiwash", "label": "Wikipedia: Battle of Wandiwash", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "G.J. Bryant, The Emergence of British Power in India 1600–1784 (2013)", "type": "scholarly" },
+        { "label": "S.P. Sen, The French in India: First Establishment and Struggle (1947)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "battle-of-mahidpur-1817",
+      "title": "Battle of Mahidpur — Third Anglo-Maratha War closure",
+      "tooltip": "Battle of Mahidpur, 21 December 1817 — closes the Third Anglo-Maratha War",
+      "summary": "Hislop defeated Holkar's army at Mahidpur on the Sipra — the decisive engagement of the Third Anglo-Maratha War that ended the Confederacy as a sovereign power.",
+      "detail": "The Third Anglo-Maratha War (1817–18) was Lord Hastings's deliberate dismantling of the surviving Maratha Confederacy — Peshwa Bajirao II at Pune, Sindhia at Gwalior, Holkar at Indore, Bhonsle at Nagpur. The proximate cause was the Pindari raids (free-booting Maratha-affiliated cavalry that had ravaged EIC territory through the 1810s). Three coordinated EIC armies under Hastings, Hislop, and Malcolm advanced from Bengal, the Deccan, and Gujarat. Mahidpur on 21 December 1817 — Sir Thomas Hislop with 5,500 EIC troops against Malhar Rao Holkar III's 35,000 Maratha-Pindari force on the Sipra river — was the decisive set-piece engagement: ~3,000 Maratha dead, ~800 EIC casualties. Subsequent campaigns — the Peshwa's defeat at Koregaon (1 January 1818), the surrender of Bajirao II at Mhow (3 June 1818), the captures of Asirgarh and Trimbakji's Berar — completed the dismantling. The Treaty of Mandsaur (Holkar, January 1818) and the formal extinction of the Peshwa office (June 1818) ended the Maratha Confederacy as a sovereign Indian power. Bajirao II was pensioned at Bithoor (UP) — where his adopted son Nana Sahib would later figure as a 1857 leader.",
+      "date": {
+        "start": "1817-12-21",
+        "end":   "1818-06-03",
+        "precision": "day",
+        "approximate": false,
+        "display": "Mahidpur 21 Dec 1817; Peshwa surrender 3 June 1818"
+      },
+      "location": {
+        "type": "city",
+        "name": "Mahidpur, Sipra river",
+        "region": "Holkar's Indore",
+        "country": "IN",
+        "points": [{ "lat": 23.4910, "lon": 75.6080, "name": "Mahidpur" }]
+      },
+      "era": "colonial",
+      "category": ["military", "political", "colonial-administration"],
+      "figures": ["Lord Hastings", "Sir Thomas Hislop", "Malhar Rao Holkar III", "Bajirao II", "John Malcolm"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Third_Anglo-Maratha_War", "label": "Wikipedia: Third Anglo-Maratha War", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Stewart Gordon, The Marathas 1600–1818 (1993)", "type": "scholarly" },
+        { "label": "John Malcolm, A Memoir of Central India (1823)", "type": "primary" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "first-anglo-afghan-retreat-1842",
+      "title": "First Anglo-Afghan War — retreat from Kabul",
+      "tooltip": "Retreat from Kabul, January 1842 — annihilation of Elphinstone's army",
+      "summary": "Elphinstone's 16,500-strong EIC force was annihilated retreating Kabul to Jalalabad through the passes — one survivor, Dr Brydon, reached Jalalabad alive.",
+      "detail": "The First Anglo-Afghan War (1839–42) was Lord Auckland's pre-emptive intervention in Afghanistan to install Shah Shuja over Dost Mohammed Khan, framed by the Russian-threat anxieties of the Great Game. The Army of the Indus took Kabul in August 1839; Shah Shuja was installed; an EIC garrison of 4,500 troops and ~12,000 camp followers under Elphinstone settled in. By autumn 1841 anti-Shuja Afghan resistance under Akbar Khan (Dost Mohammed's son) had taken Kabul's outskirts. The British envoy William Macnaghten was murdered at a December parley with Akbar. On 6 January 1842 Elphinstone began the withdrawal under safe-conduct guarantees that Akbar's tribal allies did not honour. The 90-mile retreat through the Khurd Kabul, Tezeen, and Jagdalak passes in winter snow saw the column annihilated by sniping, ambush, and exposure. Of ~16,500 who left Kabul, one combatant — assistant surgeon William Brydon — reached Jalalabad on 13 January (about 100 captives plus families were later released). The Army of Retribution returned to Kabul in autumn 1842 to recover prisoners and bazaar-burn the city, then withdrew. The Auckland intervention was a strategic catastrophe and the formative imperial-overreach lesson of the early Victorian Raj.",
+      "date": {
+        "start": "1842-01-06",
+        "end":   "1842-01-13",
+        "precision": "day",
+        "approximate": false,
+        "display": "6–13 January 1842"
+      },
+      "location": {
+        "type": "city",
+        "name": "Khurd Kabul – Jalalabad pass",
+        "region": "Afghanistan",
+        "country": "AF",
+        "points": [{ "lat": 34.4400, "lon": 70.4517, "name": "Jalalabad" }]
+      },
+      "era": "colonial",
+      "category": ["military", "political"],
+      "figures": ["William Elphinstone", "William Macnaghten", "Akbar Khan", "Shah Shuja", "Dost Mohammed Khan", "William Brydon"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/First_Anglo-Afghan_War", "label": "Wikipedia: First Anglo-Afghan War", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "William Dalrymple, Return of a King: The Battle for Afghanistan (2013)", "type": "scholarly" },
+        { "label": "Lady Florentia Sale, Journal of the Disasters in Afghanistan 1841–42 (1843)", "type": "primary" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "battle-of-gujrat-1849",
+      "title": "Battle of Gujrat — Second Anglo-Sikh War closure",
+      "tooltip": "Battle of Gujrat, 21 February 1849 — Hugh Gough defeats the Khalsa Army",
+      "summary": "Hugh Gough defeated the Khalsa Army on the Chenab at Gujrat — annexation of Punjab followed. The last independent indigenous Indian state fell.",
+      "detail": "Ranjit Singh's Sarkar-i-Khalsa unravelled in the seven-year succession bloodletting that followed his 1839 death. The First Anglo-Sikh War (1845–46) ended with the Treaty of Lahore (March 1846) ceding Jullundur Doab and (sold separately to Gulab Singh) Kashmir, but leaving a residual Sikh state under Maharani Jind Kaur's regency for Duleep Singh. The Second Anglo-Sikh War (1848–49) was triggered by the Multan revolt under Diwan Mulraj and joined by Sher Singh Attariwala's Sikh army. After the bloody, indecisive Battle of Chillianwala (13 January 1849) — Sir Hugh Gough's costly assault on the Sikh position that produced ~2,400 EIC casualties to ~3,500 Sikh — Gough reorganised and met the Sikh army at Gujrat on the Chenab on 21 February 1849. The artillery duel and infantry assault routed the Khalsa; ~5,000 Sikh casualties to ~800 EIC. The Sikh forces surrendered at Rawalpindi on 14 March 1849, ceremonially laying down arms with the cry 'Today Ranjit Singh has died.' Dalhousie's annexation proclamation of 29 March 1849 brought the Punjab under EIC sovereignty; Duleep Singh, ten years old, surrendered the Koh-i-Noor and was sent to England under the guardianship of Dr John Login. The Punjab annexation closed the EIC's territorial expansion — the last sovereign indigenous Indian state had fallen.",
+      "date": {
+        "start": "1849-02-21",
+        "end":   "1849-03-29",
+        "precision": "day",
+        "approximate": false,
+        "display": "Gujrat 21 Feb 1849; annexation 29 March 1849"
+      },
+      "location": {
+        "type": "city",
+        "name": "Gujrat (Punjab), Chenab river",
+        "region": "Sarkar-i-Khalsa / Punjab",
+        "country": "PK",
+        "points": [{ "lat": 32.5742, "lon": 74.0789, "name": "Gujrat" }]
+      },
+      "era": "colonial",
+      "category": ["military", "political", "colonial-administration"],
+      "figures": ["Hugh Gough", "Lord Dalhousie", "Sher Singh Attariwala", "Diwan Mulraj", "Duleep Singh", "Jind Kaur"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Second_Anglo-Sikh_War", "label": "Wikipedia: Second Anglo-Sikh War", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Khushwant Singh, A History of the Sikhs vol. II (1966)", "type": "scholarly" },
+        { "label": "J.D. Cunningham, A History of the Sikhs (1849)", "type": "primary" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "third-anglo-burmese-1885",
+      "title": "Third Anglo-Burmese War — annexation of Upper Burma",
+      "tooltip": "Third Anglo-Burmese War, 7–29 November 1885 — annexation of Upper Burma",
+      "summary": "Three-week campaign deposed King Thibaw at Mandalay; Upper Burma was annexed to British India 1 January 1886, completing the EIC-and-Crown absorption of Burma.",
+      "detail": "Britain had taken Lower Burma in two earlier wars (1824–26 Treaty of Yandabo: Arakan and Tenasserim; 1852: Pegu and the Irrawaddy delta). Upper Burma under the Konbaung dynasty remained sovereign until November 1885. The proximate British casus belli was the Bombay Burmah Trading Corporation logging dispute and Burmese moves towards a French commercial-and-military treaty. Lord Dufferin (Viceroy 1884–88) ordered the invasion. Major-General Sir Harry Prendergast's Burma Field Force of 11,000 troops sailed up the Irrawaddy in 55 transports; Mandalay fell on 28 November 1885 with minimal resistance. King Thibaw and Queen Supayalat were deposed and exiled to Ratnagiri (Maharashtra) where Thibaw lived until 1916. Upper Burma was annexed by proclamation 1 January 1886 and added to British India as a province administered from Rangoon. The post-annexation Burmese resistance — the Pacification campaign through 1890, the long Burma underground — would persist through the colonial period; Aung San and the Thirty Comrades' alliance with Japan in 1942 was the long answer. Burma was separated from India under the GOI Act 1935 (effective 1937) and became independent 4 January 1948.",
+      "date": {
+        "start": "1885-11-07",
+        "end":   "1886-01-01",
+        "precision": "day",
+        "approximate": false,
+        "display": "War Nov 1885; annexation 1 Jan 1886"
+      },
+      "location": {
+        "type": "city",
+        "name": "Mandalay (Konbaung capital)",
+        "region": "Upper Burma / British India",
+        "country": "MM",
+        "points": [{ "lat": 21.9588, "lon": 96.0891, "name": "Mandalay" }]
+      },
+      "era": "colonial",
+      "category": ["military", "political", "colonial-administration"],
+      "figures": ["Lord Dufferin", "Harry Prendergast", "King Thibaw", "Queen Supayalat", "Lord Randolph Churchill"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Third_Anglo-Burmese_War", "label": "Wikipedia: Third Anglo-Burmese War", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Thant Myint-U, The Making of Modern Burma (2001)", "type": "scholarly" },
+        { "label": "Sudha Shah, The King in Exile: The Fall of the Royal Family of Burma (2012)", "type": "scholarly" }
+      ],
+      "verified": true
+    }
+  ]
+}

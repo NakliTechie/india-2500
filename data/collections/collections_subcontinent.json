@@ -6,15 +6,136 @@
     {
       "id": "founding-moments-of-modern-india",
       "title": "Founding moments of modern India",
-      "subtitle": "Institutions, orders, and administrative systems whose creation still shapes the subcontinent.",
-      "summary": "Five-century span of foundings — Sher Shah's revenue and road systems in 1540, Akbar's mansabdari in 1577, the Khalsa in 1699, the Indian National Congress in 1885 — each an act of deliberate institution-building that outlasted its founder.",
+      "subtitle": "From the 1857 rebellion to the Constitution — the arc by which a subcontinent of subjects became a nation.",
+      "summary": "1857 was the first rebellion in which Indians from the Doab to the Deccan recognised themselves as a single political 'we'. The Crown takeover of 1858 institutionalised the Raj that the rebellion had ended in fact; the next nine decades — Indian Councils Acts, Congress, Jallianwala, Round Tables, Cabinet Mission, Independence — built the constitutional and political body of modern India, completed in the Constitution of 1950.",
       "members": [
-        { "kind": "event", "id": "sher-shah-reforms-1540" },
-        { "kind": "event", "id": "fatehpur-sikri-founded-1571" },
-        { "kind": "event", "id": "mansabdari-codified-1577" },
-        { "kind": "event", "id": "din-i-ilahi-1582" },
-        { "kind": "event", "id": "khalsa-founded-1699" },
-        { "kind": "event", "id": "inc-founded-1885" }
+        { "kind": "event", "id": "indian-rebellion-1857" },
+        { "kind": "event", "id": "crown-takeover-1858" },
+        { "kind": "event", "id": "indian-councils-act-1861" },
+        { "kind": "event", "id": "inc-founded-1885" },
+        { "kind": "event", "id": "partition-of-bengal-1905" },
+        { "kind": "event", "id": "morley-minto-reforms-1909" },
+        { "kind": "event", "id": "jallianwala-bagh-1919" },
+        { "kind": "event", "id": "goi-act-1919-dyarchy" },
+        { "kind": "event", "id": "non-cooperation-movement-1920" },
+        { "kind": "event", "id": "salt-march-1930" },
+        { "kind": "event", "id": "round-table-conferences-1930-1932" },
+        { "kind": "event", "id": "goi-act-1935-federation" },
+        { "kind": "event", "id": "quit-india-1942" },
+        { "kind": "event", "id": "cabinet-mission-1946" },
+        { "kind": "event", "id": "independence-and-partition-1947" },
+        { "kind": "event", "id": "constitution-adopted-1950" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "european-arrival-on-the-subcontinent",
+      "title": "European arrival on the subcontinent",
+      "subtitle": "Portuguese, Dutch, English, French, Danish — the trading-post network that became the imperial contest.",
+      "summary": "Five European maritime powers reached the Indian coast within 125 years of Vasco da Gama's 1498 Calicut landing. The pattern was the same — factory, then fort, then territory — but the political outcomes diverged sharply: Portuguese Goa held 451 years, Danish Tranquebar 225, French Pondicherry 280, Dutch Coromandel 200, the EIC's English presence one which by 1858 had become the Crown's.",
+      "members": [
+        { "kind": "event", "id": "vasco-da-gama-calicut-1498" },
+        { "kind": "event", "id": "portuguese-goa-conquest-1510" },
+        { "kind": "event", "id": "dutch-pulicat-coromandel-1610" },
+        { "kind": "event", "id": "danish-tranquebar-1620" },
+        { "kind": "event", "id": "bombay-as-dowry-1661" },
+        { "kind": "event", "id": "french-pondicherry-1674" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "eic-ascent-from-trader-to-sovereign",
+      "title": "EIC ascent — from trader to sovereign",
+      "subtitle": "Bombay 1661 to the Doctrine of Lapse — how a trading company became a continental state.",
+      "summary": "The English East India Company, granted its royal charter in 1600, was for its first century one of several European trading companies on the Indian coast. The arc from Bombay-as-Catherine's-dowry through Plassey, Buxar, the Permanent Settlement, the Anglo-Mysore and Anglo-Maratha closures, and the Doctrine of Lapse annexations is the story of how that trader became, by 1856, the paramount power of the subcontinent — and triggered, in 1857, the rebellion that ended it as an institution.",
+      "members": [
+        { "kind": "event", "id": "bombay-as-dowry-1661" },
+        { "kind": "event", "id": "battle-of-plassey-1757" },
+        { "kind": "event", "id": "battle-of-buxar-1764" },
+        { "kind": "event", "id": "permanent-settlement-1793" },
+        { "kind": "event", "id": "treaty-of-seringapatam-1792" },
+        { "kind": "event", "id": "doctrine-of-lapse-satara-1848" },
+        { "kind": "event", "id": "awadh-annexation-1856" },
+        { "kind": "event", "id": "indian-rebellion-1857" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "wars-of-empire-on-indian-soil",
+      "title": "Wars of empire on Indian soil",
+      "subtitle": "Plassey to Mandalay — the set-piece battles that built (and lost) British India.",
+      "summary": "From Plassey 1757 through the Anglo-Mysore, Anglo-Maratha, Anglo-Sikh, Anglo-Burmese, and Anglo-Afghan wars, the EIC and Crown converted commercial presence into continental sovereignty by force. The First Anglo-Afghan War's catastrophic Kabul retreat 1842 was the limit case; Mandalay 1885 the closing campaign.",
+      "members": [
+        { "kind": "event", "id": "battle-of-plassey-1757" },
+        { "kind": "event", "id": "battle-of-wandiwash-1760" },
+        { "kind": "event", "id": "battle-of-buxar-1764" },
+        { "kind": "event", "id": "treaty-of-seringapatam-1792" },
+        { "kind": "event", "id": "battle-of-mahidpur-1817" },
+        { "kind": "event", "id": "first-anglo-afghan-retreat-1842" },
+        { "kind": "event", "id": "battle-of-gujrat-1849" },
+        { "kind": "event", "id": "indian-rebellion-1857" },
+        { "kind": "event", "id": "third-anglo-burmese-1885" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "famines-under-empire",
+      "title": "Famines under empire",
+      "subtitle": "The Bengal famine 1770 to the Bengal famine 1943 — colonial-era mortality on the subcontinent.",
+      "summary": "Famines were endemic on the subcontinent before 1700 and continued to be so under EIC and Crown rule — but the colonial-era famines were structurally distinctive in their administrative response: revenue collection through mortality (1770), Lyttonian Free Trade orthodoxy (1876–78), the Famine Codes (1899–1900), and wartime grain diversion (1943). An estimated 18–25 million died across these four episodes.",
+      "members": [
+        { "kind": "event", "id": "great-bengal-famine-1770" },
+        { "kind": "event", "id": "great-madras-famine-1876-1878" },
+        { "kind": "event", "id": "indian-famine-1899-1900" },
+        { "kind": "event", "id": "bengal-famine-1943" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "land-settlements-of-the-raj",
+      "title": "Land settlements of the Raj",
+      "subtitle": "Permanent Settlement, Ryotwari, Mahalwari — three colonial revenue systems, three rural class structures.",
+      "summary": "The EIC and Crown ran three distinct land-revenue systems across British India: Permanent Settlement (Bengal, Bihar, Orissa, 1793) with zamindars as proprietors and revenue fixed in perpetuity; Ryotwari (Madras, Bombay, from 1820) with the cultivator as direct revenue-payer; Mahalwari (North-Western Provinces, Punjab, from 1822) at the village joint-responsibility level. Each shaped the rural society of its region for two centuries.",
+      "members": [
+        { "kind": "event", "id": "permanent-settlement-1793" },
+        { "kind": "event", "id": "ryotwari-madras-1820" },
+        { "kind": "event", "id": "mahalwari-nwp-1822" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "bengal-renaissance",
+      "title": "The Bengal Renaissance",
+      "subtitle": "Rammohan Roy to Vivekananda — the Calcutta-and-Bengali intellectual current of the colonial century.",
+      "summary": "From Rammohan Roy's Brahmo Sabha (1828) and the campaign against sati to Vivekananda's Chicago address (1893) and the Ramakrishna Mission (1897), the long Bengal Renaissance ran a religious-reformist, women's-rights, vernacular-literary, and pedagogical-modernist programme that re-shaped subcontinental intellectual life and provided much of the cultural ground on which Indian nationalism was built.",
+      "members": [
+        { "kind": "event", "id": "partition-of-bengal-1905" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "the-princely-states-question",
+      "title": "The princely states question",
+      "subtitle": "From Doctrine of Lapse to integration — the 562 princely states between 1848 and 1948.",
+      "summary": "The princely states — 562 of them at Independence — were the unfinished business of British paramountcy. The Doctrine of Lapse annexed eight outright; the post-1858 Crown reasserted paramountcy on its own terms; integration after 1947 took two forms — Patel-Menon's Instruments of Accession for most, Operation Polo and Operation Vijay for Hyderabad and Goa, the unresolved Kashmir question for the remainder.",
+      "members": [
+        { "kind": "event", "id": "doctrine-of-lapse-satara-1848" },
+        { "kind": "event", "id": "awadh-annexation-1856" },
+        { "kind": "event", "id": "indian-rebellion-1857" },
+        { "kind": "event", "id": "crown-takeover-1858" },
+        { "kind": "event", "id": "tripura-manikya-paramountcy-1761" },
+        { "kind": "event", "id": "independence-and-partition-1947" },
+        { "kind": "event", "id": "first-kashmir-war-1947-1948" },
+        { "kind": "event", "id": "operation-polo-1948" },
+        { "kind": "event", "id": "article-370-kashmir-accession-1949" },
+        { "kind": "event", "id": "operation-vijay-goa-1961" }
       ],
       "verified": true
     }
