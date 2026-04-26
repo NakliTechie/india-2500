@@ -2,6 +2,7 @@
   "events_files": [
     "events_1857.json",
     "events_bengal.json",
+    "events_bhakti-sufi.json",
     "events_central_asia.json",
     "events_chotanagpur.json",
     "events_constitutional.json",
@@ -36,6 +37,7 @@
   ],
   "people_files": [
     "people_bengal-renaissance.json",
+    "people_bhakti-sufi-poets.json",
     "people_freedom-fighters.json",
     "people_mughal-emperors.json",
     "people_reformers-and-thinkers.json",

@@ -1,0 +1,105 @@
+{
+  "campaign": "bhakti-sufi",
+  "scope": "Anchor events of the medieval Bhakti and Sufi religious currents on the subcontinent — the Chishti silsila under Moinuddin and Nizamuddin, Chaitanya's Bengal Vaishnav bhakti, the broader devotional movements that re-shaped medieval religious life across regions and confessions.",
+  "updated": "2026-04-26",
+  "events": [
+    {
+      "id": "moinuddin-chishti-ajmer-c1192",
+      "title": "Moinuddin Chishti establishes the Chishti silsila at Ajmer",
+      "tooltip": "Moinuddin Chishti at Ajmer, c. 1192 — Chishti silsila in India",
+      "summary": "Persian Sufi master arrived at Ajmer c. 1192 and established the Chishti silsila — devotional Sufism, sama, open access; the most influential Sufi order.",
+      "detail": "Khwaja Moinuddin Hasan Chishti (1141–1236) was a Persian Sufi master of the Chishti silsila — a devotional order originating at Chisht in Khorasan. He arrived at Lahore (then Ghaznavid) c. 1190, then settled at Ajmer in Rajputana c. 1192, the year of Muhammad Ghori's victory at the Second Battle of Tarain. The Chishti programme — emphasis on sama (devotional music and qawwali), poverty, openness to non-Muslims, refusal of court patronage — proved durably attractive across the Hindu-Muslim religious frontier. His successors (Qutbuddin Bakhtiyar Kaki at Delhi, Fariduddin Ganj-i-Shakar at Pakpattan, Nizamuddin Auliya at Delhi, Nasiruddin Chiragh-i-Dehli) extended the silsila across northern India through the 13th-15th centuries. Ajmer Sharif — his dargah at Ajmer — became one of the most visited subcontinental pilgrimage sites; Akbar walked there from Agra in 1568 after the conquest of Chittor; the Mughal court patronage continued through Aurangzeb. Chishti devotional practice and poetry shaped the broader Bhakti movement's vocabulary; Kabir and the Bhakti poets drew on Chishti precedent.",
+      "date": {
+        "start": "1192-01-01",
+        "end":   "1236-12-31",
+        "precision": "year",
+        "approximate": true,
+        "display": "c. 1192–1236 (Ajmer years)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Ajmer (Ajmer Sharif dargah)",
+        "region": "Rajputana / Delhi Sultanate",
+        "country": "IN",
+        "points": [{ "lat": 26.4499, "lon": 74.6399, "name": "Ajmer Sharif" }]
+      },
+      "era": "early-medieval",
+      "category": ["religious", "cultural"],
+      "figures": ["Moinuddin Chishti", "Qutbuddin Bakhtiyar Kaki"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Moinuddin_Chishti", "label": "Wikipedia: Moinuddin Chishti", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "K.A. Nizami, The Life and Times of Shaikh Farid-u'd-din Ganj-i-Shakar (1955)", "type": "scholarly" },
+        { "label": "Carl W. Ernst, Eternal Garden: Mysticism, History and Politics at a South Asian Sufi Center (1992)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "nizamuddin-auliya-delhi-c1280",
+      "title": "Nizamuddin Auliya at Delhi — Chishti silsila's high apex",
+      "tooltip": "Nizamuddin Auliya (c. 1238–1325) at Delhi — Chishti silsila's apex",
+      "summary": "Nizamuddin Auliya led the Chishti silsila at Delhi for 60 years — Amir Khusrau as disciple, sama-qawwali patronage, court-distance the operating principle.",
+      "detail": "Hazrat Nizamuddin Auliya (c. 1238–1325) was the fourth-generation successor in the Chishti silsila — disciple of Fariduddin Ganj-i-Shakar at Pakpattan, settled at Ghiyaspur (now Nizamuddin) outside Delhi from the 1260s. His sixty-year tenure spanned seven Delhi sultans of the Slave, Khilji, and Tughluq dynasties. The Chishti programme of court-distance was operative: he refused multiple sultanate summonses, accepting only delegated visits. Amir Khusrau — court poet, Persian-language innovator, qawwali pioneer — was his closest disciple; the long Khusrau-Nizamuddin spiritual relationship became one of the iconic devotional friendships of subcontinental religious history. Khusrau died six months after Nizamuddin and was buried in the same dargah complex at Ghiyaspur. The Nizamuddin Auliya dargah remains an active pilgrimage site; the Thursday-night qawwali tradition there is unbroken since the 13th century. The Chishti silsila under Nizamuddin's other disciples (Burhanuddin Gharib at Daulatabad, Sirajuddin Akhi at Bengal) extended to the Deccan and the east in the early 14th century — much of medieval Indian Sufi geography traces back to this Delhi network.",
+      "date": {
+        "start": "1265-01-01",
+        "end":   "1325-04-03",
+        "precision": "year",
+        "approximate": true,
+        "display": "c. 1265–1325 (Ghiyaspur/Nizamuddin years)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Ghiyaspur (Nizamuddin), Delhi",
+        "region": "Delhi Sultanate",
+        "country": "IN",
+        "points": [{ "lat": 28.5921, "lon": 77.2424, "name": "Nizamuddin Dargah" }]
+      },
+      "era": "early-medieval",
+      "category": ["religious", "cultural"],
+      "figures": ["Nizamuddin Auliya", "Amir Khusrau", "Fariduddin Ganj-i-Shakar"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Nizamuddin_Auliya", "label": "Wikipedia: Nizamuddin Auliya", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "K.A. Nizami, The Life and Times of Shaikh Nizam-u'd-din Auliya (1991)", "type": "scholarly" },
+        { "label": "Amir Khusrau, Diwan and Khaza'in al-Futuh (c. 1311)", "type": "primary" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "chaitanya-vaishnav-bengal-1510",
+      "title": "Chaitanya Mahaprabhu launches Bengal Vaishnav bhakti",
+      "tooltip": "Chaitanya Mahaprabhu's Krishna-bhakti movement, Bengal-Puri, 1510s–1534",
+      "summary": "Chaitanya's ecstatic Krishna-bhakti transformed Bengali religious life from the 1510s — sankirtan, the Gaudiya Vaishnav tradition, the Vrindavan-Bengal axis.",
+      "detail": "Chaitanya Mahaprabhu (1486–1534), born Vishvambhara Mishra at Nabadwip in Nadia (Bengal), was the founder of the Gaudiya Vaishnav devotional movement. He took sannyas in 1510 at Katwa under Keshava Bharati, took the name Chaitanya, and from then organised the sankirtan (collective ecstatic devotional song) movement that swept Bengal, Odisha, and the broader east through the 1510s-30s. The Vrindavan-Bengal axis — his six Goswami disciples (Rupa, Sanatana, Jiva, Gopala Bhatta, Raghunatha Bhatta, Raghunatha Dasa) settled at Vrindavan to recover the geography and devotional texts of Krishna's life — became the institutional spine of the movement. Chaitanya himself spent his last 24 years at Puri (1510-1534), associated with the Jagannath temple complex; he died at Puri in 1534 in circumstances that remain devotionally and historiographically debated. The Gaudiya tradition produced the canonical Vaishnav theological texts (the Bhakti Rasamrita Sindhu, the Caitanya Caritamrita), the Bengali devotional music tradition (kirtan, padavali), and the modern ISKCON movement (1966). Among the most influential late-medieval Indian religious movements; Bengal's Hindu cultural identity through to Tagore is substantially shaped by it.",
+      "date": {
+        "start": "1510-01-01",
+        "end":   "1534-06-14",
+        "precision": "year",
+        "approximate": true,
+        "display": "1510–1534 (sannyas to Puri death)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Nabadwip (Bengal) → Puri (Odisha)",
+        "region": "Bengal Sultanate / Gajapati Orissa",
+        "country": "IN",
+        "points": [{ "lat": 19.8047, "lon": 85.8181, "name": "Puri (Jagannath temple)" }]
+      },
+      "era": "sultanate",
+      "category": ["religious", "cultural"],
+      "figures": ["Chaitanya Mahaprabhu", "Rupa Goswami", "Sanatana Goswami", "Keshava Bharati"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Chaitanya_Mahaprabhu", "label": "Wikipedia: Chaitanya Mahaprabhu", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Krishnadasa Kaviraja, Caitanya Caritamrita (c. 1615)", "type": "primary" },
+        { "label": "Tony K. Stewart, The Final Word: The Caitanya Caritamrita and the Grammar of Religious Tradition (2010)", "type": "scholarly" }
+      ],
+      "verified": true
+    }
+  ]
+}

@@ -114,6 +114,20 @@
     },
 
     {
+      "id": "bhakti-and-sufi-currents",
+      "title": "Bhakti and Sufi currents",
+      "subtitle": "Medieval devotional currents — Chishti silsila, Chaitanya's bhakti, Adi Shankara's monism — that re-shaped subcontinental religion across regions and confessions.",
+      "summary": "From Adi Shankara's eighth-century Advaita synthesis through Moinuddin Chishti's Sufi silsila at Ajmer (c. 1192), Nizamuddin Auliya's Chishti apex at Delhi, Chaitanya's Bengal Vaishnav movement (1510s), and the Bhakti poet-mystics — Kabir, Mirabai, Tukaram — the medieval devotional currents re-made subcontinental religious life. The Bhakti-Sufi vocabulary cut across Hindu-Muslim institutional religion and provided the cultural ground on which much modern Indian religious-political identity was later built.",
+      "members": [
+        { "kind": "event", "id": "adi-shankara-c-800" },
+        { "kind": "event", "id": "moinuddin-chishti-ajmer-c1192" },
+        { "kind": "event", "id": "nizamuddin-auliya-delhi-c1280" },
+        { "kind": "event", "id": "chaitanya-vaishnav-bengal-1510" }
+      ],
+      "verified": true
+    },
+
+    {
       "id": "bengal-renaissance",
       "title": "The Bengal Renaissance",
       "subtitle": "Rammohan Roy to Vivekananda — the Calcutta-and-Bengali intellectual current of the colonial century.",

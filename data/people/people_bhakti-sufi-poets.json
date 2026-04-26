@@ -1,0 +1,214 @@
+{
+  "campaign": "bhakti-sufi-poets",
+  "scope": "Major medieval Bhakti poet-mystics — Kabir (c. 1440–1518) the Banaras weaver-poet of Hindu-Muslim synthesis, Mirabai (c. 1498–1547) the Mewar Krishna-bhakta princess, Tukaram (1608–1650) the Deshastha Brahmin Pandharpur Vaishnav.",
+  "updated": "2026-04-26",
+  "people": [
+
+    {
+      "id": "kabir",
+      "name": "Kabir Das",
+      "short_name": "Kabir",
+      "tooltip": "Kabir (c. 1440–1518), Banaras weaver-mystic poet",
+      "summary": "Banaras Julaha (weaver-caste) poet-mystic; nirguni Bhakti devotee; ~3,000 surviving verses; rejected Hindu-Muslim institutional religion equally.",
+      "era": "sultanate",
+      "lifespan": {
+        "born": "1440-01-01",
+        "died": "1518-01-01",
+        "birthplace": { "name": "Banaras (Varanasi)", "country": "IN", "lat": 25.3176, "lon": 82.9739 },
+        "deathplace": { "name": "Maghar, near Gorakhpur", "country": "IN", "lat": 26.7500, "lon": 83.2000 }
+      },
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Kabir", "label": "Wikipedia: Kabir", "type": "wikipedia" }
+      ],
+      "colour": "#5a8a5a",
+      "track": [
+        {
+          "kind": "moment",
+          "id": "kabir-julaha-banaras-1440",
+          "tooltip": "Born to a Julaha (weaver-caste) family at Banaras, c. 1440",
+          "summary": "Born to a Julaha Muslim weaver family at Banaras — caste tradition holds them descended from Hindu converts. The weaver origin centres the verse imagery.",
+          "date": { "start": "1440-01-01", "end": "1440-12-31", "precision": "year", "approximate": true, "display": "c. 1440" },
+          "location": { "name": "Banaras (Varanasi)", "region": "Sharqi Sultanate of Jaunpur", "country": "IN",
+                        "points": [{ "lat": 25.3176, "lon": 82.9739 }] },
+          "note": "Early tradition (Bhaktamal, Anantadas) tells the story of the infant Kabir being found floating on Lahartara pond and adopted by Niru and Nima. The historicity is uncertain; the Julaha-weaver origin is consistent across all early sources. Kabir's verse imagery — the loom, the warp and weft, the cloth of breath — is grounded in the daily craft."
+        },
+        {
+          "kind": "moment",
+          "id": "kabir-ramananda-discipleship-c1465",
+          "tooltip": "Discipleship under Ramananda at Banaras, c. 1465",
+          "summary": "Tradition has Kabir tricking Ramananda into giving him the Ram-mantra. Whether literal or symbolic, the Ramananda-Kabir lineage links him to the Bhakti silsila.",
+          "date": { "start": "1465-01-01", "end": "1470-12-31", "precision": "year", "approximate": true, "display": "c. 1465–1470" },
+          "location": { "name": "Banaras", "region": "Sharqi Sultanate", "country": "IN",
+                        "points": [{ "lat": 25.3176, "lon": 82.9739 }] },
+          "note": "Ramananda was the heterodox Vaishnav teacher who broke with the Sri Sampradaya tradition over caste — admitted disciples regardless of birth. The Julaha-Brahmin discipleship was itself a heretical act in late-15th-century Banaras. Kabir's later teacher-tradition includes 12 named principal disciples across caste and confession."
+        },
+        {
+          "kind": "moment",
+          "id": "kabir-banaras-poetry-1470-1500",
+          "tooltip": "Banaras poetic period — bijak, sakhi, ramaini, c. 1470–1500",
+          "summary": "Three-decade Banaras period producing the corpus — pads (devotional songs), sakhis (couplets), ramainis (rhymed quatrains). Oral recitation; later compilations.",
+          "date": { "start": "1470-01-01", "end": "1500-12-31", "precision": "year", "approximate": true, "display": "c. 1470–1500" },
+          "location": { "name": "Banaras", "region": "Sharqi Sultanate / Lodi Sultanate", "country": "IN",
+                        "points": [{ "lat": 25.3176, "lon": 82.9739 }] },
+          "note": "The corpus is preserved in three principal recensions: the Bijak (Kabir Panthi tradition), the Adi Granth (Sikh tradition, 224 verses included by Guru Arjan), and the Rajasthani Pancavani (Dadu Panth tradition). Total ~3,000 verses with substantial overlap and variation. The textual-critical work on the corpus (Charlotte Vaudeville, Linda Hess) remains foundational."
+        },
+        {
+          "kind": "moment",
+          "id": "kabir-sikander-lodi-controversy-c1495",
+          "tooltip": "Tradition of confrontation with Sikander Lodi, c. 1495",
+          "summary": "Tradition holds Sikander Lodi summoned Kabir for blasphemy; Kabir's anti-orthodox poems offended both the qazi and the pandit establishment of Banaras.",
+          "date": { "start": "1495-01-01", "end": "1495-12-31", "precision": "year", "approximate": true, "display": "c. 1495" },
+          "location": { "name": "Banaras", "region": "Lodi Sultanate", "country": "IN",
+                        "points": [{ "lat": 25.3176, "lon": 82.9739 }] },
+          "note": "The tradition appears in the Anantadas Parichai and the Mughal-era Persian sources. Kabir's poems lampooning Brahminical priesthood ('Pandit, what is your reading? You read all your life and never know yourself') and Islamic orthodoxy ('You who fast and pray and walk to Mecca, what use? Search within') made enemies in both establishments."
+        },
+        {
+          "kind": "moment",
+          "id": "kabir-maghar-death-1518",
+          "tooltip": "Death at Maghar (near Gorakhpur), c. 1518",
+          "summary": "Tradition holds he chose to die at Maghar — orthodox Hindus held it as a place of cursed rebirth — to refuse the Banaras-death moksha bargain.",
+          "date": { "start": "1518-01-01", "end": "1518-12-31", "precision": "year", "approximate": true, "display": "c. 1518" },
+          "location": { "name": "Maghar, near Gorakhpur", "region": "Sharqi Sultanate", "country": "IN",
+                        "points": [{ "lat": 26.7500, "lon": 83.2000 }] },
+          "note": "The Maghar choice is consistent with his lifelong polemic against death-place superstition. Two communities — Hindu and Muslim — both claimed his body; on lifting the shroud they found only flowers, half buried (Muslim), half cremated (Hindu). The story is among the canonical Bhakti hagiographies. The Maghar dargah-and-samadhi complex remains contested between communities."
+        }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "mirabai",
+      "name": "Mirabai",
+      "short_name": "Mirabai",
+      "tooltip": "Mirabai (c. 1498–1547), Mewar Krishna-bhakta princess-poet",
+      "summary": "Princess of Merta and married into the Mewar royal house; renounced court life for Krishna-bhakti; ~1,500 attributed pads in Rajasthani-Brajbhasha.",
+      "era": "mughal",
+      "lifespan": {
+        "born": "1498-01-01",
+        "died": "1547-12-31",
+        "birthplace": { "name": "Kudki, Merta-Pali", "country": "IN", "lat": 26.6700, "lon": 73.9000 },
+        "deathplace": { "name": "Dwarka, Gujarat", "country": "IN", "lat": 22.2394, "lon": 68.9678 }
+      },
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Mirabai", "label": "Wikipedia: Mirabai", "type": "wikipedia" }
+      ],
+      "colour": "#a05a8a",
+      "track": [
+        {
+          "kind": "moment",
+          "id": "mira-merta-childhood-c1500",
+          "tooltip": "Krishna-bhakti as a child at Merta court, c. 1505",
+          "summary": "Granddaughter of Rao Dudaji of Merta; Vaishnav upbringing. Tradition: her Krishna-as-bridegroom devotion dates from a childhood encounter with a sadhu.",
+          "date": { "start": "1505-01-01", "end": "1510-12-31", "precision": "year", "approximate": true, "display": "c. 1505–1510" },
+          "location": { "name": "Merta, Rajputana", "region": "Rao Dudaji's Merta", "country": "IN",
+                        "points": [{ "lat": 26.6480, "lon": 74.0400 }] },
+          "note": "Father Ratan Singh died young; raised by grandfather Rao Dudaji. The childhood Krishna-image story (a sadhu gives the infant Mira a Krishna idol; she takes it as her bridegroom) is the canonical hagiographic origin in Nabhadas's Bhaktamal. Whether literal or symbolic, the Krishna-as-bridegroom devotional frame structured her later poetry."
+        },
+        {
+          "kind": "moment",
+          "id": "mira-marriage-mewar-1516",
+          "tooltip": "Marriage to Bhojraj, heir to Sisodia Rana Sanga of Mewar, c. 1516",
+          "summary": "Married to Bhojraj of the Sisodia royal house at eighteen — Mewar's first political marriage with the Merta Rathores. Bhojraj died c. 1521, possibly at Khanwa.",
+          "date": { "start": "1516-01-01", "end": "1521-12-31", "precision": "year", "approximate": true, "display": "c. 1516–1521" },
+          "location": { "name": "Chittor, Mewar", "region": "Mewar (Rana Sanga)", "country": "IN",
+                        "points": [{ "lat": 24.8887, "lon": 74.6269 }] },
+          "note": "The widowed Mira refused to commit sati or to retreat into widow-seclusion; she continued public Krishna-bhakti devotion at the Chittor court, scandalising the orthodox Sisodia household. Rana Vikramaditya (her brother-in-law) and the queen-mother are the canonical antagonists. The poison-cup story (Vikramaditya sends Mira a cup of poison disguised as charanamrita; she drinks; Krishna saves her) entered hagiography from this period."
+        },
+        {
+          "kind": "moment",
+          "id": "mira-renunciation-merta-1530s",
+          "tooltip": "Returns to Merta and then leaves court life entirely, 1530s",
+          "summary": "Returned to Merta court; the Rathore household also rejected her devotion. By the late 1530s she had left court — a wandering devotee on the bhakti circuit.",
+          "date": { "start": "1530-01-01", "end": "1538-12-31", "precision": "year", "approximate": true, "display": "1530s" },
+          "location": { "name": "Merta → wandering bhakti circuit", "region": "Rajputana", "country": "IN",
+                        "points": [{ "lat": 26.6480, "lon": 74.0400 }] },
+          "note": "The 1535 Mughal-Rajput Bahadur Shah of Gujarat campaign and the Mewar succession instability through the 1530s would have reinforced the political untenability of her Chittor position. The Brindavan visit (where she is said to have engaged Jiva Goswami in theological debate that produced his concession to woman-as-spiritual-equal) is from this period."
+        },
+        {
+          "kind": "moment",
+          "id": "mira-dwarka-death-c1547",
+          "tooltip": "Final years and death at Dwarka, c. 1546–47",
+          "summary": "Tradition has her final years at Dwarka in the Krishna temple; merged with the idol on the day of her death. Dwarka temple still bears her image.",
+          "date": { "start": "1546-01-01", "end": "1547-12-31", "precision": "year", "approximate": true, "display": "c. 1546–1547" },
+          "location": { "name": "Dwarka, Gujarat (Krishna temple)", "region": "Gujarat coast", "country": "IN",
+                        "points": [{ "lat": 22.2394, "lon": 68.9678 }] },
+          "note": "The Mewar court had sent emissaries (per Nabhadas) to bring her back; she refused and went to Dwarka. The merging-with-the-idol story (she walks into the sanctum and is absorbed) is the canonical hagiographic close. Her ~1,500 attributed pads survive in the Bhakti corpus across Rajasthani, Brajbhasha, and Gujarati linguistic strands; the textual-critical question of which are authentically hers remains live (cf. Nancy Martin, Hawley)."
+        }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "tukaram",
+      "name": "Sant Tukaram",
+      "short_name": "Tukaram",
+      "tooltip": "Tukaram (1608–1650), Pandharpur Varkari Vaishnav poet",
+      "summary": "Kunbi-caste Vaishnav poet of Dehu (Pune district); the abhang corpus is the apex of the Marathi Varkari tradition; one of the four 'pillars'.",
+      "era": "mughal",
+      "lifespan": {
+        "born": "1608-01-01",
+        "died": "1650-12-31",
+        "birthplace": { "name": "Dehu, Pune district", "country": "IN", "lat": 18.7530, "lon": 73.7400 },
+        "deathplace": { "name": "Dehu, Pune district", "country": "IN", "lat": 18.7530, "lon": 73.7400 }
+      },
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Tukaram", "label": "Wikipedia: Tukaram", "type": "wikipedia" }
+      ],
+      "colour": "#b85a40",
+      "track": [
+        {
+          "kind": "moment",
+          "id": "tuka-famine-loss-c1630",
+          "tooltip": "1630 Deccan famine — household devastation",
+          "summary": "The 1630–32 Deccan famine took his first wife, son, and substantial part of the family land at Dehu. The crisis-and-loss is the canonical biographical hinge.",
+          "date": { "start": "1630-01-01", "end": "1632-12-31", "precision": "year", "approximate": true, "display": "1630–1632" },
+          "location": { "name": "Dehu, Maharashtra", "region": "Mughal Deccan", "country": "IN",
+                        "points": [{ "lat": 18.7530, "lon": 73.7400 }] },
+          "note": "The 1630–32 Shah Jahan-era Deccan famine that killed an estimated 7.4 million in Gujarat extended into Maharashtra; Dehu was on the famine line. Tukaram's biographical accounts (Mahipati's Bhaktalilamrita) date his renunciation-and-bhakti turn from this disaster. The destitution he wrote about thereafter was lived experience."
+        },
+        {
+          "kind": "moment",
+          "id": "tuka-bhandara-vision-c1633",
+          "tooltip": "Vithoba vision at Bhandara hill, c. 1633",
+          "summary": "Solitary fast on the Bhandara hill above Dehu produced the vision-experience that anchored his abhang composition for the next 17 years.",
+          "date": { "start": "1633-01-01", "end": "1633-12-31", "precision": "year", "approximate": true, "display": "c. 1633" },
+          "location": { "name": "Bhandara hill, near Dehu", "region": "Mughal Deccan", "country": "IN",
+                        "points": [{ "lat": 18.7700, "lon": 73.7300 }] },
+          "note": "The Vithoba (Vitthal of Pandharpur) vision is the canonical Sant tradition mystical-encounter formula — Jnaneshwar at Alandi, Namdev at Pandharpur, Eknath at Paithan all have parallel hill-or-temple vision moments. The Tukaram poems date from after this experience: ~5,000 abhangs in the Marathi devotional corpus, the longest single-author body in the Varkari tradition."
+        },
+        {
+          "kind": "moment",
+          "id": "tuka-rameshwar-bhatt-controversy-c1640",
+          "tooltip": "Brahmin orthodox attack — manuscripts thrown in the Indrayani, c. 1640",
+          "summary": "Rameshwar Bhatt led a Brahmin orthodox petition; ordered Tukaram's manuscripts thrown in the Indrayani river. Tradition: they surfaced after 13 days.",
+          "date": { "start": "1640-01-01", "end": "1640-12-31", "precision": "year", "approximate": true, "display": "c. 1640" },
+          "location": { "name": "Indrayani river at Dehu", "region": "Mughal Deccan", "country": "IN",
+                        "points": [{ "lat": 18.7530, "lon": 73.7400 }] },
+          "note": "Rameshwar Bhatt was the local Wagholi Brahmin orthodox authority; the petition objected to a Kunbi-caste Sudra composing Marathi-language devotional verse on Sanskrit theological themes. The manuscripts-resurfacing story enters Mahipati and the Varkari hagiographic tradition; Rameshwar later becomes Tukaram's disciple. The episode is the canonical case of orthodox-Brahmin opposition to vernacular Bhakti and its eventual capitulation."
+        },
+        {
+          "kind": "moment",
+          "id": "tuka-shivaji-encounter-1649",
+          "tooltip": "Encounter with Shivaji at Lohgad, c. 1649",
+          "summary": "Tradition has Shivaji visiting Dehu c. 1649 as a young Maratha chieftain; received Tukaram's blessing and returned to politics, refusing renunciation.",
+          "date": { "start": "1649-01-01", "end": "1649-12-31", "precision": "year", "approximate": true, "display": "c. 1649" },
+          "location": { "name": "Dehu, near Lohgad", "region": "Maratha territory", "country": "IN",
+                        "points": [{ "lat": 18.7530, "lon": 73.7400 }] },
+          "note": "Shivaji was nineteen, in the early phase of his Sahyadri fort-capture campaign (Torna 1646, Rajgad 1648). The visit is a canonical Maratha-tradition encounter — the political founder seeks the spiritual sanction. Whether literal or post hoc, the Tukaram-Shivaji affirmation became central to the Maratha state's later ideological self-presentation."
+        },
+        {
+          "kind": "moment",
+          "id": "tuka-vaikuntha-departure-1650",
+          "tooltip": "Disappearance from Dehu — 'departure to Vaikuntha', 1650",
+          "summary": "Tradition has him taken bodily to Vaikuntha by Vithoba's vimana; Varkari accounts give 9 March 1650. No body, no death-rites — disappearance is the close.",
+          "date": { "start": "1650-03-09", "end": "1650-03-09", "precision": "day", "approximate": true, "display": "c. 9 March 1650" },
+          "location": { "name": "Dehu, Indrayani river bank", "region": "Mughal Deccan", "country": "IN",
+                        "points": [{ "lat": 18.7530, "lon": 73.7400 }] },
+          "note": "The bodily-ascension framing is unusual in Sant Marathi tradition (most other Sants died documented natural deaths). Modern scholarly speculation has included murder, suicide, or political escape — none with documentary support. The Dehu shrine remains the Varkari tradition's principal pilgrimage site after Pandharpur; the annual Wari procession from Dehu and Alandi to Pandharpur continues unbroken since the seventeenth century."
+        }
+      ],
+      "verified": true
+    }
+
+  ]
+}
