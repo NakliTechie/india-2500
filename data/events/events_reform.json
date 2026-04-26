@@ -1,0 +1,146 @@
+{
+  "campaign": "reform",
+  "scope": "Nineteenth- and early-twentieth-century reform-era thought and writing — Brahmo Samaj, women's reform, Hindu universalism, Bengal Renaissance, anti-caste movements. Seeded with first-person works by Rammohan Roy, Pandita Ramabai, Vivekananda, and Tagore.",
+  "updated": "2026-04-26",
+  "events": [
+    {
+      "id": "rammohan-roy-tuhfat-1803",
+      "title": "Rammohan Roy writes Tuhfat-ul-Muwahhidin",
+      "tooltip": "Rammohan Roy publishes 'A Gift to Monotheists', Murshidabad, 1803",
+      "summary": "Rammohan Roy's first published work — a Persian critique of polytheism prefiguring the Brahmo Samaj's rationalist-monotheist framework two decades later.",
+      "detail": "At thirty-one, working as a Persian-language clerk for the East India Company at Murshidabad, Rammohan Roy published Tuhfat-ul-Muwahhidin (Persian, with an Arabic preface) — 'A Gift to Monotheists'. The pamphlet attacks polytheism and image-worship across religions, drawing on Islamic monotheist arguments and rationalist philosophy to challenge the orthodoxies of his Bengali Brahmin background. Roy had received a thorough Persian-Arabic education at Patna and a Sanskrit one at Banaras; the Tuhfat is the first text in which an Indian thinker engages publicly and in print with comparative religion on rationalist grounds. The argumentative framework — universal monotheism, scripture-as-text-not-revelation, reason as final arbiter — anticipates the Brahmo Samaj he would found in Calcutta in 1828. Among the foundational documents of modern Indian religious reform.",
+      "date": {
+        "start": "1803",
+        "end":   "1803",
+        "precision": "year",
+        "approximate": false,
+        "display": "1803 (Murshidabad)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Murshidabad",
+        "region": "Bengal",
+        "country": "IN",
+        "points": [{ "lat": 24.1797, "lon": 88.2755, "name": "Murshidabad" }]
+      },
+      "era": "colonial",
+      "category": ["reform", "religious", "cultural"],
+      "figures": ["Rammohan Roy"],
+      "tags": ["memoir"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Ram_Mohan_Roy", "label": "Wikipedia: Ram Mohan Roy", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Rammohan Roy, Tuhfat-ul-Muwahhidin (1803; Eng. trans. Obaidullah El Obaide, 1889)", "type": "primary" },
+        { "label": "Bruce Carlisle Robertson, Raja Rammohan Ray: The Father of Modern India (1995)", "type": "scholarly" },
+        { "label": "Ajit Kumar Ray, The Religious Ideas of Rammohun Roy (1976)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "pandita-ramabai-high-caste-1887",
+      "title": "Pandita Ramabai writes The High-Caste Hindu Woman",
+      "tooltip": "Pandita Ramabai publishes The High-Caste Hindu Woman, Philadelphia, 1887",
+      "summary": "Written during her US lecture tour, Ramabai's English attack on enforced widowhood was funded by US donors and seeded Sharada Sadan in Pune.",
+      "detail": "Pandita Ramabai (1858–1922) wrote The High-Caste Hindu Woman during her American lecture tour of 1886–88, published Philadelphia 1887, dedicated to Frances Willard of the Women's Christian Temperance Union. The 117-page book attacks the constrained life of upper-caste Hindu widows — child marriage, enforced widowhood, denial of literacy, ritual seclusion — written in English for an American audience whose donations would fund her work in India. Ten US states organised Ramabai Circles pledging $30,000 over ten years. She returned to India 1889, founded Sharada Sadan first at Bombay then at Pune, eventually moving to Mukti Mission at Kedgaon (1898) which sheltered famine-orphaned girls and child widows. The book's address-to-foreigners drew predictable backlash from Indian reformers including Tilak; her conversion to Christianity in 1883 had already separated her from the orthodox reform mainstream.",
+      "date": {
+        "start": "1887",
+        "end":   "1887",
+        "precision": "year",
+        "approximate": false,
+        "display": "1887 (Philadelphia; Sharada Sadan founded Pune 1889)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Pune (Sharada Sadan, after publication)",
+        "region": "Bombay Presidency",
+        "country": "IN",
+        "points": [{ "lat": 18.5204, "lon": 73.8567, "name": "Pune" }]
+      },
+      "era": "colonial",
+      "category": ["reform", "cultural", "religious"],
+      "figures": ["Pandita Ramabai", "Frances Willard"],
+      "tags": ["memoir"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Pandita_Ramabai", "label": "Wikipedia: Pandita Ramabai", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Pandita Ramabai, The High-Caste Hindu Woman (Philadelphia, 1887)", "type": "primary" },
+        { "label": "Meera Kosambi (ed.), Pandita Ramabai's American Encounter (2003)", "type": "scholarly" },
+        { "label": "Uma Chakravarti, Rewriting History: The Life and Times of Pandita Ramabai (1998)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "vivekananda-discourses-1893-1897",
+      "title": "Vivekananda's Chicago addresses and Indian lectures",
+      "tooltip": "Vivekananda's first-person discourses, Chicago 1893 to Almora 1897",
+      "summary": "From the 1893 Parliament of Religions to the 1897 'My Plan of Campaign' lectures at Madras, Vivekananda's transcribed speeches reframed Vedanta as universal.",
+      "detail": "Vivekananda's first-person public discourse begins on 11 September 1893 at the Parliament of the World's Religions in Chicago — the 'Sisters and Brothers of America' address — and continues through the 1893–95 American and English tours and his return-to-India lecture circuit from January 1897 (Colombo to Almora, the 'My Plan of Campaign' speeches at Madras). The talks were transcribed by Goodwin and Marie Halliboi, edited by Saradananda and Nivedita, and published in the nine-volume Complete Works. Together they are the rhetorical foundation of modern Hindu universalism — Vedanta framed not as one Indian tradition among others but as the metaphysical adequate to a globalised world, with the corollary that Indian civilisational confidence required no apology. Vivekananda founded Belur Math near Calcutta in 1899 to institutionalise the work, and died there in 1902, aged thirty-nine.",
+      "date": {
+        "start": "1893-09-11",
+        "end":   "1897-06-30",
+        "precision": "month",
+        "approximate": true,
+        "display": "11 September 1893 (Chicago) – 1897 (return-to-India lectures)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Calcutta (and lecture circuit Colombo–Almora)",
+        "region": "Bengal",
+        "country": "IN",
+        "points": [{ "lat": 22.5726, "lon": 88.3639, "name": "Calcutta" }]
+      },
+      "era": "colonial",
+      "category": ["religious", "cultural", "reform"],
+      "figures": ["Swami Vivekananda", "Sister Nivedita", "Ramakrishna Paramahamsa"],
+      "tags": ["memoir"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Swami_Vivekananda", "label": "Wikipedia: Swami Vivekananda", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "The Complete Works of Swami Vivekananda (9 vols., Advaita Ashrama)", "type": "primary" },
+        { "label": "Swami Nikhilananda, Vivekananda: A Biography (1953)", "type": "scholarly" },
+        { "label": "Amiya P. Sen, Swami Vivekananda (Oxford India Short Introductions, 2010)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "tagore-jibansmriti-1912",
+      "title": "Tagore writes Jibansmriti / Reminiscences",
+      "tooltip": "Tagore publishes Jibansmriti (Reminiscences), Calcutta, 1912",
+      "summary": "At fifty, the year before the Nobel, Tagore publishes a Bengali memoir of childhood and youth at Jorasanko — inner life over public events.",
+      "detail": "Rabindranath Tagore wrote Jibansmriti at fifty, the year before he won the Nobel Prize for Literature (1913). Published in Bengali in 1912 (English translation as My Reminiscences in 1917, his own), the book is a memoir of childhood and youth at the Jorasanko mansion in Calcutta — the unusually permissive Tagore household, the Brahmo Samaj milieu his grandfather Dwarkanath and father Debendranath had built, his early reading of English and Sanskrit literature, his time at Brighton and London (1878–80), and the 1884 suicide of his sister-in-law Kadambari Devi which would mark his work for decades. Unlike most Indian autobiographies of the period, Jibansmriti is centred on inner life — emotional and aesthetic formation rather than political event. Among the foundational texts of modern Bengali memoir, and a counterweight in Tagore's own corpus to the political polemics he would write after Jallianwala (1919) and around Gandhi's swadeshi movement.",
+      "date": {
+        "start": "1912",
+        "end":   "1912",
+        "precision": "year",
+        "approximate": false,
+        "display": "1912 (Bengali; English trans. 1917)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Jorasanko Thakur Bari, Calcutta",
+        "region": "Bengal",
+        "country": "IN",
+        "points": [{ "lat": 22.5859, "lon": 88.3737, "name": "Jorasanko Thakur Bari" }]
+      },
+      "era": "colonial",
+      "category": ["cultural"],
+      "figures": ["Rabindranath Tagore", "Debendranath Tagore", "Kadambari Devi"],
+      "tags": ["memoir"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Rabindranath_Tagore", "label": "Wikipedia: Rabindranath Tagore", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Rabindranath Tagore, Jibansmriti (1912; Eng. trans. by the author as My Reminiscences, 1917)", "type": "primary" },
+        { "label": "Krishna Dutta & Andrew Robinson, Rabindranath Tagore: The Myriad-Minded Man (1995), ch. 12", "type": "scholarly" },
+        { "label": "Sabyasachi Bhattacharya, Rabindranath Tagore: An Interpretation (2011)", "type": "scholarly" }
+      ],
+      "verified": true
+    }
+  ]
+}

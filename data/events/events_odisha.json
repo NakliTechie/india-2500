@@ -1,0 +1,41 @@
+{
+  "campaign": "odisha",
+  "scope": "Odisha events — temple traditions, Eastern Ganga and Suryavamsi successions, Paika rebellion, regional first-person sources. Seeded with the Madala Panji.",
+  "updated": "2026-04-26",
+  "events": [
+    {
+      "id": "madala-panji-jagannath-chronicles",
+      "title": "Madala Panji: Jagannath temple chronicles",
+      "tooltip": "Madala Panji compilation, Jagannath temple, Puri, c. 16th c. onward",
+      "summary": "Multi-generational palm-leaf chronicle of the Jagannath temple at Puri — Odia institutional first-person record across four centuries.",
+      "detail": "The Madala Panji is the cumulative chronicle of the Jagannath temple at Puri, kept by hereditary Karana scribes. Tradition traces it to the reign of Anantavarman Chodaganga (12th century); surviving palm-leaf manuscripts mostly date from the 16th century onward, after the Suryavamsi-era institutional consolidation and Akbar's general Mansingh's intervention in temple affairs (1592). Written in Odia, the Panji records royal patronage, festival calendars (Rath Yatra, Snana Purnima), Bhoga offerings, ritual schedules, daily temple administration, and political events affecting Puri — the Mughal-Maratha-British contests for temple control across the 17th–19th centuries. Unlike court chronicles spoken from a king's voice, the Madala Panji is institutional first-person — the temple speaking for itself across ruling dynasties. Modern editing began under Hunter (1872) and has continued through Manmath Nath Das, Krushna Chandra Panigrahi, and others.",
+      "date": {
+        "start": "1568",
+        "end":   "1900",
+        "precision": "century",
+        "approximate": true,
+        "display": "c. 16th century onward (extant manuscripts; tradition older)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Jagannath Temple, Puri",
+        "region": "Odisha",
+        "country": "IN",
+        "points": [{ "lat": 19.8047, "lon": 85.8181, "name": "Jagannath Temple, Puri" }]
+      },
+      "era": "mughal",
+      "category": ["religious", "cultural"],
+      "figures": ["Karana scribes", "Mansingh I"],
+      "tags": ["memoir"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Madala_Panji", "label": "Wikipedia: Madala Panji", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Madala Panji (ed. Krushna Chandra Panigrahi, Utkal University, 1955)", "type": "primary" },
+        { "label": "Hermann Kulke, Kings and Cults: State Formation and Legitimation in India and Southeast Asia (1993), ch. on Jagannath", "type": "scholarly" },
+        { "label": "Anncharlott Eschmann, Hermann Kulke, G.C. Tripathi (eds.), The Cult of Jagannath and the Regional Tradition of Orissa (1978)", "type": "scholarly" }
+      ],
+      "verified": true
+    }
+  ]
+}

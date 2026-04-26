@@ -143,6 +143,44 @@
     },
 
     {
+      "id": "baburnama-composed-1494-1530",
+      "title": "Babur composes the Baburnama",
+      "tooltip": "Babur writes the Baburnama across his life, completed Agra c. 1530",
+      "summary": "The only surviving Timurid royal autobiography. Written in Chagatai Turkish across thirty-five years, ending unfinished at Babur's death in Agra.",
+      "detail": "Babur began writing the Vaqai (later known as the Baburnama) in his late teens and continued sporadically through his Hindu Kush exile, the Kabul years, and the Hindustan campaign — a thirty-five-year arc. Composed in Chagatai Turkish, the work has two long surviving stretches (1494–1508, 1519–1529) with a gap of unknown cause in the middle. The candour is what distinguishes it: Babur describes his own defeats, depressions, drinking bouts, and political miscalculations in the same plain register as his victories. Translated into Persian under Akbar by Abdul Rahim Khan-i-Khanan in 1589, becoming the foundational text of Mughal court historiography. Modern scholarly translations include those of Annette Beveridge (1922) and Wheeler Thackston (1996). Among the few honest royal autobiographies in any pre-modern tradition.",
+      "date": {
+        "start": "1494",
+        "end":   "1530",
+        "precision": "year",
+        "approximate": true,
+        "display": "c. 1494–1530 (Persian translation 1589)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Agra (final manuscript)",
+        "region": "Doab",
+        "country": "IN",
+        "points": [{ "lat": 27.1767, "lon": 78.0081, "name": "Agra" }]
+      },
+      "era": "mughal",
+      "category": ["cultural", "political"],
+      "figures": ["Babur", "Abdul Rahim Khan-i-Khanan"],
+      "tags": ["memoir"],
+      "caused_by": [
+        { "id": "babur-loses-samarkand-1501", "gloss": "The 1501 loss of Samarkand is the formative defeat the Baburnama returns to repeatedly — the wound that shaped a lifetime of self-examination in writing." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Baburnama", "label": "Wikipedia: Baburnama", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Wheeler M. Thackston (trans.), The Baburnama: Memoirs of Babur, Prince and Emperor (1996)", "type": "primary" },
+        { "label": "Stephen F. Dale, The Garden of the Eight Paradises: Bābur and the Culture of Empire (2004)", "type": "scholarly" },
+        { "label": "Annette Beveridge (trans.), The Bābur-nāma in English (1922)", "type": "primary" }
+      ],
+      "verified": true
+    },
+
+    {
       "id": "second-battle-of-panipat-1556",
       "title": "Second Battle of Panipat",
       "tooltip": "Bairam Khan defeats Hemu at Panipat, 1556",
@@ -373,6 +411,82 @@
       ],
       "sources": [
         { "label": "Satish Chandra, Medieval India — Part Two (1999)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "abul-fazl-akbarnama-1590",
+      "title": "Abu'l-Fazl writes the Akbarnama",
+      "tooltip": "Abu'l-Fazl writes the Akbarnama at the Mughal court, 1590–1602",
+      "summary": "Three-volume Persian court history of Akbar's reign — including the Ain-i-Akbari, the most important administrative source for Mughal India.",
+      "detail": "Akbar commissioned the Akbarnama from his closest confidant Abu'l-Fazl in 1590; the first volume (Timur to Humayun, the foundation history) was presented at court in 1596, the second (Akbar's reign) followed, and the third — the Ain-i-Akbari, an administrative gazetteer covering revenue, mansab ranks, ritual, and provincial geography — remains the single richest source for Mughal administrative history. Persian, in the elaborated court register Abu'l-Fazl helped codify. The work is unabashedly partisan — it constructs the case for Akbar's sulh-i-kul (universal peace) doctrine and the legitimacy of Mughal imperial sovereignty over its predecessors. Abu'l-Fazl was assassinated near Narwar in 1602 on the orders of Prince Salim (later Jahangir); the work was completed by his successors. Abdul Rahim Khan-i-Khanan supervised the chronicle's continuation under Jahangir.",
+      "date": {
+        "start": "1590",
+        "end":   "1602",
+        "precision": "year",
+        "approximate": false,
+        "display": "1590–1602 (Abu'l-Fazl killed before completion)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Agra (Mughal court)",
+        "region": "Doab",
+        "country": "IN",
+        "points": [{ "lat": 27.1767, "lon": 78.0081, "name": "Agra" }]
+      },
+      "era": "mughal",
+      "category": ["cultural", "political"],
+      "figures": ["Abu'l-Fazl", "Akbar", "Salim (Jahangir)"],
+      "tags": ["memoir"],
+      "caused_by": [
+        { "id": "akbar-coronation-1556", "gloss": "Akbar's reign, in its consolidated late phase, demanded the official chronicle that would frame his sulh-i-kul ideology for posterity; the Akbarnama is the case Akbar wanted made for himself." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Akbarnama", "label": "Wikipedia: Akbarnama", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Abu'l-Fazl, Akbarnama (3 vols.; trans. H. Beveridge, Asiatic Society of Bengal, 1907–1939)", "type": "primary" },
+        { "label": "Abu'l-Fazl, Ain-i-Akbari (trans. H. Blochmann & H.S. Jarrett, 1873–1894)", "type": "primary" },
+        { "label": "Iqtidar Alam Khan, Akbar and His Age (1999)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "jahangir-tuzuk-1605-1624",
+      "title": "Jahangir writes the Tuzuk-i-Jahangiri",
+      "tooltip": "Jahangir writes the Tuzuk-i-Jahangiri, court memoir, 1605–1624",
+      "summary": "Mughal emperor's first-person memoir kept across nineteen regnal years — court politics, opium and wine, naturalism, the European travelers, the painters.",
+      "detail": "Jahangir began the Tuzuk-i-Jahangiri (also Jahangirnama) on his accession in November 1605 and continued it personally until 1624, when ill-health forced him to delegate. Persian. The memoir is more candid than any Mughal court chronicle — Jahangir records his addictions to opium and wine, his griefs (especially over his son Khusrau's rebellion and the loss of Anarkali), his fascination with painting (the Mughal school's apex falls in his reign), his observations of nature (he was a serious naturalist, dissecting birds, recording new species, weighing items obsessively), and his meetings with Europeans including Sir Thomas Roe and the Jesuits. Continuation by Mutamid Khan and Muhammad Hadi extended the chronicle to Jahangir's death (1627). The Tuzuk is rare among Mughal works in being directly first-person and deliberately personal rather than dynastic.",
+      "date": {
+        "start": "1605-11",
+        "end":   "1624-12",
+        "precision": "month",
+        "approximate": false,
+        "display": "November 1605 – December 1624 (continued posthumously)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Agra (Mughal court; Jahangir traveled extensively)",
+        "region": "Doab",
+        "country": "IN",
+        "points": [{ "lat": 27.1767, "lon": 78.0081, "name": "Agra" }]
+      },
+      "era": "mughal",
+      "category": ["cultural", "political"],
+      "figures": ["Jahangir", "Mutamid Khan", "Muhammad Hadi"],
+      "tags": ["memoir"],
+      "caused_by": [
+        { "id": "akbar-death-1605", "gloss": "Jahangir began the Tuzuk on his accession after Akbar's death — the memoir is the first conscious act of his reign, framing his rule against his father's." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Tuzuk-e-Jahangiri", "label": "Wikipedia: Tuzuk-i-Jahangiri", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Jahangir, The Jahangirnama: Memoirs of Jahangir, Emperor of India (trans. Wheeler M. Thackston, 1999)", "type": "primary" },
+        { "label": "Lisa Balabanlilar, Imperial Identity in the Mughal Empire (2012), ch. 4", "type": "scholarly" },
+        { "label": "Corinne Lefèvre, 'Recovering a Missing Voice from Mughal India: The Imperial Discourse of Jahangir', Journal of the Economic and Social History of the Orient 50:4 (2007)", "type": "scholarly" }
       ],
       "verified": true
     },

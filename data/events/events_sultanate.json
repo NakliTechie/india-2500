@@ -1,0 +1,41 @@
+{
+  "campaign": "sultanate",
+  "scope": "Delhi Sultanate events, c. 1206–1526. Seeded with the Tarikh-i Firuz Shahi memoir; Ghurid through Lodi events to follow.",
+  "updated": "2026-04-26",
+  "events": [
+    {
+      "id": "barani-tarikh-firuz-shahi-1357",
+      "title": "Ziauddin Barani writes Tarikh-i Firuz Shahi",
+      "tooltip": "Barani writes Tarikh-i Firuz Shahi at Delhi, c. 1357",
+      "summary": "At seventy, exiled and impoverished after Muhammad bin Tughlaq's death, Barani writes the most opinionated chronicle of the Delhi Sultanate.",
+      "detail": "Ziauddin Barani spent seventeen years as nadim (court companion) to Muhammad bin Tughlaq before falling from favour after the sultan's death in 1351. Stripped of office and lands, in his late sixties he wrote the Tarikh-i Firuz Shahi (c. 1357), a Persian chronicle of the Delhi Sultanate from Balban's accession (1266) through Firuz Shah Tughlaq's reign. The text is reactionary in argument — Barani believed the older Turkic-Persian aristocracy should govern, against Muhammad bin Tughlaq's promotion of converts and lower-caste men — and extraordinarily candid as autobiography of an elite class watching its world dissolve. Read alongside his Fatawa-i Jahandari (a treatise on kingship), the Tarikh is the most ideologically explicit Sultanate text. Modern historians use it both as source and as window into 14th-century elite anxieties.",
+      "date": {
+        "start": "1357",
+        "end":   "1357",
+        "precision": "year",
+        "approximate": true,
+        "display": "c. 1357"
+      },
+      "location": {
+        "type": "city",
+        "name": "Delhi",
+        "region": "Delhi Sultanate",
+        "country": "IN",
+        "points": [{ "lat": 28.6139, "lon": 77.2090, "name": "Delhi" }]
+      },
+      "era": "sultanate",
+      "category": ["cultural", "political"],
+      "figures": ["Ziauddin Barani", "Firuz Shah Tughlaq", "Muhammad bin Tughlaq"],
+      "tags": ["memoir"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Ziauddin_Barani", "label": "Wikipedia: Ziauddin Barani", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Ziauddin Barani, Tarikh-i Firuz Shahi (ed. Sayyid Ahmad Khan, 1862; partial Eng. trans. H.M. Elliot, History of India as Told by Its Own Historians, vol. III)", "type": "primary" },
+        { "label": "Mohammad Habib & Khaliq Ahmad Nizami, A Comprehensive History of India, Vol. V: The Delhi Sultanate (1970), ch. on historiography", "type": "scholarly" },
+        { "label": "Peter Hardy, Historians of Medieval India (1960), ch. 2", "type": "scholarly" }
+      ],
+      "verified": true
+    }
+  ]
+}

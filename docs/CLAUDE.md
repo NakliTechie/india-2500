@@ -23,10 +23,10 @@ The boundary rule for any India map: **Datameet, never Natural Earth or world-at
 ├── .gitignore                    datameet/, package/, .claude/, tests/artifacts/
 │
 ├── data/
-│   ├── events/events_*.json           43 events (independence, mughal, sur, central-asia)
+│   ├── events/events_*.json           61 events across 10 campaign files
 │   ├── threads/threads_*.json         2 threads
 │   ├── people/people_*.json           6 people
-│   └── collections/collections_*.json 2 collections
+│   └── collections/collections_*.json 3 collections
 │
 ├── validators/
 │   ├── validate_events.py        schema + cross-reference + PIP + tag format
@@ -249,9 +249,11 @@ Project-specific principles that should outlive any single conversation (like th
 | `validate_events.py` | schema + cross-reference + PIP for events |
 | `validate_threads.py` | schema + event_id resolution for threads |
 | `validate_people.py` | schema + event_id resolution + PIP for people |
+| `validate_collections.py` | schema + member resolution (event id OR tag selector) |
 | `render_test_v2.py` | shift-click pins → right panel content |
 | `render_test_popover.py` | popover system, dodge math, relation cards (8 checks) |
 | `render_test_zoom.py` | viewBox manipulation, cursor anchor, button limits (8 checks) |
 | `render_test_people.py` | full People UI: pills, tracks, off-map table, popovers, mutual exclusion (10 checks) |
+| `render_test_collections.py` | full Collections UI: pills, member resolution, tag selectors (13 checks) |
 
-Total: 3 validators + 4 render tests = 7. CI runs all of them on every PR.
+Total: 4 validators + 5 render tests = 9. CI runs all of them on every PR.

@@ -1,0 +1,41 @@
+{
+  "campaign": "south-india",
+  "scope": "South Indian events — Vijayanagara, Mysore Wodeyars and Tipu, Anglo-Mysore wars, Travancore, Madras Presidency. Seeded with Tipu's Khwabnama; substantial expansion planned.",
+  "updated": "2026-04-26",
+  "events": [
+    {
+      "id": "tipu-khwabnama-1786",
+      "title": "Tipu Sultan's Khwabnama (Book of Dreams)",
+      "tooltip": "Tipu Sultan records 37 dreams, Srirangapatna, 1786–1798",
+      "summary": "Tipu's personal Persian record of 37 dreams across twelve years — intimate, religiously freighted, never intended for public reading.",
+      "detail": "Tipu Sultan kept a small octavo manuscript at Srirangapatna in which he recorded dreams in his own hand, in Persian, between 1786 and 1798 — thirty-seven entries across twelve years. Each is dated and most are interpreted, often referencing military prospects or divine sanction for ongoing campaigns against the Marathas, the Nizam, and the East India Company. The manuscript was discovered in his bedchamber after his death at the British storming of Srirangapatna on 4 May 1799 and deposited in the Mysore palace records. Unlike Mughal court chronicles or formal autobiographies, the Khwabnama is utterly private — a ruler's interior religious life captured without performance. Mahmud Husain published a partial English translation in 1957 (The Dreams of Tipu Sultan) from the Calcutta manuscript. Among the few first-person dream-records by a sovereign anywhere in 18th-century world.",
+      "date": {
+        "start": "1786",
+        "end":   "1798",
+        "precision": "year",
+        "approximate": false,
+        "display": "1786–1798 (37 entries; manuscript captured 1799)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Srirangapatna, Kingdom of Mysore",
+        "region": "Karnataka",
+        "country": "IN",
+        "points": [{ "lat": 12.4109, "lon": 76.7036, "name": "Srirangapatna" }]
+      },
+      "era": "colonial",
+      "category": ["religious", "cultural", "political"],
+      "figures": ["Tipu Sultan"],
+      "tags": ["memoir"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Tipu_Sultan", "label": "Wikipedia: Tipu Sultan", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Mahmud Husain, The Dreams of Tipu Sultan (Pakistan Historical Society, 1957)", "type": "primary" },
+        { "label": "Kate Brittlebank, Tipu Sultan's Search for Legitimacy: Islam and Kingship in a Hindu Domain (1997), ch. 4", "type": "scholarly" },
+        { "label": "Irfan Habib (ed.), State and Diplomacy under Tipu Sultan (2001)", "type": "scholarly" }
+      ],
+      "verified": true
+    }
+  ]
+}

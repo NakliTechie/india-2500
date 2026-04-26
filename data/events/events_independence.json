@@ -68,6 +68,44 @@
     },
 
     {
+      "id": "lajpat-rai-deportation-1907-1908",
+      "title": "Lajpat Rai writes The Story of My Deportation",
+      "tooltip": "Lajpat Rai deported to Mandalay; writes account, 1907–1908",
+      "summary": "Detained without trial under Regulation III, Lajpat Rai spent six months in Mandalay then published the first prison-writing of the Indian freedom movement.",
+      "detail": "Lala Lajpat Rai was arrested in Lahore on 9 May 1907 under Regulation III of 1818 — the colonial law permitting indefinite detention without trial — for his agitation against the Punjab Colonization Bill and his role in the Swadeshi mobilisation. He was deported to Mandalay, Burma, and held in solitary confinement for six months before release on 11 November 1907 after a campaign by Indian nationalist opinion and Liberal MPs in the British Parliament. On return he wrote The Story of My Deportation, published Lahore 1908 — a 200-page first-person account of the arrest, the sea voyage, the Mandalay confinement, and the political reading he had carried with him. It is the earliest published prison-writing of the Indian freedom movement; the genre that would carry through Aurobindo, Gandhi at Yerwada, Bhagat Singh's notebooks, and Nehru's Discovery of India begins here.",
+      "date": {
+        "start": "1907-05-09",
+        "end":   "1908-12-31",
+        "precision": "month",
+        "approximate": false,
+        "display": "Deported May 1907; book published Lahore 1908"
+      },
+      "location": {
+        "type": "city",
+        "name": "Mandalay (deportation); Lahore (publication)",
+        "region": "Burma / Punjab",
+        "country": "MM",
+        "points": [{ "lat": 21.9588, "lon": 96.0891, "name": "Mandalay" }]
+      },
+      "era": "colonial",
+      "category": ["resistance", "political"],
+      "figures": ["Lala Lajpat Rai", "John Morley"],
+      "tags": ["memoir", "prison-writing"],
+      "caused_by": [
+        { "id": "partition-of-bengal-1905", "gloss": "The Swadeshi mobilisation triggered by Curzon's Bengal partition spread to Punjab via Lajpat Rai's anti-Colonization-Bill agitation; the deportation was the colonial state's preferred response." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Lala_Lajpat_Rai", "label": "Wikipedia: Lala Lajpat Rai", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Lala Lajpat Rai, The Story of My Deportation (Lahore: Punjabee Press, 1908)", "type": "primary" },
+        { "label": "V.C. Joshi (ed.), Lala Lajpat Rai: Writings and Speeches (2 vols., 1966)", "type": "scholarly" },
+        { "label": "Vijay Chandra Joshi, Lajpat Rai: Life and Work (1973)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
       "id": "jallianwala-bagh-1919",
       "title": "Jallianwala Bagh massacre",
       "tooltip": "Jallianwala Bagh massacre, Amritsar, 1919",
@@ -165,6 +203,79 @@
       ],
       "sources": [
         { "label": "Shahid Amin, Event, Metaphor, Memory: Chauri Chaura 1922–1992 (1995)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "gandhi-experiments-with-truth-1925-1929",
+      "title": "Gandhi writes The Story of My Experiments with Truth",
+      "tooltip": "Gandhi writes Atmakatha at Sabarmati and Yerwada, 1925–1929",
+      "summary": "Begun at Sabarmati after Chauri Chaura, Gandhi's Gujarati autobiography frames every choice — diet, household, satyagraha — as a moral experiment.",
+      "detail": "Gandhi began the Atmakatha (autobiography) in Gujarati on 29 November 1925, serialised week by week in his journal Navjivan, with Mahadev Desai's English translation appearing simultaneously in Young India. Published in book form as Satyana Prayogo athva Atmakatha — Volume I in 1927, Volume II in 1929. Covers childhood at Porbandar, the years in England studying law, two decades in South Africa, return to India in 1915, and the satyagraha campaigns up to 1921 — deliberately stopping before the Chauri Chaura suspension. The 'experiments' framing is the book's signature move: every decision (vegetarianism, brahmacharya, the spinning wheel, household money) is offered as a test in moral physics. Reads less as memoir than as Augustinian self-examination transposed to a colonial-era reformer. Among the most translated Indian books of the 20th century.",
+      "date": {
+        "start": "1925-11-29",
+        "end":   "1929-02-03",
+        "precision": "month",
+        "approximate": false,
+        "display": "Serialised 1925–1929; book vols. 1927 and 1929"
+      },
+      "location": {
+        "type": "city",
+        "name": "Sabarmati Ashram, near Ahmedabad",
+        "region": "Gujarat",
+        "country": "IN",
+        "points": [{ "lat": 23.0593, "lon": 72.5807, "name": "Sabarmati Ashram" }]
+      },
+      "era": "colonial",
+      "category": ["cultural", "religious", "political"],
+      "figures": ["Mohandas Gandhi", "Mahadev Desai"],
+      "tags": ["memoir"],
+      "caused_by": [
+        { "id": "chauri-chaura-1922", "gloss": "The post-Chauri-Chaura pause in mass action freed Gandhi for the long autobiographical work that he had previously deferred; the book starts in 1925 because the movement isn't running." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/The_Story_of_My_Experiments_with_Truth", "label": "Wikipedia: The Story of My Experiments with Truth", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "M.K. Gandhi, An Autobiography or The Story of My Experiments with Truth (trans. Mahadev Desai; Navajivan, 1927–1929)", "type": "primary" },
+        { "label": "Ramachandra Guha, Gandhi Before India (2013) and Gandhi: The Years That Changed the World (2018)", "type": "scholarly" },
+        { "label": "Tridip Suhrud, 'Gandhi's Key Writings: In Search of Unity', in The Cambridge Companion to Gandhi (2011)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "sarojini-naidu-letters-1925-1947",
+      "title": "Selected Letters of Sarojini Naidu",
+      "tooltip": "Sarojini Naidu's letters, Congress presidency to UP governorship, 1925–1947",
+      "summary": "Letters from Sarojini Naidu's Congress presidency (1925) through her UP governorship (1947) — the woman in the inner circle of Indian leadership.",
+      "detail": "Sarojini Naidu's collected correspondence — published in volumes from 1925 onward, expanded posthumously by her daughter Padmaja Naidu — is the most complete record of a woman in the inner circle of Indian political leadership across two decades. Letters to Gandhi (whom she nicknamed 'Mickey Mouse'), Nehru, Tagore, Edmund Gosse (her early literary mentor at Cambridge), Edwin Lutyens, Sir Akbar Hydari, and her own family at Hyderabad. Covers her Congress presidency (Kanpur 1925, the first Indian woman to hold the post), her command of the salt campaigns at Dharasana when Gandhi was arrested, the 1931 Round Table negotiations in London, the Quit India arrest and Aga Khan Palace detention, and her post-Independence governorship of the United Provinces (1947–49). Distinct from her better-known poetry — the letters reveal the political negotiator, the satyagraha logistician, the salon hostess of nationalist Hyderabad.",
+      "date": {
+        "start": "1925-12",
+        "end":   "1947-08",
+        "precision": "month",
+        "approximate": false,
+        "display": "December 1925 (Congress presidency) – August 1947 (UP governorship)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Hyderabad (home base; campaigns spanned the subcontinent)",
+        "region": "Hyderabad State / British India",
+        "country": "IN",
+        "points": [{ "lat": 17.3850, "lon": 78.4867, "name": "Hyderabad" }]
+      },
+      "era": "colonial",
+      "category": ["political", "cultural"],
+      "figures": ["Sarojini Naidu", "Padmaja Naidu", "Mohandas Gandhi"],
+      "tags": ["memoir"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Sarojini_Naidu", "label": "Wikipedia: Sarojini Naidu", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Makarand Paranjape (ed.), Sarojini Naidu: Selected Letters, 1890s to 1940s (Kali for Women, 1996)", "type": "primary" },
+        { "label": "Padmini Sengupta, Sarojini Naidu: A Biography (1966)", "type": "scholarly" },
+        { "label": "Tara Ali Baig, Sarojini Naidu: Portrait of a Patriot (1974)", "type": "scholarly" }
       ],
       "verified": true
     },
@@ -317,6 +428,41 @@
     },
 
     {
+      "id": "ambedkar-annihilation-of-caste-1936",
+      "title": "Ambedkar publishes Annihilation of Caste",
+      "tooltip": "Ambedkar self-publishes Annihilation of Caste, Bombay, 1936",
+      "summary": "Withdrawn from a Lahore reform conference for being too radical, Ambedkar self-published the address as a 96-page polemic and answered Gandhi's review.",
+      "detail": "Ambedkar drafted Annihilation of Caste in 1935–36 as the presidential address for the Jat-Pat-Todak Mandal's annual conference at Lahore, scheduled May 1936. The Mandal — a Hindu reform body — read the text and withdrew the invitation when Ambedkar refused to alter the passages arguing that caste could not be reformed within Hinduism and that Hindus seeking equality should leave the religion. Ambedkar self-published the undelivered address as a 96-page book in May 1936 from Bombay. Gandhi published a hostile review in Harijan; Ambedkar replied with the polemical preface to the second edition (1937), which is now read as integral to the work. Among the most directly argued first-person texts in the Indian canon — not memoir as such but argued autobiography of an intellectual position, with the author's own life-story embedded as evidence in the polemic. The book reframed the caste question for the 20th century.",
+      "date": {
+        "start": "1936-05",
+        "end":   "1937-12",
+        "precision": "month",
+        "approximate": false,
+        "display": "May 1936 (1st ed.); 1937 (2nd ed. with preface to Gandhi)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Bombay (self-published)",
+        "region": "Bombay Presidency",
+        "country": "IN",
+        "points": [{ "lat": 18.9388, "lon": 72.8344, "name": "Bombay" }]
+      },
+      "era": "colonial",
+      "category": ["reform", "political", "religious"],
+      "figures": ["B.R. Ambedkar", "Mohandas Gandhi"],
+      "tags": ["memoir"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Annihilation_of_Caste", "label": "Wikipedia: Annihilation of Caste", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "B.R. Ambedkar, Annihilation of Caste (1936; annotated critical ed. S. Anand with introduction by Arundhati Roy, Navayana, 2014)", "type": "primary" },
+        { "label": "Christophe Jaffrelot, Dr Ambedkar and Untouchability: Analysing and Fighting Caste (2005)", "type": "scholarly" },
+        { "label": "Gail Omvedt, Ambedkar: Towards an Enlightened India (2004)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
       "id": "quit-india-1942",
       "title": "Quit India Movement",
       "tooltip": "Quit India launched at Bombay, 1942",
@@ -453,6 +599,44 @@
       "sources": [
         { "label": "Yasmin Khan, The Great Partition (2007)", "type": "scholarly" },
         { "label": "Ramachandra Guha, India After Gandhi (2007), ch. 1–2", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "azad-india-wins-freedom-1958",
+      "title": "Maulana Azad dictates India Wins Freedom",
+      "tooltip": "Azad's partition memoir, dictated Delhi 1957–58, suppressed pages opened 1988",
+      "summary": "Azad dictated his partition memoir to Humayun Kabir 1957–58; the 30-page section critical of Nehru and Patel was sealed for 30 years.",
+      "detail": "Maulana Abul Kalam Azad — Congress President 1939–46, India's first Education Minister, the senior Muslim Congress leader through partition — dictated his memoir India Wins Freedom to his secretary Humayun Kabir between 1957 and his death in February 1958. Published February 1959. Covers the 1937–47 decade in detail: the Cripps Mission (1942), Quit India and Azad's Ahmednagar Fort imprisonment with Nehru, the Cabinet Mission (1946), Mountbatten's June 1947 plan, Azad's opposition to partition. The book's most controversial section — 30 pages dealing critically with Nehru and Patel's roles in accepting partition — was withheld at Azad's instruction until 1988, thirty years after his death. When opened in 1988, the suppressed pages caused political controversy in India for their direct criticism of the Nehru-Patel partition decisions. The fullest first-person record of partition negotiations from a Congress Muslim's perspective, and a deliberate act of posthumous score-settling.",
+      "date": {
+        "start": "1957",
+        "end":   "1958-02",
+        "precision": "month",
+        "approximate": false,
+        "display": "Dictated 1957–58 (suppressed pages opened 1988)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Delhi",
+        "region": "Republic of India",
+        "country": "IN",
+        "points": [{ "lat": 28.6139, "lon": 77.2090, "name": "Delhi" }]
+      },
+      "era": "republic",
+      "category": ["political"],
+      "figures": ["Maulana Abul Kalam Azad", "Humayun Kabir", "Jawaharlal Nehru", "Vallabhbhai Patel"],
+      "tags": ["memoir"],
+      "caused_by": [
+        { "id": "independence-and-partition-1947", "gloss": "Azad's memoir is the longest-form first-person reckoning with the partition decision; the suppressed pages indict the Nehru-Patel acquiescence in the Mountbatten plan." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/India_Wins_Freedom", "label": "Wikipedia: India Wins Freedom", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Maulana Abul Kalam Azad, India Wins Freedom (Orient Longmans, 1959; complete edition with the suppressed pages, 1988)", "type": "primary" },
+        { "label": "Rajmohan Gandhi, Eight Lives: A Study of the Hindu-Muslim Encounter (1986), ch. on Azad", "type": "scholarly" },
+        { "label": "Ian Henderson Douglas, Abul Kalam Azad: An Intellectual and Religious Biography (1988)", "type": "scholarly" }
       ],
       "verified": true
     }

@@ -1,0 +1,41 @@
+{
+  "campaign": "1857",
+  "scope": "1857 rebellion and its lead-up — annexations under Doctrine of Lapse, the May 1857 outbreak, regional centres (Delhi, Lucknow, Kanpur, Jhansi, Awadh), suppression and aftermath. Seeded with Lakshmibai's correspondence; major expansion planned.",
+  "updated": "2026-04-26",
+  "events": [
+    {
+      "id": "lakshmibai-letters-1853-1858",
+      "title": "Letters of Lakshmibai of Jhansi",
+      "tooltip": "Lakshmibai's surviving correspondence, Jhansi, 1853–1858",
+      "summary": "From 1853 protests against Doctrine-of-Lapse annexation through her 1857–58 command, among the few first-person records of a woman rebel leader.",
+      "detail": "Lakshmibai's correspondence survives across two periods. From November 1853, after her husband Maharaja Gangadhar Rao's death, she petitioned the East India Company (and personally Lord Dalhousie) against the annexation of Jhansi under the Doctrine of Lapse — multiple Persian and Marathi letters citing the adoption of her son Damodar Rao as legitimate heir. Annexation went through in March 1854. The 1857 letters are sparser but extant — communications with Tatya Tope, Nana Saheb, and rebel commanders during the May–June 1858 siege of Jhansi by Sir Hugh Rose, the flight to Kalpi, and the final operations at Gwalior where she was killed on 17 June 1858. Held in the Jhansi state records, the National Archives, and the EIC's London correspondence; her literacy in Persian, Marathi, and Sanskrit, and the survival of her own scribal habits, make these among the few first-person women's records of the 1857 rebellion.",
+      "date": {
+        "start": "1853-11",
+        "end":   "1858-06",
+        "precision": "month",
+        "approximate": false,
+        "display": "November 1853 – June 1858"
+      },
+      "location": {
+        "type": "city",
+        "name": "Jhansi",
+        "region": "Bundelkhand",
+        "country": "IN",
+        "points": [{ "lat": 25.4484, "lon": 78.5685, "name": "Jhansi" }]
+      },
+      "era": "colonial",
+      "category": ["resistance", "political", "military"],
+      "figures": ["Lakshmibai of Jhansi", "Lord Dalhousie", "Tatya Tope", "Hugh Rose"],
+      "tags": ["memoir"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Rani_of_Jhansi", "label": "Wikipedia: Rani Lakshmibai of Jhansi", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Vishnu Bhatt Godse, Maza Pravas (Marathi memoir of an eyewitness; ed. & Eng. trans. Sukhamay Mukhopadhyay, 1974)", "type": "primary" },
+        { "label": "Joyce Lebra-Chapman, The Rani of Jhansi: A Study in Female Heroism in India (1986)", "type": "scholarly" },
+        { "label": "Rudrangshu Mukherjee, Awadh in Revolt 1857–1858 (1984)", "type": "scholarly" }
+      ],
+      "verified": true
+    }
+  ]
+}

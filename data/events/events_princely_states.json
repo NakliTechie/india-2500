@@ -1,0 +1,41 @@
+{
+  "campaign": "princely-states",
+  "scope": "Princely-state events outside the Company / Crown direct-rule provinces — Bhopal, Hyderabad, Travancore, Mysore (post-Tipu), Kashmir, the Rajputana states. Seeded with Sultan Jahan Begum's autobiography.",
+  "updated": "2026-04-26",
+  "events": [
+    {
+      "id": "sultan-jahan-begum-autobiography-1912",
+      "title": "Sultan Jahan Begum writes Akhtar-i-Iqbal",
+      "tooltip": "Sultan Jahan Begum publishes Persian memoir, Bhopal, 1912",
+      "summary": "Last of four successive Begum-rulers of Bhopal writes a Persian memoir and three-volume English autobiography — first-person record of a sovereign woman.",
+      "detail": "Sultan Jahan Begum (1858–1930), the fourth of four successive Begum-rulers of Bhopal across more than a century, published the Persian Akhtar-i-Iqbal (1912) and dictated the three-volume English autobiography An Account of My Life between 1910 and 1927. Bhopal was unique among princely states for matrilineal female succession (Qudsia Begum from 1819 → Sikandar → Shah Jahan → Sultan Jahan, who abdicated 1926). The memoirs document the politics of being a Muslim ruling woman within colonial paramountcy, the founding of Sultania Girls' School (1903), her presidency of the All-India Muslim Ladies' Conference, the Aligarh women's college (Sultan Jahan was its first chancellor, 1920), and her rupture with her son Hamidullah Khan over the abdication terms. Among the few autobiographies by an Indian ruling sovereign in any era; the only such by a Muslim woman.",
+      "date": {
+        "start": "1910",
+        "end":   "1927",
+        "precision": "year",
+        "approximate": false,
+        "display": "Akhtar-i-Iqbal published 1912; An Account of My Life vols. 1910–1927"
+      },
+      "location": {
+        "type": "city",
+        "name": "Bhopal",
+        "region": "Central India Agency",
+        "country": "IN",
+        "points": [{ "lat": 23.2599, "lon": 77.4126, "name": "Bhopal" }]
+      },
+      "era": "colonial",
+      "category": ["political", "reform", "cultural"],
+      "figures": ["Sultan Jahan Begum", "Hamidullah Khan"],
+      "tags": ["memoir"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Sultan_Jahan,_Begum_of_Bhopal", "label": "Wikipedia: Sultan Jahan Begum", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Sultan Jahan Begum, An Account of My Life (3 vols., 1910–1927; vol. 1 trans. C.H. Payne, John Murray)", "type": "primary" },
+        { "label": "Shaharyar M. Khan, The Begums of Bhopal: A Dynasty of Women Rulers in Raj India (2000)", "type": "scholarly" },
+        { "label": "Siobhan Lambert-Hurley, Muslim Women, Reform and Princely Patronage: Nawab Sultan Jahan Begam of Bhopal (2007)", "type": "scholarly" }
+      ],
+      "verified": true
+    }
+  ]
+}
