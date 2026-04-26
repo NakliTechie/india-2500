@@ -1,38 +1,32 @@
 #!/usr/bin/env bash
-# deploy.sh — stage the built atlas into a sibling assets repo.
-#
-# Bifurcated deployment:
-#   - This repo (naklitechie/india-2500) holds the source: data/, validators/,
-#     build/, web/template.html, tests/, contribute/.
-#   - The assets repo (naklitechie/assets, deployed as assets.chiragpatnaik.com)
-#     holds the built artifacts: india-history.html and the PNG companions.
+# deploy.sh — stage the built atlas into a target hosting directory.
 #
 # Usage:
-#   ./build/deploy.sh <path-to-assets-repo>
+#   ./build/deploy.sh <path-to-target-directory>
 #
 # Example:
-#   ./build/deploy.sh ../assets
+#   ./build/deploy.sh /path/to/your/hosted/site
 #
 # What this does:
 #   1. Validates the corpus (all 6 validators must PASS).
 #   2. Rebuilds web/india-history.html, web/shell.html, and PNG companions.
-#   3. Copies the built artifacts into the target assets repo.
-#   4. Stops short of git add / commit / push — the user runs those.
+#   3. Copies the built artifacts into the target directory.
+#   4. Injects the host-side page-nav sidebar (depends on /pages.json existing
+#      at the host root for the "All" panel; harmless 404 if absent).
+#   5. Stops short of git add / commit / push — you run those.
 
 set -euo pipefail
 
 if [ "$#" -lt 1 ]; then
-  echo "usage: $0 <path-to-assets-repo>"
-  echo ""
-  echo "example: $0 ../assets"
+  echo "usage: $0 <path-to-target-directory>"
   exit 2
 fi
 
-ASSETS_DIR="$1"
+TARGET_DIR="$1"
 REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 
-if [ ! -d "$ASSETS_DIR" ]; then
-  echo "error: $ASSETS_DIR does not exist"
+if [ ! -d "$TARGET_DIR" ]; then
+  echo "error: $TARGET_DIR does not exist"
   exit 2
 fi
 
@@ -54,19 +48,13 @@ else
   echo "    skipped (build_png.py failed; matplotlib may not be available)"
 fi
 
-echo "==> staging artifacts to $ASSETS_DIR"
-cp "$REPO_ROOT/web/india-history.html" "$ASSETS_DIR/"
-[ -f "$REPO_ROOT/web/india-history.png" ] && cp "$REPO_ROOT/web/india-history.png" "$ASSETS_DIR/"
-[ -f "$REPO_ROOT/web/india-history-square.png" ] && cp "$REPO_ROOT/web/india-history-square.png" "$ASSETS_DIR/"
+echo "==> staging artifacts to $TARGET_DIR"
+cp "$REPO_ROOT/web/india-history.html" "$TARGET_DIR/"
+[ -f "$REPO_ROOT/web/india-history.png" ] && cp "$REPO_ROOT/web/india-history.png" "$TARGET_DIR/"
+[ -f "$REPO_ROOT/web/india-history-square.png" ] && cp "$REPO_ROOT/web/india-history-square.png" "$TARGET_DIR/"
 
-echo "==> injecting assets-host page-nav sidebar"
-python3 "$REPO_ROOT/build/_pagenav-inject.py" "$ASSETS_DIR/india-history.html"
+echo "==> injecting host-side page-nav sidebar"
+python3 "$REPO_ROOT/build/_pagenav-inject.py" "$TARGET_DIR/india-history.html"
 
 echo ""
-echo "Staged. Review and commit from the assets repo:"
-echo "  cd $ASSETS_DIR"
-echo "  git status"
-echo "  git diff --stat"
-echo "  git add india-history.html india-history*.png"
-echo "  git commit -m 'india-history.html: <summary>'"
-echo "  git push"
+echo "Staged. Review and publish from $TARGET_DIR yourself."

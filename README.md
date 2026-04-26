@@ -20,15 +20,13 @@ All six first-class content types — events, threads, people, collections, plac
 
 ## Deployment
 
-Bifurcated:
-- **Source repo** (this repo) — `naklitechie/india-2500`. Holds `data/`, `validators/`, `build/`, `web/template.html`, `tests/`, `contribute/`. PR workflow lives here.
-- **Assets repo** — `naklitechie/assets`, served as `assets.chiragpatnaik.com`. Holds the built `india-history.html` plus PNG companions.
+The built `web/india-history.html` is a single-file artifact you can host anywhere — it has no runtime dependencies. Production copy lives at [assets.chiragpatnaik.com/india-history.html](https://assets.chiragpatnaik.com/india-history.html).
 
-To stage the build into a sibling assets clone and review before pushing:
+A helper script stages the build into any directory of your choosing:
 ```bash
-./build/deploy.sh ../assets
+./build/deploy.sh /path/to/your/hosting/directory
 ```
-The script validates, rebuilds, copies the artifacts to the assets repo, and stops. Review/commit/push from the assets repo manually.
+It validates the corpus, rebuilds, and copies the artifacts. It does not touch git or push — review and publish from the destination yourself.
 
 ## Repository layout
 
@@ -57,7 +55,7 @@ build/                 Pipeline that turns data + template into the asset.
 
 web/                   The asset itself.
   template.html        Source HTML/CSS/JS with __PLACEHOLDER__ tokens
-  india-history.html   Built single-file asset (committed; deployable to assets.chiragpatnaik.com)
+  india-history.html   Built single-file asset (committed; deploy anywhere)
   shell.html           Runtime-fetch version for hosted use (loads data/ over HTTP)
 
 tests/                 Browser regression tests (Playwright).

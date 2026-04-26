@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
 """
-_pagenav-inject.py — patch a copied india-history.html with the
-assets.chiragpatnaik.com page-nav sidebar.
+_pagenav-inject.py — patch a copied india-history.html with a host-side
+"All Assets" page-nav sidebar.
 
-The page-nav widget is asset-host-specific (it fetches /pages.json), so we
-don't bake it into the build pipeline's template.html. Instead, deploy.sh
-copies the built single-file artifact into the assets repo and then runs
-this script to inject the sidebar CSS + HTML+JS in two splice points.
+The widget fetches /pages.json at runtime, so it's host-specific (the host
+must serve a pages.json index of its own pages). We don't bake it into the
+build pipeline's template.html for that reason — instead, deploy.sh copies
+the built single-file artifact into the target directory and then runs this
+script to inject the sidebar CSS + HTML+JS in two splice points.
+
+If the host doesn't serve /pages.json the widget renders an empty list
+gracefully — no errors.
 
 Idempotent: skips injection if the markers are already present.
 """
