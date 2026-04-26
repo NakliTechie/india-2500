@@ -16,6 +16,11 @@ __pycache__/
 # Local Claude Code config (already at user level)
 .claude/
 
+# Internal project docs — kept out of the public repo
+# (schemas + CONTRIBUTING.md remain tracked)
+docs/HANDOFF.md
+docs/CLAUDE.md
+
 # Build outputs that some workflows want to ignore. By default we DO commit
 # build/map_paths.json + build/validator_boundaries.json + web/india-history.html
 # so a fresh clone can be opened without running build_map.py (which needs

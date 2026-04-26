@@ -145,6 +145,7 @@ The validators are the contract. If your PR passes them and the editorial review
 
 ## License
 
-Editorial content (`data/`) is CC BY-SA 4.0. Code is MIT.
+- **Editorial content** (`data/`, `docs/*_SCHEMA.md`, `docs/CONTRIBUTING.md`, and the derived HTML/PNG artifacts) is licensed under **[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)**. See `LICENSE`. Attribution to **Chirag Patnaik** required; derivatives must use the same license.
+- **Code** (`validators/`, `build/`, `web/template.html`, `tests/`, `contribute/lib/`) is licensed under **MIT**. See `LICENSE-CODE`.
 
 External dependencies retain their original licenses: [Datameet](https://github.com/datameet/maps) (CC BY 4.0), [world-atlas](https://github.com/topojson/world-atlas) (ISC).
