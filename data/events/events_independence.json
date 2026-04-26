@@ -350,6 +350,44 @@
     },
 
     {
+      "id": "nehru-discovery-of-india-1944",
+      "title": "Nehru writes The Discovery of India",
+      "tooltip": "Nehru drafts Discovery of India, Ahmednagar Fort, 1944–45",
+      "summary": "Imprisoned after Quit India, Nehru wrote The Discovery of India between April 1944 and September 1945 — the third book of his prison trilogy, published 1946.",
+      "detail": "Arrested on 9 August 1942 and held without trial, Nehru spent 1,041 days in Ahmednagar Fort with eleven other Congress leaders. Between April 1944 and September 1945 he drafted the 600-page Discovery of India in longhand, working through readings supplied by Maulana Azad and Pattabhi Sitaramayya among others. The book argues for an Indian civilisational continuity — Vedic, Buddhist, Mughal, modern — that could underwrite a secular republic, against both colonial 'no India before us' historiography and Hindu-nationalist communal essentialism. It was published in 1946 by Signet Press, Calcutta, completing his prison trilogy after Glimpses of World History (1934) and Toward Freedom (1936). The framing — composite, civilisational, secular — would become the founding ideology of the Indian state Nehru led from 1947.",
+      "date": {
+        "start": "1944-04-01",
+        "end":   "1945-09-30",
+        "precision": "month",
+        "approximate": true,
+        "display": "April 1944 – September 1945 (published 1946)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Ahmednagar Fort, Maharashtra",
+        "region": "Bombay Presidency",
+        "country": "IN",
+        "points": [{ "lat": 19.0950, "lon": 74.7490, "name": "Ahmednagar Fort" }]
+      },
+      "era": "colonial",
+      "category": ["cultural", "political"],
+      "figures": ["Jawaharlal Nehru", "Maulana Abul Kalam Azad"],
+      "tags": ["memoir", "prison-writing"],
+      "caused_by": [
+        { "id": "quit-india-1942", "gloss": "The Quit India arrests put Nehru and the entire Congress working committee in Ahmednagar Fort for nearly three years; Discovery of India is the most ambitious of the books that came out of that confinement." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/The_Discovery_of_India", "label": "Wikipedia: The Discovery of India", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Jawaharlal Nehru, The Discovery of India (Signet Press, 1946)", "type": "primary" },
+        { "label": "Sarvepalli Gopal, Jawaharlal Nehru: A Biography, Vol. 1 (1975), ch. 18", "type": "scholarly" },
+        { "label": "Benjamin Zachariah, Nehru (Routledge, 2004), ch. 4", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
       "id": "direct-action-day-1946",
       "title": "Direct Action Day, Calcutta",
       "tooltip": "Direct Action Day, Calcutta, 1946",

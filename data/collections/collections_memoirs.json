@@ -1,0 +1,22 @@
+{
+  "campaign": "memoirs",
+  "scope": "First-person works — autobiographies, prison writings, and court chronicles in which Indians wrote themselves into the historical record. Cross-cuts every era from Babur to independence.",
+  "updated": "2026-04-26",
+  "collections": [
+    {
+      "id": "first-person-works-of-the-subcontinent",
+      "title": "First-person works of the subcontinent",
+      "subtitle": "Autobiographies, prison writings, and court chronicles in which Indians wrote themselves into the record.",
+      "summary": "Babur opens the Baburnama with his father's death; Nehru opens The Discovery of India with his arrest. Across five centuries Indians have used first-person prose — memoir, chronicle, prison notebook — to argue for who they were and what India was. The corpus tags each as memoir; this collection gathers them.",
+      "framing": "First-person texts have a load-bearing role in subcontinental history that translation traditions sometimes obscure. The Baburnama is the only surviving Timurid royal autobiography in any language. The Akbarnama, Tuzuk-i-Jahangiri, and Padshahnama together form a continuous Mughal court chronicle from 1556 to 1658. Three centuries later the prison writings of Gandhi, Nehru, and Ambedkar — drafted in Yerwada, Ahmednagar, and various Bombay jails — became the founding texts of the Indian republic's self-conception. To gather them in one place is to put the writer-rulers of the sixteenth century in conversation with the writer-prisoners of the twentieth. Tag any new entry with \\\"memoir\\\" and it joins automatically.",
+      "members": [
+        { "kind": "tag", "tag": "memoir" }
+      ],
+      "sources": [
+        { "label": "Wheeler M. Thackston (trans.), The Baburnama: Memoirs of Babur, Prince and Emperor (1996)", "type": "primary" },
+        { "label": "Sarvepalli Gopal, Jawaharlal Nehru: A Biography (1975)", "type": "scholarly" }
+      ],
+      "verified": true
+    }
+  ]
+}

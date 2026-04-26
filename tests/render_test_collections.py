@@ -32,19 +32,24 @@ with sync_playwright() as p:
     page.goto(f"file://{HTML.absolute()}")
     page.wait_for_timeout(500)
 
-    # 1. Bar present, both seed collections rendered as pills.
+    # 1. Bar present, the two infra-test seed collections rendered as pills
+    #    (other collections may exist alongside them — content authoring grows
+    #    this set; the test pins only the two it depends on for downstream
+    #    assertions).
     pill_cids = page.evaluate(
         "() => Array.from(document.querySelectorAll('#collections-bar .pill[data-cid]')).map(b => b.dataset.cid)"
     )
-    check("Collections bar renders both seed pills",
-          set(pill_cids) == {"baburs-road-from-andijan-to-lahore", "founding-moments-of-modern-india"},
+    seed_pills = {"baburs-road-from-andijan-to-lahore", "founding-moments-of-modern-india"}
+    check("Collections bar contains both infra-seed pills",
+          seed_pills.issubset(set(pill_cids)),
           f"got {pill_cids}")
 
-    # 2. Indexes built — collectionsById has 2, tag-to-events resolves babur-arc to 6.
+    # 2. Indexes built — collectionsById has the seed pair, tag-to-events
+    #    resolves babur-arc to 6 (Babur's Central Asian arc events).
     indexes = page.evaluate(
         "() => ({ cbi: collectionsById.size, baburArc: (tagToEvents.get('babur-arc') || []).length })"
     )
-    check("Indexes built", indexes["cbi"] == 2 and indexes["baburArc"] == 6,
+    check("Indexes built", indexes["cbi"] >= 2 and indexes["baburArc"] == 6,
           f"collectionsById={indexes['cbi']}, babur-arc tag → {indexes['baburArc']} events")
 
     # 3. Activate the tag-selector collection. Verify reader, member count,
