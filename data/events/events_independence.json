@@ -268,7 +268,7 @@
       "era": "colonial",
       "category": ["political", "cultural"],
       "figures": ["Sarojini Naidu", "Padmaja Naidu", "Mohandas Gandhi"],
-      "tags": ["memoir"],
+      "tags": ["memoir", "women-leaders"],
       "links": [
         { "url": "https://en.wikipedia.org/wiki/Sarojini_Naidu", "label": "Wikipedia: Sarojini Naidu", "type": "wikipedia" }
       ],
@@ -458,6 +458,41 @@
         { "label": "B.R. Ambedkar, Annihilation of Caste (1936; annotated critical ed. S. Anand with introduction by Arundhati Roy, Navayana, 2014)", "type": "primary" },
         { "label": "Christophe Jaffrelot, Dr Ambedkar and Untouchability: Analysing and Fighting Caste (2005)", "type": "scholarly" },
         { "label": "Gail Omvedt, Ambedkar: Towards an Enlightened India (2004)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "bose-indian-struggle-1935",
+      "title": "Subhas Chandra Bose writes The Indian Struggle",
+      "tooltip": "Bose writes Indian Struggle in Vienna exile, 1934; pub. London 1935",
+      "summary": "Deported from India after the 1932 arrests, Bose wrote a 400-page history of 1920–1934 in Vienna. Banned in India by the Raj on publication.",
+      "detail": "Subhas Chandra Bose was deported to Europe in February 1933 after his second imprisonment under the Defence of India Rules. Through 1934, working from Vienna with secretarial help from Emilie Schenkl, he wrote The Indian Struggle 1920–1934 — a 400-page history of the Non-Cooperation, Civil Disobedience, and Round Table phases from a Bengal-Forward-Bloc vantage that was systematically critical of Gandhi's tactical choices. Published by Wishart in London, January 1935; banned in British India on publication. The completing volume covering 1935–1942 was written between his 1941 escape from Calcutta house arrest and his death in 1945; published posthumously 1948. Together the two volumes are the fullest first-person record of the Congress left's reading of the freedom struggle, distinct from both the Gandhian and the Nehruvian accounts.",
+      "date": {
+        "start": "1934-01",
+        "end":   "1935-01",
+        "precision": "month",
+        "approximate": false,
+        "display": "Written Vienna 1934; pub. London Jan 1935 (vol. 2 posthumous 1948)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Calcutta (Bose's political base; written in Vienna exile)",
+        "region": "Bengal",
+        "country": "IN",
+        "points": [{ "lat": 22.5726, "lon": 88.3639, "name": "Calcutta" }]
+      },
+      "era": "colonial",
+      "category": ["political", "cultural"],
+      "figures": ["Subhas Chandra Bose", "Emilie Schenkl"],
+      "tags": ["memoir"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/The_Indian_Struggle", "label": "Wikipedia: The Indian Struggle", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Subhas Chandra Bose, The Indian Struggle 1920–1942 (combined ed., Asia Publishing House, 1964)", "type": "primary" },
+        { "label": "Sugata Bose, His Majesty's Opponent: Subhas Chandra Bose and India's Struggle Against Empire (2011), ch. 6", "type": "scholarly" },
+        { "label": "Leonard A. Gordon, Brothers Against the Raj: A Biography of Indian Nationalists Sarat and Subhas Chandra Bose (1990)", "type": "scholarly" }
       ],
       "verified": true
     },

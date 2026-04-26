@@ -1,0 +1,22 @@
+{
+  "campaign": "women",
+  "scope": "Cross-cutting collections gathering events that surface women's political and intellectual agency in subcontinental history. Seeded with the freedom-struggle collection; women rulers, women writers, women in religious reform queued.",
+  "updated": "2026-04-26",
+  "collections": [
+    {
+      "id": "women-shapers-of-the-freedom-struggle",
+      "title": "Women shapers of the freedom struggle",
+      "subtitle": "From Lakshmibai's 1857 letters to Sarojini Naidu's UP governorship — women whose work shaped the long arc of Indian political agency.",
+      "summary": "Indian textbook telling tends to flatten the women of the freedom struggle into ornament — Sarojini's poetry, Lakshmibai's bravery, the Bhopal Begums' charity. The events corpus tells a different story: political negotiation at the Round Table, military command at Jhansi, princely administration at Bhopal, anti-patriarchal polemic from Pune. This collection gathers events that surface that work.",
+      "framing": "The 'long freedom struggle' framing here is deliberate: the collection includes events from 1853 to 1947, a century during which Indian women acted politically across utterly different registers — armed rebellion (Lakshmibai), reform polemic (Pandita Ramabai), princely sovereignty under colonial paramountcy (Sultan Jahan Begum), Congress organising (Sarojini Naidu). Tagged events join automatically; explicit entries below curate the seed. Women rulers (Ahilyabai Holkar, Razia Sultan, the four Bhopal Begums as a series), women in religious reform (Savitribai Phule, the Bengal women of the Brahmo Samaj), Cama and Hazrat Mahal as further freedom-struggle figures, all queued as the corpus grows.",
+      "members": [
+        { "kind": "tag", "tag": "women-leaders" }
+      ],
+      "sources": [
+        { "label": "Geraldine Forbes, Women in Modern India (Cambridge New History of India IV.2, 1996)", "type": "scholarly" },
+        { "label": "Radha Kumar, The History of Doing: An Illustrated Account of Movements for Women's Rights and Feminism in India 1800–1990 (1993)", "type": "scholarly" }
+      ],
+      "verified": true
+    }
+  ]
+}

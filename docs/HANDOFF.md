@@ -27,10 +27,10 @@ A validator-enforced, browser-renderable atlas of subcontinental history. Three 
 ├── .gitignore                     datameet/, package/, .claude/, tests/artifacts/
 │
 ├── data/                          editorial content — what contributors PR
-│   ├── events/events_*.json       61 events across 10 campaign files
+│   ├── events/events_*.json       82 events across 10 campaign files
 │   ├── threads/threads_*.json     2 threads: Chauri Chaura, Babur road-to-Panipat
 │   ├── people/people_*.json       6 people (5 freedom fighters + Babur)
-│   └── collections/collections_*.json   3 collections: Babur's road, Founding moments, First-person works
+│   └── collections/collections_*.json   4 collections: Babur's road, Founding moments, First-person works, Women shapers
 │
 ├── validators/                    schema enforcement, run on every PR via CI
 │   ├── validate_events.py         schema + cross-reference + PIP + tag format
@@ -96,17 +96,17 @@ A validator-enforced, browser-renderable atlas of subcontinental history. Three 
 - **Causal layer:** `caused_by` + `gloss` per edge. `led_to` derived as inverse at runtime, never authored. `part_of` for hierarchical containment without gloss. Multi-parent / multi-child both supported. Cross-file references work — `events_mughal.json` can have a `caused_by` referencing `events_independence.json`.
 - **Tags:** optional `tags[]` field, free-form kebab-case. Drives filtering and **collection membership** (see Collections below). Distinct from `category` — categories are controlled vocab + pin colour; tags are open-ended thematic markers.
 - **Validator:** `validators/validate_events.py`. Schema enforcement + cross-reference + point-in-polygon (PIP) check confirming each pin's lat/lon falls inside its declared country + tag format check + corpus-level warning on single-use tags.
-- **Corpus today:** 61 events spanning 1357–1958 CE.
-  - `events_sultanate.json` — 1 event (Barani 1357; ~20 Ghurids→Lodis to come)
+- **Corpus today:** 82 events spanning 1192–1958 CE.
+  - `events_sultanate.json` — 20 events, 1192–1517 (Tarain through Ibrahim Lodi; 5 dynasties + Barani memoir)
   - `events_central_asia.json` — 6 events, 1494–1524 (Babur's Timurid arc, all tagged `babur-arc`)
   - `events_mughal.json` — 26 events, 1526–1707 (Babur → Aurangzeb; +Baburnama / Akbarnama / Tuzuk-i-Jahangiri memoirs)
   - `events_sur.json` — 2 events, 1539–1556 (Suri interregnum)
   - `events_odisha.json` — 1 event (Madala Panji; Paika rebellion, Konark, etc. to come)
   - `events_south_india.json` — 1 event (Tipu Khwabnama; Vijayanagara / Wodeyars / Anglo-Mysore to come)
-  - `events_reform.json` — 4 events (Rammohan Roy, Pandita Ramabai, Vivekananda, Tagore — 19th-c reform-era cluster)
+  - `events_reform.json` — 5 events (Rammohan Roy, Phule, Pandita Ramabai, Vivekananda, Tagore)
   - `events_1857.json` — 1 event (Lakshmibai letters; Doctrine of Lapse / Delhi / Lucknow / Kanpur to come)
   - `events_princely_states.json` — 1 event (Sultan Jahan Begum; Hyderabad / Travancore / Kashmir to come)
-  - `events_independence.json` — 18 events, 1885–1958 (+Lajpat Rai / Gandhi Experiments / Sarojini / Ambedkar Annihilation / Azad)
+  - `events_independence.json` — 19 events, 1885–1958 (+Lajpat Rai / Gandhi Experiments / Sarojini / Ambedkar / Bose / Azad)
 
 ### Threads
 - **Schema:** `docs/THREADS_SCHEMA.md`. Each step references an event by id, carries a `note` (per-step framing) and a `transition` (prose bridge to next step; `null` on last). Coda required (the closing argument; ≤150 words).
@@ -119,10 +119,11 @@ A validator-enforced, browser-renderable atlas of subcontinental history. Three 
 - **Sets vs sequences:** collections are sets (no per-member notes, no transitions). Threads are sequences (notes + transitions per step). The cheap-to-author bit is deliberate — collections are how we cover cross-cutting catalogues without paying a thread's editorial overhead.
 - **Validator:** `validators/validate_collections.py`. Hard rules include: every event id resolves; every tag selector matches ≥1 event in the corpus (no empty selectors); soft warning when the effective member count after expansion + dedup is <3.
 - **UI:** Third pill row beneath People (`Collections — [pill] [pill] Exit collection`). Click a pill → reader panel renders title, subtitle, summary, optional framing block, member count + cards (tooltip + date for each), sources. Member pins on the map highlight in `--accent-blue` via the `.in-collection` mode class on `#map`. Cluster pins inherit the highlight if any member sits inside them. Mutually exclusive with Threads + People.
-- **Corpus today:** 3 collections —
-  - `collections_central_asia.json#baburs-road-from-andijan-to-lahore` — single tag selector `babur-arc` → 6 members.
+- **Corpus today:** 4 collections —
+  - `collections_central_asia.json#baburs-road-from-andijan-to-lahore` — `tag:babur-arc` → 6 members.
   - `collections_subcontinent.json#founding-moments-of-modern-india` — explicit list of 6 events spanning 1540–1885.
-  - `collections_memoirs.json#first-person-works-of-the-subcontinent` — single tag selector `memoir` → 18 members spanning 1357–1958. The seeded memoir batch (commit reference: this batch) gives the collection real range across Sultanate, Mughal, regional/institutional (Madala Panji, Tipu Khwabnama), 19th-c reform, 1857, princely states, and Big-Three independence.
+  - `collections_memoirs.json#first-person-works-of-the-subcontinent` — `tag:memoir` → 20 members spanning 1357–1958.
+  - `collections_women.json#women-shapers-of-the-freedom-struggle` — `tag:women-leaders` → 4 members (Lakshmibai, Pandita Ramabai, Sultan Jahan Begum, Sarojini Naidu); future women's events with the tag join automatically.
 
 ### People (UI shipped)
 - **Schema:** `docs/PEOPLE_SCHEMA.md`. Person has lifespan + a `track[]`. Each track step is `kind: "event-ref"` (with `role`) or `kind: "moment"` (own date, location, summary, note). Moments are intentionally lighter than events.
@@ -169,15 +170,16 @@ The shared `template.html` uses `let` (not `const`) for the four data globals an
 
 In rough priority order:
 
-1. **Round out the seeded campaign files.** The memoirs batch seeded six new files with 1–4 events each — they want their full content: Ghurids→Lodis for `events_sultanate.json`, Paika rebellion + Konark for `events_odisha.json`, Vijayanagara + Anglo-Mysore for `events_south_india.json`, Delhi / Lucknow / Kanpur / Awadh for `events_1857.json`, Hyderabad / Travancore / Kashmir for `events_princely_states.json`, more reformers for `events_reform.json`.
-2. **Maurya / post-Maurya events** — stress-tests the BCE end of the year slider.
-3. **More memoirs** to round out the first-person-works collection (currently 18 members; deferred queue below).
-4. **More cross-cutting collections.** Infra shipped; highest-leverage next ones: **women in independence** (Sarojini, Lakshmibai, Pandita Ramabai, Sultan Jahan are already in the corpus and would seed it cleanly), **rebellions reframe** (1857 file plus Birsa Munda, Paika, Santhal etc.), **prison-writing** (Lajpat Rai + Nehru already tagged `prison-writing`).
-5. **More Mughal biographical tracks** — Akbar, Shah Jahan, Aurangzeb.
-6. **GitHub publishing** — push to `naklitechie/india-2500`, enable Pages, optional CNAME for `assets.chiragpatnaik.com`.
+1. **Incidents collections (next planned)** — Bhai's logged direction: rebellions as one collection (Sannyasi-Fakir, Vellore, Paika, Indigo, Santhal, 1857, Birsa Munda, Moplah, Chittagong), then more incident-shaped sets (martyrdoms? mass arrests? colonial massacres?).
+2. **Round out the still-thin seeded campaign files.** Sultanate is now full (20 events). Still want: Paika rebellion + Konark for `events_odisha.json`, Vijayanagara + Anglo-Mysore + Wodeyars for `events_south_india.json`, Delhi / Lucknow / Kanpur / Awadh for `events_1857.json`, Hyderabad / Travancore / Kashmir for `events_princely_states.json`, more reformers for `events_reform.json`.
+3. **Maurya / post-Maurya events** — stress-tests the BCE end of the year slider.
+4. **More memoirs** to round out the first-person-works collection (currently 20 members; deferred queue below).
+5. **More cross-cutting collections.** Beyond rebellions: **prison-writing** (Lajpat Rai + Nehru already tagged), **court chronicles** (Akbarnama, Tuzuk, Padshahnama when added, Tarikh-i Firuz Shahi), **diaspora / off-subcontinent** (Vivekananda Chicago, Bose Vienna, Gandhi South Africa).
+6. **More Mughal biographical tracks** — Akbar, Shah Jahan, Aurangzeb.
+7. **GitHub publishing** — push to `naklitechie/india-2500`, enable Pages, optional CNAME for `assets.chiragpatnaik.com`.
 
 ### Deferred memoirs (queue for first-person-works expansion)
-Padshahnama (Shah Jahan court chronicle); Ibn Battuta's *Rihla*; Isami's *Futuh-us-Salatin* (Bahmani perspective); Aurobindo's *Karakahini / Tales of Prison Life* (1909); Phule's *Gulamgiri* (1873); Cornelia Sorabji's *India Calling* (1934); Bose's *The Indian Struggle* (1935/1948); Kamaladevi Chattopadhyay's *Inner Recesses, Outer Spaces* (1986); Verrier Elwin's *Tribal World* (1964); Bhagat Singh prison notebook + jail letters; Naoroji's *Poverty and Un-British Rule*; Ahilyabai Holkar's administrative correspondence; Vamshavalis (Nepali royal genealogies); Periyar / Iqbal / Sri Aurobindo first-person works.
+Padshahnama (Shah Jahan court chronicle); Ibn Battuta's *Rihla*; Isami's *Futuh-us-Salatin* (Bahmani perspective); Aurobindo's *Karakahini / Tales of Prison Life* (1909); Cornelia Sorabji's *India Calling* (1934); Kamaladevi Chattopadhyay's *Inner Recesses, Outer Spaces* (1986); Verrier Elwin's *Tribal World* (1964); Bhagat Singh prison notebook + jail letters; Naoroji's *Poverty and Un-British Rule*; Ahilyabai Holkar's administrative correspondence; Vamshavalis (Nepali royal genealogies); Periyar first-person works; Iqbal correspondence and lectures.
 
 **Deliberately excluded:** Savarkar's *Maazi Janmathep / My Transportation for Life*.
 

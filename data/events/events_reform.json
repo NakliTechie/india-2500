@@ -39,6 +39,41 @@
     },
 
     {
+      "id": "phule-gulamgiri-1873",
+      "title": "Jyotirao Phule writes Gulamgiri (Slavery)",
+      "tooltip": "Phule publishes Gulamgiri at Pune, 1873; dedicated to American abolitionists",
+      "summary": "Phule's 168-page Marathi polemic recasts Brahmanical caste as slavery — dedicated to the United States' abolitionists, founding Indian anti-caste thought.",
+      "detail": "Jyotirao Phule (1827–1890) — schoolteacher, social reformer, founder of the Satyashodhak Samaj (1873) — published Gulamgiri ('Slavery') in Marathi at Pune in 1873, the same year as the Samaj's founding. The 168-page polemic argues that the Brahmanical caste order is a system of slavery imposed by Aryan invaders on the indigenous lower castes — recasting the standard upper-caste reading of Indian antiquity as a story of conquest and racial subjugation. The book is dedicated to 'the good people of the United States' for abolishing African chattel slavery and offered as the analogue project for India. Among the founding texts of subcontinental anti-caste thought; direct precursor to Periyar's Self-Respect movement and Ambedkar's later philosophy. Phule and his wife Savitribai also founded India's first school for girls in 1848.",
+      "date": {
+        "start": "1873",
+        "end":   "1873",
+        "precision": "year",
+        "approximate": false,
+        "display": "1873 (Pune)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Pune",
+        "region": "Bombay Presidency",
+        "country": "IN",
+        "points": [{ "lat": 18.5204, "lon": 73.8567, "name": "Pune" }]
+      },
+      "era": "colonial",
+      "category": ["reform", "cultural", "political"],
+      "figures": ["Jyotirao Phule", "Savitribai Phule"],
+      "tags": ["memoir"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Jyotirao_Phule", "label": "Wikipedia: Jyotirao Phule", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Jyotirao Phule, Gulamgiri (1873; Eng. trans. P.G. Patil, Selected Works of Mahatma Jotirao Phule, vol. 1, Govt. of Maharashtra, 1991)", "type": "primary" },
+        { "label": "Rosalind O'Hanlon, Caste, Conflict and Ideology: Mahatma Jotirao Phule and Low Caste Protest in Nineteenth-Century Western India (1985)", "type": "scholarly" },
+        { "label": "Gail Omvedt, Cultural Revolt in a Colonial Society: The Non-Brahman Movement in Western India 1873–1930 (1976)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
       "id": "pandita-ramabai-high-caste-1887",
       "title": "Pandita Ramabai writes The High-Caste Hindu Woman",
       "tooltip": "Pandita Ramabai publishes The High-Caste Hindu Woman, Philadelphia, 1887",
@@ -61,7 +96,7 @@
       "era": "colonial",
       "category": ["reform", "cultural", "religious"],
       "figures": ["Pandita Ramabai", "Frances Willard"],
-      "tags": ["memoir"],
+      "tags": ["memoir", "women-leaders"],
       "links": [
         { "url": "https://en.wikipedia.org/wiki/Pandita_Ramabai", "label": "Wikipedia: Pandita Ramabai", "type": "wikipedia" }
       ],

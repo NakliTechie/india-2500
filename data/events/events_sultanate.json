@@ -1,8 +1,570 @@
 {
   "campaign": "sultanate",
-  "scope": "Delhi Sultanate events, c. 1206–1526. Seeded with the Tarikh-i Firuz Shahi memoir; Ghurid through Lodi events to follow.",
+  "scope": "Delhi Sultanate events, 1192–1526 — Mamluk through Khalji, Tughlaq, Sayyid, and Lodi dynasties. Includes the Barani memoir.",
   "updated": "2026-04-26",
   "events": [
+    {
+      "id": "second-battle-of-tarain-1192",
+      "title": "Second Battle of Tarain",
+      "tooltip": "Muhammad of Ghor defeats Prithviraj Chauhan at Tarain, 1192",
+      "summary": "Muhammad of Ghor's cavalry defeats the Chauhan confederation under Prithviraj III — the defeat that opens the Delhi Sultanate fourteen years later.",
+      "detail": "After a humiliating defeat at the First Battle of Tarain in 1191, Muhammad of Ghor returned in 1192 with a reorganised cavalry-heavy force estimated at 120,000. Prithviraj Chauhan III, ruler of the Chauhan kingdom centred at Ajmer-Delhi, fielded a Rajput confederation of similar nominal size but slower in mobility. Ghor's mounted archers feigned retreat through the day; the Chauhans pursued, broke formation, and were destroyed in the late afternoon counter-attack. Prithviraj was captured and executed; the Chauhan kingdom collapsed within months. Ghor placed his slave-general Qutb-ud-din Aibak in charge of the conquered territory at Delhi. The Tarain defeat is the conventional opening of subcontinental sultanate-era history; the Mamluk dynasty Aibak founded fourteen years later is its institutional legacy.",
+      "date": {
+        "start": "1192",
+        "end":   "1192",
+        "precision": "year",
+        "approximate": false,
+        "display": "1192"
+      },
+      "location": {
+        "type": "city",
+        "name": "Tarain (modern Taraori, Haryana)",
+        "region": "Haryana",
+        "country": "IN",
+        "points": [{ "lat": 29.9298, "lon": 76.9405, "name": "Tarain (Taraori)" }]
+      },
+      "era": "early-medieval",
+      "category": ["military", "political", "dynastic"],
+      "figures": ["Muhammad of Ghor", "Prithviraj Chauhan III", "Qutb-ud-din Aibak"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Second_Battle_of_Tarain", "label": "Wikipedia: Second Battle of Tarain", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Satish Chandra, Medieval India: From Sultanate to the Mughals — Part One (1997), ch. 1", "type": "scholarly" },
+        { "label": "Peter Jackson, The Delhi Sultanate: A Political and Military History (1999), ch. 1", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "delhi-sultanate-founded-1206",
+      "title": "Qutb-ud-din Aibak founds the Delhi Sultanate",
+      "tooltip": "Qutb-ud-din Aibak crowned at Lahore, 1206; Mamluk dynasty established",
+      "summary": "After Muhammad of Ghor's assassination, his slave-general Aibak crowned himself sultan at Lahore — the first of the Mamluk (Slave) dynasty rulers.",
+      "detail": "Muhammad of Ghor was assassinated near the Indus on 15 March 1206 by Khokhar tribesmen. His Indian conquests went to his most senior slave-general (mamluk), Qutb-ud-din Aibak, who had administered the Delhi territory since Tarain. Aibak was formally crowned at Lahore on 25 June 1206 — a careful political act, since slave-generals were not conventionally enthroned and Aibak needed to claim succession by election among the Ghorid mamluks rather than by inheritance. The Sultanate's institutional shape — Persian-Turkic court, mamluk military elite, iqta land grants in lieu of salaries — was set in this first decade. Aibak began the Qutb Minar at Delhi (continued by Iltutmish) and the Quwwat-ul-Islam Mosque on the site of demolished Hindu and Jain temples in Mehrauli. He died at Lahore in 1210 in a polo accident.",
+      "date": {
+        "start": "1206-06-25",
+        "end":   "1206-06-25",
+        "precision": "day",
+        "approximate": false,
+        "display": "25 June 1206 (Lahore)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Lahore (coronation); Delhi (capital)",
+        "region": "Punjab",
+        "country": "PK",
+        "points": [{ "lat": 31.5497, "lon": 74.3436, "name": "Lahore" }]
+      },
+      "era": "sultanate",
+      "category": ["political", "dynastic"],
+      "figures": ["Qutb-ud-din Aibak", "Muhammad of Ghor"],
+      "caused_by": [
+        { "id": "second-battle-of-tarain-1192", "gloss": "Tarain made Aibak's Delhi viceroyalty possible; Ghor's death made his independent sultanate inevitable." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Qutb_al-Din_Aibak", "label": "Wikipedia: Qutb al-Din Aibak", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "K.A. Nizami, Studies in Medieval Indian History and Culture (1966), ch. 2", "type": "scholarly" },
+        { "label": "Peter Jackson, The Delhi Sultanate (1999), ch. 2", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "iltutmish-accession-1211",
+      "title": "Iltutmish consolidates the Sultanate",
+      "tooltip": "Iltutmish accedes at Delhi, 1211; consolidates Mamluk rule",
+      "summary": "Aibak's son-in-law and slave-general Iltutmish defeats rivals and consolidates the Sultanate — the real architect of its institutional shape.",
+      "detail": "Aibak's son Aram Shah (1210–1211) lacked the military authority to hold the Mamluk coalition. Iltutmish — Turkic slave, son-in-law to Aibak, governor of Badaun — marched on Delhi in 1211, defeated Aram Shah at the battle of Jud (near Delhi), and took the throne. His twenty-five year reign (1211–1236) is the Sultanate's institutional founding period: the iqta system was systematised, the silver tanka and copper jital coinage standardised, the Turkic 'Forty' (Chahalgani) inner council established, the Qutb Minar completed, and the Sultanate received formal recognition from the Abbasid Caliph at Baghdad in 1229. He absorbed Sind and Bengal as tributaries and maintained a careful neutrality during Genghis Khan's Indus campaign of 1221, avoiding direct Mongol confrontation that would have ended the still-fragile state.",
+      "date": {
+        "start": "1211",
+        "end":   "1236",
+        "precision": "year",
+        "approximate": false,
+        "display": "1211 (accession) – 1236 (death)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Delhi",
+        "region": "Delhi Sultanate",
+        "country": "IN",
+        "points": [{ "lat": 28.6139, "lon": 77.2090, "name": "Delhi" }]
+      },
+      "era": "sultanate",
+      "category": ["political", "dynastic"],
+      "figures": ["Iltutmish", "Aram Shah"],
+      "caused_by": [
+        { "id": "delhi-sultanate-founded-1206", "gloss": "Aibak's mamluk-elective succession framework collapsed under his son; Iltutmish's military takeover institutionalised what Aibak's coronation had only sketched." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Iltutmish", "label": "Wikipedia: Iltutmish", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Satish Chandra, Medieval India — Part One (1997), ch. 2", "type": "scholarly" },
+        { "label": "Sunil Kumar, The Emergence of the Delhi Sultanate, 1192–1286 (2007)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "genghis-indus-1221",
+      "title": "Genghis Khan reaches the Indus",
+      "tooltip": "Genghis Khan pursues Jalal ad-Din to the Indus, 1221",
+      "summary": "Pursuing the Khwarezmian prince Jalal ad-Din, Genghis Khan reached the Indus — the closest Mongol approach to the Delhi Sultanate, deliberately not pursued.",
+      "detail": "Genghis Khan's destruction of the Khwarezmian Empire (1219–1221) ended at the Battle of the Indus on 24 November 1221, when his force trapped Jalal ad-Din Mingburnu's army on the river. Jalal ad-Din famously escaped by leaping his horse from a cliff into the Indus and swimming to the Punjab side. Iltutmish, asked by Jalal ad-Din for refuge, refused — calculating that hosting the Mongols' enemy would invite a Mongol invasion the Sultanate could not survive. Genghis sent envoys to Delhi but withdrew in early 1222 rather than crossing the Indus, citing the climate. The decision spared the Sultanate the fate of Khwarezm, Bukhara, and Samarkand. Mongol pressure on the northwest frontier would persist for two centuries — the Sultanate maintained a permanent army of 300,000 in part to guard against renewed invasion.",
+      "date": {
+        "start": "1221-11-24",
+        "end":   "1221-11-24",
+        "precision": "day",
+        "approximate": false,
+        "display": "24 November 1221 (Battle of the Indus)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Indus river crossing (near modern Kalabagh, Punjab)",
+        "region": "Punjab",
+        "country": "PK",
+        "points": [{ "lat": 32.9617, "lon": 71.5736, "name": "Kalabagh, Indus" }]
+      },
+      "era": "sultanate",
+      "category": ["military", "political"],
+      "figures": ["Genghis Khan", "Jalal ad-Din Mingburnu", "Iltutmish"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Battle_of_the_Indus", "label": "Wikipedia: Battle of the Indus", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Peter Jackson, The Mongols and the Islamic World (2017), ch. 3", "type": "scholarly" },
+        { "label": "Peter Jackson, The Delhi Sultanate (1999), ch. 4 on Mongol relations", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "razia-sultan-1236-1240",
+      "title": "Reign of Razia Sultan",
+      "tooltip": "Razia Sultan reigns at Delhi, 1236–1240; first woman ruler of Delhi",
+      "summary": "Iltutmish's nominated daughter Razia held the Delhi throne for three and a half years before Turkic slave nobles deposed and killed her.",
+      "detail": "Iltutmish nominated his daughter Razia as successor in 1236, having found his sons unfit. The Turkic slave-noble council (Chahalgani) initially passed her over for her brother Ruknuddin, but Ruknuddin's incompetence — and his mother's cruelty toward rival nobles — provoked a Delhi uprising that put Razia on the throne in November 1236. She ruled directly, dispensing with the veil at court, riding in male dress, and conducting durbar publicly. She promoted the Abyssinian slave Yaqut over Turkic noble objections; the resulting backlash, led by the governor of Bhatinda Malik Altunia, deposed her in April 1240. She married Altunia, raised an army, and was killed near Kaithal in October 1240 attempting to retake Delhi. The first and only woman ruler of the Delhi Sultanate; the next would be Sultan Jahan Begum of Bhopal, seven hundred years later.",
+      "date": {
+        "start": "1236-11",
+        "end":   "1240-10",
+        "precision": "month",
+        "approximate": false,
+        "display": "November 1236 – October 1240"
+      },
+      "location": {
+        "type": "city",
+        "name": "Delhi",
+        "region": "Delhi Sultanate",
+        "country": "IN",
+        "points": [{ "lat": 28.6139, "lon": 77.2090, "name": "Delhi" }]
+      },
+      "era": "sultanate",
+      "category": ["political", "dynastic"],
+      "figures": ["Razia Sultan", "Iltutmish", "Yaqut", "Malik Altunia"],
+      "caused_by": [
+        { "id": "iltutmish-accession-1211", "gloss": "Iltutmish's deathbed nomination of Razia over his sons set the conflict that defined her short reign — the Turkic 'Forty' would not accept a woman the council had not chosen itself." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Razia_Sultana", "label": "Wikipedia: Razia Sultana", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Minhaj-i-Siraj, Tabaqat-i-Nasiri (c. 1260; trans. H.G. Raverty, 1881)", "type": "primary" },
+        { "label": "Rafiq Zakaria, Razia, Queen of India (1966)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "balban-accession-1266",
+      "title": "Balban accedes to the Sultanate",
+      "tooltip": "Ghiyas-ud-din Balban crowned at Delhi, 1266",
+      "summary": "Former regent and slave-general Balban took the throne and broke the power of the Turkic slave-noble council that had run the Sultanate for fifty years.",
+      "detail": "Balban — Turkic slave, son-in-law to Sultan Nasir-ud-din Mahmud, regent and effective ruler from 1246 — formally took the throne in 1266 after Mahmud's death. His twenty-year reign was a deliberate authoritarian reorganisation: the 'Forty' Turkic slave-noble council (Chahalgani) that had made and unmade the previous five sultans was systematically dismantled by execution, demotion, and selective promotion of non-Turkic loyalists. The court adopted Persian Sasanian protocols — sijda (prostration) and paibos (kissing the foot) became compulsory; the king-as-shadow-of-God doctrine was promulgated. Balban built a permanent army centred on Mongol-trained cavalry, reorganised intelligence under a network of barids (informers), and systematically destroyed the Mewati and Doab forest robbers who had been raiding Delhi. The model of personalised, centralised, ceremonially exalted sultanate rule that the Khaljis and Tughlaqs would inherit was Balban's design.",
+      "date": {
+        "start": "1266",
+        "end":   "1287",
+        "precision": "year",
+        "approximate": false,
+        "display": "1266 (accession) – 1287 (death)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Delhi",
+        "region": "Delhi Sultanate",
+        "country": "IN",
+        "points": [{ "lat": 28.6139, "lon": 77.2090, "name": "Delhi" }]
+      },
+      "era": "sultanate",
+      "category": ["political", "dynastic"],
+      "figures": ["Ghiyas-ud-din Balban"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Ghiyas_ud_din_Balban", "label": "Wikipedia: Ghiyas ud din Balban", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Ziauddin Barani, Tarikh-i Firuz Shahi (c. 1357; partial Eng. trans. Elliot & Dowson)", "type": "primary" },
+        { "label": "Satish Chandra, Medieval India — Part One (1997), ch. 3", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "alauddin-khalji-coronation-1296",
+      "title": "Alauddin Khalji's coronation",
+      "tooltip": "Alauddin Khalji crowned at Delhi after killing his uncle, 1296",
+      "summary": "Alauddin Khalji murdered his uncle Jalal-ud-din at Kara, then bribed his way to the Delhi throne — opening the Sultanate's most expansionist phase.",
+      "detail": "The Khalji 'revolution' of 1290 had replaced the Mamluk Turks with a related but distinct Afghan-Turkic Khalji clan; the founder, Jalal-ud-din Firoz Khalji, was a moderate ruler in his late sixties. His nephew and son-in-law Alauddin, governor of Kara, returned from a successful Devagiri raid (1294) with vast plunder, invited Jalal-ud-din to a meeting at Kara on 19 July 1296, and had him murdered. Alauddin marched on Delhi, distributed the Devagiri treasure to nobles and soldiery, and was crowned in October 1296. His twenty-year reign (1296–1316) is the high water of Sultanate territorial reach: market price controls, currency and revenue reforms, repulse of six Mongol invasions, the southern campaigns of Malik Kafur, the sack of Chittor and Madurai. The Sultanate Alauddin built — directly administered, militarily formidable, fiscally dirigiste — was not equalled in centralised power until the Mughals.",
+      "date": {
+        "start": "1296-10-22",
+        "end":   "1296-10-22",
+        "precision": "day",
+        "approximate": false,
+        "display": "22 October 1296 (Delhi)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Delhi",
+        "region": "Delhi Sultanate",
+        "country": "IN",
+        "points": [{ "lat": 28.6139, "lon": 77.2090, "name": "Delhi" }]
+      },
+      "era": "sultanate",
+      "category": ["political", "dynastic", "military"],
+      "figures": ["Alauddin Khalji", "Jalal-ud-din Firoz Khalji"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Alauddin_Khalji", "label": "Wikipedia: Alauddin Khalji", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Amir Khusrau, Khazain-ul-Futuh (c. 1311; trans. Mohammad Habib, 1931)", "type": "primary" },
+        { "label": "Banarsi Prasad Saksena, 'The Khaljis', in A Comprehensive History of India, vol. V (1970)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "alauddin-market-reforms-1297-1305",
+      "title": "Alauddin's market price-control reforms",
+      "tooltip": "Alauddin Khalji enforces price controls in Delhi, 1297–1305",
+      "summary": "Three administered markets fixed prices on grain, cloth, slaves, and horses — funding a permanent army of 475,000 cavalry on stable wages.",
+      "detail": "Alauddin Khalji's reforms set fixed prices for staples (wheat, barley, rice, pulses), cloth, sugar, slaves, horses, and cattle in three administered Delhi markets — the grain market, the cloth and luxury market, and the slave-and-horse market. Each market had a controller (shahna), price registers, surprise inspections, and harsh penalties for short measure (including, per Barani, removal of underweight quantities of flesh from the cheating merchant). Grain was procured from the Doab at fixed state-set prices and sold in Delhi at the same. The reforms were enforced rigorously enough that Barani records prices stayed stable through famine years. The political purpose was military: stable low prices let Alauddin pay 475,000 cavalry on a wage that would otherwise have required either inflation or land grants. The reforms collapsed within a year of Alauddin's death (1316) when his successor Mubarak Shah dismantled the controls and disbanded the army.",
+      "date": {
+        "start": "1297",
+        "end":   "1305",
+        "precision": "year",
+        "approximate": true,
+        "display": "1297–1305 (effective until c. 1316)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Delhi",
+        "region": "Delhi Sultanate",
+        "country": "IN",
+        "points": [{ "lat": 28.6139, "lon": 77.2090, "name": "Delhi" }]
+      },
+      "era": "sultanate",
+      "category": ["economic", "political"],
+      "figures": ["Alauddin Khalji"],
+      "caused_by": [
+        { "id": "alauddin-khalji-coronation-1296", "gloss": "The standing-army-on-cash-wages model required the price controls; without them the wages would not have purchased adequate provisions." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Alauddin_Khalji#Economic_reforms", "label": "Wikipedia: Alauddin Khalji — Economic reforms", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Ziauddin Barani, Tarikh-i Firuz Shahi (c. 1357; partial Eng. trans. Elliot & Dowson)", "type": "primary" },
+        { "label": "Irfan Habib, 'The Price Regulations of Alauddin Khalji — A Defence of Zia Barani', Indian Economic and Social History Review 21:4 (1984)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "mongol-siege-of-delhi-1303",
+      "title": "Mongol siege of Delhi repulsed",
+      "tooltip": "Alauddin holds Delhi against Targhi's Mongol force, 1303",
+      "summary": "Alauddin held Siri Fort against a two-month Mongol siege under Targhi; the closest the Mongols ever came to taking Delhi.",
+      "detail": "The sixth and most serious Mongol invasion of Alauddin's reign came in late 1303 under the Chagatai general Targhi, with a force estimated at 120,000. Alauddin was returning from the Chittor campaign, his army exhausted; he took refuge in the partly-built Siri fort outside Delhi rather than attempting battle in the open. Targhi besieged Siri for two months. The Mongols devastated the Doab countryside, but the fort held; their cavalry was unsuited to siege work and supply lines were stretched. Targhi withdrew in early 1304 without taking the city. Alauddin used the close-call to refortify Delhi, push the frontier outposts forward to Multan and Samana, and place the experienced general Ghazi Malik (later Ghiyasuddin Tughlaq) in charge of the northwest frontier. After 1306 the Mongols stopped invading the Sultanate; the threat that had defined northwestern Indian politics for eighty years receded.",
+      "date": {
+        "start": "1303-09",
+        "end":   "1304-02",
+        "precision": "month",
+        "approximate": true,
+        "display": "September 1303 – early 1304"
+      },
+      "location": {
+        "type": "city",
+        "name": "Siri Fort, Delhi",
+        "region": "Delhi Sultanate",
+        "country": "IN",
+        "points": [{ "lat": 28.5520, "lon": 77.2200, "name": "Siri Fort, Delhi" }]
+      },
+      "era": "sultanate",
+      "category": ["military", "political"],
+      "figures": ["Alauddin Khalji", "Targhi", "Ghazi Malik"],
+      "caused_by": [
+        { "id": "genghis-indus-1221", "gloss": "Mongol pressure on the Sultanate's northwest persisted from the 1221 Indus campaign onwards; the 1303 siege was the high water of that pressure before it receded." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Mongol_invasions_of_India", "label": "Wikipedia: Mongol invasions of India", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Peter Jackson, The Delhi Sultanate (1999), ch. 8", "type": "scholarly" },
+        { "label": "Iqtidar Husain Siddiqui, Indo-Persian Historiography up to the Thirteenth Century (2010)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "siege-of-chittor-1303",
+      "title": "Siege of Chittor",
+      "tooltip": "Alauddin Khalji takes Chittor from Ratnasimha, 1303",
+      "summary": "Alauddin's eight-month siege of Chittor ended in the fortress's fall and the jauhar of its women — the campaign that produced the Padmini legend.",
+      "detail": "Alauddin Khalji marched on Chittor in January 1303, besieging the Mewar fortress of Rana Ratnasimha (the Rajput Ratan Singh of later legend). The siege lasted eight months; Chittor fell on 26 August 1303. The defending garrison performed saka — a final suicidal sortie — while the women including the queen, in Rajput tradition, performed jauhar (mass self-immolation). The campaign is the principal subject of Malik Muhammad Jayasi's Awadhi-language Padmavat (1540), which centred the campaign on Alauddin's desire for Ratnasimha's queen Padmini — a story for which there is no contemporary evidence and which Amir Khusrau (who accompanied Alauddin) does not mention. Chittor became part of the Sultanate's directly-administered territory under Alauddin's son Khizr Khan, then was retaken by Hammir Singh of Mewar in 1326 after Khalji collapse. The Padmini story would shape Hindu-Muslim communal historiography from the late 16th century onwards.",
+      "date": {
+        "start": "1303-01",
+        "end":   "1303-08-26",
+        "precision": "day",
+        "approximate": false,
+        "display": "January – 26 August 1303"
+      },
+      "location": {
+        "type": "city",
+        "name": "Chittor (Chittorgarh)",
+        "region": "Mewar / Rajasthan",
+        "country": "IN",
+        "points": [{ "lat": 24.8829, "lon": 74.6248, "name": "Chittor Fort" }]
+      },
+      "era": "sultanate",
+      "category": ["military", "political"],
+      "figures": ["Alauddin Khalji", "Ratnasimha (Ratan Singh)", "Amir Khusrau"],
+      "caused_by": [
+        { "id": "alauddin-khalji-coronation-1296", "gloss": "Alauddin's expansionist reign required the elimination of the western Rajput powers as a precondition for the southern campaigns; Chittor was the fortress that controlled the Mewar approach." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Siege_of_Chittorgarh_(1303)", "label": "Wikipedia: Siege of Chittorgarh (1303)", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Amir Khusrau, Khazain-ul-Futuh (c. 1311)", "type": "primary" },
+        { "label": "Ramya Sreenivasan, The Many Lives of a Rajput Queen: Heroic Pasts in India, c. 1500–1900 (2007)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "malik-kafur-madurai-1311",
+      "title": "Malik Kafur sacks Madurai",
+      "tooltip": "Malik Kafur reaches Madurai for Alauddin Khalji, 1311",
+      "summary": "Alauddin's slave-general Malik Kafur reached Madurai — the southernmost Sultanate raid, returning to Delhi with 612 elephants and 96,000 maunds of gold.",
+      "detail": "Malik Kafur (Hazar-Dinari) — Alauddin Khalji's eunuch slave-general, captured at the Gujarat campaign of 1297 — led four southern campaigns between 1307 and 1311 that brought the entire peninsula under tribute. The first two extracted treaty payments from the Yadavas of Devagiri and the Kakatiyas of Warangal. The 1310 campaign defeated the Hoysalas at their capital Dwarasamudra. The 1311 final campaign reached Madurai under the Pandyas, sacked the city and the Meenakshi temple, and returned to Delhi with reportedly 612 elephants, 96,000 maunds of gold (about 241 tonnes), and 20,000 horses. None of these southern kingdoms were annexed — they remained tributary, a model the Mughals would later follow. The Khalji southern campaigns established the convention that subcontinental empires extract tribute from the Deccan rather than directly administering it. Within five years all of it had unravelled: by 1316 the Yadavas, Kakatiyas, Hoysalas, and Pandyas had stopped paying.",
+      "date": {
+        "start": "1311-04",
+        "end":   "1311-10",
+        "precision": "month",
+        "approximate": false,
+        "display": "April – October 1311 (Madurai)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Madurai",
+        "region": "Pandya country",
+        "country": "IN",
+        "points": [{ "lat": 9.9252, "lon": 78.1198, "name": "Madurai" }]
+      },
+      "era": "sultanate",
+      "category": ["military", "political", "economic"],
+      "figures": ["Malik Kafur", "Alauddin Khalji"],
+      "caused_by": [
+        { "id": "alauddin-market-reforms-1297-1305", "gloss": "The southern campaigns paid for themselves and replenished the treasury that funded the standing army; the price-control state needed a steady inflow of plunder to sustain the wage bill." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Malik_Kafur", "label": "Wikipedia: Malik Kafur", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Amir Khusrau, Khazain-ul-Futuh (c. 1311)", "type": "primary" },
+        { "label": "K.A. Nilakanta Sastri, A History of South India (1955), ch. on the Pandyas", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "tughlaq-dynasty-founded-1320",
+      "title": "Tughlaq dynasty founded",
+      "tooltip": "Ghazi Malik takes Delhi as Ghiyasuddin Tughlaq, 1320",
+      "summary": "Ghazi Malik, frontier governor and veteran of the Mongol wars, killed the usurper Khusrau Khan and founded the Tughlaq dynasty.",
+      "detail": "After Alauddin Khalji's death (1316) the Khalji line collapsed in four years of court intrigue. Mubarak Shah (1316–1320) was murdered by his lover Khusrau Khan, an ennobled Hindu convert, who briefly held the throne as Nasiruddin Khusrau Shah (1320). The Turkic-Afghan nobility refused to accept his rule. Ghazi Malik — Punjabi Turk, governor of Dipalpur, veteran of twenty-eight battles against the Mongols — marched on Delhi with his son Muhammad (later Muhammad bin Tughlaq), defeated Khusrau at the battle of Saraswati on 5 September 1320, and was crowned as Ghiyasuddin Tughlaq. The Tughlaq dynasty (1320–1413) is the Sultanate's high imperial phase under its first three rulers (Ghiyasuddin, Muhammad, Firuz Shah) and its long disintegration after Firuz Shah's death (1388).",
+      "date": {
+        "start": "1320-09-05",
+        "end":   "1320-09-08",
+        "precision": "day",
+        "approximate": false,
+        "display": "5–8 September 1320 (Saraswati battle, then Delhi coronation)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Delhi (Tughlaqabad founded shortly after)",
+        "region": "Delhi Sultanate",
+        "country": "IN",
+        "points": [{ "lat": 28.6139, "lon": 77.2090, "name": "Delhi" }]
+      },
+      "era": "sultanate",
+      "category": ["political", "dynastic", "military"],
+      "figures": ["Ghiyasuddin Tughlaq", "Khusrau Khan", "Muhammad bin Tughlaq"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Tughlaq_dynasty", "label": "Wikipedia: Tughlaq dynasty", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Ziauddin Barani, Tarikh-i Firuz Shahi (c. 1357)", "type": "primary" },
+        { "label": "Mahdi Husain, Tughluq Dynasty (1963)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "daulatabad-capital-shift-1327",
+      "title": "Capital shifted to Daulatabad",
+      "tooltip": "Muhammad bin Tughlaq orders capital shift to Daulatabad, 1327",
+      "summary": "Muhammad bin Tughlaq ordered Delhi's administrative class to march 1,100 km south to Devagiri — renamed Daulatabad — and reversed the order within two years.",
+      "detail": "Muhammad bin Tughlaq's reasoning for the 1327 capital shift was partly strategic — Devagiri was central to his Deccan tribute network, defensible, and out of Mongol raid range — and partly that he wanted Delhi's Persian-Turkic elite incorporated into a southern administration he was building from converts and lower-caste military entrepreneurs. The order required the entire administrative class — nobles, scholars, ulama, merchants — to relocate 1,100 kilometres. Barani, who hated the policy, records that the order was enforced ruthlessly: a blind man and a lame man were dragged from their homes; the lame man's body fell apart on the road. Within two years Muhammad reversed the order — Devagiri's water supply could not sustain the population, the southern revenue was insufficient, and Delhi was being overrun by Mongol raids. The reverse migration killed many of the survivors of the first one. The episode became the canonical case in Sultanate historiography of imperial overreach.",
+      "date": {
+        "start": "1327",
+        "end":   "1334",
+        "precision": "year",
+        "approximate": true,
+        "display": "1327 (order); reversed c. 1334"
+      },
+      "location": {
+        "type": "city",
+        "name": "Daulatabad (Devagiri), Maharashtra",
+        "region": "Deccan",
+        "country": "IN",
+        "points": [{ "lat": 19.9347, "lon": 75.2138, "name": "Daulatabad Fort" }]
+      },
+      "era": "sultanate",
+      "category": ["political", "colonial-administration"],
+      "figures": ["Muhammad bin Tughlaq", "Ziauddin Barani"],
+      "caused_by": [
+        { "id": "tughlaq-dynasty-founded-1320", "gloss": "The Tughlaq dynasty's centralised tribute model required a southern administrative base; Devagiri was the obvious geographical centre for the deccan revenue stream Malik Kafur had inaugurated." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Daulatabad_Fort", "label": "Wikipedia: Daulatabad Fort", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Ibn Battuta, Rihla (c. 1355; trans. H.A.R. Gibb, Travels in Asia and Africa, 1929)", "type": "primary" },
+        { "label": "Ziauddin Barani, Tarikh-i Firuz Shahi (c. 1357)", "type": "primary" },
+        { "label": "Mahdi Husain, The Rise and Fall of Muhammad bin Tughluq (1938)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "tughlaq-token-currency-1329",
+      "title": "Muhammad bin Tughlaq's token currency",
+      "tooltip": "Muhammad bin Tughlaq issues copper token currency, 1329–1332",
+      "summary": "Token copper coins issued at silver-tanka face value to fund expansion, withdrawn within four years after mass forgery destroyed their acceptance.",
+      "detail": "In 1329 Muhammad bin Tughlaq issued copper coins valued at the silver tanka (the standard Sultanate currency) — a fiduciary token currency unprecedented in subcontinental practice. The motivation was fiscal: the southern campaigns and capital-shift had drained the treasury, the Mongol frontier needed funding, and Muhammad's planned Khurasan campaign required cash. Token currency would let him meet these obligations without depleting silver reserves. The system collapsed because the state failed to monopolise minting: counterfeiting was easy (copper was cheap and abundant), and within months parallel circulation of forged tokens made the official issue worthless. Hindu zamindars, Barani records, paid their land tax in counterfeit while keeping silver tankas in their treasuries. Muhammad withdrew the issue in 1332, redeeming all tokens — including the forgeries — at face value, which devastated the treasury he had hoped to refill. The episode is the second canonical case (after Daulatabad) in Sultanate-era historiography of administrative overreach.",
+      "date": {
+        "start": "1329",
+        "end":   "1332",
+        "precision": "year",
+        "approximate": true,
+        "display": "1329 (issue) – 1332 (withdrawal)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Delhi",
+        "region": "Delhi Sultanate",
+        "country": "IN",
+        "points": [{ "lat": 28.6139, "lon": 77.2090, "name": "Delhi" }]
+      },
+      "era": "sultanate",
+      "category": ["economic", "political"],
+      "figures": ["Muhammad bin Tughlaq"],
+      "caused_by": [
+        { "id": "daulatabad-capital-shift-1327", "gloss": "The capital-shift's fiscal damage made the token-currency expedient appear necessary; the two episodes together are usually read as a unit in Tughlaq historiography." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Muhammad_bin_Tughluq#Token_currency", "label": "Wikipedia: Muhammad bin Tughluq — Token currency", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Ziauddin Barani, Tarikh-i Firuz Shahi (c. 1357)", "type": "primary" },
+        { "label": "Irfan Habib, 'Currency System of the Mughal Empire (1556–1707)', Medieval India Quarterly 4 (1961) — historical context section", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "bahmani-sultanate-1347",
+      "title": "Bahmani Sultanate breaks away",
+      "tooltip": "Hasan Gangu founds the Bahmani Sultanate at Daulatabad, 1347",
+      "summary": "Deccan amirs revolted against Tughlaq rule and founded the Bahmani Sultanate — the first independent Muslim kingdom in the south.",
+      "detail": "The Tughlaq Daulatabad project collapsed into rebellion. In 1345 the southern amirs of Muhammad bin Tughlaq's Deccan administration revolted; in August 1347 the rebel commander Hasan Gangu was crowned at Daulatabad as Alauddin Bahman Shah, founding the Bahmani Sultanate. Capital moved to Gulbarga in 1347 and to Bidar in 1429. Bahmani rule lasted until 1527, when the kingdom fragmented into the five Deccan Sultanates (Ahmadnagar, Bijapur, Berar, Bidar, Golconda) — the same kingdoms Akbar's grandson Aurangzeb would spend his reign annexing. The Bahmani breakaway is the structural turning point in Sultanate history: from 1347 onward the Delhi Sultanate is a north-Indian power, never again the subcontinental tribute-extractor of the Khalji-Tughlaq high period. The Vijayanagara empire (founded 1336) had already established the Hindu-ruled south; Bahmani gave the Deccan its own Muslim political tradition, distinct from Delhi.",
+      "date": {
+        "start": "1347-08-03",
+        "end":   "1347-08-03",
+        "precision": "day",
+        "approximate": false,
+        "display": "3 August 1347 (Daulatabad coronation)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Gulbarga (capital from 1347)",
+        "region": "Deccan",
+        "country": "IN",
+        "points": [{ "lat": 17.3297, "lon": 76.8343, "name": "Gulbarga" }]
+      },
+      "era": "sultanate",
+      "category": ["political", "dynastic", "military"],
+      "figures": ["Hasan Gangu (Alauddin Bahman Shah)", "Muhammad bin Tughlaq"],
+      "caused_by": [
+        { "id": "daulatabad-capital-shift-1327", "gloss": "The capital shift placed Tughlaq elites in the Deccan; their later revolt against the failed administration produced the Bahmani breakaway from the same geography." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Bahmani_Sultanate", "label": "Wikipedia: Bahmani Sultanate", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "H.K. Sherwani, The Bahmanis of the Deccan (1985)", "type": "scholarly" },
+        { "label": "Richard M. Eaton, A Social History of the Deccan, 1300–1761 (2005)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "firuz-shah-tughlaq-1351",
+      "title": "Firuz Shah Tughlaq's accession",
+      "tooltip": "Firuz Shah Tughlaq crowned, 1351; reign of consolidation and decline",
+      "summary": "Firuz Shah's 37-year reign abandoned expansionism, restored orthodox patronage, and presided over the Sultanate's contraction to a north-Indian regional power.",
+      "detail": "Muhammad bin Tughlaq died on campaign in Sind in March 1351. His cousin Firuz Shah was crowned at Thatta and brought the army back to Delhi after settling Sind. His reign (1351–1388) is conventionally read as the Sultanate's contraction-and-stabilisation phase. Firuz abandoned the southern claims, commuted many cash-revenue obligations to in-kind levies, restored land grants (waqfs and madad-i-maash) the previous reigns had resumed, founded several new towns (Hisar, Firuzabad, Jaunpur), built irrigation canals from the Yamuna and Sutlej, and codified the jizya tax with new severity — the first systematic application of jizya to Brahmins, who had previously been exempt. He patronised orthodox Sunni ulama including Barani in his retirement. The reign was prosperous and culturally productive but politically static; the centralised imperial machine of the Khaljis and early Tughlaqs was not rebuilt. After Firuz's death in 1388 the Sultanate fragmented quickly.",
+      "date": {
+        "start": "1351-03-23",
+        "end":   "1388-09-20",
+        "precision": "day",
+        "approximate": false,
+        "display": "23 March 1351 – 20 September 1388"
+      },
+      "location": {
+        "type": "city",
+        "name": "Delhi (Firuzabad founded 1354)",
+        "region": "Delhi Sultanate",
+        "country": "IN",
+        "points": [{ "lat": 28.6139, "lon": 77.2090, "name": "Delhi" }]
+      },
+      "era": "sultanate",
+      "category": ["political", "dynastic", "religious"],
+      "figures": ["Firuz Shah Tughlaq", "Muhammad bin Tughlaq", "Ziauddin Barani"],
+      "caused_by": [
+        { "id": "tughlaq-token-currency-1329", "gloss": "Firuz's reign was a deliberate retreat from his cousin's expansionism and fiscal experimentation; the contrast was the political identity of the new regime." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Firuz_Shah_Tughlaq", "label": "Wikipedia: Firuz Shah Tughlaq", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Shams-i Siraj Afif, Tarikh-i Firuz Shahi (late 14th c.; partial Eng. trans. Elliot & Dowson)", "type": "primary" },
+        { "label": "Mahdi Husain, Tughluq Dynasty (1963)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
     {
       "id": "barani-tarikh-firuz-shahi-1357",
       "title": "Ziauddin Barani writes Tarikh-i Firuz Shahi",
@@ -27,6 +589,9 @@
       "category": ["cultural", "political"],
       "figures": ["Ziauddin Barani", "Firuz Shah Tughlaq", "Muhammad bin Tughlaq"],
       "tags": ["memoir"],
+      "caused_by": [
+        { "id": "firuz-shah-tughlaq-1351", "gloss": "Firuz Shah's restoration of orthodox patronage gave the disgraced Barani both an audience for his Sultanate-restorationist ideology and a reigning sultan to dedicate the work to." }
+      ],
       "links": [
         { "url": "https://en.wikipedia.org/wiki/Ziauddin_Barani", "label": "Wikipedia: Ziauddin Barani", "type": "wikipedia" }
       ],
@@ -34,6 +599,111 @@
         { "label": "Ziauddin Barani, Tarikh-i Firuz Shahi (ed. Sayyid Ahmad Khan, 1862; partial Eng. trans. H.M. Elliot, History of India as Told by Its Own Historians, vol. III)", "type": "primary" },
         { "label": "Mohammad Habib & Khaliq Ahmad Nizami, A Comprehensive History of India, Vol. V: The Delhi Sultanate (1970), ch. on historiography", "type": "scholarly" },
         { "label": "Peter Hardy, Historians of Medieval India (1960), ch. 2", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "timur-sacks-delhi-1398",
+      "title": "Timur sacks Delhi",
+      "tooltip": "Timur sacks Delhi, December 1398; Sultanate effectively destroyed",
+      "summary": "Timur's three-day sack killed an estimated 100,000 and ended Tughlaq central authority — the collapse the Sayyids and Lodis would briefly hold.",
+      "detail": "Timur (Tamerlane) crossed the Indus in September 1398, citing the religious laxity of the Tughlaq state — a transparent pretext for plunder. He defeated Mahmud Tughlaq's force outside Delhi on 17 December 1398 and entered the city the next day. The sack lasted three days; Timur's chronicler Sharaf ad-Din Yazdi records that 'every soldier obtained more than twenty persons as slaves' and that the heads of the dead built a pyramid outside the gates. Modern estimates range from 100,000 to 200,000 killed in Delhi alone. Timur withdrew in January 1399 with the Sultanate's accumulated treasure, the entire skilled artisan class (taken as slaves to Samarkand), and one thousand stonemasons used to build the Bibi-Khanym Mosque. The Tughlaq central authority never recovered; the Sayyid dynasty (1414–1451) and the Lodi dynasty (1451–1526) ruled an empire reduced from subcontinental to north-Indian.",
+      "date": {
+        "start": "1398-12-17",
+        "end":   "1399-01-01",
+        "precision": "day",
+        "approximate": false,
+        "display": "17 December 1398 – 1 January 1399"
+      },
+      "location": {
+        "type": "city",
+        "name": "Delhi",
+        "region": "Delhi Sultanate",
+        "country": "IN",
+        "points": [{ "lat": 28.6139, "lon": 77.2090, "name": "Delhi" }]
+      },
+      "era": "sultanate",
+      "category": ["military", "political"],
+      "figures": ["Timur (Tamerlane)", "Mahmud Tughlaq"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Timur%27s_sack_of_Delhi", "label": "Wikipedia: Timur's sack of Delhi", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Sharaf ad-Din Yazdi, Zafarnama (c. 1424; partial trans. Elliot & Dowson)", "type": "primary" },
+        { "label": "Beatrice Forbes Manz, The Rise and Rule of Tamerlane (1989)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "lodi-dynasty-founded-1451",
+      "title": "Bahlul Lodi founds the Lodi dynasty",
+      "tooltip": "Bahlul Lodi takes Delhi, 1451; first Afghan dynasty of Sultanate",
+      "summary": "Bahlul Lodi, the Sirhind-based Afghan governor, took Delhi from the last Sayyid sultan and founded the Sultanate's first Afghan-tribal dynasty.",
+      "detail": "The Sayyid dynasty (1414–1451) — claiming descent from the Prophet through their founder Khizr Khan — never extended its writ much beyond the Delhi-Doab region after Timur's destruction. The last Sayyid sultan Alam Shah (1445–1451), demoralised, retired voluntarily to Badaun. Bahlul Lodi, the Afghan governor of Sirhind from a Pashtun military family that had served the Tughlaqs, marched on Delhi in April 1451 and was crowned on 19 April. The Lodi dynasty (1451–1526) is the Sultanate's last and the first ruled by a frankly Afghan-tribal elite rather than Turkic-Persian one — a difference that would matter to Babur's calculation seventy-five years later. Bahlul's thirty-eight-year reign re-extended Sultanate authority over Jaunpur (1483) and the Doab and Punjab; his son Sikandar Lodi (1489–1517) shifted the capital to Agra. The dynasty ended at Panipat in 1526 when Ibrahim Lodi fell to Babur.",
+      "date": {
+        "start": "1451-04-19",
+        "end":   "1451-04-19",
+        "precision": "day",
+        "approximate": false,
+        "display": "19 April 1451 (Delhi)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Delhi",
+        "region": "Delhi Sultanate",
+        "country": "IN",
+        "points": [{ "lat": 28.6139, "lon": 77.2090, "name": "Delhi" }]
+      },
+      "era": "sultanate",
+      "category": ["political", "dynastic"],
+      "figures": ["Bahlul Lodi", "Alam Shah Sayyid", "Sikandar Lodi"],
+      "caused_by": [
+        { "id": "timur-sacks-delhi-1398", "gloss": "Timur's destruction of central Tughlaq authority created the post-Sultanate vacuum the Sayyids and Lodis successively filled — neither rebuilding the imperial apparatus." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Lodi_dynasty", "label": "Wikipedia: Lodi dynasty", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "K.S. Lal, Twilight of the Sultanate (1963)", "type": "scholarly" },
+        { "label": "Iqtidar Husain Siddiqui, Afghan Despotism in India (1969)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "ibrahim-lodi-accession-1517",
+      "title": "Ibrahim Lodi's accession",
+      "tooltip": "Ibrahim Lodi crowned at Agra, 1517; tensions with Afghan nobility set up Panipat",
+      "summary": "Ibrahim Lodi's centralising policies and humiliations of senior Afghan nobles drove rebellions that culminated in Daulat Khan Lodi inviting Babur to invade.",
+      "detail": "Sikandar Lodi died in November 1517; his son Ibrahim was crowned at Agra (which Sikandar had made the capital in 1504) on 22 November. Ibrahim's nine-year reign (1517–1526) is the Sultanate's last. He attempted to centralise power against the Afghan tribal nobility his grandfather and father had relied on — demanding strict court protocol, refusing to share authority, executing senior amirs on suspicion. The result was rebellion: the Punjab governor Daulat Khan Lodi and Ibrahim's own uncle Alam Khan Lodi separately conspired to bring in Babur from Kabul as a counterweight. Ibrahim defeated Alam Khan's bid (1524) but Babur, after his fifth Hindustan raid, met Ibrahim at Panipat on 21 April 1526. Ibrahim died on the field — the first sultan of Delhi to die in battle since Iltutmish's wars three centuries earlier. The Sultanate ended at Panipat; the Mughal Empire began on the same field on the same day.",
+      "date": {
+        "start": "1517-11-22",
+        "end":   "1526-04-21",
+        "precision": "day",
+        "approximate": false,
+        "display": "22 November 1517 – 21 April 1526"
+      },
+      "location": {
+        "type": "city",
+        "name": "Agra (capital from 1504)",
+        "region": "Doab",
+        "country": "IN",
+        "points": [{ "lat": 27.1767, "lon": 78.0081, "name": "Agra" }]
+      },
+      "era": "sultanate",
+      "category": ["political", "dynastic"],
+      "figures": ["Ibrahim Lodi", "Daulat Khan Lodi", "Babur"],
+      "caused_by": [
+        { "id": "lodi-dynasty-founded-1451", "gloss": "The Lodi reliance on Afghan-tribal nobility was the regime's organising principle; Ibrahim's attempt to centralise against it broke the political settlement his grandfather had built." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Ibrahim_Lodi", "label": "Wikipedia: Ibrahim Lodi", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Babur, Baburnama (trans. Wheeler M. Thackston, 1996)", "type": "primary" },
+        { "label": "K.S. Lal, Twilight of the Sultanate (1963)", "type": "scholarly" }
       ],
       "verified": true
     }

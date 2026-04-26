@@ -34,7 +34,8 @@
         { "label": "Stephen F. Dale, The Garden of the Eight Paradises (2004)", "type": "scholarly" }
       ],
       "caused_by": [
-        { "id": "babur-takes-lahore-1524", "gloss": "Lahore in 1524 was the staging point; Daulat Khan Lodi's subsequent betrayal made the march on Delhi inevitable." }
+        { "id": "babur-takes-lahore-1524", "gloss": "Lahore in 1524 was the staging point; Daulat Khan Lodi's subsequent betrayal made the march on Delhi inevitable." },
+        { "id": "ibrahim-lodi-accession-1517", "gloss": "Ibrahim Lodi's centralising estrangement of the Afghan nobility was the political precondition for Daulat Khan's invitation; Babur arrived as the nobility's preferred counterweight." }
       ],
       "verified": true
     },
