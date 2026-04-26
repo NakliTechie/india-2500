@@ -45,6 +45,12 @@ def main():
         page = ctx.new_page()
         page.goto(f"file://{HTML}")
         page.wait_for_load_state("networkidle")
+        # Defensive wait + readiness check — networkidle returns immediately
+        # for file:// URLs but bootRenders() needs a moment to bind
+        # wheel/drag listeners to the ~150-event corpus. Wait for the boot
+        # to finish (zoom global is the most reliable signal it's done).
+        page.wait_for_function("() => typeof zoom !== 'undefined' && zoom.scale === 1")
+        page.wait_for_timeout(1500)
 
         # ---- 1. Initial viewBox ----
         x0, y0, w0, h0 = vb(page)

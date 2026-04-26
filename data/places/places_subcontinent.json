@@ -895,6 +895,29 @@
     },
 
     {
+      "id": "ayodhya",
+      "name": "Ayodhya",
+      "tooltip": "Ayodhya — Ramayana setting; Babri Masjid demolition 1992; 2019 SC verdict",
+      "summary": "Sarayu-river city of the Ramayana tradition; site of the 1528 Babri Masjid, its 1992 demolition, and the 2019 Supreme Court site-award verdict.",
+      "framing": "Ayodhya on the Sarayu river in eastern Uttar Pradesh is the traditional setting of the Ramayana — birthplace of the deity Ram in Hindu tradition. Archaeological work at the city dates significant occupation from the 7th century BCE; the city served as a Maurya-era then Gupta-era Buddhist-Jain-Hindu pilgrimage centre. The Babri Masjid, built 1528 (attributed to Mir Baqi under Babur), stood on a site Hindu tradition identified as Ram Janmabhoomi (Ram's birthplace) — disputed continuously through colonial-era court cases and the post-Independence Ram Janmabhoomi movement. The mosque's demolition on 6 December 1992 by an estimated 150,000 kar sevaks, the subsequent communal riots (~2,000 dead) and the 1993 Bombay blasts, the Liberhan Commission inquiry, and the 2019 Supreme Court verdict awarding the disputed 2.77-acre site to the Ram Janmabhoomi trust — while finding no archaeological evidence of a demolished temple directly underlying the mosque — constitute the contested modern political-religious history.",
+      "location": {
+        "country": "IN",
+        "lat": 26.7951,
+        "lon": 82.1943,
+        "radius_km": 5
+      },
+      "era_span": ["mahajanapada", "maurya", "post-maurya", "gupta", "early-medieval", "sultanate", "mughal", "colonial", "independence", "republic"],
+      "category": ["sacred-site", "city"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Ayodhya", "label": "Wikipedia: Ayodhya", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Hans Bakker, Ayodhya (1986)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
       "id": "puri",
       "name": "Puri",
       "tooltip": "Puri — Jagannath temple seat, c. 12th c. onward; chronicled in the Madala Panji",

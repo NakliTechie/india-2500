@@ -1,0 +1,46 @@
+{
+  "events_files": [
+    "events_1857.json",
+    "events_bengal.json",
+    "events_central_asia.json",
+    "events_chotanagpur.json",
+    "events_early-medieval.json",
+    "events_gupta.json",
+    "events_independence.json",
+    "events_mahajanapada.json",
+    "events_maurya.json",
+    "events_mughal.json",
+    "events_northeast.json",
+    "events_odisha.json",
+    "events_post-maurya.json",
+    "events_princely_states.json",
+    "events_reform.json",
+    "events_republic.json",
+    "events_south_india.json",
+    "events_sultanate.json",
+    "events_sur.json"
+  ],
+  "threads_files": [
+    "threads_independence.json",
+    "threads_mughal.json"
+  ],
+  "people_files": [
+    "people_freedom-fighters.json",
+    "people_mughal-emperors.json",
+    "people_reformers-and-thinkers.json",
+    "people_regional-resistance.json"
+  ],
+  "collections_files": [
+    "collections_central_asia.json",
+    "collections_memoirs.json",
+    "collections_rebellions.json",
+    "collections_subcontinent.json",
+    "collections_women.json"
+  ],
+  "places_files": [
+    "places_subcontinent.json"
+  ],
+  "polities_files": [
+    "polities_subcontinent.json"
+  ]
+}

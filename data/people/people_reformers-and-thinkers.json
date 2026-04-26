@@ -1,0 +1,585 @@
+{
+  "campaign": "reformers-and-thinkers",
+  "scope": "Nineteenth- and twentieth-century reformers and intellectuals — anti-caste pioneers (Phule pair), women's-education and self-respect leaders (Savitribai Phule, Pandita Ramabai), the Self-Respect/Dravidian reformer Periyar, and the Bengal Renaissance polymath Tagore.",
+  "updated": "2026-04-26",
+  "people": [
+
+    {
+      "id": "jyotirao-phule",
+      "name": "Jyotirao Govindrao Phule",
+      "short_name": "Jyotirao Phule",
+      "tooltip": "Jyotirao Phule (1827–1890), anti-caste reformer of Pune",
+      "summary": "Mali (gardener-caste) reformer of Pune. Co-founded the first girls' school 1848; founded the Satyashodhak Samaj 1873; published Gulamgiri the same year.",
+      "era": "colonial",
+      "lifespan": {
+        "born": "1827-04-11",
+        "died": "1890-11-28",
+        "birthplace": { "name": "Katgun (Satara district)", "country": "IN", "lat": 17.6500, "lon": 74.2500 },
+        "deathplace": { "name": "Pune", "country": "IN", "lat": 18.5204, "lon": 73.8567 }
+      },
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Jyotirao_Phule", "label": "Wikipedia: Jyotirao Phule", "type": "wikipedia" }
+      ],
+      "colour": "#a8531a",
+      "track": [
+        {
+          "kind": "moment",
+          "id": "phule-marriage-1840",
+          "tooltip": "Married Savitribai at thirteen, 1840",
+          "summary": "Married Savitribai Khandoba (b. 1831) at thirteen — she was nine. The lifelong educational and political partnership begins from this marriage.",
+          "date": { "start": "1840-01-01", "end": "1840-12-31", "precision": "year", "approximate": true, "display": "1840" },
+          "location": { "name": "Pune", "region": "Bombay Presidency", "country": "IN",
+                        "points": [{ "lat": 18.5204, "lon": 73.8567 }] },
+          "note": "Phule taught Savitribai to read at home — Mali-caste girls had no formal access to literacy. By the late 1840s she was teaching alongside him; by 1851 she was India's first woman headmistress. The intellectual collaboration is rare in nineteenth-century reform marriages."
+        },
+        {
+          "kind": "moment",
+          "id": "phule-bhide-wada-1848",
+          "tooltip": "Opens India's first girls' school at Bhide Wada, Pune, 1 January 1848",
+          "summary": "Opened a girls' school at Bhide Wada, Pune — first run by Indians, open across caste. Savitribai was the first teacher; Brahmin opposition was immediate.",
+          "date": { "start": "1848-01-01", "end": "1848-01-01", "precision": "day", "approximate": false, "display": "1 January 1848" },
+          "location": { "name": "Bhide Wada, Budhwar Peth, Pune", "region": "Bombay Presidency", "country": "IN",
+                        "points": [{ "lat": 18.5160, "lon": 73.8580 }] },
+          "note": "Father Govindrao Phule expelled the couple from the family home in 1849 under Brahmin pressure. They moved into the home of friend Usman Sheikh — the school was supported by Sheikh's sister Fatima Sheikh, who became Savitribai's first colleague and one of India's first Muslim women teachers. By 1852 they had opened five girls' schools."
+        },
+        {
+          "kind": "moment",
+          "id": "phule-untouchables-school-1851",
+          "tooltip": "Opens a school for Mahar and Mang 'untouchable' children, 1851",
+          "summary": "Opened a separate school for Mahar and Mang 'untouchable' children — among the first explicitly cross-caste schools in colonial India.",
+          "date": { "start": "1851-01-01", "end": "1851-12-31", "precision": "year", "approximate": true, "display": "1851" },
+          "location": { "name": "Pune", "region": "Bombay Presidency", "country": "IN",
+                        "points": [{ "lat": 18.5204, "lon": 73.8567 }] },
+          "note": "The Phules' household drinking water was made available to 'untouchables' from this period — directly inverting the caste prohibition that defined village water access. Two grain-of-Brahmin caste-violation acts: educating girls, and educating untouchables. The orthodox Pune response was sustained social and physical attack."
+        },
+        {
+          "kind": "moment",
+          "id": "phule-satyashodhak-samaj-1873",
+          "tooltip": "Founds the Satyashodhak Samaj ('Truth-Seekers' Society'), 24 September 1873",
+          "summary": "Founded the Satyashodhak Samaj as the institutional vehicle of non-Brahmin organising — anti-priestly, anti-ritual, reformist marriage, direct theism.",
+          "date": { "start": "1873-09-24", "end": "1873-09-24", "precision": "day", "approximate": false, "display": "24 September 1873" },
+          "location": { "name": "Pune", "region": "Bombay Presidency", "country": "IN",
+                        "points": [{ "lat": 18.5204, "lon": 73.8567 }] },
+          "note": "Provided non-Brahmin officiants for marriages and life-cycle ceremonies, undercutting the Brahmin priestly economy. The Samaj's network in Maharashtra and Bombay provided the institutional ground for the later non-Brahmin movement and for Shahu Maharaj of Kolhapur's reservation policy at Kolhapur."
+        },
+        {
+          "kind": "moment",
+          "id": "phule-gulamgiri-1873",
+          "tooltip": "Publication of Gulamgiri ('Slavery'), 1873",
+          "summary": "Polemical treatise comparing Brahmin caste rule to American slavery, dedicated to American abolitionists. Argued the Aryan-conquest origin of caste hierarchy.",
+          "date": { "start": "1873-06-01", "end": "1873-06-30", "precision": "month", "approximate": true, "display": "June 1873" },
+          "location": { "name": "Pune", "region": "Bombay Presidency", "country": "IN",
+                        "points": [{ "lat": 18.5204, "lon": 73.8567 }] },
+          "note": "The Aryan-invasion theory entered Indian political polemic through Phule. He read the Brahmin-Shudra binary as a conqueror-vs-indigenous frame; the Bali Raja-Vamana mythology was retold as an indigenous king's defeat by Aryan trickery. The book foreshadowed Periyar's Self-Respect critique by half a century."
+        },
+        {
+          "kind": "moment",
+          "id": "phule-shetkaryacha-asud-1883",
+          "tooltip": "Publication of Shetkaryacha Asud ('The Cultivator's Whipcord'), 1883",
+          "summary": "Treatise on agrarian distress under colonial revenue and moneylender exploitation — argued for cultivator credit; foreshadowed Deccan Riots critique.",
+          "date": { "start": "1883-01-01", "end": "1883-12-31", "precision": "year", "approximate": true, "display": "1883" },
+          "location": { "name": "Pune", "region": "Bombay Presidency", "country": "IN",
+                        "points": [{ "lat": 18.5204, "lon": 73.8567 }] },
+          "note": "Written four years after the 1879 Deccan Agriculturists' Relief Act and five years after the 1875 Deccan Riots in Pune-Ahmednagar. Phule's diagnosis — Brahmin moneylender plus colonial revenue plus monopoly priesthood — bridged caste and economic critique. M.G. Ranade's later moderate Deccan Sabha drew on parts of it."
+        },
+        {
+          "kind": "moment",
+          "id": "phule-mahatma-1888",
+          "tooltip": "Conferred title of 'Mahatma' by Bombay public meeting, 11 May 1888",
+          "summary": "Conferred the title 'Mahatma' at a Bombay public meeting — three decades before Tagore did the same for Gandhi. The honorific had non-Brahmin origin.",
+          "date": { "start": "1888-05-11", "end": "1888-05-11", "precision": "day", "approximate": false, "display": "11 May 1888" },
+          "location": { "name": "Mandavi Coli Hall, Bombay", "region": "Bombay Presidency", "country": "IN",
+                        "points": [{ "lat": 18.9447, "lon": 72.8330 }] },
+          "note": "Conferred by V.R. Shinde, Narayan Lokhande and a meeting of working-class Bombay non-Brahmin associations. The title 'Mahatma' had a Maharashtrian non-Brahmin lineage that the Gandhi-Tagore later use does not always acknowledge."
+        },
+        {
+          "kind": "moment",
+          "id": "phule-death-1890",
+          "tooltip": "Death at Pune, 28 November 1890",
+          "summary": "Died at sixty-three of a stroke. Savitribai lit the funeral pyre — refusing the orthodox prohibition on women cremators. Satyashodhak Samaj continued.",
+          "date": { "start": "1890-11-28", "end": "1890-11-28", "precision": "day", "approximate": false, "display": "28 November 1890" },
+          "location": { "name": "Pune", "region": "Bombay Presidency", "country": "IN",
+                        "points": [{ "lat": 18.5204, "lon": 73.8567 }] },
+          "note": "Ambedkar would later list Phule as one of his three intellectual gurus (alongside the Buddha and Kabir). The Phule-Ambedkar lineage of anti-caste politics — institutionally distinct from the Congress reformist tradition — runs from Pune 1848 through Mahad 1927 to the Constitution of 1950."
+        }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "savitribai-phule",
+      "name": "Savitribai Phule",
+      "short_name": "Savitribai Phule",
+      "tooltip": "Savitribai Phule (1831–1897), India's first woman headmistress",
+      "summary": "Mali-caste teacher; co-founded India's first girls' school at Bhide Wada 1848; first Indian woman headmistress; died of plague nursing the sick, 1897.",
+      "era": "colonial",
+      "lifespan": {
+        "born": "1831-01-03",
+        "died": "1897-03-10",
+        "birthplace": { "name": "Naigaon (Satara district)", "country": "IN", "lat": 17.7800, "lon": 74.3700 },
+        "deathplace": { "name": "Pune", "country": "IN", "lat": 18.5204, "lon": 73.8567 }
+      },
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Savitribai_Phule", "label": "Wikipedia: Savitribai Phule", "type": "wikipedia" }
+      ],
+      "colour": "#c87878",
+      "track": [
+        {
+          "kind": "moment",
+          "id": "savitribai-literacy-1841",
+          "tooltip": "Begins literacy under husband Jyotirao's tuition, c. 1841",
+          "summary": "Married at nine, illiterate. Jyotirao taught her at home; trained at the American Mission, Ahmednagar and at Cynthia Farrar's Normal School, Pune.",
+          "date": { "start": "1841-01-01", "end": "1845-12-31", "precision": "year", "approximate": true, "display": "c. 1841–1845" },
+          "location": { "name": "Pune (home tuition); Ahmednagar (mission training)", "region": "Bombay Presidency", "country": "IN",
+                        "points": [{ "lat": 18.5204, "lon": 73.8567 }] },
+          "note": "The American Mission at Ahmednagar under the Reverend John Murdoch and Cynthia Farrar's Pune Normal School were among the only institutions in 1840s western India training women teachers. She trained at both. The pedagogical formation was as much American Protestant as it was Marathi reformist."
+        },
+        {
+          "kind": "moment",
+          "id": "savitribai-headmistress-1848",
+          "tooltip": "First woman headmistress at the Bhide Wada girls' school, January 1848",
+          "summary": "Took charge of Bhide Wada school as headmistress at seventeen — India's first woman teacher and headmistress. Stones and cow dung thrown on the school walk.",
+          "date": { "start": "1848-01-01", "end": "1848-12-31", "precision": "year", "approximate": true, "display": "January 1848" },
+          "location": { "name": "Bhide Wada, Budhwar Peth, Pune", "region": "Bombay Presidency", "country": "IN",
+                        "points": [{ "lat": 18.5160, "lon": 73.8580 }] },
+          "note": "Carried two saris to school — one to change into after orthodox men in the Brahmin neighbourhood threw cow dung and stones at her on the walk. The records of the Bombay Presidency Educational Department list her as the first woman to hold the headmistress title in any Indian school."
+        },
+        {
+          "kind": "moment",
+          "id": "savitribai-fatima-sheikh-1849",
+          "tooltip": "Forms teaching partnership with Fatima Sheikh, 1849",
+          "summary": "After expulsion from Phule home, taught alongside Fatima Sheikh — likely India's first Muslim woman teacher — from the Sheikh home in Ganj Peth, Pune.",
+          "date": { "start": "1849-01-01", "end": "1849-12-31", "precision": "year", "approximate": true, "display": "1849" },
+          "location": { "name": "Ganj Peth, Pune", "region": "Bombay Presidency", "country": "IN",
+                        "points": [{ "lat": 18.5180, "lon": 73.8590 }] },
+          "note": "Fatima Sheikh and her brother Usman Sheikh sheltered the Phule household; Fatima trained at the Pune Normal School alongside Savitribai. Their joint teaching covered Muslim, Brahmin, and untouchable girls in the same classroom — an arrangement without precedent in 1840s Indian schooling."
+        },
+        {
+          "kind": "moment",
+          "id": "savitribai-kavya-phule-1854",
+          "tooltip": "Publishes Kavya Phule poetry collection, 1854",
+          "summary": "Marathi poetry — anti-caste verse, the long poem 'Go, Get Education' addressed to Shudra and Ati-Shudra women. First published Marathi woman poet.",
+          "date": { "start": "1854-01-01", "end": "1854-12-31", "precision": "year", "approximate": true, "display": "1854" },
+          "location": { "name": "Pune", "region": "Bombay Presidency", "country": "IN",
+                        "points": [{ "lat": 18.5204, "lon": 73.8567 }] },
+          "note": "Bawan Kashi Subodh Ratnakar (1892) was the second collection — a verse history of Indian women's oppression. Her surviving prose includes a series of letters to Jyotirao from Naigaon between 1856 and 1868 documenting school inspections, household finance, and political polemic at twenty-five-and-up."
+        },
+        {
+          "kind": "moment",
+          "id": "savitribai-balhatya-pratibandhak-1863",
+          "tooltip": "Founds Balhatya Pratibandhak Griha (infanticide-prevention shelter), 1863",
+          "summary": "Set up an infanticide-prevention home in Pune for Brahmin widows pregnant outside marriage — adopted son Yashwant born to such a resident in 1873.",
+          "date": { "start": "1863-01-01", "end": "1863-12-31", "precision": "year", "approximate": true, "display": "1863" },
+          "location": { "name": "Pune (Phule household)", "region": "Bombay Presidency", "country": "IN",
+                        "points": [{ "lat": 18.5204, "lon": 73.8567 }] },
+          "note": "Phule social reform around widow remarriage and infanticide pre-dated the more famous Bengal reformist work of Vidyasagar (1856 Widow Remarriage Act in Bengal). The Phules' own adopted son Yashwantrao — whose mother had taken refuge at the home — became a doctor and continued the family reform work."
+        },
+        {
+          "kind": "moment",
+          "id": "savitribai-satyashodhak-marriage-1873",
+          "tooltip": "Officiates Satyashodhak inter-caste marriages from 1873",
+          "summary": "Conducted Satyashodhak marriages — no Brahmin priest, Marathi vernacular, bride-groom equality oath. Persistent orthodox legal harassment followed.",
+          "date": { "start": "1873-01-01", "end": "1890-12-31", "precision": "year", "approximate": true, "display": "1873–1890s" },
+          "location": { "name": "Pune", "region": "Bombay Presidency", "country": "IN",
+                        "points": [{ "lat": 18.5204, "lon": 73.8567 }] },
+          "note": "Satyashodhak marriages were repeatedly challenged in court for legal validity through the 1880s; the Bombay High Court upheld them as valid Hindu marriages in a series of judgments through the 1890s. The institutional precedent for non-Brahmin officiation in Maharashtrian Hindu weddings dates here."
+        },
+        {
+          "kind": "moment",
+          "id": "savitribai-husband-pyre-1890",
+          "tooltip": "Lights Jyotirao Phule's funeral pyre, 28 November 1890",
+          "summary": "Lit her husband's funeral pyre — a public violation of the orthodox prohibition on women cremators. Took over the Satyashodhak Samaj presidency.",
+          "date": { "start": "1890-11-28", "end": "1890-11-28", "precision": "day", "approximate": false, "display": "28 November 1890" },
+          "location": { "name": "Pune", "region": "Bombay Presidency", "country": "IN",
+                        "points": [{ "lat": 18.5204, "lon": 73.8567 }] },
+          "note": "Ran the Satyashodhak Samaj as president for the remaining seven years of her life. Adopted son Yashwantrao Phule became its secretary. The Samaj's organisational network across the Deccan held up through the 1900s and fed into Shahu Maharaj of Kolhapur's reservation policies."
+        },
+        {
+          "kind": "moment",
+          "id": "savitribai-plague-death-1897",
+          "tooltip": "Dies of bubonic plague while nursing the sick, 10 March 1897",
+          "summary": "Set up a plague clinic in Hadapsar; contracted plague nursing a Mahar boy; died at sixty-six. The Pune plague was a major colonial-era urban outbreak.",
+          "date": { "start": "1897-03-10", "end": "1897-03-10", "precision": "day", "approximate": false, "display": "10 March 1897" },
+          "location": { "name": "Pune", "region": "Bombay Presidency", "country": "IN",
+                        "points": [{ "lat": 18.5204, "lon": 73.8567 }] },
+          "note": "The 1896–97 Pune plague killed an estimated 50,000 in the city; the colonial Plague Committee under W.C. Rand was assassinated by the Chapekar brothers in June 1897, three months after Savitribai's death. The Indian women's history canon began to recover her in the 1980s; her birthday (3 January) is now recognised as a state day in Maharashtra."
+        }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "pandita-ramabai",
+      "name": "Pandita Ramabai Sarasvati",
+      "short_name": "Pandita Ramabai",
+      "tooltip": "Pandita Ramabai (1858–1922), Sanskritist and Mukti Mission founder",
+      "summary": "Maharashtrian-Brahmin Sanskritist; conferred 'Pandita' by Calcutta scholars; converted to Christianity; founded the Mukti Mission for famine widows.",
+      "era": "colonial",
+      "lifespan": {
+        "born": "1858-04-23",
+        "died": "1922-04-05",
+        "birthplace": { "name": "Gangamoola, Karnataka forests", "country": "IN", "lat": 13.6850, "lon": 75.0750 },
+        "deathplace": { "name": "Mukti Mission, Kedgaon", "country": "IN", "lat": 18.6230, "lon": 74.2240 }
+      },
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Pandita_Ramabai", "label": "Wikipedia: Pandita Ramabai", "type": "wikipedia" }
+      ],
+      "colour": "#a83a7a",
+      "track": [
+        {
+          "kind": "moment",
+          "id": "ramabai-pilgrim-childhood-1858-1878",
+          "tooltip": "Pilgrim childhood with father Anant Shastri Dongre, 1858–1878",
+          "summary": "Father Anant Shastri taught Sanskrit to wife and daughter — heterodox; the family lived as wandering pilgrims. Parents died in the 1876–78 Madras famine.",
+          "date": { "start": "1858-04-23", "end": "1880-12-31", "precision": "year", "approximate": true, "display": "1858–1880" },
+          "location": { "name": "Wandering pilgrim circuit (Karnataka–Maharashtra–Bengal)", "region": "Bombay/Madras/Bengal Presidencies", "country": "IN",
+                        "points": [{ "lat": 13.6850, "lon": 75.0750 }] },
+          "note": "Anant Shastri's tuition was extraordinary for his time — Sanskrit and Puranic learning given to women. The family walked between pilgrim sites for two decades. The Madras famine of 1876–78 — one of the great Victorian holocausts — killed both parents at Tirumala. Ramabai walked with her brother Srinivas across the subcontinent for the next two years, arriving at Calcutta in 1878."
+        },
+        {
+          "kind": "moment",
+          "id": "ramabai-pandita-title-1878",
+          "tooltip": "Calcutta Senate confers the Pandita title, 1878",
+          "summary": "Examined by Calcutta University Senate Sanskrit pundits at twenty. Conferred 'Pandita' and 'Sarasvati' for grammar and Vedanta — first woman so honoured.",
+          "date": { "start": "1878-01-01", "end": "1878-12-31", "precision": "year", "approximate": true, "display": "1878" },
+          "location": { "name": "Calcutta Senate House", "region": "Bengal Presidency", "country": "IN",
+                        "points": [{ "lat": 22.5726, "lon": 88.3639 }] },
+          "note": "The Senate examination was unprecedented — Sanskrit Pandita titles had not been conferred on women in the orthodox tradition. Bengali reformist intelligentsia (Keshub Chunder Sen's Brahmo circle, Calcutta University Sanskrit faculty) sponsored the test. The titles followed her for the next forty years."
+        },
+        {
+          "kind": "moment",
+          "id": "ramabai-marriage-and-widowhood-1880",
+          "tooltip": "Marriage to Bipin Behari Das Medhavi 1880; widowed sixteen months later, 1882",
+          "summary": "Married inter-caste to a Bengali Shudra-caste lawyer at twenty-two — itself a reformist act. Widowed sixteen months later when he died of cholera at twenty-six.",
+          "date": { "start": "1880-11-13", "end": "1882-02-04", "precision": "day", "approximate": false, "display": "Married November 1880; widowed February 1882" },
+          "location": { "name": "Bachiput, Sylhet (Assam Province)", "region": "Assam Province", "country": "BD",
+                        "points": [{ "lat": 24.8949, "lon": 91.8687 }] },
+          "note": "Daughter Manorama born April 1881. Widow at twenty-three with a year-old daughter — and a Sanskritist Brahmin widow no orthodox marriage rules accommodated, having broken caste with the marriage. Returned with daughter to Pune in 1882; the experience of her widowhood became the political ground of her women's-reform writing."
+        },
+        {
+          "kind": "moment",
+          "id": "ramabai-arya-mahila-samaj-1882",
+          "tooltip": "Founds Arya Mahila Samaj at Pune, 1 May 1882",
+          "summary": "Founded Arya Mahila Samaj for women's education and against child marriage. Testified to the 1882 Hunter Commission on Indian education.",
+          "date": { "start": "1882-05-01", "end": "1882-05-01", "precision": "day", "approximate": false, "display": "1 May 1882" },
+          "location": { "name": "Pune", "region": "Bombay Presidency", "country": "IN",
+                        "points": [{ "lat": 18.5204, "lon": 73.8567 }] },
+          "note": "Hunter Commission testimony recommended women teachers for girls' schools and women medical officers for women patients. The recommendation produced the Lady Dufferin Fund (1885) for women's medical education in India — Ramabai's intervention is the documented direct origin."
+        },
+        {
+          "kind": "moment",
+          "id": "ramabai-england-conversion-1883",
+          "tooltip": "Travels to England; baptised at Wantage Sisterhood, 29 September 1883",
+          "summary": "Travelled to England 1883 to study medicine; baptised at the Anglican Wantage Sisterhood. Conversion broke with the Pune reform circle.",
+          "date": { "start": "1883-09-29", "end": "1883-09-29", "precision": "day", "approximate": false, "display": "29 September 1883" },
+          "location": { "name": "Wantage, Oxfordshire", "region": "England", "country": "OFF",
+                        "points": [{ "lat": 51.5867, "lon": -1.4267 }] },
+          "note": "The conversion split Pune reformist opinion — Tilak's Kesari attacked it; Ranade defended her. She rejected the Sisterhood's request that she abandon Hindu philosophy and remained a heterodox Indian-vernacular Christian — translating the Bible into Marathi over twenty years (printed at Mukti Press 1924)."
+        },
+        {
+          "kind": "moment",
+          "id": "ramabai-high-caste-hindu-woman-1887",
+          "tooltip": "Publishes The High-Caste Hindu Woman in Philadelphia, 1887",
+          "summary": "Published The High-Caste Hindu Woman in Philadelphia — first Indian-authored English-language indictment of Brahmin widow oppression in the West.",
+          "date": { "start": "1887-01-01", "end": "1887-12-31", "precision": "year", "approximate": true, "display": "1887" },
+          "location": { "name": "Philadelphia", "region": "United States", "country": "OFF",
+                        "points": [{ "lat": 39.9526, "lon": -75.1652 }] },
+          "note": "Travelled to the United States 1886–88 on the proceeds and lecture circuit; the Ramabai Association was founded in Boston, December 1887, to fund her widows' work in India. The book's reception in American women's-rights circles (Frances Willard, Susan B. Anthony) made her the first Indian woman to be a public intellectual figure in American Christian-feminist networks."
+        },
+        {
+          "kind": "moment",
+          "id": "ramabai-sharada-sadan-1889",
+          "tooltip": "Founds Sharada Sadan widows' home at Bombay, 11 March 1889",
+          "summary": "Opened Sharada Sadan ('House of Learning') for child widows at Chowpatty, Bombay — moved to Pune the next year. Sanskrit, Marathi, English, and a craft.",
+          "date": { "start": "1889-03-11", "end": "1889-03-11", "precision": "day", "approximate": false, "display": "11 March 1889" },
+          "location": { "name": "Chowpatty, Bombay", "region": "Bombay Presidency", "country": "IN",
+                        "points": [{ "lat": 18.9544, "lon": 72.8081 }] },
+          "note": "First Indian institutional home for high-caste child widows — a population structurally barred from remarriage and from inheritance, often abandoned by natal and marital households. Twelve years of running it gave her the operational platform for the larger Mukti Mission."
+        },
+        {
+          "kind": "moment",
+          "id": "ramabai-mukti-kedgaon-1898",
+          "tooltip": "Founds the Mukti Mission at Kedgaon, 1898",
+          "summary": "Founded the Mukti Mission at Kedgaon during the 1896–97 famine. Within five years housed ~2,000 widows and abused girls — schools, farms, printing press.",
+          "date": { "start": "1898-01-01", "end": "1898-12-31", "precision": "year", "approximate": true, "display": "1898" },
+          "location": { "name": "Kedgaon, Pune district", "region": "Bombay Presidency", "country": "IN",
+                        "points": [{ "lat": 18.6230, "lon": 74.2240 }] },
+          "note": "Toured the Central Provinces and Berar famine zone in 1896–97 personally collecting destitute widows; ~300 women and girls walked back to Kedgaon with her. The 1905 'Mukti revival' Pentecostal episode placed Mukti at the origin of Pentecostal Christianity in India. Mukti operates today with continuous institutional life since 1898 — among the longest-running Indian women's-welfare institutions."
+        },
+        {
+          "kind": "moment",
+          "id": "ramabai-death-1922",
+          "tooltip": "Death at Mukti Mission, Kedgaon, 5 April 1922",
+          "summary": "Died at sixty-three — nine months after daughter Manorama's death (1921). Mukti Mission successor leadership held the institution through the 1920s and beyond.",
+          "date": { "start": "1922-04-05", "end": "1922-04-05", "precision": "day", "approximate": false, "display": "5 April 1922" },
+          "location": { "name": "Mukti Mission, Kedgaon", "region": "Bombay Presidency", "country": "IN",
+                        "points": [{ "lat": 18.6230, "lon": 74.2240 }] },
+          "note": "Government of India 1989 commemorative postage stamp; nominated to the Maharashtra government's pantheon of social reformers; recovered as a major figure in 1980s–90s feminist Indian history. The institution she founded survives — and her writings, dispersed across English, Marathi, and Sanskrit, remain only partially edited."
+        },
+        {
+          "kind": "moment",
+          "id": "ramabai-marathi-bible-1924",
+          "tooltip": "Marathi Bible translation completed at Mukti, 1924 (posthumous)",
+          "summary": "Spent twenty years translating the Bible into Marathi from Hebrew and Greek originals — printed at Mukti Press; published in 1924, two years posthumously.",
+          "date": { "start": "1924-01-01", "end": "1924-12-31", "precision": "year", "approximate": true, "display": "1924 (posthumous)" },
+          "location": { "name": "Mukti Mission, Kedgaon", "region": "Bombay Presidency", "country": "IN",
+                        "points": [{ "lat": 18.6230, "lon": 74.2240 }] },
+          "note": "The first Marathi Bible done from original-language sources rather than English-translation intermediary. Mukti Press also printed her Marathi-language histories of the Old and New Testaments and her commentaries — a body of vernacular Christian scholarship by an Indian woman that the academic study of Indian Christianity has only partially recovered.",
+          "posthumous": true
+        }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "periyar",
+      "name": "Periyar E.V. Ramasamy",
+      "short_name": "Periyar",
+      "tooltip": "Periyar E.V. Ramasamy (1879–1973), Self-Respect Movement and Dravidar Kazhagam",
+      "summary": "Erode reformer who broke with the Congress over caste; founded the Self-Respect Movement 1925, Dravidar Kazhagam 1944 — anti-caste, anti-Brahmin, anti-religion.",
+      "era": "colonial",
+      "lifespan": {
+        "born": "1879-09-17",
+        "died": "1973-12-24",
+        "birthplace": { "name": "Erode, Madras Presidency", "country": "IN", "lat": 11.3410, "lon": 77.7172 },
+        "deathplace": { "name": "Vellore, Tamil Nadu", "country": "IN", "lat": 12.9165, "lon": 79.1325 }
+      },
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Periyar", "label": "Wikipedia: Periyar E.V. Ramasamy", "type": "wikipedia" }
+      ],
+      "colour": "#1c1c1c",
+      "track": [
+        {
+          "kind": "moment",
+          "id": "periyar-kashi-pilgrimage-1904",
+          "tooltip": "Pilgrimage to Kashi (Banaras) and the temple-feed exclusion, c. 1904",
+          "summary": "Refused entry to a free temple meal at Kashi for being non-Brahmin — Tamil Naidu pilgrim. The canonical origin of his lifelong anti-Brahmin politics.",
+          "date": { "start": "1904-01-01", "end": "1904-12-31", "precision": "year", "approximate": true, "display": "c. 1904" },
+          "location": { "name": "Kashi (Varanasi)", "region": "United Provinces", "country": "IN",
+                        "points": [{ "lat": 25.3176, "lon": 82.9739 }] },
+          "note": "He told the story repeatedly through his life — fed scraps from the temple kitchen meant for animals after being refused the Brahmin-only feed. The trip was meant as ritual purification; came back instead with the operational diagnosis of the next seven decades."
+        },
+        {
+          "kind": "moment",
+          "id": "periyar-erode-municipal-1919",
+          "tooltip": "Erode Municipal Council chairmanship and Congress entry, 1919",
+          "summary": "Erode merchant; Municipal Council chairman from 1917. Joined Congress under Rajaji's persuasion 1919; rose rapidly within Tamil Nadu Congress.",
+          "date": { "start": "1919-01-01", "end": "1919-12-31", "precision": "year", "approximate": true, "display": "1919" },
+          "location": { "name": "Erode, Madras Presidency", "region": "Madras Presidency", "country": "IN",
+                        "points": [{ "lat": 11.3410, "lon": 77.7172 }] },
+          "note": "Brought commercial competence and organisational skill to a Tamil Nadu Congress short on both. Rose within five years to Tamil Nadu Congress secretary; jailed twice (1921 toddy-shop picketing, 1922 non-cooperation). The Congress phase ran until the Vaikom and Kanchipuram disputes of 1924–25."
+        },
+        {
+          "kind": "event-ref",
+          "event_id": "vaikom-satyagraha-1924-1925",
+          "role": "Travelled to Vaikom in March 1924 to lead the satyagraha against caste exclusion at the Mahadeva temple roads; jailed twice for participation; called 'Vaikom Veerar' on release.",
+          "note": "The Vaikom episode established him as an all-India anti-caste activist beyond the Tamil Congress. His refusal to abandon the movement when the Travancore administration arrested its Kerala leadership built the personal cross-regional network that the later Self-Respect Movement drew on."
+        },
+        {
+          "kind": "moment",
+          "id": "periyar-kanchipuram-1925",
+          "tooltip": "Walks out of the Kanchipuram Tamil Nadu Congress, November 1925",
+          "summary": "Walked out of the Tamil Nadu Congress at Kanchipuram after it refused communal-representation reservations and reaffirmed Brahmin domination of office.",
+          "date": { "start": "1925-11-01", "end": "1925-11-30", "precision": "month", "approximate": true, "display": "November 1925" },
+          "location": { "name": "Kanchipuram (Tamil Nadu Congress)", "region": "Madras Presidency", "country": "IN",
+                        "points": [{ "lat": 12.8342, "lon": 79.7036 }] },
+          "note": "The break was clean and final. He never rejoined Congress and spent the next half-century constructing a politics explicitly opposed to it — a politics whose lasting electoral organisation became Tamil Nadu's defining political fact after 1967."
+        },
+        {
+          "kind": "moment",
+          "id": "periyar-self-respect-movement-1925",
+          "tooltip": "Launches the Self-Respect Movement (Suya Mariyathai Iyakkam), 1925",
+          "summary": "Launched the Self-Respect Movement — anti-caste, anti-Brahmin-priest, anti-Sanskritic ritual. First Self-Respect marriage without a Brahmin priest, 1928.",
+          "date": { "start": "1925-12-01", "end": "1925-12-31", "precision": "month", "approximate": true, "display": "December 1925" },
+          "location": { "name": "Erode (Kudi Arasu newspaper)", "region": "Madras Presidency", "country": "IN",
+                        "points": [{ "lat": 11.3410, "lon": 77.7172 }] },
+          "note": "Kudi Arasu (Republic), the Tamil weekly he founded in 1925, became the movement's theoretical organ — pamphlet polemic, satirical anti-Brahmin commentary, women's-rights advocacy. It ran continuously through colonial-era state harassment until the early 1950s."
+        },
+        {
+          "kind": "moment",
+          "id": "periyar-soviet-tour-1932",
+          "tooltip": "Russian and European tour, 1932",
+          "summary": "Travelled the Soviet Union, Germany, Spain, Britain. Returned arguing for socialist economics alongside the cultural Self-Respect programme.",
+          "date": { "start": "1932-12-01", "end": "1933-11-30", "precision": "month", "approximate": true, "display": "December 1932 – November 1933" },
+          "location": { "name": "Moscow", "region": "Soviet Union", "country": "OFF",
+                        "points": [{ "lat": 55.7558, "lon": 37.6173 }] },
+          "note": "The Soviet trip introduced explicit Marxist vocabulary into the Self-Respect lexicon. The 1934 Erode programme combined Self-Respect cultural critique with collectivist economic positions; the synthesis broke under colonial-government repression of communist-affiliated organisations from 1934 on, and Periyar pivoted back to cultural-political work alone."
+        },
+        {
+          "kind": "moment",
+          "id": "periyar-justice-party-presidency-1938",
+          "tooltip": "President of the Justice Party, December 1938",
+          "summary": "Took over the South Indian Liberal Federation (Justice Party) — the non-Brahmin parliamentary vehicle since 1916. Renamed it Dravidar Kazhagam, 1944.",
+          "date": { "start": "1938-12-29", "end": "1938-12-29", "precision": "day", "approximate": false, "display": "29 December 1938" },
+          "location": { "name": "Justice Party HQ, Madras", "region": "Madras Presidency", "country": "IN",
+                        "points": [{ "lat": 13.0827, "lon": 80.2707 }] },
+          "note": "Fused the older Justice Party institutional shell with the Self-Respect ideological body. The Anti-Hindi Imposition Agitation of 1937–40 against Rajaji's Hindi-compulsory order in Madras schools — three students died, Periyar jailed for a year — was the political event that consolidated Tamil mass support around the Justice / Dravidar platform."
+        },
+        {
+          "kind": "moment",
+          "id": "periyar-dravidar-kazhagam-1944",
+          "tooltip": "Founds the Dravidar Kazhagam at Salem, 27 August 1944",
+          "summary": "Renamed the Justice Party as the Dravidar Kazhagam at Salem. Demanded Dravida Nadu — a Dravidian republic for the four southern linguistic regions.",
+          "date": { "start": "1944-08-27", "end": "1944-08-27", "precision": "day", "approximate": false, "display": "27 August 1944 (Salem Conference)" },
+          "location": { "name": "Salem, Tamil Nadu", "region": "Madras Presidency", "country": "IN",
+                        "points": [{ "lat": 11.6643, "lon": 78.1460 }] },
+          "note": "Dravida Nadu as a constitutional demand was never realised; it became, after the 1962 Sino-Indian War and the Sixteenth Amendment 1963 banning secessionism, a cultural-political claim rather than an electoral one. Anna's 1949 split formed the DMK on a sub-set of the platform; the DK–DMK lineage is the durable institutional legacy."
+        },
+        {
+          "kind": "moment",
+          "id": "periyar-anna-split-1949",
+          "tooltip": "C.N. Annadurai's split — DMK formed, 17 September 1949",
+          "summary": "Periyar's late marriage to Maniammai precipitated C.N. Annadurai's split. Anna founded the Dravida Munnetra Kazhagam at Robinson Park, Madras.",
+          "date": { "start": "1949-09-17", "end": "1949-09-17", "precision": "day", "approximate": false, "display": "17 September 1949" },
+          "location": { "name": "Robinson Park, Madras", "region": "Madras State", "country": "IN",
+                        "points": [{ "lat": 13.0827, "lon": 80.2707 }] },
+          "note": "Anna's DMK chose the electoral path Periyar disdained; entered the Madras Legislative Assembly in 1957, won it in 1967, and has alternated with the AIADMK in Tamil Nadu government ever since. The DK remained Periyar's instrument as a propagandist movement, never an electoral party. Both lineages claim him."
+        },
+        {
+          "kind": "moment",
+          "id": "periyar-death-1973",
+          "tooltip": "Death at Vellore, 24 December 1973, age 94",
+          "summary": "Died at ninety-four. State funeral by the DMK government in Madras. His anti-caste, Tamil-autonomy platform shaped state politics for half a century.",
+          "date": { "start": "1973-12-24", "end": "1973-12-24", "precision": "day", "approximate": false, "display": "24 December 1973" },
+          "location": { "name": "Vellore, Tamil Nadu", "region": "Tamil Nadu", "country": "IN",
+                        "points": [{ "lat": 12.9165, "lon": 79.1325 }] },
+          "note": "His birthday (17 September) is the Tamil Nadu government's 'Social Justice Day'. His samadhi at Periyar Thidal in Madras is a state-protected site. The DK pamphlet output continues; the political-cultural framework — affirmative action, women's property rights, Tamil-language pride, anti-Sanskritic ritual reform — is institutionalised in Tamil Nadu state policy in ways no other regional reformer's programme is."
+        }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "tagore",
+      "name": "Rabindranath Thakur (Tagore)",
+      "short_name": "Tagore",
+      "tooltip": "Rabindranath Tagore (1861–1941), Bengali polymath and Nobel laureate",
+      "summary": "Bengali polymath. Nobel for Gitanjali 1913; renounced knighthood after Jallianwala 1919; founded Visva-Bharati 1921; broke with Gandhi over non-cooperation.",
+      "era": "colonial",
+      "lifespan": {
+        "born": "1861-05-07",
+        "died": "1941-08-07",
+        "birthplace": { "name": "Jorasanko Thakurbari, Calcutta", "country": "IN", "lat": 22.5897, "lon": 88.3631 },
+        "deathplace": { "name": "Jorasanko Thakurbari, Calcutta", "country": "IN", "lat": 22.5897, "lon": 88.3631 }
+      },
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Rabindranath_Tagore", "label": "Wikipedia: Rabindranath Tagore", "type": "wikipedia" }
+      ],
+      "colour": "#6b4a25",
+      "track": [
+        {
+          "kind": "moment",
+          "id": "tagore-shilaidaha-1890s",
+          "tooltip": "Years at Shilaidaha managing the family zamindari estate, 1890s",
+          "summary": "Sent to manage the Tagore zamindari at Shilaidaha (East Bengal) in his late twenties. A decade on the Padma houseboat — his greatest short-fiction output.",
+          "date": { "start": "1891-01-01", "end": "1901-12-31", "precision": "year", "approximate": true, "display": "1891–1901" },
+          "location": { "name": "Shilaidaha, Kushtia (East Bengal)", "region": "Bengal Presidency", "country": "BD",
+                        "points": [{ "lat": 23.8500, "lon": 89.2500 }] },
+          "note": "Galpaguchchha — the canonical Bengali short-story collection (~84 stories, mostly written 1891–1901) — emerged from the Padma riverside life. The encounter with rural Bengal poverty and East Bengal Muslim peasant life shaped the political consciousness that broke with the urban Hindu-bhadralok orthodoxy of the partition years."
+        },
+        {
+          "kind": "moment",
+          "id": "tagore-santiniketan-1901",
+          "tooltip": "Founds the Santiniketan ashram-school, 22 December 1901",
+          "summary": "Founded the Brahmacharya Ashram school at Santiniketan with five pupils. Open-air pedagogy, no walls, no caste — a break with Macaulayan schooling.",
+          "date": { "start": "1901-12-22", "end": "1901-12-22", "precision": "day", "approximate": false, "display": "22 December 1901" },
+          "location": { "name": "Santiniketan, Birbhum district", "region": "Bengal Presidency", "country": "IN",
+                        "points": [{ "lat": 23.6790, "lon": 87.6730 }] },
+          "note": "His father Debendranath Tagore had bought the Santiniketan land in 1862 as a Brahmo retreat. Rabindranath turned it into a working school; in 1921 raised the school to Visva-Bharati University, the international centre for Asian and humanist studies. Ravi Shankar, Indira Gandhi, Satyajit Ray, and Amartya Sen are among its later associates."
+        },
+        {
+          "kind": "moment",
+          "id": "tagore-swadeshi-break-1907",
+          "tooltip": "Breaks with the Bengal swadeshi movement over communal violence, 1907",
+          "summary": "Withdrew from Bengal Swadeshi after the 1906–07 communal flashpoints in East Bengal. Wrote Gora and the rural-Muslim short stories from this withdrawal.",
+          "date": { "start": "1907-01-01", "end": "1907-12-31", "precision": "year", "approximate": true, "display": "1907" },
+          "location": { "name": "Calcutta", "region": "Bengal Presidency", "country": "IN",
+                        "points": [{ "lat": 22.5726, "lon": 88.3639 }] },
+          "note": "His novel Gora (serialised 1907–09) is the long Bengali interrogation of bhadralok cultural-religious chauvinism. The withdrawal from active swadeshi was the first of his three major political breaks — the others being with Gandhi (over non-cooperation 1921) and with Bose (over fascism 1937)."
+        },
+        {
+          "kind": "moment",
+          "id": "tagore-nobel-1913",
+          "tooltip": "Nobel Prize in Literature for Gitanjali, 13 November 1913",
+          "summary": "First Asian Nobel laureate in any field — for Gitanjali (English version, translated by Tagore with Yeats's editing). The Bengali original appeared 1910.",
+          "date": { "start": "1913-11-13", "end": "1913-11-13", "precision": "day", "approximate": false, "display": "13 November 1913" },
+          "location": { "name": "Stockholm (announced); Santiniketan (Tagore)", "region": "Sweden / Bengal Presidency", "country": "OFF",
+                        "points": [{ "lat": 59.3293, "lon": 18.0686 }] },
+          "note": "The Nobel transformed his international reputation while complicating the Indian one. World tours from 1916 — Japan, the United States, Argentina, Italy, the USSR — made him India's first global cultural ambassador, and gave him a platform from which to critique Western nationalism (lectures collected in Nationalism, 1917) before Indian nationalism even peaked."
+        },
+        {
+          "kind": "moment",
+          "id": "tagore-knighthood-renunciation-1919",
+          "tooltip": "Renounces knighthood after Jallianwala Bagh massacre, 31 May 1919",
+          "summary": "Renounced his 1915 knighthood by letter to Viceroy Chelmsford after Dyer's Jallianwala Bagh massacre — first major Indian intellectual to break ranks.",
+          "date": { "start": "1919-05-31", "end": "1919-05-31", "precision": "day", "approximate": false, "display": "31 May 1919" },
+          "location": { "name": "Calcutta", "region": "Bengal Presidency", "country": "IN",
+                        "points": [{ "lat": 22.5726, "lon": 88.3639 }] },
+          "note": "Letter to Chelmsford: 'The time has come when badges of honour make our shame glaring in their incongruous context of humiliation, and I for my part wish to stand, shorn of all special distinctions, by the side of those of my countrymen who, for their so-called insignificance, are liable to suffer a degradation not fit for human beings.'"
+        },
+        {
+          "kind": "moment",
+          "id": "tagore-non-cooperation-debate-1921",
+          "tooltip": "Public debate with Gandhi over non-cooperation, 1921",
+          "summary": "Series of Modern Review essays disputing Gandhi's non-cooperation programme — argued boycott was destructive negation, advocated cooperation on terms.",
+          "date": { "start": "1921-05-01", "end": "1921-12-31", "precision": "month", "approximate": true, "display": "1921" },
+          "location": { "name": "Calcutta (correspondence with Gandhi)", "region": "Bengal Presidency", "country": "IN",
+                        "points": [{ "lat": 22.5726, "lon": 88.3639 }] },
+          "note": "Tagore's essay 'The Call of Truth' (1921) and Gandhi's reply 'The Great Sentinel' framed two distinct visions of the freedom struggle — Tagore's universalist-cooperative-internationalist position against Gandhi's national-ascetic-mass-mobilisation. Both ran in Modern Review and Young India through that year. The disagreement remained respectful and was never patched."
+        },
+        {
+          "kind": "moment",
+          "id": "tagore-visva-bharati-1921",
+          "tooltip": "Visva-Bharati University founded at Santiniketan, 23 December 1921",
+          "summary": "Raised the Santiniketan ashram-school into Visva-Bharati — international university, motto 'Yatra Visvam Bhavatyekanidam' (where the world meets in one nest).",
+          "date": { "start": "1921-12-23", "end": "1921-12-23", "precision": "day", "approximate": false, "display": "23 December 1921" },
+          "location": { "name": "Santiniketan, Birbhum district", "region": "Bengal Presidency", "country": "IN",
+                        "points": [{ "lat": 23.6790, "lon": 87.6730 }] },
+          "note": "Sylvain Lévi, the French Indologist, was the first visiting professor; the institution attracted a sustained international Asian-studies faculty (Patrick Geddes, Leonard Elmhirst, Romain Rolland). Visva-Bharati became a Central University by Act of Parliament in 1951; one of the few institutions of his life whose architecture survived him."
+        },
+        {
+          "kind": "moment",
+          "id": "tagore-sriniketan-1922",
+          "tooltip": "Sriniketan rural-reconstruction institute founded, 6 February 1922",
+          "summary": "Founded Sriniketan as the rural-reconstruction sister institute to Visva-Bharati — agriculture, cooperative credit, weaving, women's literacy.",
+          "date": { "start": "1922-02-06", "end": "1922-02-06", "precision": "day", "approximate": false, "display": "6 February 1922" },
+          "location": { "name": "Surul, Birbhum district (Sriniketan)", "region": "Bengal Presidency", "country": "IN",
+                        "points": [{ "lat": 23.6580, "lon": 87.6900 }] },
+          "note": "The first systematic Indian-led rural-reconstruction project — predating Gandhi's Sevagram by fourteen years. Elmhirst, the Cornell-trained agronomist, anchored the work for a decade before founding Dartington Hall on the same model in Devon (1925). The cooperative-credit and women's-literacy components fed into Indian rural-development design through the post-Independence Community Development Programme (1952)."
+        },
+        {
+          "kind": "moment",
+          "id": "tagore-bose-fascism-break-1937",
+          "tooltip": "Public letter to Bose disputing fascism, 1937",
+          "summary": "Wrote publicly against Bose's flirtation with fascist Italy — 'fascism is the political form of barbarism, more dangerous than colonial rule'. The break held.",
+          "date": { "start": "1937-08-01", "end": "1937-08-31", "precision": "month", "approximate": true, "display": "August 1937" },
+          "location": { "name": "Santiniketan", "region": "Bengal Presidency", "country": "IN",
+                        "points": [{ "lat": 23.6790, "lon": 87.6730 }] },
+          "note": "Bose had been to Italy in 1933–34 and met Mussolini; Tagore (who had refused even to meet Mussolini on his 1925 Italian trip after first being misled into a Fascist-government reception) refused to support Bose's strategic logic of the enemy-of-my-enemy. The letter ran in Modern Review. The Tagore-Bose-Gandhi triangle of late 1930s Bengali politics never fully reconciled."
+        },
+        {
+          "kind": "moment",
+          "id": "tagore-civilisation-in-crisis-1941",
+          "tooltip": "Final lecture 'Crisis in Civilisation', 14 April 1941",
+          "summary": "Final public address at Santiniketan four months before death. A despairing assessment of the European war, colonial brutality, and human prospects.",
+          "date": { "start": "1941-04-14", "end": "1941-04-14", "precision": "day", "approximate": false, "display": "14 April 1941 (Bengali New Year)" },
+          "location": { "name": "Santiniketan", "region": "Bengal Presidency", "country": "IN",
+                        "points": [{ "lat": 23.6790, "lon": 87.6730 }] },
+          "note": "'And yet I shall not commit the grievous sin of losing faith in Man.' The address closed with a refusal to despair even as the analysis was bleak. The text stands as the major Indian intellectual statement of 1941 — written between Hitler's Russian invasion (June) and the Atlantic Charter (August)."
+        },
+        {
+          "kind": "moment",
+          "id": "tagore-death-1941",
+          "tooltip": "Death at Jorasanko Thakurbari, Calcutta, 7 August 1941",
+          "summary": "Died at eighty in the family Jorasanko house in north Calcutta. The funeral was the largest Bengali public mourning since Vivekananda's in 1902.",
+          "date": { "start": "1941-08-07", "end": "1941-08-07", "precision": "day", "approximate": false, "display": "7 August 1941" },
+          "location": { "name": "Jorasanko Thakurbari, Calcutta", "region": "Bengal Presidency", "country": "IN",
+                        "points": [{ "lat": 22.5897, "lon": 88.3631 }] },
+          "note": "Two of his compositions — Jana Gana Mana (1911) and Amar Sonar Bangla (1905) — became the national anthems of independent India and Bangladesh respectively, the only person to have authored two national anthems. Sri Lanka's anthem also draws on a Tagore composition translated by his student Ananda Samarakoon. Visva-Bharati and Sriniketan continue to operate."
+        }
+      ],
+      "verified": true
+    }
+
+  ]
+}

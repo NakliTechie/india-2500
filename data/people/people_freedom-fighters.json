@@ -240,6 +240,7 @@
     {
       "id": "bhagat-singh",
       "name": "Bhagat Singh",
+      "short_name": "Bhagat Singh",
       "tooltip": "Bhagat Singh (1907–1931)",
       "summary": "Revolutionary, theorist, and martyr at twenty-three. Argued Marxism in jail and went to the gallows reading Lenin.",
       "era": "colonial",
@@ -537,6 +538,113 @@
           "location": { "name": "Governor-General's House, Karachi", "region": "Sindh", "country": "PK",
                         "points": [{ "lat": 24.8607, "lon": 67.0011 }] },
           "note": "Lord Wavell wrote in 1946 that he would have refused partition had he known how ill Jinnah was. The British did know. The political timing was made to fit a man too ill to manage delay."
+        }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "bose",
+      "name": "Subhas Chandra Bose",
+      "tooltip": "Subhas Chandra Bose (1897–1945), 'Netaji'",
+      "summary": "Bengali nationalist who broke with Gandhi over methods, raised the Indian National Army from Axis-held Asia, died in a 1945 Taipei plane crash.",
+      "era": "colonial",
+      "lifespan": {
+        "born": "1897-01-23",
+        "died": "1945-08-18",
+        "birthplace": { "name": "Cuttack, Bengal Presidency", "country": "IN", "lat": 20.4625, "lon": 85.8830 },
+        "deathplace": { "name": "Taipei (plane crash, disputed)", "country": "OFF", "lat": 25.0697, "lon": 121.5526 }
+      },
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Subhas_Chandra_Bose", "label": "Wikipedia: Subhas Chandra Bose", "type": "wikipedia" }
+      ],
+      "colour": "#5a6e2f",
+      "track": [
+        {
+          "kind": "moment",
+          "id": "bose-ics-resignation-1921",
+          "tooltip": "Resigns from the Indian Civil Service, April 1921",
+          "summary": "Stood fourth in the 1920 ICS exam at Cambridge — the highest by an Indian to that date. Resigned within months of qualifying.",
+          "date": { "start": "1921-04-22", "end": "1921-04-22", "precision": "day", "approximate": false, "display": "22 April 1921" },
+          "location": { "name": "London", "region": "England", "country": "OFF",
+                        "points": [{ "lat": 51.5074, "lon": -0.1278 }] },
+          "note": "Letter to brother Sarat: 'A nation reared in slavery cannot be saved by a man who has accepted slavery as a profession.' Returns to Calcutta and joins C.R. Das."
+        },
+        {
+          "kind": "moment",
+          "id": "bose-mayor-calcutta-1924",
+          "tooltip": "Chief Executive Officer, Calcutta Corporation, 1924",
+          "summary": "C.R. Das as Mayor; Bose as CEO at twenty-seven. Six months in, the Raj jails him under Bengal Regulation III without trial.",
+          "date": { "start": "1924-04-24", "end": "1927-05-16", "precision": "day", "approximate": false, "display": "April 1924 – May 1927 (jailed Oct 1924 – May 1927)" },
+          "location": { "name": "Calcutta Corporation / Mandalay Jail", "region": "Bengal Presidency", "country": "IN",
+                        "points": [{ "lat": 22.5726, "lon": 88.3639 }] },
+          "note": "Held first at Alipore, then deported to Mandalay in Burma — the same prison that had held Tilak. Returns ill in 1927; tuberculosis he never fully shakes."
+        },
+        {
+          "kind": "moment",
+          "id": "bose-tripuri-1939",
+          "tooltip": "Tripuri Congress presidency split with Gandhi, March 1939",
+          "summary": "Re-elected Congress President against Gandhi's nominee Pattabhi Sitaramayya by 1,580 votes to 1,377. Resigned within months under Working Committee pressure.",
+          "date": { "start": "1939-03-10", "end": "1939-04-29", "precision": "day", "approximate": false, "display": "March – April 1939" },
+          "location": { "name": "Tripuri, Central Provinces", "region": "Central Provinces", "country": "IN",
+                        "points": [{ "lat": 23.1815, "lon": 79.9864 }] },
+          "note": "Gandhi: 'After all Sitaramayya's defeat is more mine than his.' Bose's plan was to issue a six-month ultimatum to the Raj over war participation. The Working Committee refused to let him form a Cabinet. He resigned, founded the Forward Bloc."
+        },
+        {
+          "kind": "moment",
+          "id": "bose-great-escape-1941",
+          "tooltip": "Escape from Calcutta house arrest, 16–17 January 1941",
+          "summary": "Slipped out of 38/2 Elgin Road past the watching CID disguised as a Pathan insurance agent — Calcutta to Peshawar to Kabul to Berlin overland.",
+          "date": { "start": "1941-01-16", "end": "1941-04-02", "precision": "day", "approximate": false, "display": "16 January – 2 April 1941" },
+          "location": { "name": "38/2 Elgin Road, Calcutta", "region": "Bengal Presidency", "country": "IN",
+                        "points": [{ "lat": 22.5390, "lon": 88.3537 }] },
+          "note": "His nephew Sisir Kumar Bose drove the car. Reached Kabul through the tribal areas; Italian and German diplomatic help got him onward to Moscow and then Berlin by 2 April. The CID realised he was missing 27 January."
+        },
+        {
+          "kind": "moment",
+          "id": "bose-berlin-1941-1943",
+          "tooltip": "Berlin years — Free India Centre and Azad Hind Radio, 1941–43",
+          "summary": "Met Hitler once (May 1942). Founded the Free India Centre, Azad Hind Radio, and the Indian Legion (3,000 Wehrmacht-Indian POWs).",
+          "date": { "start": "1941-04-03", "end": "1943-02-08", "precision": "day", "approximate": false, "display": "April 1941 – February 1943" },
+          "location": { "name": "Berlin", "region": "Nazi Germany", "country": "OFF",
+                        "points": [{ "lat": 52.5200, "lon": 13.4050 }] },
+          "note": "The Hitler meeting disappointed him — Hitler wanted Indians to fight Russia, not Britain. The 'Jai Hind' greeting and the title 'Netaji' were both coined here. Married Emilie Schenkl in Berlin (1937, formalised secretly); daughter Anita born November 1942."
+        },
+        {
+          "kind": "moment",
+          "id": "bose-u180-singapore-1943",
+          "tooltip": "U-180 submarine transfer Berlin to Singapore, February–May 1943",
+          "summary": "Three-month submarine voyage Kiel to off Madagascar, transferred to Japanese I-29, on to Sabang and Tokyo. Took over INA at Singapore in July.",
+          "date": { "start": "1943-02-09", "end": "1943-07-04", "precision": "day", "approximate": false, "display": "9 February – 4 July 1943" },
+          "location": { "name": "Singapore (Cathay Building, INA HQ)", "region": "Japanese-occupied Malaya", "country": "OFF",
+                        "points": [{ "lat": 1.2966, "lon": 103.8520 }] },
+          "note": "Took command of the Indian National Army from Rash Behari Bose on 4 July at Cathay Building. INA strength rose from ~16,000 to over 40,000 under his leadership, including the Rani of Jhansi Regiment of women combatants under Lakshmi Sahgal."
+        },
+        {
+          "kind": "moment",
+          "id": "bose-azad-hind-government-1943",
+          "tooltip": "Provisional Government of Azad Hind proclaimed, Singapore, 21 October 1943",
+          "summary": "Bose as Head of State, Prime Minister, and Defence Minister of the Provisional Government of Free India — recognised by nine Axis-aligned states.",
+          "date": { "start": "1943-10-21", "end": "1943-10-21", "precision": "day", "approximate": false, "display": "21 October 1943" },
+          "location": { "name": "Cathay Building, Singapore", "region": "Japanese-occupied Malaya", "country": "OFF",
+                        "points": [{ "lat": 1.2966, "lon": 103.8520 }] },
+          "note": "Declared war on Britain and the United States. The Andaman and Nicobar islands (Japanese-occupied since March 1942) were nominally transferred to Azad Hind in December 1943 — Bose visited Port Blair and renamed them Shaheed and Swaraj."
+        },
+        {
+          "kind": "event-ref",
+          "event_id": "ina-imphal-kohima-1944",
+          "role": "Marched the INA's three divisions with the Japanese Fifteenth Army to the Indian frontier under the slogan 'Chalo Delhi' — broken at Imphal–Kohima.",
+          "note": "His personal command was at Maymyo and then on the front; the rout exposed the strategic mismatch between Japanese logistics and Bose's political objectives. The INA never recovered."
+        },
+        {
+          "kind": "moment",
+          "id": "bose-taipei-1945",
+          "tooltip": "Plane crash at Taipei, 18 August 1945 (disputed)",
+          "summary": "Mitsubishi Ki-21 bomber crashed on take-off from Taipei airfield three days after Japan's surrender. Officially died of burns at Nanmon Military Hospital.",
+          "date": { "start": "1945-08-18", "end": "1945-08-18", "precision": "day", "approximate": false, "display": "18 August 1945" },
+          "location": { "name": "Taipei, Taiwan", "region": "Japanese Formosa", "country": "OFF",
+                        "points": [{ "lat": 25.0697, "lon": 121.5526 }] },
+          "note": "Three official commissions of inquiry — Shah Nawaz (1956), Khosla (1970), Mukherjee (2005) — split: the first two affirmed the crash, the third disputed it. Ashes have remained at Renkō-ji Temple, Tokyo, since September 1945. The denial of his death sustained a half-century of Bengali political mythology."
         }
       ],
       "verified": true

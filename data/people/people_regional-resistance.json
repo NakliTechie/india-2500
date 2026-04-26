@@ -1,0 +1,752 @@
+{
+  "campaign": "regional-resistance",
+  "scope": "Sovereigns and resistance leaders of regional polities — Shivaji and the Marathas, Tipu Sultan and Mysore, Ranjit Singh and the Khalsa, Birsa Munda and the Munda Ulgulan. Future entries planned for Krishnadevaraya, Guru Gobind Singh, Tarabai, Rani Gaidinliu.",
+  "updated": "2026-04-26",
+  "people": [
+
+    {
+      "id": "shivaji",
+      "name": "Chhatrapati Shivaji Bhonsle",
+      "short_name": "Shivaji",
+      "tooltip": "Shivaji (1630–1680), founder of the Maratha kingdom",
+      "summary": "Bhonsle Maratha chieftain who built a sovereign kingdom from the Western Ghats out of Bijapuri and Mughal territory; crowned at Raigad, 1674.",
+      "era": "mughal",
+      "lifespan": {
+        "born": "1630-02-19",
+        "died": "1680-04-03",
+        "birthplace": { "name": "Shivneri Fort, Junnar", "country": "IN", "lat": 19.2037, "lon": 73.8533 },
+        "deathplace": { "name": "Raigad Fort", "country": "IN", "lat": 18.2333, "lon": 73.4419 }
+      },
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Shivaji", "label": "Wikipedia: Shivaji", "type": "wikipedia" }
+      ],
+      "colour": "#c47013",
+      "track": [
+        {
+          "kind": "moment",
+          "id": "shivaji-torna-1646",
+          "tooltip": "Capture of Torna fort from Bijapur, 1646",
+          "summary": "First fort taken at sixteen — bought off the Bijapuri commandant. The seed of a string of fort captures across the Sahyadri.",
+          "date": { "start": "1646-01-01", "end": "1646-12-31", "precision": "year", "approximate": true, "display": "1646" },
+          "location": { "name": "Torna Fort, Sahyadri", "region": "Bijapur Sultanate", "country": "IN",
+                        "points": [{ "lat": 18.2762, "lon": 73.6219 }] },
+          "note": "Treasure found at Torna funded the construction of Rajgad — the Maratha headquarters for the next quarter-century before Raigad."
+        },
+        {
+          "kind": "moment",
+          "id": "shivaji-afzal-khan-1659",
+          "tooltip": "Killing of Afzal Khan at Pratapgad, 10 November 1659",
+          "summary": "Bijapur sent Afzal Khan with 10,000 troops to crush the rebellion. Shivaji met him alone in a parley tent under Pratapgad and killed him with the bagh nakh.",
+          "date": { "start": "1659-11-10", "end": "1659-11-10", "precision": "day", "approximate": false, "display": "10 November 1659" },
+          "location": { "name": "Pratapgad Fort, Sahyadri", "region": "Bijapur Sultanate", "country": "IN",
+                        "points": [{ "lat": 17.9344, "lon": 73.5814 }] },
+          "note": "The Bijapuri force, ambushed in the forested approaches by Maratha infantry, was routed within hours. The bagh nakh (tiger claws) and the wagh nakhi tale entered Maratha legend; the underlying point was a five-year guerrilla campaign that broke Bijapuri authority in the western Konkan."
+        },
+        {
+          "kind": "moment",
+          "id": "shivaji-surat-i-1664",
+          "tooltip": "First sack of Surat, January 1664",
+          "summary": "Four-day raid on the Mughal empire's richest port. Carried off an estimated one crore of bullion and trade goods; English and Dutch factories spared.",
+          "date": { "start": "1664-01-05", "end": "1664-01-10", "precision": "day", "approximate": false, "display": "5–10 January 1664" },
+          "location": { "name": "Surat, Gujarat", "region": "Mughal Gujarat", "country": "IN",
+                        "points": [{ "lat": 21.1702, "lon": 72.8311 }] },
+          "note": "Surat was Aurangzeb's customs revenue capital. The raid was both a financial blow and a deliberate humiliation; the Mughal response was to send Mirza Raja Jai Singh."
+        },
+        {
+          "kind": "moment",
+          "id": "shivaji-purandar-1665",
+          "tooltip": "Treaty of Purandar with Mirza Raja Jai Singh, 11 June 1665",
+          "summary": "After Jai Singh's siege of Purandar, Shivaji surrendered 23 of 35 forts and accepted nominal Mughal vassalage — buying time, not submission.",
+          "date": { "start": "1665-06-11", "end": "1665-06-11", "precision": "day", "approximate": false, "display": "11 June 1665" },
+          "location": { "name": "Purandar Fort, near Pune", "region": "Mughal Deccan", "country": "IN",
+                        "points": [{ "lat": 18.2784, "lon": 73.9667 }] },
+          "note": "Murarbaji Deshpande's defence of Purandar — refusing surrender to the last — became the standard against which later Maratha garrison commanders were measured. Jai Singh persuaded Shivaji to attend the Mughal court at Agra. It was a trap."
+        },
+        {
+          "kind": "moment",
+          "id": "shivaji-agra-escape-1666",
+          "tooltip": "Escape from Aurangzeb's Agra court, 17 August 1666",
+          "summary": "Insulted at the Agra darbar, placed under house arrest. Escaped concealed in a basket of sweets — twenty-five days back to Raigad via Mathura.",
+          "date": { "start": "1666-08-17", "end": "1666-08-17", "precision": "day", "approximate": false, "display": "17 August 1666" },
+          "location": { "name": "Agra Fort", "region": "Mughal Hindustan", "country": "IN",
+                        "points": [{ "lat": 27.1795, "lon": 78.0211 }] },
+          "note": "His son Sambhaji escaped with him. The escape became, with the killing of Afzal Khan, the second great theatrical episode of the Shivaji legend — and a permanent personal grievance for Aurangzeb whose Deccan campaign of 1681 onwards is partly its long answer."
+        },
+        {
+          "kind": "moment",
+          "id": "shivaji-surat-ii-1670",
+          "tooltip": "Second sack of Surat, October 1670",
+          "summary": "Three-day repeat raid on Surat, six years after the first. The Mughal governor had not improved the defences.",
+          "date": { "start": "1670-10-03", "end": "1670-10-05", "precision": "day", "approximate": false, "display": "3–5 October 1670" },
+          "location": { "name": "Surat, Gujarat", "region": "Mughal Gujarat", "country": "IN",
+                        "points": [{ "lat": 21.1702, "lon": 72.8311 }] },
+          "note": "Followed up by the Battle of Salher in February 1672 — the first set-piece Maratha victory over a Mughal army in the open field. Aurangzeb's Deccan policy hardened from this point."
+        },
+        {
+          "kind": "moment",
+          "id": "shivaji-coronation-raigad-1674",
+          "tooltip": "Rajyabhishek coronation at Raigad, 6 June 1674",
+          "summary": "Crowned Chhatrapati at Raigad in a Vedic ceremony presided over by Gaga Bhatt of Varanasi — a sovereign Hindu kingdom on the western coast.",
+          "date": { "start": "1674-06-06", "end": "1674-06-06", "precision": "day", "approximate": false, "display": "6 June 1674" },
+          "location": { "name": "Raigad Fort, Sahyadri", "region": "Maratha Swarajya", "country": "IN",
+                        "points": [{ "lat": 18.2333, "lon": 73.4419 }] },
+          "note": "The coronation needed a Brahmin sanction Shivaji had been refused by the Maharashtrian Brahmin establishment; Gaga Bhatt was brought from Varanasi to confer kshatriya status. New currency (the Shiva-rai), a new Sanskritised administrative vocabulary, an Ashtapradhan council. The Hindavi Swarajya frame becomes operational."
+        },
+        {
+          "kind": "moment",
+          "id": "shivaji-karnataka-campaign-1677",
+          "tooltip": "Karnataka campaign — Jinji, Vellore, southern conquests, 1677–78",
+          "summary": "Eighteen-month southern campaign carried Maratha authority to Tanjore — Jinji, Vellore, Tirumalavadi forts taken; alliance with the Qutb Shahi at Golconda.",
+          "date": { "start": "1677-01-01", "end": "1678-04-30", "precision": "month", "approximate": true, "display": "January 1677 – April 1678" },
+          "location": { "name": "Jinji (Senji) Fort, Tamil country", "region": "Bijapur / Madras coast", "country": "IN",
+                        "points": [{ "lat": 12.2540, "lon": 79.4030 }] },
+          "note": "Jinji became the Maratha southern stronghold — the same fort to which Rajaram fled in 1689 after Sambhaji's execution and from which the Marathas held out against Aurangzeb's pursuit for eight years."
+        },
+        {
+          "kind": "moment",
+          "id": "shivaji-death-raigad-1680",
+          "tooltip": "Death at Raigad, 3 April 1680",
+          "summary": "Died at fifty of fever — possibly typhoid. Kingdom passed to Sambhaji; the long Deccan war with Aurangzeb that defined a generation began.",
+          "date": { "start": "1680-04-03", "end": "1680-04-03", "precision": "day", "approximate": false, "display": "3 April 1680" },
+          "location": { "name": "Raigad Fort, Sahyadri", "region": "Maratha Swarajya", "country": "IN",
+                        "points": [{ "lat": 18.2333, "lon": 73.4419 }] },
+          "note": "Aurangzeb left for the Deccan in September 1681 with the largest Mughal field army ever assembled — and never returned to Hindustan. Shivaji's polity outlasted Aurangzeb's by half a century."
+        }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "tipu-sultan",
+      "name": "Tipu Sultan, Sultan of Mysore",
+      "short_name": "Tipu Sultan",
+      "tooltip": "Tipu Sultan (1751–1799), 'Tiger of Mysore'",
+      "summary": "Mysore sovereign across four Anglo-Mysore wars; killed defending Srirangapatna, 4 May 1799 — the EIC's last serious Indian rival south of the Krishna.",
+      "era": "colonial",
+      "lifespan": {
+        "born": "1751-11-20",
+        "died": "1799-05-04",
+        "birthplace": { "name": "Devanahalli, Mysore Kingdom", "country": "IN", "lat": 13.2483, "lon": 77.7115 },
+        "deathplace": { "name": "Srirangapatna, Mysore", "country": "IN", "lat": 12.4108, "lon": 76.7050 }
+      },
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Tipu_Sultan", "label": "Wikipedia: Tipu Sultan", "type": "wikipedia" }
+      ],
+      "colour": "#7a234e",
+      "track": [
+        {
+          "kind": "moment",
+          "id": "tipu-pollilur-1780",
+          "tooltip": "Battle of Pollilur, 10 September 1780 — Second Anglo-Mysore War",
+          "summary": "Twenty-eight-year-old Tipu's cavalry annihilated Colonel Baillie's column near Conjeevaram — the EIC's worst Indian defeat to that date.",
+          "date": { "start": "1780-09-10", "end": "1780-09-10", "precision": "day", "approximate": false, "display": "10 September 1780" },
+          "location": { "name": "Pollilur, near Kanchipuram", "region": "Madras Presidency", "country": "IN",
+                        "points": [{ "lat": 12.7800, "lon": 79.7000 }] },
+          "note": "The battle was depicted in mural form on the walls of the Daria Daulat Bagh at Srirangapatna — Tipu's commemorative wallpaper of British humiliation. ~3,800 EIC troops killed or captured. Many British officers were imprisoned at Srirangapatna for years; some forcibly converted."
+        },
+        {
+          "kind": "moment",
+          "id": "tipu-accession-1782",
+          "tooltip": "Accession on death of Hyder Ali, 7 December 1782",
+          "summary": "Inherited the Mysore throne mid-war on Hyder Ali's death from cancer at Chittoor. Closed the Second Anglo-Mysore War with the 1784 Treaty of Mangalore.",
+          "date": { "start": "1782-12-07", "end": "1782-12-07", "precision": "day", "approximate": false, "display": "7 December 1782" },
+          "location": { "name": "Srirangapatna, Mysore", "region": "Sultanate of Mysore", "country": "IN",
+                        "points": [{ "lat": 12.4108, "lon": 76.7050 }] },
+          "note": "The Treaty of Mangalore (March 1784) restored pre-war boundaries and is the last treaty in which the EIC negotiated as an equal — not a sovereign — with an Indian power. Cornwallis arrived in 1786 with instructions to break Mysore."
+        },
+        {
+          "kind": "event-ref",
+          "event_id": "tipu-khwabnama-1786",
+          "role": "Begins the dream-journal that would track 37 numbered dreams over a decade — political, military, and personal anxieties recorded as rebus.",
+          "note": "The Khwabnama is one of the most unusual personal documents from any Indian ruler — a reigning sovereign's working dream-record, kept in his own hand."
+        },
+        {
+          "kind": "moment",
+          "id": "tipu-third-anglo-mysore-1790-1792",
+          "tooltip": "Third Anglo-Mysore War, 1790–92 — Cornwallis's siege of Srirangapatna",
+          "summary": "Cornwallis-led EIC, Maratha, and Nizam coalition besieged Srirangapatna; Tipu sued for peace, ceded half of Mysore, sent two sons as hostages.",
+          "date": { "start": "1790-12-29", "end": "1792-03-19", "precision": "day", "approximate": false, "display": "December 1790 – March 1792 (Treaty of Seringapatam)" },
+          "location": { "name": "Srirangapatna, Mysore", "region": "Sultanate of Mysore", "country": "IN",
+                        "points": [{ "lat": 12.4108, "lon": 76.7050 }] },
+          "note": "Indemnity of 33 million rupees and territorial cessions to all three coalition partners. The hostage-sons (Abdul Khaliq, Muiz-ud-din) were held at Madras for two years. Tipu rebuilt the army through the 1790s, sought French support, and corresponded with revolutionary Paris."
+        },
+        {
+          "kind": "event-ref",
+          "event_id": "treaty-of-seringapatam-1792",
+          "role": "Signed the Treaty of Seringapatam ceding half of Mysore — the territorial settlement that closed the Third Anglo-Mysore War.",
+          "note": "The half ceded included Coorg, Malabar, Baramahal, and Dindigul — strategic and revenue-rich. Mysore was reduced from a regional empire to a defensible Cauvery-valley kingdom."
+        },
+        {
+          "kind": "moment",
+          "id": "tipu-french-jacobin-1797",
+          "tooltip": "Jacobin Club at Srirangapatna and tree of liberty, 5 May 1797",
+          "summary": "Planted a tree of liberty at Srirangapatna; took the title Citoyen Tipoo. Sought French expeditionary support against the EIC through Mauritius.",
+          "date": { "start": "1797-05-05", "end": "1797-05-05", "precision": "day", "approximate": false, "display": "5 May 1797" },
+          "location": { "name": "Srirangapatna, Mysore", "region": "Sultanate of Mysore", "country": "IN",
+                        "points": [{ "lat": 12.4108, "lon": 76.7050 }] },
+          "note": "The Mauritius proclamation of January 1798 inviting French volunteers reached Wellesley as casus belli for the Fourth Anglo-Mysore War. Napoleon's Egyptian expedition that summer made the threat plausible to London."
+        },
+        {
+          "kind": "moment",
+          "id": "tipu-srirangapatna-fall-1799",
+          "tooltip": "Fall of Srirangapatna and death in defence, 4 May 1799",
+          "summary": "Fourth Anglo-Mysore War. EIC stormed the Water Gate breach; Tipu died fighting at the Hoally Gateway. Mysore reverted to Wodeyar rule under the EIC.",
+          "date": { "start": "1799-05-04", "end": "1799-05-04", "precision": "day", "approximate": false, "display": "4 May 1799" },
+          "location": { "name": "Srirangapatna, Mysore", "region": "Sultanate of Mysore", "country": "IN",
+                        "points": [{ "lat": 12.4108, "lon": 76.7050 }] },
+          "note": "Body identified after the storming by Major Allan and Colonel Wellesley (the future Duke of Wellington). The Wodeyar dynasty was restored as a princely state under EIC subsidiary alliance — Mysore's last serious sovereignty in the south extinguished. The looted Tipu's Tiger automaton sits in the V&A to this day."
+        }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "ranjit-singh",
+      "name": "Maharaja Ranjit Singh",
+      "short_name": "Ranjit Singh",
+      "tooltip": "Ranjit Singh (1780–1839), 'Sher-e-Punjab'",
+      "summary": "Sukerchakia misl chief who consolidated the Sikh misls into a single Khalsa Sarkar from Lahore — Punjab from the Sutlej to the Khyber for forty years.",
+      "era": "colonial",
+      "lifespan": {
+        "born": "1780-11-13",
+        "died": "1839-06-27",
+        "birthplace": { "name": "Gujranwala, Sukerchakia misl", "country": "PK", "lat": 32.1877, "lon": 74.1945 },
+        "deathplace": { "name": "Lahore Fort", "country": "PK", "lat": 31.5887, "lon": 74.3151 }
+      },
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Ranjit_Singh", "label": "Wikipedia: Ranjit Singh", "type": "wikipedia" }
+      ],
+      "colour": "#5a3478",
+      "track": [
+        {
+          "kind": "moment",
+          "id": "ranjit-misl-chief-1792",
+          "tooltip": "Becomes Sukerchakia misl chief on father's death, age 12, 1792",
+          "summary": "Mahan Singh died of fever; Ranjit inherited the Sukerchakia misl at twelve. Smallpox in childhood had blinded his left eye and pitted his face.",
+          "date": { "start": "1792-04-15", "end": "1792-04-15", "precision": "day", "approximate": true, "display": "April 1792" },
+          "location": { "name": "Gujranwala", "region": "Sukerchakia misl", "country": "PK",
+                        "points": [{ "lat": 32.1877, "lon": 74.1945 }] },
+          "note": "Mother Raj Kaur and mother-in-law Sada Kaur (Kanhaiya misl) were the regents. The misl confederacy of twelve Sikh kindred-chieftains had governed Punjab since the 1760s; Ranjit's project was to break the misl boundaries and forge a single state."
+        },
+        {
+          "kind": "moment",
+          "id": "ranjit-takes-lahore-1799",
+          "tooltip": "Takes Lahore from Bhangi misl with Sada Kaur's troops, 7 July 1799",
+          "summary": "Marched on Lahore with 25,000 Kanhaiya troops. The Bhangi sardars opened the Lohari Gate; the city was taken without battle.",
+          "date": { "start": "1799-07-07", "end": "1799-07-07", "precision": "day", "approximate": false, "display": "7 July 1799" },
+          "location": { "name": "Lahore Fort", "region": "Punjab", "country": "PK",
+                        "points": [{ "lat": 31.5887, "lon": 74.3151 }] },
+          "note": "Zaman Shah Durrani had nominally appointed him governor of Lahore the previous year in return for retrieving Afghan artillery — the appointment Ranjit converted into possession. Lahore became the Khalsa capital."
+        },
+        {
+          "kind": "moment",
+          "id": "ranjit-coronation-1801",
+          "tooltip": "Anointed Maharaja of the Punjab on Baisakhi, 12 April 1801",
+          "summary": "Anointed Maharaja of the Sarkar-i-Khalsa by Sahib Singh Bedi (descendant of Guru Nanak) at Lahore Fort. Refused a crown — the Khalsa was the sovereign.",
+          "date": { "start": "1801-04-12", "end": "1801-04-12", "precision": "day", "approximate": false, "display": "12 April 1801 (Baisakhi)" },
+          "location": { "name": "Lahore Fort", "region": "Sarkar-i-Khalsa", "country": "PK",
+                        "points": [{ "lat": 31.5887, "lon": 74.3151 }] },
+          "note": "Coinage was struck in the names of the Gurus, not of the Maharaja. The state was framed as the temporal arm of the Khalsa Panth — a constitutional fiction that gave the Sikh polity its distinctive theocratic-secular hybrid character."
+        },
+        {
+          "kind": "moment",
+          "id": "ranjit-amritsar-treaty-1809",
+          "tooltip": "Treaty of Amritsar with the EIC, 25 April 1809",
+          "summary": "Sutlej fixed as the Khalsa-EIC boundary. Cis-Sutlej Sikh chiefs accepted EIC protection; Ranjit's eastward expansion ended.",
+          "date": { "start": "1809-04-25", "end": "1809-04-25", "precision": "day", "approximate": false, "display": "25 April 1809" },
+          "location": { "name": "Amritsar", "region": "Sarkar-i-Khalsa", "country": "IN",
+                        "points": [{ "lat": 31.6340, "lon": 74.8723 }] },
+          "note": "Negotiated by Charles Metcalfe for the EIC. With the eastern frontier closed, Ranjit turned westward — Multan, Kashmir, and Peshawar. The treaty held until his death; the EIC moved across the Sutlej only in 1845."
+        },
+        {
+          "kind": "moment",
+          "id": "ranjit-multan-1818",
+          "tooltip": "Capture of Multan from the Saddozai Afghan governor, 2 June 1818",
+          "summary": "Six-month siege ended when Misr Diwan Chand's troops stormed the citadel. Multan's Afghan governor Muzaffar Khan died with his sons defending the citadel.",
+          "date": { "start": "1817-12-25", "end": "1818-06-02", "precision": "day", "approximate": false, "display": "December 1817 – 2 June 1818" },
+          "location": { "name": "Multan citadel", "region": "Punjab", "country": "PK",
+                        "points": [{ "lat": 30.1985, "lon": 71.4687 }] },
+          "note": "First major reduction of Saddozai-Durrani territory by the Khalsa. Opened the route to Sindh and the lower Indus; brought the Zamzama gun (later Kim's Gun) to Lahore."
+        },
+        {
+          "kind": "moment",
+          "id": "ranjit-kashmir-1819",
+          "tooltip": "Conquest of Kashmir from the Afghans, 5 July 1819",
+          "summary": "Misr Diwan Chand defeated Jabbar Khan, Afghan governor of Kashmir, at Shopian. Five centuries of intermittent Afghan-Mughal Kashmir ended.",
+          "date": { "start": "1819-07-05", "end": "1819-07-05", "precision": "day", "approximate": false, "display": "5 July 1819 (Battle of Shopian)" },
+          "location": { "name": "Shopian, Kashmir Valley", "region": "Sarkar-i-Khalsa", "country": "IN",
+                        "points": [{ "lat": 33.7166, "lon": 74.8333 }] },
+          "note": "Kashmir came under direct Sikh administration; Ranjit's nominee governors managed the valley until 1846. After his death and the First Anglo-Sikh War, Kashmir was sold to Gulab Singh of Jammu under the Treaty of Amritsar 1846 — the genealogy of the Dogra rule that lasted to 1947."
+        },
+        {
+          "kind": "moment",
+          "id": "ranjit-peshawar-1834",
+          "tooltip": "Annexation of Peshawar from the Barakzai, May 1834",
+          "summary": "Hari Singh Nalwa took Peshawar from the Barakzai brothers — the Khalsa frontier reached the Khyber. Persistent Pashtun-Khalsa frontier war for the next decade.",
+          "date": { "start": "1834-05-06", "end": "1834-05-06", "precision": "day", "approximate": false, "display": "6 May 1834" },
+          "location": { "name": "Peshawar (Bala Hissar)", "region": "Khyber frontier", "country": "PK",
+                        "points": [{ "lat": 34.0151, "lon": 71.5249 }] },
+          "note": "Nalwa fortified the Khyber with the Jamrud fort; he died at Jamrud in 1837 holding off Dost Mohammed Khan's counter-attack. The Khalsa's Pashtun frontier was the only Indian polity ever to push back permanently into Afghan country."
+        },
+        {
+          "kind": "moment",
+          "id": "ranjit-death-lahore-1839",
+          "tooltip": "Death at Lahore Fort, 27 June 1839",
+          "summary": "Died after a final stroke at fifty-nine. The Khalsa Sarkar he had built unravelled within seven years; the EIC annexed Punjab in 1849.",
+          "date": { "start": "1839-06-27", "end": "1839-06-27", "precision": "day", "approximate": false, "display": "27 June 1839" },
+          "location": { "name": "Lahore Fort", "region": "Sarkar-i-Khalsa", "country": "PK",
+                        "points": [{ "lat": 31.5887, "lon": 74.3151 }] },
+          "note": "Four sons and three regents in seven years of succession bloodletting; Hari Singh Nalwa already dead at Jamrud (1837); the Khalsa Army's panchayats turned political. The First Anglo-Sikh War (1845–46) and the Second (1848–49) followed. The Koh-i-Noor — which Ranjit had taken from Shah Shuja in 1813 — was surrendered by his minor son Duleep Singh to Lord Dalhousie in 1849."
+        }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "birsa-munda",
+      "name": "Birsa Munda",
+      "short_name": "Birsa Munda",
+      "tooltip": "Birsa Munda (1875–1900), 'Dharti Aba'",
+      "summary": "Munda adivasi prophet of Chotanagpur; led the Ulgulan ('Great Tumult') of 1899–1900 against colonial land settlement and missionary encroachment.",
+      "era": "colonial",
+      "lifespan": {
+        "born": "1875-11-15",
+        "died": "1900-06-09",
+        "birthplace": { "name": "Ulihatu, Chotanagpur plateau", "country": "IN", "lat": 23.0833, "lon": 84.7333 },
+        "deathplace": { "name": "Ranchi Central Jail", "country": "IN", "lat": 23.3441, "lon": 85.3096 }
+      },
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Birsa_Munda", "label": "Wikipedia: Birsa Munda", "type": "wikipedia" }
+      ],
+      "colour": "#2c6135",
+      "track": [
+        {
+          "kind": "moment",
+          "id": "birsa-mission-school-1886",
+          "tooltip": "Enters German Mission school at Burju, c. 1886",
+          "summary": "Family converted to Lutheran Christianity; Birsa attended the Burju mission school, then the Chaibasa GEL Mission school. Withdrew in his teens.",
+          "date": { "start": "1886-01-01", "end": "1890-12-31", "precision": "year", "approximate": true, "display": "c. 1886–1890" },
+          "location": { "name": "Burju mission school, Chotanagpur", "region": "Bengal Presidency", "country": "IN",
+                        "points": [{ "lat": 23.1500, "lon": 84.6500 }] },
+          "note": "The mission encounter shaped his later religious vocabulary — Birsait theology drew on Christian millenarian forms even as it rejected the missions politically. He left the church in his early teens after a dispute about adivasi land grievances; the missionaries had sided with the zamindars."
+        },
+        {
+          "kind": "moment",
+          "id": "birsa-vaishnav-encounter-1893",
+          "tooltip": "Tutelage with Vaishnav guru Anand Pandey at Bandgaon, c. 1893",
+          "summary": "Two years with a Vaishnav teacher exposed Birsa to Hindu cosmology, mantras, and the bhakti vocabulary he later turned to indigenous prophetic use.",
+          "date": { "start": "1893-01-01", "end": "1894-12-31", "precision": "year", "approximate": true, "display": "c. 1893–1894" },
+          "location": { "name": "Bandgaon, Chotanagpur", "region": "Bengal Presidency", "country": "IN",
+                        "points": [{ "lat": 22.9000, "lon": 85.1500 }] },
+          "note": "His religious synthesis — monotheist, abstemious, anti-Christian and anti-missionary, but also anti-traditional adivasi spirit-worship — drew on the Vaishnav years. The result was unrecognisable to the orthodox of any of those traditions."
+        },
+        {
+          "kind": "moment",
+          "id": "birsa-prophet-1895",
+          "tooltip": "Proclaims himself 'Dharti Aba' (Father of the Earth), 1895",
+          "summary": "At Chalkad, declared himself the Munda prophet sent by Singbonga. Called for return to khuntkatti land tenure and the end of dikku (outsider) rule.",
+          "date": { "start": "1895-04-01", "end": "1895-08-31", "precision": "month", "approximate": true, "display": "April – August 1895" },
+          "location": { "name": "Chalkad, Khunti subdivision", "region": "Bengal Presidency", "country": "IN",
+                        "points": [{ "lat": 23.0700, "lon": 85.2800 }] },
+          "note": "First religious gathering drew thousands. Birsait followers — Birsaits — abstained from alcohol, wore the sacred thread, kept Thursday as a sabbath. The colonial state read it as a Christian-style movement; the missions read it as syncretic; both missed the political programme on land."
+        },
+        {
+          "kind": "moment",
+          "id": "birsa-first-jail-1895",
+          "tooltip": "First imprisonment, Hazaribagh Central Jail, 1895–97",
+          "summary": "Arrested August 1895 on rioting charges; sentenced to two years' rigorous imprisonment at Hazaribagh. Released 1897 under the Diamond Jubilee amnesty.",
+          "date": { "start": "1895-08-24", "end": "1897-11-30", "precision": "day", "approximate": false, "display": "August 1895 – November 1897" },
+          "location": { "name": "Hazaribagh Central Jail", "region": "Bengal Presidency", "country": "IN",
+                        "points": [{ "lat": 23.9925, "lon": 85.3637 }] },
+          "note": "The two-year jail term hardened the movement. On release Birsa moved between forest hideouts in the Singhbhum and Khunti hills; the Birsait network grew through 1898 in preparation for the Ulgulan."
+        },
+        {
+          "kind": "event-ref",
+          "event_id": "birsa-munda-ulgulan-1899-1900",
+          "role": "Proclaimed the Ulgulan ('Great Tumult') on Christmas Eve 1899; led coordinated attacks on police stations, churches, and zamindari outposts across Khunti and Tamar.",
+          "note": "The military phase ran from 24 December 1899 to early February 1900. ~400 Mundas killed in the suppression; Birsa was captured at Sentra hill on 3 February 1900."
+        },
+        {
+          "kind": "moment",
+          "id": "birsa-death-ranchi-jail-1900",
+          "tooltip": "Death in Ranchi Central Jail, 9 June 1900, age 24",
+          "summary": "Officially died of cholera in jail awaiting trial. Munda oral tradition records poisoning. The 1908 Chotanagpur Tenancy Act was the colonial answer.",
+          "date": { "start": "1900-06-09", "end": "1900-06-09", "precision": "day", "approximate": false, "display": "9 June 1900" },
+          "location": { "name": "Ranchi Central Jail", "region": "Bengal Presidency", "country": "IN",
+                        "points": [{ "lat": 23.3441, "lon": 85.3096 }] },
+          "note": "His mausoleum at Distillery Bridge, Ranchi, became the Munda movement's pilgrimage site. The Chotanagpur Tenancy Act 1908 — protecting adivasi land from non-tribal alienation — is the direct legislative legacy of the Ulgulan; the principle was extended to the Santhal Parganas Tenancy Act 1949 and to Schedule V of the post-Independence Constitution. Jharkhand state, founded 2000, took its centenary year as a deliberate echo."
+        }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "krishnadevaraya",
+      "name": "Krishnadevaraya, Vijayanagara Emperor",
+      "short_name": "Krishnadevaraya",
+      "tooltip": "Krishnadevaraya (r. 1509–1529), Tuluva-dynasty emperor of Vijayanagara",
+      "summary": "Tuluva emperor of Vijayanagara at its apex; defeated the Bahmani successors at Raichur 1520; patron of Telugu and Sanskrit poetry from Hampi.",
+      "era": "sultanate",
+      "lifespan": {
+        "born": "1471-01-17",
+        "died": "1529-10-17",
+        "birthplace": { "name": "Hampi (Vijayanagara)", "country": "IN", "lat": 15.3350, "lon": 76.4600 },
+        "deathplace": { "name": "Hampi (Vijayanagara)", "country": "IN", "lat": 15.3350, "lon": 76.4600 }
+      },
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Krishnadevaraya", "label": "Wikipedia: Krishnadevaraya", "type": "wikipedia" }
+      ],
+      "colour": "#a87520",
+      "track": [
+        {
+          "kind": "moment",
+          "id": "kdr-coronation-1509",
+          "tooltip": "Coronation at Vijayanagara, 8 August 1509",
+          "summary": "Crowned at twenty-two on the death of half-brother Vira Narasimha Raya — the Tuluva accession that began two decades of consolidation and expansion.",
+          "date": { "start": "1509-08-08", "end": "1509-08-08", "precision": "day", "approximate": false, "display": "8 August 1509" },
+          "location": { "name": "Vijayanagara (Hampi)", "region": "Vijayanagara Empire", "country": "IN",
+                        "points": [{ "lat": 15.3350, "lon": 76.4600 }] },
+          "note": "Inherited a war on three fronts — Bahmani successors to the north, Gajapatis of Orissa to the east, Portuguese settlement at Goa to the west. The reign would resolve all three by force or treaty within fifteen years."
+        },
+        {
+          "kind": "moment",
+          "id": "kdr-bahmani-campaign-1510",
+          "tooltip": "Defeats Adil Shahi at Diwani, 1510 — opening the Bahmani-successor war",
+          "summary": "Defeated Yusuf Adil Shah of Bijapur at Diwani in his first major campaign — establishing the Krishna river as the contested northern frontier.",
+          "date": { "start": "1510-01-01", "end": "1510-12-31", "precision": "year", "approximate": true, "display": "1510" },
+          "location": { "name": "Diwani / Krishna river frontier", "region": "Bijapur Sultanate", "country": "IN",
+                        "points": [{ "lat": 16.5062, "lon": 77.0000 }] },
+          "note": "The Bahmani Sultanate had fragmented into five successor sultanates after 1490. Krishnadevaraya played them against each other for two decades; the strategic logic broke only after his death, when they united for Talikota in 1565."
+        },
+        {
+          "kind": "moment",
+          "id": "kdr-udayagiri-1514",
+          "tooltip": "Capture of Udayagiri from the Gajapati Pratapa Rudra, 1514",
+          "summary": "Eighteen-month siege of the Udayagiri hill-fort ended Gajapati Orissa's southern claim. Brought the Krishna Vishnu image to Hampi as war trophy.",
+          "date": { "start": "1513-06-01", "end": "1514-06-30", "precision": "month", "approximate": true, "display": "1513–1514" },
+          "location": { "name": "Udayagiri Fort, Nellore", "region": "Gajapati Orissa", "country": "IN",
+                        "points": [{ "lat": 14.8650, "lon": 79.3170 }] },
+          "note": "Followed by the captures of Kondavidu (1515), Kondapalli (1515), and finally Cuttack itself. The 1518 settlement with Pratapa Rudra fixed the Krishna as the Vijayanagara-Gajapati boundary; sealed by the marriage of Krishnadevaraya to Pratapa Rudra's daughter Tukka Devi."
+        },
+        {
+          "kind": "moment",
+          "id": "kdr-amuktamalyada-1515",
+          "tooltip": "Composes the Amuktamalyada, a Telugu poetic epic, c. 1515",
+          "summary": "Composed in his own hand a five-canto Telugu mahakavya on the Vaishnava saint Andal — the only major literary work by a reigning South Indian sovereign.",
+          "date": { "start": "1515-01-01", "end": "1515-12-31", "precision": "year", "approximate": true, "display": "c. 1515" },
+          "location": { "name": "Vijayanagara (Hampi)", "region": "Vijayanagara Empire", "country": "IN",
+                        "points": [{ "lat": 15.3350, "lon": 76.4600 }] },
+          "note": "The Telugu Ashtadiggajas — eight poets who anchored the literary court — wrote within his patronage. Allasani Peddana, Nandi Thimmana, and Tenali Ramakrishna are the names that survived. Telugu literary historiography dates a 'classical age' to this court."
+        },
+        {
+          "kind": "moment",
+          "id": "kdr-raichur-1520",
+          "tooltip": "Battle of Raichur against Ismail Adil Shah, May 1520",
+          "summary": "Defeated Ismail Adil Shah of Bijapur at Raichur after a fifty-day siege. Krishnadevaraya led the cavalry charge in person; Portuguese musketeers tipped it.",
+          "date": { "start": "1520-05-19", "end": "1520-05-19", "precision": "day", "approximate": false, "display": "19 May 1520" },
+          "location": { "name": "Raichur, Krishna-Tungabhadra doab", "region": "Bijapur frontier", "country": "IN",
+                        "points": [{ "lat": 16.2076, "lon": 77.3463 }] },
+          "note": "The doab between the Krishna and Tungabhadra changed hands repeatedly through the late fifteenth and early sixteenth centuries. Raichur 1520 is the single set-piece victory that fixed it under Vijayanagara for the rest of the reign — and the moment Portuguese-supplied artillery enters the South Indian battlefield as decisive."
+        },
+        {
+          "kind": "moment",
+          "id": "kdr-portuguese-treaty-1520s",
+          "tooltip": "Formalised horse-trade alliance with Portuguese Goa, post-Raichur 1521",
+          "summary": "Formalised the Goa horse-trade alliance with Portugal after Raichur — the Arabian horse imports that fed Vijayanagara cavalry through the rest of the reign.",
+          "date": { "start": "1521-01-01", "end": "1529-12-31", "precision": "year", "approximate": true, "display": "post-Raichur, 1521–1529" },
+          "location": { "name": "Goa", "region": "Portuguese Estado da Índia", "country": "IN",
+                        "points": [{ "lat": 15.4909, "lon": 73.8278 }] },
+          "note": "Vijayanagara had no native horse-breeding country; cavalry remounts came by sea via Hormuz–Goa. Krishnadevaraya's grain-for-horse settlement with the Portuguese gave Vijayanagara a strategic edge over the inland Deccan sultanates that lacked direct Portuguese access."
+        },
+        {
+          "kind": "moment",
+          "id": "kdr-death-1529",
+          "tooltip": "Death at Vijayanagara, 17 October 1529",
+          "summary": "Died in his late fifties — possibly poisoned amid succession intrigue. Half-brother Achyuta Devaraya succeeded; the empire held three more decades to Talikota.",
+          "date": { "start": "1529-10-17", "end": "1529-10-17", "precision": "day", "approximate": false, "display": "17 October 1529" },
+          "location": { "name": "Vijayanagara (Hampi)", "region": "Vijayanagara Empire", "country": "IN",
+                        "points": [{ "lat": 15.3350, "lon": 76.4600 }] },
+          "note": "The Battle of Talikota (26 January 1565) by the combined Deccan sultanates — exactly the alliance Krishnadevaraya's diplomacy had prevented for two decades — destroyed Vijayanagara as an imperial centre. Hampi was sacked over six months and never rebuilt. The empire's southern remnants survived as the Aravidu rump until 1646."
+        }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "guru-gobind-singh",
+      "name": "Guru Gobind Singh",
+      "short_name": "Guru Gobind Singh",
+      "tooltip": "Guru Gobind Singh (1666–1708), tenth and final Sikh Guru",
+      "summary": "Tenth Sikh Guru. Founded the Khalsa at Anandpur on Baisakhi 1699; lost four sons to Aurangzeb's Mughals; closed the Guru lineage in the Adi Granth.",
+      "era": "mughal",
+      "lifespan": {
+        "born": "1666-12-22",
+        "died": "1708-10-07",
+        "birthplace": { "name": "Patna Sahib", "country": "IN", "lat": 25.6093, "lon": 85.1700 },
+        "deathplace": { "name": "Nanded (Hazur Sahib)", "country": "IN", "lat": 19.1383, "lon": 77.3210 }
+      },
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Guru_Gobind_Singh", "label": "Wikipedia: Guru Gobind Singh", "type": "wikipedia" }
+      ],
+      "colour": "#1e447a",
+      "track": [
+        {
+          "kind": "moment",
+          "id": "ggs-guruship-1675",
+          "tooltip": "Becomes tenth Guru on father Tegh Bahadur's execution, 11 November 1675",
+          "summary": "Father Guru Tegh Bahadur beheaded by Aurangzeb at Chandni Chowk for defending Kashmiri Pandits' right to their religion. Gobind Rai succeeded at nine.",
+          "date": { "start": "1675-11-11", "end": "1675-11-11", "precision": "day", "approximate": false, "display": "11 November 1675" },
+          "location": { "name": "Anandpur Sahib", "region": "Sirhind Subah, Mughal Punjab", "country": "IN",
+                        "points": [{ "lat": 31.2375, "lon": 76.5033 }] },
+          "note": "Tegh Bahadur's martyrdom at the Sis Ganj site at Chandni Chowk is the central memory of late-Mughal Sikh-state relations. Bhai Mati Das, Bhai Sati Das, and Bhai Dayal Das were executed alongside him."
+        },
+        {
+          "kind": "moment",
+          "id": "ggs-bhangani-1688",
+          "tooltip": "Battle of Bhangani against Hill Rajas, September 1688",
+          "summary": "First armed engagement at twenty-one — defeated Bhim Chand of Bilaspur and the Sirmur-Garhwal allied hill chiefs near Paonta Sahib on the Yamuna.",
+          "date": { "start": "1688-09-01", "end": "1688-09-30", "precision": "month", "approximate": true, "display": "September 1688" },
+          "location": { "name": "Bhangani, near Paonta Sahib", "region": "Sirmur Hills", "country": "IN",
+                        "points": [{ "lat": 30.4378, "lon": 77.6244 }] },
+          "note": "Composed the Chandi di Var and parts of the Dasam Granth at Paonta Sahib in this period. The Sikh-Pahari Hill State antagonism through the 1690s set the stage for Anandpur's siege a decade later."
+        },
+        {
+          "kind": "moment",
+          "id": "ggs-khalsa-baisakhi-1699",
+          "tooltip": "Founding of the Khalsa at Anandpur, Baisakhi 1699",
+          "summary": "Initiated the Panj Pyare ('Five Beloved') with khande di pahul amrit at Anandpur — the founding of the Khalsa Panth as a casteless martial fraternity.",
+          "date": { "start": "1699-04-13", "end": "1699-04-13", "precision": "day", "approximate": false, "display": "Baisakhi, 13 April 1699" },
+          "location": { "name": "Anandpur Sahib (Keshgarh)", "region": "Sirhind Subah, Mughal Punjab", "country": "IN",
+                        "points": [{ "lat": 31.2375, "lon": 76.5033 }] },
+          "note": "The Five Beloved came from across caste lines (Khatri, Jat, Chhimba, Ghumar, Nai) and from across regions (Lahore, Delhi, Dwarka, Jagannath Puri, Bidar). The Five Ks (kesh, kara, kanga, kachera, kirpan), the surname Singh for men and Kaur for women, and the formal Khalsa creed all date to this initiation."
+        },
+        {
+          "kind": "moment",
+          "id": "ggs-anandpur-siege-1704",
+          "tooltip": "Siege and evacuation of Anandpur, 1704–05",
+          "summary": "Eight-month siege by Sirhind Mughals plus Hill Rajas. Evacuated under safe-conduct that was immediately broken at the Sarsa river crossing.",
+          "date": { "start": "1704-05-01", "end": "1705-12-31", "precision": "month", "approximate": true, "display": "May 1704 – December 1705" },
+          "location": { "name": "Anandpur Sahib", "region": "Sirhind Subah, Mughal Punjab", "country": "IN",
+                        "points": [{ "lat": 31.2375, "lon": 76.5033 }] },
+          "note": "Family separated at the Sarsa crossing in flood. Mother Mata Gujri and the two younger sons (Zorawar Singh, 9; Fateh Singh, 6) were captured by the Sirhind faujdar Wazir Khan and bricked alive into a wall in Sirhind on 12 December 1705 for refusing conversion."
+        },
+        {
+          "kind": "moment",
+          "id": "ggs-chamkaur-1704",
+          "tooltip": "Battle of Chamkaur Sahib, 21–22 December 1704",
+          "summary": "Defended the Chamkaur haveli with forty Sikhs against a Mughal force in the tens of thousands. Two elder sons (Ajit Singh 17, Jujhar Singh 14) killed.",
+          "date": { "start": "1704-12-21", "end": "1704-12-22", "precision": "day", "approximate": false, "display": "21–22 December 1704" },
+          "location": { "name": "Chamkaur Sahib", "region": "Sirhind Subah, Mughal Punjab", "country": "IN",
+                        "points": [{ "lat": 30.8930, "lon": 76.4080 }] },
+          "note": "Escaped at the Five Beloved's insistence on the night of 22 December disguised as Uchh-da-Pir, with Bhai Daya Singh, Bhai Dharam Singh, and Bhai Maan Singh. Reached the Machhiwara forest on foot. Within days all four of Guru Gobind Singh's sons (the Char Sahibzade) were dead."
+        },
+        {
+          "kind": "moment",
+          "id": "ggs-zafarnamah-1705",
+          "tooltip": "Composition of the Zafarnamah ('Epistle of Victory') to Aurangzeb, 1705",
+          "summary": "Persian-verse letter written from Dina (Punjab) addressed to Aurangzeb in the Deccan, charging him with breach of solemn oath and the murder of children.",
+          "date": { "start": "1705-12-01", "end": "1705-12-31", "precision": "month", "approximate": true, "display": "December 1705" },
+          "location": { "name": "Dina, Malwa Punjab", "region": "Sirhind Subah, Mughal Punjab", "country": "IN",
+                        "points": [{ "lat": 30.6800, "lon": 75.4500 }] },
+          "note": "Bhai Daya Singh and Bhai Dharam Singh carried the epistle south to Aurangzeb at Ahmadnagar. The Mughal emperor died at Ahmadnagar in March 1707 having (per several reports) read it. Stanza 22: 'When all means of redress have failed, it is righteous to draw the sword.'"
+        },
+        {
+          "kind": "moment",
+          "id": "ggs-adi-granth-1708",
+          "tooltip": "Installs the Adi Granth as eternal Guru, Nanded, October 1708",
+          "summary": "On his deathbed at Nanded, ended the personal-Guru lineage by investing the Adi Granth (Guru Granth Sahib) as the eternal Sikh Guru in perpetuity.",
+          "date": { "start": "1708-10-06", "end": "1708-10-06", "precision": "day", "approximate": false, "display": "6 October 1708" },
+          "location": { "name": "Nanded (Hazur Sahib)", "region": "Mughal Deccan", "country": "IN",
+                        "points": [{ "lat": 19.1383, "lon": 77.3210 }] },
+          "note": "Stabbed by two Pathan assassins (sent, per tradition, by Wazir Khan of Sirhind) at Nanded the previous month; the wound reopened. Banda Singh Bahadur, met at Nanded that summer, was sent north to Punjab as Guru-appointed military commander — the Sirhind avenger and founder of the first Sikh statehood under arms."
+        }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "tarabai",
+      "name": "Maharani Tarabai Bhonsle",
+      "short_name": "Tarabai",
+      "tooltip": "Tarabai (1675–1761), Maratha regent during Aurangzeb's Deccan war",
+      "summary": "Maratha regent for her son Shivaji II from 1700; held the Maratha resistance against Aurangzeb's last Deccan campaign and ran the southern war from Panhala.",
+      "era": "mughal",
+      "lifespan": {
+        "born": "1675-04-15",
+        "died": "1761-12-09",
+        "birthplace": { "name": "Pune (Mohite household)", "country": "IN", "lat": 18.5204, "lon": 73.8567 },
+        "deathplace": { "name": "Satara", "country": "IN", "lat": 17.6805, "lon": 74.0183 }
+      },
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Tarabai", "label": "Wikipedia: Tarabai", "type": "wikipedia" }
+      ],
+      "colour": "#b04060",
+      "track": [
+        {
+          "kind": "moment",
+          "id": "tarabai-marriage-1683",
+          "tooltip": "Marriage to Rajaram Chhatrapati, 1683",
+          "summary": "Daughter of senapati Hambirao Mohite. Married Rajaram, Shivaji's younger son, at eight; he was twelve. Politically central from her teens.",
+          "date": { "start": "1683-01-01", "end": "1683-12-31", "precision": "year", "approximate": true, "display": "1683" },
+          "location": { "name": "Raigad Fort, Sahyadri", "region": "Maratha Swarajya", "country": "IN",
+                        "points": [{ "lat": 18.2333, "lon": 73.4419 }] },
+          "note": "The Mohite family had served Shahji Bhonsle. Rajaram's first wife Jankibai was from the Shirke family; Tarabai was his second. Sambhaji's execution in 1689 made Rajaram the second Chhatrapati at twenty-two, in flight from Aurangzeb's army."
+        },
+        {
+          "kind": "moment",
+          "id": "tarabai-jinji-flight-1689",
+          "tooltip": "Flight to Jinji with Rajaram, 1689",
+          "summary": "After Sambhaji's execution and the fall of Raigad, fled south with Rajaram to the Jinji fort in Tamil country — held out eight years against Aurangzeb.",
+          "date": { "start": "1689-11-01", "end": "1697-12-31", "precision": "month", "approximate": true, "display": "November 1689 – 1697" },
+          "location": { "name": "Jinji (Senji) Fort, Tamil country", "region": "Maratha Swarajya / Mughal pursuit", "country": "IN",
+                        "points": [{ "lat": 12.2540, "lon": 79.4030 }] },
+          "note": "Zulfiqar Khan's eight-year siege of Jinji is the longest set-piece campaign of Aurangzeb's Deccan war. Rajaram escaped Jinji in 1697 by sea-and-land; Tarabai and the household evacuated overland. Their son Shivaji II was born at Jinji in 1696."
+        },
+        {
+          "kind": "moment",
+          "id": "tarabai-regency-1700",
+          "tooltip": "Becomes regent for Shivaji II on Rajaram's death, 12 March 1700",
+          "summary": "Rajaram died at twenty-nine of fever at Sinhagad. Tarabai assumed the regency for four-year-old Shivaji II and ran the Maratha war for seven years.",
+          "date": { "start": "1700-03-12", "end": "1700-03-12", "precision": "day", "approximate": false, "display": "12 March 1700" },
+          "location": { "name": "Sinhagad Fort, near Pune", "region": "Maratha Swarajya", "country": "IN",
+                        "points": [{ "lat": 18.3664, "lon": 73.7565 }] },
+          "note": "Khafi Khan, the Mughal court historian who saw her in action, wrote that she 'set herself up as regent during her son's minority, taking on the management of the army and the affairs of the state.' Aurangzeb's last seven years in the Deccan were spent fighting this woman's commanders."
+        },
+        {
+          "kind": "moment",
+          "id": "tarabai-panhala-resistance-1700-1707",
+          "tooltip": "Resistance from Panhala fort against Aurangzeb's siege wars, 1700–07",
+          "summary": "Ran the Maratha war from Panhala while Aurangzeb's army besieged Sahyadri forts one by one. Forts retaken nearly as fast as lost — the strategy held.",
+          "date": { "start": "1700-04-01", "end": "1707-03-03", "precision": "month", "approximate": true, "display": "April 1700 – March 1707" },
+          "location": { "name": "Panhala Fort, near Kolhapur", "region": "Maratha Swarajya", "country": "IN",
+                        "points": [{ "lat": 16.8127, "lon": 74.1102 }] },
+          "note": "Aurangzeb's siege army took Satara (1700), Parli (1700), Panhala (1701), Vishalgad, Khelna, Rajmachi, Sinhagad — and by the time he had finished the southern third, Tarabai's commanders Dhanaji Jadhav, Santaji Ghorpade, and Parashuram Trimbak had retaken most of them. The Mughal financial drain became unsupportable."
+        },
+        {
+          "kind": "moment",
+          "id": "tarabai-sahu-split-1707",
+          "tooltip": "Split with Shahu after Aurangzeb's death, 1707",
+          "summary": "Aurangzeb died March 1707; Bahadur Shah released Sambhaji's son Shahu to split the Marathas. Tarabai backed Shivaji II; Shahu won at Khed, October 1707.",
+          "date": { "start": "1707-10-12", "end": "1707-10-12", "precision": "day", "approximate": false, "display": "12 October 1707 (Battle of Khed)" },
+          "location": { "name": "Khed, near Pune", "region": "Maratha Swarajya", "country": "IN",
+                        "points": [{ "lat": 18.8487, "lon": 73.7333 }] },
+          "note": "Balaji Vishwanath, the Peshwa-to-be, switched from Tarabai's faction to Shahu's at Khed and tipped the battle. The Maratha state split into a senior Satara line under Shahu and a junior Kolhapur line under Tarabai's son. The Peshwa office she had inadvertently empowered would soon eclipse the Chhatrapati institution itself."
+        },
+        {
+          "kind": "moment",
+          "id": "tarabai-imprisonment-1714",
+          "tooltip": "Deposed and imprisoned by co-wife Rajasbai, 1714",
+          "summary": "Rajasbai (Rajaram's other widow) deposed Tarabai and Shivaji II in a coup at Kolhapur; held her in confinement at Panhala then Satara for three decades.",
+          "date": { "start": "1714-01-01", "end": "1714-12-31", "precision": "year", "approximate": true, "display": "1714" },
+          "location": { "name": "Kolhapur", "region": "Maratha Kolhapur line", "country": "IN",
+                        "points": [{ "lat": 16.7050, "lon": 74.2433 }] },
+          "note": "Three decades of confinement. Re-emerged in the 1740s under Shahu's protection at Satara — and would, on Shahu's death in 1749, attempt one last political act: producing a grandson she claimed as legitimate Chhatrapati."
+        },
+        {
+          "kind": "moment",
+          "id": "tarabai-final-bid-1750-1761",
+          "tooltip": "Final political move under Peshwa Balaji Bajirao, 1750–61",
+          "summary": "Produced 'Ramraja' as Shivaji II's grandson and Shahu's heir; clashed with Peshwa Balaji Bajirao for a decade. Died at Satara months after Panipat 1761.",
+          "date": { "start": "1750-01-01", "end": "1761-12-09", "precision": "year", "approximate": true, "display": "1750–1761" },
+          "location": { "name": "Satara", "region": "Maratha Confederacy", "country": "IN",
+                        "points": [{ "lat": 17.6805, "lon": 74.0183 }] },
+          "note": "Outlived Shahu (d. 1749), Balaji Bajirao's brother Chimaji Appa, the Third Battle of Panipat (14 January 1761) which killed an entire generation of Peshwa commanders, and Peshwa Balaji Bajirao himself (d. June 1761). Died eight months after Panipat at eighty-six. The Chhatrapati office she had defended ended functionally with her."
+        }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "rani-gaidinliu",
+      "name": "Rani Gaidinliu",
+      "short_name": "Rani Gaidinliu",
+      "tooltip": "Rani Gaidinliu (1915–1993), Naga Heraka leader and anti-colonial rebel",
+      "summary": "Rongmei Naga spiritual-political leader. Carried the Heraka movement after Haipou Jadonang's hanging; jailed 1932–47 for armed resistance against the Raj.",
+      "era": "colonial",
+      "lifespan": {
+        "born": "1915-01-26",
+        "died": "1993-02-17",
+        "birthplace": { "name": "Lungkao village, Tamenglong", "country": "IN", "lat": 24.9930, "lon": 93.5050 },
+        "deathplace": { "name": "Lungkao village, Tamenglong", "country": "IN", "lat": 24.9930, "lon": 93.5050 }
+      },
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Rani_Gaidinliu", "label": "Wikipedia: Rani Gaidinliu", "type": "wikipedia" }
+      ],
+      "colour": "#3a8a6a",
+      "track": [
+        {
+          "kind": "moment",
+          "id": "gaidinliu-jadonang-1927",
+          "tooltip": "Joins cousin Haipou Jadonang's Heraka movement, c. 1927",
+          "summary": "Joined cousin Haipou Jadonang's Heraka movement at thirteen — a Zeliangrong-Naga reform of traditional religion against missionary and colonial encroachment.",
+          "date": { "start": "1927-01-01", "end": "1927-12-31", "precision": "year", "approximate": true, "display": "c. 1927" },
+          "location": { "name": "Tamenglong, Naga Hills", "region": "Manipur State", "country": "IN",
+                        "points": [{ "lat": 24.9930, "lon": 93.5050 }] },
+          "note": "Heraka was a monotheist reform of Zeliangrong religion, framed against the Baptist missionary push and the colonial revenue settlement. Jadonang declared himself the Messianic king to restore Naga sovereignty across British Manipur, Naga Hills, and the Cachar plains."
+        },
+        {
+          "kind": "moment",
+          "id": "gaidinliu-jadonang-hanging-1931",
+          "tooltip": "Cousin Jadonang hanged by the British at Imphal, 29 August 1931",
+          "summary": "Jadonang was tried for the ritual killing of four Manipuri traders and hanged at Imphal at twenty-six. Gaidinliu inherited the Heraka leadership at sixteen.",
+          "date": { "start": "1931-08-29", "end": "1931-08-29", "precision": "day", "approximate": false, "display": "29 August 1931" },
+          "location": { "name": "Imphal", "region": "Manipur State", "country": "IN",
+                        "points": [{ "lat": 24.8170, "lon": 93.9368 }] },
+          "note": "Colonial administration treated Jadonang's execution as the end of the movement. Gaidinliu pivoted from spiritual-political to outright armed: refusal of taxes to the Raj, sheltering of fugitives, an underground network across the three districts."
+        },
+        {
+          "kind": "moment",
+          "id": "gaidinliu-armed-rising-1932",
+          "tooltip": "Armed Heraka rising and capture by the British, October 1932",
+          "summary": "Armed Naga villages with daos and spears; ambushed Assam Rifles columns through 1932. Captured at Pulomi village 17 October; tried 1933, sentenced to life.",
+          "date": { "start": "1932-10-17", "end": "1933-12-31", "precision": "day", "approximate": false, "display": "Captured 17 October 1932; tried 1933" },
+          "location": { "name": "Pulomi village, North Cachar", "region": "Assam / Naga Hills", "country": "IN",
+                        "points": [{ "lat": 25.7000, "lon": 93.1000 }] },
+          "note": "Defended by Mr Mills (the Deputy Commissioner who knew her from earlier negotiations) as a juvenile under-eighteen. Sentence converted from death (asked by the Manipuri durbar) to transportation for life. Held at Guwahati, Shillong, Aizawl, and Tura jails over fifteen years."
+        },
+        {
+          "kind": "moment",
+          "id": "gaidinliu-nehru-rani-1937",
+          "tooltip": "Nehru visits her in Shillong jail, calls her 'Rani', 1937",
+          "summary": "Nehru visited her at Shillong jail in 1937 during a Congress north-east tour; he named her 'Rani' in the press and campaigned through the war for her release.",
+          "date": { "start": "1937-10-01", "end": "1937-10-31", "precision": "month", "approximate": true, "display": "October 1937" },
+          "location": { "name": "Shillong District Jail", "region": "Assam Province", "country": "IN",
+                        "points": [{ "lat": 25.5788, "lon": 91.8933 }] },
+          "note": "Nehru's column in The Hindustan Times made the name stick. The British refused release at his request multiple times; an attempted appeal to the Privy Council failed in 1939. The 'Rani' framing brought a remote north-east figure into the all-India nationalist consciousness."
+        },
+        {
+          "kind": "moment",
+          "id": "gaidinliu-release-1947",
+          "tooltip": "Released after Independence on Nehru's order, 14 October 1947",
+          "summary": "Released from Tura jail two months after Independence on Nehru's direct instruction, after fifteen years' imprisonment from age sixteen.",
+          "date": { "start": "1947-10-14", "end": "1947-10-14", "precision": "day", "approximate": false, "display": "14 October 1947" },
+          "location": { "name": "Tura jail, Garo Hills", "region": "Assam Province", "country": "IN",
+                        "points": [{ "lat": 25.5163, "lon": 90.2090 }] },
+          "note": "Returned to a Heraka movement that had splintered. The post-Independence years were spent navigating Naga sub-nationalist politics — opposed the Naga National Council's secessionist line under Phizo, advocated a Zeliangrong homeland within the Indian union. The political contradictions of frontier-region inclusion played out for the rest of her life."
+        },
+        {
+          "kind": "moment",
+          "id": "gaidinliu-zeliangrong-1960s",
+          "tooltip": "Zeliangrong homeland campaign and underground years, 1960s",
+          "summary": "Underground from 1960 in the Zeliangrong hills against both the Indian government and the NNC, demanding a Zeliangrong region across three NE states.",
+          "date": { "start": "1960-01-01", "end": "1966-12-31", "precision": "year", "approximate": true, "display": "1960–1966" },
+          "location": { "name": "Zeliangrong hills, Tamenglong", "region": "Manipur / Nagaland / Assam border", "country": "IN",
+                        "points": [{ "lat": 25.0000, "lon": 93.5000 }] },
+          "note": "Six years underground in the same hills as Phizo's Naga Federal Government and the Indian Army's counter-insurgency operations. Surrendered in 1966 to negotiate with the Government of India. The Zeliangrong autonomous district demand remains live; partial administrative recognition came through the Zeliangrong Heraka Association."
+        },
+        {
+          "kind": "moment",
+          "id": "gaidinliu-death-1993",
+          "tooltip": "Death at Lungkao village, Tamenglong, 17 February 1993",
+          "summary": "Returned to her birth village in 1991 and died there at seventy-eight. Padma Bhushan 1982; postage stamp 1996; rare NE figure on state honour lists.",
+          "date": { "start": "1993-02-17", "end": "1993-02-17", "precision": "day", "approximate": false, "display": "17 February 1993" },
+          "location": { "name": "Lungkao village, Tamenglong", "region": "Manipur State, India", "country": "IN",
+                        "points": [{ "lat": 24.9930, "lon": 93.5050 }] },
+          "note": "Birth-centenary commemorations in 2015 — including a Modi-government coin issue — were politically contested by Naga Christian groups who read Heraka as a Hindu-revivalist project. The contestation itself carries the unresolved religious-nationalist questions of north-eastern self-definition."
+        }
+      ],
+      "verified": true
+    }
+
+  ]
+}

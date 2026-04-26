@@ -1,0 +1,539 @@
+{
+  "campaign": "republic",
+  "scope": "Republic of India events from the founding decade through the late twentieth century — Constitution, accession crises, linguistic states, decolonisation, Green Revolution, Bangladesh War, Pokhran, Babri.",
+  "updated": "2026-04-26",
+  "events": [
+    {
+      "id": "first-kashmir-war-1947-1948",
+      "title": "First Kashmir War — Pakistan's tribal invasion and Indian intervention",
+      "tooltip": "Pakistani tribal invasion of Kashmir, 22 October 1947; war ends 1 January 1949",
+      "summary": "Pakistani tribal lashkars invaded J&K on 22 October 1947 — Hari Singh's accession to India followed two days later, triggering a 14-month Indo-Pak war.",
+      "detail": "At Independence the princely state of Jammu and Kashmir, ruled by the Dogra Maharaja Hari Singh, had a Muslim majority and a Hindu ruler — both Dominions courted accession. Hari Singh signed standstill agreements with both, attempting to remain independent. On 22 October 1947 an estimated 5,000 Pashtun tribal lashkars (principally Mahsuds, Wazirs, and Afridis) crossed from the North-West Frontier Province into Kashmir, supported logistically by the Pakistan Army under instructions from Defence Secretary Iskander Mirza and Major-General Akbar Khan; the operation was code-named 'Gulmarg'. The lashkars sacked Muzaffarabad and Baramulla (the Baramulla atrocities, including the killing of European nuns at the St Joseph's convent, slowed the advance and gave Srinagar critical time). On 26 October Hari Singh signed the Instrument of Accession to India; on 27 October the first 1 Sikh battalion was airlifted to Srinagar from Delhi under Lt-Col Dewan Ranjit Rai (killed in action that day at Pattan). The Indian Army held Srinagar, recovered Baramulla and Uri, then mounted offensives in Poonch, Naushera, Jhangar, and Zoji La (the November 1948 Zoji La armoured assault was the world's highest tank action at 11,500 ft). Pakistan inducted regular troops in May 1948. India referred the conflict to the United Nations Security Council on 1 January 1948; the UN-mediated ceasefire took effect 1 January 1949 along the line that became the Ceasefire Line (later, after Simla 1972, the Line of Control). The war left Kashmir partitioned: Pakistan held what it calls Azad Kashmir and Gilgit-Baltistan; India held the Valley, Jammu, and Ladakh.",
+      "date": {
+        "start": "1947-10-22",
+        "end":   "1949-01-01",
+        "precision": "day",
+        "approximate": false,
+        "display": "22 October 1947 – 1 January 1949"
+      },
+      "location": {
+        "type": "city",
+        "name": "Srinagar (capital defence); Muzaffarabad–Baramulla axis (invasion)",
+        "region": "Jammu and Kashmir",
+        "country": "IN",
+        "points": [{ "lat": 34.0837, "lon": 74.7973, "name": "Srinagar" }]
+      },
+      "era": "republic",
+      "category": ["military", "political", "colonial-administration"],
+      "figures": ["Hari Singh", "Sheikh Abdullah", "Jawaharlal Nehru", "Sardar Patel", "Akbar Khan", "Iskander Mirza", "K.M. Cariappa", "Dewan Ranjit Rai"],
+      "tags": ["rebellion"],
+      "caused_by": [
+        { "id": "independence-and-partition-1947", "gloss": "Partition's princely-state-accession framework left J&K's status unresolved at 14–15 August 1947; Pakistan's tribal invasion was the attempt to force the question by arms before Hari Singh could choose India." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Indo-Pakistani_war_of_1947%E2%80%931948", "label": "Wikipedia: Indo-Pakistani war of 1947–1948", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Shuja Nawaz, Crossed Swords: Pakistan, Its Army, and the Wars Within (2008)", "type": "scholarly" },
+        { "label": "C. Dasgupta, War and Diplomacy in Kashmir, 1947–48 (2002)", "type": "scholarly" },
+        { "label": "Akbar Khan, Raiders in Kashmir (1970, autobiographical)", "type": "primary" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "operation-polo-1948",
+      "title": "Operation Polo — annexation of Hyderabad",
+      "tooltip": "Indian Army annexes Hyderabad, 13–18 September 1948 (Operation Polo)",
+      "summary": "Five-day Indian Army operation against the Nizam's forces and the Razakar militia ended Hyderabad's bid for independence — Asaf Jahi rule formally ended.",
+      "detail": "After Independence, the Nizam of Hyderabad Mir Osman Ali Khan refused to accede to either India or Pakistan, declaring intent to remain a sovereign state. The Razakar militia under Qasim Razvi conducted communal violence against Hyderabad's Hindu majority through 1947–48; the Communist-led Telangana Rebellion ran a parallel armed campaign against the Nizam's dora landlords. On 13 September 1948 the Indian Army under Major-General J.N. Chaudhuri launched a five-front invasion code-named Operation Polo (officially Operation Caterpillar). The Hyderabad State Forces under El Edroos collapsed within five days; the Nizam ordered ceasefire on 17 September; formal surrender on 18 September. Casualties were comparatively light militarily, but communal violence in the operation's wake — documented in the Sundarlal Committee Report (1949, suppressed until 2013) — produced an estimated 27,000–40,000 Muslim deaths in retaliatory attacks. Hyderabad acceded to India; the Nizam was retained as Rajpramukh until 1956 and as titular ruler thereafter. Asaf Jahi rule, founded 1724, formally ended.",
+      "date": {
+        "start": "1948-09-13",
+        "end":   "1948-09-18",
+        "precision": "day",
+        "approximate": false,
+        "display": "13–18 September 1948"
+      },
+      "location": {
+        "type": "city",
+        "name": "Hyderabad",
+        "region": "Hyderabad State / Republic of India",
+        "country": "IN",
+        "points": [{ "lat": 17.3850, "lon": 78.4867, "name": "Hyderabad" }]
+      },
+      "era": "republic",
+      "category": ["military", "political", "colonial-administration"],
+      "figures": ["Mir Osman Ali Khan Asaf Jah VII", "Qasim Razvi", "Sardar Vallabhbhai Patel", "J.N. Chaudhuri", "El Edroos"],
+      "caused_by": [
+        { "id": "independence-and-partition-1947", "gloss": "The Nizam's refusal to accede to either dominion at Independence created the constitutional limbo Operation Polo resolved by force; Patel's accession-by-integration project required Hyderabad's absorption to be complete." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Annexation_of_Hyderabad", "label": "Wikipedia: Annexation of Hyderabad", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Lucien D. Benichou, From Autocracy to Integration: Political Developments in Hyderabad State 1938–1948 (2000)", "type": "scholarly" },
+        { "label": "A.G. Noorani, The Destruction of Hyderabad (2014)", "type": "scholarly" },
+        { "label": "Sundarlal Committee Report (1949; declassified 2013)", "type": "primary" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "constitution-adopted-1950",
+      "title": "Indian Constitution adopted",
+      "tooltip": "Constitution adopted 26 November 1949; in force 26 January 1950",
+      "summary": "The Constituent Assembly adopted the world's longest written constitution after three years of debate; came into force 26 January 1950, founding the Republic.",
+      "detail": "The Constituent Assembly of India, elected indirectly by the provincial assemblies in 1946, met for 165 days across three years (December 1946 – November 1949) to draft the Indian Constitution. The Drafting Committee was chaired by B.R. Ambedkar; its other members included Alladi Krishnaswami Iyer, K.M. Munshi, Mohammed Saadulla, B.L. Mitter, D.P. Khaitan, and N. Madhava Rau. The 395-article, 8-schedule original document — drawing on the Government of India Act 1935, the US Bill of Rights, the Irish Directive Principles, and the Westminster parliamentary frame — was the longest written constitution ever adopted by a sovereign state. Adopted by the Assembly on 26 November 1949 (Constitution Day), it came into force on 26 January 1950 (Republic Day, deliberately chosen to commemorate the 1929 Lahore Session's Purna Swaraj declaration). India became a sovereign democratic republic; the Governor-General office ended; Rajendra Prasad sworn in as first President. Among the most-amended constitutions in the world (105 amendments through 2024), it remains the foundational legal-political framework of the Indian state.",
+      "date": {
+        "start": "1949-11-26",
+        "end":   "1950-01-26",
+        "precision": "day",
+        "approximate": false,
+        "display": "Adopted 26 November 1949; in force 26 January 1950"
+      },
+      "location": {
+        "type": "city",
+        "name": "Constituent Assembly, New Delhi",
+        "region": "Republic of India",
+        "country": "IN",
+        "points": [{ "lat": 28.6172, "lon": 77.2082, "name": "Constituent Assembly Hall" }]
+      },
+      "era": "republic",
+      "category": ["political", "reform"],
+      "figures": ["B.R. Ambedkar", "Rajendra Prasad", "Jawaharlal Nehru", "Sardar Patel", "Alladi Krishnaswami Iyer", "K.M. Munshi"],
+      "caused_by": [
+        { "id": "independence-and-partition-1947", "gloss": "Independence created the Republic-in-waiting; the Constitution provided the institutional framework that converted dominion into sovereign state on 26 January 1950." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Constitution_of_India", "label": "Wikipedia: Constitution of India", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Granville Austin, The Indian Constitution: Cornerstone of a Nation (1966; rev. 1999)", "type": "scholarly" },
+        { "label": "Constituent Assembly Debates (12 vols., 1946–1950; published Lok Sabha Secretariat)", "type": "primary" },
+        { "label": "Madhav Khosla, India's Founding Moment: The Constitution of a Most Surprising Democracy (2020)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "article-370-kashmir-accession-1949",
+      "title": "Article 370 — Kashmir's accession bargain in the Constitution",
+      "tooltip": "Article 370 adopted 17 October 1949; J&K accession's constitutional bargain",
+      "summary": "Article 370 codified J&K's accession bargain — three subjects to the Union, autonomy retained — paralleled by Article 371's provisions for other states.",
+      "detail": "When the Constituent Assembly turned to incorporating Jammu and Kashmir, Hari Singh's October 1947 Instrument of Accession had ceded only three subjects to the Union — Defence, External Affairs, and Communications — pending a final settlement after the war and a promised plebiscite. Sheikh Abdullah, then heading the J&K Emergency Administration, negotiated with Nehru and Sardar Patel through 1949 the constitutional terms on which the state would join the Indian Union. The result was draft Article 306-A, adopted by the Constituent Assembly on 17 October 1949 and renumbered Article 370 in the final document. Its operative provisions: (i) Parliament's legislative competence over J&K limited to the three subjects of accession plus matters declared concurrent by Presidential Order; (ii) extension of any other Union law required the concurrence of the J&K Constituent Assembly (later, after that body dissolved in 1956, the J&K state government); (iii) the article was placed in Part XXI ('Temporary, Transitional and Special Provisions') reflecting its negotiated, settlement-pending status. Article 370 was structurally parallel to Article 371 — adopted alongside it and progressively expanded — which carried analogous special provisions for Maharashtra, Gujarat, Nagaland, Assam, Manipur, Andhra Pradesh, Sikkim, Mizoram, Arunachal Pradesh, Goa, and Karnataka, granting each varying tribal-protection, land-tenure, and autonomous-council guarantees. Article 370 itself was substantively hollowed out by successive Presidential Orders from 1954 onward extending most Union laws to J&K; it was abrogated by Presidential Order C.O. 272 on 5 August 2019, with J&K's statehood downgraded to two Union Territories.",
+      "date": {
+        "start": "1949-10-17",
+        "end":   "1949-10-17",
+        "precision": "day",
+        "approximate": false,
+        "display": "Adopted 17 October 1949"
+      },
+      "location": {
+        "type": "city",
+        "name": "Constituent Assembly, New Delhi",
+        "region": "Republic of India",
+        "country": "IN",
+        "points": [{ "lat": 28.6172, "lon": 77.2082, "name": "Constituent Assembly Hall" }]
+      },
+      "era": "republic",
+      "category": ["political", "reform"],
+      "figures": ["Sheikh Abdullah", "Jawaharlal Nehru", "Sardar Patel", "N. Gopalaswami Ayyangar", "B.R. Ambedkar", "Hari Singh"],
+      "caused_by": [
+        { "id": "first-kashmir-war-1947-1948", "gloss": "Hari Singh's Instrument of Accession ceded only three subjects to the Union under wartime conditions; Article 370 codified that limited-cession bargain into the Constitution pending a permanent settlement." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Article_370_of_the_Constitution_of_India", "label": "Wikipedia: Article 370", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "A.G. Noorani, Article 370: A Constitutional History of Jammu and Kashmir (2011)", "type": "scholarly" },
+        { "label": "Constituent Assembly Debates, vol. X (17 October 1949)", "type": "primary" },
+        { "label": "Sumantra Bose, Kashmir: Roots of Conflict, Paths to Peace (2003)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "states-reorganisation-1956",
+      "title": "States Reorganisation Act — linguistic states",
+      "tooltip": "States Reorganisation Act 1 November 1956; linguistic-states framework",
+      "summary": "Potti Sriramulu's 1952 fast-unto-death for Andhra triggered the States Reorganisation Commission; the 1956 Act redrew India's map along linguistic lines.",
+      "detail": "Indian states at independence inherited the British provincial-and-princely-state geography — Madras Presidency mixed Telugu, Tamil, Kannada, and Malayalam speakers; Bombay mixed Marathi and Gujarati. Telugu activists demanded a separate Andhra state; the Congress government deferred. On 19 October 1952 the Gandhian Telugu activist Potti Sriramulu began an indefinite fast at Madras; he died on the night of 15 December 1952 after 58 days. Riots across the Telugu region forced Nehru to announce Andhra State within four days (formed 1 October 1953 from Madras Presidency's Telugu districts). The States Reorganisation Commission (Fazl Ali, K.M. Panikkar, H.N. Kunzru) was constituted in December 1953; its 1955 report became the basis for the States Reorganisation Act, passed by Parliament August 1956 and effective 1 November 1956. The Act consolidated India into 14 states and 6 union territories along principally linguistic lines — Andhra Pradesh, Karnataka (then Mysore), Kerala, Maharashtra and Gujarat (separated 1960), and the rest. The linguistic-states framework remains the structural basis of Indian federalism.",
+      "date": {
+        "start": "1952-12-15",
+        "end":   "1956-11-01",
+        "precision": "day",
+        "approximate": false,
+        "display": "Sriramulu died 15 Dec 1952; Act effective 1 Nov 1956"
+      },
+      "location": {
+        "type": "city",
+        "name": "Madras (Sriramulu's fast); Andhra Pradesh formed",
+        "region": "Republic of India",
+        "country": "IN",
+        "points": [{ "lat": 13.0827, "lon": 80.2707, "name": "Madras" }]
+      },
+      "era": "republic",
+      "category": ["political", "reform", "colonial-administration"],
+      "figures": ["Potti Sriramulu", "Jawaharlal Nehru", "Fazl Ali", "K.M. Panikkar", "H.N. Kunzru"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/States_Reorganisation_Act,_1956", "label": "Wikipedia: States Reorganisation Act, 1956", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Report of the States Reorganisation Commission (Government of India, 1955)", "type": "primary" },
+        { "label": "Ramachandra Guha, India After Gandhi (2007), ch. 9", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "operation-vijay-goa-1961",
+      "title": "Operation Vijay — annexation of Goa",
+      "tooltip": "Indian Army annexes Goa, Daman, and Diu, 17–19 December 1961",
+      "summary": "Forty-eight-hour Indian Army operation ended four and a half centuries of Portuguese rule on the subcontinent — Goa, Daman, and Diu absorbed.",
+      "detail": "Portugal had held Goa since Afonso de Albuquerque's 1510 conquest — 451 years. After Independence Nehru initially pursued diplomatic negotiation; Salazar's regime in Lisbon refused to discuss decolonisation, claiming Goa as Portuguese territory. Frustrated by the failed diplomatic track, the post-Sino-Indian-war shift in Indian foreign policy, and ongoing satyagraha movements (Goan Liberation Council, the August 1955 satyagraha that produced 22 dead at the Patradevi border), Nehru authorised Operation Vijay on 17 December 1961. Major-General K.P. Candeth led a three-pronged Indian Army-Air Force-Navy assault. Portuguese resistance under Governor-General Vassalo e Silva collapsed within 36 hours; surrender at Vasco da Gama on 19 December 1961 (the Indian Navy's INS Mysore took the surrender). Goa became a Union Territory (along with Daman and Diu); Goan statehood followed in 1987 (Daman & Diu remained UT). Diplomatic recognition by Portugal came only after the 1974 Carnation Revolution; the Treaty of Lisbon (December 1974) finalised the territorial transfer.",
+      "date": {
+        "start": "1961-12-17",
+        "end":   "1961-12-19",
+        "precision": "day",
+        "approximate": false,
+        "display": "17–19 December 1961"
+      },
+      "location": {
+        "type": "city",
+        "name": "Panaji (Goa)",
+        "region": "Goa, Daman, and Diu",
+        "country": "IN",
+        "points": [{ "lat": 15.4909, "lon": 73.8278, "name": "Panaji" }]
+      },
+      "era": "republic",
+      "category": ["military", "political", "colonial-administration"],
+      "figures": ["Jawaharlal Nehru", "K.P. Candeth", "Vassalo e Silva", "António de Oliveira Salazar"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Annexation_of_Goa", "label": "Wikipedia: Annexation of Goa", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "P.S. Lele, Dadra and Nagar Haveli: Past and Present (1987)", "type": "scholarly" },
+        { "label": "Arthur G. Rubinoff, India's Use of Force in Goa (1971)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "sino-indian-war-1962",
+      "title": "Sino-Indian War",
+      "tooltip": "Sino-Indian War, 20 October – 21 November 1962; NEFA and Aksai Chin",
+      "summary": "PLA offensives across the McMahon Line in NEFA and across the Aksai Chin in Ladakh — Indian forces routed; PRC declared unilateral ceasefire after 32 days.",
+      "detail": "The boundary dispute between India and the People's Republic of China centred on two sectors: the eastern McMahon Line (the 1914 Simla Convention boundary along the Himalayan crest, which the PRC rejected) bordering the North-East Frontier Agency, and the western Aksai Chin plateau in Ladakh (across which the PRC built the G219 Xinjiang–Tibet Highway 1956–57, completed before India became aware of it). The 1959 Tibetan Uprising and the Dalai Lama's flight to India sharpened tensions; through 1960–62 patrol-line confrontations escalated under India's 'Forward Policy' (placing posts ahead of suspected Chinese positions). On 20 October 1962 the PLA launched coordinated offensives in both sectors. In NEFA the 7 Infantry Brigade collapsed at the Namka Chu; Tawang fell on 24 October; the second-phase 14 November offensive carried Walong, Sela, and Bomdila, and PLA forces reached the foothills above Tezpur. In Ladakh the Galwan, Chushul, and Rezang La sectors saw heavy fighting (the 13 Kumaon's Charlie Company under Major Shaitan Singh was annihilated almost to a man at Rezang La on 18 November holding the Chushul approach). Total Indian casualties: ~3,250 dead, ~3,968 captured. On 21 November 1962 the PRC declared a unilateral ceasefire and withdrew to 20 km behind the November 1959 line in NEFA, retaining Aksai Chin. The Henderson Brooks–Bhagat Report (1963; still officially classified) attributed the defeat to political-military mismatches, intelligence failures, and equipment-and-acclimatisation deficits. Krishna Menon resigned as Defence Minister; the war catalysed Indian military modernisation, the post-1964 nuclear weapons decision, and the realignment of non-aligned foreign policy.",
+      "date": {
+        "start": "1962-10-20",
+        "end":   "1962-11-21",
+        "precision": "day",
+        "approximate": false,
+        "display": "20 October – 21 November 1962"
+      },
+      "location": {
+        "type": "city",
+        "name": "Tawang and Walong (NEFA); Chushul and Rezang La (Ladakh)",
+        "region": "NEFA / Ladakh",
+        "country": "IN",
+        "points": [{ "lat": 27.5860, "lon": 91.8580, "name": "Tawang" }]
+      },
+      "era": "republic",
+      "category": ["military", "political"],
+      "figures": ["Jawaharlal Nehru", "V.K. Krishna Menon", "B.M. Kaul", "Shaitan Singh", "Mao Zedong", "Zhou Enlai"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Sino-Indian_War", "label": "Wikipedia: Sino-Indian War", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Neville Maxwell, India's China War (1970)", "type": "scholarly" },
+        { "label": "Bertil Lintner, China's India War: Collision Course on the Roof of the World (2018)", "type": "scholarly" },
+        { "label": "Henderson Brooks–Bhagat Report (1963; classified, partial leaks 2014)", "type": "primary" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "indo-pak-war-1965",
+      "title": "Second Indo-Pakistani War",
+      "tooltip": "Second Indo-Pakistani War, August–September 1965; ended by Tashkent Declaration",
+      "summary": "Pakistan's Operation Gibraltar in Kashmir escalated to full war on the Punjab plains — armoured battle at Asal Uttar; UN ceasefire; Tashkent settlement 1966.",
+      "detail": "Encouraged by India's 1962 reverses against China and by perceived discontent in the Kashmir Valley, the Pakistan Army under Field Marshal Ayub Khan launched Operation Gibraltar in early August 1965 — infiltrating ~30,000 irregulars across the Ceasefire Line into Indian Kashmir to spark a popular rising. The locals largely turned the infiltrators in to the Indian authorities; Gibraltar failed. India responded with cross-CFL operations in the Haji Pir bulge (captured 28 August). On 1 September Pakistan launched Operation Grand Slam — an armoured-infantry thrust under Maj-Gen Akhtar Hussain Malik aimed at severing Akhnoor and cutting off Kashmir from the Indian heartland. India escalated on 6 September by opening a second front across the international boundary into Punjab — the I Corps drive towards Lahore (XI Corps) and the Sialkot sector (I Corps). The 8–10 September tank battle at Asal Uttar in the Khem Karan sector was the war's defining engagement: Pakistan's 1st Armoured Division (Patton tanks, the spearhead of US-supplied armour) was halted and largely destroyed by India's 4 Mountain Division and the 3 Cavalry's Centurions in flooded sugarcane fields. The 8 September Battle of Chawinda in the Sialkot sector was the war's largest tank engagement (~400 tanks). The UN Security Council Resolution 211 of 20 September called for ceasefire; both sides accepted on 23 September. Soviet Premier Alexei Kosygin mediated the Tashkent Declaration of 10 January 1966, restoring pre-war positions. Lal Bahadur Shastri died of a heart attack at Tashkent the night of the signing.",
+      "date": {
+        "start": "1965-08-05",
+        "end":   "1965-09-23",
+        "precision": "day",
+        "approximate": false,
+        "display": "5 August – 23 September 1965 (Tashkent 10 January 1966)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Khem Karan / Asal Uttar (Punjab); Chawinda (Sialkot)",
+        "region": "Punjab / Kashmir",
+        "country": "IN",
+        "points": [{ "lat": 31.1483, "lon": 74.5740, "name": "Khem Karan" }]
+      },
+      "era": "republic",
+      "category": ["military", "political"],
+      "figures": ["Lal Bahadur Shastri", "Ayub Khan", "J.N. Chaudhuri", "Harbaksh Singh", "Akhtar Hussain Malik", "Alexei Kosygin"],
+      "caused_by": [
+        { "id": "first-kashmir-war-1947-1948", "gloss": "The unresolved Kashmir territorial settlement of 1947–48 — frozen along the Ceasefire Line — was the strategic objective Pakistan attempted to revisit by force in Operation Gibraltar." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Indo-Pakistani_war_of_1965", "label": "Wikipedia: Indo-Pakistani war of 1965", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Farooq Bajwa, From Kutch to Tashkent: The Indo-Pakistan War of 1965 (2013)", "type": "scholarly" },
+        { "label": "Harbaksh Singh, War Despatches: Indo-Pak Conflict 1965 (1991)", "type": "primary" },
+        { "label": "Shuja Nawaz, Crossed Swords (2008), chs. on 1965", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "green-revolution-1965-1970",
+      "title": "Green Revolution",
+      "tooltip": "Green Revolution from 1965; Swaminathan, IR8 rice, Punjab wheat-bowl",
+      "summary": "High-yielding wheat and IR8 rice from 1965 transformed Indian agriculture — Punjab became the wheat-bowl, food self-sufficiency by the mid-1970s.",
+      "detail": "The Green Revolution in India was a deliberate state-and-philanthropy programme launched after the 1965 and 1966 monsoon failures and the consequent dependence on US PL-480 wheat imports (the 'ship-to-mouth' food crisis). M.S. Swaminathan, then at the Indian Agricultural Research Institute, partnered with Norman Borlaug (Mexico-based wheat breeder, 1970 Nobel Peace Prize) to introduce semi-dwarf high-yielding wheat varieties (Lerma Rojo 64, Sonora 64) from 1965, and IR8 rice (the 'miracle rice' from IRRI Philippines) from 1966. The package — fertiliser-responsive cultivars + tube-well irrigation + chemical fertilisers + price support via the Food Corporation of India (1965) and minimum support prices — concentrated in Punjab, Haryana, and western UP, transforming those regions into India's wheat-bowl. National wheat production rose from 12 million tonnes (1965) to 23 million (1972) to 35 million (1980); food grain self-sufficiency by the mid-1970s ended the long PL-480 dependency. Long-term consequences include groundwater depletion, soil exhaustion, the Punjab agrarian crisis, and persistent farmer suicides — contemporary critiques (Vandana Shiva, others) frame the Revolution as ecologically and socially costly.",
+      "date": {
+        "start": "1965",
+        "end":   "1975",
+        "precision": "year",
+        "approximate": true,
+        "display": "1965 onwards (high-yielding-variety package; food self-sufficiency by mid-1970s)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Ludhiana, Punjab (PAU and the wheat-bowl epicentre)",
+        "region": "Punjab",
+        "country": "IN",
+        "points": [{ "lat": 30.9000, "lon": 75.8573, "name": "Ludhiana" }]
+      },
+      "era": "republic",
+      "category": ["economic", "political", "scientific"],
+      "figures": ["M.S. Swaminathan", "Norman Borlaug", "C. Subramaniam", "Lal Bahadur Shastri", "Indira Gandhi"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Green_Revolution_in_India", "label": "Wikipedia: Green Revolution in India", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "M.S. Swaminathan, From Green to Evergreen Revolution (2010)", "type": "primary" },
+        { "label": "Vandana Shiva, The Violence of the Green Revolution (1991)", "type": "scholarly" },
+        { "label": "Francine R. Frankel, India's Green Revolution: Economic Gains and Political Costs (1971)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "bangladesh-liberation-war-1971",
+      "title": "Bangladesh Liberation War",
+      "tooltip": "Bangladesh Liberation War, March–December 1971; Pakistani surrender at Dhaka",
+      "summary": "Operation Searchlight's suppression of East Pakistan triggered ten million refugees into India, Mukti Bahini insurgency, and the December 1971 Indo-Pak war.",
+      "detail": "Pakistan's military government under Yahya Khan launched Operation Searchlight on 25 March 1971 to suppress the Awami League — winner of the December 1970 Pakistan general election under Sheikh Mujibur Rahman. The campaign's atrocities (estimates 300,000 to 3 million killed) drove approximately 10 million refugees into India by November. Indira Gandhi's government armed the Mukti Bahini insurgency through 1971; after Pakistan's pre-emptive air strikes on 3 December, India entered the war directly. Field Marshal Sam Manekshaw's three-front campaign (Eastern, Western, naval blockade) ended on 16 December 1971 with Lt-Gen A.A.K. Niazi's surrender of 93,000 Pakistani troops at Dhaka — the largest military surrender since WWII. The Republic of Bangladesh was proclaimed; Mujib released from West Pakistani imprisonment in January 1972 returned as its founding prime minister. The 1972 Simla Agreement formalised the post-war settlement.",
+      "date": {
+        "start": "1971-03-25",
+        "end":   "1971-12-16",
+        "precision": "day",
+        "approximate": false,
+        "display": "25 March – 16 December 1971"
+      },
+      "location": {
+        "type": "city",
+        "name": "Dhaka (Pakistani surrender site)",
+        "region": "East Pakistan / Bangladesh",
+        "country": "BD",
+        "points": [{ "lat": 23.8103, "lon": 90.4125, "name": "Dhaka" }]
+      },
+      "era": "republic",
+      "category": ["military", "political"],
+      "figures": ["Indira Gandhi", "Sheikh Mujibur Rahman", "Sam Manekshaw", "Yahya Khan", "A.A.K. Niazi", "J.S. Aurora"],
+      "tags": ["rebellion"],
+      "caused_by": [
+        { "id": "independence-and-partition-1947", "gloss": "The 1947 partition's two-wing Pakistan was structurally unstable; the East-Pakistan-becomes-Bangladesh outcome of 1971 is the long unwinding of the Two-Nation Theory's geographic incoherence." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Bangladesh_Liberation_War", "label": "Wikipedia: Bangladesh Liberation War", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Srinath Raghavan, 1971: A Global History of the Creation of Bangladesh (2013)", "type": "scholarly" },
+        { "label": "Sarmila Bose, Dead Reckoning: Memories of the 1971 Bangladesh War (2011)", "type": "scholarly" },
+        { "label": "Gary J. Bass, The Blood Telegram: Nixon, Kissinger, and a Forgotten Genocide (2013)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "pokhran-i-smiling-buddha-1974",
+      "title": "Pokhran-I — Smiling Buddha nuclear test",
+      "tooltip": "India's first nuclear test, Pokhran (Rajasthan), 18 May 1974",
+      "summary": "India detonated its first nuclear device at Pokhran on 18 May 1974 — code-named Smiling Buddha; declared 'peaceful nuclear explosion' to limit sanctions.",
+      "detail": "India's nuclear weapons programme — initiated under Homi Bhabha in the 1950s, accelerated after the 1962 Sino-Indian war and China's 1964 nuclear test, and approved by Indira Gandhi in 1972 — culminated in the underground detonation of a plutonium device at Pokhran in the Thar desert, Rajasthan, at 8:05 AM IST on 18 May 1974. Yield estimated at 8–12 kilotons (Indian official) or 4–6 kt (Western seismic estimates). The test was framed as a 'Peaceful Nuclear Explosion' (PNE) to limit international sanctions — Indira Gandhi's choice of the Buddha-day code-name 'Smiling Buddha' and the PNE framing were deliberate diplomatic ambiguity. Canada (which had supplied the CIRUS reactor whose plutonium was used) and the United States imposed nuclear-cooperation sanctions; the international Nuclear Suppliers Group was formed in 1975 specifically in response to Pokhran-I. India remained outside the NPT framework. The next test series — Pokhran-II in May 1998 under Vajpayee — would be unambiguous weapons tests, ending the PNE ambiguity.",
+      "date": {
+        "start": "1974-05-18",
+        "end":   "1974-05-18",
+        "precision": "day",
+        "approximate": false,
+        "display": "18 May 1974 (08:05 IST)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Pokhran, Rajasthan",
+        "region": "Thar desert",
+        "country": "IN",
+        "points": [{ "lat": 27.0939, "lon": 71.9230, "name": "Pokhran" }]
+      },
+      "era": "republic",
+      "category": ["scientific", "military", "political"],
+      "figures": ["Indira Gandhi", "Raja Ramanna", "Homi Sethna", "P.K. Iyengar", "Homi Bhabha"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Smiling_Buddha", "label": "Wikipedia: Smiling Buddha", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Raj Chengappa, Weapons of Peace: The Secret Story of India's Quest to be a Nuclear Power (2000)", "type": "scholarly" },
+        { "label": "George Perkovich, India's Nuclear Bomb: The Impact on Global Proliferation (1999)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "emergency-1975-1977",
+      "title": "The Emergency",
+      "tooltip": "Emergency declared 25 June 1975; lifted, elections called January 1977",
+      "summary": "Indira proclaimed Emergency after the Allahabad verdict, JP's mutiny call, and a paralysing rail strike — and lifted it 21 months later for elections she lost.",
+      "detail": "By early 1975 the Indira Gandhi government faced a convergence of crises that no Indian PM had managed before. The 1973–74 oil shock had pushed inflation past 30%; the May 1974 All-India Railway Strike under George Fernandes (1.7 million workers, 20 days) had paralysed the economy and ended only after mass arrests; the Navnirman agitation in Gujarat (1974) had brought down the state government; the Bihar Movement under Jayaprakash Narayan had escalated from anti-corruption protest to a 25 June 1975 Ramlila Maidan rally where JP called on the army, police, and bureaucracy to refuse 'illegal and immoral orders' from the central government — read by the PMO as a call to mutiny. On 12 June 1975 the Allahabad High Court (Justice Jagmohanlal Sinha) had set aside Indira's 1971 Rae Bareli election on minor electoral-malpractice grounds, disqualifying her from Parliament for six years. On the night of 25–26 June 1975, citing 'internal disturbance' under Article 352, President Fakhruddin Ali Ahmed proclaimed Emergency on Indira's advice. Civil liberties were suspended; ~110,000 detained without trial under MISA (JP, Morarji Desai, Vajpayee, Advani, Fernandes, RSS leaders); the press was censored; the 42nd Amendment radically expanded central power. Sanjay Gandhi's extra-constitutional power produced the slum demolitions and the coercive sterilisation drive (~6.2 million procedures in 1976, with documented coercion). And then — in a decision without parallel in 20th-century authoritarian history — Indira lifted the Emergency on 21 March 1977 and called free elections, which she lost decisively to the Janata coalition. She could have continued indefinitely; she chose not to. The Shah Commission (1978) documented the abuses; Indira returned to power in 1980. The Emergency remains the constitutional caesura of the Republic — and the standard against which all subsequent democratic backsliding is measured.",
+      "date": {
+        "start": "1975-06-25",
+        "end":   "1977-03-21",
+        "precision": "day",
+        "approximate": false,
+        "display": "25 June 1975 – 21 March 1977"
+      },
+      "location": {
+        "type": "city",
+        "name": "New Delhi (proclamation); nationwide enforcement",
+        "region": "Republic of India",
+        "country": "IN",
+        "points": [{ "lat": 28.6139, "lon": 77.2090, "name": "New Delhi" }]
+      },
+      "era": "republic",
+      "category": ["political", "reform"],
+      "figures": ["Indira Gandhi", "Sanjay Gandhi", "Jayaprakash Narayan", "George Fernandes", "Fakhruddin Ali Ahmed", "Morarji Desai", "Siddhartha Shankar Ray", "Jagmohanlal Sinha"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/The_Emergency_(India)", "label": "Wikipedia: The Emergency (India)", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Gyan Prakash, Emergency Chronicles: Indira Gandhi and Democracy's Turning Point (2018)", "type": "scholarly" },
+        { "label": "Shah Commission of Inquiry — Interim and Final Reports (1978)", "type": "primary" },
+        { "label": "Bipan Chandra, In the Name of Democracy: JP Movement and the Emergency (2003)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "mandal-commission-1990",
+      "title": "Mandal Commission implementation",
+      "tooltip": "V.P. Singh implements Mandal — 27% OBC reservations, 7 August 1990",
+      "summary": "V.P. Singh's announcement of 27% central-government OBC reservations triggered upper-caste anti-Mandal agitation and Rajiv Goswami's self-immolation.",
+      "detail": "The Second Backward Classes Commission, constituted 1979 under former Bihar CM B.P. Mandal, had submitted its report in December 1980 recommending 27% reservation in central government jobs and public-sector education for Other Backward Classes (OBCs, identified across 3,743 castes constituting an estimated 52% of the population). The Indira and Rajiv Gandhi governments shelved it for a decade. Prime Minister V.P. Singh of the National Front coalition announced implementation on 7 August 1990 — partly to outflank his Janata Dal rival Devi Lal, partly as a long-held conviction. Upper-caste, mostly Brahmin and Bania, college-student protests erupted across north India within days. On 19 September 1990 Delhi University student Rajiv Goswami set himself on fire outside Deshbandhu College; he survived (died 2004 of related complications) but his act triggered an estimated 200+ self-immolation attempts, of which around 60 were fatal. The anti-Mandal agitation crippled north Indian universities through the autumn of 1990. The Supreme Court's 1992 Indra Sawhney verdict upheld the 27% OBC quota subject to a 'creamy layer' exclusion and a total-reservations cap of 50%. Politically, Mandal restructured Indian electoral mobilisation around caste — the rise of Mulayam Singh Yadav, Lalu Prasad Yadav, Mayawati, and the post-Mandal OBC and Dalit parties traces to this moment. The BJP's parallel Mandir mobilisation (Advani's Rath Yatra, September 1990; arrest at Samastipur 23 October 1990; collapse of V.P. Singh's government 7 November 1990) was the explicit Hindu-consolidation counter to caste-fragmentation.",
+      "date": {
+        "start": "1990-08-07",
+        "end":   "1990-11-07",
+        "precision": "day",
+        "approximate": false,
+        "display": "Announced 7 August 1990; agitation through autumn"
+      },
+      "location": {
+        "type": "city",
+        "name": "New Delhi (announcement); Delhi University (self-immolation)",
+        "region": "Republic of India",
+        "country": "IN",
+        "points": [{ "lat": 28.6139, "lon": 77.2090, "name": "New Delhi" }]
+      },
+      "era": "republic",
+      "category": ["political", "reform"],
+      "figures": ["V.P. Singh", "B.P. Mandal", "Rajiv Goswami", "Devi Lal", "L.K. Advani", "Mulayam Singh Yadav"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Mandal_Commission", "label": "Wikipedia: Mandal Commission", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Christophe Jaffrelot, India's Silent Revolution: The Rise of the Lower Castes in North India (2003)", "type": "scholarly" },
+        { "label": "Report of the Backward Classes Commission (Mandal Report, Government of India, 1980)", "type": "primary" },
+        { "label": "Indra Sawhney v. Union of India, AIR 1993 SC 477 (1992)", "type": "primary" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "advani-rath-yatra-1990",
+      "title": "Advani's Ram Rath Yatra",
+      "tooltip": "L.K. Advani's Somnath–Ayodhya Rath Yatra, 25 September – 23 October 1990",
+      "summary": "Advani's motorised rath from Somnath toward Ayodhya — arrested at Samastipur by Lalu, collapsing V.P. Singh's government two weeks later.",
+      "detail": "BJP president L.K. Advani conceived the Ram Rath Yatra as the mass-mobilisation arm of the VHP-led Ram Janmabhoomi movement, deliberately timed to counter V.P. Singh's 7 August 1990 Mandal Commission announcement (the Mandir-versus-Mandal axis the BJP would ride for the next decade). The yatra began at the Somnath temple in Gujarat on 25 September 1990 in a Toyota DCM truck retrofitted as a chariot, with planned terminus at Ayodhya on 30 October 1990 in time for the kar seva. Pramod Mahajan organised the logistics. The yatra passed through Maharashtra, Andhra Pradesh, Karnataka, Madhya Pradesh, and Uttar Pradesh, drawing crowds estimated at hundreds of thousands at major halts and triggering communal riots in its wake (Hyderabad, Khambhat, Aurangabad, and elsewhere — 564 dead nationally between September and November 1990 per Home Ministry figures). On 23 October 1990 the Bihar government under Chief Minister Lalu Prasad Yadav arrested Advani at Samastipur under the National Security Act. The BJP withdrew its outside support to V.P. Singh's National Front coalition; the Singh government lost a confidence vote on 7 November 1990 and resigned. The arrested kar seva nonetheless reached Ayodhya — a 30 October 1990 confrontation at the Babri Masjid saw UP police firing on kar sevaks (16 official deaths; the figure is contested upwards). The Mulayam Singh Yadav UP government's order to fire and the BJP's subsequent national mobilisation were the direct organisational rehearsal for the 6 December 1992 demolition.",
+      "date": {
+        "start": "1990-09-25",
+        "end":   "1990-11-07",
+        "precision": "day",
+        "approximate": false,
+        "display": "25 September – 23 October 1990 (V.P. Singh government fell 7 November)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Samastipur, Bihar (arrest site); Somnath (start) – Ayodhya (intended end)",
+        "region": "Bihar (arrest); cross-country yatra",
+        "country": "IN",
+        "points": [{ "lat": 25.8629, "lon": 85.7831, "name": "Samastipur" }]
+      },
+      "era": "republic",
+      "category": ["political", "religious"],
+      "figures": ["L.K. Advani", "V.P. Singh", "Lalu Prasad Yadav", "Mulayam Singh Yadav", "Pramod Mahajan", "Ashok Singhal"],
+      "caused_by": [
+        { "id": "mandal-commission-1990", "gloss": "Advani's yatra was conceived as the Hindu-consolidation answer to V.P. Singh's 7 August 1990 OBC-quota announcement — the Mandir mobilisation deliberately positioned to override the Mandal-driven caste fragmentation of the Hindu vote." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Ram_Rath_Yatra", "label": "Wikipedia: Ram Rath Yatra", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Christophe Jaffrelot, The Hindu Nationalist Movement and Indian Politics (1996)", "type": "scholarly" },
+        { "label": "L.K. Advani, My Country My Life (2008), chs. on the Yatra", "type": "primary" },
+        { "label": "Manoj Mitta and H.S. Phoolka, When a Tree Shook Delhi (2007) and contemporary Frontline coverage", "type": "primary" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "babri-masjid-demolition-1992",
+      "title": "Babri Masjid demolition",
+      "tooltip": "Kar sevaks demolish the Babri Masjid at Ayodhya, 6 December 1992",
+      "summary": "An estimated 150,000 kar sevaks demolished the 16th-century Babri Masjid at Ayodhya in five hours — communal riots killed ~2,000 across India that followed.",
+      "detail": "The Ram Janmabhoomi movement, organised by the VHP–BJP–RSS Sangh Parivar from the early 1980s, claimed the Babri Masjid (built 1528, attributed to Mir Baqi under Babur) stood on the birthplace of the deity Ram. L.K. Advani's Somnath-to-Ayodhya Rath Yatra in September–October 1990 had been arrested at Samastipur, Bihar, by Lalu Prasad Yadav. On 6 December 1992 a kar seva organised at Ayodhya, attended by an estimated 150,000 supporters, breached police cordons and demolished the mosque in approximately five hours under the eyes of the Kalyan Singh BJP state government (which had assured the Supreme Court no demolition would occur). The Liberhan Commission of Inquiry (constituted ten days after the demolition; reported 2009) named 68 individuals as responsible. Communal riots across India in December 1992 – January 1993 killed approximately 2,000; the March 1993 Bombay serial blasts (257 killed) were the underworld response. The Allahabad High Court's 2010 verdict trifurcated the site; the Supreme Court's 2019 verdict (M Siddiq v. Mahant Suresh Das) reversed that and awarded the entire 2.77-acre site to the Ram Janmabhoomi trust — while expressly observing that the Archaeological Survey of India had found no evidence of a demolished Hindu temple directly underlying the mosque, and that the 1992 demolition itself was an 'egregious violation of the rule of law'. A separate 5-acre plot in Ayodhya was directed to be allocated to the Sunni Waqf Board.",
+      "date": {
+        "start": "1992-12-06",
+        "end":   "1992-12-06",
+        "precision": "day",
+        "approximate": false,
+        "display": "6 December 1992"
+      },
+      "location": {
+        "type": "city",
+        "name": "Ayodhya, Uttar Pradesh",
+        "region": "Republic of India",
+        "country": "IN",
+        "points": [{ "lat": 26.7951, "lon": 82.1943, "name": "Ayodhya" }]
+      },
+      "era": "republic",
+      "category": ["political", "religious"],
+      "figures": ["L.K. Advani", "Murli Manohar Joshi", "Uma Bharti", "Kalyan Singh", "P.V. Narasimha Rao", "Ashok Singhal"],
+      "caused_by": [
+        { "id": "advani-rath-yatra-1990", "gloss": "The Advani Rath Yatra was the explicit organisational rehearsal — the Sangh Parivar's coordinated mass-mobilisation logistics test, the BJP's withdrawal of support to V.P. Singh's government over Mandal, and the 30 October 1990 Ayodhya kar seva that the December 1992 demolition completed." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Demolition_of_the_Babri_Masjid", "label": "Wikipedia: Demolition of the Babri Masjid", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Christophe Jaffrelot, The Hindu Nationalist Movement and Indian Politics (1996)", "type": "scholarly" },
+        { "label": "Liberhan Commission Report (constituted 1992; presented 2009)", "type": "primary" },
+        { "label": "P.V. Narasimha Rao, Ayodhya: 6 December 1992 (posthumous, 2006)", "type": "primary" }
+      ],
+      "verified": true
+    }
+  ]
+}

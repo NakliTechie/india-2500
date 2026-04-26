@@ -86,7 +86,7 @@
 
   /* ---------- Layout ---------- */
   main {
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
     padding: 24px 24px 48px;
   }
@@ -135,9 +135,26 @@
 
   /* ---------- Threads + People + Collections + Places + Polities bars ---------- */
   .threads-bar, .people-bar, .collections-bar, .places-bar, .polities-bar {
-    display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
-    margin-bottom: 12px;
+    display: flex; flex-wrap: wrap; gap: 6px; align-items: center;
+    margin-bottom: 0;
   }
+  /* Left rail (desktop): each section labelled, chips wrap inside the column */
+  .left-rail {
+    display: flex; flex-direction: column; gap: 18px;
+    min-width: 0;
+  }
+  .left-rail .rail-section { display: flex; flex-direction: column; gap: 8px; }
+  .left-rail .rail-section-label {
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px;
+    color: var(--cream-faint);
+  }
+  /* The bars already render a leading <span class="label"> with the section name;
+     the rail provides its own uppercase heading, so suppress the inline one. */
+  .left-rail .threads-bar > .label,
+  .left-rail .people-bar > .label,
+  .left-rail .collections-bar > .label,
+  .left-rail .places-bar > .label,
+  .left-rail .polities-bar > .label { display: none; }
   .pill {
     font-size: 12px;
     padding: 5px 12px;
@@ -852,7 +869,7 @@
     font-size: 13px; color: var(--cream-muted); margin: 0; line-height: 1.5;
   }
 
-  /* ---------- Two-column layout for desktop ---------- */
+  /* ---------- Three-column layout for desktop ---------- */
   .stage {
     display: flex;
     flex-direction: column;
@@ -965,10 +982,22 @@
   @media (min-width: 920px) {
     .stage {
       display: grid;
-      grid-template-columns: 1.4fr 1fr;
-      gap: 14px;
+      grid-template-columns: 240px minmax(0, 1fr) 380px;
+      gap: 18px;
       align-items: start;
     }
+    .stage > .left-rail {
+      max-height: calc(100vh - 60px);
+      overflow-y: auto;
+      position: sticky;
+      top: 12px;
+      padding-right: 6px;
+    }
+    /* Subtle scrollbar in the rail */
+    .stage > .left-rail::-webkit-scrollbar { width: 6px; }
+    .stage > .left-rail::-webkit-scrollbar-thumb { background: var(--cream-border-soft); border-radius: 3px; }
+    .stage > .left-rail::-webkit-scrollbar-thumb:hover { background: var(--cream-border); }
+
     .stage > .panel-stack { display: flex; flex-direction: column; gap: 14px; max-height: calc(100vh - 60px); overflow-y: auto; position: sticky; top: 12px; }
     .stage > .panel-stack .panel { margin-bottom: 0; }
   }
@@ -1012,20 +1041,36 @@
 
   <h2 class="sr-only">Interactive map and timeline of Indian historical events with editorial threads connecting them.</h2>
 
-  <div class="threads-bar" id="threads-bar">__STATIC_THREADS_BAR__</div>
-  <div class="people-bar" id="people-bar">__STATIC_PEOPLE_BAR__</div>
-  <div class="collections-bar" id="collections-bar">__STATIC_COLLECTIONS_BAR__</div>
-  <div class="places-bar" id="places-bar">__STATIC_PLACES_BAR__</div>
-  <div class="polities-bar" id="polities-bar">__STATIC_POLITIES_BAR__</div>
-
-  <div class="controls">
-    <span class="label">Search</span>
-    <input id="search" type="search" placeholder="Search events, places, people…" autocomplete="off">
-    <button id="reset" type="button">Reset</button>
-  </div>
-
   <div class="stage">
+    <aside class="left-rail" aria-label="Browse threads, people, collections, places, and polities">
+      <section class="rail-section">
+        <div class="rail-section-label">Threads</div>
+        <div class="threads-bar" id="threads-bar">__STATIC_THREADS_BAR__</div>
+      </section>
+      <section class="rail-section">
+        <div class="rail-section-label">People</div>
+        <div class="people-bar" id="people-bar">__STATIC_PEOPLE_BAR__</div>
+      </section>
+      <section class="rail-section">
+        <div class="rail-section-label">Collections</div>
+        <div class="collections-bar" id="collections-bar">__STATIC_COLLECTIONS_BAR__</div>
+      </section>
+      <section class="rail-section">
+        <div class="rail-section-label">Places</div>
+        <div class="places-bar" id="places-bar">__STATIC_PLACES_BAR__</div>
+      </section>
+      <section class="rail-section">
+        <div class="rail-section-label">Polities</div>
+        <div class="polities-bar" id="polities-bar">__STATIC_POLITIES_BAR__</div>
+      </section>
+    </aside>
+
     <div class="map-column">
+      <div class="controls">
+        <span class="label">Search</span>
+        <input id="search" type="search" placeholder="Search events, places, people…" autocomplete="off">
+        <button id="reset" type="button">Reset</button>
+      </div>
       <div class="map-wrap">
         <svg id="map" viewBox="__VIEWBOX__" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
           <g id="surrounds">__SURROUNDS_PATHS__</g>
@@ -2254,7 +2299,7 @@ function renderThreadReaderHtml() {
 function renderPeopleBar() {
   const pills = PEOPLE.map(p => {
     const active = state.activePeople.has(p.id) ? ' active' : '';
-    const lastName = (p.name || p.id).split(' ').slice(-1)[0];
+    const lastName = p.short_name || (p.name || p.id).split(' ').slice(-1)[0];
     return `<button class="pill is-person${active}" data-pid="${p.id}" `
          + `style="--accent:${p.colour};">`
          + `<span class="pill-swatch"></span>${escapeHtml(lastName)}`
