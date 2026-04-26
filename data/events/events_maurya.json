@@ -1,0 +1,152 @@
+{
+  "campaign": "maurya",
+  "scope": "Mauryan Empire (322–185 BCE) — Chandragupta's founding, Ashoka's Kalinga turn and dhamma, the edicts, the Pushyamitra Sunga end.",
+  "updated": "2026-04-26",
+  "events": [
+    {
+      "id": "chandragupta-founds-maurya-322-bce",
+      "title": "Chandragupta Maurya founds the Maurya Empire",
+      "tooltip": "Chandragupta Maurya overthrows the Nandas at Pataliputra, c. 322 BCE",
+      "summary": "Chandragupta, advised by Chanakya (Kautilya), overthrew the last Nanda king and founded the Maurya Empire — the first subcontinental imperial state.",
+      "detail": "Chandragupta Maurya, supported by his Brahmin minister Chanakya (also Kautilya, traditional author of the Arthashastra), overthrew Dhana Nanda of the Nanda dynasty at Pataliputra around 322 BCE. The empire he founded — the Mauryan — was the first to unify most of the subcontinent under a single political authority, eventually stretching from Afghanistan to Karnataka. After defeating Seleucus I Nicator's eastern campaign (305 BCE), Chandragupta secured the Hindu Kush satrapies in exchange for 500 war elephants and a marriage alliance. Megasthenes, Seleucus's ambassador, resided at Pataliputra and wrote the Indica (now lost, surviving in fragments), the earliest Greek ethnographic account of India. Jain tradition records that Chandragupta abdicated late in life, joined the Digambara monastic order under Bhadrabahu, and died by ritual fasting (sallekhana) at Shravanabelagola c. 297 BCE.",
+      "date": {
+        "start": "-322",
+        "end":   "-322",
+        "precision": "year",
+        "approximate": true,
+        "display": "c. 322 BCE"
+      },
+      "location": {
+        "type": "city",
+        "name": "Pataliputra (modern Patna)",
+        "region": "Magadha",
+        "country": "IN",
+        "points": [{ "lat": 25.6093, "lon": 85.1235, "name": "Pataliputra" }]
+      },
+      "era": "maurya",
+      "category": ["political", "dynastic", "military"],
+      "figures": ["Chandragupta Maurya", "Chanakya (Kautilya)", "Dhana Nanda", "Megasthenes", "Seleucus I Nicator"],
+      "caused_by": [
+        { "id": "alexander-hydaspes-326-bce", "gloss": "The Macedonian campaign destabilised the northwest and demonstrated Nanda vulnerability; Chandragupta's overthrow exploited the post-Alexander power vacuum and absorbed the Macedonian territorial inheritance after the 305 BCE Seleucid settlement." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Chandragupta_Maurya", "label": "Wikipedia: Chandragupta Maurya", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Megasthenes, Indica (c. 300 BCE; surviving fragments in J.W. McCrindle, Ancient India as Described by Megasthenes and Arrian, 1877)", "type": "primary" },
+        { "label": "Romila Thapar, The Mauryas Revisited (1987)", "type": "scholarly" },
+        { "label": "Romila Thapar, Aśoka and the Decline of the Mauryas (1961; rev. 2012)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "ashoka-kalinga-war-261-bce",
+      "title": "Ashoka's Kalinga War and dhamma turn",
+      "tooltip": "Ashoka conquers Kalinga; recoils into dhamma policy, c. 261 BCE",
+      "summary": "Ashoka conquered Kalinga at terrible cost — 100,000 killed and 150,000 deported by his own count in Rock Edict XIII — and turned to dhamma rule.",
+      "detail": "Ashoka acceded to the Mauryan throne around 268 BCE after a contested succession. His invasion of Kalinga (modern coastal Odisha) c. 261 BCE — the only major military campaign of his reign — produced casualties he himself documented in Rock Edict XIII at Shahbazgarhi and elsewhere: 100,000 killed in battle, 150,000 deported, many times that number dead from secondary causes. The text records his pasch ('thereafter') turn to a policy of dhamma — a syncretic ethics drawn from Buddhist, Jain, and Brahmanical sources, emphasising non-violence, religious tolerance, the welfare of subjects, and refusal of further military conquest. Ashoka dispatched dhamma-mahamatras (officers) across his empire and sent missionaries to Sri Lanka (his son Mahinda) and Greek-ruled successor states (Antiochus II, Ptolemy II Philadelphus) — among the first documented international ethical-religious diplomacy. The Kalinga turn is the most significant attested instance of an emperor publicly renouncing military conquest in the ancient world.",
+      "date": {
+        "start": "-261",
+        "end":   "-261",
+        "precision": "year",
+        "approximate": true,
+        "display": "c. 261 BCE"
+      },
+      "location": {
+        "type": "city",
+        "name": "Dhauli (Kalinga battlefield, near modern Bhubaneswar)",
+        "region": "Kalinga (Odisha)",
+        "country": "IN",
+        "points": [{ "lat": 20.1924, "lon": 85.8408, "name": "Dhauli" }]
+      },
+      "era": "maurya",
+      "category": ["military", "political", "religious"],
+      "figures": ["Ashoka", "Bindusara", "Mahinda"],
+      "caused_by": [
+        { "id": "chandragupta-founds-maurya-322-bce", "gloss": "Three generations of Mauryan expansion (Chandragupta, Bindusara, Ashoka) brought Kalinga within striking distance; the Kalinga War was the imperial logic's terminal extension before Ashoka reversed it." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Kalinga_War", "label": "Wikipedia: Kalinga War", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Ashoka, Major Rock Edict XIII (Shahbazgarhi, Mansehra, Kalsi, Girnar versions; D.C. Sircar, Inscriptions of Asoka, 1957)", "type": "primary" },
+        { "label": "Romila Thapar, Aśoka and the Decline of the Mauryas (1961; rev. 2012)", "type": "scholarly" },
+        { "label": "Patrick Olivelle (ed.), Aśoka in History and Historical Memory (2009)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "ashokan-edicts-257-bce",
+      "title": "Ashoka's edicts proclaimed across the empire",
+      "tooltip": "Ashoka issues Rock and Pillar Edicts, c. 257–232 BCE",
+      "summary": "Ashoka's rock and pillar edicts — the earliest surviving Indian inscriptions — proclaimed dhamma policy in Prakrit, Greek, and Aramaic across the empire.",
+      "detail": "Ashoka's edicts, issued progressively between c. 257 BCE and his death c. 232 BCE, are the earliest surviving Indian inscriptions and the most extensive imperial-proclamation corpus from the ancient world. They survive in three categories: Major Rock Edicts (14 series, c. 257–256 BCE) at fourteen sites from Shahbazgarhi (modern KPK, Pakistan) to Yerragudi (Andhra); Pillar Edicts (7 series, c. 243 BCE) on freestanding sandstone pillars topped by lion or bull capitals (Sarnath, Lauriya-Nandangarh, Allahabad); and the Minor Rock Edicts. The texts are in Prakrit (Brahmi script in most of India, Kharosthi in the northwest); the Kandahar bilingual is in Greek and Aramaic. Substantively the edicts proclaim dhamma policy: respect for parents and elders, kindness to slaves and servants, restraint in spending and acquiring, religious tolerance ('all sects are to be respected'), abolition of royal hunts, planting of medicinal herbs and shade trees along highways. Among the founding documents of the Indian state's self-conception.",
+      "date": {
+        "start": "-257",
+        "end":   "-232",
+        "precision": "year",
+        "approximate": true,
+        "display": "c. 257–232 BCE"
+      },
+      "location": {
+        "type": "city",
+        "name": "Sarnath (Pillar Edict site; representative of empire-wide proclamation)",
+        "region": "Mauryan empire",
+        "country": "IN",
+        "points": [{ "lat": 25.3811, "lon": 83.0260, "name": "Sarnath" }]
+      },
+      "era": "maurya",
+      "category": ["political", "religious", "cultural"],
+      "figures": ["Ashoka"],
+      "caused_by": [
+        { "id": "ashoka-kalinga-war-261-bce", "gloss": "The edicts are the public-policy form of the Kalinga turn — Rock Edict XIII itself records Ashoka's recoil from the war as the founding statement of dhamma rule." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Edicts_of_Ashoka", "label": "Wikipedia: Edicts of Ashoka", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "D.C. Sircar, Inscriptions of Asoka (3rd ed., 1975)", "type": "primary" },
+        { "label": "Harry Falk, Aśokan Sites and Artefacts: A Source-Book with Bibliography (2006)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "pushyamitra-sunga-185-bce",
+      "title": "Pushyamitra Sunga overthrows the Mauryas",
+      "tooltip": "Pushyamitra Sunga kills Brihadratha at Pataliputra; Sunga dynasty c. 185 BCE",
+      "summary": "Pushyamitra Sunga, Mauryan senapati, assassinated emperor Brihadratha during a military review and founded the Sunga dynasty — end of the Maurya.",
+      "detail": "The Mauryan empire fragmented across the half-century after Ashoka's death (c. 232 BCE) under his successors Dasharatha, Samprati, and others. The senapati (commander-in-chief) Pushyamitra Sunga assassinated the last Mauryan emperor Brihadratha during a military review at Pataliputra around 185 BCE, founding the Sunga dynasty. Bana's 7th-century Harshacharita and Buddhist sources accuse Pushyamitra of persecuting Buddhists; modern scholarship treats the persecution claim as overstated, though the Sungas certainly patronised Brahmanical revival (the second horse-sacrifice Pushyamitra performed is documented in Ayodhya inscriptions). The Sunga dynasty (185–73 BCE) ruled a contracted territory — Magadha and the central Gangetic valley — facing Indo-Greek pressure from the northwest (Demetrius II, Menander I) and Satavahana competition from the Deccan. The Mauryan imperial framework was not reconstituted; subcontinental political fragmentation lasted until the Guptas five centuries later.",
+      "date": {
+        "start": "-185",
+        "end":   "-185",
+        "precision": "year",
+        "approximate": true,
+        "display": "c. 185 BCE"
+      },
+      "location": {
+        "type": "city",
+        "name": "Pataliputra",
+        "region": "Magadha",
+        "country": "IN",
+        "points": [{ "lat": 25.6093, "lon": 85.1235, "name": "Pataliputra" }]
+      },
+      "era": "maurya",
+      "category": ["political", "dynastic", "military"],
+      "figures": ["Pushyamitra Sunga", "Brihadratha Maurya"],
+      "caused_by": [
+        { "id": "ashokan-edicts-257-bce", "gloss": "Ashoka's renunciation of further conquest and his expensive dhamma-bureaucracy contributed to the post-Ashokan fiscal-military weakening that made the Sunga coup possible — Pushyamitra's seizure of power was the army's reassertion against the dhamma state." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Pushyamitra_Shunga", "label": "Wikipedia: Pushyamitra Shunga", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Bana, Harshacharita (7th c. CE; E.B. Cowell & F.W. Thomas trans., 1897)", "type": "primary" },
+        { "label": "Romila Thapar, Aśoka and the Decline of the Mauryas (1961; rev. 2012)", "type": "scholarly" }
+      ],
+      "verified": true
+    }
+  ]
+}

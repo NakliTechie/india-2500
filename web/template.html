@@ -1046,13 +1046,13 @@
       <div class="timeline" id="timeline">
         <div class="timeline-head">
           <span class="label">Time range</span>
-          <span class="years"><span id="y-start">500 BCE</span> &mdash; <span id="y-end">2025 CE</span></span>
+          <span class="years"><span id="y-start">600 BCE</span> &mdash; <span id="y-end">2025 CE</span></span>
         </div>
         <div class="track-wrap" id="track-wrap">
           <div class="era-bands" id="era-bands"></div>
           <div class="active-range" id="active-range"></div>
-          <input type="range" id="r-start" min="-500" max="2025" value="-500" step="1" aria-label="Start year">
-          <input type="range" id="r-end"   min="-500" max="2025" value="2025" step="1" aria-label="End year">
+          <input type="range" id="r-start" min="-600" max="2025" value="-600" step="1" aria-label="Start year">
+          <input type="range" id="r-end"   min="-600" max="2025" value="2025" step="1" aria-label="End year">
         </div>
       </div>
     </div>
@@ -1317,7 +1317,7 @@ function buildIndexes() {
    STATE
    =================================================================== */
 const state = {
-  yearStart: -500,
+  yearStart: -600,
   yearEnd:   2025,
   searchQuery: '',
   activeEvent: null,    // event id (panel)
@@ -1364,7 +1364,7 @@ const elYEnd = $('#y-end');
    ERA BANDS
    =================================================================== */
 const ERAS = [
-  { id: "mahajanapada",   start: -500, end: -322 },
+  { id: "mahajanapada",   start: -600, end: -322 },
   { id: "maurya",         start: -322, end: -185 },
   { id: "post-maurya",    start: -185, end:  320 },
   { id: "gupta",          start:  320, end:  550 },
@@ -1378,7 +1378,7 @@ const ERAS = [
 ];
 
 function renderEraBands() {
-  const total = 2025 - (-500);
+  const total = 2025 - (-600);
   elEraBands.innerHTML = ERAS.map((era, i) => {
     const widthPct = ((era.end - era.start) / total) * 100;
     const tint = i % 2 === 0 ? '#F0E9D5' : '#FFFDF7';
@@ -3034,7 +3034,7 @@ function onSearch() {
 function onReset() {
   elSearch.value = '';
   state.searchQuery = '';
-  state.yearStart = -500; elRStart.value = -500;
+  state.yearStart = -600; elRStart.value = -600;
   state.yearEnd = 2025;   elREnd.value = 2025;
   state.activeEvent = null;
   state.activeThread = null;

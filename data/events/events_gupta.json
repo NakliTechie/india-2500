@@ -1,0 +1,149 @@
+{
+  "campaign": "gupta",
+  "scope": "Gupta Empire (c. 320–550 CE) — the second subcontinental imperial regime after the Mauryas. Sanskrit cultural high; Aryabhata; Hun invasions; Kalidasa; Iron Pillar.",
+  "updated": "2026-04-26",
+  "events": [
+    {
+      "id": "chandragupta-i-founds-gupta-320-ce",
+      "title": "Chandragupta I founds the Gupta Empire",
+      "tooltip": "Chandragupta I crowned at Pataliputra, c. 320 CE; founds the Gupta Empire",
+      "summary": "Chandragupta I, marrying the Lichchhavi princess Kumaradevi, consolidated Magadha and founded the Guptas — the second subcontinental imperial state.",
+      "detail": "Chandragupta I (no relation to the Mauryan Chandragupta of six centuries earlier) consolidated power in Magadha around 320 CE and was crowned Maharajadhiraja ('great king of kings') at Pataliputra. His marriage to Kumaradevi of the Lichchhavi clan — celebrated on the empire's gold coinage — gave him a political-territorial alliance that anchored the new dynasty. The Guptas inherited an India fragmented since the Mauryan collapse five centuries earlier into Saka, Kushan, Satavahana, and Kshatrapa polities; Chandragupta I and his successors progressively reabsorbed the heartland into a single imperial framework. The Gupta period (320–550 CE) is conventionally read as Indian classical antiquity's high point: Sanskrit drama (Kalidasa), Sanskrit lyric (Bhartrihari), mathematics (Aryabhata's invention of the place-value zero), astronomy (Varahamihira), the Vishnu temple architectural canon, the iconographic types that became standard for Hindu sculpture, the Kamasutra and the Manusmriti's final redaction.",
+      "date": {
+        "start": "320",
+        "end":   "320",
+        "precision": "year",
+        "approximate": true,
+        "display": "c. 320 CE (accession; coronation Era inaugurated)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Pataliputra",
+        "region": "Magadha",
+        "country": "IN",
+        "points": [{ "lat": 25.6093, "lon": 85.1235, "name": "Pataliputra" }]
+      },
+      "era": "gupta",
+      "category": ["political", "dynastic"],
+      "figures": ["Chandragupta I", "Kumaradevi", "Ghatotkacha"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Chandragupta_I", "label": "Wikipedia: Chandragupta I", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Allahabad Pillar Inscription of Samudragupta (4th c. CE; D.R. Bhandarkar, Inscriptions of the Early Gupta Kings, 1981)", "type": "primary" },
+        { "label": "Romila Thapar, The Penguin History of Early India (2002), ch. 9", "type": "scholarly" },
+        { "label": "Hermann Kulke & Dietmar Rothermund, A History of India (4th ed., 2004), ch. 4", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "samudragupta-conquests-350-ce",
+      "title": "Samudragupta's conquests and the Allahabad prashasti",
+      "tooltip": "Samudragupta's conquests, c. 335–375 CE; Allahabad pillar prashasti",
+      "summary": "Samudragupta's conquests reached from the Hindu Kush to Sri Lanka — recorded in the Allahabad Pillar prashasti by his court poet Harisena.",
+      "detail": "Samudragupta (r. c. 335–375 CE) extended Gupta authority across most of north India and tributary into the Deccan and the south. The Allahabad Pillar prashasti — composed by his court poet Harisena and inscribed on the same pillar that two centuries earlier had carried Ashoka's edicts — is the most ambitious imperial-inscription corpus from ancient India after the Ashokan edicts. It records Samudragupta uprooting nine north Indian kings, defeating eleven southern and Deccan rulers and reinstalling them as tributaries (graha-mokṣa, 'capture and release'), and receiving tribute from frontier states (Saka satrapies, Kushan successors) and overseas kingdoms including Sri Lanka. He is also credited with performing the Vedic horse-sacrifice (ashvamedha), revived from Mauryan-era disuse, and minting the gold coinage that includes a famous lyrist-king type showing him playing the veena. The empire he built is the territorial frame his son Chandragupta II would administer at peak.",
+      "date": {
+        "start": "335",
+        "end":   "375",
+        "precision": "year",
+        "approximate": true,
+        "display": "c. 335–375 CE (Samudragupta's reign)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Allahabad (Prayagraj) — Pillar inscription site",
+        "region": "Gupta heartland",
+        "country": "IN",
+        "points": [{ "lat": 25.4358, "lon": 81.8463, "name": "Allahabad Pillar (Prayagraj)" }]
+      },
+      "era": "gupta",
+      "category": ["military", "political", "cultural"],
+      "figures": ["Samudragupta", "Harisena"],
+      "caused_by": [
+        { "id": "chandragupta-i-founds-gupta-320-ce", "gloss": "Chandragupta I's Magadha-Lichchhavi consolidation gave Samudragupta the institutional and military base for the conquests; the prashasti is explicit that Samudragupta inherits and extends the imperial project his father founded." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Samudragupta", "label": "Wikipedia: Samudragupta", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Harisena, Allahabad Pillar Prashasti (4th c. CE; D.R. Bhandarkar, Inscriptions of the Early Gupta Kings, 1981)", "type": "primary" },
+        { "label": "Romila Thapar, The Penguin History of Early India (2002), ch. 9", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "chandragupta-ii-vikramaditya-400-ce",
+      "title": "Chandragupta II Vikramaditya and the Iron Pillar",
+      "tooltip": "Chandragupta II rules at Gupta peak, c. 380–415 CE; Iron Pillar erected",
+      "summary": "Chandragupta II's reign was the Gupta cultural and territorial peak — Saka satrapies annexed, Faxian visits, the Mehrauli Iron Pillar inscribed.",
+      "detail": "Chandragupta II Vikramaditya (r. c. 380–415 CE) ruled the Gupta empire at its peak. He completed Samudragupta's project by annexing the Western Kshatrapa Saka satrapies (c. 388–409 CE), bringing the Gujarat-Malwa coast and the Indian Ocean trade ports under direct Gupta control. The Chinese Buddhist pilgrim Faxian (Fa-Hsien) travelled through the empire 405–411 CE en route to Sri Lanka and recorded an admiring account: cities prosperous, courts orderly, Buddhist monasteries flourishing, tax burden moderate. Chandragupta II's court at Ujjain (his second capital, retained as a winter seat) is traditionally credited with the navaratna ('nine jewels') of Sanskrit literature, including Kalidasa (poet-dramatist of Abhijnanasakuntalam), Varahamihira (astronomer), and Dhanvantari (medicine) — though most of these attributions are later legend. The Mehrauli Iron Pillar at Delhi, originally erected at Udayagiri and bearing a Sanskrit eulogy of a 'Chandra' identified with Chandragupta II, has stood without significant rusting for 1,600 years — an unsolved metallurgical puzzle.",
+      "date": {
+        "start": "380",
+        "end":   "415",
+        "precision": "year",
+        "approximate": true,
+        "display": "c. 380–415 CE (Chandragupta II's reign)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Ujjain (winter capital; Iron Pillar at Mehrauli, Delhi)",
+        "region": "Gupta empire",
+        "country": "IN",
+        "points": [{ "lat": 23.1765, "lon": 75.7885, "name": "Ujjain" }]
+      },
+      "era": "gupta",
+      "category": ["political", "cultural", "military"],
+      "figures": ["Chandragupta II", "Faxian (Fa-Hsien)", "Kalidasa", "Varahamihira"],
+      "caused_by": [
+        { "id": "samudragupta-conquests-350-ce", "gloss": "Samudragupta's tributary system was the territorial frame Chandragupta II inherited; the Saka annexation was the single major outstanding imperial extension Samudragupta had not completed." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Chandragupta_II", "label": "Wikipedia: Chandragupta II", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Faxian, A Record of Buddhistic Kingdoms (5th c. CE; James Legge trans., 1886)", "type": "primary" },
+        { "label": "Mehrauli Iron Pillar inscription (D.R. Bhandarkar, Inscriptions of the Early Gupta Kings, 1981)", "type": "primary" },
+        { "label": "S.R. Goyal, A History of the Imperial Guptas (1967)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "skandagupta-defeats-huns-460-ce",
+      "title": "Skandagupta defeats the Huna invasion",
+      "tooltip": "Skandagupta defeats the Hephthalite Hunas at the northwest, c. 460 CE",
+      "summary": "Skandagupta's repulse of the Hephthalite Huns delayed Gupta collapse — but Hun pressure and the cost of defence broke the empire within decades.",
+      "detail": "The Hephthalite Huns (Huna in Sanskrit) — a Central Asian steppe confederation that had also broken into the Eastern Roman and Sasanian frontiers — pushed across the Hindu Kush passes from the 450s CE. Skandagupta (r. c. 455–467 CE), the last great Gupta emperor, repulsed the first major Huna invasion in c. 460 — recorded in the Bhitari and Junagadh inscriptions which credit him with the victory. The defence preserved the Gupta heartland through the 460s but exhausted the imperial treasury (the Junagadh inscription records the rebuilding of the Sudarshana lake breached by the Huna campaign). After Skandagupta's death the Hunas returned in greater force under Toramana and his son Mihirakula (early 6th c.), occupying Punjab and Malwa; the Gupta administrative apparatus collapsed by c. 550 CE. Yashodharman of Malwa is credited with finally defeating Mihirakula c. 528 CE — but the Gupta unified state did not recover. The post-Gupta political fragmentation of north India lasted over six and a half centuries until the Delhi Sultanate.",
+      "date": {
+        "start": "460",
+        "end":   "460",
+        "precision": "year",
+        "approximate": true,
+        "display": "c. 460 CE"
+      },
+      "location": {
+        "type": "city",
+        "name": "Junagadh (Sudarshana lake site; major Skandagupta inscription)",
+        "region": "Gupta northwest frontier",
+        "country": "IN",
+        "points": [{ "lat": 21.5222, "lon": 70.4579, "name": "Junagadh" }]
+      },
+      "era": "gupta",
+      "category": ["military", "political"],
+      "figures": ["Skandagupta", "Toramana", "Mihirakula"],
+      "caused_by": [
+        { "id": "chandragupta-ii-vikramaditya-400-ce", "gloss": "The peak under Chandragupta II positioned the Guptas to mount the defence Skandagupta executed; the cost of repulse and the cumulative weakness from the Saka campaigns combined into the post-Skandagupta collapse." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Skandagupta", "label": "Wikipedia: Skandagupta", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Skandagupta's Bhitari and Junagadh inscriptions (5th c. CE; D.R. Bhandarkar, Inscriptions of the Early Gupta Kings, 1981)", "type": "primary" },
+        { "label": "S.R. Goyal, A History of the Imperial Guptas (1967)", "type": "scholarly" }
+      ],
+      "verified": true
+    }
+  ]
+}

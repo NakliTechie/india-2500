@@ -4,6 +4,78 @@
   "updated": "2026-04-26",
   "polities": [
     {
+      "id": "maurya-empire",
+      "name": "Maurya Empire",
+      "tooltip": "Maurya Empire — 322–185 BCE, the first subcontinental imperial state",
+      "summary": "Chandragupta's overthrow of the Nandas to Pushyamitra Sunga's coup — the Mauryas were the first to unify the subcontinent under a single political authority.",
+      "framing": "The Mauryan Empire is the first state to unify most of the subcontinent — at its peak under Ashoka extending from Afghanistan to Karnataka and from Gujarat to Bengal. Its institutional inheritance includes the Arthashastra (Kautilya's treatise on statecraft, the most extensive ancient Indian political text), the Mauryan provincial-administrative framework that successor states would draw on for centuries, and the Ashokan dhamma policy that produced the earliest surviving Indian inscriptions. The empire's collapse under Pushyamitra Sunga's coup left a political vacuum that lasted five centuries — no equivalent unified imperial regime emerged until the Guptas (320 CE).",
+      "date_span": { "start": "-322", "end": "-185", "display": "c. 322 BCE (Chandragupta) – c. 185 BCE (Pushyamitra coup)" },
+      "era_span": ["maurya"],
+      "category": "empire",
+      "capitals": [
+        { "place": "pataliputra", "from_year": -322, "to_year": -185 }
+      ],
+      "rulers": [
+        "Chandragupta Maurya (322–298 BCE, founder)",
+        "Bindusara (298–272 BCE)",
+        "Ashoka (268–232 BCE)",
+        "Dasharatha, Samprati, Salisuka, Devavarman, Shatadhanvan",
+        "Brihadratha (last emperor, killed by Pushyamitra c. 185 BCE)"
+      ],
+      "events": [
+        "chandragupta-founds-maurya-322-bce",
+        "ashoka-kalinga-war-261-bce",
+        "ashokan-edicts-257-bce",
+        "pushyamitra-sunga-185-bce"
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Maurya_Empire", "label": "Wikipedia: Maurya Empire", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Romila Thapar, Aśoka and the Decline of the Mauryas (1961; rev. 2012)", "type": "scholarly" },
+        { "label": "Romila Thapar, The Penguin History of Early India (2002), ch. 7–8", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "gupta-empire",
+      "name": "Gupta Empire",
+      "tooltip": "Gupta Empire — c. 320–550 CE, the second subcontinental imperial state",
+      "summary": "Chandragupta I's founding to Hun-induced collapse — the Guptas re-unified north India and built classical antiquity's high culture.",
+      "framing": "The Gupta Empire was the second subcontinental imperial regime after the Mauryas, ruling from c. 320 to c. 550 CE — about 230 years that Indian historiography conventionally identifies as the classical-antiquity peak. The Guptas re-unified north India after five centuries of post-Mauryan fragmentation; their territorial reach under Samudragupta and Chandragupta II extended from the Hindu Kush to the Bay of Bengal and tributary into the Deccan. The institutional inheritance includes the formative Sanskrit literary canon (Kalidasa, Bhartrihari), foundational mathematics (Aryabhata's place-value zero, c. 499 CE), astronomy (Aryabhatiya, Varahamihira's Brihat Samhita), and the iconographic types that defined Hindu temple sculpture. The Hun (Hephthalite) invasions from the 450s onwards exhausted the empire; political-administrative continuity ended c. 550 CE. Northern India remained politically fragmented until the Delhi Sultanate (1206) — over six and a half centuries.",
+      "date_span": { "start": "320", "end": "550", "display": "c. 320 CE (Chandragupta I) – c. 550 CE (post-Hun collapse)" },
+      "era_span": ["gupta"],
+      "category": "empire",
+      "capitals": [
+        { "place": "pataliputra", "from_year": 320, "to_year": 550 },
+        { "place": "ujjain",      "from_year": 380, "to_year": 550 }
+      ],
+      "rulers": [
+        "Chandragupta I (320–335)",
+        "Samudragupta (335–375)",
+        "Chandragupta II Vikramaditya (380–415)",
+        "Kumaragupta I (415–455)",
+        "Skandagupta (455–467, last great emperor)",
+        "Successors through c. 550 CE"
+      ],
+      "events": [
+        "chandragupta-i-founds-gupta-320-ce",
+        "samudragupta-conquests-350-ce",
+        "chandragupta-ii-vikramaditya-400-ce",
+        "skandagupta-defeats-huns-460-ce"
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Gupta_Empire", "label": "Wikipedia: Gupta Empire", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "S.R. Goyal, A History of the Imperial Guptas (1967)", "type": "scholarly" },
+        { "label": "Romila Thapar, The Penguin History of Early India (2002), ch. 9", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
       "id": "delhi-sultanate",
       "name": "Delhi Sultanate",
       "tooltip": "Delhi Sultanate — 1206–1526, five Turkic-Afghan dynasties",

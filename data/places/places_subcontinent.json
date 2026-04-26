@@ -683,6 +683,124 @@
     },
 
     {
+      "id": "pataliputra",
+      "name": "Pataliputra",
+      "tooltip": "Pataliputra (Patna) — Mauryan, Sunga, Gupta, Pala capital",
+      "summary": "Magadha capital from the 5th c. BCE; capital of the Mauryan, Sunga, and Gupta empires; later Pala seat — north India's longest-running ancient capital.",
+      "framing": "Pataliputra was founded by Ajatasattu of Magadha as a fort at the Ganga-Sone confluence in the 5th century BCE; expanded into the imperial capital under his successors. Across nearly a millennium it served as capital to the Nanda dynasty, the Mauryan Empire (322–185 BCE), the Sunga dynasty (185–73 BCE), the Gupta Empire (320–550 CE), and (with Vikramashila) the Pala Empire (8th–12th c.). Megasthenes recorded the city in the 3rd century BCE as fifteen kilometres long with sixty-four gates and 570 towers — likely the largest city in the world at the time. Faxian visited in c. 405 CE and recorded the still-functioning Mauryan-era hospital and palaces. Bakhtiyar Khilji's 1193 sack ended Pataliputra's institutional continuity; the Ganga's eastward shift across centuries silted over much of the ancient site. Modern Patna stands on the same footprint; archaeological excavations at Kumrahar have recovered the Mauryan pillared hall.",
+      "location": {
+        "country": "IN",
+        "lat": 25.6093,
+        "lon": 85.1235,
+        "radius_km": 10,
+        "alt_names": ["Patna", "Kusumapura", "Pushpapura"]
+      },
+      "era_span": ["mahajanapada", "maurya", "post-maurya", "gupta", "early-medieval", "sultanate", "mughal", "colonial", "independence", "republic"],
+      "category": ["capital", "city"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Pataliputra", "label": "Wikipedia: Pataliputra", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Romila Thapar, The Penguin History of Early India (2002)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "sarnath",
+      "name": "Sarnath",
+      "tooltip": "Sarnath — Buddha's first sermon; Ashokan Lion Capital + pillar",
+      "summary": "Site of the Buddha's first sermon (Dharmachakra Pravartana, c. 528 BCE) and Ashoka's Lion Capital — the modern Indian state emblem.",
+      "framing": "Sarnath, in the deer park (mrigadava) outside Varanasi, is where Siddhartha Gautama delivered his first sermon (Dharmachakra Pravartana — 'turning the wheel of dhamma') to his five former ascetic companions, c. 528 BCE according to traditional dating. The site became one of the four principal Buddhist pilgrimage centres alongside Lumbini, Bodh Gaya, and Kushinagar. Ashoka erected a pillar at Sarnath bearing his Schism Edict and topped by the four-lion capital — recovered intact by colonial archaeologists in 1904 and adopted as the State Emblem of India in 1950. The wheel from the lion capital appears on the Indian national flag. The Mulagandhakuti Vihara (originally Mauryan, expanded by Kushans, restored under Mahabodhi Society in 1931) and the Dhamekh Stupa (5th c. CE Gupta-era reconstruction of an earlier Mauryan stupa) anchor the surviving architectural site.",
+      "location": {
+        "country": "IN",
+        "lat": 25.3811,
+        "lon": 83.0260,
+        "radius_km": 4
+      },
+      "era_span": ["mahajanapada", "maurya", "post-maurya", "gupta", "early-medieval", "republic"],
+      "category": ["sacred-site"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Sarnath", "label": "Wikipedia: Sarnath", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Vidya Dehejia, Indian Art (1997), ch. on Mauryan and Buddhist sculpture", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "bodh-gaya",
+      "name": "Bodh Gaya",
+      "tooltip": "Bodh Gaya — site of the Buddha's enlightenment under the Bodhi tree",
+      "summary": "Site where Siddhartha Gautama attained enlightenment under the Bodhi tree, c. 534 BCE — Buddhism's most sacred location.",
+      "framing": "Bodh Gaya is the site where Siddhartha Gautama attained enlightenment under the Bodhi tree (Ficus religiosa) after 49 days of meditation, c. 534 BCE in traditional reckoning. The Mahabodhi Temple complex — its core 5th–6th century Gupta-era brick structure built over an earlier Ashokan shrine — surrounds the present Bodhi tree, traditionally a direct descendant of the original. Ashoka visited Bodh Gaya in c. 260 BCE and erected the diamond throne (Vajrasana) marker; his daughter Sanghamitta is said to have taken a sapling of the original Bodhi tree to Sri Lanka, where its descendant still grows at Anuradhapura. The site declined after Bakhtiyar Khilji's sack of nearby Nalanda 1193 and the spread of Islam in eastern India; the temple was rediscovered by Burmese pilgrims in the 19th century and restored by Alexander Cunningham. UNESCO World Heritage Site (2002); Buddhism's most sacred location.",
+      "location": {
+        "country": "IN",
+        "lat": 24.6960,
+        "lon": 84.9919,
+        "radius_km": 4
+      },
+      "era_span": ["mahajanapada", "maurya", "post-maurya", "gupta", "early-medieval", "republic"],
+      "category": ["sacred-site"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Bodh_Gaya", "label": "Wikipedia: Bodh Gaya", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Geri H. Malandra, Unfolding a Mandala: The Buddhist Cave Temples at Ellora (1993) — context", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "sanchi",
+      "name": "Sanchi",
+      "tooltip": "Sanchi — Ashokan stupa cluster, Sunga-era toranas",
+      "summary": "Hilltop Buddhist stupa complex founded by Ashoka c. 250 BCE; the Great Stupa's Satavahana-era toranas are India's most celebrated early Buddhist sculpture.",
+      "framing": "Sanchi was founded by Ashoka around 250 BCE as a Buddhist monastic centre — the Great Stupa (Stupa No. 1) is the earliest surviving large stupa in India. Under Sunga and Satavahana patronage in the 1st century BCE the Great Stupa was enlarged with its present stone facing and surrounded by a balustrade; the four ornately carved toranas (gateways) added in the 1st century BCE depict Jataka tales and Buddhist symbology in some of the most accomplished early Indian narrative-relief sculpture. The site flourished as a monastic centre through the Gupta period (the Vihara No. 51 is 5th-c.) and into the 12th c., then declined. Cunningham's 1851 archaeological recovery (he discovered Sariputta and Mahamoggallana's relics in Stupa No. 3) launched modern Indian Buddhist archaeology. UNESCO World Heritage Site (1989). Ashoka's regional capital was at nearby Vidisha; his queen Devi (mother of Mahinda) was a Vidisha merchant's daughter.",
+      "location": {
+        "country": "IN",
+        "lat": 23.4793,
+        "lon": 77.7367,
+        "radius_km": 4
+      },
+      "era_span": ["maurya", "post-maurya", "gupta", "early-medieval"],
+      "category": ["sacred-site"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Sanchi", "label": "Wikipedia: Sanchi", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "John Marshall, A Guide to Sanchi (1918; rev. 1955)", "type": "scholarly" },
+        { "label": "Vidya Dehejia, Discourse in Early Buddhist Art: Visual Narratives of India (1997)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "ujjain",
+      "name": "Ujjain",
+      "tooltip": "Ujjain — Avanti capital, Vikramaditya's seat, Indian prime meridian",
+      "summary": "Avanti mahajanapada capital from the 6th c. BCE; Gupta winter capital under Chandragupta II Vikramaditya; Vedic prime-meridian timekeeping centre.",
+      "framing": "Ujjain (ancient Avantika) was the capital of the Avanti mahajanapada from the 6th century BCE — among the major north Indian states the Buddha's life encountered. Through successive periods it served as: a Mauryan provincial capital (Ashoka was governor here as crown prince before his accession); the Western Kshatrapa Saka capital (1st–4th c. CE); the Gupta winter capital under Chandragupta II Vikramaditya (4th–5th c.) and traditional seat of his navaratna court of Sanskrit literati; and a Paramara capital in the early-medieval period. Ujjain is the traditional Indian prime meridian — Hindu astronomical timekeeping (the Surya Siddhanta) takes Ujjain's longitude as zero, since the Tropic of Cancer crosses very near the city. The 12-yearly Simhastha Kumbh Mela on the Shipra river is among the four major Kumbh sites; the Mahakaleshwar temple is one of the twelve Jyotirlingas of Shiva. Modern Ujjain is in Madhya Pradesh.",
+      "location": {
+        "country": "IN",
+        "lat": 23.1765,
+        "lon": 75.7885,
+        "radius_km": 8,
+        "alt_names": ["Avantika", "Avanti"]
+      },
+      "era_span": ["mahajanapada", "maurya", "post-maurya", "gupta", "early-medieval", "sultanate", "mughal", "maratha", "colonial", "independence", "republic"],
+      "category": ["capital", "city", "sacred-site"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Ujjain", "label": "Wikipedia: Ujjain", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Romila Thapar, The Penguin History of Early India (2002)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
       "id": "puri",
       "name": "Puri",
       "tooltip": "Puri — Jagannath temple seat, c. 12th c. onward; chronicled in the Madala Panji",

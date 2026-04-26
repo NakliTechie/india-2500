@@ -1,0 +1,77 @@
+{
+  "campaign": "post-maurya",
+  "scope": "Post-Mauryan period (185 BCE – 320 CE) — Indo-Greeks, Sungas, Sakas, Kushans, Satavahanas, Sangam-age south. Five centuries of regional polities before Gupta consolidation.",
+  "updated": "2026-04-26",
+  "events": [
+    {
+      "id": "menander-indo-greek-c155-bce",
+      "title": "Menander I's Indo-Greek empire",
+      "tooltip": "Menander I rules Indo-Greek empire from Sagala, c. 165–130 BCE",
+      "summary": "Menander I from Sagala built the largest Indo-Greek empire — Bactrian-Indian successor of Alexander, immortalised in the Buddhist Milinda-pañha.",
+      "detail": "Menander I Soter (Pali Milinda; r. c. 165–130 BCE) built the largest of the Indo-Greek successor kingdoms from his capital at Sagala (modern Sialkot, Pakistan), extending power across the Punjab and into the Gangetic plain — Mathura and possibly Pataliputra fell briefly to his forces. He is the only Indo-Greek ruler attested in both Greek (Strabo, Plutarch) and Indian (Buddhist Pali, Patanjali's Mahabhashya) sources. The Milinda-pañha ('Questions of King Milinda') — a Pali Theravada Buddhist text from c. 100 BCE – 200 CE — records a long philosophical dialogue between Menander and the Buddhist sage Nagasena on the nature of self, time, and rebirth; its frame story has Menander becoming a Buddhist monk before death. Menander's coinage with bilingual Greek-Kharosthi legends and Buddhist wheel-of-dhamma imagery shows the cultural-political synthesis. The Indo-Greek kingdoms persisted until c. 10 CE, displaced first by the Indo-Scythians and then the Kushans.",
+      "date": {
+        "start": "-155",
+        "end":   "-130",
+        "precision": "year",
+        "approximate": true,
+        "display": "c. 155–130 BCE (Menander's reign)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Sagala (modern Sialkot)",
+        "region": "Punjab",
+        "country": "PK",
+        "points": [{ "lat": 32.4945, "lon": 74.5229, "name": "Sialkot" }]
+      },
+      "era": "post-maurya",
+      "category": ["political", "religious", "cultural"],
+      "figures": ["Menander I (Milinda)", "Nagasena", "Demetrius II"],
+      "caused_by": [
+        { "id": "pushyamitra-sunga-185-bce", "gloss": "The Sunga succession to a contracted Mauryan empire opened the northwest to Indo-Greek expansion — Menander's successes against Sunga territory exploit the post-Mauryan regional fragmentation directly." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Menander_I", "label": "Wikipedia: Menander I", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Milinda-pañha (Pali, c. 100 BCE – 200 CE; T.W. Rhys Davids trans., 1890–94)", "type": "primary" },
+        { "label": "A.K. Narain, The Indo-Greeks (1957; rev. 2003)", "type": "scholarly" },
+        { "label": "Osmund Bopearachchi, Monnaies gréco-bactriennes et indo-grecques (1991)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "kanishka-kushan-127-ce",
+      "title": "Kanishka I's Kushan empire and 4th Buddhist Council",
+      "tooltip": "Kanishka I rules Kushan empire from Purushapura, c. 127–150 CE",
+      "summary": "Kanishka I built the Kushan empire from Central Asia to the Gangetic plain — patron of Mahayana Buddhism, Gandhara art, the 4th Buddhist Council in Kashmir.",
+      "detail": "Kanishka I (r. c. 127–150 CE; the date 127 is now established by the Rabatak inscription discovered 1993) ruled the Kushan empire from twin capitals at Purushapura (Peshawar) and Mathura — territory that stretched from the Aral Sea to Pataliputra. The Kushans were the most consequential of the Central Asian dynasties to enter India after the Indo-Scythians; their Yuezhi origin in the Tarim basin gave their empire a continental reach. Kanishka's reign is the formative period of three transregional projects: the 4th Buddhist Council in Kashmir (c. 100 CE) which canonised the Sarvastivada and Mahayana texts, the Gandhara art school which fused Hellenistic sculptural conventions with Buddhist iconography (producing the first humanoid Buddha images), and the bi-script Kushan coinage with Bactrian Greek + Brahmi/Kharosthi legends. The Mahayana Buddhism that would shape Central Asia, China, Korea, and Japan was institutionally launched under Kushan patronage.",
+      "date": {
+        "start": "127",
+        "end":   "150",
+        "precision": "year",
+        "approximate": true,
+        "display": "c. 127–150 CE (Kanishka's reign)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Purushapura (modern Peshawar)",
+        "region": "Kushan empire / northwest frontier",
+        "country": "PK",
+        "points": [{ "lat": 34.0151, "lon": 71.5249, "name": "Peshawar" }]
+      },
+      "era": "post-maurya",
+      "category": ["political", "religious", "cultural", "dynastic"],
+      "figures": ["Kanishka I", "Vasudeva I", "Asanga (later, Kushan-era Mahayana)"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Kanishka", "label": "Wikipedia: Kanishka", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Rabatak inscription (Bactrian Greek script; Nicholas Sims-Williams & Joe Cribb, 'A New Bactrian Inscription of Kanishka the Great', Silk Road Art and Archaeology 4 (1995/96))", "type": "primary" },
+        { "label": "B.N. Mukherjee, The Rise and Fall of the Kushāṇa Empire (1988)", "type": "scholarly" },
+        { "label": "Christopher I. Beckwith, Empires of the Silk Road (2009), ch. 3", "type": "scholarly" }
+      ],
+      "verified": true
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "campaign": "mahajanapada",
+  "scope": "Mahajanapada-era events (~600–322 BCE) — Buddha, Persian Achaemenid contact, Alexander's invasion. Pre-Mauryan north Indian political-religious foundation.",
+  "updated": "2026-04-26",
+  "events": [
+    {
+      "id": "achaemenid-conquest-of-indus-518-bce",
+      "title": "Achaemenid Persia annexes the Indus valley",
+      "tooltip": "Darius I annexes the Indus valley as the satrapy of Hindush, c. 518 BCE",
+      "summary": "Darius I extended Achaemenid Persia to the Indus, establishing the satrapy of Hindush — first documented imperial absorption of subcontinental territory.",
+      "detail": "Darius I of Persia, building on Cyrus the Great's earlier eastern campaigns, annexed the Indus valley around 518 BCE and organised it as the satrapy of Hindush (Old Persian Hi(n)duš), recorded in his Behistun inscription (c. 519 BCE) and the Naqsh-i-Rustam tomb inscription. The Achaemenid province paid the highest tribute of any satrapy in Herodotus's account — 360 Euboic talents of gold dust annually. Indian troops served in Xerxes's army at the Battle of Plataea (479 BCE) and contributed cavalry to the failed Greek campaigns. The two centuries of Achaemenid presence on the northwest frontier introduced Aramaic administrative scripts (the Kharosthi script of later Mauryan northwest edicts derives from Aramaic), Persian coinage practices, and architectural motifs visible in Mauryan capitals at Pataliputra (the famous bell-shaped capitals at Sarnath echo Persepolis). Alexander's 326 BCE invasion would target the post-Achaemenid northwest two centuries later.",
+      "date": {
+        "start": "-518",
+        "end":   "-518",
+        "precision": "year",
+        "approximate": true,
+        "display": "c. 518 BCE"
+      },
+      "location": {
+        "type": "city",
+        "name": "Taxila (Achaemenid northwest frontier)",
+        "region": "Indus valley",
+        "country": "PK",
+        "points": [{ "lat": 33.7333, "lon": 72.8333, "name": "Taxila" }]
+      },
+      "era": "mahajanapada",
+      "category": ["political", "military", "colonial-administration"],
+      "figures": ["Darius I", "Cyrus the Great", "Xerxes I"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Hindush", "label": "Wikipedia: Hindush", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Herodotus, Histories III.94 (5th c. BCE; Robin Waterfield trans., 1998)", "type": "primary" },
+        { "label": "Pierre Briant, From Cyrus to Alexander: A History of the Persian Empire (2002), ch. on the eastern satrapies", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "buddha-parinirvana-483-bce",
+      "title": "Buddha's parinirvana at Kushinagar",
+      "tooltip": "Siddhartha Gautama Buddha's parinirvana at Kushinagar, c. 483 BCE",
+      "summary": "Siddhartha Gautama Buddha died at Kushinagar after a 45-year teaching mission — the founding event of the Buddhist sangha and tradition.",
+      "detail": "Siddhartha Gautama Buddha (traditional dates 563–483 BCE; modern critical scholarship places death c. 410–400 BCE) attained parinirvana at Kushinagar in the Malla republic of north India after a 45-year teaching mission across Magadha, Kosala, and the surrounding Mahajanapada states. The Mahaparinibbana Sutta records his last meal (sukara-maddava — disputed translation as pork or mushroom), final sermon, and instructions to the sangha to take refuge in the Dhamma rather than a successor. His remains were divided among eight Mahajanapada states for stupa enshrinement; Ashoka two centuries later collected and redistributed the relics across his empire. The parinirvana inaugurated the Buddhist tradition that would, under Mauryan and Kushan patronage, become the dominant transregional Indian religious export — to Sri Lanka, Central Asia, China, Tibet, and Southeast Asia.",
+      "date": {
+        "start": "-483",
+        "end":   "-483",
+        "precision": "year",
+        "approximate": true,
+        "display": "c. 483 BCE (traditional; modern critical c. 410–400 BCE)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Kushinagar (modern Kasia, Uttar Pradesh)",
+        "region": "Malla mahajanapada",
+        "country": "IN",
+        "points": [{ "lat": 26.7421, "lon": 83.8895, "name": "Kushinagar" }]
+      },
+      "era": "mahajanapada",
+      "category": ["religious", "cultural"],
+      "figures": ["Siddhartha Gautama Buddha", "Ananda", "Mahakasyapa"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Gautama_Buddha", "label": "Wikipedia: Gautama Buddha", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Mahaparinibbana Sutta (Digha Nikaya 16; Maurice Walshe trans., The Long Discourses of the Buddha, 1995)", "type": "primary" },
+        { "label": "Richard Gombrich, Theravada Buddhism: A Social History from Ancient Benares to Modern Colombo (2nd ed., 2006)", "type": "scholarly" },
+        { "label": "Heinz Bechert (ed.), The Dating of the Historical Buddha (3 vols., 1991–1997)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "alexander-hydaspes-326-bce",
+      "title": "Alexander defeats Porus at the Hydaspes",
+      "tooltip": "Alexander defeats Porus at the Battle of the Hydaspes, May 326 BCE",
+      "summary": "Alexander defeated King Porus at the Hydaspes (Jhelum) — his easternmost major battle; the army mutinied at the Beas weeks later, ending the campaign.",
+      "detail": "Alexander III of Macedon crossed the Indus in spring 326 BCE after the Persian Achaemenid satrapy collapse, marching east through Taxila (whose ruler Ambhi submitted) toward the Punjab. King Porus (Sanskrit Puru / Paurava) of the Jhelum-Chenab doab refused tribute. The Battle of the Hydaspes — fought on the river's east bank in May 326 BCE during a monsoon thunderstorm — was Alexander's most difficult battle: Porus's war elephants disrupted the Macedonian phalanx; Alexander's son-in-law Hephaestion's cavalry crossing was hard-won. Porus was captured and famously asked to be treated 'as a king'; Alexander reinstated him as a vassal. The Macedonian army mutinied at the Beas (Hyphasis) river two months later, refusing to march further east toward Magadha; Alexander turned south down the Indus. He died at Babylon in 323 BCE; his Indian conquests were retained by Seleucus, then ceded to Chandragupta Maurya in 305 BCE.",
+      "date": {
+        "start": "-326-05",
+        "end":   "-326-05",
+        "precision": "month",
+        "approximate": true,
+        "display": "May 326 BCE"
+      },
+      "location": {
+        "type": "city",
+        "name": "Hydaspes (Jhelum river, near modern Bhera)",
+        "region": "Punjab",
+        "country": "PK",
+        "points": [{ "lat": 32.5167, "lon": 73.5333, "name": "Hydaspes battlefield" }]
+      },
+      "era": "mahajanapada",
+      "category": ["military", "political"],
+      "figures": ["Alexander the Great", "Porus", "Ambhi (Omphis)", "Hephaestion"],
+      "caused_by": [
+        { "id": "achaemenid-conquest-of-indus-518-bce", "gloss": "Alexander's campaign followed the Achaemenid imperial corridor — the same northwest passes, the same satrapal administrative geography Persia had built two centuries earlier." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Battle_of_the_Hydaspes", "label": "Wikipedia: Battle of the Hydaspes", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Arrian, Anabasis Alexandri V (2nd c. CE; Aubrey de Sélincourt trans., 1958)", "type": "primary" },
+        { "label": "A.B. Bosworth, Conquest and Empire: The Reign of Alexander the Great (1988), ch. 5", "type": "scholarly" }
+      ],
+      "verified": true
+    }
+  ]
+}
