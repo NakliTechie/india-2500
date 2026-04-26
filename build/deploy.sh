@@ -59,6 +59,9 @@ cp "$REPO_ROOT/web/india-history.html" "$ASSETS_DIR/"
 [ -f "$REPO_ROOT/web/india-history.png" ] && cp "$REPO_ROOT/web/india-history.png" "$ASSETS_DIR/"
 [ -f "$REPO_ROOT/web/india-history-square.png" ] && cp "$REPO_ROOT/web/india-history-square.png" "$ASSETS_DIR/"
 
+echo "==> injecting assets-host page-nav sidebar"
+python3 "$REPO_ROOT/build/_pagenav-inject.py" "$ASSETS_DIR/india-history.html"
+
 echo ""
 echo "Staged. Review and commit from the assets repo:"
 echo "  cd $ASSETS_DIR"
