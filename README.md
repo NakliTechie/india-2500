@@ -9,7 +9,7 @@ Hosted at **[assets.chiragpatnaik.com/india-history.html](https://assets.chiragp
 A growing, validator-enforced corpus of historical events, threads (curated walks through events), people (biographical tracks across the map), and collections (set-shaped thematic groupings). Editorial stance: neutral, data-grounded, named entities and numbers over adjectives.
 
 Current corpus:
-- **99 events** spanning 1192–1958 CE across 13 campaign files (Sultanate, Central Asia, Mughal, Sur, Bengal, Chotanagpur, Northeast, Odisha, South India, Reform-era, 1857, Princely States, Independence)
+- **151 events** spanning 518 BCE → 1958 CE across 18 campaign files (Mahajanapada, Maurya, Post-Maurya, Gupta, Early-medieval, Sultanate, Central Asia, Mughal, Sur, Bengal, Chotanagpur, Northeast, Odisha, South India, Reform-era, 1857, Princely States, Independence)
 - **2 threads** (Chauri Chaura and the cost of non-violence; Babur's road to Panipat)
 - **6 people** (Gandhi, Nehru, Bhagat Singh, Ambedkar, Jinnah, Babur)
 - **5 collections** — Babur's road; Founding moments of modern India; First-person works of the subcontinent (20 memoirs); Women shapers of the freedom struggle; Rebellions before and beyond 1857 (18 members)

@@ -23,12 +23,12 @@ The boundary rule for any India map: **Datameet, never Natural Earth or world-at
 ├── .gitignore                    datameet/, package/, .claude/, tests/artifacts/
 │
 ├── data/
-│   ├── events/events_*.json           121 events across 13 campaign files
+│   ├── events/events_*.json           151 events across 18 campaign files
 │   ├── threads/threads_*.json         2 threads
 │   ├── people/people_*.json           6 people
 │   ├── collections/collections_*.json 5 collections
-│   ├── places/places_*.json           30 places
-│   └── polities/polities_*.json       22 polities
+│   ├── places/places_*.json           39 places
+│   └── polities/polities_*.json       27 polities
 │
 ├── validators/
 │   ├── validate_events.py        schema + cross-reference + PIP + tag format
