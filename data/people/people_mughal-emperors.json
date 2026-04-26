@@ -124,6 +124,202 @@
         }
       ],
       "verified": true
+    },
+
+    {
+      "id": "akbar",
+      "name": "Jalal-ud-din Muhammad Akbar",
+      "short_name": "Akbar",
+      "tooltip": "Akbar (1542–1605), third Mughal emperor; consolidator of the empire",
+      "summary": "Third Mughal emperor; ascended at thirteen after Panipat 1556; built the empire from Hindu Kush to Deccan; codified mansabdari and Rajput-marriage alliance.",
+      "era": "mughal",
+      "lifespan": {
+        "born": "1542-10-15",
+        "died": "1605-10-27",
+        "birthplace": { "name": "Umarkot Fort, Sindh", "country": "PK", "lat": 25.3640, "lon": 69.7430 },
+        "deathplace": { "name": "Agra Fort", "country": "IN", "lat": 27.1795, "lon": 78.0211 }
+      },
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Akbar", "label": "Wikipedia: Akbar", "type": "wikipedia" }
+      ],
+      "colour": "#3a8a3a",
+      "track": [
+        {
+          "kind": "moment",
+          "id": "akbar-birth-umarkot-1542",
+          "tooltip": "Born at Umarkot Fort in Sindh, 15 October 1542",
+          "summary": "Born at Umarkot in Sindh during Humayun's flight to Persia after Sher Shah's defeat at Chausa. Spent his first thirteen years in Persian and Afghan exile.",
+          "date": { "start": "1542-10-15", "end": "1542-10-15", "precision": "day", "approximate": false, "display": "15 October 1542" },
+          "location": { "name": "Umarkot Fort, Sindh", "region": "Rana Prasad's territory", "country": "PK",
+                        "points": [{ "lat": 25.3640, "lon": 69.7430 }] },
+          "note": "Father Humayun was a fugitive from the Sur Empire; mother Hamida Banu Begum gave birth in the Hindu Sodha Rajput chief Rana Prasad's hospitality. The early Persian-Afghan exile years (Kandahar, Kabul, Mashhad) shaped Akbar's later cross-confessional politics."
+        },
+        {
+          "kind": "event-ref",
+          "event_id": "second-battle-of-panipat-1556",
+          "role": "Acceded to the Mughal throne days before; Bairam Khan as regent commanded the field. Hemu's defeat opened Hindustan to the second Mughal consolidation.",
+          "note": "Akbar was thirteen and present at the battle. Bairam Khan's victory over Hemu Vikramaditya restored Mughal authority over the Delhi-Agra heartland that Sher Shah had taken from Humayun."
+        },
+        {
+          "kind": "event-ref",
+          "event_id": "akbar-coronation-1556",
+          "role": "Coronated at fourteen at Kalanaur (Punjab) under Bairam Khan's regency, 14 February 1556 — eleven days after Humayun's death at Delhi.",
+          "note": "Bairam Khan ran the empire as regent until 1560 when Akbar dismissed him. The 1560 'transfer of power' was the moment Akbar emerged as the operational sovereign."
+        },
+        {
+          "kind": "moment",
+          "id": "akbar-jodha-marriage-1562",
+          "tooltip": "Marriage to Harkha Bai (Jodha Bai) of Amber, January 1562",
+          "summary": "Marriage to Harkha Bai of the Kachhwaha Rajputs at Sambhar — the founding political alliance with the Rajputs and the model for Mughal-Rajput integration.",
+          "date": { "start": "1562-01-20", "end": "1562-01-20", "precision": "day", "approximate": true, "display": "January 1562" },
+          "location": { "name": "Sambhar, Amber kingdom", "region": "Rajputana", "country": "IN",
+                        "points": [{ "lat": 26.9078, "lon": 75.1881 }] },
+          "note": "Raja Bharmal of Amber's daughter — mother of the future Jahangir. The marriage gave the Kachhwaha Rajputs imperial-ally status (Bhagwan Das, Man Singh as Mughal generals) and inaugurated the Mughal-Rajput political fusion that lasted till Aurangzeb's reversal."
+        },
+        {
+          "kind": "event-ref",
+          "event_id": "fatehpur-sikri-founded-1571",
+          "role": "Founded the new capital at Sikri to commemorate the birth of son Salim (the future Jahangir) at the saint Salim Chishti's hermitage.",
+          "note": "The Sikri-as-capital experiment ran 1571–85; abandoned thereafter, probably due to water scarcity. The intact red-sandstone architectural complex survives — among the most legible expressions of Mughal-Hindu-Sufi architectural synthesis."
+        },
+        {
+          "kind": "event-ref",
+          "event_id": "battle-of-haldighati-1576",
+          "role": "His Mughal army under Man Singh fought Maharana Pratap of Mewar at Haldighati — Mughal tactical victory; Mewar resistance continued for two more decades.",
+          "note": "Akbar was not personally present; Man Singh commanded. Pratap escaped the battlefield and retained guerrilla resistance from the Aravallis until his death in 1597 — the one major Rajput house to refuse the Mughal-Rajput integration."
+        },
+        {
+          "kind": "event-ref",
+          "event_id": "mansabdari-codified-1577",
+          "role": "Codified the mansabdari ranks system that organised the Mughal nobility into 33 grades — the structural innovation of Mughal imperial administration.",
+          "note": "Mansabdari converted feudal-style holdings into a centrally-graded service system — recruitment, pay, and military obligation administered through the central diwan. The system held until late Aurangzeb when it broke under Deccan-war fiscal pressure."
+        },
+        {
+          "kind": "event-ref",
+          "event_id": "din-i-ilahi-1582",
+          "role": "Promulgated the Din-i-Ilahi at the Ibadat Khana — synthetic monotheist court religion drawing on Sufi, Hindu, Jain, Zoroastrian, and Christian elements.",
+          "note": "Never more than ~19 disciples in his lifetime; effectively died with him in 1605. The doctrinal experiment is less important than the inter-religious court culture it framed — Akbar's reign as the high-water mark of Mughal religious eclecticism, deliberately reversed by Aurangzeb a century later."
+        },
+        {
+          "kind": "event-ref",
+          "event_id": "abul-fazl-akbarnama-1590",
+          "role": "Commissioned Abul Fazl to begin the Akbarnama — the official three-volume reign-history that became the canonical Mughal historiographical model.",
+          "note": "Abul Fazl, the chief ideologue of Akbar's later reign, was murdered in 1602 on Salim's instruction. The Akbarnama and the parallel Ain-i-Akbari (administrative-statistical compendium) are the central sources for sixteenth-century Mughal India."
+        },
+        {
+          "kind": "event-ref",
+          "event_id": "akbar-death-1605",
+          "role": "Died at Agra Fort 27 October 1605 of dysentery, aged 63. Salim succeeded as Jahangir; the Salim-Akbar father-son tension had structured the last decade of the reign.",
+          "note": "Buried at Sikandra outside Agra in a tomb whose architecture deliberately combined Hindu, Buddhist, Jain, Christian, and Islamic motifs — the architectural statement of his eclectic religious project. The empire he left covered ~3.2 million sq km from Kabul to the Krishna river."
+        }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "aurangzeb",
+      "name": "Muhi-ud-din Muhammad Aurangzeb Alamgir",
+      "short_name": "Aurangzeb",
+      "tooltip": "Aurangzeb (1618–1707), sixth Mughal emperor; reigned 49 years",
+      "summary": "Sixth Mughal emperor; took the throne after the 1658 war of succession; reigned 49 years; spent the last 26 in Deccan; reversed Akbar's eclecticism.",
+      "era": "mughal",
+      "lifespan": {
+        "born": "1618-11-03",
+        "died": "1707-03-03",
+        "birthplace": { "name": "Dahod, Gujarat", "country": "IN", "lat": 22.8330, "lon": 74.2660 },
+        "deathplace": { "name": "Ahmadnagar (Bhingar), Deccan", "country": "IN", "lat": 19.0948, "lon": 74.7480 }
+      },
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Aurangzeb", "label": "Wikipedia: Aurangzeb", "type": "wikipedia" }
+      ],
+      "colour": "#5a4a8a",
+      "track": [
+        {
+          "kind": "moment",
+          "id": "aurangzeb-birth-dahod-1618",
+          "tooltip": "Born at Dahod, Gujarat, 3 November 1618",
+          "summary": "Third son of Shah Jahan and Mumtaz Mahal. Spent ages 8–12 (1626–28) as a hostage at Jahangir's court during Shah Jahan's rebellion against his father.",
+          "date": { "start": "1618-11-03", "end": "1618-11-03", "precision": "day", "approximate": false, "display": "3 November 1618" },
+          "location": { "name": "Dahod, Gujarat", "region": "Mughal Gujarat", "country": "IN",
+                        "points": [{ "lat": 22.8330, "lon": 74.2660 }] },
+          "note": "Mumtaz Mahal — Shah Jahan's favourite wife — died in 1631 giving birth to Aurangzeb's youngest sister Gauhara Begum. The Taj Mahal at Agra was built (1632–53) as her mausoleum. The succession-relevant Shah Jahan children: Dara Shukoh (eldest), Shah Shuja, Aurangzeb, Murad Bakhsh."
+        },
+        {
+          "kind": "moment",
+          "id": "aurangzeb-deccan-viceroy-1636",
+          "tooltip": "Appointed Viceroy of the Deccan, 1636 (aged 17)",
+          "summary": "Appointed Viceroy of the Mughal Deccan at seventeen — Aurangabad capital. Two terms (1636–44, 1652–58); learnt the theatre that defined his later reign.",
+          "date": { "start": "1636-07-14", "end": "1636-07-14", "precision": "day", "approximate": true, "display": "14 July 1636" },
+          "location": { "name": "Aurangabad (Khirki / Fatehnagar)", "region": "Mughal Deccan", "country": "IN",
+                        "points": [{ "lat": 19.8762, "lon": 75.3433 }] },
+          "note": "Renamed Khirki as Aurangabad. The 1636 appointment came after the Mughal-Ahmednagar war's conclusion (Shah Jahan's first Deccan campaign). Aurangzeb's Deccan governance experience — Bijapur and Golconda diplomacy, Maratha-frontier tensions — shaped his post-1681 strategic decision to relocate the imperial court south."
+        },
+        {
+          "kind": "moment",
+          "id": "aurangzeb-war-of-succession-1657-1658",
+          "tooltip": "War of Succession against Dara Shukoh, 1657–58",
+          "summary": "Shah Jahan's illness Sep 1657 triggered the four-brother war. Aurangzeb defeated Dara at Samugarh 8 June 1658; imprisoned Shah Jahan; executed Dara 1659.",
+          "date": { "start": "1657-09-01", "end": "1659-08-30", "precision": "day", "approximate": false, "display": "September 1657 – August 1659" },
+          "location": { "name": "Samugarh, near Agra (decisive battle)", "region": "Mughal Hindustan", "country": "IN",
+                        "points": [{ "lat": 27.1500, "lon": 78.1500 }] },
+          "note": "The four sons: Dara Shukoh (heir-presumptive), Shah Shuja (Bengal), Aurangzeb (Deccan), Murad Bakhsh (Gujarat). Aurangzeb allied with Murad to defeat Dara, then turned on Murad and imprisoned him at Gwalior (executed 1661). Shah Shuja fled to Arakan and disappeared. Dara was captured, paraded through Delhi in chains, tried for apostasy, beheaded."
+        },
+        {
+          "kind": "event-ref",
+          "event_id": "aurangzeb-coronation-1658",
+          "role": "Crowned at the Shalimar Gardens, Delhi, 31 July 1658 — title 'Alamgir' ('World-Seizer'). Held a second formal coronation at Delhi June 1659 after Dara's defeat was complete.",
+          "note": "The succession war and Shah Jahan's imprisonment at Agra Fort (where the deposed emperor lived for eight more years until his death 1666) defined Aurangzeb's reign as legally suspect from its founding moment — the Sunni orthodox-jurisprudence framing he later cultivated was partly a response."
+        },
+        {
+          "kind": "moment",
+          "id": "aurangzeb-jaziya-1679",
+          "tooltip": "Reimposition of the jaziya tax on non-Muslims, 2 April 1679",
+          "summary": "Reimposed the jaziya tax on non-Muslim subjects, 2 April 1679 — abolished by Akbar 1564. Reversal of a century-old Mughal religious settlement.",
+          "date": { "start": "1679-04-02", "end": "1679-04-02", "precision": "day", "approximate": false, "display": "2 April 1679" },
+          "location": { "name": "Delhi (Shahjahanabad)", "region": "Mughal Hindustan", "country": "IN",
+                        "points": [{ "lat": 28.6517, "lon": 77.2371 }] },
+          "note": "The reimposition triggered Hindu and Rajput protests in Delhi (the Jama Masjid demonstration of April 1679 was suppressed); Mewar, Marwar, and the Bundela Rajputs revolted. The jaziya was withdrawn briefly during the Deccan campaigns and finally abolished by Bahadur Shah I in 1712. Aurangzeb's reversal of Akbar's religious policy is the central point of historiographical contestation about his reign."
+        },
+        {
+          "kind": "moment",
+          "id": "aurangzeb-deccan-departure-1681",
+          "tooltip": "Departure for the Deccan, September 1681 — never to return",
+          "summary": "Left Delhi Sep 1681 with the largest Mughal field army ever — to crush the Marathas and absorb Bijapur and Golconda. Never returned to Hindustan.",
+          "date": { "start": "1681-09-08", "end": "1681-09-08", "precision": "day", "approximate": false, "display": "8 September 1681" },
+          "location": { "name": "Delhi → Aurangabad", "region": "Mughal Hindustan → Deccan", "country": "IN",
+                        "points": [{ "lat": 28.6517, "lon": 77.2371 }] },
+          "note": "The Deccan campaign was the longest sustained military operation in Mughal history — 26 years from departure to death at Ahmadnagar. The fiscal drain (estimated at 100 crore rupees over the campaign) hollowed out the imperial treasury; the army's continuous southern deployment opened northern frontiers to the Sikh and Jat resistance movements that would fragment the empire after Aurangzeb's death."
+        },
+        {
+          "kind": "event-ref",
+          "event_id": "deccan-annexations-1686",
+          "role": "Annexed Bijapur (1686) then Golconda (1687) — extinguishing the two surviving Bahmani-successor sultanates and bringing the Deccan to within reach of imperial integration.",
+          "note": "The Bijapur and Golconda treasuries (Golconda alone surrendered ~6 crore rupees) financed the next decade of the Maratha campaign. The administrative absorption of these sultanates added 33 new mansabs and the Bahmani administrative class to the Mughal nobility — partly relieving the fiscal pressure but doubling the patronage demands."
+        },
+        {
+          "kind": "event-ref",
+          "event_id": "sambhaji-execution-1689",
+          "role": "Captured Sambhaji at Sangameshwar February 1689; executed at Tulapur 11 March 1689 after refusing to convert. The Maratha succession passed to Rajaram, then to Tarabai.",
+          "note": "Sambhaji's execution was meant to break the Maratha resistance; instead it produced two decades of intensified guerrilla war under Rajaram, then Tarabai. The Mughal-Maratha war from 1689 onward is the operational reason Aurangzeb could never withdraw from the Deccan."
+        },
+        {
+          "kind": "moment",
+          "id": "aurangzeb-zafarnamah-received-1705",
+          "tooltip": "Receives Guru Gobind Singh's Zafarnamah at Ahmadnagar, 1706",
+          "summary": "Received Guru Gobind Singh's Persian-verse Zafarnamah from Bhai Daya Singh and Bhai Dharam Singh at Ahmadnagar — the moral indictment of his last year.",
+          "date": { "start": "1706-01-01", "end": "1706-12-31", "precision": "year", "approximate": true, "display": "1706 (received at Ahmadnagar)" },
+          "location": { "name": "Ahmadnagar, Mughal Deccan", "region": "Mughal Deccan", "country": "IN",
+                        "points": [{ "lat": 19.0948, "lon": 74.7480 }] },
+          "note": "The Zafarnamah was Guru Gobind Singh's response to Wazir Khan of Sirhind's breach of safe-conduct at Anandpur and the murder of his children. Mughal accounts say Aurangzeb read it; Sikh accounts say it shook him. The exchange — the Sikh tenth Guru and the dying Mughal emperor — is one of the iconic moments of late-Mughal religious-political history."
+        },
+        {
+          "kind": "event-ref",
+          "event_id": "aurangzeb-death-1707",
+          "role": "Died at Ahmadnagar 3 March 1707 aged 88. Buried in a simple grave at Khuldabad as he had specified — no marble, no inlay, his own income from Quran-copying paying for it.",
+          "note": "His will divided the empire among three surviving sons; Bahadur Shah I's accession after the war of succession (Battle of Jajau, June 1707) opened the rapid imperial fragmentation of the eighteenth century. The Maratha, Sikh, Jat, and Awadh successor states were operational within a generation."
+        }
+      ],
+      "verified": true
     }
   ]
 }
