@@ -462,6 +462,112 @@
     },
 
     {
+      "id": "round-table-conferences-1930-1932",
+      "title": "Round Table Conferences",
+      "tooltip": "Three Round Table Conferences in London, 1930–1932; Gandhi attends the second",
+      "summary": "Three London conferences on Indian constitutional reform — Congress boycotted the first; Gandhi attended the second alone; the third seeded the 1935 Act.",
+      "detail": "The British government convened three Round Table Conferences at St James's Palace, London, between November 1930 and December 1932 — the principal pre-1935 negotiation forum on Indian constitutional reform. The first (12 November 1930 – 19 January 1931) was boycotted by the Congress, then in jail under the Civil Disobedience Movement; it produced the federal-structure-with-princely-states framework but no Congress assent. The second (7 September – 1 December 1931) was attended by Gandhi alone for the Congress, after the Gandhi-Irwin Pact (5 March 1931) had suspended civil disobedience. Gandhi's insistence that Congress alone represented all Indians collided with separate-electorates demands from B.R. Ambedkar (for the Depressed Classes), the Muslim League, the Sikhs, and other interests; the conference deadlocked. The third (17 November – 24 December 1932) was attended by neither Congress nor most major Indian parties; it produced the constitutional framework that became the Government of India Act 1935 — the legal template the independent Indian Republic largely inherited in 1950.",
+      "date": {
+        "start": "1930-11-12",
+        "end":   "1932-12-24",
+        "precision": "day",
+        "approximate": false,
+        "display": "November 1930 – December 1932 (three sessions)"
+      },
+      "location": {
+        "type": "city",
+        "name": "St James's Palace, London",
+        "region": "United Kingdom",
+        "country": "OFF",
+        "points": [{ "lat": 51.5045, "lon": -0.1372, "name": "St James's Palace, London" }]
+      },
+      "era": "colonial",
+      "category": ["political", "colonial-administration"],
+      "figures": ["Mohandas Gandhi", "Ramsay MacDonald", "B.R. Ambedkar", "Muhammad Ali Jinnah", "Sarojini Naidu", "Tej Bahadur Sapru"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Round_Table_Conferences_(India)", "label": "Wikipedia: Round Table Conferences (India)", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Sumit Sarkar, Modern India 1885–1947 (1983), ch. 6", "type": "scholarly" },
+        { "label": "Judith M. Brown, Gandhi: Prisoner of Hope (1989), ch. 7", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "bhagat-singh-execution-1931",
+      "title": "Execution of Bhagat Singh, Rajguru, and Sukhdev",
+      "tooltip": "Bhagat Singh, Rajguru, Sukhdev hanged at Lahore Central Jail, 23 March 1931",
+      "summary": "Bhagat Singh, Shivaram Rajguru, Sukhdev Thapar hanged at Lahore Central Jail under the Lahore Conspiracy Case verdict — eleven hours before announced time.",
+      "detail": "Bhagat Singh (23), Shivaram Rajguru (22), and Sukhdev Thapar (23), Hindustan Socialist Republican Association (HSRA) revolutionaries, were hanged at Lahore Central Jail on 23 March 1931 — eleven hours before the announced 6:00 AM execution time, to forestall public protests outside the jail. They had been convicted in the Lahore Conspiracy Case for the December 1928 killing of John Saunders, a Lahore police assistant superintendent (mistaken for the senior officer responsible for the lathi-charge that killed Lala Lajpat Rai weeks earlier), and for the April 1929 Bhagat-Singh-and-Batukeshwar-Dutt bombing of the Central Legislative Assembly in Delhi (a deliberately non-lethal protest, leaflets reading 'it takes a loud noise to make the deaf hear'). The trial — held in absentia for portions when the defendants refused to participate — became a major political event; Gandhi failed to secure clemency in his Round Table negotiation with Lord Irwin. The bodies were cremated secretly at Hussainiwala on the Sutlej; Bhagat Singh has the distinction of being among the most-cited Indian revolutionaries across ideologically opposed political traditions in the post-1947 period.",
+      "date": {
+        "start": "1931-03-23",
+        "end":   "1931-03-23",
+        "precision": "day",
+        "approximate": false,
+        "display": "23 March 1931"
+      },
+      "location": {
+        "type": "city",
+        "name": "Lahore Central Jail",
+        "region": "Punjab",
+        "country": "PK",
+        "points": [{ "lat": 31.5497, "lon": 74.3436, "name": "Lahore" }]
+      },
+      "era": "colonial",
+      "category": ["resistance", "political"],
+      "figures": ["Bhagat Singh", "Shivaram Rajguru", "Sukhdev Thapar", "Lala Lajpat Rai", "Mohandas Gandhi"],
+      "caused_by": [
+        { "id": "simon-commission-protest-1928", "gloss": "The Simon protest produced the lathi-charge that killed Lajpat Rai; the HSRA's revenge-killing of Saunders in December 1928 was the proximate act for which Bhagat Singh and Rajguru were tried, alongside the Assembly bombing." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Bhagat_Singh", "label": "Wikipedia: Bhagat Singh", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "A.G. Noorani, The Trial of Bhagat Singh: Politics of Justice (1996; rev. 2005)", "type": "scholarly" },
+        { "label": "Chaman Lal (ed.), Bhagat Singh: The Jail Notebook and Other Writings (2007)", "type": "primary" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "poona-pact-1932",
+      "title": "Poona Pact between Gandhi and Ambedkar",
+      "tooltip": "Gandhi-Ambedkar Poona Pact, 24 September 1932; ends Gandhi's Yerwada fast",
+      "summary": "Gandhi's six-day Yerwada fast against the Communal Award ended with the Poona Pact — reserved seats in joint electorate replacing separate electorates.",
+      "detail": "The British Communal Award (16 August 1932), announced by Prime Minister Ramsay MacDonald after the Round Table Conferences' deadlock, granted separate electorates to the Depressed Classes (Dalits) — separate from the Hindu electorate, with reserved constituencies in which only Dalits could vote. B.R. Ambedkar had argued for this as essential to political representation independent of the caste-Hindu elite. Gandhi, opposed on the principle that separate electorates would permanently divide the Hindu community, began a fast unto death at Yerwada Jail (Pune) on 20 September 1932. After six days of negotiation between Ambedkar and Hindu reformist intermediaries (Madan Mohan Malaviya, M.C. Rajah), the Poona Pact was signed on 24 September 1932: separate electorates were dropped in favour of joint electorates with substantially expanded reserved seats (148 for Depressed Classes in the provincial legislatures, against the Communal Award's 71). Ambedkar's later writings (notably What Congress and Gandhi Have Done to the Untouchables, 1945) read the Pact as a coerced settlement under fast pressure; the seat-reservation framework persists in the Indian constitution.",
+      "date": {
+        "start": "1932-09-24",
+        "end":   "1932-09-24",
+        "precision": "day",
+        "approximate": false,
+        "display": "24 September 1932"
+      },
+      "location": {
+        "type": "city",
+        "name": "Yerwada Jail, Pune",
+        "region": "Bombay Presidency",
+        "country": "IN",
+        "points": [{ "lat": 18.5500, "lon": 73.8800, "name": "Yerwada Jail, Pune" }]
+      },
+      "era": "colonial",
+      "category": ["political", "reform"],
+      "figures": ["Mohandas Gandhi", "B.R. Ambedkar", "Madan Mohan Malaviya", "M.C. Rajah", "Ramsay MacDonald"],
+      "caused_by": [
+        { "id": "round-table-conferences-1930-1932", "gloss": "The Round Table deadlock over separate electorates pushed MacDonald to impose the Communal Award unilaterally; Gandhi's fast and the resulting Poona Pact are the immediate political response to the Award." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Poona_Pact", "label": "Wikipedia: Poona Pact", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "B.R. Ambedkar, What Congress and Gandhi Have Done to the Untouchables (Thacker, 1945)", "type": "primary" },
+        { "label": "Eleanor Zelliot, From Untouchable to Dalit (1992), ch. 5", "type": "scholarly" },
+        { "label": "Christophe Jaffrelot, Dr Ambedkar and Untouchability (2005), ch. 3", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
       "id": "ambedkar-annihilation-of-caste-1936",
       "title": "Ambedkar publishes Annihilation of Caste",
       "tooltip": "Ambedkar self-publishes Annihilation of Caste, Bombay, 1936",
@@ -598,6 +704,43 @@
         { "label": "Jawaharlal Nehru, The Discovery of India (Signet Press, 1946)", "type": "primary" },
         { "label": "Sarvepalli Gopal, Jawaharlal Nehru: A Biography, Vol. 1 (1975), ch. 18", "type": "scholarly" },
         { "label": "Benjamin Zachariah, Nehru (Routledge, 2004), ch. 4", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "ina-imphal-kohima-1944",
+      "title": "INA at Imphal–Kohima",
+      "tooltip": "Battle of Imphal–Kohima, March–July 1944; Bose's INA + Japanese 15th Army",
+      "summary": "Subhas Bose's Azad Hind Fauj fought with the Japanese 15th Army at Imphal–Kohima, March–July 1944 — the high water of the Burma campaign before defeat.",
+      "detail": "Subhas Chandra Bose, having escaped Calcutta house arrest in January 1941 and reached Berlin then (via U-boat) Tokyo in 1943, took command of the Indian National Army (Azad Hind Fauj — INA) on 4 July 1943 and proclaimed the Provisional Government of Azad Hind at Singapore on 21 October 1943. The INA, fighting alongside the Imperial Japanese Army's 15th Army under Lt-Gen Renya Mutaguchi, launched the U-Go operation in March 1944 — crossing the Chindwin and pushing into Manipur and the Naga Hills. The Battles of Imphal (8 March – 3 July 1944) and Kohima (4 April – 22 June 1944) were the campaign's twin peaks: Kohima's Tennis Court battle is among the most-cited British-Indian military engagements of WWII. The British 14th Army under General William Slim broke the Japanese-INA advance through superior logistics and air supply; an estimated 53,000 Japanese-INA casualties (mostly to disease and starvation in monsoon retreat) versus 16,500 Allied. The defeat ended Japanese hopes in the Burma theatre and the INA's military project; the 1945–46 INA trials at the Red Fort in Delhi (Shah Nawaz Khan, P.K. Sahgal, G.S. Dhillon) became a major nationalist political event in the run-up to independence.",
+      "date": {
+        "start": "1944-03-08",
+        "end":   "1944-07-03",
+        "precision": "day",
+        "approximate": false,
+        "display": "March – July 1944 (Imphal); April – June 1944 (Kohima)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Imphal + Kohima (Manipur + Naga Hills)",
+        "region": "Northeast frontier / Burma campaign",
+        "country": "IN",
+        "points": [{ "lat": 24.8170, "lon": 93.9368, "name": "Imphal" }]
+      },
+      "era": "colonial",
+      "category": ["military", "political", "resistance"],
+      "figures": ["Subhas Chandra Bose", "Renya Mutaguchi", "William Slim", "Shah Nawaz Khan"],
+      "caused_by": [
+        { "id": "bose-indian-struggle-1935", "gloss": "Bose's exile-political project documented in The Indian Struggle and continued at Berlin/Tokyo culminated in the INA campaign — Imphal–Kohima is the military extension of the political work the 1935 book frames." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Battle_of_Imphal", "label": "Wikipedia: Battle of Imphal", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Sugata Bose, His Majesty's Opponent: Subhas Chandra Bose and India's Struggle Against Empire (2011)", "type": "scholarly" },
+        { "label": "Robert Lyman, Slim, Master of War (2004)", "type": "scholarly" },
+        { "label": "Joyce Lebra, The Indian National Army and Japan (1971; rev. 2008)", "type": "scholarly" }
       ],
       "verified": true
     },

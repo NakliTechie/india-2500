@@ -1,8 +1,43 @@
 {
   "campaign": "1857",
-  "scope": "1857 rebellion and its lead-up — annexations under Doctrine of Lapse, the May 1857 outbreak, regional centres (Delhi, Lucknow, Kanpur, Jhansi, Awadh), suppression and aftermath. Seeded with Lakshmibai's correspondence; major expansion planned.",
+  "scope": "1857 rebellion and its lead-up — annexations under Doctrine of Lapse, the May 1857 outbreak, regional centres (Delhi, Lucknow, Kanpur, Jhansi, Awadh), suppression and aftermath.",
   "updated": "2026-04-26",
   "events": [
+    {
+      "id": "indian-rebellion-1857",
+      "title": "Indian Rebellion of 1857",
+      "tooltip": "Indian Rebellion of 1857 — Meerut outbreak through suppression by 1859",
+      "summary": "Sepoy mutiny at Meerut spread into a 14-month war — Bahadur Shah Zafar declared emperor at Delhi; suppression cost an estimated 800,000 Indian lives.",
+      "detail": "On 10 May 1857 the EIC's Bengal Army sepoys at Meerut mutinied over the greased-cartridge issue (cartridges greased with cow + pig fat for the new Enfield rifle — religiously unacceptable to both Hindu and Muslim sepoys), killed their British officers, and marched on Delhi. The next day they reached Delhi, killed the British residents, and declared the elderly Mughal Bahadur Shah Zafar (then 82) emperor of India — the political act that turned a sepoy mutiny into a full anti-EIC war. The rebellion spread across the Gangetic plain, Awadh, Bundelkhand, and parts of central India: major centres at Delhi (siege June–September 1857), Lucknow (siege July 1857 – March 1858), Kanpur (the Cawnpore massacre under Nana Sahib, July 1857), Jhansi (Lakshmibai's defence June 1858), and Gwalior (Lakshmibai killed June 1858). Nominally suppressed by July 1858 with Delhi's fall and the surrender of major rebel commanders; campaigning continued into 1859. Bahadur Shah was tried, exiled to Rangoon, and died there 1862 — formal end of the Mughal dynasty. The Government of India Act (August 1858) transferred all EIC territory to the Crown. Indian casualties estimated at 800,000 across the campaign and reprisals.",
+      "date": {
+        "start": "1857-05-10",
+        "end":   "1858-07-08",
+        "precision": "day",
+        "approximate": false,
+        "display": "10 May 1857 – 8 July 1858 (campaigning into 1859)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Delhi (the rebellion's symbolic centre; Meerut was the outbreak)",
+        "region": "British India",
+        "country": "IN",
+        "points": [{ "lat": 28.6139, "lon": 77.2090, "name": "Delhi" }]
+      },
+      "era": "colonial",
+      "category": ["resistance", "military", "political"],
+      "figures": ["Bahadur Shah Zafar", "Nana Sahib", "Tatya Tope", "Lakshmibai of Jhansi", "Mangal Pandey", "Begum Hazrat Mahal"],
+      "tags": ["rebellion"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Indian_Rebellion_of_1857", "label": "Wikipedia: Indian Rebellion of 1857", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Rudrangshu Mukherjee, Awadh in Revolt 1857–1858 (1984)", "type": "scholarly" },
+        { "label": "William Dalrymple, The Last Mughal: The Fall of a Dynasty, Delhi 1857 (2006)", "type": "scholarly" },
+        { "label": "C.A. Bayly, Indian Society and the Making of the British Empire (1988), ch. 7", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
     {
       "id": "lakshmibai-letters-1853-1858",
       "title": "Letters of Lakshmibai of Jhansi",
