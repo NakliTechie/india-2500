@@ -1,8 +1,425 @@
 {
   "campaign": "south-india",
-  "scope": "South Indian events — Vijayanagara, Mysore Wodeyars and Tipu, Anglo-Mysore wars, Travancore, Madras Presidency, peninsular rebellions and caste-rights agitations.",
+  "scope": "South Indian events — Vijayanagara, Bahmani-successor sultanates, Mysore Wodeyars and Tipu, Anglo-Mysore wars, Travancore, Madras Presidency, peninsular rebellions and caste-rights agitations.",
   "updated": "2026-04-26",
   "events": [
+    {
+      "id": "madurai-sultanate-1335",
+      "title": "Madurai Sultanate founded",
+      "tooltip": "Jalaluddin Ahsan Khan declares Madurai Sultanate, 1335",
+      "summary": "Tughlaq governor Jalaluddin Ahsan Khan revolted from Madurai in 1335 — the southernmost Indian Muslim sultanate, ended by Vijayanagara in 1378.",
+      "detail": "Muhammad bin Tughlaq's southern provincial system collapsed almost as fast as it was built. Jalaluddin Ahsan Khan, the Tughlaq-appointed governor of Ma'bar (the Tamil country), declared independence in 1335 from Madurai, founding the Madurai Sultanate (also called the Ma'bar Sultanate). Ibn Battuta visited the court in 1342 and recorded the violence and instability of the regime — eight sultans in forty-three years, multiple murders. The Sultanate's capital was Madurai (with its Meenakshi Amman temple defaced or repurposed during this period); its territory ranged from the Coromandel coast to the Western Ghats. Vijayanagara's Kumara Kampana defeated the last Madurai sultan in 1378, ending the sultanate. The brief Madurai Sultanate is the southernmost reach of any Delhi-derived Muslim political power; nothing comparable would emerge so far south again until Hyder Ali's Mysore in the 18th century.",
+      "date": {
+        "start": "1335",
+        "end":   "1378",
+        "precision": "year",
+        "approximate": false,
+        "display": "1335 (Ahsan Khan declares) – 1378 (Vijayanagara reconquest)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Madurai",
+        "region": "Pandya country",
+        "country": "IN",
+        "points": [{ "lat": 9.9252, "lon": 78.1198, "name": "Madurai" }]
+      },
+      "era": "sultanate",
+      "category": ["political", "dynastic", "military"],
+      "figures": ["Jalaluddin Ahsan Khan", "Ibn Battuta", "Kumara Kampana"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Madurai_Sultanate", "label": "Wikipedia: Madurai Sultanate", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Mehrdad Shokoohy, Muslim Architecture of South India: The Sultanate of Ma'bar (2003)", "type": "scholarly" },
+        { "label": "K.A. Nilakanta Sastri, A History of South India (1955)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "vijayanagara-founded-1336",
+      "title": "Vijayanagara founded by Harihara and Bukka",
+      "tooltip": "Harihara and Bukka Sangama found Vijayanagara at Hampi, 1336",
+      "summary": "Harihara and Bukka Sangama, brothers and former Hoysala officers, founded the Vijayanagara empire on the south bank of the Tungabhadra at Hampi.",
+      "detail": "Harihara I and Bukka Raya I, two of five Sangama brothers in service first to the Kakatiyas of Warangal and then (after 1323) the Hoysalas, founded Vijayanagara on 18 April 1336 on the south bank of the Tungabhadra river at Hampi. The conventional foundation story credits the Advaita scholar Vidyaranya of Sringeri Math with religious legitimation — though modern scholarship reads Vidyaranya's role as later attribution. The empire was built explicitly as a Hindu counter to Bahmani and the Madurai Sultanate; its 310-year run (1336–1646) was the longest unified Hindu-ruled imperial regime in South India since the Cholas. The capital at Hampi grew to perhaps 500,000 by Krishna Deva Raya's reign — among the largest cities in the world in the 16th century. Persian and European travellers (Abdur Razzak, Domingo Paes, Fernão Nunes) recorded a court of legendary wealth and cosmopolitan trade contacts.",
+      "date": {
+        "start": "1336-04-18",
+        "end":   "1336-04-18",
+        "precision": "day",
+        "approximate": false,
+        "display": "18 April 1336 (Hampi)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Hampi (Tungabhadra valley)",
+        "region": "Karnataka",
+        "country": "IN",
+        "points": [{ "lat": 15.3350, "lon": 76.4600, "name": "Hampi" }]
+      },
+      "era": "early-medieval",
+      "category": ["political", "dynastic", "religious"],
+      "figures": ["Harihara I", "Bukka Raya I", "Vidyaranya"],
+      "caused_by": [
+        { "id": "daulatabad-capital-shift-1327", "gloss": "Muhammad bin Tughlaq's Daulatabad project pulled north-Indian administrative weight south but failed; the Sangama brothers' founding of Vijayanagara is the southern political response to that Tughlaq overreach." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Vijayanagara_Empire", "label": "Wikipedia: Vijayanagara Empire", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Burton Stein, Vijayanagara (Cambridge New History of India I.2, 1989)", "type": "scholarly" },
+        { "label": "Phillip B. Wagoner, Tidings of the King: A Translation and Ethnohistorical Analysis of the Rāyavācakamu (1993)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "bijapur-sultanate-founded-1490",
+      "title": "Bijapur Sultanate founded",
+      "tooltip": "Yusuf Adil Shah declares Bijapur independence from Bahmani, 1490",
+      "summary": "Yusuf Adil Shah, the Bahmani governor of Bijapur, declared independence in 1490 — first of the five Deccan Sultanates that emerged from Bahmani fragmentation.",
+      "detail": "Yusuf Adil Shah, a Persian-born former slave-noble of the Bahmani court (claiming descent from the Aq Qoyunlu Turkmen), declared Bijapur an independent sultanate in 1490 as Bahmani central authority collapsed. The Adil Shahi dynasty he founded ruled for 196 years until Aurangzeb's annexation in 1686. Bijapur is the longest-lived of the Bahmani-successor sultanates, and the most architecturally and culturally distinctive — Persian artistic traditions fused with Marathi-Kannada vernaculars, Shi'a court ritual (unusual among Indian Muslim regimes), and the Gol Gumbaz of Mohammed Adil Shah (1656) is the second-largest dome in the world. Ibrahim Adil Shah II's Kitab-i Nauras (1599) is among the foundational texts of Hindustani classical music synthesis.",
+      "date": {
+        "start": "1490",
+        "end":   "1490",
+        "precision": "year",
+        "approximate": false,
+        "display": "1490 (Bijapur declares; annexed by Aurangzeb 1686)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Bijapur",
+        "region": "Deccan",
+        "country": "IN",
+        "points": [{ "lat": 16.8244, "lon": 75.7154, "name": "Bijapur" }]
+      },
+      "era": "sultanate",
+      "category": ["political", "dynastic"],
+      "figures": ["Yusuf Adil Shah", "Ibrahim Adil Shah II", "Mohammed Adil Shah"],
+      "caused_by": [
+        { "id": "bahmani-sultanate-1347", "gloss": "Bahmani's gradual fragmentation through the late 15th century produced the five Deccan Sultanates (Bijapur 1490, Ahmadnagar 1490, Berar 1490, Bidar 1492, Golconda 1518); Bijapur was the wealthiest and longest-lived." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Adil_Shahi_dynasty", "label": "Wikipedia: Adil Shahi dynasty", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Richard M. Eaton, A Social History of the Deccan, 1300–1761 (2005), ch. 4", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "krishna-deva-raya-reign-1509-1529",
+      "title": "Krishna Deva Raya's reign — Vijayanagara peak",
+      "tooltip": "Krishna Deva Raya rules Vijayanagara, 1509–1529",
+      "summary": "Krishna Deva Raya's reign was Vijayanagara's peak — defeated Bijapur and the Gajapatis, hosted Portuguese, sponsored Telugu-Sanskrit cultural flowering.",
+      "detail": "Krishna Deva Raya of the Tuluva dynasty acceded in 1509 and ruled until 1529 — twenty years that mark Vijayanagara's territorial and cultural peak. He defeated the Adil Shahis (1510), the Gajapatis of Odisha (1518, taking Kondavidu and Vijayawada), and the Bahmani-Bidar combine repeatedly. Hampi at his court hosted Portuguese envoys (Domingo Paes, Fernão Nunes), Persian merchants, and a literary academy whose ashtadiggajas ('eight elephants') — Allasani Peddana, Nandi Thimmana, and others — produced the Telugu literary canon's foundational texts. Krishna Deva Raya himself wrote Amuktamalyada (in Telugu) and other works. He died unexpectedly in 1529; the Vijayanagara state survived another 36 years to Talikota.",
+      "date": {
+        "start": "1509-08",
+        "end":   "1529-10",
+        "precision": "month",
+        "approximate": false,
+        "display": "August 1509 – October 1529"
+      },
+      "location": {
+        "type": "city",
+        "name": "Hampi",
+        "region": "Vijayanagara",
+        "country": "IN",
+        "points": [{ "lat": 15.3350, "lon": 76.4600, "name": "Hampi" }]
+      },
+      "era": "early-medieval",
+      "category": ["political", "military", "cultural"],
+      "figures": ["Krishna Deva Raya", "Allasani Peddana", "Domingo Paes", "Fernão Nunes"],
+      "caused_by": [
+        { "id": "vijayanagara-founded-1336", "gloss": "Vijayanagara's first 173 years were consolidation; Krishna Deva Raya's reign turned the consolidated empire into the dominant subcontinental Hindu-ruled regime of its time." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Krishnadevaraya", "label": "Wikipedia: Krishnadevaraya", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Burton Stein, Vijayanagara (1989)", "type": "scholarly" },
+        { "label": "Robert Sewell, A Forgotten Empire: Vijayanagar (1900) — includes Paes & Nunes translations", "type": "primary" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "golconda-sultanate-founded-1518",
+      "title": "Golconda Sultanate founded",
+      "tooltip": "Quli Qutb-ul-Mulk declares Golconda independence from Bahmani, 1518",
+      "summary": "Quli Qutb-ul-Mulk, Bahmani governor of Telingana, declared the Qutb Shahi sultanate at Golconda — diamond-rich and Persianate, ended by Aurangzeb in 1687.",
+      "detail": "Sultan-Quli Qutb-ul-Mulk, a Persian-born former Bahmani slave-noble appointed governor of Telingana in 1496, declared independence after the Bahmani regent Mahmud Gawan's execution and the dynasty's collapse. The Qutb Shahi sultanate ruled from Golconda Fort (and from 1591 the new city of Hyderabad, founded by Muhammad Quli Qutb Shah). Golconda's wealth came from the diamond mines of Kollur (the source of the Koh-i-Noor and other historic stones) and from Coromandel-coast textile trade through Masulipatnam. The dynasty's distinctive Indo-Persian Shi'a synthesis is preserved in the Charminar (1591), the Qutb Shahi tombs, and the Dakhni Urdu literary tradition. Aurangzeb annexed Golconda in October 1687 after an eight-month siege; the Qutb Shahi treasury, including diamonds, became part of the Mughal exchequer.",
+      "date": {
+        "start": "1518",
+        "end":   "1518",
+        "precision": "year",
+        "approximate": false,
+        "display": "1518 (Quli declares; annexed by Aurangzeb 1687)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Golconda Fort",
+        "region": "Telingana",
+        "country": "IN",
+        "points": [{ "lat": 17.3833, "lon": 78.4011, "name": "Golconda Fort" }]
+      },
+      "era": "sultanate",
+      "category": ["political", "dynastic", "economic"],
+      "figures": ["Sultan-Quli Qutb-ul-Mulk", "Muhammad Quli Qutb Shah", "Abul Hasan Tana Shah"],
+      "caused_by": [
+        { "id": "bahmani-sultanate-1347", "gloss": "The same Bahmani fragmentation that produced Bijapur in 1490 produced Golconda in 1518; the Qutb Shahi state ran the eastern half of the Deccan as Adil Shahi ran the west." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Qutb_Shahi_dynasty", "label": "Wikipedia: Qutb Shahi dynasty", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Richard M. Eaton, A Social History of the Deccan (2005), ch. 5", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "battle-of-talikota-1565",
+      "title": "Battle of Talikota — Vijayanagara falls",
+      "tooltip": "Deccan Sultanate alliance defeats Vijayanagara at Talikota, 26 January 1565",
+      "summary": "An alliance of Bijapur, Golconda, Ahmadnagar, and Bidar defeated the Vijayanagara army at Talikota — Hampi was sacked over five months and never reoccupied.",
+      "detail": "The four major Deccan Sultanates — Bijapur, Golconda, Ahmadnagar, Bidar — set aside their mutual hostilities and combined forces against Vijayanagara under regent Aliya Rama Raya in late 1564. The battle was fought on the south bank of the Krishna near Talikota on 26 January 1565. Rama Raya was captured and beheaded mid-battle; the Vijayanagara cavalry collapsed; the Sultanate alliance pursued the routed army back to Hampi and sacked the capital over five months — a destruction so thorough that Hampi was never reoccupied as a major city. The Vijayanagara state survived in reduced form under the Aravidu dynasty from Penukonda and then Chandragiri until 1646, but the empire as a subcontinental power ended at Talikota. Its collapse opened the Deccan to Mughal expansion under Akbar and Aurangzeb.",
+      "date": {
+        "start": "1565-01-26",
+        "end":   "1565-01-26",
+        "precision": "day",
+        "approximate": false,
+        "display": "26 January 1565"
+      },
+      "location": {
+        "type": "city",
+        "name": "Talikota (Krishna river bank)",
+        "region": "Deccan",
+        "country": "IN",
+        "points": [{ "lat": 16.4742, "lon": 76.2937, "name": "Talikota" }]
+      },
+      "era": "mughal",
+      "category": ["military", "political", "dynastic"],
+      "figures": ["Aliya Rama Raya", "Hussain Nizam Shah", "Ali Adil Shah I", "Ibrahim Qutb Shah"],
+      "caused_by": [
+        { "id": "krishna-deva-raya-reign-1509-1529", "gloss": "The Vijayanagara peak under Krishna Deva Raya generated the imperial pretensions that the Deccan Sultanates set aside their feuds to break — Talikota is the moment the alliance becomes possible." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Battle_of_Talikota", "label": "Wikipedia: Battle of Talikota", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Robert Sewell, A Forgotten Empire: Vijayanagar (1900)", "type": "scholarly" },
+        { "label": "Richard M. Eaton & Phillip B. Wagoner, Power, Memory, Architecture: Contested Sites on India's Deccan Plateau, 1300–1600 (2014)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "battle-of-colachel-1741",
+      "title": "Battle of Colachel — Travancore defeats the Dutch",
+      "tooltip": "Marthanda Varma's Travancore defeats Dutch VOC at Colachel, 10 August 1741",
+      "summary": "Marthanda Varma's Travancore defeated the Dutch East India Company at Colachel — a rare major land defeat of a European power by an Asian state before WWII.",
+      "detail": "Marthanda Varma's consolidation of southern Kerala from 1729 brought him into conflict with the Dutch East India Company (VOC), which controlled the Malabar pepper trade through fortified posts at Kochi and Quilon. After Travancore captured several VOC posts, the Dutch landed an expeditionary force under Captain Eustachius De Lannoy at Colachel (modern Kanyakumari district, Tamil Nadu) in 1741. Travancore's forces — armed with locally-made flintlocks and trained in modern infantry tactics by deserters from European armies — defeated the Dutch on 10 August 1741. De Lannoy and twenty-three other captured Dutch officers entered Travancore service; De Lannoy became the army's commander and modernised it along European lines for the next thirty-six years. The Dutch never recovered their Malabar position; the British (EIC) eventually replaced them in southern Kerala. Among the very few major land defeats of a European colonial power by an Asian state before the 20th century.",
+      "date": {
+        "start": "1741-08-10",
+        "end":   "1741-08-10",
+        "precision": "day",
+        "approximate": false,
+        "display": "10 August 1741"
+      },
+      "location": {
+        "type": "city",
+        "name": "Colachel, southern Travancore",
+        "region": "Kerala / Tamil Nadu border",
+        "country": "IN",
+        "points": [{ "lat": 8.1781, "lon": 77.2542, "name": "Colachel" }]
+      },
+      "era": "colonial",
+      "category": ["military", "political", "resistance"],
+      "figures": ["Marthanda Varma", "Eustachius De Lannoy", "Ramayyan Dalawa"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Battle_of_Colachel", "label": "Wikipedia: Battle of Colachel", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "K.M. Panikkar, Malabar and the Dutch (1931)", "type": "scholarly" },
+        { "label": "A. Sreedhara Menon, A Survey of Kerala History (1967; rev. 2007)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "trippadidanam-1750",
+      "title": "Trippadidanam — Marthanda Varma dedicates Travancore",
+      "tooltip": "Marthanda Varma dedicates Travancore to Padmanabhaswamy, 3 January 1750",
+      "summary": "Marthanda Varma dedicated Travancore to Sri Padmanabhaswamy — rulers became dasa of the deity, a sovereignty frame that survived British paramountcy.",
+      "detail": "On 3 January 1750 (5 Makaram 925 in the Malayalam calendar) Marthanda Varma performed the trippadidanam — the formal dedication of the Travancore kingdom to the deity Sri Padmanabhaswamy at the temple in Thiruvananthapuram. The ruler became Padmanabha Dasa ('servant of Padmanabha'), holding the kingdom as the deity's regent rather than as sovereign. Successive Travancore rulers signed letters as Padmanabha Dasa; the legal-religious framing was used in 19th-century litigation against the British and survives in the Padmanabhaswamy temple's modern court cases. The 2011 Supreme Court-supervised opening of the temple's vaults discovered an estimated US$22 billion in gold, gems, and ceremonial objects accumulated over centuries — among the largest known temple treasures anywhere.",
+      "date": {
+        "start": "1750-01-03",
+        "end":   "1750-01-03",
+        "precision": "day",
+        "approximate": false,
+        "display": "3 January 1750"
+      },
+      "location": {
+        "type": "city",
+        "name": "Sri Padmanabhaswamy Temple, Thiruvananthapuram",
+        "region": "Travancore",
+        "country": "IN",
+        "points": [{ "lat": 8.4828, "lon": 76.9434, "name": "Padmanabhaswamy Temple" }]
+      },
+      "era": "colonial",
+      "category": ["religious", "political", "cultural"],
+      "figures": ["Marthanda Varma", "Sri Padmanabhaswamy"],
+      "caused_by": [
+        { "id": "battle-of-colachel-1741", "gloss": "The Dutch defeat secured Travancore's independence from European pressure in southern Kerala; the trippadidanam codified the religious-political frame of the consolidated kingdom Marthanda Varma had built." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Padmanabhaswamy_Temple", "label": "Wikipedia: Padmanabhaswamy Temple", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "A. Sreedhara Menon, A Survey of Kerala History (rev. 2007)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "battle-of-pollilur-1780",
+      "title": "Battle of Pollilur — Hyder Ali defeats the EIC",
+      "tooltip": "Hyder Ali destroys EIC force under Baillie at Pollilur, 10 September 1780",
+      "summary": "Hyder Ali's Mysore army destroyed an EIC detachment under Colonel William Baillie at Pollilur — among the EIC's worst defeats anywhere before the 19th century.",
+      "detail": "The Second Anglo-Mysore War opened with Hyder Ali's invasion of the Carnatic in July 1780. On 10 September 1780 his force — including French-trained artillery — surrounded and destroyed an EIC detachment of 3,820 men under Colonel William Baillie at Pollilur, near Conjeeveram. The EIC casualties were catastrophic: about 360 killed in action, 200 wounded, the remainder captured. Baillie himself was wounded and died in Mysore captivity in 1782. The defeat was an immediate political shock — depicted in the famous Pollilur murals at Tipu Sultan's Daria Daulat Bagh palace at Srirangapatna (the only Indian battle painting cycle of the period). The EIC eventually recovered through Eyre Coote's victories and the 1784 Treaty of Mangalore, but Pollilur defined Mysore's reputation as the most formidable Indian opponent the EIC faced before Ranjit Singh.",
+      "date": {
+        "start": "1780-09-10",
+        "end":   "1780-09-10",
+        "precision": "day",
+        "approximate": false,
+        "display": "10 September 1780"
+      },
+      "location": {
+        "type": "city",
+        "name": "Pollilur (near Conjeeveram, modern Tamil Nadu)",
+        "region": "Carnatic",
+        "country": "IN",
+        "points": [{ "lat": 12.8500, "lon": 79.7000, "name": "Pollilur" }]
+      },
+      "era": "colonial",
+      "category": ["military", "political"],
+      "figures": ["Hyder Ali", "Tipu Sultan", "William Baillie"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Battle_of_Pollilur_(1780)", "label": "Wikipedia: Battle of Pollilur (1780)", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Mark Wilks, Historical Sketches of the South of India in an Attempt to Trace the History of Mysoor (3 vols., 1810–17)", "type": "primary" },
+        { "label": "Anne Buddle, Tigers Round the Throne: The Court of Tipu Sultan, 1750–1799 (1990)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "treaty-of-mangalore-1784",
+      "title": "Treaty of Mangalore — end of the Second Anglo-Mysore War",
+      "tooltip": "Tipu Sultan and EIC sign Treaty of Mangalore, 11 March 1784",
+      "summary": "Treaty restoring pre-war boundaries between Tipu Sultan and the EIC — the only treaty the EIC ever signed with an Indian state on roughly equal terms.",
+      "detail": "The Second Anglo-Mysore War (1780–1784) ended with the Treaty of Mangalore on 11 March 1784, signed by Tipu Sultan (newly succeeded after Hyder Ali's death in December 1782) and the EIC. The treaty restored the pre-war territorial status quo, exchanged prisoners, and established a Mysore-EIC commercial framework. It is the only Anglo-Indian treaty the EIC negotiated on substantially equal terms — Mysore had not been militarily defeated, the EIC was financially exhausted, and Warren Hastings ratified the treaty against the Madras Council's objections. The Court of Directors in London disowned it within two years, treating Mangalore as a humiliation that needed reversing. The Third Anglo-Mysore War (1790–1792) was the EIC's effort to undo the treaty — and Wellesley's 1799 final assault on Srirangapatna ended Mysore as an independent power.",
+      "date": {
+        "start": "1784-03-11",
+        "end":   "1784-03-11",
+        "precision": "day",
+        "approximate": false,
+        "display": "11 March 1784"
+      },
+      "location": {
+        "type": "city",
+        "name": "Mangalore",
+        "region": "Karnataka coast",
+        "country": "IN",
+        "points": [{ "lat": 12.9141, "lon": 74.8560, "name": "Mangalore" }]
+      },
+      "era": "colonial",
+      "category": ["political", "military"],
+      "figures": ["Tipu Sultan", "Warren Hastings", "Lord Macartney"],
+      "caused_by": [
+        { "id": "battle-of-pollilur-1780", "gloss": "Pollilur and the subsequent inconclusive campaigns brought both sides to a stalemate; the treaty was the formal recognition that neither could win the war militarily." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Treaty_of_Mangalore", "label": "Wikipedia: Treaty of Mangalore", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Irfan Habib (ed.), State and Diplomacy under Tipu Sultan (2001)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "treaty-of-seringapatam-1792",
+      "title": "Treaty of Seringapatam — end of Third Anglo-Mysore War",
+      "tooltip": "Tipu Sultan cedes half his territory at Treaty of Seringapatam, 18 March 1792",
+      "summary": "Tipu Sultan surrendered half his territory and 33 million rupees in war indemnity, plus two of his sons as hostages, to the EIC, Marathas, and Nizam.",
+      "detail": "The Third Anglo-Mysore War (1790–1792) was Cornwallis's deliberate dismantling of Mysore as a regional power. After eighteen months of campaigning culminating in the siege of Srirangapatna, Tipu Sultan signed the Treaty of Seringapatam on 18 March 1792. Mysore ceded approximately half its territory — Malabar, Coorg, Dindigul, Baramahal — divided between the EIC, the Marathas, and the Nizam of Hyderabad. War indemnity was set at 33 million rupees (roughly £3.3 million sterling). Tipu's two younger sons, Abdul Khaliq (eight) and Muizuddin (ten), were held as hostages at Madras for two years pending payment. The territorial losses crippled Mysore's revenue base; the seven-year buildup to the Fourth Anglo-Mysore War (1799) was Tipu attempting to recover the position the treaty took from him.",
+      "date": {
+        "start": "1792-03-18",
+        "end":   "1792-03-18",
+        "precision": "day",
+        "approximate": false,
+        "display": "18 March 1792"
+      },
+      "location": {
+        "type": "city",
+        "name": "Srirangapatna",
+        "region": "Mysore",
+        "country": "IN",
+        "points": [{ "lat": 12.4109, "lon": 76.7036, "name": "Srirangapatna" }]
+      },
+      "era": "colonial",
+      "category": ["political", "military"],
+      "figures": ["Tipu Sultan", "Lord Cornwallis", "Nizam Ali Khan", "Maratha generals"],
+      "caused_by": [
+        { "id": "treaty-of-mangalore-1784", "gloss": "The Court of Directors had disowned Mangalore as a humiliation; Cornwallis's 1790 invasion was the deliberate reversal of the 1784 stalemate, ending in the territorial dismemberment Mangalore had explicitly avoided." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Treaty_of_Seringapatam", "label": "Wikipedia: Treaty of Seringapatam", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Irfan Habib (ed.), State and Diplomacy under Tipu Sultan (2001)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "wodeyar-restoration-1799",
+      "title": "Wodeyar restoration at Mysore",
+      "tooltip": "EIC restores Wodeyar dynasty at Mysore under five-year-old Krishnaraja III, 1799",
+      "summary": "After Tipu's death the EIC restored the Wodeyar dynasty under five-year-old Krishnaraja III — Mysore became a princely state under British paramountcy.",
+      "detail": "After the 4 May 1799 storming of Srirangapatna and Tipu Sultan's death, Wellesley faced the question of what to do with the conquered Mysore territory. Direct EIC annexation would have over-extended administrative resources; cession to the Nizam or Marathas would have empowered competitors. The compromise was the Wodeyar restoration — installing the five-year-old Krishnaraja III, whose family had been the pre-Hyder-Ali Mysore rulers since 1399, as nominal sovereign under EIC paramountcy. Diwan Purnaiya (Tipu's former minister) ran the administration as regent. The Mysore princely state under the restored Wodeyars lasted until 1947 — under nineteenth-century reforming maharajas (Krishnaraja Wodeyar III, Chamarajendra X, Krishnaraja IV) it became among the most administratively progressive princely states, with universal primary education from the 1840s onwards.",
+      "date": {
+        "start": "1799-06-30",
+        "end":   "1799-06-30",
+        "precision": "day",
+        "approximate": false,
+        "display": "30 June 1799 (formal coronation of Krishnaraja III)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Mysore",
+        "region": "Mysore princely state",
+        "country": "IN",
+        "points": [{ "lat": 12.2958, "lon": 76.6394, "name": "Mysore" }]
+      },
+      "era": "colonial",
+      "category": ["political", "dynastic", "colonial-administration"],
+      "figures": ["Krishnaraja Wodeyar III", "Diwan Purnaiya", "Lord Wellesley"],
+      "caused_by": [
+        { "id": "treaty-of-seringapatam-1792", "gloss": "The 1792 dismemberment had not eliminated Mysore as a strategic problem; Tipu's continued military preparation and his approaches to revolutionary France made the 1799 final settlement inevitable, and the Wodeyar restoration was its political form." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Kingdom_of_Mysore", "label": "Wikipedia: Kingdom of Mysore", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "James Manor, Political Change in an Indian State: Mysore 1917–1955 (1977) — backgrounder ch. 1", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
     {
       "id": "vellore-mutiny-1806",
       "title": "Vellore Mutiny",

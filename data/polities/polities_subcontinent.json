@@ -484,6 +484,170 @@
     },
 
     {
+      "id": "vijayanagara-empire",
+      "name": "Vijayanagara Empire",
+      "tooltip": "Vijayanagara Empire — 1336–1646, four dynasties from Hampi",
+      "summary": "South Indian Hindu empire founded at Hampi by Harihara and Bukka in 1336; broken at Talikota 1565, survived in reduced form to 1646.",
+      "framing": "Vijayanagara was conceived in the 1330s as the Hindu political-military counter to the Bahmani sultanate (1347) and the Madurai sultanate (1335). Across 310 years and four dynasties — Sangama (1336–1485), Saluva (1485–1505), Tuluva (1505–1570), Aravidu (1570–1646) — the empire ran the longest sustained Hindu-ruled imperial regime in South India after the Cholas. Its peak under Krishna Deva Raya (1509–1529) extended from the Krishna river to Cape Comorin and from the western to the eastern coast. The Talikota defeat of 1565 broke the Hampi-centred empire; the Aravidu dynasty held a reduced state from Penukonda then Chandragiri until 1646. The institutional inheritance — temple-centred land tenure, Telugu-Sanskrit literary patronage, the Nayaka governor system that became the post-Vijayanagara south Indian polities (Madurai, Tanjore, Gingee, Ikkeri) — persisted into the colonial period.",
+      "date_span": { "start": "1336", "end": "1646", "display": "1336 (founded at Hampi) – 1646 (Aravidu dynasty's final collapse)" },
+      "era_span": ["early-medieval", "sultanate", "mughal"],
+      "category": "empire",
+      "capitals": [
+        { "place": "hampi",      "from_year": 1336, "to_year": 1565 }
+      ],
+      "rulers": [
+        "Sangama: Harihara I (1336–1356), Bukka Raya I (1356–1377)",
+        "Tuluva: Krishna Deva Raya (1509–1529, the empire's peak)",
+        "Aravidu: Aliya Rama Raya (regent, killed at Talikota 1565)",
+        "Aravidu later rulers from Penukonda and Chandragiri (1570–1646)"
+      ],
+      "events": [
+        "vijayanagara-founded-1336",
+        "krishna-deva-raya-reign-1509-1529",
+        "battle-of-talikota-1565"
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Vijayanagara_Empire", "label": "Wikipedia: Vijayanagara Empire", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Burton Stein, Vijayanagara (Cambridge New History of India I.2, 1989)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "madurai-sultanate",
+      "name": "Madurai Sultanate",
+      "tooltip": "Madurai Sultanate — 1335–1378, southernmost Indian Muslim sultanate",
+      "summary": "Tughlaq-derived breakaway under Jalaluddin Ahsan Khan; eight sultans in 43 years; ended by Vijayanagara reconquest under Kumara Kampana.",
+      "date_span": { "start": "1335", "end": "1378", "display": "1335–1378" },
+      "era_span": ["sultanate"],
+      "category": "sultanate",
+      "capitals": [
+        { "place": "madurai", "from_year": 1335, "to_year": 1378 }
+      ],
+      "rulers": [
+        "Jalaluddin Ahsan Khan (1335–1340)",
+        "Five further sultans through three decades",
+        "Alauddin Sikandar Shah (last sultan, defeated 1378)"
+      ],
+      "events": [
+        "madurai-sultanate-1335"
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Madurai_Sultanate", "label": "Wikipedia: Madurai Sultanate", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Mehrdad Shokoohy, Muslim Architecture of South India: The Sultanate of Ma'bar (2003)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "bijapur-sultanate",
+      "name": "Bijapur Sultanate",
+      "tooltip": "Bijapur (Adil Shahi) Sultanate — 1490–1686, Bahmani-successor",
+      "summary": "Adil Shahi dynasty from Bijapur; longest-lived of the five Bahmani-successor sultanates; annexed by Aurangzeb after 196 years in 1686.",
+      "date_span": { "start": "1490", "end": "1686", "display": "1490 (founded) – 1686 (Aurangzeb annexation)" },
+      "era_span": ["sultanate", "mughal"],
+      "category": "sultanate",
+      "capitals": [
+        { "place": "bijapur", "from_year": 1490, "to_year": 1686 }
+      ],
+      "rulers": [
+        "Yusuf Adil Shah (1490–1510, founder)",
+        "Ibrahim Adil Shah I (1535–1558)",
+        "Ali Adil Shah I (1558–1580)",
+        "Ibrahim Adil Shah II (1580–1627; Kitab-i Nauras)",
+        "Mohammed Adil Shah (1627–1656; Gol Gumbaz)",
+        "Sikandar Adil Shah (last, deposed 1686)"
+      ],
+      "events": [
+        "bijapur-sultanate-founded-1490",
+        "battle-of-talikota-1565",
+        "deccan-annexations-1686"
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Adil_Shahi_dynasty", "label": "Wikipedia: Adil Shahi dynasty", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Richard M. Eaton, A Social History of the Deccan (2005)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "golconda-sultanate",
+      "name": "Golconda Sultanate",
+      "tooltip": "Golconda (Qutb Shahi) Sultanate — 1518–1687, Bahmani-successor",
+      "summary": "Qutb Shahi dynasty from Golconda then Hyderabad; controlled the Coromandel diamond and textile trade; Aurangzeb annexed in 1687.",
+      "date_span": { "start": "1518", "end": "1687", "display": "1518 (founded) – 1687 (Aurangzeb annexation)" },
+      "era_span": ["sultanate", "mughal"],
+      "category": "sultanate",
+      "capitals": [
+        { "place": "golconda",  "from_year": 1518, "to_year": 1591 },
+        { "place": "hyderabad", "from_year": 1591, "to_year": 1687 }
+      ],
+      "rulers": [
+        "Sultan-Quli Qutb-ul-Mulk (1518–1543, founder)",
+        "Ibrahim Qutb Shah (1550–1580; Talikota alliance)",
+        "Muhammad Quli Qutb Shah (1580–1612; founded Hyderabad 1591)",
+        "Abdullah Qutb Shah (1626–1672)",
+        "Abul Hasan Tana Shah (1672–1687, last sultan)"
+      ],
+      "events": [
+        "golconda-sultanate-founded-1518",
+        "battle-of-talikota-1565",
+        "deccan-annexations-1686"
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Qutb_Shahi_dynasty", "label": "Wikipedia: Qutb Shahi dynasty", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Richard M. Eaton, A Social History of the Deccan (2005)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "mysore-kingdom",
+      "name": "Mysore Kingdom (Wodeyars)",
+      "tooltip": "Mysore Kingdom — Wodeyar dynasty 1399–1947, with Hyder/Tipu interregnum",
+      "summary": "Wodeyar dynasty founded 1399; displaced by Hyder Ali 1761; restored by EIC under Krishnaraja III in 1799 as a princely state to 1947.",
+      "framing": "The Wodeyar (Wadiyar) dynasty was founded at Mysore in 1399 as a Vijayanagara feudatory. After Talikota (1565) the Wodeyars asserted independence, ruling Mysore as a Hindu kingdom for 162 years until 1761, when Hyder Ali — the Wodeyars' Muslim military commander — deposed the maharaja and took power, founding the Mysore Sultanate that ran 1761–1799. After the EIC's 1799 storming of Srirangapatna and Tipu Sultan's death, the EIC restored the five-year-old Krishnaraja III Wodeyar as nominal sovereign under British paramountcy. The 19th-century reformist maharajas (Krishnaraja III, Chamarajendra X, Krishnaraja IV) made Mysore among the most administratively progressive princely states — universal primary education from 1843, the Mysore University (1916), the Krishna Raja Sagara dam, the Mysore Asiatic Pavilion at the 1924 British Empire Exhibition. Mysore acceded to India 9 August 1947 and was reorganised into Karnataka in 1956.",
+      "date_span": { "start": "1399", "end": "1947", "display": "1399–1947 (Hyder/Tipu interregnum 1761–1799)" },
+      "era_span": ["sultanate", "mughal", "maratha", "colonial", "independence"],
+      "category": "princely-state",
+      "capitals": [
+        { "place": "mysore",         "from_year": 1399, "to_year": 1610 },
+        { "place": "srirangapatna",  "from_year": 1610, "to_year": 1799 },
+        { "place": "mysore",         "from_year": 1799, "to_year": 1947 }
+      ],
+      "rulers": [
+        "Yaduraya (1399–1423, founder)",
+        "Raja Wodeyar I (1578–1617; capital shifted to Srirangapatna)",
+        "Hyder Ali (1761–1782; Wodeyar deposed, Mysore Sultanate)",
+        "Tipu Sultan (1782–1799)",
+        "Krishnaraja III (1799–1868; Wodeyar restoration)",
+        "Krishnaraja IV (1902–1940), Jayachamaraja (1940–1949, last ruling maharaja)"
+      ],
+      "events": [
+        "tipu-khwabnama-1786",
+        "battle-of-pollilur-1780",
+        "treaty-of-mangalore-1784",
+        "treaty-of-seringapatam-1792",
+        "wodeyar-restoration-1799"
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Kingdom_of_Mysore", "label": "Wikipedia: Kingdom of Mysore", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "James Manor, Political Change in an Indian State: Mysore 1917–1955 (1977)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
       "id": "republic-of-india",
       "name": "Republic of India",
       "tooltip": "Republic of India — independent 15 August 1947, republic 26 January 1950",

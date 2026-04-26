@@ -473,6 +473,101 @@
     },
 
     {
+      "id": "hampi",
+      "name": "Hampi",
+      "tooltip": "Hampi — Vijayanagara capital 1336–1565, sacked after Talikota",
+      "summary": "Vijayanagara capital on the south bank of the Tungabhadra — at its peak under Krishna Deva Raya among the largest cities in the world; sacked after Talikota.",
+      "framing": "Hampi was founded as the Vijayanagara capital on 18 April 1336 by Harihara and Bukka Sangama in the Tungabhadra valley, on a granite-strewn landscape that had earlier been a Pampa-Hampi shrine site associated with the Ramayana's Kishkindha. Across two and a quarter centuries the city grew to perhaps 500,000 inhabitants — the second-largest in the world by some 16th-century estimates, after Beijing. Persian and European travellers (Abdur Razzak 1443, Domingo Paes 1520, Fernão Nunes 1530s) recorded the markets, the four-storey royal palaces, the Vitthala temple's musical pillars, the Pampapathi shrine, the Mahanavami platform on which Krishna Deva Raya held the dasara reviews. The Deccan Sultanate alliance sacked Hampi over five months after Talikota (1565); the city was never reoccupied. The ruins — covering 41 square kilometres — are India's largest archaeological site and a UNESCO World Heritage Site (1986).",
+      "location": {
+        "country": "IN",
+        "lat": 15.3350,
+        "lon": 76.4600,
+        "radius_km": 8,
+        "alt_names": ["Vijayanagara", "Pampa-Hampi"]
+      },
+      "era_span": ["early-medieval", "sultanate", "mughal"],
+      "category": ["capital", "city", "sacred-site"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Hampi", "label": "Wikipedia: Hampi", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "John M. Fritz & George Michell, Hampi Vijayanagara (Marg, 2008)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "bijapur",
+      "name": "Bijapur",
+      "tooltip": "Bijapur — Adil Shahi capital 1490–1686, then under Mughal rule",
+      "summary": "Adil Shahi sultanate capital from 1490 to Aurangzeb's 1686 annexation — among the most architecturally rich Bahmani-successor cities.",
+      "framing": "Bijapur (today Vijayapura, Karnataka) was the Adil Shahi capital from 1490 to 1686 — 196 years, the longest-lived of the five Bahmani-successor sultanates. The city's architecture is the most legible Adil Shahi record: the Gol Gumbaz of Mohammed Adil Shah (completed 1656) is the second-largest dome in the world (44m diameter) and contains the famous whispering gallery; the Ibrahim Rauza (1626) is among the most ornate Indo-Islamic mausoleums; the Jama Masjid (started 1576), the citadel, and the cluster of saint dargahs constitute a major Indian Islamic heritage site. Aurangzeb annexed Bijapur in October 1686 after a fifteen-month siege; the city declined under Mughal then EIC rule. Population peaked at around 800,000 in the 17th century; today it is a regional district headquarters.",
+      "location": {
+        "country": "IN",
+        "lat": 16.8244,
+        "lon": 75.7154,
+        "radius_km": 8,
+        "alt_names": ["Vijayapura"]
+      },
+      "era_span": ["sultanate", "mughal"],
+      "category": ["capital", "city", "fort"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Vijayapura", "label": "Wikipedia: Vijayapura (Bijapur)", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Helen Philon (ed.), Silent Splendour: Palaces of the Deccan, 14th–19th Centuries (2010)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "golconda",
+      "name": "Golconda",
+      "tooltip": "Golconda — Qutb Shahi capital 1518–1591, diamond-rich; fell to Aurangzeb 1687",
+      "summary": "Qutb Shahi capital from 1518 until 1591 (when Hyderabad was founded); the diamond-trade fortress that fell to Aurangzeb after an eight-month siege in 1687.",
+      "framing": "Golconda was the Qutb Shahi capital from 1518, when Sultan-Quli Qutb-ul-Mulk founded the dynasty, until 1591, when Muhammad Quli Qutb Shah founded the new city of Hyderabad twelve kilometres east. The fortress remained the seat of state administration and the treasury — its diamond mines at Kollur (the source of the Koh-i-Noor, Hope Diamond, and Daria-i-Noor) made Golconda synonymous with wealth in 17th-century Persian and European travel literature. The Qutb Shahi tombs north of the fort form a coherent dynastic necropolis. Aurangzeb's siege of Golconda (January–October 1687) was the final phase of his Deccan campaign — the fort fell on 21 September 1687 after Mughal forces bribed the gate guards. The Qutb Shahi treasury became part of Aurangzeb's; the dynasty ended; Hyderabad eventually became the Asaf Jahi (Nizam) capital in the 18th century.",
+      "location": {
+        "country": "IN",
+        "lat": 17.3833,
+        "lon": 78.4011,
+        "radius_km": 6
+      },
+      "era_span": ["sultanate", "mughal"],
+      "category": ["capital", "city", "fort"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Golconda_Fort", "label": "Wikipedia: Golconda Fort", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "George Michell & Mark Zebrowski, Architecture and Art of the Deccan Sultanates (Cambridge New History of India I.7, 1999)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "mysore",
+      "name": "Mysore",
+      "tooltip": "Mysore — Wodeyar capital 1399–1610 and 1799–1947",
+      "summary": "Wodeyar capital from 1399 (with Srirangapatna interlude) — modern princely city of southern Karnataka.",
+      "framing": "Mysore (Mysuru) was the original Wodeyar capital from 1399 until Raja Wodeyar I shifted to Srirangapatna in 1610 for strategic-defensive reasons. After the EIC's 1799 restoration of Krishnaraja III Wodeyar following Tipu Sultan's defeat, Mysore became the capital of the restored princely state and remained so until 1947. The Amba Vilas (Mysore Palace), rebuilt in 1912 after a 1897 fire, is among the most photographed Indian palaces. Mysore became famous in the 19th–20th centuries for the Dasara festival, the Mysore school of painting, sandalwood and silk craft industries, and the reformist administration of the Wodeyar maharajas (universal primary education from 1843, Mysore University founded 1916). The city merged into Karnataka state in 1956.",
+      "location": {
+        "country": "IN",
+        "lat": 12.2958,
+        "lon": 76.6394,
+        "radius_km": 8,
+        "alt_names": ["Mysuru"]
+      },
+      "era_span": ["sultanate", "mughal", "maratha", "colonial", "independence", "republic"],
+      "category": ["princely-state-capital", "city"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Mysore", "label": "Wikipedia: Mysore", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "James Manor, Political Change in an Indian State: Mysore 1917–1955 (1977)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
       "id": "puri",
       "name": "Puri",
       "tooltip": "Puri — Jagannath temple seat, c. 12th c. onward; chronicled in the Madala Panji",
