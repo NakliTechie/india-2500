@@ -1,0 +1,41 @@
+{
+  "campaign": "late-republic",
+  "scope": "Threads through late-twentieth-century Indian political history — the Mandir-Mandal nexus that restructured electoral politics 1990-92.",
+  "updated": "2026-04-26",
+  "threads": [
+    {
+      "id": "mandir-mandal-nexus-1990-1992",
+      "title": "The Mandir–Mandal nexus, 1990–1992",
+      "subtitle": "How a caste-quota announcement and a temple-mobilisation rath collided to remake Indian electoral politics in 28 months.",
+      "summary": "On 7 August 1990 V.P. Singh announced the Mandal Commission's 27% OBC reservations. Six weeks later L.K. Advani set out from Somnath in a Toyota truck retrofitted as a chariot, headed for Ayodhya. The two events were not coincidence; they were strategic counter and counter-strategic answer. Within 28 months they had produced the Babri Masjid demolition, ~2,000 communal riot deaths, the rise of the OBC-Dalit electoral bloc, and the BJP's emergence as an alternative national party.",
+      "kind": "causal-chain",
+      "era_span": ["republic"],
+      "date_span": { "start": "1990", "end": "1992" },
+      "tags": ["political"],
+      "steps": [
+        {
+          "event_id": "mandal-commission-1990",
+          "note": "V.P. Singh's National Front coalition implements the decade-old Mandal report — 27% reservations in central jobs and education for OBCs (about half the population, across 3,743 castes). Upper-caste student protests erupt across north India within days; Rajiv Goswami's self-immolation at Delhi University on 19 September triggers an estimated 60 fatal copy-cat attempts. The political ground tilts overnight: Mulayam, Lalu, and Mayawati ride this opening into electoral consequence for the next two decades.",
+          "transition": "Six weeks later, the Sangh Parivar answers — explicitly framing Hindu religious mobilisation as the antidote to caste fragmentation."
+        },
+        {
+          "event_id": "advani-rath-yatra-1990",
+          "note": "L.K. Advani's Somnath–Ayodhya Rath Yatra is the explicit Mandir counter to Mandal. Pramod Mahajan organises the logistics; the route — 10,000 km across nine states — passes through dozens of communal flashpoints, leaving 564 dead in its wake. Lalu Prasad Yadav arrests Advani at Samastipur on 23 October. Two weeks later the BJP withdraws support from V.P. Singh's coalition; the government falls 7 November 1990. The kar seva at Ayodhya goes ahead anyway — 16 kar sevaks killed in Mulayam's UP police firing on 30 October. The 1992 demolition is now a question of timing.",
+          "transition": "26 months later the Sangh Parivar returns to Ayodhya with the organisational machinery the Yatra had built — and finishes what 30 October 1990 had only rehearsed."
+        },
+        {
+          "event_id": "babri-masjid-demolition-1992",
+          "note": "An estimated 150,000 kar sevaks demolish the Babri Masjid in five hours under the eyes of the Kalyan Singh BJP UP government. Communal riots through December 1992 – January 1993 kill ~2,000 nationally; the March 1993 Bombay serial blasts (257 killed) follow as the underworld answer. The 2019 Supreme Court verdict awards the disputed site to the Ram Janmabhoomi trust while observing the demolition itself was an 'egregious violation of the rule of law' and that the ASI had found no evidence of a demolished temple under the mosque. The Mandir-Mandal axis the BJP rode in 1990 became the structural electoral arithmetic of Indian politics.",
+          "transition": null
+        }
+      ],
+      "coda": "The Mandir-Mandal nexus is the cleanest case in late-twentieth-century Indian politics of strategic action and reaction collapsing into a single political event. Mandal's promise was caste justice through quota; Mandir's was Hindu consolidation through religious symbol. Between August 1990 and December 1992 they produced the post-Congress political order: regional OBC parties, the BJP as a national pole, and a structural communal-and-caste electoral arithmetic that has held for thirty-five years. The judgments — moral, political, historiographical — are still live.",
+      "sources": [
+        { "label": "Christophe Jaffrelot, India's Silent Revolution: The Rise of the Lower Castes in North India (2003)", "type": "scholarly" },
+        { "label": "Christophe Jaffrelot, The Hindu Nationalist Movement and Indian Politics (1996)", "type": "scholarly" },
+        { "label": "Liberhan Commission Report (constituted 1992; presented 2009)", "type": "primary" }
+      ],
+      "verified": true
+    }
+  ]
+}

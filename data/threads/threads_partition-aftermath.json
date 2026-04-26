@@ -1,0 +1,52 @@
+{
+  "campaign": "partition-aftermath",
+  "scope": "Thread tracing the unfinished accession-and-integration questions of partition — Kashmir 1947, Hyderabad 1948, Article 370 1949, Bangladesh 1971, the wars and constitutional settlements that resolved (or failed to resolve) what the boundary award had left open.",
+  "updated": "2026-04-26",
+  "threads": [
+    {
+      "id": "the-unfinished-business-of-partition",
+      "title": "The unfinished business of partition, 1947–1971",
+      "subtitle": "Kashmir, Hyderabad, Article 370, Bangladesh — what the boundary award had not settled.",
+      "summary": "Partition produced two dominions but did not resolve four open questions: the accession of the princely states (562 of them), the status of Kashmir, the geographic incoherence of two-wing Pakistan, and the constitutional terms of Indian federalism. The next twenty-four years closed each question by a different mechanism — Pakistan's tribal invasion, Patel's Operation Polo, the Constitution's Article 370 bargain, the 1971 war.",
+      "kind": "narrative",
+      "era_span": ["independence", "republic"],
+      "date_span": { "start": "1947", "end": "1971" },
+      "tags": ["political"],
+      "steps": [
+        {
+          "event_id": "independence-and-partition-1947",
+          "note": "15 August 1947: two dominions inaugurated. The Indian Independence Act left ~562 princely states formally free to accede to either dominion or attempt independence. Sardar Patel and V.P. Menon's States Department spent the months April-August 1947 negotiating Instruments of Accession — most princes signed, ceding defence, foreign affairs, and communications. Three holdouts remained: Kashmir (Hindu Maharaja, Muslim majority), Hyderabad (Muslim Nizam, Hindu majority), Junagadh (Muslim Nawab, Hindu majority).",
+          "transition": "Within ten weeks Pakistan moved on the largest holdout."
+        },
+        {
+          "event_id": "first-kashmir-war-1947-1948",
+          "note": "Pakistani tribal lashkars invaded Kashmir 22 October 1947. Hari Singh signed the Instrument of Accession 26 October; Indian Army airlift to Srinagar began 27 October. The 14-month war ended at the UN-mediated ceasefire 1 January 1949 along the line that became, after Simla 1972, the Line of Control. Kashmir was partitioned: India held the Valley, Jammu, Ladakh; Pakistan held what it called Azad Kashmir and Gilgit-Baltistan. The plebiscite the UN resolutions called for was never held.",
+          "transition": "Hyderabad's holdout — geographically inland, demographically Hindu-majority — was the next to fall."
+        },
+        {
+          "event_id": "operation-polo-1948",
+          "note": "Five-day Indian Army operation 13–18 September 1948 against Hyderabad's Razakar militia and the Nizam's State Forces. The Asaf Jahi state founded 1724 ended; the Nizam was retained as Rajpramukh until 1956. Communal violence in the operation's wake — documented in the Sundarlal Committee Report (1949, suppressed until 2013) — produced an estimated 27,000–40,000 Muslim deaths in retaliatory attacks. The integration of the largest princely state was accomplished in five days; its political-communal cost was decades long.",
+          "transition": "Within a year the Constituent Assembly resolved the constitutional terms of Kashmir's still-incomplete accession."
+        },
+        {
+          "event_id": "article-370-kashmir-accession-1949",
+          "note": "Article 370 — adopted 17 October 1949 — codified Hari Singh's October 1947 Instrument of Accession into the Constitution. Three subjects (defence, foreign affairs, communications) ceded to the Union; residual autonomy retained pending the never-held plebiscite. The article was placed in Part XXI ('Temporary, Transitional and Special Provisions') reflecting its negotiated, settlement-pending status. Article 371's parallel provisions for the north-eastern and tribal-protection states were adopted in the same constitutional moment — federalism by special bargain rather than uniform accession.",
+          "transition": "The unresolved geographic incoherence of two-wing Pakistan took the next two decades to surface as a war."
+        },
+        {
+          "event_id": "bangladesh-liberation-war-1971",
+          "note": "Operation Searchlight (25 March 1971) — Pakistan Army's suppression of Bengali political demands after the 1970 election — drove ~10 million refugees into India by November. India entered the war directly after Pakistan's pre-emptive air strikes 3 December. Manekshaw's 14-day eastern campaign ended at Niazi's 16 December surrender of 93,000 Pakistani troops at Dhaka — the largest military surrender since WWII. The Republic of Bangladesh was proclaimed; the partition's two-wing geographic premise of 1947 was operationally dissolved.",
+          "transition": null
+        }
+      ],
+      "coda": "The four open questions of August 1947 closed by four different mechanisms over the next twenty-four years: Kashmir by partial war and unresolved settlement; Hyderabad by Indian Army integration; the Constitution by federal bargain; Pakistan's two-wing structure by 1971 war. Three of the four are still operationally live in 2026. Article 370 was abrogated on 5 August 2019; the Kashmir Line of Control still divides the territory the partition had not assigned. The unfinished business of partition is, for working purposes, the unfinished business of the subcontinent.",
+      "sources": [
+        { "label": "Ramachandra Guha, India After Gandhi (2007), chs. on princely-state integration", "type": "scholarly" },
+        { "label": "Sumantra Bose, Kashmir: Roots of Conflict, Paths to Peace (2003)", "type": "scholarly" },
+        { "label": "A.G. Noorani, The Destruction of Hyderabad (2014)", "type": "scholarly" },
+        { "label": "Srinath Raghavan, 1971: A Global History of the Creation of Bangladesh (2013)", "type": "scholarly" }
+      ],
+      "verified": true
+    }
+  ]
+}

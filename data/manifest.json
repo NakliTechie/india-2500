@@ -29,7 +29,10 @@
   ],
   "threads_files": [
     "threads_independence.json",
-    "threads_mughal.json"
+    "threads_late-republic.json",
+    "threads_mughal.json",
+    "threads_partition-aftermath.json",
+    "threads_road-to-pakistan.json"
   ],
   "people_files": [
     "people_bengal-renaissance.json",

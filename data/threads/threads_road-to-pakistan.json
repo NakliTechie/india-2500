@@ -1,0 +1,62 @@
+{
+  "campaign": "road-to-pakistan",
+  "scope": "Thread tracing the constitutional and political path from the 1905 Bengal partition to the 1947 partition of India — separate electorates, the League's emergence, the Lahore Resolution, the Cabinet Mission's failure, and Direct Action.",
+  "updated": "2026-04-26",
+  "threads": [
+    {
+      "id": "the-road-to-pakistan",
+      "title": "The road to Pakistan, 1905–1947",
+      "subtitle": "From Curzon's Bengal partition to Mountbatten's — the forty-two years that produced two states.",
+      "summary": "Pakistan was not a foregone conclusion in 1905, nor in 1916, nor even in 1940. The thread from the 1905 Bengal partition to the August 1947 boundary award is the long political-constitutional argument over whether Indian Muslims constituted a religious minority within a single nation or a nation in their own right. Each step — separate electorates, the Lahore Resolution, Cabinet Mission's failure, Direct Action — narrowed the field of possible answers until partition became the operational option.",
+      "kind": "narrative",
+      "era_span": ["colonial", "independence"],
+      "date_span": { "start": "1905", "end": "1947" },
+      "tags": ["political"],
+      "steps": [
+        {
+          "event_id": "partition-of-bengal-1905",
+          "note": "Curzon's administrative partition of Bengal — drawn along Hindu-majority west / Muslim-majority east — was framed as administrative efficiency but the demographic engineering was visible. The swadeshi-and-boycott response that consumed Bengal 1905-08 cut across communities; the Muslim League founding 1906 in Dacca was the explicit Muslim institutional response to the agitation. Partition was annulled 1911 — but the institutional cleavage it had created remained.",
+          "transition": "Within four years the Morley-Minto reforms had constitutionalised the cleavage."
+        },
+        {
+          "event_id": "morley-minto-reforms-1909",
+          "note": "Indian Councils Act 1909 — separate electorates for Muslims at the central and provincial levels. The Aga Khan-led 1906 Simla Deputation had pressed for it; Morley accepted on the calculation that communal-electorate fragmentation would dampen joint mobilisation against the Raj. The principle, once introduced, proved permanent: extended to Sikhs (1919), Christians, Anglo-Indians, and Europeans (1935), the constitutional ground on which the Two-Nation Theory would later be argued.",
+          "transition": "The next twenty-five years tested the workability of the Hindu-Muslim political alliance the constitutional framework had simultaneously enabled and undermined."
+        },
+        {
+          "event_id": "lahore-session-1929",
+          "note": "Congress declares Purna Swaraj at Lahore. The League is not present; the divergence of national-political vehicles is becoming structural. Through the early 1930s Congress wins the major elections and forms ministries in 7 of 11 provinces (1937–39); the League's parliamentary performance is weak, its claim to all-Indian-Muslim representation contested. By 1940 Jinnah's calculation has shifted from federal-power-sharing to the Two-Nation framework.",
+          "transition": "The 1940 Lahore Resolution made the new framework the official League position."
+        },
+        {
+          "event_id": "goi-act-1935-federation",
+          "note": "The 1935 Act's never-realised All-India Federation left the centre-states constitutional question unresolved. Congress provincial ministries (1937-39) governed without the League; the 1939 resignation over Linlithgow's war declaration removed Congress from provincial office for the war years and gave the League — strengthened by its August 1940 'Pakistan' Resolution at Lahore — operational space to build its electoral base in the Muslim-majority provinces.",
+          "transition": "By 1946 the federal compromise was collapsing under both the League's hardening Pakistan demand and Congress's centralising counterposition."
+        },
+        {
+          "event_id": "cabinet-mission-1946",
+          "note": "The Attlee government's three-tier confederal scheme — Union of provinces in groups, with weak centre — was the last constitutional alternative to partition. Congress accepted with one interpretation of grouping; the League with the opposite. Nehru's 10 July 1946 Bombay press conference — repudiating the binding character of grouping — was the moment the League read as Congress walking away. Jinnah withdrew League acceptance 29 July; called Direct Action Day for 16 August.",
+          "transition": "Calcutta on 16-19 August produced the violence that made partition the operational option."
+        },
+        {
+          "event_id": "direct-action-day-1946",
+          "note": "Direct Action Day in Calcutta (16-19 August 1946) — the Great Calcutta Killings, ~4,000 dead, communal violence on a scale the city had not seen. Noakhali (October 1946), Bihar (October-November 1946), United Provinces, and the Punjab civil war of spring-summer 1947 followed in the chain. By the time Mountbatten arrived (March 1947), the question was not whether to partition but how fast.",
+          "transition": "The June 1947 plan, the Radcliffe boundary award, and the August transfer compressed two centuries of political evolution into ten weeks."
+        },
+        {
+          "event_id": "independence-and-partition-1947",
+          "note": "15 August 1947: two dominions inaugurated. Cyril Radcliffe's boundary commission — given five weeks for a task that required years — divided Punjab and Bengal along communal lines on no land-survey basis; the award was published 17 August. ~10-15 million displaced; estimates of communal-violence deaths in the partition migrations range from 200,000 to 2 million. Jinnah's 11 August inaugural address to Pakistan's Constituent Assembly — 'You are free to go to your temples, you are free to go to your mosques' — went unimplemented in the post-1948 constitutional framework. He died 11 September 1948.",
+          "transition": null
+        }
+      ],
+      "coda": "The road to Pakistan was not inevitable — neither in 1905, nor in 1909, nor even in 1946. Each constitutional concession built the institutional infrastructure within which the next political question had to be argued. The 1905 partition created a Muslim political institutional response that did not previously exist. The 1909 separate electorates made communal representation a permanent constitutional category. The 1935 federal scheme's failure to come into being left the centre-states question unresolved when the war intervened. The 1946 Cabinet Mission was the last federal compromise and it broke on the same fault line. Partition, when it came, was the operational consequence of forty years of accumulated constitutional choice — none of them, in their own moment, deliberately partitionist.",
+      "sources": [
+        { "label": "Ayesha Jalal, The Sole Spokesman: Jinnah, the Muslim League and the Demand for Pakistan (1985)", "type": "scholarly" },
+        { "label": "Joya Chatterji, Bengal Divided: Hindu Communalism and Partition 1932–1947 (1994)", "type": "scholarly" },
+        { "label": "Yasmin Khan, The Great Partition: The Making of India and Pakistan (2007)", "type": "scholarly" },
+        { "label": "Mountbatten Plan (3 June 1947) and Indian Independence Act 1947", "type": "primary" }
+      ],
+      "verified": true
+    }
+  ]
+}
