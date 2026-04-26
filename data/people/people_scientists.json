@@ -1,0 +1,266 @@
+{
+  "campaign": "scientists",
+  "scope": "The colonial-period Indian scientific renaissance — J.C. Bose (1858–1937, plant physiology and radio waves), Srinivasa Ramanujan (1887–1920, number theory), C.V. Raman (1888–1970, light scattering), Meghnad Saha (1893–1956, ionisation equation and astrophysics).",
+  "updated": "2026-04-26",
+  "people": [
+
+    {
+      "id": "jc-bose",
+      "name": "Jagadish Chandra Bose",
+      "short_name": "J.C. Bose",
+      "tooltip": "J.C. Bose (1858–1937), plant physiology and radio-wave pioneer",
+      "summary": "Bengali physicist and biologist; demonstrated radio waves at Calcutta 1895; founded plant electrophysiology; first Indian FRS in physics.",
+      "era": "colonial",
+      "lifespan": {
+        "born": "1858-11-30",
+        "died": "1937-11-23",
+        "birthplace": { "name": "Mymensingh (Bikrampur), Bengal", "country": "BD", "lat": 24.7471, "lon": 90.4203 },
+        "deathplace": { "name": "Giridih, Bengal", "country": "IN", "lat": 24.1880, "lon": 86.3040 }
+      },
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Jagadish_Chandra_Bose", "label": "Wikipedia: J.C. Bose", "type": "wikipedia" }
+      ],
+      "colour": "#1e6a8a",
+      "track": [
+        {
+          "kind": "moment",
+          "id": "jcbose-presidency-college-1885",
+          "tooltip": "Joins Presidency College, Calcutta as Professor of Physics, 1885",
+          "summary": "Cambridge Tripos; joined Presidency College Calcutta as Professor of Physics 1885 — paid two-thirds European salary for three years; refused, back-paid in full.",
+          "date": { "start": "1885-01-01", "end": "1885-12-31", "precision": "year", "approximate": true, "display": "1885" },
+          "location": { "name": "Presidency College, Calcutta", "region": "Bengal Presidency", "country": "IN",
+                        "points": [{ "lat": 22.5726, "lon": 88.3639 }] },
+          "note": "The salary protest — refusing one-third reduction — is the canonical biographical episode of his early career. The College authorities held out three years; Bose taught without pay; eventually they capitulated and back-paid him in full. The principle of equal pay for Indian and European faculty was established at Presidency from this point."
+        },
+        {
+          "kind": "moment",
+          "id": "jcbose-radio-demonstration-1895",
+          "tooltip": "Radio-wave transmission demo, Calcutta Town Hall, November 1895",
+          "summary": "Demonstrated remote bell-ringing and gunpowder ignition by millimetre-wave radio at Calcutta Town Hall, Nov 1895. Marconi's first patent: 1896.",
+          "date": { "start": "1895-11-01", "end": "1895-11-30", "precision": "month", "approximate": true, "display": "November 1895" },
+          "location": { "name": "Calcutta Town Hall", "region": "Bengal Presidency", "country": "IN",
+                        "points": [{ "lat": 22.5675, "lon": 88.3478 }] },
+          "note": "The 1895 demonstration preceded Marconi's 1896 patent and the 1901 transatlantic transmission. Bose declined to patent his work — 'I have refused the entreaties of friends to take out patents... [the discoveries] are the inheritance of all'. The IEEE in 1998 retroactively recognised him as one of the originators of radio. The receiver coherer he developed (1895–99) was independently used by Marconi."
+        },
+        {
+          "kind": "moment",
+          "id": "jcbose-royal-society-1896",
+          "tooltip": "Royal Institution lecture and FRS election, 1896–1920",
+          "summary": "Royal Institution lecture Jan 1897 on millimetre-wave detection; papers in Nature and Proc. Royal Society; FRS 1920 — first Indian physicist.",
+          "date": { "start": "1896-01-01", "end": "1920-12-31", "precision": "year", "approximate": true, "display": "1896–1920" },
+          "location": { "name": "Royal Institution, London", "region": "England", "country": "OFF",
+                        "points": [{ "lat": 51.5099, "lon": -0.1431 }] },
+          "note": "Lord Rayleigh, J.J. Thomson, Lord Kelvin endorsed his work; the Royal Institution lecture made his reputation in European physics. The pivot to plant physiology came after 1900 — his crescograph (high-magnification growth-recording instrument), demonstrations of plant electrical responses to stimulus, and the 1902 publication Response in the Living and Non-Living established the field."
+        },
+        {
+          "kind": "moment",
+          "id": "jcbose-bose-institute-1917",
+          "tooltip": "Founds the Bose Research Institute, Calcutta, 30 November 1917",
+          "summary": "Founded the Bose Research Institute at Calcutta on his 59th birthday — first Indian-led scientific research institution; physics, plant physiology, biophysics.",
+          "date": { "start": "1917-11-30", "end": "1917-11-30", "precision": "day", "approximate": false, "display": "30 November 1917" },
+          "location": { "name": "Bose Institute, Calcutta", "region": "Bengal Presidency", "country": "IN",
+                        "points": [{ "lat": 22.5800, "lon": 88.3672 }] },
+          "note": "Funded substantially from his own savings and from Indian patronage (Tata, Bhupendranath Basu). The Institute remains active under that name. The founding deliberately preceded the Tata Institute of Fundamental Research (1945) and the Indian Institute of Science (founded 1909) as the first institution conceived and funded principally by Indians for original scientific research."
+        }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "ramanujan",
+      "name": "Srinivasa Ramanujan",
+      "short_name": "Ramanujan",
+      "tooltip": "Srinivasa Ramanujan (1887–1920), Madras-Cambridge mathematician",
+      "summary": "Erode-Kumbakonam mathematical autodidact; ~3,900 results in number theory, modular forms, infinite series; Cambridge under Hardy 1914–19; FRS 1918, age 30.",
+      "era": "colonial",
+      "lifespan": {
+        "born": "1887-12-22",
+        "died": "1920-04-26",
+        "birthplace": { "name": "Erode, Madras Presidency", "country": "IN", "lat": 11.3410, "lon": 77.7172 },
+        "deathplace": { "name": "Kumbakonam, Madras Presidency", "country": "IN", "lat": 10.9601, "lon": 79.3845 }
+      },
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Srinivasa_Ramanujan", "label": "Wikipedia: Ramanujan", "type": "wikipedia" }
+      ],
+      "colour": "#5a8a30",
+      "track": [
+        {
+          "kind": "moment",
+          "id": "ramanujan-carr-synopsis-1903",
+          "tooltip": "Discovers G.S. Carr's Synopsis at Town High School, Kumbakonam, 1903",
+          "summary": "At fifteen, encountered Carr's Synopsis at Kumbakonam Town High — re-derived its 5,000 results from scratch; mathematical apprenticeship complete by sixteen.",
+          "date": { "start": "1903-01-01", "end": "1903-12-31", "precision": "year", "approximate": true, "display": "c. 1903" },
+          "location": { "name": "Town High School, Kumbakonam", "region": "Madras Presidency", "country": "IN",
+                        "points": [{ "lat": 10.9601, "lon": 79.3845 }] },
+          "note": "Carr's Synopsis was a Victorian compilation for British university students — terse, no proofs. Ramanujan's habit of writing only results without derivation, the source of much later Hardy-Littlewood frustration, traces to this self-trained habit. The Government Arts College Kumbakonam scholarship he won 1904 was lost the following year because he failed every subject except mathematics."
+        },
+        {
+          "kind": "moment",
+          "id": "ramanujan-port-trust-1912",
+          "tooltip": "Clerkship at Madras Port Trust, March 1912",
+          "summary": "Married 1909, broke and tubercular, took a Madras Port Trust clerkship under Sir Francis Spring — who recognised the notebooks and pushed Ramanujan to Hardy.",
+          "date": { "start": "1912-03-01", "end": "1912-12-31", "precision": "month", "approximate": true, "display": "March 1912 onward" },
+          "location": { "name": "Madras Port Trust", "region": "Madras Presidency", "country": "IN",
+                        "points": [{ "lat": 13.0978, "lon": 80.2924 }] },
+          "note": "Spring read the notebooks and arranged correspondence with Cambridge. The first letter to Hardy (16 January 1913) — nine pages, ~120 results, no proofs — produced the famous Hardy-Littlewood verdict: 'They must be true; if they were not true, no one would have had the imagination to invent them.'"
+        },
+        {
+          "kind": "moment",
+          "id": "ramanujan-cambridge-1914",
+          "tooltip": "Sails for Cambridge, March 1914",
+          "summary": "Sailed for Cambridge March 1914 on Hardy's invitation — the four-year collaboration produced the Hardy-Ramanujan partition formula and highly composite numbers.",
+          "date": { "start": "1914-03-17", "end": "1914-04-14", "precision": "day", "approximate": false, "display": "Sailed 17 March 1914; arrived London 14 April" },
+          "location": { "name": "Trinity College, Cambridge", "region": "England", "country": "OFF",
+                        "points": [{ "lat": 52.2070, "lon": 0.1132 }] },
+          "note": "Brahmin orthodoxy at Kumbakonam initially refused permission to cross the kala pani; the family deity at Namakkal eventually delivered (per Ramanujan's mother) the dream-permission that allowed the voyage. Hardy and Littlewood became his collaborators; Janaki Ammal (his wife) remained in Madras through the war years and never joined him."
+        },
+        {
+          "kind": "moment",
+          "id": "ramanujan-fellowship-1918",
+          "tooltip": "Elected Fellow of the Royal Society and Fellow of Trinity College, 1918",
+          "summary": "Elected FRS 2 May 1918 at thirty — second Indian. Trinity Fellow October 1918 — first Indian. Tubercular, 110 lb, often hospitalised.",
+          "date": { "start": "1918-05-02", "end": "1918-10-13", "precision": "day", "approximate": false, "display": "FRS 2 May 1918; Trinity Fellow 13 October 1918" },
+          "location": { "name": "Trinity College, Cambridge", "region": "England", "country": "OFF",
+                        "points": [{ "lat": 52.2070, "lon": 0.1132 }] },
+          "note": "FRS at thirty was unusual; the citation cited 'his investigations in the Theory of Numbers, Elliptic Functions, Continued Fractions, and Infinite Series'. The taxicab-1729 anecdote (Hardy: 'a rather dull number'; Ramanujan: 'No Hardy, it is a very interesting number — the smallest expressible as the sum of two cubes in two different ways') is from a 1919 hospital visit."
+        },
+        {
+          "kind": "moment",
+          "id": "ramanujan-return-death-1919-1920",
+          "tooltip": "Returns to Madras March 1919; dies at Kumbakonam April 1920",
+          "summary": "Returned to Madras tubercular March 1919; died at Kumbakonam 26 April 1920, age 32. The 'lost notebook' (~600 results) recovered at Trinity 1976.",
+          "date": { "start": "1919-03-27", "end": "1920-04-26", "precision": "day", "approximate": false, "display": "Returned 27 March 1919; died 26 April 1920" },
+          "location": { "name": "Kumbakonam, Madras Presidency", "region": "Madras Presidency", "country": "IN",
+                        "points": [{ "lat": 10.9601, "lon": 79.3845 }] },
+          "note": "The 'lost notebook' — 138 pages of mock theta functions and modular form results from his final year — was recovered by George Andrews from the Trinity College Wren Library in 1976. Mock theta functions, Ramanujan's last unfinished work, became foundational to the modern theory of mock modular forms (Zagier, Bringmann, Ono). His birthday (22 December) is the National Mathematics Day in India."
+        }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "cv-raman",
+      "name": "Sir Chandrasekhara Venkata Raman",
+      "short_name": "C.V. Raman",
+      "tooltip": "C.V. Raman (1888–1970), Nobel laureate in physics 1930",
+      "summary": "Tamil physicist; discovered the Raman effect 1928; Nobel Prize 1930 — first Asian science Nobel; founded the Indian Academy of Sciences 1934.",
+      "era": "colonial",
+      "lifespan": {
+        "born": "1888-11-07",
+        "died": "1970-11-21",
+        "birthplace": { "name": "Tiruchirappalli, Madras Presidency", "country": "IN", "lat": 10.7905, "lon": 78.7047 },
+        "deathplace": { "name": "Bangalore", "country": "IN", "lat": 12.9716, "lon": 77.5946 }
+      },
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/C._V._Raman", "label": "Wikipedia: C.V. Raman", "type": "wikipedia" }
+      ],
+      "colour": "#9a3a3a",
+      "track": [
+        {
+          "kind": "moment",
+          "id": "raman-finance-department-1907",
+          "tooltip": "Joins Indian Finance Department, Calcutta, 1907",
+          "summary": "Top of Madras BA mathematics at sixteen; topped the 1907 Indian Finance Service exam; posted Calcutta as Assistant Accountant General; physics in evenings.",
+          "date": { "start": "1907-01-01", "end": "1917-12-31", "precision": "year", "approximate": true, "display": "1907–1917" },
+          "location": { "name": "Indian Association for the Cultivation of Science, Calcutta", "region": "Bengal Presidency", "country": "IN",
+                        "points": [{ "lat": 22.5354, "lon": 88.3520 }] },
+          "note": "The Indian Association for the Cultivation of Science (IACS) at Bowbazar — founded 1876 by Mahendralal Sircar as India's first private scientific research society — gave Raman lab space in his evenings. The decade of finance-by-day, physics-by-night produced ~30 publications on acoustics and optics before he resigned to take the Calcutta University chair 1917."
+        },
+        {
+          "kind": "moment",
+          "id": "raman-blue-mediterranean-1921",
+          "tooltip": "Sea voyage observation of the blue Mediterranean, 1921",
+          "summary": "On the September 1921 voyage Southampton-Bombay, observed the Mediterranean's deep blue — challenged the Rayleigh sky-reflection explanation.",
+          "date": { "start": "1921-09-01", "end": "1921-09-30", "precision": "month", "approximate": true, "display": "September 1921" },
+          "location": { "name": "Mediterranean Sea (S.S. Narkunda)", "region": "Mediterranean", "country": "OFF",
+                        "points": [{ "lat": 35.0000, "lon": 18.0000 }] },
+          "note": "Lord Rayleigh's view (1910) attributed sea-blue to sky-reflection. Raman's 1921 onboard work showed the colour persisted under conditions excluding reflection — molecular scattering by water itself. The two-page Nature paper (November 1921) opened the seven-year programme that produced the Raman effect 1928."
+        },
+        {
+          "kind": "moment",
+          "id": "raman-effect-1928",
+          "tooltip": "Discovery of the Raman effect (inelastic light scattering), 28 February 1928",
+          "summary": "Together with K.S. Krishnan, discovered the inelastic light-scattering effect — frequency-shifted scattered light reveals molecular vibration. Nobel Prize 1930.",
+          "date": { "start": "1928-02-28", "end": "1928-02-28", "precision": "day", "approximate": false, "display": "28 February 1928" },
+          "location": { "name": "Indian Association for the Cultivation of Science, Calcutta", "region": "Bengal Presidency", "country": "IN",
+                        "points": [{ "lat": 22.5354, "lon": 88.3520 }] },
+          "note": "28 February remains India's National Science Day. The discovery used a 1925 mercury arc lamp, a quartz spectrograph, and observed scattered-light frequency shifts in 60 different liquids. The Nobel Prize 1930 made him the first Asian science Nobel laureate; his speech at Stockholm referenced the ICS-and-Indian-civilian-life environment in which the work was done."
+        },
+        {
+          "kind": "moment",
+          "id": "raman-iisc-bangalore-1933",
+          "tooltip": "Director of the Indian Institute of Science, Bangalore, 1933",
+          "summary": "Director of IISc Bangalore 1933 — first Indian to head it. Resigned 1937 over admin disputes; founded Raman Research Institute Bangalore 1948.",
+          "date": { "start": "1933-04-01", "end": "1948-12-31", "precision": "year", "approximate": true, "display": "1933 IISc; 1948 RRI founded" },
+          "location": { "name": "Indian Institute of Science, Bangalore", "region": "Mysore Kingdom", "country": "IN",
+                        "points": [{ "lat": 13.0218, "lon": 77.5671 }] },
+          "note": "Founded the Indian Academy of Sciences 1934 at Bangalore (the Indian National Academy of Sciences founded earlier under Saha at Allahabad gave the country two parallel academies, a duplication that has not been resolved). The Raman Research Institute (1948) at Bangalore on land donated by the Mysore government became his post-IISc base for the rest of his life."
+        }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "meghnad-saha",
+      "name": "Meghnad Saha",
+      "short_name": "Meghnad Saha",
+      "tooltip": "Meghnad Saha (1893–1956), thermal-ionisation equation and astrophysics",
+      "summary": "Bengali astrophysicist; Saha ionisation equation 1920 founded modern stellar spectroscopy; founded the Saha Nuclear Physics Institute; only scientist MP, 1952.",
+      "era": "colonial",
+      "lifespan": {
+        "born": "1893-10-06",
+        "died": "1956-02-16",
+        "birthplace": { "name": "Sheoratali (Shaoratoli), Dacca", "country": "BD", "lat": 23.5680, "lon": 90.3550 },
+        "deathplace": { "name": "New Delhi", "country": "IN", "lat": 28.6139, "lon": 77.2090 }
+      },
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Meghnad_Saha", "label": "Wikipedia: Meghnad Saha", "type": "wikipedia" }
+      ],
+      "colour": "#3a7a4a",
+      "track": [
+        {
+          "kind": "moment",
+          "id": "saha-ionisation-equation-1920",
+          "tooltip": "Saha ionisation equation, Philosophical Magazine, 1920",
+          "summary": "Published the thermal-ionisation equation in Philosophical Magazine 1920 — linking stellar spectra to atmospheric temperature; founded modern astrophysics.",
+          "date": { "start": "1920-10-01", "end": "1920-10-31", "precision": "month", "approximate": true, "display": "October 1920" },
+          "location": { "name": "University College, London", "region": "England", "country": "OFF",
+                        "points": [{ "lat": 51.5246, "lon": -0.1340 }] },
+          "note": "Eddington called the Saha equation 'amongst the dozen most important advances in theoretical astrophysics' of the early 20th century. Saha was at UCL on the 1919 Premchand Roychand scholarship; A.S. Eddington and H.N. Russell extended the equation in the 1920s; the equation remains the textbook foundation of stellar atmospheric spectroscopy."
+        },
+        {
+          "kind": "moment",
+          "id": "saha-allahabad-academy-1934",
+          "tooltip": "Founds Indian National Academy of Sciences at Allahabad, 1934",
+          "summary": "Founded the National Academy of Sciences India (NASI) at Allahabad 1934 — predating Raman's IAS Bangalore; the Saha-Raman duplication has persisted.",
+          "date": { "start": "1934-05-12", "end": "1934-05-12", "precision": "day", "approximate": true, "display": "1934 (Allahabad)" },
+          "location": { "name": "Allahabad University", "region": "United Provinces", "country": "IN",
+                        "points": [{ "lat": 25.4358, "lon": 81.8463 }] },
+          "note": "Saha at Allahabad University (1923-38) was the institutional rival to Raman's Calcutta-then-Bangalore. The two academies — Saha's NASI at Allahabad (later moved to delhi) and Raman's IAS at Bangalore — were founded in deliberate parallel; their merger has been proposed and rejected multiple times since. The duplication is the institutional residue of the Bengal scientific rivalry."
+        },
+        {
+          "kind": "moment",
+          "id": "saha-institute-1950",
+          "tooltip": "Founds the Institute of Nuclear Physics, Calcutta, 11 January 1950",
+          "summary": "Founded the Institute of Nuclear Physics at Calcutta 1950; renamed Saha Institute after his death. India's first nuclear institution beside Bhabha's TIFR.",
+          "date": { "start": "1950-01-11", "end": "1950-01-11", "precision": "day", "approximate": false, "display": "11 January 1950" },
+          "location": { "name": "Saha Institute, Calcutta", "region": "West Bengal", "country": "IN",
+                        "points": [{ "lat": 22.5560, "lon": 88.3565 }] },
+          "note": "Inaugurated by Madame Joliot-Curie. Saha had built the Calcutta cyclotron — first in Asia — through 1939-44 with substantial Tata Trust funding. The Saha-Bhabha relationship was tense: Bhabha's TIFR Bombay (1945) absorbed most central nuclear funding under Nehru's preference; Saha's Calcutta institute remained smaller. The split shaped Indian nuclear-science institutional geography."
+        },
+        {
+          "kind": "moment",
+          "id": "saha-constituent-assembly-1952",
+          "tooltip": "Lok Sabha member from North-West Calcutta, 1952–56",
+          "summary": "Elected to the first Lok Sabha 1952 from North-West Calcutta as independent — the only practising scientist in the Constituent Assembly or first Lok Sabha.",
+          "date": { "start": "1952-04-17", "end": "1956-02-16", "precision": "day", "approximate": false, "display": "1952–1956" },
+          "location": { "name": "Lok Sabha, New Delhi", "region": "Republic of India", "country": "IN",
+                        "points": [{ "lat": 28.6139, "lon": 77.2090 }] },
+          "note": "Critic from the floor of Nehru's nuclear policy — argued for a Calcutta-based programme over Bhabha's Bombay-centred model. Drafted the calendar reform proposal that produced the 1957 National Calendar of India (the Saka Era). Died of a heart attack 16 February 1956 walking to a Planning Commission meeting at North Block — the lone scientist in the post-Independence Indian parliament."
+        }
+      ],
+      "verified": true
+    }
+
+  ]
+}

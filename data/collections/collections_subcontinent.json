@@ -139,6 +139,19 @@
     },
 
     {
+      "id": "indian-scientific-renaissance",
+      "title": "The Indian scientific renaissance",
+      "subtitle": "J.C. Bose to Saha — the colonial-period generation that put India on the world scientific map.",
+      "summary": "Between 1885 and 1937 a generation of Indian scientists working in the colonial framework — J.C. Bose at Calcutta, Ramanujan at Cambridge under Hardy, C.V. Raman at IACS Calcutta, Meghnad Saha at UCL and Allahabad — produced first-rank original work in radio physics, number theory, light scattering, and astrophysics. Three of the four founded permanent Indian research institutions (Bose, Raman, Saha); Ramanujan's body of work continues to generate new mathematics a century after his death.",
+      "members": [
+        { "kind": "event", "id": "saha-ionisation-equation-1920" },
+        { "kind": "event", "id": "raman-effect-discovery-1928" },
+        { "kind": "event", "id": "green-revolution-1965-1970" }
+      ],
+      "verified": true
+    },
+
+    {
       "id": "the-princely-states-question",
       "title": "The princely states question",
       "subtitle": "From Doctrine of Lapse to integration — the 562 princely states between 1848 and 1948.",

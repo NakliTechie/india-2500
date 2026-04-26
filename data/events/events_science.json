@@ -1,0 +1,74 @@
+{
+  "campaign": "science",
+  "scope": "Anchor moments of the colonial-period Indian scientific renaissance — Saha's ionisation equation 1920, Raman's discovery of the inelastic light-scattering effect 1928. Both stand as foundational results that put Indian physics on the world map.",
+  "updated": "2026-04-26",
+  "events": [
+    {
+      "id": "saha-ionisation-equation-1920",
+      "title": "Saha ionisation equation",
+      "tooltip": "Saha ionisation equation, October 1920 — founds modern stellar spectroscopy",
+      "summary": "Saha published the thermal-ionisation equation in Philosophical Magazine — links stellar spectra to atmospheric temperature; founds modern astrophysics.",
+      "detail": "Meghnad Saha, working at University College London on the 1919 Premchand Roychand scholarship, published 'Ionisation in the Solar Chromosphere' in the Philosophical Magazine (vol. 40, October 1920). The Saha equation gives the ratio of singly-ionised atoms to neutral atoms in a thermal gas as a function of temperature, pressure, and ionisation potential — the missing link between observed stellar spectral lines and the physical conditions of stellar atmospheres. Eddington called the result 'amongst the dozen most important advances in theoretical astrophysics' of the early 20th century. H.N. Russell at Princeton extended it to the spectral classification of stars (1924); Cecilia Payne's 1925 PhD thesis used the Saha equation to demonstrate that stars are composed principally of hydrogen — the result that overturned the Earth-composition assumption of pre-1925 stellar astronomy. The Saha equation remains the textbook foundation of stellar atmospheric spectroscopy. Saha returned to India 1921, joined Allahabad University, founded the Indian National Academy of Sciences 1934 at Allahabad, and the Institute of Nuclear Physics at Calcutta 1950. Astrophysics-as-a-discipline traces back to this equation.",
+      "date": {
+        "start": "1920-10-01",
+        "end":   "1920-10-31",
+        "precision": "month",
+        "approximate": true,
+        "display": "October 1920 (Philosophical Magazine vol. 40)"
+      },
+      "location": {
+        "type": "city",
+        "name": "University College, London",
+        "region": "England",
+        "country": "OFF",
+        "points": [{ "lat": 51.5246, "lon": -0.1340, "name": "UCL" }]
+      },
+      "era": "colonial",
+      "category": ["scientific"],
+      "figures": ["Meghnad Saha", "Arthur Eddington", "H.N. Russell", "Cecilia Payne"],
+      "tags": ["science"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Saha_ionization_equation", "label": "Wikipedia: Saha ionization equation", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "M.N. Saha, 'Ionisation in the Solar Chromosphere', Philosophical Magazine 40 (1920), 472–488", "type": "primary" },
+        { "label": "S. Chatterjee, Meghnad Saha: A Personal and Scientific Biography (1994)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "raman-effect-discovery-1928",
+      "title": "Discovery of the Raman effect",
+      "tooltip": "Raman effect discovered, Calcutta, 28 February 1928 — Nobel Prize 1930",
+      "summary": "Raman and K.S. Krishnan demonstrated inelastic light scattering at IACS Calcutta — Nobel Prize 1930, first Asian science Nobel.",
+      "detail": "Chandrasekhara Venkata Raman, working with K.S. Krishnan at the Indian Association for the Cultivation of Science (IACS) at Bowbazar, Calcutta, published 'A New Type of Secondary Radiation' in Nature (16 March 1928, dated work 28 February 1928). The effect: when monochromatic light is scattered by a molecule, a small fraction of the scattered light is shifted in frequency by the energy of the molecule's vibrational transitions — the inelastic Raman scattering. The seven-year programme leading to the discovery began with Raman's 1921 onboard observation of the deep blue colour of the Mediterranean — Lord Rayleigh had attributed it to sky-reflection; Raman traced it to molecular scattering by water itself. The 1928 measurement used a 1925 mercury arc lamp, a quartz spectrograph, and 60 different liquids. The Nobel Prize in Physics 1930 made him the first Asian science Nobel laureate; the Stockholm speech was given in English with explicit reference to the colonial-civilian-science environment in which the work was done. Raman spectroscopy became — and remains — one of the principal techniques of molecular structure determination across chemistry, biology, materials science, and pharmaceutical analysis. The 28 February anniversary is India's National Science Day.",
+      "date": {
+        "start": "1928-02-28",
+        "end":   "1928-02-28",
+        "precision": "day",
+        "approximate": false,
+        "display": "28 February 1928"
+      },
+      "location": {
+        "type": "city",
+        "name": "Indian Association for the Cultivation of Science, Calcutta",
+        "region": "Bengal Presidency",
+        "country": "IN",
+        "points": [{ "lat": 22.5354, "lon": 88.3520, "name": "IACS, Calcutta" }]
+      },
+      "era": "colonial",
+      "category": ["scientific"],
+      "figures": ["C.V. Raman", "K.S. Krishnan"],
+      "tags": ["science"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Raman_scattering", "label": "Wikipedia: Raman scattering", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "C.V. Raman and K.S. Krishnan, 'A New Type of Secondary Radiation', Nature 121 (1928), 501–502", "type": "primary" },
+        { "label": "G. Venkataraman, Journey into Light: Life and Science of C.V. Raman (1988)", "type": "scholarly" }
+      ],
+      "verified": true
+    }
+  ]
+}

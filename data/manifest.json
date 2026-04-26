@@ -23,6 +23,7 @@
     "events_princely_states.json",
     "events_reform.json",
     "events_republic.json",
+    "events_science.json",
     "events_south_india.json",
     "events_sultanate.json",
     "events_sur.json",
@@ -41,7 +42,8 @@
     "people_freedom-fighters.json",
     "people_mughal-emperors.json",
     "people_reformers-and-thinkers.json",
-    "people_regional-resistance.json"
+    "people_regional-resistance.json",
+    "people_scientists.json"
   ],
   "collections_files": [
     "collections_central_asia.json",
