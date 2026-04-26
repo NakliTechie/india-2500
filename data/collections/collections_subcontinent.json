@@ -83,12 +83,16 @@
     },
 
     {
-      "id": "famines-under-empire",
-      "title": "Famines under empire",
-      "subtitle": "The Bengal famine 1770 to the Bengal famine 1943 — colonial-era mortality on the subcontinent.",
-      "summary": "Famines were endemic on the subcontinent before 1700 and continued to be so under EIC and Crown rule — but the colonial-era famines were structurally distinctive in their administrative response: revenue collection through mortality (1770), Lyttonian Free Trade orthodoxy (1876–78), the Famine Codes (1899–1900), and wartime grain diversion (1943). An estimated 18–25 million died across these four episodes.",
+      "id": "famines-on-the-subcontinent",
+      "title": "Famines on the subcontinent",
+      "subtitle": "From Tughluq's Doab famine (1335–42) to Bengal 1943 — six centuries of monsoon-driven mortality.",
+      "summary": "Famines were endemic on the subcontinent across the Sultanate, Mughal, and colonial centuries — and ended, in their catastrophic form, only with the Republic. The eight events here run from the Tughluq Doab famine c. 1335 to the Bengal famine of 1943; the colonial-era set is structurally distinctive in its administrative response, but the underlying monsoon-and-state vulnerability is the longer story. Estimated 30–50 million dead across the six centuries.",
       "members": [
+        { "kind": "event", "id": "tughluq-doab-famine-1335-1342" },
+        { "kind": "event", "id": "deccan-gujarat-famine-1630-1632" },
         { "kind": "event", "id": "great-bengal-famine-1770" },
+        { "kind": "event", "id": "chalisa-famine-1783-1784" },
+        { "kind": "event", "id": "doji-bara-skull-famine-1791-1792" },
         { "kind": "event", "id": "great-madras-famine-1876-1878" },
         { "kind": "event", "id": "indian-famine-1899-1900" },
         { "kind": "event", "id": "bengal-famine-1943" }

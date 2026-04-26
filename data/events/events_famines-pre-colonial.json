@@ -1,0 +1,141 @@
+{
+  "campaign": "famines-pre-colonial",
+  "scope": "Pre-EIC famines on the subcontinent — the Tughluq-era Doab famine 1335–42, the Shah Jahan-era Deccan and Gujarat famine 1630–32, the Chalisa famine of 1783–84, and the Doji bara ('skull') famine of 1791–92. Famines were endemic; the colonial-era set is one slice of a much longer subcontinental record.",
+  "updated": "2026-04-26",
+  "events": [
+    {
+      "id": "tughluq-doab-famine-1335-1342",
+      "title": "Tughluq Doab Famine",
+      "tooltip": "Doab famine under Muhammad bin Tughluq, c. 1335–1342",
+      "summary": "Seven-year famine across the Ganges-Yamuna doab under Muhammad bin Tughluq — drought compounded by punitive revenue and the Daulatabad capital transfer.",
+      "detail": "The Doab famine of c. 1335–42 was the most prolonged Delhi Sultanate famine documented. Three causes converged: (i) consecutive monsoon failures across the Ganges-Yamuna doab through the mid-1330s; (ii) Muhammad bin Tughluq's punitive revenue increases in the doab to fund his Khurasan and Qarachil campaigns — chroniclers (Ziauddin Barani, Ibn Battuta) describe peasants abandoning villages and fleeing into forests to escape collection; (iii) the 1327 capital transfer from Delhi to Daulatabad and its 1335 partial reversal had drained Delhi of population and economic activity. Tughluq established a famine relief program (the takkavi loans, the Diwan-i-Kohi agricultural department), but the relief came too late and was poorly administered. Mortality figures are not contemporaneously recorded — Ibn Battuta wrote of villages 'so depopulated that the very memory of cultivation was lost'. Population estimates suggest the Delhi region alone lost 30–40% of its inhabitants over the famine years. The famine is the canonical example in early Indo-Persian historiography of revenue policy and famine mortality interacting destructively — the same diagnostic frame Edmund Burke would deploy for the 1770 Bengal famine four centuries later.",
+      "date": {
+        "start": "1335-01-01",
+        "end":   "1342-12-31",
+        "precision": "year",
+        "approximate": true,
+        "display": "c. 1335–1342"
+      },
+      "location": {
+        "type": "city",
+        "name": "Ganges-Yamuna Doab (Delhi epicentre)",
+        "region": "Delhi Sultanate",
+        "country": "IN",
+        "points": [{ "lat": 28.6139, "lon": 77.2090, "name": "Delhi" }]
+      },
+      "era": "sultanate",
+      "category": ["economic", "political"],
+      "figures": ["Muhammad bin Tughluq", "Ziauddin Barani", "Ibn Battuta"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Muhammad_bin_Tughluq", "label": "Wikipedia: Muhammad bin Tughluq", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Ziauddin Barani, Tarikh-i-Firuz Shahi (c. 1357)", "type": "primary" },
+        { "label": "Ibn Battuta, Rihla (1355)", "type": "primary" },
+        { "label": "Irfan Habib, Economic History of Medieval India 1200–1500 (2011)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "deccan-gujarat-famine-1630-1632",
+      "title": "Deccan–Gujarat Famine under Shah Jahan",
+      "tooltip": "Deccan and Gujarat famine, 1630–1632 — ~7.4 million dead in Gujarat alone",
+      "summary": "Two-year drought across Gujarat, Khandesh, and the Ahmednagar Deccan — ~7.4 million dead in Gujarat alone per contemporary Mughal and Dutch accounts.",
+      "detail": "The 1630–32 famine across western India was among the deadliest documented pre-colonial Indian famines. Two consecutive monsoon failures (1630, 1631) hit Gujarat, Khandesh, and the Ahmednagar Deccan; the Mughal Deccan campaign (Shah Jahan's army was in active operation against Ahmednagar through 1630–31) exacerbated grain shortage by army requisitioning. The Mughal court chronicler Abdul Hamid Lahori (Padshahnama) and the Dutch VOC factor at Surat Pieter van den Broecke recorded mortality at scale: van den Broecke's Hof estimate put Gujarat deaths at ~3 million; Lahori at ~7.4 million; modern demographers (Habib, Moosvi) treat the Mughal figure as an upper bound on the order of 5 million. English East India Company traveller Peter Mundy's diary of his 1630 Gujarat journey describes carcasses on the highway every few miles, mass-grave plague, and cannibalism. Shah Jahan's relief operations — sadqa distribution at Ahmedabad, tax remission, 5,000 rupee per day langar at Burhanpur — were substantial by Mughal standards but inadequate to the scale. The famine is the case Mughal-era historians cite as evidence that famine mortality on this scale was structural to the subcontinent's monsoon-dependent agriculture, not a colonial novelty.",
+      "date": {
+        "start": "1630-01-01",
+        "end":   "1632-12-31",
+        "precision": "year",
+        "approximate": true,
+        "display": "1630–1632"
+      },
+      "location": {
+        "type": "city",
+        "name": "Gujarat, Khandesh, Ahmednagar Deccan (epicentre Ahmedabad)",
+        "region": "Mughal Empire (Shah Jahan)",
+        "country": "IN",
+        "points": [{ "lat": 23.0225, "lon": 72.5714, "name": "Ahmedabad (epicentre)" }]
+      },
+      "era": "mughal",
+      "category": ["economic", "political", "military"],
+      "figures": ["Shah Jahan", "Abdul Hamid Lahori", "Peter Mundy", "Pieter van den Broecke"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Deccan_famine_of_1630%E2%80%931632", "label": "Wikipedia: Deccan famine of 1630–32", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Abdul Hamid Lahori, Padshahnama (c. 1648)", "type": "primary" },
+        { "label": "Peter Mundy, The Travels of Peter Mundy in Europe and Asia 1608–1667 (Hakluyt Society 1907)", "type": "primary" },
+        { "label": "Shireen Moosvi, Economy of the Mughal Empire c. 1595 (1987)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "chalisa-famine-1783-1784",
+      "title": "Chalisa Famine",
+      "tooltip": "Chalisa Famine, 1783–84 — ~11 million dead across northern India",
+      "summary": "Drought across Delhi, Awadh, Rohilkhand, eastern Punjab — ~11 million dead. Named for VS 1840 ('chalisa' = forty); coincided with late-Mughal collapse.",
+      "detail": "The Chalisa famine — named for the Vikram Samvat year 1840 (1783–84 CE), 'chalisa' meaning 'forty' — was the deadliest northern-Indian famine of the eighteenth century. Drought across Delhi, the Doab, Awadh, Rohilkhand, eastern Punjab, and parts of Rajputana followed two consecutive monsoon failures. Mortality estimates: ~11 million across the affected regions (William Crooke's 1894 estimate, broadly accepted). The famine struck during the period of Mughal collapse and post-Panipat 1761 political reordering: Shah Alam II at Delhi was politically powerless; the Marathas under Mahadji Scindia held the central Doab; Awadh under Asaf-ud-Daulah ran an autonomous administration; the EIC was consolidating Bengal but had not yet assumed responsibility for upper India. There was no central authority capable of organised relief. Asaf-ud-Daulah's Bara Imambara at Lucknow — the colossal arched hall built 1784 — was constructed as a famine-relief project employing thousands of cultivator-refugees on a make-work basis through the famine years; its scale is the single physical monument to the Chalisa. The famine ran into the Doji bara famine of 1791–92 less than a decade later — back-to-back catastrophic mortality events that hollowed out late-Mughal demography.",
+      "date": {
+        "start": "1783-01-01",
+        "end":   "1784-12-31",
+        "precision": "year",
+        "approximate": true,
+        "display": "1783–1784 (Vikram Samvat 1840 'chalisa')"
+      },
+      "location": {
+        "type": "city",
+        "name": "Delhi / Awadh / Rohilkhand (epicentre Delhi-Doab)",
+        "region": "Late-Mughal northern India",
+        "country": "IN",
+        "points": [{ "lat": 28.6139, "lon": 77.2090, "name": "Delhi" }]
+      },
+      "era": "colonial",
+      "category": ["economic", "political"],
+      "figures": ["Shah Alam II", "Asaf-ud-Daulah", "Mahadji Scindia", "Warren Hastings"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Chalisa_famine", "label": "Wikipedia: Chalisa famine", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "William Crooke, The Tribes and Castes of the North-Western Provinces and Oudh (1896)", "type": "primary" },
+        { "label": "C.A. Bayly, Rulers, Townsmen and Bazaars 1770–1870 (1983)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "doji-bara-skull-famine-1791-1792",
+      "title": "Doji Bara ('Skull') Famine",
+      "tooltip": "Doji Bara Famine, 1791–92 — ~11 million dead across south and central India",
+      "summary": "Drought across Madras, Hyderabad, Maratha Deccan, Gujarat — ~11 million dead. Named 'skull famine' because the dead were too many to bury for years.",
+      "detail": "The Doji bara famine of 1791–92 — 'doji bara' is the Marathi term for the Vikram Samvat year of mortality, with 'skull famine' the colloquial English rendering — was the deadliest single-year famine on the eighteenth-century subcontinent. The 1789–90 El Niño produced consecutive monsoon failures across south India, the Hyderabad Nizam's territories, the Maratha Deccan, Gujarat, and parts of Madras; secondary mortality from cholera and dysentery ran through 1792–93. Mortality estimates: ~11 million across the affected regions (Cornelius Walford's 1879 estimate). The famine struck during the Third Anglo-Mysore War (1790–92) — Cornwallis's combined EIC, Maratha, Nizam coalition campaigns against Tipu Sultan disrupted Deccan grain markets and removed cultivators to military service. The 'skull' name referred to the bones that lay unburied across affected regions for years; the EIC's official report on the famine described carriage roads through Hyderabad and Mysore where 'human bones were so numerous that the wheels and feet ground them to powder for weeks'. Tipu Sultan's Mysore administration ran a relief grain-loan programme through 1791–92; the Hyderabad Nizam's relief was minimal. Together with the 1783–84 Chalisa, the Doji bara represents one of the worst back-to-back demographic catastrophes in subcontinental history — preceding the 1857 rebellion's political dislocations by a generation.",
+      "date": {
+        "start": "1791-01-01",
+        "end":   "1792-12-31",
+        "precision": "year",
+        "approximate": true,
+        "display": "1791–1792 ('Doji bara' / Skull Famine)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Madras / Hyderabad / Maratha Deccan (epicentre Hyderabad)",
+        "region": "South and central India",
+        "country": "IN",
+        "points": [{ "lat": 17.3850, "lon": 78.4867, "name": "Hyderabad" }]
+      },
+      "era": "colonial",
+      "category": ["economic", "political", "military"],
+      "figures": ["Tipu Sultan", "Nizam Ali Khan Asaf Jah II", "Charles Cornwallis", "Mahadji Scindia"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Doji_bara_famine", "label": "Wikipedia: Doji bara famine", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Cornelius Walford, The Famines of the World: Past and Present (1879)", "type": "primary" },
+        { "label": "Bombay Government, Selections from the Records: Famine Report (1865 ed.)", "type": "primary" },
+        { "label": "Mike Davis, Late Victorian Holocausts (2001), background chapter on pre-colonial famines", "type": "scholarly" }
+      ],
+      "verified": true
+    }
+  ]
+}
