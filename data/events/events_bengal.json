@@ -1,0 +1,108 @@
+{
+  "campaign": "bengal",
+  "scope": "Bengal-specific events — Permanent Settlement, peasant and Faraizi rebellions, Bengal Renaissance, partition 1905 / 1947, Tebhaga, Chittagong armoury raid, Bengal famine. Seeded with three pre-modern peasant / religious-agrarian rebellions; expansion planned.",
+  "updated": "2026-04-26",
+  "events": [
+    {
+      "id": "sannyasi-fakir-rebellion-1763-1820",
+      "title": "Sannyasi-Fakir Rebellion",
+      "tooltip": "Sannyasi-Fakir Rebellion across Bengal, 1763 onwards",
+      "summary": "Hindu sannyasis and Muslim fakirs raided EIC Bengal for sixty years after the 1770 famine — Hastings called it the first sustained challenge to Company rule.",
+      "detail": "The rebellion began as periodic raids by armed Hindu sannyasi (Dasanami Naga) and Muslim madari fakir mendicant orders on EIC revenue posts and zamindar estates across Bengal-Bihar after 1763. The 1770 Bengal famine — in which Company tax-extraction from a population reduced by an estimated ten million dead intensified rather than relaxed — turned sporadic raids into sustained insurgency. Major Stewart's force was destroyed at the battle of Madhabpur (1763); Captain Thomas's at Bogra (1767); Major Brennan defeated at Cooch Behar. The fakir leader Majnu Shah and the sannyasi commander Bhabani Pathak coordinated parallel campaigns through the 1780s. Warren Hastings called it the first sustained Indian challenge to Company rule and devoted significant troop strength to its suppression. Romanticised by Bankim Chandra in Anandamath (1882), which extracted 'Vande Mataram' from one of the rebellion's invocations.",
+      "date": {
+        "start": "1763",
+        "end":   "1820",
+        "precision": "year",
+        "approximate": true,
+        "display": "c. 1763–1820 (peak 1770s–1790s)"
+      },
+      "location": {
+        "type": "region",
+        "name": "Bengal–Bihar (Murshidabad, Rangpur, Bogra, Birbhum)",
+        "region": "Bengal Presidency",
+        "country": "IN",
+        "points": [{ "lat": 24.1797, "lon": 88.2755, "name": "Murshidabad (representative)" }]
+      },
+      "era": "colonial",
+      "category": ["resistance", "religious", "military"],
+      "figures": ["Majnu Shah", "Bhabani Pathak", "Warren Hastings"],
+      "tags": ["rebellion"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Sannyasi_rebellion", "label": "Wikipedia: Sannyasi rebellion", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Atis Dasgupta, The Fakir and Sannyasi Uprisings (1992)", "type": "scholarly" },
+        { "label": "Suprakash Ray, Bharater Krishak Bidroho O Ganatantrik Sangram (1966)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "faraizi-movement-1830-1860",
+      "title": "Faraizi Movement",
+      "tooltip": "Faraizi peasant-religious movement, eastern Bengal, 1830s–1860s",
+      "summary": "Haji Shariatullah's Faraizi movement organised east-Bengal Muslim peasants against zamindars and indigo planters — religious revival fused to agrarian protest.",
+      "detail": "Haji Shariatullah (1781–1840) returned to Faridpur in 1818 after twenty years at Mecca and Cairo, preaching a purified Sunni Islam stripped of the syncretic Hindu-Muslim ritual that characterised east-Bengal village religion. The Faraizi movement (from faraiz, 'obligatory duties') took organisational form in the 1830s and was inherited by his son Dudu Miyan (1819–1862), who built it into a structured system: armed lathial (stick-fighter) bands, a parallel taxation system, formal khalifa-led district administration. The movement's targets were the Hindu zamindars whose rent extraction from Muslim cultivator-tenants had hardened under the Permanent Settlement (1793), and the British indigo planters who forced cash-crop cultivation. Dudu Miyan declared land was Allah's, not the zamindar's. The British arrested him repeatedly; the movement faded after his death. Among the first organised peasant movements in modern South Asia.",
+      "date": {
+        "start": "1830",
+        "end":   "1862",
+        "precision": "year",
+        "approximate": true,
+        "display": "c. 1830–1862 (peak under Dudu Miyan)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Faridpur (Faraizi base)",
+        "region": "East Bengal",
+        "country": "BD",
+        "points": [{ "lat": 23.6033, "lon": 89.8307, "name": "Faridpur" }]
+      },
+      "era": "colonial",
+      "category": ["resistance", "religious", "economic"],
+      "figures": ["Haji Shariatullah", "Dudu Miyan"],
+      "tags": ["rebellion", "peasant"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Faraizi_movement", "label": "Wikipedia: Faraizi movement", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Muin-ud-Din Ahmad Khan, History of the Fara'idi Movement in Bengal, 1818–1906 (1965)", "type": "scholarly" },
+        { "label": "Rafiuddin Ahmed, The Bengal Muslims 1871–1906 (1981), ch. 3", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "indigo-rebellion-1859-1860",
+      "title": "Indigo Rebellion (Nil Bidroho)",
+      "tooltip": "Bengal ryots strike against indigo planters, 1859–1860",
+      "summary": "Bengal cultivators refused to plant indigo in spring 1859 — a non-violent strike that broke the planter system and prefigured Champaran sixty years later.",
+      "detail": "Indigo cultivation under the EIC's planter system had compelled Bengal ryots since the 1830s to grow the dye on the best parts of their holdings at fixed below-market prices, with advances calibrated to keep them in permanent debt. In spring 1859, peasants in Nadia and Pabna refused to sow indigo — a coordinated strike across hundreds of villages organised by ryot leaders Digambar Biswas and Bishnu Biswas of Krishnanagar. The refusal spread; planters retaliated with private armies (lathials), abductions, and burning of houses. The ryots held. Harish Chandra Mukherjee's Hindoo Patriot newspaper publicised the violence; the Indigo Commission (1860) collected 134 testimonies and effectively ended the planter system in Bengal within a decade. Dinabandhu Mitra's play Nil Darpan (1860) — translated into English by Reverend James Long, who was jailed for it — turned the rebellion into the founding case of an emerging Bengali public opinion.",
+      "date": {
+        "start": "1859-03",
+        "end":   "1860-12",
+        "precision": "month",
+        "approximate": false,
+        "display": "March 1859 – December 1860 (Indigo Commission)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Krishnanagar, Nadia (Bengal)",
+        "region": "Bengal Presidency",
+        "country": "IN",
+        "points": [{ "lat": 23.4053, "lon": 88.4915, "name": "Krishnanagar" }]
+      },
+      "era": "colonial",
+      "category": ["resistance", "economic"],
+      "figures": ["Digambar Biswas", "Bishnu Biswas", "Harish Chandra Mukherjee", "James Long"],
+      "tags": ["rebellion", "peasant"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Indigo_revolt", "label": "Wikipedia: Indigo revolt", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Blair B. Kling, The Blue Mutiny: The Indigo Disturbances in Bengal, 1859–1862 (1966)", "type": "scholarly" },
+        { "label": "Subhas Bhattacharya, 'The Indigo Revolt of Bengal', Social Scientist 5:12 (1977)", "type": "scholarly" }
+      ],
+      "verified": true
+    }
+  ]
+}

@@ -106,6 +106,40 @@
     },
 
     {
+      "id": "champaran-satyagraha-1917",
+      "title": "Champaran Satyagraha",
+      "tooltip": "Gandhi's first Indian satyagraha — Champaran indigo planters, 1917",
+      "summary": "Champaran tenant Raj Kumar Shukla brought Gandhi to Bihar to investigate the indigo planter system; the resulting satyagraha was Gandhi's first inside India.",
+      "detail": "The Champaran indigo system — 'tinkathia' — required ryots to plant 3 of every 20 katthas of their holding with indigo for European planters at fixed below-market prices, with debt bondage common. Raj Kumar Shukla, a Champaran tenant who had attended the 1916 Lucknow Congress session, persuaded Gandhi to visit. Gandhi reached Champaran on 10 April 1917, was served with an order to leave the district, refused, and was arrested. The case was withdrawn under public pressure; Gandhi conducted a six-month inquiry collecting testimony from approximately 8,000 ryots. The Champaran Agrarian Committee Report (October 1917) recommended abolition of tinkathia and partial restitution of overcharged rents. The Champaran Agrarian Act (1918) implemented the reforms. Champaran is the satyagraha that established Gandhi as a national figure inside India — the prior reputation was South African; this was the first Indian application of the same method.",
+      "date": {
+        "start": "1917-04-10",
+        "end":   "1918-05",
+        "precision": "month",
+        "approximate": false,
+        "display": "April 1917 – May 1918 (Champaran Agrarian Act)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Bettiah, Champaran district, Bihar",
+        "region": "Bihar and Orissa Province",
+        "country": "IN",
+        "points": [{ "lat": 26.8033, "lon": 84.5028, "name": "Bettiah" }]
+      },
+      "era": "colonial",
+      "category": ["resistance", "economic", "political"],
+      "figures": ["Mohandas Gandhi", "Raj Kumar Shukla", "Rajendra Prasad", "J.B. Kripalani"],
+      "tags": ["rebellion", "peasant"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Champaran_Satyagraha", "label": "Wikipedia: Champaran Satyagraha", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Rajendra Prasad, Champaran (1928, autobiographical account in Gujarati; Eng. trans. 1949)", "type": "primary" },
+        { "label": "Jacques Pouchepadass, Champaran and Gandhi: Planters, Peasants and Gandhian Politics (1999)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
       "id": "jallianwala-bagh-1919",
       "title": "Jallianwala Bagh massacre",
       "tooltip": "Jallianwala Bagh massacre, Amritsar, 1919",

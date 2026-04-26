@@ -9,12 +9,12 @@ Hosted at **[assets.chiragpatnaik.com/india-history.html](https://assets.chiragp
 A growing, validator-enforced corpus of historical events, threads (curated walks through events), people (biographical tracks across the map), and collections (set-shaped thematic groupings). Editorial stance: neutral, data-grounded, named entities and numbers over adjectives.
 
 Current corpus:
-- **82 events** spanning 1192–1958 CE across 10 campaign files (Sultanate, Central Asia, Mughal, Sur, Odisha, South India, Reform-era, 1857, Princely States, Independence)
+- **99 events** spanning 1192–1958 CE across 13 campaign files (Sultanate, Central Asia, Mughal, Sur, Bengal, Chotanagpur, Northeast, Odisha, South India, Reform-era, 1857, Princely States, Independence)
 - **2 threads** (Chauri Chaura and the cost of non-violence; Babur's road to Panipat)
 - **6 people** (Gandhi, Nehru, Bhagat Singh, Ambedkar, Jinnah, Babur)
-- **4 collections** — Babur's road from Andijan to Lahore; Founding moments of modern India; First-person works of the subcontinent (20 memoirs Barani 1357 → Azad 1958); Women shapers of the freedom struggle
+- **5 collections** — Babur's road; Founding moments of modern India; First-person works of the subcontinent (20 memoirs); Women shapers of the freedom struggle; Rebellions before and beyond 1857 (18 members across tribal / peasant / sepoy / caste-rights revolts)
 
-Upcoming: rebellions / incidents collections, Maurya / post-Maurya events, Vijayanagara + Anglo-Mysore, more 1857 / princely states / reformers, more memoirs (Padshahnama, Aurobindo, Sorabji), more biographical tracks (Akbar, Shah Jahan, Aurangzeb).
+Upcoming: Place + Polity as first-class types; political show trials and other incident collections; Vijayanagara + Anglo-Mysore expansion; more 1857 events; more biographical tracks.
 
 ## Repository layout
 

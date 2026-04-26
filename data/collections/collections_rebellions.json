@@ -1,0 +1,24 @@
+{
+  "campaign": "rebellions",
+  "scope": "Cross-cutting collections gathering anti-colonial and anti-feudal rebellions. Seeded with the long-arc rebellions collection; tribal-only and peasant-only sub-collections queued.",
+  "updated": "2026-04-26",
+  "collections": [
+    {
+      "id": "rebellions-before-and-beyond-1857",
+      "title": "Rebellions before and beyond 1857",
+      "subtitle": "Sannyasi-Fakir, Vellore, Paika, Kol, Khasi, Khond, Santhal, Birsa Munda, Heraka and others — the long arc of subcontinental anti-colonial revolt the textbook telling tends to compress into one date.",
+      "summary": "1857 was not the first. Tribal, peasant, sepoy, Dalit, and religious-agrarian revolts ran continuously from the 1763 Sannyasi-Fakir raids in Bengal to the 1951 Telangana Rebellion against the Nehru government. This collection gathers the events that surface that long arc — the rebellions textbooks compress, displace, or omit.",
+      "framing": "Reading the corpus chronologically reveals a structure the canonical 'first war of independence in 1857' framing obscures. The Sannyasi-Fakir Rebellion runs from 1763 through the 1820s. The Vellore Mutiny (1806) anticipates 1857's sepoy grievances by half a century. Paika 1817, Kol 1831–32, Khasi 1829–33, Khond risings from 1837, the Faraizi Movement, and the Santhal Hool of 1855–56 all predate 1857 by years to decades. Post-1857 the chain continues: Indigo 1859, Birsa Munda 1899–1900, Champaran 1917, Moplah 1921, Rampa 1922–24, the Mahad and Vaikom satyagrahas of the 1920s, Heraka under Jadonang and Rani Gaidinliu 1929–32, and the Communist-led Telangana Rebellion that fought past Indian independence into 1951. Many were tribal (Khasi, Kol, Khond, Santhal, Birsa, Heraka, Telangana — tagged also as `tribal`); several were peasant agrarian (Faraizi, Indigo, Champaran, Moplah, Telangana — tagged `peasant`); two were caste-rights satyagrahas (Vaikom, Mahad — tagged `caste-rights`). Lakshmibai's 1857 letters stand in for the rebellion of 1857 itself until that event is authored as its own entry.",
+      "members": [
+        { "kind": "tag", "tag": "rebellion" }
+      ],
+      "sources": [
+        { "label": "Sumit Sarkar, Modern India 1885–1947 (1983)", "type": "scholarly" },
+        { "label": "Bipan Chandra et al., India's Struggle for Independence (1989)", "type": "scholarly" },
+        { "label": "Ranajit Guha, Elementary Aspects of Peasant Insurgency in Colonial India (1983)", "type": "scholarly" },
+        { "label": "Sashi Bhushan Chaudhuri, Civil Disturbances During the British Rule in India 1765–1857 (1955)", "type": "scholarly" }
+      ],
+      "verified": true
+    }
+  ]
+}

@@ -36,6 +36,74 @@
         { "label": "Anncharlott Eschmann, Hermann Kulke, G.C. Tripathi (eds.), The Cult of Jagannath and the Regional Tradition of Orissa (1978)", "type": "scholarly" }
       ],
       "verified": true
+    },
+
+    {
+      "id": "paika-rebellion-1817",
+      "title": "Paika Rebellion under Buxi Jagabandhu",
+      "tooltip": "Paika peasant-warrior rebellion in Khurda, Odisha, 1817–1819",
+      "summary": "Buxi Jagabandhu led the dispossessed Paika militia of Khurda against EIC revenue policy — sacked the Khurda fort, held out for two years.",
+      "detail": "The Paikas were the hereditary peasant-warrior militia of the Khurda kingdom of Odisha, holding rent-free service-tenure land (jagir) in exchange for military service to the Khurda Raja. After the EIC annexation of Odisha (1803), the new revenue settlement converted Paika tenures into ordinary cash-rent holdings, levied salt and currency duties on a population accustomed to in-kind transactions, and dispossessed the Paika commander Buxi Jagabandhu Bidyadhar Mohapatra of his ancestral estate at Killa Rorang (1814). On 29 March 1817, Jagabandhu led the Paikas in revolt — sacked the Khurda fort, killed the EIC tahsildar, attacked salt depots and police stations across the Khurda region. Tribals (Kondhs and Savaras) joined; the revolt spread to Pipili, Cuttack, and Puri. EIC suppression took two years; Jagabandhu surrendered in 1825 under amnesty, died in custody at Cuttack 1829. The rebellion was officially recognised by the Government of India in 2017 as a 'first war of independence' on its bicentenary — politically loaded but extending the textbook 1857 framing back forty years.",
+      "date": {
+        "start": "1817-03-29",
+        "end":   "1819",
+        "precision": "year",
+        "approximate": false,
+        "display": "March 1817 – 1819"
+      },
+      "location": {
+        "type": "city",
+        "name": "Khurda",
+        "region": "Odisha",
+        "country": "IN",
+        "points": [{ "lat": 20.1810, "lon": 85.6175, "name": "Khurda" }]
+      },
+      "era": "colonial",
+      "category": ["resistance", "military", "economic"],
+      "figures": ["Buxi Jagabandhu Bidyadhar Mohapatra", "Krushna Chandra Bhramarbar Rai"],
+      "tags": ["rebellion"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Paika_Rebellion", "label": "Wikipedia: Paika Rebellion", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Prabhat Mukherjee, History of the Khurda Raj (1953)", "type": "scholarly" },
+        { "label": "K.C. Jena, History of the Paika Rebellion (Kalinga Books, 1986)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "khond-risings-1837-1856",
+      "title": "Khond (Kandh) Risings",
+      "tooltip": "Khond rebellions across Odisha hills, 1837–1856",
+      "summary": "Khond tribals rebelled against EIC suppression of meriah and against revenue extraction — Chakra Bisoi and Dandasena led repeated risings, 1837–1856.",
+      "detail": "The Khonds (Kandhs) of the Eastern Ghats hill-forest tracts in present-day Odisha — Phulbani, Kandhamal, Koraput — practised meriah, the ritual sacrifice of purchased human victims to the earth goddess Tari Pennu, into the 19th century. The EIC's Meriah Agency (1845) under Major-General John Campbell suppressed the practice through deployment of a special force, freed an estimated 1,500 meriah victims, and imposed increased revenue assessments on the Khond zamindars during the same operations. The Khonds rose repeatedly: under Chakra Bisoi from 1837 in Ghumsur, joined by Dora Bisoi and Radhakrishna Dandasena; the major risings of 1846 and 1855–56 covered Ghumsur, Kalahandi, Boudh, Daspalla. EIC suppression continued through the 1860s. The hill-area administration that emerged from the Meriah Agency persisted as the Agency tract system through colonial rule and the early independence period — light direct administration backed by occasional military deployment.",
+      "date": {
+        "start": "1837",
+        "end":   "1856",
+        "precision": "year",
+        "approximate": true,
+        "display": "1837–1856 (Meriah Agency 1845; major risings 1846, 1855–56)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Phulbani / Kandhamal hills",
+        "region": "Odisha hill tracts",
+        "country": "IN",
+        "points": [{ "lat": 20.4667, "lon": 84.2333, "name": "Phulbani" }]
+      },
+      "era": "colonial",
+      "category": ["resistance", "religious", "political"],
+      "figures": ["Chakra Bisoi", "Dora Bisoi", "Radhakrishna Dandasena", "John Campbell"],
+      "tags": ["rebellion", "tribal"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Khond_uprising", "label": "Wikipedia: Khond uprising", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Felix Padel, The Sacrifice of Human Being: British Rule and the Konds of Orissa (1995)", "type": "scholarly" },
+        { "label": "John Campbell, A Personal Narrative of Thirteen Years' Service amongst the Wild Tribes of Khondistan (1864)", "type": "primary" }
+      ],
+      "verified": true
     }
   ]
 }

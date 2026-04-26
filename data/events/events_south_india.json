@@ -1,8 +1,42 @@
 {
   "campaign": "south-india",
-  "scope": "South Indian events — Vijayanagara, Mysore Wodeyars and Tipu, Anglo-Mysore wars, Travancore, Madras Presidency. Seeded with Tipu's Khwabnama; substantial expansion planned.",
+  "scope": "South Indian events — Vijayanagara, Mysore Wodeyars and Tipu, Anglo-Mysore wars, Travancore, Madras Presidency, peninsular rebellions and caste-rights agitations.",
   "updated": "2026-04-26",
   "events": [
+    {
+      "id": "vellore-mutiny-1806",
+      "title": "Vellore Mutiny",
+      "tooltip": "Sepoys mutiny at Vellore Fort, 10 July 1806; predates 1857 by 51 years",
+      "summary": "Madras sepoys revolted against new Christian-style headgear and grooming rules, killed 200 EIC officers in three hours, and were suppressed by morning.",
+      "detail": "On 10 July 1806 sepoys of the EIC's Madras Native Infantry stationed at Vellore Fort revolted in the predawn hours, killing some 200 EIC officers and European troops within three hours and seizing the fort. The trigger was new Madras Army regulations (November 1805) prescribing turbans modelled on European hats, restrictions on caste marks and beards, and replacement of brass earrings — read by the sepoys as preparatory to forced Christianisation. Behind the regulations stood the political background of Tipu Sultan's family: his sons (Fateh Hyder, Abdul Khaliq, others) were held at Vellore Fort after the 1799 fall of Srirangapatna; some sepoys later said they had heard the family promise reward for restoration. Colonel Robert Rollo Gillespie's relief force arrived from Arcot before noon, retook the fort, and ordered approximately 350 sepoys executed — one detachment by being blown from cannon. The dress regulations were withdrawn and the Madras Army's commander, General John Cradock, was recalled. The Vellore Mutiny is the structural rehearsal for 1857.",
+      "date": {
+        "start": "1806-07-10",
+        "end":   "1806-07-10",
+        "precision": "day",
+        "approximate": false,
+        "display": "10 July 1806"
+      },
+      "location": {
+        "type": "city",
+        "name": "Vellore Fort, Madras Presidency",
+        "region": "Madras Presidency",
+        "country": "IN",
+        "points": [{ "lat": 12.9165, "lon": 79.1325, "name": "Vellore Fort" }]
+      },
+      "era": "colonial",
+      "category": ["resistance", "military"],
+      "figures": ["Robert Rollo Gillespie", "John Cradock", "Tipu Sultan's sons"],
+      "tags": ["rebellion"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Vellore_mutiny", "label": "Wikipedia: Vellore mutiny", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "James W. Hoover, Men Without Hats: Dialogue, Discipline and Discontent in the Madras Army 1806–1807 (2007)", "type": "scholarly" },
+        { "label": "K.A. Nilakanta Sastri, A History of South India (1955), ch. on the EIC period", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
     {
       "id": "tipu-khwabnama-1786",
       "title": "Tipu Sultan's Khwabnama (Book of Dreams)",
@@ -34,6 +68,109 @@
         { "label": "Mahmud Husain, The Dreams of Tipu Sultan (Pakistan Historical Society, 1957)", "type": "primary" },
         { "label": "Kate Brittlebank, Tipu Sultan's Search for Legitimacy: Islam and Kingship in a Hindu Domain (1997), ch. 4", "type": "scholarly" },
         { "label": "Irfan Habib (ed.), State and Diplomacy under Tipu Sultan (2001)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "moplah-rebellion-1921",
+      "title": "Moplah (Mappila) Rebellion",
+      "tooltip": "Mappila tenant rebellion across Malabar, August 1921 – early 1922",
+      "summary": "Mappila tenants rose against Hindu landlords and the Madras government during the Khilafat-Non-Cooperation period — six months of rebellion, 10,000 dead.",
+      "detail": "The August 1921 Mappila rebellion in Malabar grew out of a long agrarian crisis: Mappila Muslim tenant cultivators worked land owned by Hindu Namboodiri and Nair janmis under the Malabar tenancy system, with no security and rising rents. Khilafat and Non-Cooperation organising in 1920–21 politicised the tenants. After police arrested Mappila leaders at Tirurangadi mosque on 20 August 1921, riots became insurrection: jails attacked, telegraph cut, district treasury looted, parallel khilafat administration declared at Eranad with Variankunnath Kunjahammed Haji as 'sultan'. From October the rebellion took a communal turn — forced conversions and Hindu reprisals — that broke the Khilafat-Non-Cooperation alliance and gave Gandhi reason to question the entire programme. Suppression by Madras infantry took six months. Government counts: roughly 2,300 rebels killed in operations, 1,650 wounded, 5,690 captured, 38,000 arrested. The November 1921 Wagon Tragedy — 67 prisoners suffocated in a sealed railway wagon between Tirur and Coimbatore — became the rebellion's emblem. Total Mappila deaths estimated at 10,000.",
+      "date": {
+        "start": "1921-08-20",
+        "end":   "1922-02",
+        "precision": "month",
+        "approximate": false,
+        "display": "August 1921 – February 1922 (Wagon Tragedy 19 November)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Tirurangadi, Malabar",
+        "region": "Madras Presidency",
+        "country": "IN",
+        "points": [{ "lat": 11.0294, "lon": 75.9202, "name": "Tirurangadi" }]
+      },
+      "era": "colonial",
+      "category": ["resistance", "religious", "economic"],
+      "figures": ["Variankunnath Kunjahammed Haji", "Ali Musliyar", "Mohammed Abdurahiman"],
+      "tags": ["rebellion", "peasant"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Malabar_rebellion", "label": "Wikipedia: Malabar rebellion", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "K.N. Panikkar, Against Lord and State: Religion and Peasant Uprisings in Malabar 1836–1921 (1989)", "type": "scholarly" },
+        { "label": "Robert L. Hardgrave Jr., 'The Mappilla Rebellion 1921: Peasant Revolt in Malabar', Modern Asian Studies 11:1 (1977)", "type": "scholarly" },
+        { "label": "Stephen Dale, Islamic Society on the South Asian Frontier: The Mappilas of Malabar 1498–1922 (1980)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "rampa-rebellion-1922-1924",
+      "title": "Rampa Rebellion under Alluri Sitarama Raju",
+      "tooltip": "Alluri Sitarama Raju leads Rampa hill tribes, 1922–1924",
+      "summary": "A 27-year-old ascetic-revolutionary led Konda Reddi and Koya tribals in two years of guerrilla raids on EIC police outposts across the Eastern Ghats.",
+      "detail": "The 1882 Madras Forest Act had criminalised traditional podu (shifting cultivation) across the Agency hill tracts, and the Madras government's road-building used coerced tribal labour. Alluri Sitarama Raju (1897/98–1924), a Telugu Brahmin who had taken sannyasa and lived among the Konda Reddi and Koya tribals, organised a guerrilla force that on 22 August 1922 attacked the police station at Chintapalle, seizing weapons. Over two years they raided some twelve police outposts — Krishnadevipeta, Rajavommangi, Addatigala, Rampachodavaram — across the Visakhapatnam and East Godavari hill agencies, killing British and EIC officers (notably Scott Coward and Heron, who shot prisoners). The Madras government deployed Assam Rifles and the Malabar Special Force; Major Goodall took overall command. Raju was captured at Chintapalle on 7 May 1924, tied to a tree and shot on the spot — no trial. Roughly 100 Reddi-Koya rebels were killed in the campaign. Raju's combination of religious authority and tribal organisation prefigured the post-independence Naxalite turn in the same Eastern Ghats geography.",
+      "date": {
+        "start": "1922-08-22",
+        "end":   "1924-05-07",
+        "precision": "day",
+        "approximate": false,
+        "display": "August 1922 – 7 May 1924 (Raju executed without trial)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Rampachodavaram, Eastern Ghats",
+        "region": "Madras Presidency (Vizag-Godavari Agency)",
+        "country": "IN",
+        "points": [{ "lat": 17.4408, "lon": 81.7784, "name": "Rampachodavaram" }]
+      },
+      "era": "colonial",
+      "category": ["resistance", "military", "political"],
+      "figures": ["Alluri Sitarama Raju", "Gam Mallu Dora", "Gam Gantam Dora"],
+      "tags": ["rebellion", "tribal"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Rampa_Rebellion_of_1922", "label": "Wikipedia: Rampa Rebellion of 1922", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "M. Venkatarangaiya (ed.), The Freedom Struggle in Andhra Pradesh, vol. III (1968)", "type": "scholarly" },
+        { "label": "David Arnold, 'Rebellious Hillmen: The Gudem-Rampa Risings 1839–1924', in Subaltern Studies I (1982)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "vaikom-satyagraha-1924-1925",
+      "title": "Vaikom Satyagraha",
+      "tooltip": "Vaikom temple-road satyagraha, Travancore, 1924–1925",
+      "summary": "Twenty months of satyagraha at Vaikom won the right of avarna (lower-caste) Hindus to walk the temple road — the first organised caste-rights mass action.",
+      "detail": "The roads around the Mahadeva Temple at Vaikom in Travancore were closed to avarna (untouchable) castes — Ezhavas, Pulayas, Parayas — under Brahminical custom backed by princely-state law. T.K. Madhavan (Ezhava reformer), K.P. Kesava Menon, and K. Kelappan launched satyagraha on 30 March 1924, with mixed-caste batches deliberately walking the prohibited roads. Travancore police arrested participants daily for sixteen months; Periyar (E.V. Ramasamy) came from Tamil Nadu to lead, was jailed, returning twice. Gandhi visited in March 1925 and negotiated with the regent Maharani Sethu Lakshmi Bayi. The satyagraha ended on 23 November 1925 with the regent opening three of the four prohibited road-stretches; full temple entry was granted only with the Travancore Temple Entry Proclamation of 1936. Vaikom is the structural model — disciplined non-violent occupation, daily arrests, sustained organisation, sympathetic press — that Ambedkar's Mahad satyagraha (1927) and Kalaram (1930) would refine.",
+      "date": {
+        "start": "1924-03-30",
+        "end":   "1925-11-23",
+        "precision": "day",
+        "approximate": false,
+        "display": "30 March 1924 – 23 November 1925"
+      },
+      "location": {
+        "type": "city",
+        "name": "Vaikom, Travancore",
+        "region": "Travancore",
+        "country": "IN",
+        "points": [{ "lat": 9.7456, "lon": 76.3956, "name": "Vaikom" }]
+      },
+      "era": "colonial",
+      "category": ["resistance", "reform", "religious"],
+      "figures": ["T.K. Madhavan", "K.P. Kesava Menon", "K. Kelappan", "Periyar (E.V. Ramasamy)", "Mohandas Gandhi", "Sethu Lakshmi Bayi"],
+      "tags": ["rebellion", "caste-rights"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Vaikom_Satyagraha", "label": "Wikipedia: Vaikom Satyagraha", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "T.K. Ravindran, Vaikkam Satyagraha and Gandhi (Sri Narayana Institute, 1975)", "type": "scholarly" },
+        { "label": "Robin Jeffrey, The Decline of Nayar Dominance: Society and Politics in Travancore 1847–1908 (1976) — context", "type": "scholarly" }
       ],
       "verified": true
     }

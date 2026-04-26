@@ -1,0 +1,116 @@
+{
+  "campaign": "chotanagpur",
+  "scope": "Chotanagpur and Damin-i-Koh tribal events — Munda, Santhal, Oraon, Ho, Kol resistance against zamindar-moneylender alliances backed by colonial revenue policy. Region covers modern Jharkhand, west Bengal, parts of Odisha and Chhattisgarh.",
+  "updated": "2026-04-26",
+  "events": [
+    {
+      "id": "kol-insurrection-1831-1832",
+      "title": "Kol Insurrection",
+      "tooltip": "Munda, Ho, Oraon (Kol) tribal rising in Chotanagpur, 1831–1832",
+      "summary": "Chotanagpur tribals rose against the Sikh and Muslim zamindar-moneylenders to whom EIC revenue settlements had transferred their land — 700 villages burned.",
+      "detail": "The 1831 Kol insurrection was the first organised tribal rebellion against the EIC's Chotanagpur revenue settlement. Mundas, Hos, Oraons, and other groups (collectively called Kols by colonial administrators) rose against the new zamindar class — Sikh and Muslim revenue contractors brought in by the EIC after 1820 to whom the tribal-clan land-tenure system (khuntkatti) had been bureaucratically converted into private holdings. The tribals, now reduced to tenants on what had been collective land, were squeezed by interest rates of 60–70%. The rising began in Singhbhum in December 1831 under Buddhu Bhagat, Joa Bhagat, Madara Mahato, and others. Some 700 villages were burned, all incomers killed or driven out, before EIC troops under Captain Wilkinson restored control by March 1832. The revolt led directly to the South-West Frontier Agency (1834) — separate, less-extractive administration of the tribal areas — but did not restore khuntkatti.",
+      "date": {
+        "start": "1831-12",
+        "end":   "1832-03",
+        "precision": "month",
+        "approximate": false,
+        "display": "December 1831 – March 1832"
+      },
+      "location": {
+        "type": "city",
+        "name": "Singhbhum / Chaibasa, Chotanagpur",
+        "region": "Chotanagpur (Bengal Presidency)",
+        "country": "IN",
+        "points": [{ "lat": 22.5567, "lon": 85.8067, "name": "Chaibasa, Singhbhum" }]
+      },
+      "era": "colonial",
+      "category": ["resistance", "economic", "political"],
+      "figures": ["Buddhu Bhagat", "Joa Bhagat", "Madara Mahato", "Thomas Wilkinson"],
+      "tags": ["rebellion", "tribal"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Kol_uprising", "label": "Wikipedia: Kol uprising", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "K.S. Singh, Birsa Munda and His Movement, 1874–1901 (1983) — context chapters on earlier Chotanagpur revolts", "type": "scholarly" },
+        { "label": "Sumit Sarkar, Modern India 1885–1947 (1983) — backgrounder ch. 1", "type": "scholarly" },
+        { "label": "Sashi Bhushan Chaudhuri, Civil Disturbances During the British Rule in India 1765–1857 (1955)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "santhal-hool-1855-1856",
+      "title": "Santhal Hool",
+      "tooltip": "Santhal Hool led by Sidhu and Kanhu Murmu, Damin-i-Koh, 1855–1856",
+      "summary": "Sidhu and Kanhu Murmu led a Santhal rebellion across Damin-i-Koh against Bengali moneylenders and the EIC — predating 1857 by two years.",
+      "detail": "The Santhals had been resettled into the Damin-i-Koh ('skirts of the hills') area of present-day Jharkhand from the 1830s under EIC encouragement, to clear forest for revenue-yielding cultivation. By the 1850s the tribals were heavily indebted to incoming Bengali and Bihari moneylenders (dikus), with debt-bondage at interest rates above 100%. On 30 June 1855 the Murmu brothers — Sidhu, Kanhu, Chand, and Bhairav, with their sisters Phulo and Jhano — led ten thousand Santhals from the village of Bhognadih to Calcutta, intending to petition the Governor-General. Within days the march turned into armed rising; an estimated thirty thousand joined. The Hool ('rebellion') killed an estimated three thousand non-tribal settlers and EIC personnel before being suppressed by martial-law deployment of regular British troops by January 1856 — Sidhu and Kanhu were captured and executed. Casualties on the Santhal side ran to fifteen thousand. The Santhal Parganas (1855) — separate, light-touch tribal administration — was the colonial state's response.",
+      "date": {
+        "start": "1855-06-30",
+        "end":   "1856-01",
+        "precision": "month",
+        "approximate": false,
+        "display": "30 June 1855 – January 1856"
+      },
+      "location": {
+        "type": "city",
+        "name": "Bhognadih, Damin-i-Koh (modern Jharkhand)",
+        "region": "Santhal Parganas",
+        "country": "IN",
+        "points": [{ "lat": 24.5800, "lon": 87.5300, "name": "Bhognadih (representative)" }]
+      },
+      "era": "colonial",
+      "category": ["resistance", "economic", "military"],
+      "figures": ["Sidhu Murmu", "Kanhu Murmu", "Chand Murmu", "Bhairav Murmu", "Phulo Murmu", "Jhano Murmu"],
+      "tags": ["rebellion", "tribal"],
+      "caused_by": [
+        { "id": "kol-insurrection-1831-1832", "gloss": "The Kol revolt's structural cause — EIC revenue policy converting tribal collective tenure into private holdings vulnerable to outside moneylenders — repeated in the Damin-i-Koh resettlement that produced the Santhal grievance two decades later." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Santhal_rebellion", "label": "Wikipedia: Santhal rebellion", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "K.K. Datta, The Santhal Insurrection of 1855–57 (Calcutta University, 1940)", "type": "scholarly" },
+        { "label": "Ranajit Guha, Elementary Aspects of Peasant Insurgency in Colonial India (1983), passim", "type": "scholarly" },
+        { "label": "L.S.S. O'Malley, Santal Parganas District Gazetteer (1910)", "type": "primary" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "birsa-munda-ulgulan-1899-1900",
+      "title": "Birsa Munda's Ulgulan",
+      "tooltip": "Birsa Munda's Ulgulan (Great Tumult), Chotanagpur, 1899–1900",
+      "summary": "Birsa Munda — at twenty-five, calling himself dharti aba (father of the earth) — led the Munda Ulgulan against zamindars, missionaries, and the colonial state.",
+      "detail": "Birsa Munda (1875–1900) emerged in the early 1890s as a religious reformer in Chotanagpur, drawing on Vaishnava and Christian elements to construct a Munda monotheism that rejected both missionary evangelism and the dikus' commercial penetration. By 1895 he was preaching that Munda land was being stolen by zamindars and merchants under the EIC's permanent settlement of Chotanagpur (1869), and that the kingdom of the Mundas (Munda Raj) would be restored. He was jailed 1895–1898. On release he organised the Ulgulan ('Great Tumult'): an armed uprising launched on Christmas Eve 1899 with attacks on churches, police outposts, and zamindar houses across Khunti and Ranchi districts. The rebellion was crushed at the battle of Sail Rakab Hill on 9 January 1900; Birsa was captured 3 February, died in Ranchi jail 9 June 1900 (officially of cholera, contested at the time). The Chotanagpur Tenancy Act 1908 — recognising tribal khuntkatti and restricting transfer of tribal land to non-tribals — was the colonial state's eventual concession to the Ulgulan's demands.",
+      "date": {
+        "start": "1899-12-24",
+        "end":   "1900-06-09",
+        "precision": "day",
+        "approximate": false,
+        "display": "December 1899 – June 1900 (Birsa died in Ranchi jail)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Khunti, Chotanagpur (modern Jharkhand)",
+        "region": "Chotanagpur Plateau",
+        "country": "IN",
+        "points": [{ "lat": 23.0794, "lon": 85.2786, "name": "Khunti" }]
+      },
+      "era": "colonial",
+      "category": ["resistance", "religious", "political"],
+      "figures": ["Birsa Munda"],
+      "tags": ["rebellion", "tribal"],
+      "caused_by": [
+        { "id": "santhal-hool-1855-1856", "gloss": "The Santhal Parganas concession (1855) created a precedent for tribal-protective administration that the Munda movement explicitly demanded for Chotanagpur — the Tenancy Act of 1908 was the eventual delivery of that demand." }
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Birsa_Munda", "label": "Wikipedia: Birsa Munda", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "K.S. Singh, Birsa Munda and His Movement, 1874–1901: A Study of a Millenarian Movement in Chotanagpur (1983)", "type": "scholarly" },
+        { "label": "Ranajit Guha, 'Discipline and Mobilize' in Subaltern Studies VII (1992)", "type": "scholarly" }
+      ],
+      "verified": true
+    }
+  ]
+}

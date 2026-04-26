@@ -36,6 +36,41 @@
         { "label": "Siobhan Lambert-Hurley, Muslim Women, Reform and Princely Patronage: Nawab Sultan Jahan Begam of Bhopal (2007)", "type": "scholarly" }
       ],
       "verified": true
+    },
+
+    {
+      "id": "telangana-rebellion-1946-1951",
+      "title": "Telangana Rebellion",
+      "tooltip": "Communist-led peasant rebellion in the Nizam's domain, 1946–1951",
+      "summary": "CPI-led peasants and tribals seized 3,000 villages from doras across Hyderabad — continued past the 1948 Indian annexation against the Nehru government.",
+      "detail": "The Telangana Rebellion began in July 1946 in the Nalgonda and Warangal districts of the Nizam of Hyderabad's domain, against the dora landlord system — vetti (forced unpaid labour) extracted from peasants and tribals (Lambadas, Koyas) under cover of the princely state's near-feudal land laws. The Andhra Mahasabha and the Communist Party of India organised armed peasant squads (dalams) that by 1948 had liberated approximately 3,000 villages across an area of 16,000 square miles, redistributing 1 million acres of land, abolishing vetti and debt bondage, and running parallel administration through gram rajyams (village republics). The Nizam's Razakar militia under Qasim Razvi targeted the movement until India's annexation of Hyderabad in September 1948 (Operation Polo). The Indian Army then turned on the Communist movement; suppression continued until October 1951 when the CPI formally withdrew the armed struggle. Roughly 4,000 peasant fighters and supporters killed, 50,000 imprisoned. The movement is the foundational case in modern Indian armed-left politics — direct ancestor of the Naxalbari uprising twenty years later.",
+      "date": {
+        "start": "1946-07",
+        "end":   "1951-10",
+        "precision": "month",
+        "approximate": false,
+        "display": "July 1946 – October 1951"
+      },
+      "location": {
+        "type": "city",
+        "name": "Nalgonda / Warangal, Telangana",
+        "region": "Hyderabad State / Republic of India",
+        "country": "IN",
+        "points": [{ "lat": 17.9784, "lon": 79.6000, "name": "Warangal" }]
+      },
+      "era": "republic",
+      "category": ["resistance", "economic", "political", "military"],
+      "figures": ["P. Sundarayya", "Chandra Rajeshwar Rao", "Ravi Narayan Reddy", "Qasim Razvi"],
+      "tags": ["rebellion", "tribal", "peasant"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Telangana_Rebellion", "label": "Wikipedia: Telangana Rebellion", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "P. Sundarayya, Telangana People's Struggle and Its Lessons (CPI(M), 1972) — by the movement's principal organiser", "type": "primary" },
+        { "label": "Carolyn M. Elliott, 'Decline of a Patrimonial Regime: The Telangana Rebellion in India 1946–51', Journal of Asian Studies 34:1 (1974)", "type": "scholarly" },
+        { "label": "Inukonda Thirumali, Against Dora and Nizam: People's Movement in Telangana 1939–1948 (2003)", "type": "scholarly" }
+      ],
+      "verified": true
     }
   ]
 }

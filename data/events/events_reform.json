@@ -176,6 +176,40 @@
         { "label": "Sabyasachi Bhattacharya, Rabindranath Tagore: An Interpretation (2011)", "type": "scholarly" }
       ],
       "verified": true
+    },
+
+    {
+      "id": "mahad-satyagraha-1927",
+      "title": "Mahad Satyagraha",
+      "tooltip": "Ambedkar leads Dalit water-rights satyagraha at Chavadar Tank, Mahad, 1927",
+      "summary": "Ambedkar led 2,500 Dalits to drink from the public Chavadar Tank at Mahad — the first organised Dalit assertion of public-water rights, met by violent reprisal.",
+      "detail": "The Chavadar Tank at Mahad in Bombay Presidency was a public water source legally open to all under the 1923 Bombay Legislative Council resolution but customarily denied to Mahar and other Dalit castes. On 20 March 1927 Ambedkar led approximately 2,500 satyagrahis — Dalits with sympathetic Brahmin and Maratha allies — to the tank to drink from it. Caste Hindu reprisal followed within hours: a riot in Mahad town, attacks on departing Dalits, and a Brahmin-led 'purification' of the tank with cow urine. Ambedkar returned for a second satyagraha on 25 December 1927 with 10,000 supporters; the Bombay High Court issued an injunction sought by orthodox Hindus, freezing the case. Ambedkar publicly burned a copy of the Manusmriti at the December gathering — the first time a Dalit leader had ritually attacked the textual basis of caste in public. Mahad is the founding event of organised modern Dalit politics in India; Ambedkar dated the Mahar Dalit movement's coming-of-age from this date.",
+      "date": {
+        "start": "1927-03-20",
+        "end":   "1927-12-25",
+        "precision": "day",
+        "approximate": false,
+        "display": "20 March 1927 (first satyagraha) – 25 December 1927 (Manusmriti burning)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Chavadar Tank, Mahad",
+        "region": "Bombay Presidency",
+        "country": "IN",
+        "points": [{ "lat": 18.0833, "lon": 73.4167, "name": "Mahad" }]
+      },
+      "era": "colonial",
+      "category": ["resistance", "reform", "political"],
+      "figures": ["B.R. Ambedkar", "Anant Vinayak Chitre", "Surendranath Tipnis"],
+      "tags": ["rebellion", "caste-rights"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Mahad_Satyagraha", "label": "Wikipedia: Mahad Satyagraha", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Eleanor Zelliot, From Untouchable to Dalit: Essays on the Ambedkar Movement (1992), ch. 5", "type": "scholarly" },
+        { "label": "Christophe Jaffrelot, Dr Ambedkar and Untouchability (2005), ch. 2", "type": "scholarly" }
+      ],
+      "verified": true
     }
   ]
 }

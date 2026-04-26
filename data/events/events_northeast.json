@@ -1,0 +1,75 @@
+{
+  "campaign": "northeast",
+  "scope": "Northeast events — Khasi, Naga, Mizo, Manipur resistance and integration; Ahom kingdom and British annexation; AFSPA-era and post-1947 movements. Seeded with Khasi Rebellion and Heraka / Rani Gaidinliu.",
+  "updated": "2026-04-26",
+  "events": [
+    {
+      "id": "khasi-rebellion-1829-1833",
+      "title": "Khasi Rebellion under Tirot Sing",
+      "tooltip": "U Tirot Sing's Khasi rebellion against EIC road-building, 1829–1833",
+      "summary": "U Tirot Sing of Nongkhlaw led the Khasis against EIC construction of the Calcutta-Assam road through their hills — four years of guerrilla war, then exile.",
+      "detail": "U Tirot Sing Syiem of Nongkhlaw initially permitted EIC engineers under David Scott to survey a road through Khasi Hills (1827) connecting Sylhet to the Assam plains. By 1829 it became clear the road carried with it a permanent EIC presence; a Khasi council called by Tirot Sing decided on resistance. On 4 April 1829 Khasi forces attacked the EIC garrison at Nongkhlaw, killing British Lieutenants Bedingfield and Burlton. The rebellion that followed — guerrilla raids across the hill territory using terrain knowledge against EIC regulars who could not pursue uphill — lasted four years. Tirot Sing was captured in January 1833 after a long siege of his cave hideout near Mairang and exiled to Dhaka, where he died on 17 July 1835. The Khasi Hills came under EIC administration but the Khasi clan structure (Hima system) was largely preserved. Tirot Sing is now a national hero in Meghalaya; the day of his death is observed as U Tirot Sing Day.",
+      "date": {
+        "start": "1829-04-04",
+        "end":   "1833-01",
+        "precision": "month",
+        "approximate": false,
+        "display": "April 1829 – January 1833 (Tirot Sing exiled, died 1835)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Nongkhlaw, Khasi Hills",
+        "region": "Khasi Hills (modern Meghalaya)",
+        "country": "IN",
+        "points": [{ "lat": 25.7000, "lon": 91.6500, "name": "Nongkhlaw" }]
+      },
+      "era": "colonial",
+      "category": ["resistance", "military", "political"],
+      "figures": ["U Tirot Sing Syiem", "David Scott"],
+      "tags": ["rebellion", "tribal"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Tirot_Sing", "label": "Wikipedia: Tirot Sing", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "H.K. Barpujari, The American Missionaries and North-East India 1836–1900 A.D. (1986) — context chapters on the Khasi Hills", "type": "scholarly" },
+        { "label": "David R. Syiemlieh, A Brief History of the Khasi People (1985)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "heraka-gaidinliu-1929-1932",
+      "title": "Heraka Movement under Jadonang and Rani Gaidinliu",
+      "tooltip": "Jadonang's Heraka movement and Rani Gaidinliu's revolt, Naga hills, 1929–1932",
+      "summary": "Jadonang founded a Zeliang religious-political movement against colonial rule; his cousin Gaidinliu took it over at sixteen and was jailed fourteen years.",
+      "detail": "Haipou Jadonang Malangmei (1905–1931), a Rongmei Naga from Manipur, founded the Heraka movement in the late 1920s — a religious revival reasserting indigenous Naga monotheism against Christian missionary conversions and colonial taxation. By 1930 Heraka had organised armed resistance across the Zeliangrong (Zeme, Liangmai, Rongmei) Naga areas. Jadonang was hanged at Imphal on 29 August 1931 on murder charges fabricated to remove him. His sixteen-year-old cousin Rani Gaidinliu (1915–1993) inherited leadership, declared independence from British rule, refused tax collection, and attacked colonial outposts through 1931–32. She was captured 17 October 1932 by Captain Macdonald, tried at Imphal, and sentenced to life imprisonment. She spent fourteen years in jails at Guwahati, Shillong, Aizawl, and Tura before Nehru — who had visited her at Shillong in 1937 and named her 'Rani' (Queen) — secured her release in 1947. Among the youngest women political prisoners of the British Raj.",
+      "date": {
+        "start": "1929",
+        "end":   "1932-10-17",
+        "precision": "month",
+        "approximate": true,
+        "display": "1929–1932 (Gaidinliu jailed 14 years; released 1947)"
+      },
+      "location": {
+        "type": "city",
+        "name": "Tamenglong, Manipur (Zeliang area)",
+        "region": "Manipur / Naga Hills",
+        "country": "IN",
+        "points": [{ "lat": 24.9897, "lon": 93.5050, "name": "Tamenglong" }]
+      },
+      "era": "colonial",
+      "category": ["resistance", "religious", "political"],
+      "figures": ["Haipou Jadonang", "Rani Gaidinliu", "Jawaharlal Nehru"],
+      "tags": ["rebellion", "tribal", "women-leaders"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Rani_Gaidinliu", "label": "Wikipedia: Rani Gaidinliu", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Gangmumei Kabui, Jadonang: A Mystic Naga Rebel (1982)", "type": "scholarly" },
+        { "label": "Ursula Graham Bower, Naga Path (1950) — eyewitness account by an anthropologist who knew Gaidinliu", "type": "primary" },
+        { "label": "Arkotong Longkumer, Reform, Identity and Narratives of Belonging: The Heraka Movement of Northeast India (2010)", "type": "scholarly" }
+      ],
+      "verified": true
+    }
+  ]
+}
