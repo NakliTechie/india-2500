@@ -27,14 +27,16 @@ The boundary rule for any India map: **Datameet, never Natural Earth or world-at
 │   ├── threads/threads_*.json         2 threads
 │   ├── people/people_*.json           6 people
 │   ├── collections/collections_*.json 5 collections
-│   └── places/places_*.json           12 places
+│   ├── places/places_*.json           12 places
+│   └── polities/polities_*.json       9 polities
 │
 ├── validators/
 │   ├── validate_events.py        schema + cross-reference + PIP + tag format
 │   ├── validate_threads.py       schema + corpus event_id resolution
 │   ├── validate_people.py        schema + two-kind step + PIP
 │   ├── validate_collections.py   schema + member resolution (event id OR tag selector)
-│   └── validate_places.py        schema + PIP + auto-derived gather count
+│   ├── validate_places.py        schema + PIP + auto-derived gather count
+│   └── validate_polities.py      schema + events[] + capitals place-id cross-ref
 │
 ├── build/
 │   ├── build_map.py              Datameet + world-atlas → SVG basemap (slow, rare)
@@ -55,6 +57,7 @@ The boundary rule for any India map: **Datameet, never Natural Earth or world-at
 │   ├── render_test_people.py        people UI (10 checks)
 │   ├── render_test_collections.py   collections UI (22 checks)
 │   ├── render_test_places.py        places UI (23 checks)
+│   ├── render_test_polities.py      polities UI (23 checks)
 │   └── artifacts/                   (gitignored — screenshots from test runs)
 │
 ├── contribute/                   GUIDED FORMS for non-technical contributors
@@ -147,6 +150,18 @@ If your collection wants a tag that doesn't exist yet, **invent the tag, apply i
 ## Adding tags to existing events
 
 Tags are an optional `tags[]` field on event records — free-form, kebab-case, no controlled vocab. Validator only checks format. Single-use tags surface as a soft warning (typo signal). Keep `category` (controlled vocab, drives pin colour) separate from `tags` (open-ended, drives filtering / collection membership).
+
+## Adding new polities
+
+Polities are regime-shaped institutional spines — Delhi Sultanate, Mughal Empire, EIC, British Raj, Republic of India. Each polity has a `date_span`, `era_span`, `category` (controlled vocab — empire / sultanate / dynasty / princely-state / confederacy / colonial-state / republic / trading-company), `capitals[]` (chronological list of place-references), `rulers[]` (freeform strings), and an explicit `events[]` list of constitutive event ids.
+
+Workflow: file at `data/polities/polities_<campaign>.json`, validator `validators/validate_polities.py`. Required: `id`, `name`, `tooltip` (≤80c), `summary` (≤160c), `date_span` (start/end/display), `era_span`, `category`, `capitals` (each with `place`, `from_year`, `to_year`), `rulers` (≥1 string), `events` (≥1 event id), `links` (Wikipedia required), `verified`. Optional: `framing` (≤300 words editorial paragraph), `sources`.
+
+The `events[]` list is hand-curated, NOT auto-derived — list every event that belongs to the polity's institutional history. Cross-listing is normal: the same event can appear in multiple polities (e.g. Telangana Rebellion is in both `hyderabad-state` and `republic-of-india`). The validator confirms every id resolves to a real event.
+
+The `capitals[i].place` field references a place id from the places corpus. If the place doesn't exist as a record, the validator soft-warns and the UI renders the capital as plain text (no clickable cross-navigation). Either author the missing place first, or accept the plain-text fallback for now.
+
+A polity earns its own record when it has structured continuity (date span + capitals + rulers) AND at least 3 constitutive events. Single-event seed polities (Bahmani, Mysore, Hyderabad in current corpus) are acceptable as deliberate stubs awaiting more events.
 
 ## Adding new places
 

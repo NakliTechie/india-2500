@@ -1,0 +1,385 @@
+{
+  "campaign": "subcontinent",
+  "scope": "Subcontinental polities — empires, sultanates, princely states, the colonial regimes (EIC then Raj), and the Republic. Each polity gathers its constitutive events explicitly.",
+  "updated": "2026-04-26",
+  "polities": [
+    {
+      "id": "delhi-sultanate",
+      "name": "Delhi Sultanate",
+      "tooltip": "Delhi Sultanate — 1206–1526, five Turkic-Afghan dynasties",
+      "summary": "Three centuries of Turkic-Persian-Afghan rule from Delhi — the Mamluk-Khalji-Tughlaq imperial high water and the long Sayyid-Lodi decline.",
+      "framing": "The Delhi Sultanate is conventionally read as five distinct dynasties (Mamluk 1206–90, Khalji 1290–1320, Tughlaq 1320–1413, Sayyid 1414–51, Lodi 1451–1526) but ran as one institutional regime — Persian-court, Turkic-military-elite, iqta-funded, with a continuous claim to subcontinental sovereignty backed by an army permanently stationed against the Mongol northwest. The Khalji-Tughlaq high period (1296–1351) was the Sultanate's imperial peak — Alauddin's standing army of 475,000, Malik Kafur's southern campaigns reaching Madurai, the entire subcontinent under tribute. From the Bahmani breakaway (1347) onwards the Sultanate contracted to a north-Indian regional power; Timur's 1398 sack ended the imperial pretension; the Lodi successor regime fell at Panipat in 1526.",
+      "date_span": { "start": "1206", "end": "1526", "display": "1206 (Aibak's coronation) – 1526 (Ibrahim Lodi falls at Panipat)" },
+      "era_span": ["sultanate"],
+      "category": "sultanate",
+      "capitals": [
+        { "place": "delhi",       "from_year": 1206, "to_year": 1327 },
+        { "place": "daulatabad",  "from_year": 1327, "to_year": 1334 },
+        { "place": "delhi",       "from_year": 1334, "to_year": 1526 }
+      ],
+      "rulers": [
+        "Mamluk: Qutb-ud-din Aibak (1206–1210), Iltutmish (1211–1236), Razia (1236–1240), Balban (1266–1287)",
+        "Khalji: Jalal-ud-din (1290–1296), Alauddin (1296–1316)",
+        "Tughlaq: Ghiyasuddin (1320–1325), Muhammad bin Tughlaq (1325–1351), Firuz Shah (1351–1388)",
+        "Sayyid: Khizr Khan (1414–1421), Mubarak Shah, Muhammad Shah, Alam Shah (1445–1451)",
+        "Lodi: Bahlul (1451–1489), Sikandar (1489–1517), Ibrahim (1517–1526)"
+      ],
+      "events": [
+        "second-battle-of-tarain-1192",
+        "delhi-sultanate-founded-1206",
+        "iltutmish-accession-1211",
+        "genghis-indus-1221",
+        "razia-sultan-1236-1240",
+        "balban-accession-1266",
+        "alauddin-khalji-coronation-1296",
+        "alauddin-market-reforms-1297-1305",
+        "mongol-siege-of-delhi-1303",
+        "siege-of-chittor-1303",
+        "malik-kafur-madurai-1311",
+        "tughlaq-dynasty-founded-1320",
+        "daulatabad-capital-shift-1327",
+        "tughlaq-token-currency-1329",
+        "firuz-shah-tughlaq-1351",
+        "barani-tarikh-firuz-shahi-1357",
+        "timur-sacks-delhi-1398",
+        "lodi-dynasty-founded-1451",
+        "ibrahim-lodi-accession-1517"
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Delhi_Sultanate", "label": "Wikipedia: Delhi Sultanate", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Peter Jackson, The Delhi Sultanate: A Political and Military History (1999)", "type": "scholarly" },
+        { "label": "Sunil Kumar, The Emergence of the Delhi Sultanate, 1192–1286 (2007)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "bahmani-sultanate",
+      "name": "Bahmani Sultanate",
+      "tooltip": "Bahmani Sultanate — 1347–1527, Deccan breakaway from the Tughlaqs",
+      "summary": "Hasan Gangu's 1347 revolt produced the first independent Muslim kingdom of the Deccan; fragmented in 1527 into the five Deccan Sultanates.",
+      "date_span": { "start": "1347", "end": "1527", "display": "1347–1527 (fragmented into the five Deccan Sultanates)" },
+      "era_span": ["sultanate"],
+      "category": "sultanate",
+      "capitals": [
+        { "place": "daulatabad", "from_year": 1347, "to_year": 1347 },
+        { "place": "gulbarga",   "from_year": 1347, "to_year": 1429 },
+        { "place": "bidar",      "from_year": 1429, "to_year": 1527 }
+      ],
+      "rulers": [
+        "Alauddin Bahman Shah / Hasan Gangu (1347–1358)",
+        "Muhammad Shah I (1358–1375)",
+        "Ahmad Shah I Wali (1422–1436)",
+        "Mahmud Gawan (chief minister, 1463–1481)"
+      ],
+      "events": [
+        "bahmani-sultanate-1347"
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Bahmani_Sultanate", "label": "Wikipedia: Bahmani Sultanate", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "H.K. Sherwani, The Bahmanis of the Deccan (1985)", "type": "scholarly" },
+        { "label": "Richard M. Eaton, A Social History of the Deccan, 1300–1761 (2005)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "sur-empire",
+      "name": "Sur Empire",
+      "tooltip": "Sur Empire — 1540–1556, the Suri interregnum between Mughal phases",
+      "summary": "Sher Shah's 1540 defeat of Humayun inaugurated sixteen years of Suri rule — revenue and road reforms that the returning Mughals inherited intact.",
+      "date_span": { "start": "1540", "end": "1556", "display": "1540 (Sher Shah defeats Humayun) – 1556 (Hemu falls at Panipat)" },
+      "era_span": ["mughal"],
+      "category": "dynasty",
+      "capitals": [
+        { "place": "delhi", "from_year": 1540, "to_year": 1556 },
+        { "place": "agra",  "from_year": 1540, "to_year": 1556 }
+      ],
+      "rulers": [
+        "Sher Shah Suri (1540–1545)",
+        "Islam Shah Suri (1545–1554)",
+        "Adil Shah Suri (1554–1556)",
+        "Hemu (Vikramaditya) (1556 — vizier-king)"
+      ],
+      "events": [
+        "battle-of-chausa-1539",
+        "sher-shah-reforms-1540"
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Sur_Empire", "label": "Wikipedia: Sur Empire", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "K.R. Qanungo, Sher Shah and His Times (1965)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "mughal-empire",
+      "name": "Mughal Empire",
+      "tooltip": "Mughal Empire — 1526–1857, Babur's Panipat to formal dissolution after 1857",
+      "summary": "Babur's victory at Panipat to the formal British dissolution of the empire after 1857 — the longest unified subcontinental imperial regime since the Mauryas.",
+      "framing": "The Mughal Empire is conventionally periodised in three phases: founding and consolidation (Babur–Humayun–Akbar, 1526–1605), high imperial rule (Jahangir–Shah Jahan–Aurangzeb, 1605–1707), and long decline punctuated by the formal end after the 1857 rebellion. Its institutional legacy — the mansab system, zabt revenue, Persian as administrative language, the Mughal court ceremonial — outlived the dynasty by decades, structuring both the late Maratha Confederacy and the early EIC's Bengal administration. Babur is buried in Kabul; Bahadur Shah Zafar, the last emperor, was exiled to Rangoon and died there in 1862.",
+      "date_span": { "start": "1526", "end": "1857", "display": "1526–1857 (formal dissolution by EIC after the 1857 rebellion)" },
+      "era_span": ["mughal", "maratha", "colonial"],
+      "category": "empire",
+      "capitals": [
+        { "place": "agra",            "from_year": 1526, "to_year": 1571 },
+        { "place": "fatehpur-sikri",  "from_year": 1571, "to_year": 1585 },
+        { "place": "agra",            "from_year": 1585, "to_year": 1638 },
+        { "place": "delhi",           "from_year": 1638, "to_year": 1857 }
+      ],
+      "rulers": [
+        "Babur (1526–1530)",
+        "Humayun (1530–1540, 1555–1556)",
+        "Akbar (1556–1605)",
+        "Jahangir (1605–1627)",
+        "Shah Jahan (1628–1658)",
+        "Aurangzeb (1658–1707)",
+        "Bahadur Shah I through Bahadur Shah Zafar (1707–1857)"
+      ],
+      "events": [
+        "first-battle-of-panipat-1526",
+        "battle-of-khanwa-1527",
+        "battle-of-ghaghra-1529",
+        "babur-death-humayun-accession-1530",
+        "baburnama-composed-1494-1530",
+        "second-battle-of-panipat-1556",
+        "akbar-coronation-1556",
+        "fatehpur-sikri-founded-1571",
+        "battle-of-haldighati-1576",
+        "mansabdari-codified-1577",
+        "din-i-ilahi-1582",
+        "abul-fazl-akbarnama-1590",
+        "akbar-death-1605",
+        "jahangir-tuzuk-1605-1624",
+        "guru-arjan-execution-1606",
+        "eic-farman-1613",
+        "kandahar-fall-1622",
+        "taj-mahal-begun-1632",
+        "war-of-succession-1657",
+        "aurangzeb-coronation-1658",
+        "guru-tegh-bahadur-execution-1675",
+        "jizya-reimposed-1679",
+        "deccan-annexations-1686",
+        "sambhaji-execution-1689",
+        "khalsa-founded-1699",
+        "aurangzeb-death-1707"
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Mughal_Empire", "label": "Wikipedia: Mughal Empire", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "John F. Richards, The Mughal Empire (Cambridge New History of India I.5, 1993)", "type": "scholarly" },
+        { "label": "Satish Chandra, Medieval India: From Sultanate to the Mughals — Part Two (1999)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "mysore-sultanate",
+      "name": "Mysore Sultanate",
+      "tooltip": "Mysore Sultanate — 1761–1799 under Hyder Ali and Tipu Sultan",
+      "summary": "Hyder Ali's 1761 coup against the Wodeyar maharaja produced the Mysore Sultanate — four wars against the EIC ended at Tipu's death at Srirangapatna in 1799.",
+      "date_span": { "start": "1761", "end": "1799", "display": "1761 (Hyder Ali deposes the Wodeyars) – 1799 (Tipu falls at Srirangapatna)" },
+      "era_span": ["colonial"],
+      "category": "sultanate",
+      "capitals": [
+        { "place": "srirangapatna", "from_year": 1761, "to_year": 1799 }
+      ],
+      "rulers": [
+        "Hyder Ali (1761–1782)",
+        "Tipu Sultan (1782–1799)"
+      ],
+      "events": [
+        "tipu-khwabnama-1786"
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Kingdom_of_Mysore", "label": "Wikipedia: Kingdom of Mysore", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Kate Brittlebank, Tipu Sultan's Search for Legitimacy (1997)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "east-india-company",
+      "name": "East India Company",
+      "tooltip": "EIC — 1600 charter to 1858 dissolution; ruled British India after 1772",
+      "summary": "Trading company that became colonial state — the EIC ran British India from Hastings's 1772 centralisation until the Crown takeover after 1857.",
+      "framing": "The East India Company was chartered by Elizabeth I on 31 December 1600 as a joint-stock trading monopoly. The 1757 Plassey victory and the 1765 Diwani grant transferred Bengal's revenue to Company hands; by 1772 Hastings had centralised colonial administration at Calcutta. The Regulating Act (1773) made the Company's Governor-General accountable to the British Parliament; the Charter Acts of 1813 and 1833 stripped its trade monopolies and reduced it to a colonial-administration shell. After the 1857 rebellion the Government of India Act (August 1858) transferred all Company territory to the Crown; the EIC was formally dissolved in 1874. The Company's institutional record — the world's most extensively documented commercial entity by archive volume — is held at the British Library's India Office collections.",
+      "date_span": { "start": "1600", "end": "1858", "display": "1600 (charter) – 1858 (Crown takeover)" },
+      "era_span": ["mughal", "colonial"],
+      "category": "trading-company",
+      "capitals": [
+        { "place": "madras",       "from_year": 1639, "to_year": 1773 },
+        { "place": "bombay",       "from_year": 1668, "to_year": 1773 },
+        { "place": "calcutta",     "from_year": 1690, "to_year": 1858 },
+        { "place": "murshidabad",  "from_year": 1757, "to_year": 1772 }
+      ],
+      "rulers": [
+        "Court of Directors (London) — institutional governance",
+        "Warren Hastings (Governor-General 1773–1785)",
+        "Cornwallis (1786–1793)",
+        "Wellesley (1798–1805)",
+        "Bentinck (1828–1835), Auckland, Ellenborough, Hardinge",
+        "Dalhousie (1848–1856; Doctrine of Lapse, last EIC GG)",
+        "Canning (1856–1858; transferred to Crown)"
+      ],
+      "events": [
+        "eic-farman-1613",
+        "sannyasi-fakir-rebellion-1763-1820",
+        "rammohan-roy-tuhfat-1803",
+        "vellore-mutiny-1806",
+        "paika-rebellion-1817",
+        "khasi-rebellion-1829-1833",
+        "faraizi-movement-1830-1860",
+        "kol-insurrection-1831-1832",
+        "khond-risings-1837-1856",
+        "lakshmibai-letters-1853-1858",
+        "santhal-hool-1855-1856"
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/East_India_Company", "label": "Wikipedia: East India Company", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Philip J. Stern, The Company-State (2011)", "type": "scholarly" },
+        { "label": "William Dalrymple, The Anarchy: The Relentless Rise of the East India Company (2019)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "british-raj",
+      "name": "British Raj",
+      "tooltip": "British Raj — 1858–1947, Crown direct rule of India after the EIC",
+      "summary": "The Crown regime that succeeded the EIC after 1857 — eighty-nine years of direct British rule, ending with the 1947 partition.",
+      "framing": "The Government of India Act (August 1858) transferred all EIC territory and authority to the British Crown, replacing the Governor-General with a Viceroy answering to the Secretary of State for India in London. The Raj's first half-century (1858–1905) consolidated infrastructure, education, and administrative apparatus; from Curzon's 1905 partition of Bengal onwards it was on the political defensive against an organised Indian nationalism. The 1909 Morley-Minto reforms introduced limited Indian representation; the 1919 Government of India Act (Montagu-Chelmsford) added provincial dyarchy; the 1935 Government of India Act produced the constitutional template the Republic would inherit. The Raj ended at midnight on 14–15 August 1947 with the partition that produced India and Pakistan.",
+      "date_span": { "start": "1858", "end": "1947", "display": "1858 (Crown takeover) – 14–15 August 1947 (Independence and Partition)" },
+      "era_span": ["colonial", "independence"],
+      "category": "colonial-state",
+      "capitals": [
+        { "place": "calcutta", "from_year": 1858, "to_year": 1911 },
+        { "place": "delhi",    "from_year": 1911, "to_year": 1947 }
+      ],
+      "rulers": [
+        "Viceroy Canning (1858–1862; first Viceroy)",
+        "Curzon (1899–1905; partitioned Bengal)",
+        "Hardinge (1910–1916; capital shift to Delhi)",
+        "Reading (1921–1926), Irwin (1926–1931; Salt March)",
+        "Linlithgow (1936–1943; Quit India)",
+        "Wavell (1943–1947), Mountbatten (1947; partition)"
+      ],
+      "events": [
+        "inc-founded-1885",
+        "phule-gulamgiri-1873",
+        "pandita-ramabai-high-caste-1887",
+        "vivekananda-discourses-1893-1897",
+        "birsa-munda-ulgulan-1899-1900",
+        "indigo-rebellion-1859-1860",
+        "partition-of-bengal-1905",
+        "lajpat-rai-deportation-1907-1908",
+        "sultan-jahan-begum-autobiography-1912",
+        "tagore-jibansmriti-1912",
+        "champaran-satyagraha-1917",
+        "jallianwala-bagh-1919",
+        "non-cooperation-movement-1920",
+        "moplah-rebellion-1921",
+        "chauri-chaura-1922",
+        "rampa-rebellion-1922-1924",
+        "vaikom-satyagraha-1924-1925",
+        "gandhi-experiments-with-truth-1925-1929",
+        "sarojini-naidu-letters-1925-1947",
+        "mahad-satyagraha-1927",
+        "simon-commission-protest-1928",
+        "lahore-session-1929",
+        "heraka-gaidinliu-1929-1932",
+        "salt-march-1930",
+        "civil-disobedience-movement-1930",
+        "ambedkar-annihilation-of-caste-1936",
+        "bose-indian-struggle-1935",
+        "quit-india-1942",
+        "nehru-discovery-of-india-1944",
+        "direct-action-day-1946",
+        "independence-and-partition-1947"
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/British_Raj", "label": "Wikipedia: British Raj", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Sumit Sarkar, Modern India 1885–1947 (1983)", "type": "scholarly" },
+        { "label": "Bipan Chandra et al., India's Struggle for Independence (1989)", "type": "scholarly" },
+        { "label": "Judith M. Brown, Modern India: The Origins of an Asian Democracy (2nd ed., 1994)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "hyderabad-state",
+      "name": "Hyderabad State",
+      "tooltip": "Hyderabad State — 1724–1948, Asaf Jahi (Nizam) dynasty",
+      "summary": "The largest princely state under British paramountcy — Asaf Jahi rule from the 1724 Mughal-viceroy breakaway to India's 1948 Operation Polo annexation.",
+      "date_span": { "start": "1724", "end": "1948", "display": "1724 (Asaf Jahi breakaway) – September 1948 (Operation Polo annexation)" },
+      "era_span": ["mughal", "maratha", "colonial", "independence", "republic"],
+      "category": "princely-state",
+      "capitals": [
+        { "place": "hyderabad", "from_year": 1724, "to_year": 1948 }
+      ],
+      "rulers": [
+        "Nizam-ul-Mulk Asaf Jah I (1724–1748)",
+        "Nizam Ali Khan Asaf Jah II (1762–1803)",
+        "Mir Mahbub Ali Khan Asaf Jah VI (1869–1911)",
+        "Mir Osman Ali Khan Asaf Jah VII (1911–1948; reportedly the world's wealthiest individual at his height)"
+      ],
+      "events": [
+        "telangana-rebellion-1946-1951"
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Hyderabad_State", "label": "Wikipedia: Hyderabad State", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Karen Leonard, Locating Home: India's Hyderabadis Abroad (2007)", "type": "scholarly" },
+        { "label": "Lucien D. Benichou, From Autocracy to Integration: Political Developments in Hyderabad State 1938–1948 (2000)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "republic-of-india",
+      "name": "Republic of India",
+      "tooltip": "Republic of India — independent 15 August 1947, republic 26 January 1950",
+      "summary": "The independent state inaugurated on 15 August 1947 — successor to the British Raj across most of British India and the princely states.",
+      "date_span": { "start": "1947", "end": "2025", "display": "15 August 1947 onwards (Republic from 26 January 1950)" },
+      "era_span": ["independence", "republic"],
+      "category": "republic",
+      "capitals": [
+        { "place": "delhi", "from_year": 1947, "to_year": 2025 }
+      ],
+      "rulers": [
+        "Jawaharlal Nehru (PM 1947–1964)",
+        "Lal Bahadur Shastri (1964–1966)",
+        "Indira Gandhi (1966–1977, 1980–1984)",
+        "Rajiv Gandhi (1984–1989), Narasimha Rao (1991–1996)",
+        "Atal Bihari Vajpayee (1998–2004), Manmohan Singh (2004–2014)",
+        "Narendra Modi (2014–present)"
+      ],
+      "events": [
+        "independence-and-partition-1947",
+        "telangana-rebellion-1946-1951",
+        "azad-india-wins-freedom-1958"
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/India", "label": "Wikipedia: India", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Ramachandra Guha, India After Gandhi: The History of the World's Largest Democracy (2007)", "type": "scholarly" }
+      ],
+      "verified": true
+    }
+  ]
+}

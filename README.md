@@ -14,18 +14,20 @@ Current corpus:
 - **6 people** (Gandhi, Nehru, Bhagat Singh, Ambedkar, Jinnah, Babur)
 - **5 collections** — Babur's road; Founding moments of modern India; First-person works of the subcontinent (20 memoirs); Women shapers of the freedom struggle; Rebellions before and beyond 1857 (18 members)
 - **12 places** — Delhi (18 events), Agra (7), Lahore (5), Calcutta (5), Bombay, Pune, Hyderabad, Murshidabad, Sabarmati Ashram, Srirangapatna, Vellore, Puri (auto-gathered by haversine proximity to the place's anchor)
+- **9 polities** — Delhi Sultanate (19 events), Bahmani Sultanate, Sur Empire, Mughal Empire (26), Mysore Sultanate, East India Company (11), British Raj (31), Hyderabad State, Republic of India (regime-shaped institutional spines with capitals + rulers + explicit events list)
 
-Upcoming: Polity as first-class type; political show trials + other incident collections; Vijayanagara + Anglo-Mysore expansion; more 1857 events; more biographical tracks.
+All five first-class content types — events, threads, people, collections, places, polities — now ship. Upcoming: more polities as corpus grows (Maratha, Vijayanagara, Sikh, Bhopal); political show trials + other incident collections; Vijayanagara + Anglo-Mysore expansion; more 1857 events; more biographical tracks.
 
 ## Repository layout
 
 ```
-data/                  Editorial content. Add new events, threads, people, collections, places here.
+data/                  Editorial content. Six first-class types.
   events/events_*.json
   threads/threads_*.json
   people/people_*.json
   collections/collections_*.json
   places/places_*.json
+  polities/polities_*.json
 
 validators/            Schema enforcement. Run on every PR via CI.
   validate_events.py
@@ -33,6 +35,7 @@ validators/            Schema enforcement. Run on every PR via CI.
   validate_people.py
   validate_collections.py
   validate_places.py
+  validate_polities.py
 
 build/                 Pipeline that turns data + template into the asset.
   build_map.py         Datameet + world-atlas → SVG basemap (slow, rare)
@@ -52,6 +55,7 @@ tests/                 Browser regression tests (Playwright).
   render_test_people.py
   render_test_collections.py
   render_test_places.py
+  render_test_polities.py
 
 docs/                  Editorial + technical docs.
   SCHEMA.md                Events schema (the contract; includes optional tags[])
@@ -59,9 +63,10 @@ docs/                  Editorial + technical docs.
   PEOPLE_SCHEMA.md
   COLLECTIONS_SCHEMA.md
   PLACES_SCHEMA.md
+  POLITIES_SCHEMA.md
   CLAUDE.md                Runbook for AI-assisted development
   HANDOFF.md               Full project context for new contributors
-  CONTRIBUTING.md          How to add events, threads, people, collections, places
+  CONTRIBUTING.md          How to add events, threads, people, collections, places, polities
 
 datameet/              External — clone separately (gitignored, ~200 MB)
 package/               External — fetch world-atlas separately (gitignored)
@@ -86,6 +91,7 @@ python3 validators/validate_threads.py        # cross-reference check
 python3 validators/validate_people.py         # cross-reference check
 python3 validators/validate_collections.py    # cross-reference check
 python3 validators/validate_places.py         # PIP + auto-derived gather check
+python3 validators/validate_polities.py       # events + capitals cross-reference
 
 # 3. Rebuild the asset
 python3 build/build_html.py

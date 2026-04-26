@@ -33,6 +33,9 @@ jobs:
       - name: Run places validator
         run: python3 validators/validate_places.py
 
+      - name: Run polities validator
+        run: python3 validators/validate_polities.py
+
   render:
     name: Browser regression tests
     runs-on: ubuntu-latest
@@ -72,6 +75,9 @@ jobs:
 
       - name: render_test_places
         run: python3 tests/render_test_places.py
+
+      - name: render_test_polities
+        run: python3 tests/render_test_polities.py
 
       - name: Upload screenshots on failure
         if: failure()

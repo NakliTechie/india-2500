@@ -133,8 +133,8 @@
   }
   #reset:hover, .btn-ghost:hover { background: rgba(60,45,15,0.06); border-color: rgba(60,45,15,0.55); color: var(--cream-text); }
 
-  /* ---------- Threads + People + Collections + Places bars ---------- */
-  .threads-bar, .people-bar, .collections-bar, .places-bar {
+  /* ---------- Threads + People + Collections + Places + Polities bars ---------- */
+  .threads-bar, .people-bar, .collections-bar, .places-bar, .polities-bar {
     display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
     margin-bottom: 12px;
   }
@@ -253,6 +253,13 @@
   #map.in-place .pin:not(.in-place) circle.pin-cluster { fill: var(--pin-faded); stroke: transparent; }
   #map.in-place .pin.in-place circle.dot { fill: var(--amber); }
   #map.in-place .pin.in-place circle.pin-cluster { fill: var(--amber); }
+
+  /* Polity mode: rose accent (regime-shaped continuity). */
+  #map.in-polity .pin:not(.in-polity) circle.dot { fill: var(--pin-faded); stroke: transparent; }
+  #map.in-polity .pin:not(.in-polity) text { display: none; }
+  #map.in-polity .pin:not(.in-polity) circle.pin-cluster { fill: var(--pin-faded); stroke: transparent; }
+  #map.in-polity .pin.in-polity circle.dot { fill: var(--rose); }
+  #map.in-polity .pin.in-polity circle.pin-cluster { fill: var(--rose); }
 
   #map .pin-cluster-group { cursor: pointer; }
   #map .pin .pin-cluster,
@@ -687,6 +694,72 @@
     line-height: 1.6;
   }
 
+  /* ---------- Polity reader (regime-shaped — rose accent) ---------- */
+  .polity-reader { padding: 22px 22px 18px; }
+  .polity-reader .polity-subtitle { font-style: italic; color: var(--cream-muted); margin: 4px 0 12px; font-size: 14px; }
+  .polity-reader .polity-summary { color: var(--cream-text); margin: 0 0 14px; }
+  .polity-reader .polity-framing {
+    margin: 0 0 18px;
+    padding: 14px 16px;
+    background: rgba(60,45,15,0.04);
+    border-radius: 8px;
+    font-size: 13.5px;
+    color: var(--cream-text);
+    line-height: 1.6;
+  }
+  .polity-reader .polity-meta {
+    font-size: 12px;
+    color: var(--cream-muted);
+    margin-bottom: 6px;
+  }
+  .polity-reader .polity-meta .key {
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--cream-faint);
+    font-size: 10px;
+    margin-right: 6px;
+  }
+  .polity-reader .capitals-list, .polity-reader .rulers-list {
+    margin: 0 0 12px;
+    padding-left: 0;
+    list-style: none;
+    font-size: 12.5px;
+    color: var(--cream-muted);
+  }
+  .polity-reader .capitals-list li, .polity-reader .rulers-list li {
+    margin-bottom: 2px;
+  }
+  .polity-reader .capital-place-link {
+    color: var(--accent-blue);
+    cursor: pointer;
+  }
+  .polity-reader .capital-place-link:hover { text-decoration: underline; }
+  .polity-reader .member-count {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--cream-faint);
+    margin: 12px 0 8px;
+  }
+  .polity-event {
+    border-left: 2px solid var(--cream-border-soft);
+    padding: 4px 0 12px 14px;
+    margin-bottom: 0;
+    cursor: pointer;
+  }
+  .polity-event:hover { border-left-color: var(--rose); }
+  .polity-event.is-active { border-left-color: var(--rose); }
+  .polity-event .event-title {
+    font-size: 14px; font-weight: 500; color: var(--cream-text); line-height: 1.35;
+  }
+  .polity-event:hover .event-title { text-decoration: underline; text-underline-offset: 3px; }
+  .polity-event .event-when {
+    font-size: 11px; color: var(--cream-faint); margin: 1px 0 4px; font-variant-numeric: tabular-nums;
+  }
+  .polity-event .event-tooltip {
+    font-size: 13px; color: var(--cream-muted); margin: 0; line-height: 1.5;
+  }
+
   /* ---------- Place reader (shares structure with collection reader) ---------- */
   .place-reader { padding: 22px 22px 18px; }
   .place-reader .place-subtitle { font-style: italic; color: var(--cream-muted); margin: 4px 0 12px; font-size: 14px; }
@@ -943,6 +1016,7 @@
   <div class="people-bar" id="people-bar">__STATIC_PEOPLE_BAR__</div>
   <div class="collections-bar" id="collections-bar">__STATIC_COLLECTIONS_BAR__</div>
   <div class="places-bar" id="places-bar">__STATIC_PLACES_BAR__</div>
+  <div class="polities-bar" id="polities-bar">__STATIC_POLITIES_BAR__</div>
 
   <div class="controls">
     <span class="label">Search</span>
@@ -1055,6 +1129,14 @@ let PLACES = __PLACES_DATA__;
 // DATA:END places
 // =====================================================================
 
+// =====================================================================
+// DATA:BEGIN polities
+// =====================================================================
+let POLITIES = __POLITIES_DATA__;
+// =====================================================================
+// DATA:END polities
+// =====================================================================
+
 
 /* =====================================================================
    PROJECTION
@@ -1108,6 +1190,8 @@ const collectionsById = new Map();
 const tagToEvents = new Map();   // tag -> [event ids] in chronological order
 const placesById = new Map();
 const placeMembers = new Map();  // place id -> [event ids] auto-derived by haversine proximity
+const politiesById = new Map();
+const polityMembers = new Map(); // polity id -> [event ids] from explicit events[] field, sorted chronologically
 
 function parseYear(s) {
   if (typeof s === 'number') return s;
@@ -1141,6 +1225,8 @@ function buildIndexes() {
   tagToEvents.clear();
   placesById.clear();
   placeMembers.clear();
+  politiesById.clear();
+  polityMembers.clear();
 
   EVENTS.forEach(ev => eventById.set(ev.id, ev));
   EVENTS.forEach(ev => {
@@ -1216,6 +1302,15 @@ function buildIndexes() {
     ids.sort((a, b) => (eventById.get(a)._yearStart ?? 0) - (eventById.get(b)._yearStart ?? 0));
     placeMembers.set(pl.id, ids);
   });
+
+  // Polities: explicit events[] list, sorted chronologically. Unresolved
+  // ids (validator-checked at build time) are silently dropped at render.
+  POLITIES.forEach(po => {
+    politiesById.set(po.id, po);
+    const ids = (po.events || []).filter(id => eventById.has(id));
+    ids.sort((a, b) => (eventById.get(a)._yearStart ?? 0) - (eventById.get(b)._yearStart ?? 0));
+    polityMembers.set(po.id, ids);
+  });
 }
 
 /* =====================================================================
@@ -1234,6 +1329,7 @@ const state = {
   activePeople: new Set(),  // person ids — multi-select; mutually exclusive with activeThread
   activeCollection: null,   // collection id — mutually exclusive with activeThread + activePeople
   activePlace: null,        // place id — mutually exclusive with the above
+  activePolity: null,       // polity id — mutually exclusive with the above
 };
 
 
@@ -1253,6 +1349,7 @@ const elThreadsBar = $('#threads-bar');
 const elPeopleBar = $('#people-bar');
 const elCollectionsBar = $('#collections-bar');
 const elPlacesBar = $('#places-bar');
+const elPolitiesBar = $('#polities-bar');
 const elOffmapPanel = $('#offmap-panel');
 const elPanelStack = $('.panel-stack');
 const elEraBands = $('#era-bands');
@@ -1445,6 +1542,16 @@ function renderPins() {
     });
   }
 
+  // Polity mode: explicit events list always visible.
+  let polityEventIds = new Set();
+  if (state.activePolity) {
+    (polityMembers.get(state.activePolity) || []).forEach(id => polityEventIds.add(id));
+    polityEventIds.forEach(id => {
+      const ev = eventById.get(id);
+      if (ev && !visible.includes(ev)) visible.push(ev);
+    });
+  }
+
   const positions = visible.map(ev => {
     const p0 = ev.location.points[0];
     const [sx, sy] = toSvg(p0.lat, p0.lon);
@@ -1476,6 +1583,10 @@ function renderPins() {
   if (inPlace) elMap.classList.add('in-place');
   else elMap.classList.remove('in-place');
 
+  const inPolity = !!state.activePolity;
+  if (inPolity) elMap.classList.add('in-polity');
+  else elMap.classList.remove('in-polity');
+
   // Deduplicate clusters — when multiple positions share a cluster ref, only
   // one cluster badge is rendered. Single events render as today.
   const seenClusters = new Set();
@@ -1493,10 +1604,12 @@ function renderPins() {
       const clusterHasThreadMember = inThread && cluster.memberIds.some(id => threadEventIds.has(id));
       const clusterHasCollectionMember = inCollection && cluster.memberIds.some(id => collectionEventIds.has(id));
       const clusterHasPlaceMember = inPlace && cluster.memberIds.some(id => placeEventIds.has(id));
+      const clusterHasPolityMember = inPolity && cluster.memberIds.some(id => polityEventIds.has(id));
       const clusterCls = ['pin', 'pin-cluster-group'];
       if (clusterHasThreadMember) clusterCls.push('in-thread');
       if (clusterHasCollectionMember) clusterCls.push('in-collection');
       if (clusterHasPlaceMember) clusterCls.push('in-place');
+      if (clusterHasPolityMember) clusterCls.push('in-polity');
       pinHtml.push(
         `<g class="${clusterCls.join(' ')}" data-cluster-ids="${ids}" `
         + `transform="translate(${sx.toFixed(1)},${sy.toFixed(1)})">`
@@ -1510,11 +1623,13 @@ function renderPins() {
       const isInThread = threadEventIds.has(ev.id);
       const isInCollection = collectionEventIds.has(ev.id);
       const isInPlace = placeEventIds.has(ev.id);
+      const isInPolity = polityEventIds.has(ev.id);
       const cls = ['pin'];
       if (isActive) cls.push('is-active');
       if (isInThread) cls.push('in-thread');
       if (isInCollection) cls.push('in-collection');
       if (isInPlace) cls.push('in-place');
+      if (isInPolity) cls.push('in-polity');
       pinHtml.push(
         `<g class="${cls.join(' ')}" data-id="${ev.id}" `
         + `transform="translate(${sx.toFixed(1)},${sy.toFixed(1)})">`
@@ -1869,12 +1984,14 @@ function renderEventPanel() {
     html += renderCollectionReaderHtml();
   } else if (state.activePlace) {
     html += renderPlaceReaderHtml();
+  } else if (state.activePolity) {
+    html += renderPolityReaderHtml();
   }
 
   if (state.activeEvent) {
     const ev = eventById.get(state.activeEvent);
     if (ev) html += renderEventPanelHtml(ev);
-  } else if (!state.activeThread && state.activePeople.size === 0 && !state.activeCollection && !state.activePlace) {
+  } else if (!state.activeThread && state.activePeople.size === 0 && !state.activeCollection && !state.activePlace && !state.activePolity) {
     // Compute the corpus date span from the loaded events for display.
     const yrs = EVENTS.map(e => e._yearStart).filter(y => y !== null).sort((a,b) => a - b);
     const first = yrs[0], last = yrs[yrs.length - 1];
@@ -1899,6 +2016,7 @@ function renderEventPanel() {
       if (target === 'people') clearPeople();
       if (target === 'collection') clearCollection();
       if (target === 'place') clearPlace();
+      if (target === 'polity') clearPolity();
     });
   });
   // Collection member clicks: same affordance as thread step clicks — open
@@ -1914,6 +2032,21 @@ function renderEventPanel() {
     row.addEventListener('click', () => {
       const id = row.getAttribute('data-event-id');
       if (id) navigateToEvent(id);
+    });
+  });
+  // Polity event-row clicks: same.
+  $$('.polity-event', stack).forEach((row) => {
+    row.addEventListener('click', () => {
+      const id = row.getAttribute('data-event-id');
+      if (id) navigateToEvent(id);
+    });
+  });
+  // Polity capital → place-link clicks: switch to that place's reader.
+  $$('.capital-place-link', stack).forEach((link) => {
+    link.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const placeId = link.getAttribute('data-place-id');
+      if (placeId && placesById.has(placeId)) activatePlace(placeId);
     });
   });
   // Wire relation-card clicks — clicking caused_by/led_to/part_of card
@@ -2048,6 +2181,11 @@ function activateThread(tid) {
     state.activePlace = null;
     renderPlacesBar();
   }
+  // Polities too
+  if (state.activePolity) {
+    state.activePolity = null;
+    renderPolitiesBar();
+  }
   // Auto-select the first step's event
   const t = THREADS.find(x => x.id === tid);
   if (t && t.steps[0]) state.activeEvent = t.steps[0].event_id;
@@ -2154,11 +2292,16 @@ function togglePerson(pid) {
     if (state.activePlace) {
       state.activePlace = null;
     }
+    // Polities too
+    if (state.activePolity) {
+      state.activePolity = null;
+    }
   }
   renderPeopleBar();
   renderThreadsBar();
   renderCollectionsBar();
   renderPlacesBar();
+  renderPolitiesBar();
   renderTracks();
   renderPins();
   renderEventPanel();
@@ -2244,6 +2387,9 @@ function activateCollection(cid) {
   if (state.activePlace) {
     state.activePlace = null;
   }
+  if (state.activePolity) {
+    state.activePolity = null;
+  }
   // Auto-select the first member event so the panel shows something useful
   const c = collectionsById.get(cid);
   const memberIds = resolveCollectionMembers(c);
@@ -2252,6 +2398,7 @@ function activateCollection(cid) {
   renderThreadsBar();
   renderPeopleBar();
   renderPlacesBar();
+  renderPolitiesBar();
   renderEventPanel();
   renderPins();
 }
@@ -2326,7 +2473,7 @@ function renderPlacesBar() {
 
 function activatePlace(plid) {
   state.activePlace = plid;
-  // Mutual exclusion with the other three modes
+  // Mutual exclusion with all four other modes
   if (state.activeThread) {
     state.activeThread = null;
     state.activeStep = 0;
@@ -2338,6 +2485,9 @@ function activatePlace(plid) {
   if (state.activeCollection) {
     state.activeCollection = null;
   }
+  if (state.activePolity) {
+    state.activePolity = null;
+  }
   // Auto-select the first place-event so the reader has something to anchor on
   const memberIds = placeMembers.get(plid) || [];
   if (memberIds.length > 0) state.activeEvent = memberIds[0];
@@ -2345,6 +2495,7 @@ function activatePlace(plid) {
   renderThreadsBar();
   renderPeopleBar();
   renderCollectionsBar();
+  renderPolitiesBar();
   renderEventPanel();
   renderPins();
 }
@@ -2393,6 +2544,118 @@ function renderPlaceReaderHtml() {
     <div class="place-meta"><span class="key">Gather</span>${escapeHtml(radiusLine)}</div>
     ${altNames ? `<div class="place-meta"><span class="key">Also</span>${escapeHtml(altNames)}</div>` : ''}
     <div class="member-count">${memberIds.length} event${memberIds.length === 1 ? '' : 's'} at this place</div>
+    ${eventsHtml}
+    ${sources ? `<div class="sources"><div class="section-label" style="margin-top:8px;">Sources</div><ul>${sources}</ul></div>` : ''}
+  </aside>`;
+}
+
+
+/* =====================================================================
+   POLITIES — regime-shaped institutional spines.
+   ---------------------------------------------------------------------
+   • Members defined by explicit events[] field — no auto-derivation,
+     no event-side backfill.
+   • Mutually exclusive with the other four modes.
+   • Map: .in-polity highlights member pins/clusters in --rose.
+   =================================================================== */
+function renderPolitiesBar() {
+  const pills = POLITIES.map(po => {
+    const active = state.activePolity === po.id ? ' active' : '';
+    return `<button class="pill${active}" data-poid="${po.id}">${escapeHtml(po.name)}</button>`;
+  }).join('');
+  elPolitiesBar.innerHTML =
+    `<span class="label">Polities</span>${pills}` +
+    (state.activePolity ? `<button class="pill" id="exit-polity">Exit polity</button>` : '');
+
+  $$('.pill[data-poid]', elPolitiesBar).forEach(btn => {
+    btn.addEventListener('click', () => {
+      const poid = btn.getAttribute('data-poid');
+      if (state.activePolity === poid) clearPolity();
+      else activatePolity(poid);
+    });
+  });
+  const exit = $('#exit-polity');
+  if (exit) exit.addEventListener('click', clearPolity);
+}
+
+function activatePolity(poid) {
+  state.activePolity = poid;
+  // Mutual exclusion with all other four modes
+  if (state.activeThread) {
+    state.activeThread = null;
+    state.activeStep = 0;
+  }
+  if (state.activePeople.size > 0) {
+    state.activePeople.clear();
+    renderTracks();
+  }
+  if (state.activeCollection) state.activeCollection = null;
+  if (state.activePlace)      state.activePlace = null;
+  // Auto-select the first polity event
+  const memberIds = polityMembers.get(poid) || [];
+  if (memberIds.length > 0) state.activeEvent = memberIds[0];
+  renderPolitiesBar();
+  renderThreadsBar();
+  renderPeopleBar();
+  renderCollectionsBar();
+  renderPlacesBar();
+  renderEventPanel();
+  renderPins();
+}
+
+function clearPolity() {
+  state.activePolity = null;
+  renderPolitiesBar();
+  renderEventPanel();
+  renderPins();
+}
+
+function renderPolityReaderHtml() {
+  const po = politiesById.get(state.activePolity);
+  if (!po) return '';
+  const memberIds = polityMembers.get(po.id) || [];
+  const ds = po.date_span || {};
+  const eraSpan = (po.era_span || []).join(' · ');
+
+  // Capitals: render each as a clickable place-link if the place id resolves
+  const capitalsHtml = (po.capitals || []).map(c => {
+    const placeRecord = placesById.get(c.place);
+    const label = placeRecord ? placeRecord.name : c.place;
+    const linkAttr = placeRecord ? `class="capital-place-link" data-place-id="${c.place}"` : '';
+    const range = c.from_year === c.to_year ? `${c.from_year}` : `${c.from_year}–${c.to_year}`;
+    return `<li><span ${linkAttr}>${escapeHtml(label)}</span> <span style="color:var(--cream-faint);">(${range})</span></li>`;
+  }).join('');
+
+  const rulersHtml = (po.rulers || []).map(r => `<li>${escapeHtml(r)}</li>`).join('');
+
+  const eventsHtml = memberIds.map(id => {
+    const ev = eventById.get(id);
+    if (!ev) return '';
+    const activeCls = ev.id === state.activeEvent ? ' is-active' : '';
+    return `<div class="polity-event${activeCls}" data-event-id="${ev.id}">
+      <div class="event-title">${escapeHtml(ev.title)}</div>
+      <div class="event-when">${escapeHtml(ev.date.display)}</div>
+      <p class="event-tooltip">${escapeHtml(ev.tooltip || ev.summary || '')}</p>
+    </div>`;
+  }).join('');
+
+  const sources = (po.sources || []).map(s => `<li>${escapeHtml(s.label)}</li>`).join('');
+  const framing = po.framing ? `<div class="polity-framing">${escapeHtml(po.framing)}</div>` : '';
+
+  return `<aside class="panel polity-reader">
+    <div class="panel-head">
+      <h3>${escapeHtml(po.name)}</h3>
+      <button class="panel-close" data-close="polity" aria-label="Close polity">×</button>
+    </div>
+    ${po.tooltip ? `<p class="polity-subtitle">${escapeHtml(po.tooltip)}</p>` : ''}
+    <p class="polity-summary">${escapeHtml(po.summary)}</p>
+    ${framing}
+    <div class="polity-meta"><span class="key">Date span</span>${escapeHtml(ds.display || '')}</div>
+    <div class="polity-meta"><span class="key">Eras</span>${escapeHtml(eraSpan)}</div>
+    <div class="polity-meta"><span class="key">Type</span>${escapeHtml(po.category || '')}</div>
+    ${capitalsHtml ? `<div class="polity-meta"><span class="key">Capitals</span></div><ul class="capitals-list">${capitalsHtml}</ul>` : ''}
+    ${rulersHtml ? `<div class="polity-meta"><span class="key">Rulers</span></div><ul class="rulers-list">${rulersHtml}</ul>` : ''}
+    <div class="member-count">${memberIds.length} constitutive event${memberIds.length === 1 ? '' : 's'}</div>
     ${eventsHtml}
     ${sources ? `<div class="sources"><div class="section-label" style="margin-top:8px;">Sources</div><ul>${sources}</ul></div>` : ''}
   </aside>`;
@@ -2778,12 +3041,14 @@ function onReset() {
   state.activePeople.clear();
   state.activeCollection = null;
   state.activePlace = null;
+  state.activePolity = null;
   hidePopover();
   syncRange();
   renderThreadsBar();
   renderPeopleBar();
   renderCollectionsBar();
   renderPlacesBar();
+  renderPolitiesBar();
   renderTracks();
   renderEventPanel();
 }
@@ -3118,6 +3383,7 @@ function bootRenders() {
   renderPeopleBar();
   renderCollectionsBar();
   renderPlacesBar();
+  renderPolitiesBar();
   renderPins();
   renderTracks();
   renderEventPanel();

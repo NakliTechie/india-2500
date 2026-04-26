@@ -31,14 +31,16 @@ A validator-enforced, browser-renderable atlas of subcontinental history. Three 
 │   ├── threads/threads_*.json     2 threads: Chauri Chaura, Babur road-to-Panipat
 │   ├── people/people_*.json       6 people (5 freedom fighters + Babur)
 │   ├── collections/collections_*.json   5 collections (Babur's road, Founding moments, First-person works, Women shapers, Rebellions)
-│   └── places/places_*.json       12 places (Delhi, Agra, Lahore, Calcutta, Bombay, Pune, Hyderabad, Murshidabad, Sabarmati, Srirangapatna, Vellore, Puri)
+│   ├── places/places_*.json       12 places (Delhi, Agra, Lahore, Calcutta, Bombay, Pune, Hyderabad, Murshidabad, Sabarmati, Srirangapatna, Vellore, Puri)
+│   └── polities/polities_*.json   9 polities (Delhi Sultanate, Bahmani, Sur, Mughal, Mysore, EIC, British Raj, Hyderabad State, Republic of India)
 │
 ├── validators/                    schema enforcement, run on every PR via CI
 │   ├── validate_events.py         schema + cross-reference + PIP + tag format
 │   ├── validate_threads.py        schema + corpus event_id resolution
 │   ├── validate_people.py         schema + two-kind step + PIP
 │   ├── validate_collections.py    schema + member resolution (event id OR tag selector)
-│   └── validate_places.py         schema + PIP + auto-derived gather count check
+│   ├── validate_places.py         schema + PIP + auto-derived gather count check
+│   └── validate_polities.py       schema + events[] resolution + capitals place-id resolution
 │
 ├── build/                         pipeline + cached basemap
 │   ├── build_map.py               Datameet + world-atlas → SVG basemap (slow, rare)
@@ -59,6 +61,7 @@ A validator-enforced, browser-renderable atlas of subcontinental history. Three 
 │   ├── render_test_people.py      people UI (10 checks)
 │   ├── render_test_collections.py collections UI (22 checks)
 │   ├── render_test_places.py      places UI (23 checks)
+│   ├── render_test_polities.py    polities UI (23 checks; capital-place link cross-nav)
 │   └── artifacts/                 (gitignored — screenshots from test runs)
 │
 ├── contribute/                    GUIDED FORMS for non-technical contributors
@@ -80,7 +83,8 @@ A validator-enforced, browser-renderable atlas of subcontinental history. Three 
 │   ├── THREADS_SCHEMA.md          threads schema
 │   ├── PEOPLE_SCHEMA.md           people schema
 │   ├── COLLECTIONS_SCHEMA.md      collections schema
-│   └── PLACES_SCHEMA.md           places schema (coordinate-anchored event gathers)
+│   ├── PLACES_SCHEMA.md           places schema (coordinate-anchored event gathers)
+│   └── POLITIES_SCHEMA.md         polities schema (regime-shaped institutional spines)
 │
 ├── .github/
 │   ├── workflows/validate.yml     CI: validators + render tests on every PR
@@ -140,6 +144,14 @@ A validator-enforced, browser-renderable atlas of subcontinental history. Three 
 - **UI:** Fourth pill row beneath Collections. Click a pill → place reader (title, tooltip subtitle, summary, optional framing block, era+category+radius+alt-names meta lines, member count, chronologically-sorted event cards). Map enters `.in-place` mode highlighting member pins / clusters in `--amber` (distinct from collection blue and thread purple). Mutually exclusive with Threads + People + Collections.
 - **Corpus today:** 12 places — Delhi (18 events, 12 km), Agra (7), Lahore (5), Calcutta (5), Bombay (3), Pune (2), Murshidabad (2), Sabarmati Ashram (2), Hyderabad (1), Srirangapatna (1), Vellore (1), Puri (1). The seven small-gather places are deliberate seeds — their corpus presence will grow as more events are authored.
 
+### Polities (NEW — regime-shaped institutional spines)
+- **Schema:** `docs/POLITIES_SCHEMA.md`. A polity has `id`, `name`, `tooltip`, `summary`, optional `framing` (≤300 words), `date_span` (start / end / display), `era_span`, `category` (controlled vocab: empire / sultanate / dynasty / princely-state / confederacy / colonial-state / republic / trading-company), `capitals[]` (chronological list of `{place, from_year, to_year}` — `place` references a place id; soft-warns when unresolved, renders as plain text), `rulers[]` (freeform strings), `events[]` (explicit list of constitutive event ids), `links`, `sources`, `verified`.
+- **Explicit membership:** unlike places (which auto-derive members by proximity), polities use a hand-curated `events[]` list. The same event can belong to multiple polities (e.g. Telangana Rebellion is in both `hyderabad-state` and `republic-of-india`). No event-side backfill — the polity record is self-contained.
+- **Validator:** `validators/validate_polities.py`. Schema + every event id resolves + capitals' `place` ids cross-checked against the places corpus (soft warning on unresolved).
+- **UI:** Fifth pill row beneath Places. Click a pill → polity reader (title, tooltip subtitle, summary, optional framing, date_span / eras / category meta, capitals list with clickable place-links to the place reader, rulers list, member count, chronologically-sorted event cards). Map enters `.in-polity` mode highlighting member pins / clusters in `--rose` (distinct from the four other modes' colours). Mutually exclusive with Threads + People + Collections + Places.
+- **Cross-navigation:** capital place-links jump to the place's reader (regime → geography). Future: place reader could surface "polities that ruled here" as a back-link, but that's deferred.
+- **Corpus today:** 9 polities — Delhi Sultanate (19 events), Bahmani Sultanate (1), Sur Empire (2), Mughal Empire (26), Mysore Sultanate (1), East India Company (11), British Raj (31), Hyderabad State (1), Republic of India (3). The four single-event polities (Bahmani, Mysore, Hyderabad, Sur with 2) are deliberate seeds awaiting their corpus to grow.
+
 ### People (UI shipped)
 - **Schema:** `docs/PEOPLE_SCHEMA.md`. Person has lifespan + a `track[]`. Each track step is `kind: "event-ref"` (with `role`) or `kind: "moment"` (own date, location, summary, note). Moments are intentionally lighter than events.
 - **Validator:** `validators/validate_people.py`. Schema + cross-corpus event_id resolution + PIP on every moment + birth/deathplace + chronological order check.
@@ -168,18 +180,20 @@ The shared `template.html` uses `let` (not `const`) for the four data globals an
 - Three submit paths: Download JSON (primary, no GitHub account needed), Open as Pull Request (uses GitHub create-file URL — auto-forks if needed), Open as Issue.
 - Forms fetch the live events corpus over HTTP for cross-reference (thread step picker, event-ref autocomplete).
 
-### Tests passing today (11/11)
+### Tests passing today (13/13)
 - `validators/validate_events.py` — PASS (~20 soft warnings on summaries 140–160 chars)
 - `validators/validate_threads.py` — PASS
 - `validators/validate_people.py` — PASS (5 soft warnings)
 - `validators/validate_collections.py` — PASS
 - `validators/validate_places.py` — PASS (7 soft warnings on places with <3 auto-derived members; deliberate seeds awaiting more events)
+- `validators/validate_polities.py` — PASS (warnings on capitals referencing places not yet authored: daulatabad, gulbarga, bidar, fatehpur-sikri, madras; rendered as plain text)
 - `tests/render_test_v2.py` — PASS
 - `tests/render_test_popover.py` — PASS (9 checks)
 - `tests/render_test_zoom.py` — PASS (8 checks)
 - `tests/render_test_people.py` — PASS (10 checks)
 - `tests/render_test_collections.py` — PASS (22 checks)
 - `tests/render_test_places.py` — PASS (23 checks)
+- `tests/render_test_polities.py` — PASS (23 checks)
 
 ---
 
@@ -187,10 +201,14 @@ The shared `template.html` uses `let` (not `const`) for the four data globals an
 
 In rough priority order:
 
-1. **Incidents collections (next planned)** — Bhai's logged direction: rebellions as one collection (Sannyasi-Fakir, Vellore, Paika, Indigo, Santhal, 1857, Birsa Munda, Moplah, Chittagong), then more incident-shaped sets (martyrdoms? mass arrests? colonial massacres?).
-2. **Round out the still-thin seeded campaign files.** Sultanate is now full (20 events). Still want: Paika rebellion + Konark for `events_odisha.json`, Vijayanagara + Anglo-Mysore + Wodeyars for `events_south_india.json`, Delhi / Lucknow / Kanpur / Awadh for `events_1857.json`, Hyderabad / Travancore / Kashmir for `events_princely_states.json`, more reformers for `events_reform.json`.
-3. **Maurya / post-Maurya events** — stress-tests the BCE end of the year slider.
-4. **More memoirs** to round out the first-person-works collection (currently 20 members; deferred queue below).
+**Architectural status (2026-04-26 evening):** All five content types now first-class — events, threads, people, collections, places, polities. The framework is feature-complete for content authoring at the 100-event scale. Future expansion is content, not infrastructure (modulo polish).
+
+1. **Round out the still-thin seeded campaign files.** Sultanate is full (20 events). Still want: Paika rebellion + Konark for `events_odisha.json`, Vijayanagara + Anglo-Mysore + Wodeyars for `events_south_india.json`, Delhi / Lucknow / Kanpur / Awadh for `events_1857.json`, Hyderabad / Travancore / Kashmir for `events_princely_states.json`, more reformers for `events_reform.json`.
+2. **Maurya / post-Maurya events** — stress-tests the BCE end of the year slider.
+3. **More memoirs** to round out the first-person-works collection (currently 20 members; deferred queue below).
+4. **Incident-shaped collections** — political show trials, negotiation moments, etc. (catalogued below).
+5. **More polities** as the corpus grows — Maratha Confederacy (when Maratha events land), Vijayanagara Empire (when South India expands), Sikh Empire (when Punjab events land), Bhopal princely state (Sultan Jahan's event already in corpus), Travancore princely state (Vaikom + Sethu Lakshmi Bayi already authored).
+6. **More places** to fill the gaps that polities surfaced — Daulatabad, Gulbarga, Bidar, Fatehpur Sikri, Madras (each is a polity capital but not yet a place record).
 5. **More cross-cutting collections** — incident-shaped sets logged for future:
    - **Political show trials** — Tilak 1897/1908/1916, Alipore Bombing 1908, Kakori 1925, Meerut Conspiracy 1929–33, Lahore Conspiracy / Bhagat Singh 1929–31, INA trials 1945–46, Naval Mutiny court-martials 1946. Tag `show-trial`. Highly recommended next.
    - **Negotiation moments** — Cripps 1942, Cabinet Mission 1946, Wavell Plan 1945, Mountbatten Plan, Round Tables 1930–32, Treaty of Allahabad 1765, Treaty of Salbai 1782, Lahore Treaty 1846, McMahon Line 1914. Tag `negotiation`.

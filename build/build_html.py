@@ -9,6 +9,7 @@ Reads:
   - people_*.json
   - collections_*.json
   - places_*.json
+  - polities_*.json
 
 Writes:
   - india-history.html
@@ -23,11 +24,13 @@ The template uses these placeholders:
   __PEOPLE_DATA__               JS array literal of person records (with colour assigned)
   __COLLECTIONS_DATA__          JS array literal of collection records
   __PLACES_DATA__               JS array literal of place records
+  __POLITIES_DATA__             JS array literal of polity records
   __STATIC_PINS__               pre-rendered SVG pins (iOS Quick Look fallback)
   __STATIC_THREADS_BAR__        pre-rendered threads bar HTML (fallback)
   __STATIC_PEOPLE_BAR__         pre-rendered people bar HTML (fallback)
   __STATIC_COLLECTIONS_BAR__    pre-rendered collections bar HTML (fallback)
   __STATIC_PLACES_BAR__         pre-rendered places bar HTML (fallback)
+  __STATIC_POLITIES_BAR__       pre-rendered polities bar HTML (fallback)
 
 The DATA:BEGIN / DATA:END markers in the template are preserved so that
 later updates can be spliced in mechanically (Claude Code, manual paste).
@@ -79,6 +82,11 @@ places_dir = DATA / "places"
 if places_dir.is_dir():
     for p in sorted(places_dir.glob("places_*.json")):
         places.extend(json.loads(p.read_text())["places"])
+polities = []
+polities_dir = DATA / "polities"
+if polities_dir.is_dir():
+    for p in sorted(polities_dir.glob("polities_*.json")):
+        polities.extend(json.loads(p.read_text())["polities"])
 
 # Per-person accent: prefer explicit `colour` field on the person object;
 # fall back to cycling PEOPLE_PALETTE in load order. Authors should set
@@ -87,7 +95,7 @@ for i, person in enumerate(people):
     if not person.get("colour"):
         person["colour"] = PEOPLE_PALETTE[i % len(PEOPLE_PALETTE)]
 
-print(f"Splicing: {len(events)} events, {len(threads)} threads, {len(people)} people, {len(collections)} collections, {len(places)} places")
+print(f"Splicing: {len(events)} events, {len(threads)} threads, {len(people)} people, {len(collections)} collections, {len(places)} places, {len(polities)} polities")
 
 
 # --- Spherical LCC (matches the JS formula in the template) ---
@@ -159,6 +167,13 @@ place_pills = "\n    ".join(
 )
 static_places_bar = f'<span class="label">Places</span>\n    {place_pills}'
 
+# --- Static polities bar pre-render ---
+polity_pills = "\n    ".join(
+    f'<button class="pill" data-poid="{h(p["id"])}">{h(p["name"])}</button>'
+    for p in polities
+)
+static_polities_bar = f'<span class="label">Polities</span>\n    {polity_pills}'
+
 
 # --- Map + viewport ---
 vb = map_data["viewport"]
@@ -179,6 +194,7 @@ threads_js     = json.dumps(threads,     ensure_ascii=False, separators=(",", ":
 people_js      = json.dumps(people,      ensure_ascii=False, separators=(",", ":"))
 collections_js = json.dumps(collections, ensure_ascii=False, separators=(",", ":"))
 places_js      = json.dumps(places,      ensure_ascii=False, separators=(",", ":"))
+polities_js    = json.dumps(polities,    ensure_ascii=False, separators=(",", ":"))
 
 template = (WEB / "template.html").read_text()
 
@@ -196,11 +212,13 @@ single = (template
        .replace("__PEOPLE_DATA__", people_js)
        .replace("__COLLECTIONS_DATA__", collections_js)
        .replace("__PLACES_DATA__", places_js)
+       .replace("__POLITIES_DATA__", polities_js)
        .replace("__STATIC_PINS__", static_pins_html)
        .replace("__STATIC_THREADS_BAR__", static_threads_bar)
        .replace("__STATIC_PEOPLE_BAR__", static_people_bar)
        .replace("__STATIC_COLLECTIONS_BAR__", static_collections_bar)
        .replace("__STATIC_PLACES_BAR__", static_places_bar)
+       .replace("__STATIC_POLITIES_BAR__", static_polities_bar)
        .replace("__BOOT_INVOCATION__", "bootRenders();"))
 
 (WEB / "india-history.html").write_text(single)
@@ -222,6 +240,10 @@ places_files = (
     sorted(p.name for p in (DATA / "places").glob("places_*.json"))
     if (DATA / "places").is_dir() else []
 )
+polities_files = (
+    sorted(p.name for p in (DATA / "polities").glob("polities_*.json"))
+    if (DATA / "polities").is_dir() else []
+)
 
 # Manifest consumed by the contribute forms (thread.html, collection.html) so
 # they pick up new slice files without a code edit.
@@ -231,9 +253,10 @@ manifest = {
     "people_files":      people_files,
     "collections_files": collections_files,
     "places_files":      places_files,
+    "polities_files":    polities_files,
 }
 (DATA / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
-print(f"  Wrote data/manifest.json: {len(events_files)} events, {len(threads_files)} threads, {len(people_files)} people, {len(collections_files)} collections, {len(places_files)} places slice files")
+print(f"  Wrote data/manifest.json: {len(events_files)} events, {len(threads_files)} threads, {len(people_files)} people, {len(collections_files)} collections, {len(places_files)} places, {len(polities_files)} polities slice files")
 
 # Inline the same colour palette used at build time so shell.html assigns
 # accents identically to the single-file build.
@@ -256,13 +279,14 @@ shell_boot = f"""(async function() {{
   }}
 
   try {{
-    const [mapDoc, eventsDocs, threadsDocs, peopleDocs, collectionsDocs, placesDocs] = await Promise.all([
+    const [mapDoc, eventsDocs, threadsDocs, peopleDocs, collectionsDocs, placesDocs, politiesDocs] = await Promise.all([
       fetchJson('build/map_paths.json'),
       Promise.all({json.dumps(events_files)}.map(f => fetchJson('data/events/' + f))),
       Promise.all({json.dumps(threads_files)}.map(f => fetchJson('data/threads/' + f))),
       Promise.all({json.dumps(people_files)}.map(f => fetchJson('data/people/' + f))),
       Promise.all({json.dumps(collections_files)}.map(f => fetchJson('data/collections/' + f))),
       Promise.all({json.dumps(places_files)}.map(f => fetchJson('data/places/' + f))),
+      Promise.all({json.dumps(polities_files)}.map(f => fetchJson('data/polities/' + f))),
     ]);
 
     // Populate the data globals declared by the template.
@@ -272,6 +296,7 @@ shell_boot = f"""(async function() {{
     PEOPLE      = peopleDocs.flatMap(d => d.people || []);
     COLLECTIONS = collectionsDocs.flatMap(d => d.collections || []);
     PLACES      = placesDocs.flatMap(d => d.places || []);
+    POLITIES    = politiesDocs.flatMap(d => d.polities || []);
     PEOPLE.forEach((p, i) => {{ p.colour = PALETTE[i % PALETTE.length]; }});
 
     // Render the static SVG basemap from the fetched paths.
@@ -302,11 +327,13 @@ shell = (template
        .replace("__PEOPLE_DATA__", "[]")
        .replace("__COLLECTIONS_DATA__", "[]")
        .replace("__PLACES_DATA__", "[]")
+       .replace("__POLITIES_DATA__", "[]")
        .replace("__STATIC_PINS__", "")
        .replace("__STATIC_THREADS_BAR__", '<span class="label">Threads</span>')
        .replace("__STATIC_PEOPLE_BAR__", '<span class="label">People</span>')
        .replace("__STATIC_COLLECTIONS_BAR__", '<span class="label">Collections</span>')
        .replace("__STATIC_PLACES_BAR__", '<span class="label">Places</span>')
+       .replace("__STATIC_POLITIES_BAR__", '<span class="label">Polities</span>')
        .replace("__BOOT_INVOCATION__", shell_boot))
 
 (WEB / "shell.html").write_text(shell)
