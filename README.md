@@ -9,14 +9,26 @@ Hosted at **[assets.chiragpatnaik.com/india-history.html](https://assets.chiragp
 A growing, validator-enforced corpus of historical events, threads (curated walks through events), people (biographical tracks across the map), and collections (set-shaped thematic groupings). Editorial stance: neutral, data-grounded, named entities and numbers over adjectives.
 
 Current corpus:
-- **151 events** spanning 518 BCE → 1958 CE across 18 campaign files (Mahajanapada, Maurya, Post-Maurya, Gupta, Early-medieval, Sultanate, Central Asia, Mughal, Sur, Bengal, Chotanagpur, Northeast, Odisha, South India, Reform-era, 1857, Princely States, Independence)
-- **2 threads** (Chauri Chaura and the cost of non-violence; Babur's road to Panipat)
-- **6 people** (Gandhi, Nehru, Bhagat Singh, Ambedkar, Jinnah, Babur)
-- **5 collections** — Babur's road; Founding moments of modern India; First-person works of the subcontinent (20 memoirs); Women shapers of the freedom struggle; Rebellions before and beyond 1857 (18 members)
-- **30 places** across the subcontinent — Delhi, Agra, Lahore, Calcutta, Bombay, Pune, Hyderabad, Murshidabad, Sabarmati Ashram, Hampi, Bijapur, Golconda, Mysore, Srirangapatna, Vellore, Madras, Madurai (event-anchor), Imphal, Charaideo, Yuksom, Gangtok, Agartala, plus polity-capital stubs (Daulatabad, Gulbarga, Bidar, Fatehpur Sikri, Bhopal, Anandpur Sahib, Raigad, Thiruvananthapuram, Puri)
-- **22 polities** spanning Sultanate-era to Republic — Delhi Sultanate, Bahmani, Sur, Mughal, Maratha Confederacy, Khalsa/Sikh, Mysore Sultanate (Hyder/Tipu), Mysore Kingdom (Wodeyars), Vijayanagara Empire, Madurai Sultanate, Bijapur Sultanate, Golconda Sultanate, Ahom Kingdom, Manipur Kingdom, Sikkim Kingdom, Tripura Kingdom, EIC, British Raj, Hyderabad State, Bhopal State, Travancore, Republic of India
+- **203 events** spanning 518 BCE → 1992 CE across 28 campaign files
+- **5 threads** — Chauri Chaura · Babur's road to Panipat · Mandir-Mandal nexus 1990–92 · Road to Pakistan · Unfinished business of partition
+- **32 people** — freedom-fighters (Gandhi, Nehru, Bhagat Singh, Ambedkar, Jinnah, Bose); Mughals (Babur, Akbar, Aurangzeb); regional resistance (Shivaji, Tipu Sultan, Ranjit Singh, Birsa Munda, Krishnadevaraya, Guru Gobind Singh, Tarabai, Rani Gaidinliu); reformers and thinkers (Phule pair, Pandita Ramabai, Periyar, Tagore); Bengal Renaissance (Rammohan Roy, Vidyasagar, Vivekananda); Bhakti-Sufi poets (Kabir, Mirabai, Tukaram); scientists (J.C. Bose, Ramanujan, C.V. Raman, Meghnad Saha)
+- **14 collections** — Babur's road · Founding moments of modern India (1857 → Constitution) · First-person works · Women shapers · Rebellions · European arrival · EIC ascent · Wars of empire · Famines on the subcontinent (1335–1943) · Land settlements · Bhakti and Sufi currents · Bengal Renaissance · Indian scientific renaissance · Princely states question
+- **40 places** across the subcontinent
+- **27 polities** spanning Maurya through Republic
 
-All six first-class content types — events, threads, people, collections, places, polities — now ship. Every polity-capital cross-navigation link clicks through to a real place record. Upcoming: political show trials + other incident collections; more 1857 events; Maurya / post-Maurya batch.
+All six first-class content types — events, threads, people, collections, places, polities — ship. Every polity-capital cross-navigation link clicks through to a real place record.
+
+## Deployment
+
+Bifurcated:
+- **Source repo** (this repo) — `naklitechie/india-2500`. Holds `data/`, `validators/`, `build/`, `web/template.html`, `tests/`, `contribute/`. PR workflow lives here.
+- **Assets repo** — `naklitechie/assets`, served as `assets.chiragpatnaik.com`. Holds the built `india-history.html` plus PNG companions.
+
+To stage the build into a sibling assets clone and review before pushing:
+```bash
+./build/deploy.sh ../assets
+```
+The script validates, rebuilds, copies the artifacts to the assets repo, and stops. Review/commit/push from the assets repo manually.
 
 ## Repository layout
 

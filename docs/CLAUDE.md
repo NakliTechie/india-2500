@@ -23,11 +23,11 @@ The boundary rule for any India map: **Datameet, never Natural Earth or world-at
 ├── .gitignore                    datameet/, package/, .claude/, tests/artifacts/
 │
 ├── data/
-│   ├── events/events_*.json           151 events across 18 campaign files
-│   ├── threads/threads_*.json         2 threads
-│   ├── people/people_*.json           6 people
-│   ├── collections/collections_*.json 5 collections
-│   ├── places/places_*.json           39 places
+│   ├── events/events_*.json           203 events across 28 campaign files (518 BCE → 1992 CE)
+│   ├── threads/threads_*.json         5 threads
+│   ├── people/people_*.json           32 people across 7 group files
+│   ├── collections/collections_*.json 14 collections
+│   ├── places/places_*.json           40 places
 │   └── polities/polities_*.json       27 polities
 │
 ├── validators/
@@ -246,7 +246,7 @@ At scale=8 the visible viewBox is 125 vbu wide (~925 km — about Punjab width).
 
 ## Constraints
 
-- **Single-file portability of `india-history.html`.** No external fetches at runtime. Works from `file://`, `assets.chiragpatnaik.com`, iOS Quick Look. (Constraint does NOT apply to `shell.html` or `contribute/*.html` — those are hosted-only and may use CDNs.)
+- **Single-file portability of `india-history.html`.** No external fetches at runtime. Works from `file://`, the assets host, and iOS Quick Look. (Constraint does NOT apply to `shell.html` or `contribute/*.html` — those are hosted-only and may use CDNs.)
 - **iOS Quick Look strips JavaScript.** The build pre-renders static fallbacks for the threads bar, the people bar, and the map pins inside the SVG.
 - **DATA:BEGIN / DATA:END markers** in `template.html` are the splice points for data injection. Don't move them.
 - **`__BOOT_INVOCATION__` placeholder** in `template.html` controls boot — the single-file build replaces it with `bootRenders();`, the shell build replaces it with an async fetch + boot block.
@@ -272,9 +272,16 @@ The Python and JS LCC formulae are spherical (R=6371000) and have been verified 
 - `build/build_html.py` (the Python `lcc()` used for static pin pre-render)
 - `web/template.html` (the JS `lcc()`)
 
-## Updating the auto-memory
+## Deployment (bifurcated)
 
-Project-specific principles that should outlive any single conversation (like the granular-dynasties rule) should go in the auto-memory feedback files at `~/.claude/projects/-Users-chiragpatnaik-Code-Sites/memory/`. They get loaded into every session via `MEMORY.md`.
+The maintenance repo and the public asset repo are separate:
+
+| Repo | Contents |
+|---|---|
+| `naklitechie/india-2500` (this repo) | Source: `data/`, `validators/`, `build/`, `web/template.html`, `tests/`, `contribute/`, `docs/`. PRs land here. |
+| `naklitechie/assets` (served as `assets.chiragpatnaik.com`) | Built `india-history.html`, optional `shell.html`, PNG companions. |
+
+Use `./build/deploy.sh ../assets` to validate, rebuild, and stage artifacts into a sibling clone of the assets repo. The script never auto-pushes — review and commit from the assets repo.
 
 ## Test suite map
 
@@ -285,9 +292,11 @@ Project-specific principles that should outlive any single conversation (like th
 | `validate_people.py` | schema + event_id resolution + PIP for people |
 | `validate_collections.py` | schema + member resolution (event id OR tag selector) |
 | `render_test_v2.py` | shift-click pins → right panel content |
-| `render_test_popover.py` | popover system, dodge math, relation cards (8 checks) |
+| `render_test_popover.py` | popover system, dodge math, relation cards (9 checks) |
 | `render_test_zoom.py` | viewBox manipulation, cursor anchor, button limits (8 checks) |
 | `render_test_people.py` | full People UI: pills, tracks, off-map table, popovers, mutual exclusion (10 checks) |
-| `render_test_collections.py` | full Collections UI: pills, member resolution, tag selectors (13 checks) |
+| `render_test_collections.py` | full Collections UI: pills, member resolution, tag selectors |
+| `render_test_places.py` | full Places UI |
+| `render_test_polities.py` | full Polities UI: pills, capital cross-nav |
 
-Total: 4 validators + 5 render tests = 9. CI runs all of them on every PR.
+Total: 6 validators + 7 render tests = 13. CI runs all of them on every PR.

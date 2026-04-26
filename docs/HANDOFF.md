@@ -13,7 +13,10 @@ A validator-enforced, browser-renderable atlas of subcontinental history. Three 
 - **People** — biographical tracks. Each step is either an existing event (event-ref) or a private moment (location not in the events corpus).
 
 **Brand:** Naklitechie / Chirag Patnaik
-**Target:** `assets.chiragpatnaik.com/india-history.html` (and `/shell.html` for runtime-fetch)
+**Deployment:** bifurcated.
+- Source repo (this one): `naklitechie/india-2500` — `data/`, `validators/`, `build/`, `web/template.html`, `tests/`, `contribute/`.
+- Assets repo: `naklitechie/assets` (served as `assets.chiragpatnaik.com`) — receives the built `india-history.html` and PNG companions via `build/deploy.sh`.
+
 **Editorial stance:** neutral, data-grounded, named entities and numbers over adjectives, no textbook flattening
 **Audience:** Indian readers, but the design system and the Datameet boundary are correct globally
 
@@ -27,11 +30,11 @@ A validator-enforced, browser-renderable atlas of subcontinental history. Three 
 ├── .gitignore                     datameet/, package/, .claude/, tests/artifacts/
 │
 ├── data/                          editorial content — what contributors PR
-│   ├── events/events_*.json       151 events across 18 campaign files
-│   ├── threads/threads_*.json     2 threads: Chauri Chaura, Babur road-to-Panipat
-│   ├── people/people_*.json       6 people (5 freedom fighters + Babur)
-│   ├── collections/collections_*.json   5 collections (Babur's road, Founding moments, First-person works, Women shapers, Rebellions)
-│   ├── places/places_*.json       39 places across the subcontinent
+│   ├── events/events_*.json       203 events across 28 campaign files (518 BCE → 1992 CE)
+│   ├── threads/threads_*.json     5 threads
+│   ├── people/people_*.json       32 people across 7 group files
+│   ├── collections/collections_*.json   14 collections
+│   ├── places/places_*.json       40 places across the subcontinent
 │   └── polities/polities_*.json   27 polities — Mahajanapada/Maurya through Republic
 │
 ├── validators/                    schema enforcement, run on every PR via CI
@@ -104,7 +107,7 @@ A validator-enforced, browser-renderable atlas of subcontinental history. Three 
 - **Causal layer:** `caused_by` + `gloss` per edge. `led_to` derived as inverse at runtime, never authored. `part_of` for hierarchical containment without gloss. Multi-parent / multi-child both supported. Cross-file references work — `events_mughal.json` can have a `caused_by` referencing `events_independence.json`.
 - **Tags:** optional `tags[]` field, free-form kebab-case. Drives filtering and **collection membership** (see Collections below). Distinct from `category` — categories are controlled vocab + pin colour; tags are open-ended thematic markers.
 - **Validator:** `validators/validate_events.py`. Schema enforcement + cross-reference + point-in-polygon (PIP) check confirming each pin's lat/lon falls inside its declared country + tag format check + corpus-level warning on single-use tags.
-- **Corpus today:** 151 events spanning 518 BCE → 1958 CE — the full launch arc.
+- **Corpus today:** 203 events spanning 518 BCE → 1992 CE across 28 campaign files. The launch arc is filled (Achaemenid 518 BCE → republic-era through 1992); subsequent batches added EIC ascent, European arrival, the constitutional path, wars of empire, famines (pre-EIC + colonial), land settlements, Bhakti/Sufi anchors, and Indian-science anchor events.
   - `events_mahajanapada.json` — 3 events, 518–326 BCE (Achaemenid, Buddha parinirvana, Alexander)
   - `events_maurya.json` — 4 events, 322–185 BCE (Chandragupta, Kalinga, edicts, Pushyamitra coup)
   - `events_post-maurya.json` — 2 events, c. 155 BCE – 150 CE (Menander Indo-Greek, Kanishka Kushan)
@@ -128,7 +131,7 @@ A validator-enforced, browser-renderable atlas of subcontinental history. Three 
 ### Threads
 - **Schema:** `docs/THREADS_SCHEMA.md`. Each step references an event by id, carries a `note` (per-step framing) and a `transition` (prose bridge to next step; `null` on last). Coda required (the closing argument; ≤150 words).
 - **Validator:** `validators/validate_threads.py`. Resolves event_ids across the entire events corpus.
-- **Corpus today:** 2 threads — Chauri Chaura (independence) and Babur's road (Central Asia).
+- **Corpus today:** 5 threads — Chauri Chaura (independence) · Babur's road to Panipat · Mandir-Mandal nexus 1990–92 · Road to Pakistan · Unfinished business of partition.
 
 ### Collections (NEW — set-shaped groupings)
 - **Schema:** `docs/COLLECTIONS_SCHEMA.md`. A collection has `id`, `title`, `summary`, optional `subtitle` + `framing` (≤200 words), and `members[]`.
@@ -136,12 +139,12 @@ A validator-enforced, browser-renderable atlas of subcontinental history. Three 
 - **Sets vs sequences:** collections are sets (no per-member notes, no transitions). Threads are sequences (notes + transitions per step). The cheap-to-author bit is deliberate — collections are how we cover cross-cutting catalogues without paying a thread's editorial overhead.
 - **Validator:** `validators/validate_collections.py`. Hard rules include: every event id resolves; every tag selector matches ≥1 event in the corpus (no empty selectors); soft warning when the effective member count after expansion + dedup is <3.
 - **UI:** Third pill row beneath People (`Collections — [pill] [pill] Exit collection`). Click a pill → reader panel renders title, subtitle, summary, optional framing block, member count + cards (tooltip + date for each), sources. Member pins on the map highlight in `--accent-blue` via the `.in-collection` mode class on `#map`. Cluster pins inherit the highlight if any member sits inside them. Mutually exclusive with Threads + People.
-- **Corpus today:** 5 collections —
+- **Corpus today:** 14 collections —
   - `collections_central_asia.json#baburs-road-from-andijan-to-lahore` — `tag:babur-arc` → 6 members.
-  - `collections_subcontinent.json#founding-moments-of-modern-india` — explicit list of 6 events spanning 1540–1885.
-  - `collections_memoirs.json#first-person-works-of-the-subcontinent` — `tag:memoir` → 20 members spanning 1357–1958.
-  - `collections_women.json#women-shapers-of-the-freedom-struggle` — `tag:women-leaders` → 4 members.
-  - `collections_rebellions.json#rebellions-before-and-beyond-1857` — `tag:rebellion` → 18 members spanning 1763–1951. Argues "1857 was not the first"; 8 of the 18 are also tagged `tribal`, 5 also `peasant`, 2 also `caste-rights` for future sub-collections.
+  - `collections_memoirs.json#first-person-works-of-the-subcontinent` — `tag:memoir` → 20 members.
+  - `collections_rebellions.json#rebellions-before-and-beyond-1857` — `tag:rebellion` → 24 members.
+  - `collections_women.json#women-shapers-of-the-freedom-struggle` — `tag:women-leaders` → 5 members.
+  - `collections_subcontinent.json` carries 10 thematic collections: Founding moments of modern India (1857 → Constitution arc, 16 events) · European arrival on the subcontinent · EIC ascent — from trader to sovereign · Wars of empire on Indian soil · Famines on the subcontinent (1335–1943, ~30–50M dead) · Land settlements of the Raj · Bhakti and Sufi currents · The Bengal Renaissance · The Indian scientific renaissance · The princely states question.
 
 ### Places (NEW — coordinate-anchored event gathers)
 - **Schema:** `docs/PLACES_SCHEMA.md`. A place has `id`, `name`, `tooltip`, `summary`, optional `framing` (≤250 words), `location` (lat/lon + `radius_km` + optional `alt_names`), `era_span`, `category` (controlled vocab: capital / city / fort / sacred-site / port / university / sangam-confluence / massacre-site / trade-hub / ashram / prison / princely-state-capital / military-cantonment), `links`, `sources`, `verified`.
@@ -161,8 +164,8 @@ A validator-enforced, browser-renderable atlas of subcontinental history. Three 
 ### People (UI shipped)
 - **Schema:** `docs/PEOPLE_SCHEMA.md`. Person has lifespan + a `track[]`. Each track step is `kind: "event-ref"` (with `role`) or `kind: "moment"` (own date, location, summary, note). Moments are intentionally lighter than events.
 - **Validator:** `validators/validate_people.py`. Schema + cross-corpus event_id resolution + PIP on every moment + birth/deathplace + chronological order check.
-- **Corpus today:** `people_freedom-fighters.json`, 5 people with 45 track steps — Gandhi (13), Nehru (9), Bhagat Singh (6), Ambedkar (10), Jinnah (9).
-- **UI:** Multi-select people pills bar (mutually exclusive with threads). Each person gets a Rangrez accent colour assigned by load order (KHADI/AAKASH/KUMKUM/NEEL/MOR for the 5 seed people). Tracks render as numbered pins + dashed connecting line in the person's colour. Vertical timeline reader in the right panel. Off-map steps appear in a single table below the map (one row per step, grouped by person), with click-through to the popover.
+- **Corpus today:** 32 people across 7 group files. `people_freedom-fighters.json` (Gandhi, Nehru, Bhagat Singh, Ambedkar, Jinnah, Bose); `people_mughal-emperors.json` (Babur, Akbar, Aurangzeb); `people_regional-resistance.json` (Shivaji, Tipu Sultan, Ranjit Singh, Birsa Munda, Krishnadevaraya, Guru Gobind Singh, Tarabai, Rani Gaidinliu); `people_reformers-and-thinkers.json` (Phule pair, Pandita Ramabai, Periyar, Tagore); `people_bengal-renaissance.json` (Rammohan Roy, Vidyasagar, Vivekananda); `people_bhakti-sufi-poets.json` (Kabir, Mirabai, Tukaram); `people_scientists.json` (J.C. Bose, Ramanujan, C.V. Raman, Meghnad Saha).
+- **UI:** Multi-select people pills bar (mutually exclusive with threads). Each person carries a `colour` field giving the track's accent. Optional `short_name` field overrides the default last-word pill label (used to avoid collisions like Bhagat Singh / Ranjit Singh). Tracks render as numbered pins + dashed connecting line in the person's colour. Vertical timeline reader in the right panel. Off-map steps appear in a single table below the map.
 
 ### Map
 - **Pipeline:** `build/build_map.py` reads Datameet `india-soi.geojson` (PoK/Aksai Chin/J&K correctly inside India) plus world-atlas `countries-50m.json` for surrounding states. Spherical Lambert Conformal Conic (`lat_1=20, lat_2=40, lat_0=30, lon_0=78, R=6_371_000`).
@@ -187,19 +190,12 @@ The shared `template.html` uses `let` (not `const`) for the four data globals an
 - Forms fetch the live events corpus over HTTP for cross-reference (thread step picker, event-ref autocomplete).
 
 ### Tests passing today (13/13)
-- `validators/validate_events.py` — PASS (~20 soft warnings on summaries 140–160 chars)
-- `validators/validate_threads.py` — PASS
-- `validators/validate_people.py` — PASS (5 soft warnings)
-- `validators/validate_collections.py` — PASS
-- `validators/validate_places.py` — PASS (7 soft warnings on places with <3 auto-derived members; deliberate seeds awaiting more events)
-- `validators/validate_polities.py` — PASS (warnings on capitals referencing places not yet authored: daulatabad, gulbarga, bidar, fatehpur-sikri, madras; rendered as plain text)
-- `tests/render_test_v2.py` — PASS
-- `tests/render_test_popover.py` — PASS (9 checks)
-- `tests/render_test_zoom.py` — PASS (8 checks)
-- `tests/render_test_people.py` — PASS (10 checks)
-- `tests/render_test_collections.py` — PASS (22 checks)
-- `tests/render_test_places.py` — PASS (23 checks)
-- `tests/render_test_polities.py` — PASS (23 checks)
+All 6 validators and all 7 render tests PASS. Run the lot with:
+
+```bash
+for v in validators/validate_*.py; do python3 "$v"; done
+for t in tests/render_test_*.py;   do python3 "$t"; done
+```
 
 ---
 
@@ -207,15 +203,14 @@ The shared `template.html` uses `let` (not `const`) for the four data globals an
 
 In rough priority order:
 
-**Architectural status (2026-04-26 evening):** All five content types now first-class — events, threads, people, collections, places, polities. The framework is feature-complete for content authoring at the 100-event scale. Future expansion is content, not infrastructure (modulo polish).
+**Architectural status:** All six content types are first-class — events, threads, people, collections, places, polities. The framework is feature-complete; expansion is content rather than infrastructure (modulo polish).
 
-1. **Round out the still-thin seeded campaign files.** Sultanate is full (20 events). Still want: Paika rebellion + Konark for `events_odisha.json`, Vijayanagara + Anglo-Mysore + Wodeyars for `events_south_india.json`, Delhi / Lucknow / Kanpur / Awadh for `events_1857.json`, Hyderabad / Travancore / Kashmir for `events_princely_states.json`, more reformers for `events_reform.json`.
-2. **Maurya / post-Maurya events** — stress-tests the BCE end of the year slider.
-3. **More memoirs** to round out the first-person-works collection (currently 20 members; deferred queue below).
-4. **Incident-shaped collections** — political show trials, negotiation moments, etc. (catalogued below).
-5. **More polities** as the corpus grows — Vijayanagara Empire (needs Vijayanagara events first), Cochin princely state, Mysore princely state (Wodeyars post-1799), Sikkim, Manipur, Tripura kingdoms (when Northeast events expand).
-6. **More places** for new polity capitals as those polities are authored — Vijayanagara (Hampi), Padmanabhapuram, Mysore city.
-5. **More cross-cutting collections** — incident-shaped sets logged for future:
+1. **Push to GitHub and connect Cloudflare Pages.** Source repo `naklitechie/india-2500`, asset repo `naklitechie/assets` deployed as `assets.chiragpatnaik.com`. Use `./build/deploy.sh ../assets` to stage; review/commit/push from the assets repo manually.
+2. **More incident-shaped collections** — political show trials, negotiation moments, massacres of civilians, sites of confinement, naval & sepoy mutinies, communal incidents (catalogued below).
+3. **More memoirs** for the first-person-works collection (currently 20 members; deferred queue below).
+4. **More polities** as the corpus grows — Vijayanagara (events exist), Cochin, Mysore Wodeyar successor state.
+5. **More places** for new anchor sites — Pondicherry, Tranquebar, Multan, Lahore additions, Bombay-Mumbai variants.
+6. **More cross-cutting collections** — incident-shaped sets logged for future:
    - **Political show trials** — Tilak 1897/1908/1916, Alipore Bombing 1908, Kakori 1925, Meerut Conspiracy 1929–33, Lahore Conspiracy / Bhagat Singh 1929–31, INA trials 1945–46, Naval Mutiny court-martials 1946. Tag `show-trial`. Highly recommended next.
    - **Negotiation moments** — Cripps 1942, Cabinet Mission 1946, Wavell Plan 1945, Mountbatten Plan, Round Tables 1930–32, Treaty of Allahabad 1765, Treaty of Salbai 1782, Lahore Treaty 1846, McMahon Line 1914. Tag `negotiation`.
    - **Massacres of civilians** — Jallianwala 1919, Qissa Khwani 1930, Hijli 1931, Sholapur 1930, Bengal famine 1943. Tag `massacre`.
@@ -228,8 +223,8 @@ In rough priority order:
    - **Caste-led satyagrahas** — Mahad 1927, Vaikom 1924, Kalaram 1930, Ezhava agitations. Tag `caste-rights`.
    - **Prison-writing** — Lajpat Rai + Nehru already tagged `prison-writing`; Aurobindo, Bhagat Singh notebook, Gandhi Yerwada writings to come.
    - **Court chronicles** — Tarikh-i Firuz Shahi already tagged `memoir`; would also fit `court-chronicle` alongside Akbarnama, Tuzuk, Padshahnama.
-6. **More Mughal biographical tracks** — Akbar, Shah Jahan, Aurangzeb.
-7. **GitHub publishing** — push to `naklitechie/india-2500`, enable Pages, optional CNAME for `assets.chiragpatnaik.com`.
+7. **More Mughal biographical tracks** — Shah Jahan still queued (Akbar and Aurangzeb shipped).
+8. **More science / thinker / writer people-tracks** — Homi Bhabha, Vikram Sarabhai, Premchand, Manto, Iqbal correspondence (Iqbal deliberately deferred per editorial decision).
 
 ### Deferred memoirs (queue for first-person-works expansion)
 Padshahnama (Shah Jahan court chronicle); Ibn Battuta's *Rihla*; Isami's *Futuh-us-Salatin* (Bahmani perspective); Aurobindo's *Karakahini / Tales of Prison Life* (1909); Cornelia Sorabji's *India Calling* (1934); Kamaladevi Chattopadhyay's *Inner Recesses, Outer Spaces* (1986); Verrier Elwin's *Tribal World* (1964); Bhagat Singh prison notebook + jail letters; Naoroji's *Poverty and Un-British Rule*; Ahilyabai Holkar's administrative correspondence; Vamshavalis (Nepali royal genealogies); Periyar first-person works; Iqbal correspondence and lectures.
@@ -394,14 +389,38 @@ Click handlers in `template.html` exclude `.pin`, `.track-pin`, `.relation-card`
 
 ---
 
-## Bhai's working preferences
+## Editorial principles (carried in the work itself)
 
-- Brisk communication. Short imperative inputs, expects judgment calls.
-- Wants verified figures, not flags. Wikipedia is the rabbit-hole link, not the source.
-- Editorial voice: direct, calibrated, slightly opinionated. Numbers and named entities over adjectives. No mid-sentence bolding in body copy. No emoji.
-- iOS Quick Look fallback matters because he previews assets on phone before publishing.
-- "% change in seats" type framing is a known anti-pattern — share-of-house is the right metric. Apply the same scepticism elsewhere.
-- Public-repo, community-contribution oriented. The contribute forms exist for a reason — non-technical contributors are a real audience.
+- Verified figures, not flags. Wikipedia is the rabbit-hole link, not the source. Cross-check dates and key claims against ≥2 independent sources before `verified: true`.
+- Direct, calibrated voice. Numbers and named entities over adjectives. No emoji.
+- iOS Quick Look fallback matters: the single-file `india-history.html` is previewed on phone before publishing. No external runtime fetches in the single-file build.
+- Public-repo, community-contribution oriented. The `contribute/` forms exist so non-technical contributors can author entries through a guided UI.
+- Granular dynasties: small / short dynasties (Sur, Asaf Jah, regional Sultanates) get their own files, not folded into the bigger neighbour.
+
+---
+
+## Deployment workflow
+
+The repo is bifurcated:
+
+| Repo | Contents | Purpose |
+|---|---|---|
+| `naklitechie/india-2500` (this) | `data/`, `validators/`, `build/`, `web/template.html`, `tests/`, `contribute/`, `docs/` | Source. PRs land here. CI runs validators + render tests. |
+| `naklitechie/assets` (served as `assets.chiragpatnaik.com`) | Built `india-history.html`, `shell.html` (optional), PNG companions | What the public sees. |
+
+To stage a build into a sibling clone of the assets repo:
+
+```bash
+./build/deploy.sh ../assets
+```
+
+The script:
+1. Validates the corpus (all 6 validators must PASS).
+2. Rebuilds `web/india-history.html`, `web/shell.html`, and the PNG companions.
+3. Copies the built artifacts into `../assets/`.
+4. Stops short of `git add` / `commit` / `push` — review the diff in the assets repo and commit there manually.
+
+Cloudflare Pages (or whatever serves `assets.chiragpatnaik.com`) is wired to the `naklitechie/assets` repo's main branch — pushing to that repo publishes.
 
 ---
 

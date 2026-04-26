@@ -193,44 +193,45 @@ def main():
             failures.append("Double-click should not leave popover open")
 
         # ---- 7. Shift-click → panel, no popover ----
-        # First clear by clicking close on panel
+        # Use Babri Masjid demolition: has its own (unclustered) pin at Ayodhya
+        # and a caused_by relation to advani-rath-yatra-1990 used in #8 below.
         page.evaluate(
-            "var pin=document.querySelector('#pins .pin[data-id=\"salt-march-1930\"]');"
+            "var pin=document.querySelector('#pins .pin[data-id=\"babri-masjid-demolition-1992\"]');"
             "pin.dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true,shiftKey:true}));"
         )
         page.wait_for_timeout(60)
         panel_html = page.evaluate("document.querySelector('#event-panel').innerHTML")
-        if "Salt March" not in panel_html:
-            failures.append("Shift-click did not load Salt March into panel")
+        if "Babri" not in panel_html:
+            failures.append("Shift-click did not load Babri Masjid into panel")
         if page.evaluate("document.querySelector('#popover').classList.contains('is-open')"):
             failures.append("Shift-click should not leave popover open")
 
         # ---- 8. Relation card click → both panel + popover ----
-        # Salt March's caused_by includes lahore-session-1929. Click that card.
+        # Babri Masjid's caused_by includes advani-rath-yatra-1990. Click that card.
         clicked = page.evaluate(
             """() => {
-              const card = document.querySelector('.relation-card[data-id="lahore-session-1929"]');
+              const card = document.querySelector('.relation-card[data-id="advani-rath-yatra-1990"]');
               if (!card) return false;
               card.dispatchEvent(new MouseEvent('click', {bubbles:true,cancelable:true}));
               return true;
             }"""
         )
         if not clicked:
-            failures.append("Could not find lahore-session-1929 relation card under Salt March")
+            failures.append("Could not find advani-rath-yatra-1990 relation card under Babri Masjid")
         else:
             page.wait_for_timeout(80)
             panel_html = page.evaluate("document.querySelector('#event-panel').innerHTML")
-            if "Lahore Session" not in panel_html and "Purna Swaraj" not in panel_html:
-                failures.append("Relation card click did not switch panel to Lahore Session")
+            if "Rath Yatra" not in panel_html and "Advani" not in panel_html:
+                failures.append("Relation card click did not switch panel to Advani Rath Yatra")
             popover_open = page.evaluate(
                 "document.querySelector('#popover').classList.contains('is-open')"
             )
             popover_text = page.evaluate("document.querySelector('#popover').innerText")
             if not popover_open:
                 failures.append("Relation card click did not open popover")
-            elif "Lahore" not in popover_text:
+            elif "Advani" not in popover_text and "Rath" not in popover_text:
                 failures.append(
-                    f"Popover after relation click does not show Lahore — got: {popover_text[:120]}"
+                    f"Popover after relation click does not show Advani Yatra — got: {popover_text[:120]}"
                 )
 
         # ---- 9. Cluster badge: click opens chooser; click row swaps to event ----
