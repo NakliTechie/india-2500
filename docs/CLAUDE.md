@@ -26,13 +26,15 @@ The boundary rule for any India map: **Datameet, never Natural Earth or world-at
 │   ├── events/events_*.json           99 events across 13 campaign files
 │   ├── threads/threads_*.json         2 threads
 │   ├── people/people_*.json           6 people
-│   └── collections/collections_*.json 5 collections
+│   ├── collections/collections_*.json 5 collections
+│   └── places/places_*.json           12 places
 │
 ├── validators/
 │   ├── validate_events.py        schema + cross-reference + PIP + tag format
 │   ├── validate_threads.py       schema + corpus event_id resolution
 │   ├── validate_people.py        schema + two-kind step + PIP
-│   └── validate_collections.py   schema + member resolution (event id OR tag selector)
+│   ├── validate_collections.py   schema + member resolution (event id OR tag selector)
+│   └── validate_places.py        schema + PIP + auto-derived gather count
 │
 ├── build/
 │   ├── build_map.py              Datameet + world-atlas → SVG basemap (slow, rare)
@@ -51,7 +53,8 @@ The boundary rule for any India map: **Datameet, never Natural Earth or world-at
 │   ├── render_test_popover.py       popover system (9 checks)
 │   ├── render_test_zoom.py          zoom + pan (8 checks)
 │   ├── render_test_people.py        people UI (10 checks)
-│   ├── render_test_collections.py   collections UI (13 checks)
+│   ├── render_test_collections.py   collections UI (22 checks)
+│   ├── render_test_places.py        places UI (23 checks)
 │   └── artifacts/                   (gitignored — screenshots from test runs)
 │
 ├── contribute/                   GUIDED FORMS for non-technical contributors
@@ -144,6 +147,22 @@ If your collection wants a tag that doesn't exist yet, **invent the tag, apply i
 ## Adding tags to existing events
 
 Tags are an optional `tags[]` field on event records — free-form, kebab-case, no controlled vocab. Validator only checks format. Single-use tags surface as a soft warning (typo signal). Keep `category` (controlled vocab, drives pin colour) separate from `tags` (open-ended, drives filtering / collection membership).
+
+## Adding new places
+
+Places are coordinate-anchored gathers — a single record (Delhi, Sabarmati Ashram, Vellore Fort) groups all events that happened within `radius_km` of its anchor. Membership is auto-derived at boot (haversine ≤ radius), so authoring a place does NOT require touching event files.
+
+Workflow: file at `data/places/places_<campaign>.json`, validator `validators/validate_places.py`. Required: `id`, `name`, `tooltip` (≤80c), `summary` (≤160c), `location` (`country`, `lat`, `lon`, `radius_km` optional + defaults to 5, `alt_names` optional), `era_span`, `category` (controlled vocab — see PLACES_SCHEMA), `links` (Wikipedia required), `verified`. Optional: `subtitle`, `framing` (≤250 words editorial paragraph), `sources`.
+
+Radius tuning:
+- 3–5 km: tightly-bounded sites (Sabarmati Ashram, Jallianwala Bagh, Vellore Fort)
+- 5–10 km: standard cities (Murshidabad, Pune, Lahore)
+- 10–15 km: spread-out historical territories (Delhi 12 km — covers Mehrauli through New Delhi)
+- 15+ km: regional gathers (use sparingly; consider whether the events belong in a polity record instead)
+
+Validator soft-warns when fewer than 3 events are auto-gathered — usually a sign that either the place is a stub awaiting more events (acceptable, intentional seed) or the radius is too tight. The seven small-gather seeds in the current corpus are deliberate.
+
+A place earns its own record when at least 3 events from at least 2 eras anchor at it, OR when the place's continuity-as-protagonist is the editorial point. Places are *where* things happen across time; they are not threads (which argue an interpretation) or collections (which gather by tag).
 
 ## Editorial discipline (not validator-enforced)
 

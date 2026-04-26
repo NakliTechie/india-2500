@@ -30,13 +30,15 @@ A validator-enforced, browser-renderable atlas of subcontinental history. Three 
 │   ├── events/events_*.json       99 events across 13 campaign files
 │   ├── threads/threads_*.json     2 threads: Chauri Chaura, Babur road-to-Panipat
 │   ├── people/people_*.json       6 people (5 freedom fighters + Babur)
-│   └── collections/collections_*.json   5 collections: Babur's road, Founding moments, First-person works, Women shapers, Rebellions
+│   ├── collections/collections_*.json   5 collections (Babur's road, Founding moments, First-person works, Women shapers, Rebellions)
+│   └── places/places_*.json       12 places (Delhi, Agra, Lahore, Calcutta, Bombay, Pune, Hyderabad, Murshidabad, Sabarmati, Srirangapatna, Vellore, Puri)
 │
 ├── validators/                    schema enforcement, run on every PR via CI
 │   ├── validate_events.py         schema + cross-reference + PIP + tag format
 │   ├── validate_threads.py        schema + corpus event_id resolution
 │   ├── validate_people.py         schema + two-kind step + PIP
-│   └── validate_collections.py    schema + member resolution (event id OR tag selector)
+│   ├── validate_collections.py    schema + member resolution (event id OR tag selector)
+│   └── validate_places.py         schema + PIP + auto-derived gather count check
 │
 ├── build/                         pipeline + cached basemap
 │   ├── build_map.py               Datameet + world-atlas → SVG basemap (slow, rare)
@@ -55,7 +57,8 @@ A validator-enforced, browser-renderable atlas of subcontinental history. Three 
 │   ├── render_test_popover.py     popover system (9 checks)
 │   ├── render_test_zoom.py        zoom + pan (8 checks)
 │   ├── render_test_people.py      people UI (10 checks)
-│   ├── render_test_collections.py collections UI (13 checks)
+│   ├── render_test_collections.py collections UI (22 checks)
+│   ├── render_test_places.py      places UI (23 checks)
 │   └── artifacts/                 (gitignored — screenshots from test runs)
 │
 ├── contribute/                    GUIDED FORMS for non-technical contributors
@@ -76,7 +79,8 @@ A validator-enforced, browser-renderable atlas of subcontinental history. Three 
 │   ├── SCHEMA.md                  events schema (the contract; now includes tags)
 │   ├── THREADS_SCHEMA.md          threads schema
 │   ├── PEOPLE_SCHEMA.md           people schema
-│   └── COLLECTIONS_SCHEMA.md      collections schema
+│   ├── COLLECTIONS_SCHEMA.md      collections schema
+│   └── PLACES_SCHEMA.md           places schema (coordinate-anchored event gathers)
 │
 ├── .github/
 │   ├── workflows/validate.yml     CI: validators + render tests on every PR
@@ -129,6 +133,13 @@ A validator-enforced, browser-renderable atlas of subcontinental history. Three 
   - `collections_women.json#women-shapers-of-the-freedom-struggle` — `tag:women-leaders` → 4 members.
   - `collections_rebellions.json#rebellions-before-and-beyond-1857` — `tag:rebellion` → 18 members spanning 1763–1951. Argues "1857 was not the first"; 8 of the 18 are also tagged `tribal`, 5 also `peasant`, 2 also `caste-rights` for future sub-collections.
 
+### Places (NEW — coordinate-anchored event gathers)
+- **Schema:** `docs/PLACES_SCHEMA.md`. A place has `id`, `name`, `tooltip`, `summary`, optional `framing` (≤250 words), `location` (lat/lon + `radius_km` + optional `alt_names`), `era_span`, `category` (controlled vocab: capital / city / fort / sacred-site / port / university / sangam-confluence / massacre-site / trade-hub / ashram / prison / princely-state-capital / military-cantonment), `links`, `sources`, `verified`.
+- **Auto-derived membership:** every event whose `location.points[0]` falls within `radius_km` of the place's anchor is automatically a member — no event-side change needed. Default radius 5 km; tightly-bounded sites (Sabarmati, Vellore Fort) use 3–5; wide-spread historical territories raise it (Delhi 12 km).
+- **Validator:** `validators/validate_places.py`. Schema + PIP on the anchor + soft warning when fewer than 3 events fall within the gather radius (signals deliberate seed places that need their corpus to grow).
+- **UI:** Fourth pill row beneath Collections. Click a pill → place reader (title, tooltip subtitle, summary, optional framing block, era+category+radius+alt-names meta lines, member count, chronologically-sorted event cards). Map enters `.in-place` mode highlighting member pins / clusters in `--amber` (distinct from collection blue and thread purple). Mutually exclusive with Threads + People + Collections.
+- **Corpus today:** 12 places — Delhi (18 events, 12 km), Agra (7), Lahore (5), Calcutta (5), Bombay (3), Pune (2), Murshidabad (2), Sabarmati Ashram (2), Hyderabad (1), Srirangapatna (1), Vellore (1), Puri (1). The seven small-gather places are deliberate seeds — their corpus presence will grow as more events are authored.
+
 ### People (UI shipped)
 - **Schema:** `docs/PEOPLE_SCHEMA.md`. Person has lifespan + a `track[]`. Each track step is `kind: "event-ref"` (with `role`) or `kind: "moment"` (own date, location, summary, note). Moments are intentionally lighter than events.
 - **Validator:** `validators/validate_people.py`. Schema + cross-corpus event_id resolution + PIP on every moment + birth/deathplace + chronological order check.
@@ -157,16 +168,18 @@ The shared `template.html` uses `let` (not `const`) for the four data globals an
 - Three submit paths: Download JSON (primary, no GitHub account needed), Open as Pull Request (uses GitHub create-file URL — auto-forks if needed), Open as Issue.
 - Forms fetch the live events corpus over HTTP for cross-reference (thread step picker, event-ref autocomplete).
 
-### Tests passing today (9/9)
-- `validators/validate_events.py` — PASS (~20 soft warnings on summaries 140–160 chars; 2 single-use-tag warnings on `prison-writing`)
+### Tests passing today (11/11)
+- `validators/validate_events.py` — PASS (~20 soft warnings on summaries 140–160 chars)
 - `validators/validate_threads.py` — PASS
 - `validators/validate_people.py` — PASS (5 soft warnings)
 - `validators/validate_collections.py` — PASS
+- `validators/validate_places.py` — PASS (7 soft warnings on places with <3 auto-derived members; deliberate seeds awaiting more events)
 - `tests/render_test_v2.py` — PASS
 - `tests/render_test_popover.py` — PASS (9 checks)
 - `tests/render_test_zoom.py` — PASS (8 checks)
 - `tests/render_test_people.py` — PASS (10 checks)
-- `tests/render_test_collections.py` — PASS (13 checks)
+- `tests/render_test_collections.py` — PASS (22 checks)
+- `tests/render_test_places.py` — PASS (23 checks)
 
 ---
 

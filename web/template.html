@@ -133,8 +133,8 @@
   }
   #reset:hover, .btn-ghost:hover { background: rgba(60,45,15,0.06); border-color: rgba(60,45,15,0.55); color: var(--cream-text); }
 
-  /* ---------- Threads + People + Collections bars ---------- */
-  .threads-bar, .people-bar, .collections-bar {
+  /* ---------- Threads + People + Collections + Places bars ---------- */
+  .threads-bar, .people-bar, .collections-bar, .places-bar {
     display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
     margin-bottom: 12px;
   }
@@ -245,6 +245,14 @@
   #map.in-collection .pin:not(.in-collection) circle.pin-cluster { fill: var(--pin-faded); stroke: transparent; }
   #map.in-collection .pin.in-collection circle.dot { fill: var(--accent-blue); }
   #map.in-collection .pin.in-collection circle.pin-cluster { fill: var(--accent-blue); }
+
+  /* When in place mode, only events at the place's coordinates highlight,
+     using the amber accent (distinct from collection blue and thread purple). */
+  #map.in-place .pin:not(.in-place) circle.dot { fill: var(--pin-faded); stroke: transparent; }
+  #map.in-place .pin:not(.in-place) text { display: none; }
+  #map.in-place .pin:not(.in-place) circle.pin-cluster { fill: var(--pin-faded); stroke: transparent; }
+  #map.in-place .pin.in-place circle.dot { fill: var(--amber); }
+  #map.in-place .pin.in-place circle.pin-cluster { fill: var(--amber); }
 
   #map .pin-cluster-group { cursor: pointer; }
   #map .pin .pin-cluster,
@@ -679,6 +687,59 @@
     line-height: 1.6;
   }
 
+  /* ---------- Place reader (shares structure with collection reader) ---------- */
+  .place-reader { padding: 22px 22px 18px; }
+  .place-reader .place-subtitle { font-style: italic; color: var(--cream-muted); margin: 4px 0 12px; font-size: 14px; }
+  .place-reader .place-summary { color: var(--cream-text); margin: 0 0 14px; }
+  .place-reader .place-framing {
+    margin: 0 0 18px;
+    padding: 14px 16px;
+    background: rgba(60,45,15,0.04);
+    border-radius: 8px;
+    font-size: 13.5px;
+    color: var(--cream-text);
+    line-height: 1.6;
+  }
+  .place-reader .place-meta {
+    font-size: 12px;
+    color: var(--cream-muted);
+    margin-bottom: 12px;
+  }
+  .place-reader .place-meta .key {
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--cream-faint);
+    font-size: 10px;
+    margin-right: 6px;
+  }
+  .place-reader .member-count {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--cream-faint);
+    margin: 8px 0 8px;
+  }
+  /* Each event-at-place row reuses the .collection-member styling pattern but
+     with the amber accent instead of blue. */
+  .place-event {
+    border-left: 2px solid var(--cream-border-soft);
+    padding: 4px 0 12px 14px;
+    margin-bottom: 0;
+    cursor: pointer;
+  }
+  .place-event:hover { border-left-color: var(--amber); }
+  .place-event.is-active { border-left-color: var(--amber); }
+  .place-event .event-title {
+    font-size: 14px; font-weight: 500; color: var(--cream-text); line-height: 1.35;
+  }
+  .place-event:hover .event-title { text-decoration: underline; text-underline-offset: 3px; }
+  .place-event .event-when {
+    font-size: 11px; color: var(--cream-faint); margin: 1px 0 4px; font-variant-numeric: tabular-nums;
+  }
+  .place-event .event-tooltip {
+    font-size: 13px; color: var(--cream-muted); margin: 0; line-height: 1.5;
+  }
+
   /* ---------- Collection reader ---------- */
   .collection-reader { padding: 22px 22px 18px; }
   .collection-reader .collection-subtitle { font-style: italic; color: var(--cream-muted); margin: 4px 0 12px; font-size: 14px; }
@@ -881,6 +942,7 @@
   <div class="threads-bar" id="threads-bar">__STATIC_THREADS_BAR__</div>
   <div class="people-bar" id="people-bar">__STATIC_PEOPLE_BAR__</div>
   <div class="collections-bar" id="collections-bar">__STATIC_COLLECTIONS_BAR__</div>
+  <div class="places-bar" id="places-bar">__STATIC_PLACES_BAR__</div>
 
   <div class="controls">
     <span class="label">Search</span>
@@ -985,6 +1047,14 @@ let COLLECTIONS = __COLLECTIONS_DATA__;
 // DATA:END collections
 // =====================================================================
 
+// =====================================================================
+// DATA:BEGIN places
+// =====================================================================
+let PLACES = __PLACES_DATA__;
+// =====================================================================
+// DATA:END places
+// =====================================================================
+
 
 /* =====================================================================
    PROJECTION
@@ -1036,6 +1106,8 @@ const peopleById = new Map();
 const momentByKey = new Map();   // "personId::momentId" -> { person, moment, idx }
 const collectionsById = new Map();
 const tagToEvents = new Map();   // tag -> [event ids] in chronological order
+const placesById = new Map();
+const placeMembers = new Map();  // place id -> [event ids] auto-derived by haversine proximity
 
 function parseYear(s) {
   if (typeof s === 'number') return s;
@@ -1048,6 +1120,17 @@ function parseYear(s) {
   return parseInt(parts[0], 10);
 }
 
+// Spherical haversine distance in km — matches validate_places.py's formula.
+function haversineKm(lat1, lon1, lat2, lon2) {
+  const R = 6371.0;
+  const p1 = lat1 * Math.PI / 180;
+  const p2 = lat2 * Math.PI / 180;
+  const dphi = (lat2 - lat1) * Math.PI / 180;
+  const dlam = (lon2 - lon1) * Math.PI / 180;
+  const a = Math.sin(dphi/2)**2 + Math.cos(p1) * Math.cos(p2) * Math.sin(dlam/2)**2;
+  return 2 * R * Math.asin(Math.sqrt(a));
+}
+
 function buildIndexes() {
   PROJ = MAP && MAP.projection;
   eventById.clear();
@@ -1056,6 +1139,8 @@ function buildIndexes() {
   momentByKey.clear();
   collectionsById.clear();
   tagToEvents.clear();
+  placesById.clear();
+  placeMembers.clear();
 
   EVENTS.forEach(ev => eventById.set(ev.id, ev));
   EVENTS.forEach(ev => {
@@ -1108,6 +1193,29 @@ function buildIndexes() {
       }
     });
   });
+
+  // Places: build the per-place event-membership index by haversine proximity.
+  // Each place's gather is computed once at boot and sorted chronologically.
+  // Auto-derivation means a new event automatically joins any place within
+  // its radius — no event-side change needed.
+  PLACES.forEach(pl => {
+    placesById.set(pl.id, pl);
+    const radius = (pl.location && pl.location.radius_km) || 5;
+    const lat0 = pl.location && pl.location.lat;
+    const lon0 = pl.location && pl.location.lon;
+    if (typeof lat0 !== 'number' || typeof lon0 !== 'number') {
+      placeMembers.set(pl.id, []);
+      return;
+    }
+    const ids = [];
+    EVENTS.forEach(ev => {
+      const pt = ev.location && ev.location.points && ev.location.points[0];
+      if (!pt) return;
+      if (haversineKm(lat0, lon0, pt.lat, pt.lon) <= radius) ids.push(ev.id);
+    });
+    ids.sort((a, b) => (eventById.get(a)._yearStart ?? 0) - (eventById.get(b)._yearStart ?? 0));
+    placeMembers.set(pl.id, ids);
+  });
 }
 
 /* =====================================================================
@@ -1125,6 +1233,7 @@ const state = {
   activeStep: 0,        // index within active thread
   activePeople: new Set(),  // person ids — multi-select; mutually exclusive with activeThread
   activeCollection: null,   // collection id — mutually exclusive with activeThread + activePeople
+  activePlace: null,        // place id — mutually exclusive with the above
 };
 
 
@@ -1143,6 +1252,7 @@ const elReset = $('#reset');
 const elThreadsBar = $('#threads-bar');
 const elPeopleBar = $('#people-bar');
 const elCollectionsBar = $('#collections-bar');
+const elPlacesBar = $('#places-bar');
 const elOffmapPanel = $('#offmap-panel');
 const elPanelStack = $('.panel-stack');
 const elEraBands = $('#era-bands');
@@ -1325,6 +1435,16 @@ function renderPins() {
     });
   }
 
+  // Place mode same: events at the active place's coordinates always visible.
+  let placeEventIds = new Set();
+  if (state.activePlace) {
+    (placeMembers.get(state.activePlace) || []).forEach(id => placeEventIds.add(id));
+    placeEventIds.forEach(id => {
+      const ev = eventById.get(id);
+      if (ev && !visible.includes(ev)) visible.push(ev);
+    });
+  }
+
   const positions = visible.map(ev => {
     const p0 = ev.location.points[0];
     const [sx, sy] = toSvg(p0.lat, p0.lon);
@@ -1352,6 +1472,10 @@ function renderPins() {
   if (inCollection) elMap.classList.add('in-collection');
   else elMap.classList.remove('in-collection');
 
+  const inPlace = !!state.activePlace;
+  if (inPlace) elMap.classList.add('in-place');
+  else elMap.classList.remove('in-place');
+
   // Deduplicate clusters — when multiple positions share a cluster ref, only
   // one cluster badge is rendered. Single events render as today.
   const seenClusters = new Set();
@@ -1363,14 +1487,16 @@ function renderPins() {
       const ids = cluster.memberIds.join('|');
       const locationName = ev.location && ev.location.name || '';
       // A cluster inherits the highlight if ANY of its members is in the
-      // active thread or collection. Otherwise the user loses sight of
-      // members that share a location with non-members (e.g. Lahore 1524
+      // active thread / collection / place. Otherwise the user loses sight
+      // of members that share a location with non-members (e.g. Lahore 1524
       // sharing a pin with Lahore 1929).
       const clusterHasThreadMember = inThread && cluster.memberIds.some(id => threadEventIds.has(id));
       const clusterHasCollectionMember = inCollection && cluster.memberIds.some(id => collectionEventIds.has(id));
+      const clusterHasPlaceMember = inPlace && cluster.memberIds.some(id => placeEventIds.has(id));
       const clusterCls = ['pin', 'pin-cluster-group'];
       if (clusterHasThreadMember) clusterCls.push('in-thread');
       if (clusterHasCollectionMember) clusterCls.push('in-collection');
+      if (clusterHasPlaceMember) clusterCls.push('in-place');
       pinHtml.push(
         `<g class="${clusterCls.join(' ')}" data-cluster-ids="${ids}" `
         + `transform="translate(${sx.toFixed(1)},${sy.toFixed(1)})">`
@@ -1383,10 +1509,12 @@ function renderPins() {
       const isActive = ev.id === state.activeEvent;
       const isInThread = threadEventIds.has(ev.id);
       const isInCollection = collectionEventIds.has(ev.id);
+      const isInPlace = placeEventIds.has(ev.id);
       const cls = ['pin'];
       if (isActive) cls.push('is-active');
       if (isInThread) cls.push('in-thread');
       if (isInCollection) cls.push('in-collection');
+      if (isInPlace) cls.push('in-place');
       pinHtml.push(
         `<g class="${cls.join(' ')}" data-id="${ev.id}" `
         + `transform="translate(${sx.toFixed(1)},${sy.toFixed(1)})">`
@@ -1739,12 +1867,14 @@ function renderEventPanel() {
     html += renderPeopleReaderHtml();
   } else if (state.activeCollection) {
     html += renderCollectionReaderHtml();
+  } else if (state.activePlace) {
+    html += renderPlaceReaderHtml();
   }
 
   if (state.activeEvent) {
     const ev = eventById.get(state.activeEvent);
     if (ev) html += renderEventPanelHtml(ev);
-  } else if (!state.activeThread && state.activePeople.size === 0 && !state.activeCollection) {
+  } else if (!state.activeThread && state.activePeople.size === 0 && !state.activeCollection && !state.activePlace) {
     // Compute the corpus date span from the loaded events for display.
     const yrs = EVENTS.map(e => e._yearStart).filter(y => y !== null).sort((a,b) => a - b);
     const first = yrs[0], last = yrs[yrs.length - 1];
@@ -1768,11 +1898,19 @@ function renderEventPanel() {
       if (target === 'thread') clearThread();
       if (target === 'people') clearPeople();
       if (target === 'collection') clearCollection();
+      if (target === 'place') clearPlace();
     });
   });
   // Collection member clicks: same affordance as thread step clicks — open
   // the event in the panel AND surface its popover.
   $$('.collection-member', stack).forEach((row) => {
+    row.addEventListener('click', () => {
+      const id = row.getAttribute('data-event-id');
+      if (id) navigateToEvent(id);
+    });
+  });
+  // Place event-row clicks: same.
+  $$('.place-event', stack).forEach((row) => {
     row.addEventListener('click', () => {
       const id = row.getAttribute('data-event-id');
       if (id) navigateToEvent(id);
@@ -1905,6 +2043,11 @@ function activateThread(tid) {
     state.activeCollection = null;
     renderCollectionsBar();
   }
+  // Places too
+  if (state.activePlace) {
+    state.activePlace = null;
+    renderPlacesBar();
+  }
   // Auto-select the first step's event
   const t = THREADS.find(x => x.id === tid);
   if (t && t.steps[0]) state.activeEvent = t.steps[0].event_id;
@@ -2007,10 +2150,15 @@ function togglePerson(pid) {
     if (state.activeCollection) {
       state.activeCollection = null;
     }
+    // Places too
+    if (state.activePlace) {
+      state.activePlace = null;
+    }
   }
   renderPeopleBar();
   renderThreadsBar();
   renderCollectionsBar();
+  renderPlacesBar();
   renderTracks();
   renderPins();
   renderEventPanel();
@@ -2084,7 +2232,7 @@ function renderCollectionsBar() {
 
 function activateCollection(cid) {
   state.activeCollection = cid;
-  // Mutual exclusion with Threads + People
+  // Mutual exclusion with Threads + People + Places
   if (state.activeThread) {
     state.activeThread = null;
     state.activeStep = 0;
@@ -2093,6 +2241,9 @@ function activateCollection(cid) {
     state.activePeople.clear();
     renderTracks();
   }
+  if (state.activePlace) {
+    state.activePlace = null;
+  }
   // Auto-select the first member event so the panel shows something useful
   const c = collectionsById.get(cid);
   const memberIds = resolveCollectionMembers(c);
@@ -2100,6 +2251,7 @@ function activateCollection(cid) {
   renderCollectionsBar();
   renderThreadsBar();
   renderPeopleBar();
+  renderPlacesBar();
   renderEventPanel();
   renderPins();
 }
@@ -2137,6 +2289,111 @@ function renderCollectionReaderHtml() {
     ${framing}
     <div class="member-count">${memberIds.length} member${memberIds.length === 1 ? '' : 's'}</div>
     ${membersHtml}
+    ${sources ? `<div class="sources"><div class="section-label" style="margin-top:8px;">Sources</div><ul>${sources}</ul></div>` : ''}
+  </aside>`;
+}
+
+
+/* =====================================================================
+   PLACES — coordinate-anchored gathers of events.
+   ---------------------------------------------------------------------
+   • Membership is auto-derived (haversine ≤ radius_km) at boot;
+     placeMembers index is the source of truth.
+   • Mutually exclusive with Threads, People, and Collections.
+   • Map: when a place is active, member-event pins highlight via the
+     .in-place class on #map; pins use --amber to distinguish from
+     --accent-blue (collections) and --accent-purple (threads).
+   =================================================================== */
+function renderPlacesBar() {
+  const pills = PLACES.map(pl => {
+    const active = state.activePlace === pl.id ? ' active' : '';
+    return `<button class="pill${active}" data-plid="${pl.id}">${escapeHtml(pl.name)}</button>`;
+  }).join('');
+  elPlacesBar.innerHTML =
+    `<span class="label">Places</span>${pills}` +
+    (state.activePlace ? `<button class="pill" id="exit-place">Exit place</button>` : '');
+
+  $$('.pill[data-plid]', elPlacesBar).forEach(btn => {
+    btn.addEventListener('click', () => {
+      const plid = btn.getAttribute('data-plid');
+      if (state.activePlace === plid) clearPlace();
+      else activatePlace(plid);
+    });
+  });
+  const exit = $('#exit-place');
+  if (exit) exit.addEventListener('click', clearPlace);
+}
+
+function activatePlace(plid) {
+  state.activePlace = plid;
+  // Mutual exclusion with the other three modes
+  if (state.activeThread) {
+    state.activeThread = null;
+    state.activeStep = 0;
+  }
+  if (state.activePeople.size > 0) {
+    state.activePeople.clear();
+    renderTracks();
+  }
+  if (state.activeCollection) {
+    state.activeCollection = null;
+  }
+  // Auto-select the first place-event so the reader has something to anchor on
+  const memberIds = placeMembers.get(plid) || [];
+  if (memberIds.length > 0) state.activeEvent = memberIds[0];
+  renderPlacesBar();
+  renderThreadsBar();
+  renderPeopleBar();
+  renderCollectionsBar();
+  renderEventPanel();
+  renderPins();
+}
+
+function clearPlace() {
+  state.activePlace = null;
+  renderPlacesBar();
+  renderEventPanel();
+  renderPins();
+}
+
+function renderPlaceReaderHtml() {
+  const pl = placesById.get(state.activePlace);
+  if (!pl) return '';
+  const memberIds = placeMembers.get(pl.id) || [];
+  const eraSpan = (pl.era_span || []).join(' · ');
+  const cats = (pl.category || []).join(' · ');
+  const radiusLine = (pl.location && pl.location.radius_km)
+    ? `${pl.location.radius_km} km radius` : '5 km radius (default)';
+  const altNames = (pl.location && pl.location.alt_names && pl.location.alt_names.length)
+    ? pl.location.alt_names.join(', ') : '';
+
+  const eventsHtml = memberIds.map(id => {
+    const ev = eventById.get(id);
+    if (!ev) return '';
+    const activeCls = ev.id === state.activeEvent ? ' is-active' : '';
+    return `<div class="place-event${activeCls}" data-event-id="${ev.id}">
+      <div class="event-title">${escapeHtml(ev.title)}</div>
+      <div class="event-when">${escapeHtml(ev.date.display)}</div>
+      <p class="event-tooltip">${escapeHtml(ev.tooltip || ev.summary || '')}</p>
+    </div>`;
+  }).join('');
+  const sources = (pl.sources || []).map(s => `<li>${escapeHtml(s.label)}</li>`).join('');
+  const framing = pl.framing ? `<div class="place-framing">${escapeHtml(pl.framing)}</div>` : '';
+
+  return `<aside class="panel place-reader">
+    <div class="panel-head">
+      <h3>${escapeHtml(pl.name)}</h3>
+      <button class="panel-close" data-close="place" aria-label="Close place">×</button>
+    </div>
+    ${pl.tooltip ? `<p class="place-subtitle">${escapeHtml(pl.tooltip)}</p>` : ''}
+    <p class="place-summary">${escapeHtml(pl.summary)}</p>
+    ${framing}
+    <div class="place-meta"><span class="key">Eras</span>${escapeHtml(eraSpan)}</div>
+    <div class="place-meta"><span class="key">Type</span>${escapeHtml(cats)}</div>
+    <div class="place-meta"><span class="key">Gather</span>${escapeHtml(radiusLine)}</div>
+    ${altNames ? `<div class="place-meta"><span class="key">Also</span>${escapeHtml(altNames)}</div>` : ''}
+    <div class="member-count">${memberIds.length} event${memberIds.length === 1 ? '' : 's'} at this place</div>
+    ${eventsHtml}
     ${sources ? `<div class="sources"><div class="section-label" style="margin-top:8px;">Sources</div><ul>${sources}</ul></div>` : ''}
   </aside>`;
 }
@@ -2520,11 +2777,13 @@ function onReset() {
   state.activeThread = null;
   state.activePeople.clear();
   state.activeCollection = null;
+  state.activePlace = null;
   hidePopover();
   syncRange();
   renderThreadsBar();
   renderPeopleBar();
   renderCollectionsBar();
+  renderPlacesBar();
   renderTracks();
   renderEventPanel();
 }
@@ -2858,6 +3117,7 @@ function bootRenders() {
   renderThreadsBar();
   renderPeopleBar();
   renderCollectionsBar();
+  renderPlacesBar();
   renderPins();
   renderTracks();
   renderEventPanel();

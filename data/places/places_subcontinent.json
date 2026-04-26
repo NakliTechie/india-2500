@@ -1,0 +1,287 @@
+{
+  "campaign": "subcontinent",
+  "scope": "Cities and sites that act as continuous protagonists across the corpus — capitals across regimes, sacred-political centres, ashrams, founding sites.",
+  "updated": "2026-04-26",
+  "places": [
+    {
+      "id": "delhi",
+      "name": "Delhi",
+      "tooltip": "Delhi — capital across eight regimes, 1206–present",
+      "summary": "From Qutb-ud-din Aibak's coronation to the Republic's seat — eight regimes, two destructions, the longest continuous capital in the subcontinent.",
+      "framing": "Delhi is the only city in the subcontinent that has been imperial capital across the Sultanate (1206–1526), the Mughal Empire (1526–1857 with the brief Agra interludes), the Raj (from 1911 when the capital shifted from Calcutta), and the Republic. Each regime built outward — Mehrauli, Siri, Tughlaqabad, Firuzabad, Shahjahanabad, New Delhi — leaving an archaeology of seven distinct city-foundations across thirteen square miles. The 1398 sack by Timur and the 1857 destruction by the British each broke the city's institutional continuity but not its political claim. The corpus reaches Delhi from twelve different campaign threads — Sultanate, Mughal, 1857, Independence, post-Republic — making it the corpus's densest gather-by-place.",
+      "location": {
+        "country": "IN",
+        "lat": 28.6139,
+        "lon": 77.2090,
+        "radius_km": 12,
+        "alt_names": ["Dilli", "Shahjahanabad", "New Delhi", "Indraprastha", "Mehrauli"]
+      },
+      "era_span": ["sultanate", "mughal", "colonial", "independence", "republic"],
+      "category": ["capital", "city"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Delhi", "label": "Wikipedia: Delhi", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Percival Spear, Delhi: Its Monuments and History (1937; rev. 1994)", "type": "scholarly" },
+        { "label": "Sunil Kumar, The Present in Delhi's Pasts (2002)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "agra",
+      "name": "Agra",
+      "tooltip": "Agra — Mughal capital 1526–1648, then again under Aurangzeb",
+      "summary": "Sikandar Lodi's 1504 capital became the high-Mughal seat — the city of the Akbarnama, the Tuzuk-i-Jahangiri, the Taj, and Babur's tomb-then-relocation.",
+      "framing": "Agra is the Mughal capital twice: under Babur, Humayun, and Akbar (1526–1571 and again from 1605), and under Aurangzeb after Shahjahanabad lost favour. Sikandar Lodi founded the modern city in 1504; the Mughal court chronicles — Baburnama, Akbarnama, Tuzuk-i-Jahangiri — were largely composed or finalised here. The Taj Mahal (1632–1653) is its most legible monument; the Agra Fort, the Itimad-ud-Daulah tomb, and Sikandra (Akbar's mausoleum) form the rest of the architectural record. Babur was buried at Agra in 1530 before his remains were moved to Kabul — the city is the literal foundation site of Mughal imperial geography.",
+      "location": {
+        "country": "IN",
+        "lat": 27.1767,
+        "lon": 78.0081,
+        "radius_km": 8,
+        "alt_names": ["Akbarabad"]
+      },
+      "era_span": ["sultanate", "mughal", "colonial"],
+      "category": ["capital", "city"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Agra", "label": "Wikipedia: Agra", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Ebba Koch, The Complete Taj Mahal (2006)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "lahore",
+      "name": "Lahore",
+      "tooltip": "Lahore — Mughal-Sikh-Punjab capital across five centuries",
+      "summary": "Aibak's coronation site 1206, Mughal cultural capital under Jahangir, Sikh Empire seat under Ranjit Singh — every Punjab-based regime's centre.",
+      "framing": "Lahore is the political capital of every regime that has organised power around the western Punjab. Qutb-ud-din Aibak crowned himself sultan here in 1206 — the formal beginning of the Delhi Sultanate is technically a Lahore event. Jahangir made Lahore the Mughal cultural capital during his reign; he is buried at Shahdara across the Ravi. Ranjit Singh's Sikh Empire (1801–1849) ran from the Lahore Fort. Babur took Lahore in 1524 — the last staging point before Panipat and the Mughal founding. The 1947 partition split the city's communities decisively; the Wagah border that today divides India and Pakistan is fifteen kilometres away.",
+      "location": {
+        "country": "PK",
+        "lat": 31.5497,
+        "lon": 74.3436,
+        "radius_km": 8
+      },
+      "era_span": ["sultanate", "mughal", "maratha", "colonial", "independence"],
+      "category": ["capital", "city"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Lahore", "label": "Wikipedia: Lahore", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Ian Talbot, Lahore in the Time of the Raj (2013)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "calcutta",
+      "name": "Calcutta",
+      "tooltip": "Calcutta — EIC headquarters 1772–1911, then anti-colonial capital",
+      "summary": "Job Charnock's 1690 trading post became EIC capital after Plassey, then anti-colonial centre after 1905 — the city that shaped Raj and resistance to it.",
+      "framing": "Calcutta was the British India capital from 1772 (when Warren Hastings centralised EIC government there) until 1911 (when George V shifted the capital to Delhi). Curzon's 1905 partition of Bengal — engineered partly to break Calcutta's political weight — turned the city into the engine of the Swadeshi movement and, in succession, the Anushilan Samiti revolutionaries, the Brahmo Samaj reformers, the Tagore-Bose-Vivekananda Bengal Renaissance circuit, the early Communist Party of India, and the Direct Action Day killings of 1946. The corpus's reform-era and independence-era events anchor here as densely as Delhi's Sultanate-era ones do at Delhi.",
+      "location": {
+        "country": "IN",
+        "lat": 22.5726,
+        "lon": 88.3639,
+        "radius_km": 8,
+        "alt_names": ["Kolkata"]
+      },
+      "era_span": ["mughal", "colonial", "independence", "republic"],
+      "category": ["capital", "city", "port"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Kolkata", "label": "Wikipedia: Kolkata", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Sumanta Banerjee, The Parlour and the Streets: Elite and Popular Culture in Nineteenth-Century Calcutta (1989)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "bombay",
+      "name": "Bombay",
+      "tooltip": "Bombay — EIC trading post, INC founding city, Quit India launch",
+      "summary": "From the 1661 Portuguese-dowry trading post to the INC's 1885 founding to Gandhi's 1942 Quit India launch — Bombay is Indian political history in three acts.",
+      "framing": "Bombay was acquired by the EIC in 1661 as Catherine of Braganza's dowry to Charles II. The seven islands were reclaimed as a single city through the eighteenth century; the railway and the cotton boom made it British India's commercial capital by 1850. The Indian National Congress was founded at Gokuldas Tejpal Sanskrit College on 28 December 1885; Gandhi delivered the Quit India speech at Gowalia Tank Maidan on 8 August 1942; Ambedkar self-published Annihilation of Caste here in 1936; the RIN Mutiny broke out in February 1946. The Bombay Plan (1944), Hindu Code Bill protests, and the Bombay film industry that became Bollywood all anchor here. After 1995 the city is officially Mumbai.",
+      "location": {
+        "country": "IN",
+        "lat": 18.9388,
+        "lon": 72.8344,
+        "radius_km": 12,
+        "alt_names": ["Mumbai"]
+      },
+      "era_span": ["mughal", "colonial", "independence", "republic"],
+      "category": ["city", "port"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Mumbai", "label": "Wikipedia: Mumbai", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Gyan Prakash, Mumbai Fables (2010)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "pune",
+      "name": "Pune",
+      "tooltip": "Pune — Maratha-Peshwa capital, then Phule and Tilak's reform-era seat",
+      "summary": "Peshwa capital from 1714 until 1818, then the centre of Phule's anti-caste polemic, Tilak's nationalist press, and Pandita Ramabai's Sharada Sadan.",
+      "framing": "Pune was the Peshwa capital — the de facto seat of the Maratha Confederacy from 1714 until the Anglo-Maratha War of 1818 ended Peshwa rule. The British then made it the Bombay Presidency's monsoon capital and a major army cantonment. From the 1870s Pune became the centre of three distinct reform-era currents: Jyotirao and Savitribai Phule's Satyashodhak Samaj and India's first girls' school (1848), Bal Gangadhar Tilak's Kesari and Maratha newspapers radicalising the Congress, and Pandita Ramabai's Sharada Sadan and Mukti Mission for high-caste widows. Gandhi was imprisoned at the Yerwada Jail (in Pune district) for most of his post-1922 detentions; the 1932 Poona Pact between Gandhi and Ambedkar over separate electorates was negotiated there.",
+      "location": {
+        "country": "IN",
+        "lat": 18.5204,
+        "lon": 73.8567,
+        "radius_km": 10
+      },
+      "era_span": ["mughal", "maratha", "colonial", "independence"],
+      "category": ["capital", "city", "military-cantonment"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Pune", "label": "Wikipedia: Pune", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Stewart Gordon, The Marathas 1600–1818 (1993)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "hyderabad",
+      "name": "Hyderabad",
+      "tooltip": "Hyderabad — Qutb Shahi, Asaf Jahi (Nizam), then 1948 annexation",
+      "summary": "Qutb Shahi 1591, Mughal province 1687, Nizam-ruled Hyderabad State 1724, annexed by India 1948 — and the seat of the Telangana Rebellion.",
+      "framing": "Hyderabad's history runs through three regime layers. Muhammad Quli Qutb Shah founded the city in 1591 as the Qutb Shahi capital; Aurangzeb annexed Golconda in 1687, ending Qutb Shahi rule. The Asaf Jahi (Nizam) dynasty, founded 1724 by a Mughal viceroy who broke away during the post-Aurangzeb succession crisis, ruled Hyderabad State as the largest princely state in British India until India's 1948 annexation (Operation Polo). The Telangana Rebellion (1946–51), led by the Communist Party against the Nizam's dora landlords, continued past the annexation against Nehru's army. Sarojini Naidu was a Hyderabad native; the city is also the home base of one of the major Indian Congress dynasties.",
+      "location": {
+        "country": "IN",
+        "lat": 17.3850,
+        "lon": 78.4867,
+        "radius_km": 12
+      },
+      "era_span": ["mughal", "maratha", "colonial", "independence", "republic"],
+      "category": ["capital", "princely-state-capital", "city"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Hyderabad", "label": "Wikipedia: Hyderabad", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Karen Leonard, Locating Home: India's Hyderabadis Abroad (2007)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "murshidabad",
+      "name": "Murshidabad",
+      "tooltip": "Murshidabad — Bengal nawabi capital 1717–1772, EIC's first revenue base",
+      "summary": "The Mughal-era Bengal nawabi seat that became the EIC's first revenue-generating capital after Plassey (1757) until Hastings shifted to Calcutta in 1772.",
+      "framing": "Murshidabad was the capital of Bengal under the nawabs from 1717 (when Murshid Quli Khan moved the seat from Dhaka) until 1772 (when Warren Hastings centralised EIC government at Calcutta). The Battle of Plassey (1757) effectively ended nawabi independence; for the next fifteen years the EIC ran Bengal through Murshidabad's existing revenue apparatus while keeping the puppet nawab in place. Rammohan Roy worked here as a Persian-language munshi for the EIC in his late twenties — the experience that produced the Tuhfat-ul-Muwahhidin (1803). The Sannyasi-Fakir rebels operated through this region; the Hastings administration that suppressed them was based here. The 1770 Bengal famine — in which an estimated ten million died and EIC tax collection actually rose — was the Murshidabad administration's defining failure.",
+      "location": {
+        "country": "IN",
+        "lat": 24.1797,
+        "lon": 88.2755,
+        "radius_km": 10
+      },
+      "era_span": ["mughal", "colonial"],
+      "category": ["capital", "city"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Murshidabad", "label": "Wikipedia: Murshidabad", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Rajat Kanta Ray, The Felt Community: Commonalty and Mentality before the Emergence of Indian Nationalism (2003)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "sabarmati-ashram",
+      "name": "Sabarmati Ashram",
+      "tooltip": "Gandhi's ashram on the Sabarmati, Ahmedabad — 1917 to the Salt March (1930)",
+      "summary": "Gandhi's institutional base 1917–33 — site of the Atmakatha (1925–29), launch of the Salt March (1930), abandoned after his vow not to return.",
+      "framing": "Gandhi founded the ashram on the Sabarmati's west bank near Ahmedabad on 25 May 1915 (initial site), moving to the present location in 1917. From here he ran Champaran (1917), Kheda (1918), the Non-Cooperation Movement, the Atmakatha drafted week-by-week for Navjivan (1925–29), and the Salt March that began on 12 March 1930. After his arrest at Karadi the same year he vowed not to return to Sabarmati until independence; he kept the vow. The ashram was wound down as a satyagraha base in 1933 (handed to the Harijan Sevak Sangh) but remains the central architectural memorial of the post-1917 Gandhian programme. Tightly anchored: the place gathers events that happened on this single ashram footprint.",
+      "location": {
+        "country": "IN",
+        "lat": 23.0593,
+        "lon": 72.5807,
+        "radius_km": 3
+      },
+      "era_span": ["colonial", "independence"],
+      "category": ["ashram", "sacred-site"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Sabarmati_Ashram", "label": "Wikipedia: Sabarmati Ashram", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Tridip Suhrud, An Autobiography or The Story of My Experiments with Truth: A Critical Edition (Penguin, 2018) — introduction on the ashram", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "srirangapatna",
+      "name": "Srirangapatna",
+      "tooltip": "Srirangapatna — Hyder Ali / Tipu Sultan's island capital, 1761–1799",
+      "summary": "The Cauvery-island fortress where Hyder Ali deposed the Wodeyars in 1761 and where Tipu Sultan was killed by EIC assault on 4 May 1799.",
+      "framing": "Srirangapatna is a fortified island in the Cauvery, the capital of the Mysore Sultanate from Hyder Ali's 1761 coup against the Wodeyars until Tipu Sultan's death there on 4 May 1799 at the British storming of the fortress. The 1799 sack — which produced the cache of Tipu's papers including the Khwabnama, his sword, his throne, the famous mechanical tiger — was the founding plunder of the British India museum tradition. The Battle of Pollilur portraits (now in Edinburgh) and the Daria Daulat Bagh murals (Tipu's summer palace) are the most legible visual record of the Anglo-Mysore wars from the Mysore side. The Wodeyars were restored under British paramountcy from 1799 until the 1947 accession.",
+      "location": {
+        "country": "IN",
+        "lat": 12.4109,
+        "lon": 76.7036,
+        "radius_km": 5
+      },
+      "era_span": ["colonial"],
+      "category": ["capital", "fort", "princely-state-capital"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Srirangapatna", "label": "Wikipedia: Srirangapatna", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Kate Brittlebank, Tipu Sultan's Search for Legitimacy (1997)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "vellore",
+      "name": "Vellore",
+      "tooltip": "Vellore Fort — site of 1806 sepoy mutiny; Tipu Sultan's family held here",
+      "summary": "The Madras Presidency fort where Tipu Sultan's family was confined after 1799 and where the 1806 sepoy mutiny — 1857's structural rehearsal — broke out.",
+      "framing": "Vellore Fort, built by the Vijayanagara empire in the 16th century, became a Madras Army cantonment and the place of confinement for Tipu Sultan's family after the 1799 sack of Srirangapatna. The 1806 sepoy mutiny — the Madras Native Infantry rising against new Christian-style headgear and grooming rules — broke out here on 10 July 1806 and was crushed within twelve hours by Colonel Gillespie's Arcot relief column, with approximately 350 sepoys executed (some by being blown from cannon). The mutiny's structural causes — coerced cultural assimilation, religious anxiety, princely-family-as-political-irritant — would recur in 1857 across north India. Vellore is the Madras Presidency's anchor in the corpus's pre-1857 rebellion arc.",
+      "location": {
+        "country": "IN",
+        "lat": 12.9165,
+        "lon": 79.1325,
+        "radius_km": 5
+      },
+      "era_span": ["colonial"],
+      "category": ["fort", "city", "military-cantonment"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Vellore_Fort", "label": "Wikipedia: Vellore Fort", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "James W. Hoover, Men Without Hats (2007)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "puri",
+      "name": "Puri",
+      "tooltip": "Puri — Jagannath temple seat, c. 12th c. onward; chronicled in the Madala Panji",
+      "summary": "The Eastern Ganga and Suryavamsi capital that became — and remained — the institutional and ritual centre of the Jagannath cult on India's east coast.",
+      "framing": "Puri's institutional anchor is the Jagannath Temple, founded under the Eastern Ganga king Anantavarman Chodaganga in the early 12th century and continuously functional since. The temple's institutional record — the Madala Panji palm-leaf chronicles maintained by the Karana scribal family — covers four centuries of royal patronage, festival administration, and ritual reform across Suryavamsi, Mughal-era, Maratha, and British rule. The Rath Yatra is among the largest annual ritual processions in subcontinental religious life. Puri sits within the Khurda kingdom whose 1817 Paika Rebellion was the major early Odia anti-EIC rising. Sri Chaitanya Mahaprabhu spent his last years here (died 1534); Adi Shankara established the Govardhana matha here in the 8th century — making Puri one of the four cardinal Hindu monastic seats.",
+      "location": {
+        "country": "IN",
+        "lat": 19.8047,
+        "lon": 85.8181,
+        "radius_km": 8
+      },
+      "era_span": ["early-medieval", "sultanate", "mughal", "maratha", "colonial", "independence", "republic"],
+      "category": ["sacred-site", "city"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Puri", "label": "Wikipedia: Puri", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Hermann Kulke, Kings and Cults (1993), ch. on Jagannath", "type": "scholarly" }
+      ],
+      "verified": true
+    }
+  ]
+}

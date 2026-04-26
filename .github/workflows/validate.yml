@@ -30,6 +30,9 @@ jobs:
       - name: Run collections validator
         run: python3 validators/validate_collections.py
 
+      - name: Run places validator
+        run: python3 validators/validate_places.py
+
   render:
     name: Browser regression tests
     runs-on: ubuntu-latest
@@ -66,6 +69,9 @@ jobs:
 
       - name: render_test_collections
         run: python3 tests/render_test_collections.py
+
+      - name: render_test_places
+        run: python3 tests/render_test_places.py
 
       - name: Upload screenshots on failure
         if: failure()
