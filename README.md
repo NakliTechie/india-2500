@@ -13,10 +13,10 @@ Current corpus:
 - **2 threads** (Chauri Chaura and the cost of non-violence; Babur's road to Panipat)
 - **6 people** (Gandhi, Nehru, Bhagat Singh, Ambedkar, Jinnah, Babur)
 - **5 collections** — Babur's road; Founding moments of modern India; First-person works of the subcontinent (20 memoirs); Women shapers of the freedom struggle; Rebellions before and beyond 1857 (18 members)
-- **12 places** — Delhi (18 events), Agra (7), Lahore (5), Calcutta (5), Bombay, Pune, Hyderabad, Murshidabad, Sabarmati Ashram, Srirangapatna, Vellore, Puri (auto-gathered by haversine proximity to the place's anchor)
-- **9 polities** — Delhi Sultanate (19 events), Bahmani Sultanate, Sur Empire, Mughal Empire (26), Mysore Sultanate, East India Company (11), British Raj (31), Hyderabad State, Republic of India (regime-shaped institutional spines with capitals + rulers + explicit events list)
+- **21 places** — Delhi (18 events), Agra (7), Lahore (5), Calcutta (5), Fatehpur Sikri (3), Bombay, Pune, Murshidabad, Sabarmati Ashram, Hyderabad, Srirangapatna, Vellore, Puri, Daulatabad, Gulbarga, Bidar, Madras, Bhopal, Anandpur Sahib, Raigad, Thiruvananthapuram (auto-gathered by haversine proximity)
+- **13 polities** — Delhi Sultanate (19 events), Bahmani Sultanate, Sur Empire, Mughal Empire (26), Maratha Confederacy, Khalsa / Sikh Confederacy (3), Mysore Sultanate, East India Company (11), British Raj (31), Hyderabad State, Bhopal State, Travancore, Republic of India
 
-All five first-class content types — events, threads, people, collections, places, polities — now ship. Upcoming: more polities as corpus grows (Maratha, Vijayanagara, Sikh, Bhopal); political show trials + other incident collections; Vijayanagara + Anglo-Mysore expansion; more 1857 events; more biographical tracks.
+All six first-class content types — events, threads, people, collections, places, polities — now ship. Every polity-capital cross-navigation link clicks through to a real place record. Upcoming: political show trials + other incident collections; Vijayanagara + Anglo-Mysore content; more 1857 events; more biographical tracks.
 
 ## Repository layout
 

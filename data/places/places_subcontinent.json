@@ -262,6 +262,217 @@
     },
 
     {
+      "id": "daulatabad",
+      "name": "Daulatabad",
+      "tooltip": "Daulatabad (Devagiri) — Tughlaq's failed second capital, Bahmani founding site",
+      "summary": "Devagiri-renamed-Daulatabad: the hill-fort that anchored the Tughlaq capital-shift of 1327 and the Bahmani founding of 1347.",
+      "framing": "Daulatabad began as Devagiri, the capital of the Yadava dynasty (12th c.–1317), conquered by Alauddin Khalji's general Malik Kafur. Muhammad bin Tughlaq renamed it Daulatabad in 1327 and ordered the Delhi administrative class to relocate here — the most consequential failed urban planning act in subcontinental history, reversed within seven years. The same hill-fort then served as the brief 1347 coronation site for Hasan Gangu, founding the Bahmani Sultanate before the capital moved to Gulbarga. The fortress complex — multi-layered, with a moat carved into living rock and a single ascending pathway — is the most defensible large-scale fort in the Deccan and remained strategically relevant through the Mughal-Maratha contests of the 17th–18th centuries.",
+      "location": {
+        "country": "IN",
+        "lat": 19.9347,
+        "lon": 75.2138,
+        "radius_km": 5,
+        "alt_names": ["Devagiri", "Deogiri"]
+      },
+      "era_span": ["early-medieval", "sultanate", "mughal"],
+      "category": ["fort", "capital", "city"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Daulatabad_Fort", "label": "Wikipedia: Daulatabad Fort", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Mahdi Husain, The Rise and Fall of Muhammad bin Tughluq (1938)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "gulbarga",
+      "name": "Gulbarga",
+      "tooltip": "Gulbarga — Bahmani Sultanate capital 1347–1429",
+      "summary": "Hasan Gangu shifted the Bahmani capital to Gulbarga shortly after the 1347 founding; the sultanate ruled the Deccan from here for eighty-two years.",
+      "framing": "Gulbarga was the Bahmani capital from 1347 (shortly after Hasan Gangu's coronation at Daulatabad) until 1429, when Ahmad Shah Wali shifted the capital to Bidar. Across that century the Bahmanis built the Gulbarga Fort, the Jama Masjid (1367, modelled on the Cordoba mosque), and the dargah of the Sufi saint Khwaja Bande Nawaz, which remains the major pilgrimage site of the city. The Bahmani administrative innovations — the Persian-trained mulla-court, the jagir-based military assignment, the careful Hindu-Muslim political balance — were elaborated here. After the 1527 Bahmani fragmentation Gulbarga came under Bijapur (Adil Shahi) rule until Aurangzeb's 1686 annexation.",
+      "location": {
+        "country": "IN",
+        "lat": 17.3297,
+        "lon": 76.8343,
+        "radius_km": 8
+      },
+      "era_span": ["sultanate"],
+      "category": ["capital", "city", "fort"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Kalaburagi", "label": "Wikipedia: Kalaburagi (Gulbarga)", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "H.K. Sherwani, The Bahmanis of the Deccan (1985)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "bidar",
+      "name": "Bidar",
+      "tooltip": "Bidar — Bahmani Sultanate capital 1429–1527, then Barid Shahi",
+      "summary": "Ahmad Shah Wali shifted the Bahmani capital to Bidar in 1429; the seat until 1527, then capital of the Barid Shahi successor sultanate until 1619.",
+      "framing": "Ahmad Shah Wali Bahmani moved his capital from Gulbarga to Bidar in 1429, citing climate and water supply. Bidar's century as Bahmani capital (1429–1527) coincided with the kingdom's intellectual peak — the wazir Mahmud Gawan, a Persian merchant-administrator, ran the most centralised administration the Bahmanis ever achieved before factional intrigue (chiefly between the Deccani-born and Persian-born nobility) led to his execution in 1481. After the 1527 Bahmani fragmentation the city became capital of the Barid Shahi successor sultanate (1492–1619), one of the five Deccan Sultanates that Aurangzeb later annexed. The Bidar Fort, Mahmud Gawan's madrasa, and the Barid Shahi tombs constitute the surviving architectural record.",
+      "location": {
+        "country": "IN",
+        "lat": 17.9133,
+        "lon": 77.5301,
+        "radius_km": 6
+      },
+      "era_span": ["sultanate"],
+      "category": ["capital", "city", "fort"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Bidar", "label": "Wikipedia: Bidar", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "H.K. Sherwani, The Bahmanis of the Deccan (1985)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "fatehpur-sikri",
+      "name": "Fatehpur Sikri",
+      "tooltip": "Fatehpur Sikri — Akbar's planned capital 1571–1585",
+      "summary": "Akbar's purpose-built capital west of Agra — abandoned within fourteen years for water-supply reasons; among the best-preserved Mughal urban sites.",
+      "framing": "Akbar founded Fatehpur Sikri in 1571 to honour the Sufi saint Salim Chishti, whose blessing Akbar credited for the birth of his son Jahangir. The planned city — Diwan-i-Khas, Diwan-i-Am, the Buland Darwaza, the Jama Masjid, the Salim Chishti dargah, the Panch Mahal — was built in fourteen years on a sandstone ridge overlooking a lake. The Ibadat Khana religious debates that produced the Din-i-Ilahi were held here. By 1585 the lake was drying out and the water supply could not sustain the court; Akbar shifted the capital first to Lahore (for the northwest campaigns) and then back to Agra. Fatehpur Sikri was largely abandoned within the next two decades, leaving the city as a single-period architectural set-piece — among the most legible Mughal urban records anywhere.",
+      "location": {
+        "country": "IN",
+        "lat": 27.0943,
+        "lon": 77.6614,
+        "radius_km": 4,
+        "alt_names": ["Sikri"]
+      },
+      "era_span": ["mughal"],
+      "category": ["capital", "city", "sacred-site"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Fatehpur_Sikri", "label": "Wikipedia: Fatehpur Sikri", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Ebba Koch, Mughal Architecture (1991), ch. 4", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "madras",
+      "name": "Madras",
+      "tooltip": "Madras (Chennai) — EIC's first fortified Indian settlement, 1639",
+      "summary": "Francis Day's 1639 acquisition from the Vijayanagara nayak became Fort St George — the EIC's first fortified Indian settlement and its southern capital.",
+      "framing": "Francis Day, an EIC factor, acquired a strip of coast at Chennapatnam from the Vijayanagara-tributary Nayak of Chandragiri in August 1639. Fort St George, completed 1644, became the EIC's first fortified Indian settlement and the centre of EIC operations on the Coromandel coast. From 1684 Madras was a Presidency in its own right, equal to Bombay and Bengal. Robert Clive served his first commercial-then-military years here. Madras was the EIC's southern administrative capital until British India centralised at Calcutta after Hastings's 1772 reorganisation; it remained the Madras Presidency capital until 1947. Many of the colonial period's enduring institutions — the Madras Army, the University of Madras (1857), the Madras Presidency civil service — operated from here. The city was renamed Chennai in 1996.",
+      "location": {
+        "country": "IN",
+        "lat": 13.0827,
+        "lon": 80.2707,
+        "radius_km": 12,
+        "alt_names": ["Chennai", "Chennapatnam"]
+      },
+      "era_span": ["mughal", "colonial", "independence", "republic"],
+      "category": ["city", "port", "military-cantonment"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Chennai", "label": "Wikipedia: Chennai", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "S. Muthiah, Madras Discovered (1981; rev. 2008 as Madras, Chennai: A 400-Year Record)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "bhopal",
+      "name": "Bhopal",
+      "tooltip": "Bhopal — Afghan-founded princely state 1723, Begum-ruled 1819–1926",
+      "summary": "Founded 1723 by an Aurangzeb-army Afghan officer; uniquely ruled by four successive Begums for over a century from 1819.",
+      "framing": "Bhopal was founded as an Afghan princely state in 1723 by Dost Muhammad Khan, an officer of Aurangzeb's army who consolidated a fragment of central India after the post-Aurangzeb collapse. From 1819 the state was ruled for over a century by four successive Begums (Qudsia, Sikandar, Shah Jahan, Sultan Jahan), making it unique among Indian princely states. The Begums modernised administration, promoted female education (Sultania Girls' School, 1903), and championed the All-India Muslim Ladies' Conference. Sultan Jahan abdicated in 1926; Bhopal acceded to India in 1949 after the abdication of her grandson Hamidullah Khan. The 1984 Union Carbide gas disaster gave Bhopal its modern global associations.",
+      "location": {
+        "country": "IN",
+        "lat": 23.2599,
+        "lon": 77.4126,
+        "radius_km": 8
+      },
+      "era_span": ["mughal", "maratha", "colonial", "independence", "republic"],
+      "category": ["princely-state-capital", "city"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Bhopal", "label": "Wikipedia: Bhopal", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Shaharyar M. Khan, The Begums of Bhopal (2000)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "anandpur-sahib",
+      "name": "Anandpur Sahib",
+      "tooltip": "Anandpur Sahib — Khalsa founded here on Baisakhi, 30 March 1699",
+      "summary": "Punjab town founded 1665 by Guru Tegh Bahadur; the site of the Khalsa's founding by Guru Gobind Singh on Baisakhi 1699.",
+      "framing": "Anandpur Sahib was founded by the ninth Sikh Guru, Tegh Bahadur, in 1665 on land purchased from the Raja of Bilaspur, originally as Chakk Nanaki. The town became the seat of the Sikh Gurus' political-military leadership; Guru Gobind Singh established the Khalsa here on Baisakhi (30 March) 1699 — the founding act of organised Sikh political life. The Five Beloved (Panj Pyare) initiation ritual and the Khalsa code (rehat) were promulgated at Anandpur. Mughal-Hill Raja sieges of Anandpur (1701–1705) eventually forced the Guru to abandon the town; the surviving Khalsa regrouped at Damdama Sahib. The Takht Sri Kesgarh Sahib gurdwara at Anandpur, marking the founding spot, is one of the five Sikh takhts.",
+      "location": {
+        "country": "IN",
+        "lat": 31.2390,
+        "lon": 76.5021,
+        "radius_km": 5
+      },
+      "era_span": ["mughal"],
+      "category": ["sacred-site", "city"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Anandpur_Sahib", "label": "Wikipedia: Anandpur Sahib", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "J.S. Grewal, The Sikhs of the Punjab (1990)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "raigad",
+      "name": "Raigad",
+      "tooltip": "Raigad Fort — Shivaji's coronation 1674, first Maratha capital",
+      "summary": "Western Ghats hill-fort that Shivaji renamed from Rairi and chose as his coronation site (6 June 1674) — the founding capital of the Maratha state.",
+      "framing": "Raigad — originally Rairi, captured by Shivaji from Chandrarao More of Javli in 1656 — was renamed and developed as the Maratha capital from 1664. Shivaji's formal coronation as Chhatrapati was held at Raigad on 6 June 1674, a deliberate Hindu sovereign-claim act with full Vedic ritual and the construction of the Singhasan Devi temple. Shivaji ruled from Raigad until his death there on 3 April 1680. Sambhaji and Rajaram subsequently held the fort until 1689 when Aurangzeb's forces under Zulfiqar Khan captured it; the Mughal occupation lasted until the early 18th century when the Marathas retook it. The Peshwa-era capital shift to Pune in 1714 ended Raigad's political role; the fort remained a Maratha symbol through the colonial period.",
+      "location": {
+        "country": "IN",
+        "lat": 18.2333,
+        "lon": 73.4400,
+        "radius_km": 5
+      },
+      "era_span": ["mughal", "maratha"],
+      "category": ["fort", "capital"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Raigad_Fort", "label": "Wikipedia: Raigad Fort", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Stewart Gordon, The Marathas 1600–1818 (1993)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "thiruvananthapuram",
+      "name": "Thiruvananthapuram",
+      "tooltip": "Thiruvananthapuram — Travancore capital 1745–1947, then Kerala state capital",
+      "summary": "Travancore capital from 1745 under Marthanda Varma; the city of the Padmanabhaswamy temple to which the kingdom was formally dedicated in 1750.",
+      "framing": "Thiruvananthapuram became the Travancore capital in 1745 when Marthanda Varma shifted the seat from Padmanabhapuram. The 1750 trippadidanam ceremony — the king's formal dedication of the kingdom to Sri Padmanabhaswamy — made the rulers nominal regents (dasa) of the deity, a sovereignty-claim that survived British paramountcy intact. The Padmanabhaswamy temple's 2011 vault discovery (estimated US$22 billion in gold and gems) is the largest known temple treasure ever found. Travancore acceded to India on 27 August 1947 after C.P. Ramaswami Iyer's brief independence bid; the city was the capital of Travancore-Cochin (1949–56) and then of Kerala state from 1956. Renamed officially from Trivandrum to Thiruvananthapuram in 1991.",
+      "location": {
+        "country": "IN",
+        "lat": 8.5241,
+        "lon": 76.9366,
+        "radius_km": 8,
+        "alt_names": ["Trivandrum"]
+      },
+      "era_span": ["mughal", "maratha", "colonial", "independence", "republic"],
+      "category": ["capital", "princely-state-capital", "city", "sacred-site"],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Thiruvananthapuram", "label": "Wikipedia: Thiruvananthapuram", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Robin Jeffrey, The Decline of Nayar Dominance (1976)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
       "id": "puri",
       "name": "Puri",
       "tooltip": "Puri — Jagannath temple seat, c. 12th c. onward; chronicled in the Madala Panji",

@@ -350,6 +350,140 @@
     },
 
     {
+      "id": "khalsa-sikh-confederacy",
+      "name": "Khalsa / Sikh Confederacy",
+      "tooltip": "Khalsa Panth & Sikh political tradition — 1699 founding through 1849",
+      "summary": "From Guru Gobind Singh's founding of the Khalsa in 1699 to the misls and Ranjit Singh's Sikh Empire — Sikh political tradition through 1849.",
+      "framing": "The Khalsa was founded by Guru Gobind Singh at Anandpur Sahib on Baisakhi 1699 — a religious-military order that fused initiation through the Five Beloved (Panj Pyare) with armed defence of the Sikh community against Mughal persecution. The earlier Mughal executions of Guru Arjan Dev (1606) and Guru Tegh Bahadur (1675) had radicalised the Sikh tradition; the Khalsa was the institutional response. After Banda Singh Bahadur's brief 1710–15 conquests in Punjab, the Sikh tradition organised through twelve misls (clan-confederacies) through the 18th century, then consolidated under Maharaja Ranjit Singh's Sikh Empire (1801–1849) ruling from Lahore. The Anglo-Sikh wars (1845–46, 1848–49) ended Sikh sovereignty; the East India Company annexed Punjab in 1849.",
+      "date_span": { "start": "1699", "end": "1849", "display": "1699 (Khalsa founded) – 1849 (annexation of Punjab after the 2nd Anglo-Sikh War)" },
+      "era_span": ["mughal", "maratha", "colonial"],
+      "category": "confederacy",
+      "capitals": [
+        { "place": "anandpur-sahib", "from_year": 1699, "to_year": 1705 },
+        { "place": "lahore",         "from_year": 1801, "to_year": 1849 }
+      ],
+      "rulers": [
+        "Guru Gobind Singh (10th Sikh Guru, 1675–1708)",
+        "Banda Singh Bahadur (1708–1716; military leader)",
+        "Sikh Misls — twelve clan-confederacies (c. 1748–1799)",
+        "Maharaja Ranjit Singh (Sikh Empire, 1801–1839)",
+        "Maharaja Duleep Singh (last; deposed 1849)"
+      ],
+      "events": [
+        "guru-arjan-execution-1606",
+        "guru-tegh-bahadur-execution-1675",
+        "khalsa-founded-1699"
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Khalsa", "label": "Wikipedia: Khalsa", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "J.S. Grewal, The Sikhs of the Punjab (Cambridge New History of India II.3, 1990)", "type": "scholarly" },
+        { "label": "Khushwant Singh, A History of the Sikhs (2 vols., 1963; rev. 2004)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "maratha-confederacy",
+      "name": "Maratha Confederacy",
+      "tooltip": "Maratha Confederacy — Shivaji's coronation 1674 to Anglo-Maratha defeat 1818",
+      "summary": "Shivaji's 1674 coronation founded the Maratha state; the Confederacy's century of expansion ended at the Third Anglo-Maratha War (1817–18) defeat by the EIC.",
+      "framing": "The Maratha state was founded by Shivaji at his coronation at Raigad in 1674 — a deliberate Hindu sovereign-claim against Mughal supremacy in the Deccan. After Shivaji's death (1680) and Sambhaji's execution by Aurangzeb (1689), the Marathas survived twenty-seven years of Mughal pressure, emerging by the 1720s under the Peshwa system as the dominant subcontinental power. At their height (c. 1758) the Maratha Confederacy controlled directly or indirectly most of the subcontinent from Punjab to Karnataka. The Third Battle of Panipat (1761) broke their northern projection; the Anglo-Maratha Wars of 1775–82, 1803–05, and 1817–18 ended Maratha sovereignty. The Peshwa system, the chauth-sardeshmukhi tax structure, and the Mahrashtrian-Konkani administrative tradition the Marathas built persisted into the colonial period.",
+      "date_span": { "start": "1674", "end": "1818", "display": "1674 (Shivaji's coronation) – 1818 (Anglo-Maratha defeat)" },
+      "era_span": ["mughal", "maratha", "colonial"],
+      "category": "confederacy",
+      "capitals": [
+        { "place": "raigad", "from_year": 1674, "to_year": 1689 },
+        { "place": "pune",   "from_year": 1714, "to_year": 1818 }
+      ],
+      "rulers": [
+        "Shivaji Bhosale (1674–1680, founder)",
+        "Sambhaji (1680–1689, executed by Aurangzeb)",
+        "Rajaram (1689–1700), Tarabai (regent 1700–1707)",
+        "Shahu I (1707–1749) — Peshwa system established",
+        "Peshwa Bajirao I (1720–1740)",
+        "Peshwa Madhavrao I (1761–1772) — post-Panipat consolidation",
+        "Bajirao II (last Peshwa, 1796–1818)"
+      ],
+      "events": [
+        "sambhaji-execution-1689"
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Maratha_Confederacy", "label": "Wikipedia: Maratha Confederacy", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Stewart Gordon, The Marathas 1600–1818 (Cambridge New History of India II.4, 1993)", "type": "scholarly" },
+        { "label": "Andre Wink, Land and Sovereignty in India: Agrarian Society and Politics under the Eighteenth-Century Maratha Svarajya (1986)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "bhopal-state",
+      "name": "Bhopal State",
+      "tooltip": "Bhopal State — princely state 1723–1949, Begum-rule from 1819",
+      "summary": "Founded 1723 by an Afghan Mughal-army officer; ruled by four successive Begums 1819–1926 — uniquely a matrilineal princely state.",
+      "framing": "Bhopal State was founded in 1723 by Dost Muhammad Khan, an Afghan officer of Aurangzeb's army who established himself in the central-India fragment after the post-Aurangzeb collapse. The state's distinctive history began in 1819 when Qudsia Begum took power as regent — the start of more than a century of female succession unique among Indian princely states: Qudsia (1819–1837), Sikandar (1844–1868), Shah Jahan (1868–1901), Sultan Jahan (1901–1926). The Begums modernised Bhopal under British paramountcy — administrative reform, female education, the All-India Muslim Ladies' Conference, the Sultania Girls' School. Bhopal acceded to India in 1949, two years after Sultan Jahan's grandson Hamidullah Khan attempted to remain independent.",
+      "date_span": { "start": "1723", "end": "1949", "display": "1723 (founded) – 1949 (acceded to India)" },
+      "era_span": ["mughal", "maratha", "colonial", "independence", "republic"],
+      "category": "princely-state",
+      "capitals": [
+        { "place": "bhopal", "from_year": 1723, "to_year": 1949 }
+      ],
+      "rulers": [
+        "Dost Muhammad Khan (1723–1728, founder)",
+        "Qudsia Begum (regent 1819–1837)",
+        "Sikandar Begum (1844–1868)",
+        "Shah Jahan Begum (1868–1901)",
+        "Sultan Jahan Begum (1901–1926, abdicated)",
+        "Hamidullah Khan (1926–1949, last ruler)"
+      ],
+      "events": [
+        "sultan-jahan-begum-autobiography-1912"
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Bhopal_State", "label": "Wikipedia: Bhopal State", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Shaharyar M. Khan, The Begums of Bhopal: A Dynasty of Women Rulers in Raj India (2000)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
+      "id": "travancore",
+      "name": "Travancore",
+      "tooltip": "Travancore — princely state 1729–1947, Marthanda Varma to accession",
+      "summary": "Marthanda Varma's 1729 consolidation from Venad; the most administratively reformed and high-literacy princely state under British paramountcy.",
+      "framing": "Travancore was consolidated in 1729 by Marthanda Varma from the older Venad principality of southern Kerala. His 1750 dedication of the kingdom to Sri Padmanabhaswamy made the rulers nominal regents (dasa) of the deity — a sovereignty-claim that survived British paramountcy. Travancore under successive maharajahs and the Setu Lakshmi Bayi regency (1924–1931) ran among the most administratively reformed princely states — universal primary education for boys from 1817, for girls from 1859, the 1936 Temple Entry Proclamation that opened Hindu temples to all castes after the Vaikom Satyagraha pressure. C.P. Ramaswami Iyer's 1947 attempt to remain independent failed; Travancore acceded to the Indian Union on 27 August 1947 and merged with Cochin in 1949 to form Travancore-Cochin (Kerala from 1956).",
+      "date_span": { "start": "1729", "end": "1947", "display": "1729 (Marthanda Varma's consolidation) – 1947 (accession to India)" },
+      "era_span": ["mughal", "maratha", "colonial", "independence"],
+      "category": "princely-state",
+      "capitals": [
+        { "place": "thiruvananthapuram", "from_year": 1745, "to_year": 1947 }
+      ],
+      "rulers": [
+        "Marthanda Varma (1729–1758, founder)",
+        "Dharma Raja Karthika Thirunal (1758–1798)",
+        "Swathi Thirunal (1829–1846)",
+        "Mulam Thirunal (1885–1924)",
+        "Setu Lakshmi Bayi (regent 1924–1931)",
+        "Chithira Thirunal Balarama Varma (1931–1949, last ruling maharaja)"
+      ],
+      "events": [
+        "vaikom-satyagraha-1924-1925"
+      ],
+      "links": [
+        { "url": "https://en.wikipedia.org/wiki/Travancore", "label": "Wikipedia: Travancore", "type": "wikipedia" }
+      ],
+      "sources": [
+        { "label": "Robin Jeffrey, The Decline of Nayar Dominance: Society and Politics in Travancore 1847–1908 (1976)", "type": "scholarly" }
+      ],
+      "verified": true
+    },
+
+    {
       "id": "republic-of-india",
       "name": "Republic of India",
       "tooltip": "Republic of India — independent 15 August 1947, republic 26 January 1950",

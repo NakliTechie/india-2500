@@ -177,9 +177,13 @@ with sync_playwright() as p:
       clearPlace();
       return out;
     }""")
+    # Note: 0-member places are valid — they exist as polity-capital records
+    # so the polity reader's capital cross-nav has a target. The validator's
+    # <3 soft-warning is the editorial check; the UI handles 0 fine (reader
+    # renders framing + meta + empty member list).
     for pl in smoke:
-        check(f"Place '{pl['id']}' renders + has ≥1 member",
-              pl["renderedTitle"] == pl["name"] and pl["memberCount"] >= 1,
+        check(f"Place '{pl['id']}' renders with correct title",
+              pl["renderedTitle"] == pl["name"],
               f"renderedTitle={pl['renderedTitle']!r} members={pl['memberCount']}")
 
     page.screenshot(path=str(ARTIFACTS / "render_test_places.png"), full_page=True)

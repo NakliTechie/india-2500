@@ -31,8 +31,8 @@ A validator-enforced, browser-renderable atlas of subcontinental history. Three 
 │   ├── threads/threads_*.json     2 threads: Chauri Chaura, Babur road-to-Panipat
 │   ├── people/people_*.json       6 people (5 freedom fighters + Babur)
 │   ├── collections/collections_*.json   5 collections (Babur's road, Founding moments, First-person works, Women shapers, Rebellions)
-│   ├── places/places_*.json       12 places (Delhi, Agra, Lahore, Calcutta, Bombay, Pune, Hyderabad, Murshidabad, Sabarmati, Srirangapatna, Vellore, Puri)
-│   └── polities/polities_*.json   9 polities (Delhi Sultanate, Bahmani, Sur, Mughal, Mysore, EIC, British Raj, Hyderabad State, Republic of India)
+│   ├── places/places_*.json       21 places (incl. polity-capital records: Daulatabad, Gulbarga, Bidar, Fatehpur Sikri, Madras, Bhopal, Anandpur Sahib, Raigad, Thiruvananthapuram)
+│   └── polities/polities_*.json   13 polities (incl. Khalsa/Sikh Confederacy, Maratha Confederacy, Bhopal State, Travancore)
 │
 ├── validators/                    schema enforcement, run on every PR via CI
 │   ├── validate_events.py         schema + cross-reference + PIP + tag format
@@ -142,7 +142,7 @@ A validator-enforced, browser-renderable atlas of subcontinental history. Three 
 - **Auto-derived membership:** every event whose `location.points[0]` falls within `radius_km` of the place's anchor is automatically a member — no event-side change needed. Default radius 5 km; tightly-bounded sites (Sabarmati, Vellore Fort) use 3–5; wide-spread historical territories raise it (Delhi 12 km).
 - **Validator:** `validators/validate_places.py`. Schema + PIP on the anchor + soft warning when fewer than 3 events fall within the gather radius (signals deliberate seed places that need their corpus to grow).
 - **UI:** Fourth pill row beneath Collections. Click a pill → place reader (title, tooltip subtitle, summary, optional framing block, era+category+radius+alt-names meta lines, member count, chronologically-sorted event cards). Map enters `.in-place` mode highlighting member pins / clusters in `--amber` (distinct from collection blue and thread purple). Mutually exclusive with Threads + People + Collections.
-- **Corpus today:** 12 places — Delhi (18 events, 12 km), Agra (7), Lahore (5), Calcutta (5), Bombay (3), Pune (2), Murshidabad (2), Sabarmati Ashram (2), Hyderabad (1), Srirangapatna (1), Vellore (1), Puri (1). The seven small-gather places are deliberate seeds — their corpus presence will grow as more events are authored.
+- **Corpus today:** 21 places — Delhi (18 events, 12 km), Agra (7), Lahore (5), Calcutta (5), Fatehpur Sikri (3), Bombay (3), Pune (2), Murshidabad (2), Sabarmati Ashram (2), Hyderabad (1), Srirangapatna (1), Vellore (1), Puri (1), Daulatabad (1), Gulbarga (1), Bhopal (1). Plus four 0-event records (Bidar, Madras, Anandpur Sahib, Raigad, Thiruvananthapuram) authored to back polity-capital cross-navigation — their readers render framing + meta with empty member lists; corpus presence will grow as more events are authored.
 
 ### Polities (NEW — regime-shaped institutional spines)
 - **Schema:** `docs/POLITIES_SCHEMA.md`. A polity has `id`, `name`, `tooltip`, `summary`, optional `framing` (≤300 words), `date_span` (start / end / display), `era_span`, `category` (controlled vocab: empire / sultanate / dynasty / princely-state / confederacy / colonial-state / republic / trading-company), `capitals[]` (chronological list of `{place, from_year, to_year}` — `place` references a place id; soft-warns when unresolved, renders as plain text), `rulers[]` (freeform strings), `events[]` (explicit list of constitutive event ids), `links`, `sources`, `verified`.
@@ -150,7 +150,7 @@ A validator-enforced, browser-renderable atlas of subcontinental history. Three 
 - **Validator:** `validators/validate_polities.py`. Schema + every event id resolves + capitals' `place` ids cross-checked against the places corpus (soft warning on unresolved).
 - **UI:** Fifth pill row beneath Places. Click a pill → polity reader (title, tooltip subtitle, summary, optional framing, date_span / eras / category meta, capitals list with clickable place-links to the place reader, rulers list, member count, chronologically-sorted event cards). Map enters `.in-polity` mode highlighting member pins / clusters in `--rose` (distinct from the four other modes' colours). Mutually exclusive with Threads + People + Collections + Places.
 - **Cross-navigation:** capital place-links jump to the place's reader (regime → geography). Future: place reader could surface "polities that ruled here" as a back-link, but that's deferred.
-- **Corpus today:** 9 polities — Delhi Sultanate (19 events), Bahmani Sultanate (1), Sur Empire (2), Mughal Empire (26), Mysore Sultanate (1), East India Company (11), British Raj (31), Hyderabad State (1), Republic of India (3). The four single-event polities (Bahmani, Mysore, Hyderabad, Sur with 2) are deliberate seeds awaiting their corpus to grow.
+- **Corpus today:** 13 polities — Delhi Sultanate (19 events), Bahmani Sultanate (1), Sur Empire (2), Mughal Empire (26), Maratha Confederacy (1), Khalsa / Sikh Confederacy (3), Mysore Sultanate (1), East India Company (11), British Raj (31), Hyderabad State (1), Bhopal State (1), Travancore (1), Republic of India (3). All 27 capital-references across all 13 polities resolve to place records — every cross-navigation link is clickable.
 
 ### People (UI shipped)
 - **Schema:** `docs/PEOPLE_SCHEMA.md`. Person has lifespan + a `track[]`. Each track step is `kind: "event-ref"` (with `role`) or `kind: "moment"` (own date, location, summary, note). Moments are intentionally lighter than events.
@@ -207,8 +207,8 @@ In rough priority order:
 2. **Maurya / post-Maurya events** — stress-tests the BCE end of the year slider.
 3. **More memoirs** to round out the first-person-works collection (currently 20 members; deferred queue below).
 4. **Incident-shaped collections** — political show trials, negotiation moments, etc. (catalogued below).
-5. **More polities** as the corpus grows — Maratha Confederacy (when Maratha events land), Vijayanagara Empire (when South India expands), Sikh Empire (when Punjab events land), Bhopal princely state (Sultan Jahan's event already in corpus), Travancore princely state (Vaikom + Sethu Lakshmi Bayi already authored).
-6. **More places** to fill the gaps that polities surfaced — Daulatabad, Gulbarga, Bidar, Fatehpur Sikri, Madras (each is a polity capital but not yet a place record).
+5. **More polities** as the corpus grows — Vijayanagara Empire (needs Vijayanagara events first), Cochin princely state, Mysore princely state (Wodeyars post-1799), Sikkim, Manipur, Tripura kingdoms (when Northeast events expand).
+6. **More places** for new polity capitals as those polities are authored — Vijayanagara (Hampi), Padmanabhapuram, Mysore city.
 5. **More cross-cutting collections** — incident-shaped sets logged for future:
    - **Political show trials** — Tilak 1897/1908/1916, Alipore Bombing 1908, Kakori 1925, Meerut Conspiracy 1929–33, Lahore Conspiracy / Bhagat Singh 1929–31, INA trials 1945–46, Naval Mutiny court-martials 1946. Tag `show-trial`. Highly recommended next.
    - **Negotiation moments** — Cripps 1942, Cabinet Mission 1946, Wavell Plan 1945, Mountbatten Plan, Round Tables 1930–32, Treaty of Allahabad 1765, Treaty of Salbai 1782, Lahore Treaty 1846, McMahon Line 1914. Tag `negotiation`.

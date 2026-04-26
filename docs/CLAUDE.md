@@ -27,8 +27,8 @@ The boundary rule for any India map: **Datameet, never Natural Earth or world-at
 │   ├── threads/threads_*.json         2 threads
 │   ├── people/people_*.json           6 people
 │   ├── collections/collections_*.json 5 collections
-│   ├── places/places_*.json           12 places
-│   └── polities/polities_*.json       9 polities
+│   ├── places/places_*.json           21 places
+│   └── polities/polities_*.json       13 polities
 │
 ├── validators/
 │   ├── validate_events.py        schema + cross-reference + PIP + tag format
